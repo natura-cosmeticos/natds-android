@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':designsystem'
 rootProject.name='natds-android'
