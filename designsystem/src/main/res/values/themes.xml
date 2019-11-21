@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <style name="Theme.Natura" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Natura" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorBrdNatYellow</item>
         <item name="colorSecondary">@color/colorBrdNatOrange</item>
 
         <item name="android:colorBackground">@color/colorBrdNatWhite</item>
-        <item name="colorSurface">@color/colorBrdNatWhite</item>
-
-        <item name="colorOnSurface">@color/colorBrdNatGray</item>
-        <item name="colorOnBackground">@color/colorBrdNatGray</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
