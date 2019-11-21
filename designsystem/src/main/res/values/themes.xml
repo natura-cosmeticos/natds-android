@@ -10,5 +10,12 @@
 
         <item name="colorOnSurface">@color/colorBrdNatGray</item>
         <item name="colorOnBackground">@color/colorBrdNatGray</item>
+
+        <!-- Type styles -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+
+        <!--Component styles-->
+        <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
     </style>
 </resources>
