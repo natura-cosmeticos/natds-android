@@ -1,4 +1,4 @@
-package com.natura.android
+package com.natura.android.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
