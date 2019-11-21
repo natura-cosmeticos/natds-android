@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBrdNatOrange">#FF6B0B</color>
+    <color name="colorBrdNatYellow">#F4AB34</color>
+    <color name="colorBrdNatWhite">#FFFFFF</color>
+    <color name="colorBrdNatGray">#333333</color>
+</resources>
