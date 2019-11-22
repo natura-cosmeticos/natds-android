@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Theme.Natura" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorBrdNatYellow</item>
+        <item name="colorSecondary">@color/colorBrdNatOrange</item>
+
+        <item name="android:colorBackground">@color/colorBrdNatWhite</item>
+
+        <!-- Type styles -->
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+
+        <!--Component styles-->
+        <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
+    </style>
+</resources>
