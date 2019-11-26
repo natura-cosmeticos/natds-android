@@ -18,6 +18,9 @@ We are using [Screenshot Tests for Android](https://github.com/facebook/screensh
 **Tip from library page to build tests for the first time**
 It is necessary to have python-2.7 installed for the gradle plugin to work, and we also recommending installing the python-pillow library which is required for recording and verifying screenshots.
 
+### Sample
+In construction
+
 ## How to contribute
 
 You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/natds-android/pulls).
