@@ -2,28 +2,65 @@ language: android
 jdk: oraclejdk8
 env:
   global:
-    - ANDROID_API=29
-    - ANDROID_BUILD_TOOLS=29.0.2
+    - ABI="default;armeabi-v7a"
+    - ANDROID_BUILD_TOOLS=28.0.3
     - ADB_INSTALL_TIMEOUT=5
+    - EMULATOR_API_LEVEL=23
+    - SYSTEM_IMAGE=/usr/local/android-sdk/system-images/android-23/default/armeabi-v7a/kernel-ranchu
+    - ANDROID_SDK_ROOT=/usr/local/android-sdk
 
 android:
   components:
     - tools
     - platform-tools
     - build-tools-$ANDROID_BUILD_TOOLS
-    - android-$ANDROID_API
+    - android-$EMULATOR_API_LEVEL
+    #   Android test (screenshot) init
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-$EMULATOR_API_LEVEL
+    #   Android test (screenshot) end
 
   licenses:
     - android-sdk-preview-license-.+
     - android-sdk-license-.+
     - google-gdk-license-.+
+
 before_install:
   - chmod +x gradlew
   - chmod +x tools/pipeline_build.sh
   - ./gradlew dependencies || true
+  #   Android test (screenshot) init
+  - yes | sdkmanager --sdk_root=$ANDROID_SDK_ROOT "tools" "build-tools;$ANDROID_BUILD_TOOLS" "extras;android;m2repository"
+  - export ANDROID_SDK=$ANDROID_SDK_ROOT
+  - export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
+  - export PATH=$ANDROID_SDK/tools/bin:$PATH
+
+install:
+  - sudo -H pip install pillow
+  - sudo -H pip install pillowcase
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+before_cache:
+  - rm -f $HOME/.cache/pip/log/debug.log
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+  #   Android test (screenshot) end
 
 before_script:
   - git lfs pull
+  #   Android test (screenshot) init
+  - find /usr/local/android-sdk/system-images -type f
+  - echo no | android create avd --force -n test -k "system-images;android-$EMULATOR_API_LEVEL;$ABI" -c 100M
+  - emulator @test -kernel $SYSTEM_IMAGE -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
+  #   Android test (screenshot) end
 
 script:
   - ./tools/pipeline_build.sh
