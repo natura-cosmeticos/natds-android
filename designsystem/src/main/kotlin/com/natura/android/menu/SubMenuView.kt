@@ -3,7 +3,6 @@ package com.natura.android.menu
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.widget.AppCompatTextView
@@ -19,7 +18,7 @@ class SubMenuView @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_submenu_label) }
-    private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_selected) }
+    private val labelContainer by lazy { findViewById<View>(R.id.ds_submenu_view_selected) }
 
     init {
         View.inflate(context, R.layout.ds_submenu_view, this)

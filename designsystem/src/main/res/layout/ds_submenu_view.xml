@@ -42,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/ds_menu_view_selected"
+        android:id="@+id/ds_submenu_view_selected"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/ds_margin_spacing_small"
@@ -65,7 +65,7 @@
         android:textColor="@color/nat_navigation_item_text_color"
         android:textSize="@dimen/ds_text_small"
         app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ds_menu_view_selected"
+        app:layout_constraintStart_toStartOf="@+id/ds_submenu_view_selected"
         app:layout_constraintTop_toBottomOf="parent"
         tools:text="Sub Menu item" />
 </merge>
