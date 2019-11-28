@@ -13,8 +13,6 @@ buildscript {
         classpath "com.android.tools.build:gradle:$android_tools_gradle"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -47,4 +45,3 @@ ext {
     expressoVersion = '3.1.1'
     ktlintVersion = '0.35.0'
 }
-

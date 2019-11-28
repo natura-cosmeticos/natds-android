@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.Natura"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/ds_margin_spacing_medium" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/ds_margin_spacing_small" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/ds_margin_spacing_smallest" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/ds_margin_spacing_smallest" />
+
+    <View
+        android:layout_width="@dimen/ds_submenu_line_widht"
+        android:layout_height="0dp"
+        android:background="@color/black_12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ds_menu_view_selected"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/ds_margin_spacing_small"
+        android:layout_marginLeft="@dimen/ds_margin_spacing_small"
+        android:background="@drawable/ds_menu_item_selected"
+        app:layout_constraintBottom_toTopOf="@+id/guide_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/guide_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_start"
+        app:layout_constraintTop_toBottomOf="@+id/guide_top" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ds_submenu_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_margin_spacing_small"
+        android:layout_marginLeft="@dimen/ds_margin_spacing_small"
+        android:layout_marginTop="@dimen/ds_submenu_text_margin_top_bottom"
+        android:layout_marginBottom="@dimen/ds_submenu_text_margin_top_bottom"
+        android:gravity="center_vertical"
+        android:textColor="@color/nat_navigation_item_text_color"
+        android:textSize="@dimen/ds_text_small"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ds_menu_view_selected"
+        app:layout_constraintTop_toBottomOf="parent"
+        tools:text="Sub Menu item" />
+</merge>

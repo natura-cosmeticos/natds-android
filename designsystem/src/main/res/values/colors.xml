@@ -4,4 +4,5 @@
     <color name="colorBrdNatYellow">#F4AB34</color>
     <color name="colorBrdNatWhite">#FFFFFF</color>
     <color name="colorBrdNatGray">#333333</color>
+    <color name="black_12">#1F000000</color>
 </resources>

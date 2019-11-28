@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ds_margin_spacing_medium">16dp</dimen>
+    <dimen name="ds_margin_spacing_small">8dp</dimen>
+    <dimen name="ds_margin_spacing_smallest">4dp</dimen>
+
+    <!-- Text Size Default -->
+    <dimen name="ds_text_small">14sp</dimen>
+    <dimen name="ds_text_smalle">4sp</dimen>
+
+    <!-- SubMenu dimens -->
+    <dimen name="ds_submenu_text_margin_top_bottom">10dp</dimen>
+    <dimen name="ds_submenu_line_widht">1dp</dimen>
+    <dimen name="ds_menu_item_selected_radius">4dp</dimen>
+</resources>

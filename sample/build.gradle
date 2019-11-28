@@ -1,20 +1,19 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply from: "$rootDir/tools/publish.gradle"
-apply from: "$rootDir/tools/ktlint.gradle"
+apply plugin: 'com.facebook.testing.screenshot'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
-
     defaultConfig {
+        applicationId "com.natura.android.sample"
         minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
-
-        consumerProguardFiles 'consumer-rules.pro'
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "com.natura.android.sample.test.ScreenShotTestRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -27,16 +26,13 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
-
-    lintOptions {
-        baseline file("lint-baseline.xml")
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':designsystem')
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
     implementation "androidx.appcompat:appcompat:$rootProject.androidxAppcompat"
     implementation "androidx.core:core-ktx:$rootProject.androidxCore"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
@@ -45,3 +41,4 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
 }
+
