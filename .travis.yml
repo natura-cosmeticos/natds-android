@@ -28,6 +28,7 @@ android:
     - google-gdk-license-.+
 
 before_install:
+  - brew install git-lfs
   - chmod +x gradlew
   - chmod +x tools/pipeline_build.sh
   - ./gradlew dependencies || true
