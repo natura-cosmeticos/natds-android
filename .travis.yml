@@ -60,9 +60,9 @@ before_script:
   - git lfs pull
   #   Android test (screenshot) init
   - find /usr/local/android-sdk/system-images -type f
-  - avdmanager list target device avd -c
-  - avdmanager list device -c
-  - avdmanager list avd -c
+  - avdmanager list target
+  - avdmanager list device
+  - avdmanager list avd
   - echo no | android create avd --force -n test -k "system-images;android-$EMULATOR_API_LEVEL;$ABI" -c 100M
   - emulator @test -kernel $SYSTEM_IMAGE -no-audio -no-window &
   - android-wait-for-emulator
