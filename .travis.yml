@@ -5,8 +5,8 @@ env:
     - ABI="default;armeabi-v7a"
     - ANDROID_BUILD_TOOLS=28.0.3
     - ADB_INSTALL_TIMEOUT=5
-    - EMULATOR_API_LEVEL=23
-    - SYSTEM_IMAGE=/usr/local/android-sdk/system-images/android-23/default/armeabi-v7a/kernel-ranchu
+    - EMULATOR_API_LEVEL=16
+    - SYSTEM_IMAGE=/usr/local/android-sdk/system-images/android-16/default/armeabi-v7a/kernel-ranchu
     - ANDROID_SDK_ROOT=/usr/local/android-sdk
 
 branches:
