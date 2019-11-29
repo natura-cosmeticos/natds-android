@@ -9,6 +9,10 @@ env:
     - SYSTEM_IMAGE=/usr/local/android-sdk/system-images/android-23/default/armeabi-v7a/kernel-ranchu
     - ANDROID_SDK_ROOT=/usr/local/android-sdk
 
+branches:
+  only:
+    - master
+
 android:
   components:
     - tools

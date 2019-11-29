@@ -41,8 +41,8 @@ class SubmenuActivityTest {
 
     private fun checkView(view: View) {
         ViewHelpers.setupView(view)
-            .setExactWidthDp(300)
-            .setExactHeightDp(100)
+            .setExactWidthPx(500)
+            .setExactHeightPx(150)
             .layout()
         Screenshot.snap(view)
             .record()
