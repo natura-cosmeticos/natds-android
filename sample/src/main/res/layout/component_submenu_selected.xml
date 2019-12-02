@@ -9,7 +9,7 @@
         android:layout_height="48dp"
         app:submenu_is_selected="true"
         app:submenu_label="Sub Menu item"
-        app:submenu_label_color="@color/nat_navigation_item_text_color"
+        app:submenu_label_color="@color/colorBrdNatGray"
         app:submenu_label_size="@dimen/ds_text_small" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
-    <solid android:color="@color/nat_secondary16" />
+    <solid android:color="@color/colorBrdNatOrange_16" />
     <corners android:radius="@dimen/ds_menu_item_selected_radius" />
 </shape>

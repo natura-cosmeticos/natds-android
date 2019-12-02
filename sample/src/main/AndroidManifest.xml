@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".components.SubmenuActivity"/>
+        <activity
+            android:name=".components.SubmenuActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
 
 </manifest>

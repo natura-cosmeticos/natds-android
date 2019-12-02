@@ -27,7 +27,7 @@ class SubMenuView @JvmOverloads constructor(
         val labelText = typedArray.getString(R.styleable.ds_submenu_submenu_label)
         val labelColor = typedArray.getResourceId(
             R.styleable.ds_submenu_submenu_label_color,
-            R.color.nat_navigation_item_text_color
+            R.color.colorBrdNatGray
         )
         val labelSize = typedArray.getResourceId(
             R.styleable.ds_submenu_submenu_label_size,
@@ -44,7 +44,7 @@ class SubMenuView @JvmOverloads constructor(
 
         configLabel(labelText, labelColor, labelSize)
         configSelected(isSelected, selectedDrawable)
-        labelEnable(isEnabled)
+        setEnable(isEnabled)
     }
 
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
@@ -55,20 +55,20 @@ class SubMenuView @JvmOverloads constructor(
 
     private fun configSelected(isSelected: Boolean, selectedColor: Int) {
         labelContainer.apply {
-            if (isSelected) background = ContextCompat.getDrawable(context, selectedColor)
-            else background = ContextCompat.getDrawable(context, R.drawable.ds_menu_item_unselected)
+            if (isSelected) setBackgroundResource(selectedColor)
+            else setBackgroundResource(0)
         }
     }
 
-    private fun labelEnable(isEnabled: Boolean) {
+    private fun setEnable(isEnabled: Boolean) {
         textLabel.apply {
             if (isEnabled) setTextColor(
                 ContextCompat.getColor(
                     context,
-                    R.color.nat_navigation_item_text_color
+                    R.color.colorBrdNatGray
                 )
             )
-            else setTextColor(ContextCompat.getColor(context, R.color.nat_brd_gray48))
+            else setTextColor(ContextCompat.getColor(context, R.color.colorBrdNatGray_48))
         }
     }
 }
