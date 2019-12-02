@@ -20,6 +20,14 @@ class SubMenuView @JvmOverloads constructor(
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_submenu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_submenu_view_selected) }
 
+    private val selectedColor: Int
+
+    var label: String? = ""
+        set(value) {
+            field = value
+            textLabel.text = value
+        }
+
     init {
         View.inflate(context, R.layout.ds_submenu_view, this)
 
@@ -33,7 +41,7 @@ class SubMenuView @JvmOverloads constructor(
             R.styleable.ds_submenu_submenu_label_size,
             R.dimen.ds_text_small
         )
-        val selectedDrawable = typedArray.getResourceId(
+        selectedColor = typedArray.getResourceId(
             R.styleable.ds_submenu_submenu_selected_drawable,
             R.drawable.ds_menu_item_selected
         )
@@ -43,24 +51,27 @@ class SubMenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        configSelected(isSelected, selectedDrawable)
-        setEnable(isEnabled)
+        setSelected(isSelected)
+        setEnabled(isEnabled)
     }
 
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
-        textLabel.text = labelText
+        label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
     }
 
-    private fun configSelected(isSelected: Boolean, selectedColor: Int) {
+    override fun setSelected(selected: Boolean) {
+        super.setSelected(selected)
+
         labelContainer.apply {
             if (isSelected) setBackgroundResource(selectedColor)
             else setBackgroundResource(0)
         }
     }
 
-    private fun setEnable(isEnabled: Boolean) {
+    override fun setEnabled(isEnabled: Boolean) {
+        super.setEnabled(isEnabled)
         textLabel.apply {
             if (isEnabled) setTextColor(
                 ContextCompat.getColor(

@@ -17,5 +17,12 @@
             android:text="Submenu Item"
             android:textColor="@color/colorBrdNatGray" />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_navigation_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Navigation Drawer"
+            android:textColor="@color/colorBrdNatGray" />
+
     </LinearLayout>
 </ScrollView>
