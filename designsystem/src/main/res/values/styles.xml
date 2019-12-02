@@ -3,6 +3,6 @@
     <!--Navigation Drawer-->
     <style name="Widget.Natura.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
-        <item name="itemTextColor">@color/nat_navigation_item_text_color</item>
+        <item name="itemTextColor">@color/colorBrdNatGray</item>
     </style>
 </resources>
