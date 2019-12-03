@@ -7,4 +7,5 @@
     <color name="colorBrdBlack_12">#1F000000</color>
     <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
     <color name="colorBrdNatGray_48">#7A333333</color>
+    <color name="colorLowEmphasis_16">#29BBBBBB</color>
 </resources>
