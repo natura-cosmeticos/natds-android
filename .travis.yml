@@ -64,7 +64,7 @@ before_script:
   - avdmanager list device
   - avdmanager list avd
   - echo no | android create avd --force -n test --device 29 -k "system-images;android-$EMULATOR_API_LEVEL;$ABI" -c 500M
-  - emulator @test -no-boot-anim -netspeed full -netdelay none -skin 768x1280 -memory 2048 -kernel $SYSTEM_IMAGE -no-audio -no-window &
+  - emulator @test -no-boot-anim -netspeed full -netdelay none -no-snapshot -skin 768x1280 -memory 2048 -kernel $SYSTEM_IMAGE -no-audio -no-window &
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
   #   Android test (screenshot) end
