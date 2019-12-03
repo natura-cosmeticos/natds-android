@@ -22,6 +22,10 @@
         <activity
             android:name=".components.SubmenuActivity"
             android:theme="@style/Theme.Natura" />
+
+        <activity
+            android:name=".components.MenuActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
 
 </manifest>

@@ -11,6 +11,13 @@
         android:padding="@dimen/ds_spacing_small">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Item"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_submenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
