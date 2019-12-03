@@ -48,7 +48,7 @@ class MenuView @JvmOverloads constructor(
 
         val iconDrawable = typedArray.getResourceId(
             R.styleable.ds_menu_menu_icon,
-            R.drawable.ds_ic_home
+            0
         )
 
         openedDrawable = typedArray.getResourceId(
@@ -80,16 +80,16 @@ class MenuView @JvmOverloads constructor(
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
     }
 
-    open fun setLabel(labelText: String?) {
+    fun setLabel(labelText: String?) {
         textLabel.text = labelText
     }
 
-    open fun configSelected(isSelected: Boolean) {
+    fun configSelected(isSelected: Boolean) {
         changeBackground(isSelected, selectedDrawable)
         iconArrowMenu.setVisibilityFromBoolean(!isSelected, View.INVISIBLE)
     }
 
-    open fun configOpened(isOpened: Boolean) {
+    fun configOpened(isOpened: Boolean) {
         changeBackground(isOpened, openedDrawable)
         iconArrowMenu.rotation = 180f
     }
