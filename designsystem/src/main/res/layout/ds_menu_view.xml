@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/ds_spacing_small" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/ds_spacin_tiny" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/ds_spacing_micro" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/ds_spacing_micro" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ds_menu_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tint="@color/colorBrdNatGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorBrdNatGray" />
+
+    <View
+        android:id="@+id/ds_menu_view_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/ds_spacin_tiny"
+        android:layout_marginLeft="@dimen/ds_spacin_tiny"
+        android:background="@drawable/ds_menu_item_selected"
+        app:layout_constraintBottom_toTopOf="@+id/guide_bottom"
+        app:layout_constraintEnd_toEndOf="@+id/guide_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guide_top" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ds_menu_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_spacing_standard"
+        android:layout_marginLeft="@dimen/ds_spacin_tiny"
+        android:layout_marginTop="@dimen/ds_submenu_text_margin_top_bottom"
+        android:layout_marginEnd="@dimen/ds_spacin_tiny"
+        android:layout_marginRight="@dimen/ds_spacin_tiny"
+        android:layout_marginBottom="@dimen/ds_submenu_text_margin_top_bottom"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorBrdNatGray"
+        android:textSize="@dimen/ds_text_small"
+        app:layout_constraintBottom_toBottomOf="@+id/ds_menu_icon"
+        app:layout_constraintEnd_toStartOf="@+id/ds_menu_arrow"
+        app:layout_constraintStart_toEndOf="@+id/ds_menu_icon"
+        app:layout_constraintTop_toTopOf="@+id/ds_menu_icon"
+        tools:text="Sub Menu item" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ds_menu_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ds_spacin_tiny"
+        android:layout_marginRight="@dimen/ds_spacin_tiny"
+        app:layout_constraintBottom_toBottomOf="@id/ds_menu_label"
+        app:layout_constraintEnd_toEndOf="@+id/ds_menu_view_background"
+        app:layout_constraintTop_toTopOf="@id/ds_menu_label"
+        app:srcCompat="@drawable/ds_ic_arrow_down"
+        app:tint="@color/colorBrdNatGray" />
+</merge>

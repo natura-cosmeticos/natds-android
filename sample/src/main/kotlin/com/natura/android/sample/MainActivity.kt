@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.ExpandableNavigationViewActivity
+import com.natura.android.sample.components.MenuActivity
 import com.natura.android.sample.components.SubmenuActivity
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
@@ -19,5 +20,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         findViewById<Button>(R.id.btn_navigation_drawer).setOnClickListener {
             startActivity(Intent(this, ExpandableNavigationViewActivity::class.java))
         }
+
+        findViewById<Button>(R.id.btn_menu).setOnClickListener {
+            startActivity(Intent(this, MenuActivity::class.java))
+        }
     }
 }
+

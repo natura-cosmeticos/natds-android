@@ -22,7 +22,14 @@
         <activity
             android:name=".components.SubmenuActivity"
             android:theme="@style/Theme.Natura" />
-        <activity android:name=".components.ExpandableNavigationViewActivity"/>
+
+        <activity
+            android:name=".components.ExpandableNavigationViewActivity"
+            android:theme="@style/Theme.Natura" />
+
+        <activity
+            android:name=".components.MenuActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
 
 
