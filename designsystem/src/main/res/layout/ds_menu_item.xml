@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.natura.android.menu.MenuView
+        android:id="@+id/menu_item"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ds_menu_item_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu_selected_drawable="@drawable/ds_menu_item_selected"
+        app:menu_label="Menu item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,18 +6,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
 import com.natura.android.R
+import com.natura.android.menu.MenuView
 import com.natura.android.menu.SubMenuView
 
-class ExpandableNavigationAdapter(private val context: Context, private val navigationItems: MutableList<NavigationItem>) : BaseExpandableListAdapter() {
+class ExpandableNavigationAdapter(
+    private val context: Context,
+    private val navigationItems: MutableList<NavigationItem>
+) : BaseExpandableListAdapter() {
     override fun getGroup(groupPosition: Int) = navigationItems[groupPosition]
 
     override fun isChildSelectable(groupPosition: Int, childPosition: Int) = true
 
     override fun hasStableIds() = true
 
-    override fun getChildrenCount(groupPosition: Int) = navigationItems[groupPosition].childItems.size
+    override fun getChildrenCount(groupPosition: Int) =
+        navigationItems[groupPosition].childItems.size
 
-    override fun getChild(groupPosition: Int, childPosition: Int) = navigationItems[groupPosition].childItems[childPosition]
+    override fun getChild(groupPosition: Int, childPosition: Int) =
+        navigationItems[groupPosition].childItems[childPosition]
 
     override fun getGroupId(groupPosition: Int) = groupPosition.toLong()
 
@@ -25,7 +31,13 @@ class ExpandableNavigationAdapter(private val context: Context, private val navi
 
     override fun getGroupCount() = navigationItems.size
 
-    override fun getChildView(groupPosition: Int, childPosition: Int, isLastChild: Boolean, convertView: View?, parent: ViewGroup?): View {
+    override fun getChildView(
+        groupPosition: Int,
+        childPosition: Int,
+        isLastChild: Boolean,
+        convertView: View?,
+        parent: ViewGroup?
+    ): View {
         val parentView = convertView
             ?: LayoutInflater.from(context).inflate(R.layout.ds_submenu_item, null)
 
@@ -41,20 +53,37 @@ class ExpandableNavigationAdapter(private val context: Context, private val navi
         return parentView
     }
 
-    override fun getGroupView(groupPosition: Int, isExpanded: Boolean, convertView: View?, parent: ViewGroup?): View {
+    override fun getGroupView(
+        groupPosition: Int,
+        isExpanded: Boolean,
+        convertView: View?,
+        parent: ViewGroup?
+    ): View {
         val parentView = convertView
-            ?: LayoutInflater.from(context).inflate(R.layout.ds_submenu_item, null)
+            ?: LayoutInflater.from(context).inflate(R.layout.ds_menu_item, null)
 
-        val groupView = parentView.findViewById<SubMenuView>(R.id.child_item)
+        val groupView = parentView.findViewById<MenuView>(R.id.menu_item)
         navigationItems[groupPosition].let { item ->
             groupView.apply {
                 label = item.label
-                isEnabled = item.enabled
-                isSelected = item.selected
+                icon = item.iconDrawable
+                configStateMenu(item.menuState)
             }
         }
 
         return parentView
+    }
+
+    override fun onGroupExpanded(groupPosition: Int) {
+        super.onGroupExpanded(groupPosition)
+        navigationItems[groupPosition].menuState = MenuView.MenuState.OPEN
+        notifyDataSetChanged()
+    }
+
+    override fun onGroupCollapsed(groupPosition: Int) {
+        super.onGroupCollapsed(groupPosition)
+        navigationItems[groupPosition].menuState = MenuView.MenuState.CLOSE
+        notifyDataSetChanged()
     }
 
     fun removeGroup(groupPosition: Int) {

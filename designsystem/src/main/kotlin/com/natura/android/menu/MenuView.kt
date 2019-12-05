@@ -20,6 +20,9 @@ class MenuView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    enum class MenuState { NONE, OPEN, CLOSE }
+
+
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
     private val iconMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_icon) }
@@ -27,6 +30,17 @@ class MenuView @JvmOverloads constructor(
 
     private var selectedDrawable: Int
     private var openedDrawable: Int
+    var label: String? = ""
+        set(value) {
+            field = value
+            textLabel.text = value
+        }
+
+    var icon: Int = 0
+        set(value) {
+            field = value
+            iconMenu.setImageResource(value)
+        }
 
     init {
         View.inflate(context, R.layout.ds_menu_view, this)
@@ -63,35 +77,30 @@ class MenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        configIcon(iconDrawable)
+        icon = iconDrawable
 
         if (isOpened) configOpened(isOpened)
-        else configSelected(isSelected)
-        setEnable(isEnabled)
+        else setSelected(isSelected)
+        setEnabled(isEnabled)
     }
 
-    private fun configIcon(icon: Int) {
-        iconMenu.setImageResource(icon)
-    }
 
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
-        setLabel(labelText)
+        label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
     }
 
-    fun setLabel(labelText: String?) {
-        textLabel.text = labelText
+    private fun configOpened(isOpened: Boolean) {
+        changeBackground(isOpened, openedDrawable)
+        if (isOpened) iconArrowMenu.animate().rotation(180f).start()
+        else iconArrowMenu.animate().rotation(0f).start()
     }
 
-    fun configSelected(isSelected: Boolean) {
+    override fun setSelected(isSelected: Boolean) {
+        super.setSelected(isSelected)
         changeBackground(isSelected, selectedDrawable)
         iconArrowMenu.setVisibilityFromBoolean(!isSelected, View.INVISIBLE)
-    }
-
-    fun configOpened(isOpened: Boolean) {
-        changeBackground(isOpened, openedDrawable)
-        iconArrowMenu.rotation = 180f
     }
 
     private fun changeBackground(changeBackground: Boolean, selectedColor: Int) {
@@ -101,7 +110,16 @@ class MenuView @JvmOverloads constructor(
         }
     }
 
-    private fun setEnable(isEnabled: Boolean) {
+    fun configStateMenu(menuState: MenuState) {
+        when (menuState) {
+            MenuState.CLOSE -> configOpened(false)
+            MenuState.OPEN -> configOpened(true)
+        }
+    }
+
+    override fun setEnabled(isEnabled: Boolean) {
+        super.setEnabled(isEnabled)
+        isClickable = !isEnabled
         if (isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
             setColorFilter(iconMenu, R.color.colorBrdNatGray)

@@ -5,16 +5,15 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    android:fitsSystemWindows="true"
-    tools:parentTag="android.support.design.widget.NavigationView">
+    tools:parentTag="com.google.android.material.navigation.NavigationView">
 
-    <!-- TODO mudar margem -->
     <ExpandableListView
         android:id="@+id/navigation_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="90dp"
         android:animateLayoutChanges="true"
-        android:background="@android:color/white">
-    </ExpandableListView>
+        android:background="@android:color/white"
+        android:childDivider="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:groupIndicator="@null" />
 </merge>
