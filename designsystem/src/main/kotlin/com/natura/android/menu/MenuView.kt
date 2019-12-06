@@ -3,13 +3,13 @@ package com.natura.android.menu
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.PorterDuff
+import android.support.constraint.ConstraintLayout
+import android.support.v4.content.ContextCompat
+import android.support.v7.widget.AppCompatImageView
+import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
 

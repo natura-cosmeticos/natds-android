@@ -13,7 +13,7 @@ def getGroupId = { ->
     return "com.natura.android"
 }
 
-def getArtificatId = { ->
+def getArtifactId = { ->
     return "designsystem"
 }
 
@@ -21,9 +21,9 @@ publishing {
     publications {
         bar(MavenPublication) {
             groupId getGroupId()
-            artifactId getArtificatId()
+            artifactId getArtifactId()
             version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
         }
     }
     repositories {

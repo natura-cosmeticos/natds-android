@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:layout_gravity="start"
-    tools:parentTag="com.google.android.material.navigation.NavigationView">
+    tools:parentTag="android.support.design.widget.NavigationView">
 
     <ExpandableListView
         android:id="@+id/navigation_menu"
