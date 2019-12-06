@@ -22,6 +22,12 @@ class MenuView @JvmOverloads constructor(
 
     enum class MenuState { NONE, OPEN, CLOSE }
 
+    companion object {
+
+        const val ROTATION_ARROW_MENU_OPEN = 180f
+        const val ROTATION_ARROW_MENU_CLOSED = 0f
+
+    }
 
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
@@ -93,8 +99,8 @@ class MenuView @JvmOverloads constructor(
 
     private fun configOpened(isOpened: Boolean) {
         changeBackground(isOpened, openedDrawable)
-        if (isOpened) iconArrowMenu.animate().rotation(180f).start()
-        else iconArrowMenu.animate().rotation(0f).start()
+        if (isOpened) iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_OPEN).start()
+        else iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_CLOSED).start()
     }
 
     override fun setSelected(isSelected: Boolean) {

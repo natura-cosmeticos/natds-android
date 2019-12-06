@@ -11,7 +11,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : NavigationView(context, attrs, defStyleAttr), ExpandableListView.OnChildClickListener {
+) : NavigationView(context, attrs, defStyleAttr) {
 
     private val navigationMenu: ExpandableListView by lazy { findViewById<ExpandableListView>(R.id.navigation_menu) }
     private lateinit var navigationAdapter: ExpandableNavigationAdapter
@@ -28,22 +28,18 @@ class ExpandableNavigationView @JvmOverloads constructor(
         navigationAdapter = ExpandableNavigationAdapter(context, navigationItems.toMutableList())
         navigationMenu.setAdapter(navigationAdapter)
 
-        navigationMenu.setOnChildClickListener(this)
+        setListener()
     }
 
-    override fun onChildClick(
-        parent: ExpandableListView?,
-        v: View?,
-        groupPosition: Int,
-        childPosition: Int,
-        id: Long
-    ): Boolean {
-
-        navigationItems[oldGroupPosition].childItems[oldChildPosition].selected = false
-        navigationItems[groupPosition].childItems[childPosition].selected = true
-        oldGroupPosition = groupPosition
-        oldChildPosition = childPosition
-        navigationAdapter.notifyDataSetChanged()
-        return true
+    private fun setListener() {
+        navigationMenu.setOnChildClickListener { parent: ExpandableListView, view: View, groupPosition: Int, childPosition: Int, id: Long ->
+            navigationItems[oldGroupPosition].childItems[oldChildPosition].selected = false
+            navigationItems[groupPosition].childItems[childPosition].selected = true
+            oldGroupPosition = groupPosition
+            oldChildPosition = childPosition
+            navigationAdapter.notifyDataSetChanged()
+            true
+        }
     }
 }
+
