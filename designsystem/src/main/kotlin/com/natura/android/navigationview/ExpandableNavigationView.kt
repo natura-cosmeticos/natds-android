@@ -1,10 +1,10 @@
 package com.natura.android.navigationview
 
 import android.content.Context
+import android.support.design.widget.NavigationView
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ExpandableListView
-import com.google.android.material.navigation.NavigationView
 import com.natura.android.R
 
 class ExpandableNavigationView @JvmOverloads constructor(

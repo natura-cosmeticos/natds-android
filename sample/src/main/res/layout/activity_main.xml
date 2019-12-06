@@ -11,21 +11,21 @@
         android:layout_gravity="center_vertical"
         android:padding="@dimen/ds_spacing_small">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu Item"
             android:textColor="@color/colorBrdNatGray" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_submenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submenu Item"
             android:textColor="@color/colorBrdNatGray" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_navigation_drawer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

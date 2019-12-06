@@ -1,19 +1,19 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
+import android.support.v4.view.GravityCompat
+import android.support.v4.widget.DrawerLayout
+import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.core.view.GravityCompat
-import androidx.drawerlayout.widget.DrawerLayout
 import com.natura.android.navigationview.ExpandableNavigationView
 import com.natura.android.navigationview.NavigationItem
 import com.natura.android.navigationview.NavigationItemChild
 import com.natura.android.sample.R
 
 class ExpandableNavigationViewActivity :
-    AppCompatActivity(R.layout.activity_expandable_navigation_view) {
+    AppCompatActivity() {
 
     private val expandableNavigationMenu: ExpandableNavigationView by lazy {
         findViewById<ExpandableNavigationView>(
@@ -24,6 +24,8 @@ class ExpandableNavigationViewActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setContentView(R.layout.activity_expandable_navigation_view)
 
         supportActionBar?.setHomeAsUpIndicator(android.R.drawable.ic_menu_more)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
