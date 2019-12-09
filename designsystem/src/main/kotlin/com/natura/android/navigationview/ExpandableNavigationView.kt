@@ -70,11 +70,9 @@ class ExpandableNavigationView @JvmOverloads constructor(
 
     private fun resetMenuSelected(groupPosition: Int, childPosition: Int) {
         navigationItems[groupPosition].apply {
-            if (hasSubMenu) {
-                childItems[childPosition].selected = false
-            } else {
-                menuState = MenuView.MenuState.UNSELECTED
-            }
+            if (hasSubMenu) childItems[childPosition].selected = false
+            else menuState = MenuView.MenuState.UNSELECTED
+
         }
     }
 

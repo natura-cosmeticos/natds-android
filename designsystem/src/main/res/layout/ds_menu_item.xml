@@ -8,6 +8,5 @@
         android:id="@+id/menu_item"
         android:layout_width="match_parent"
         android:layout_height="@dimen/ds_menu_item_height"
-        app:menu_label="Menu item"
         app:menu_selected_drawable="@drawable/ds_menu_item_selected" />
 </FrameLayout>

@@ -23,10 +23,8 @@ class MenuView @JvmOverloads constructor(
     enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED }
 
     companion object {
-
         const val ROTATION_ARROW_MENU_OPEN = 180f
         const val ROTATION_ARROW_MENU_CLOSED = 0f
-
     }
 
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
