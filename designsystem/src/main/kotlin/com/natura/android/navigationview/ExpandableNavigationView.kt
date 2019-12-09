@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.ExpandableListView
 import com.natura.android.R
+import com.natura.android.menu.MenuView
 
 class ExpandableNavigationView @JvmOverloads constructor(
     context: Context,
@@ -33,13 +34,49 @@ class ExpandableNavigationView @JvmOverloads constructor(
 
     private fun setListener() {
         navigationMenu.setOnChildClickListener { parent: ExpandableListView, view: View, groupPosition: Int, childPosition: Int, id: Long ->
-            navigationItems[oldGroupPosition].childItems[oldChildPosition].selected = false
+
+            resetMenuSelected(oldGroupPosition, oldChildPosition)
             navigationItems[groupPosition].childItems[childPosition].selected = true
+
             oldGroupPosition = groupPosition
             oldChildPosition = childPosition
+
             navigationAdapter.notifyDataSetChanged()
             true
         }
+
+        navigationMenu.setOnGroupExpandListener { groupPosition ->
+            menuWhenNoHasSubmenu(groupPosition, MenuView.MenuState.OPEN)
+            navigationAdapter.notifyDataSetChanged()
+        }
+
+        navigationMenu.setOnGroupCollapseListener { groupPosition ->
+            menuWhenNoHasSubmenu(groupPosition, MenuView.MenuState.CLOSE)
+            navigationAdapter.notifyDataSetChanged()
+        }
     }
+
+    private fun menuWhenNoHasSubmenu(groupPosition: Int, state: MenuView.MenuState) {
+        navigationItems[groupPosition].apply {
+            if (hasSubMenu) {
+                menuState = state
+            } else {
+                menuState = MenuView.MenuState.SELECTED
+                resetMenuSelected(oldGroupPosition, oldChildPosition)
+                oldGroupPosition = groupPosition
+            }
+        }
+    }
+
+    private fun resetMenuSelected(groupPosition: Int, childPosition: Int) {
+        navigationItems[groupPosition].apply {
+            if (hasSubMenu) {
+                childItems[childPosition].selected = false
+            } else {
+                menuState = MenuView.MenuState.UNSELECTED
+            }
+        }
+    }
+
 }
 

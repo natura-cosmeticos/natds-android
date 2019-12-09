@@ -20,7 +20,7 @@ class MenuView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    enum class MenuState { NONE, OPEN, CLOSE }
+    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED }
 
     companion object {
 
@@ -85,8 +85,12 @@ class MenuView @JvmOverloads constructor(
         configLabel(labelText, labelColor, labelSize)
         icon = iconDrawable
 
-        if (isOpened) configOpened(isOpened)
-        else setSelected(isSelected)
+        if (isOpened) {
+            configOpened(isOpened)
+        } else {
+            setSelected(isSelected)
+            showArrow(false)
+        }
         setEnabled(isEnabled)
     }
 
@@ -106,7 +110,6 @@ class MenuView @JvmOverloads constructor(
     override fun setSelected(isSelected: Boolean) {
         super.setSelected(isSelected)
         changeBackground(isSelected, selectedDrawable)
-        iconArrowMenu.setVisibilityFromBoolean(!isSelected, View.INVISIBLE)
     }
 
     private fun changeBackground(changeBackground: Boolean, selectedColor: Int) {
@@ -120,7 +123,13 @@ class MenuView @JvmOverloads constructor(
         when (menuState) {
             MenuState.CLOSE -> configOpened(false)
             MenuState.OPEN -> configOpened(true)
+            MenuState.SELECTED -> isSelected = true
+            MenuState.UNSELECTED -> isSelected = false
         }
+    }
+
+    fun showArrow(hasSubMenu: Boolean) {
+        iconArrowMenu.setVisibilityFromBoolean(hasSubMenu, View.INVISIBLE)
     }
 
     override fun setEnabled(isEnabled: Boolean) {

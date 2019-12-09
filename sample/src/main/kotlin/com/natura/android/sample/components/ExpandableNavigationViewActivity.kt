@@ -66,6 +66,16 @@ class ExpandableNavigationViewActivity :
                     NavigationItemChild("Item 4 sub 2"),
                     NavigationItemChild("Item 4 sub 3")
                 )
+            ),
+            NavigationItem(
+                label = "Item 5",
+                iconDrawable = R.drawable.ic_home,
+                hasSubMenu = false
+            ),
+            NavigationItem(
+                label = "Item 6",
+                iconDrawable = R.drawable.ic_home,
+                hasSubMenu = false
             )
         )
 

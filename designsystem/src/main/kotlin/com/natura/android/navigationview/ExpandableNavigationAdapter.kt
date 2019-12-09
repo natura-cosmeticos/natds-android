@@ -67,42 +67,11 @@ class ExpandableNavigationAdapter(
             groupView.apply {
                 label = item.label
                 icon = item.iconDrawable
+                showArrow(item.hasSubMenu)
                 configStateMenu(item.menuState)
             }
         }
 
         return parentView
-    }
-
-    override fun onGroupExpanded(groupPosition: Int) {
-        super.onGroupExpanded(groupPosition)
-        navigationItems[groupPosition].menuState = MenuView.MenuState.OPEN
-        notifyDataSetChanged()
-    }
-
-    override fun onGroupCollapsed(groupPosition: Int) {
-        super.onGroupCollapsed(groupPosition)
-        navigationItems[groupPosition].menuState = MenuView.MenuState.CLOSE
-        notifyDataSetChanged()
-    }
-
-    fun removeGroup(groupPosition: Int) {
-        navigationItems.removeAt(groupPosition)
-        notifyDataSetChanged()
-    }
-
-    fun removeChild(groupPosition: Int, childPosition: Int) {
-        navigationItems[groupPosition].childItems.removeAt(childPosition)
-        notifyDataSetChanged()
-    }
-
-    fun addGroup(navigationItem: NavigationItem) {
-        navigationItems.add(navigationItem)
-        notifyDataSetChanged()
-    }
-
-    fun addChild(groupPosition: Int, navigationItemChild: NavigationItemChild) {
-        navigationItems[groupPosition].childItems.add(navigationItemChild)
-        notifyDataSetChanged()
     }
 }
