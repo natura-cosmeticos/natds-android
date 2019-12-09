@@ -12,4 +12,5 @@
     <dimen name="ds_submenu_text_margin_top_bottom">10dp</dimen>
     <dimen name="ds_submenu_line_widht">1dp</dimen>
     <dimen name="ds_menu_item_selected_radius">4dp</dimen>
+    <dimen name="ds_menu_item_height">48dp</dimen>
 </resources>

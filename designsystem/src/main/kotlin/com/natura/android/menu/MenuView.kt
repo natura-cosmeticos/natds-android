@@ -3,13 +3,13 @@ package com.natura.android.menu
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.PorterDuff
+import android.support.constraint.ConstraintLayout
+import android.support.v4.content.ContextCompat
+import android.support.v7.widget.AppCompatImageView
+import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
 
@@ -20,6 +20,13 @@ class MenuView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED }
+
+    companion object {
+        const val ROTATION_ARROW_MENU_OPEN = 180f
+        const val ROTATION_ARROW_MENU_CLOSED = 0f
+    }
+
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
     private val iconMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_icon) }
@@ -27,6 +34,17 @@ class MenuView @JvmOverloads constructor(
 
     private var selectedDrawable: Int
     private var openedDrawable: Int
+    var label: String? = ""
+        set(value) {
+            field = value
+            textLabel.text = value
+        }
+
+    var icon: Int = 0
+        set(value) {
+            field = value
+            iconMenu.setImageResource(value)
+        }
 
     init {
         View.inflate(context, R.layout.ds_menu_view, this)
@@ -63,35 +81,33 @@ class MenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        configIcon(iconDrawable)
+        icon = iconDrawable
 
-        if (isOpened) configOpened(isOpened)
-        else configSelected(isSelected)
-        setEnable(isEnabled)
+        if (isOpened) {
+            configOpened(isOpened)
+        } else {
+            setSelected(isSelected)
+            showArrow(false)
+        }
+        setEnabled(isEnabled)
     }
 
-    private fun configIcon(icon: Int) {
-        iconMenu.setImageResource(icon)
-    }
 
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
-        setLabel(labelText)
+        label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
     }
 
-    fun setLabel(labelText: String?) {
-        textLabel.text = labelText
-    }
-
-    fun configSelected(isSelected: Boolean) {
-        changeBackground(isSelected, selectedDrawable)
-        iconArrowMenu.setVisibilityFromBoolean(!isSelected, View.INVISIBLE)
-    }
-
-    fun configOpened(isOpened: Boolean) {
+    private fun configOpened(isOpened: Boolean) {
         changeBackground(isOpened, openedDrawable)
-        iconArrowMenu.rotation = 180f
+        if (isOpened) iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_OPEN).start()
+        else iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_CLOSED).start()
+    }
+
+    override fun setSelected(isSelected: Boolean) {
+        super.setSelected(isSelected)
+        changeBackground(isSelected, selectedDrawable)
     }
 
     private fun changeBackground(changeBackground: Boolean, selectedColor: Int) {
@@ -101,7 +117,22 @@ class MenuView @JvmOverloads constructor(
         }
     }
 
-    private fun setEnable(isEnabled: Boolean) {
+    fun configStateMenu(menuState: MenuState) {
+        when (menuState) {
+            MenuState.CLOSE -> configOpened(false)
+            MenuState.OPEN -> configOpened(true)
+            MenuState.SELECTED -> isSelected = true
+            MenuState.UNSELECTED -> isSelected = false
+        }
+    }
+
+    fun showArrow(hasSubMenu: Boolean) {
+        iconArrowMenu.setVisibilityFromBoolean(hasSubMenu, View.INVISIBLE)
+    }
+
+    override fun setEnabled(isEnabled: Boolean) {
+        super.setEnabled(isEnabled)
+        isClickable = !isEnabled
         if (isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
             setColorFilter(iconMenu, R.color.colorBrdNatGray)

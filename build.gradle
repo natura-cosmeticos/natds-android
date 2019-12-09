@@ -37,11 +37,10 @@ ext {
 
     // App dependencies
     supportLibraryVersion = '28.0.0'
-    androidxAppcompat = '1.1.0'
-    androidxCore = '1.1.0'
     constraintLayout = '1.1.3'
     junitVersion = '4.12'
     junitExtVersion = '1.1.0'
     expressoVersion = '3.1.1'
     ktlintVersion = '0.35.0'
+    androidXTestVersion = '1.2.0'
 }

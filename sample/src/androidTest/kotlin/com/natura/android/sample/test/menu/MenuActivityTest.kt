@@ -2,6 +2,7 @@ package com.natura.android.sample.test.menu
 
 import android.view.LayoutInflater
 import android.view.View
+import androidx.test.annotation.UiThreadTest
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.facebook.testing.screenshot.Screenshot
@@ -39,6 +40,7 @@ class MenuActivityTest {
         checkView(view)
     }
 
+    @UiThreadTest
     @Test
     fun verifyMenuWhenIsOpened() {
         val view: View = inflater.inflate(R.layout.component_menu_opened, null, false)
