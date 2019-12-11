@@ -92,7 +92,6 @@ class MenuView @JvmOverloads constructor(
         setEnabled(isEnabled)
     }
 
-
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
         label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
@@ -119,6 +118,7 @@ class MenuView @JvmOverloads constructor(
 
     fun configStateMenu(menuState: MenuState) {
         when (menuState) {
+            MenuState.NONE,
             MenuState.CLOSE -> configOpened(false)
             MenuState.OPEN -> configOpened(true)
             MenuState.SELECTED -> isSelected = true

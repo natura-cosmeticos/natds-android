@@ -82,7 +82,6 @@ class ExpandableNavigationViewActivity :
         expandableNavigationMenu.initMenuItems(list)
 
         drawerLayout.setScrimColor(ContextCompat.getColor(this, R.color.colorBrdNatOrange))
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -33,7 +33,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
     }
 
     private fun setListener() {
-        navigationMenu.setOnChildClickListener { parent: ExpandableListView, view: View, groupPosition: Int, childPosition: Int, id: Long ->
+        navigationMenu.setOnChildClickListener { _, _, groupPosition: Int, childPosition: Int, _ ->
 
             resetMenuSelected(oldGroupPosition, oldChildPosition)
             navigationItems[groupPosition].childItems[childPosition].selected = true
@@ -61,8 +61,8 @@ class ExpandableNavigationView @JvmOverloads constructor(
             if (hasSubMenu) {
                 menuState = state
             } else {
-                menuState = MenuView.MenuState.SELECTED
                 resetMenuSelected(oldGroupPosition, oldChildPosition)
+                menuState = MenuView.MenuState.SELECTED
                 oldGroupPosition = groupPosition
             }
         }
@@ -72,9 +72,6 @@ class ExpandableNavigationView @JvmOverloads constructor(
         navigationItems[groupPosition].apply {
             if (hasSubMenu) childItems[childPosition].selected = false
             else menuState = MenuView.MenuState.UNSELECTED
-
         }
     }
-
 }
-
