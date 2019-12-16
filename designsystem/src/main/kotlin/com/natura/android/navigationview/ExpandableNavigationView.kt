@@ -19,6 +19,9 @@ class ExpandableNavigationView @JvmOverloads constructor(
     private lateinit var navigationItems: List<NavigationItem>
     private var oldGroupPosition = 0
     private var oldChildPosition = 0
+    private var onItemSelected: ((Navigation) -> Unit) = {
+        // do nothing by default
+    }
 
     init {
         View.inflate(context, R.layout.ds_expandable_navigation_view, this)
@@ -37,6 +40,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
 
             resetMenuSelected(oldGroupPosition, oldChildPosition)
             navigationItems[groupPosition].childItems[childPosition].selected = true
+            onItemSelected(navigationItems[groupPosition].childItems[childPosition])
 
             oldGroupPosition = groupPosition
             oldChildPosition = childPosition
@@ -64,6 +68,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
                 resetMenuSelected(oldGroupPosition, oldChildPosition)
                 menuState = MenuView.MenuState.SELECTED
                 oldGroupPosition = groupPosition
+                onItemSelected(this)
             }
         }
     }
@@ -73,5 +78,9 @@ class ExpandableNavigationView @JvmOverloads constructor(
             if (hasSubMenu) childItems[childPosition].selected = false
             else menuState = MenuView.MenuState.UNSELECTED
         }
+    }
+
+    fun setOnItemSelected(func: (Navigation) -> Unit) {
+        onItemSelected = func
     }
 }

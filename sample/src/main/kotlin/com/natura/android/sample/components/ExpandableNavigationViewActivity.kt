@@ -32,47 +32,53 @@ class ExpandableNavigationViewActivity :
 
         val list = listOf(
             NavigationItem(
+                id = "item_id",
                 label = "Item 1",
                 iconDrawable = R.drawable.ic_home,
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 1 sub 1", enabled = true),
-                    NavigationItemChild("Item 1 sub 2", enabled = false),
-                    NavigationItemChild("Item 1 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 1 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 1 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 1 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id",
                 label = "Item 2",
                 iconDrawable = R.drawable.ic_home,
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 2 sub 1", enabled = true),
-                    NavigationItemChild("Item 2 sub 2", enabled = false),
-                    NavigationItemChild("Item 2 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id",
                 label = "Item 3",
                 iconDrawable = R.drawable.ic_home,
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 3 sub 1", enabled = true),
-                    NavigationItemChild("Item 3 sub 2", enabled = false),
-                    NavigationItemChild("Item 3 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id",
                 label = "Item 4",
                 iconDrawable = R.drawable.ic_home,
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 4 sub 1"),
-                    NavigationItemChild("Item 4 sub 2"),
-                    NavigationItemChild("Item 4 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 1"),
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 2"),
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id",
                 label = "Item 5",
                 iconDrawable = R.drawable.ic_home,
                 hasSubMenu = false
             ),
             NavigationItem(
+                id = "item_id",
                 label = "Item 6",
                 iconDrawable = R.drawable.ic_home,
                 hasSubMenu = false
