@@ -20,7 +20,7 @@ class MenuView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED }
+    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED, DISABLE }
 
     companion object {
         const val ROTATION_ARROW_MENU_OPEN = 180f
@@ -74,8 +74,8 @@ class MenuView @JvmOverloads constructor(
             R.drawable.ds_menu_item_opened
         )
 
-        val isSelected = typedArray.getBoolean(R.styleable.ds_menu_menu_is_selected, false)
-        val isEnabled = typedArray.getBoolean(R.styleable.ds_menu_menu_is_enabled, true)
+        val selected = typedArray.getBoolean(R.styleable.ds_menu_menu_is_selected, false)
+        val enabled = typedArray.getBoolean(R.styleable.ds_menu_menu_is_enabled, true)
         val isOpened = typedArray.getBoolean(R.styleable.ds_menu_menu_is_opened, false)
 
         typedArray.recycle()
@@ -86,10 +86,11 @@ class MenuView @JvmOverloads constructor(
         if (isOpened) {
             configOpened(isOpened)
         } else {
-            setSelected(isSelected)
+            isSelected = selected
             showArrow(false)
         }
-        setEnabled(isEnabled)
+
+        isEnabled = enabled
     }
 
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
@@ -123,6 +124,7 @@ class MenuView @JvmOverloads constructor(
             MenuState.OPEN -> configOpened(true)
             MenuState.SELECTED -> isSelected = true
             MenuState.UNSELECTED -> isSelected = false
+            MenuState.DISABLE -> isEnabled = false
         }
     }
 
@@ -133,6 +135,7 @@ class MenuView @JvmOverloads constructor(
     override fun setEnabled(isEnabled: Boolean) {
         super.setEnabled(isEnabled)
         isClickable = !isEnabled
+        textLabel.isEnabled = isEnabled
         if (isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
             setColorFilter(iconMenu, R.color.colorBrdNatGray)

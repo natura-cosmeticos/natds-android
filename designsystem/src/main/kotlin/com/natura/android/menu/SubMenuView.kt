@@ -73,6 +73,7 @@ class SubMenuView @JvmOverloads constructor(
     override fun setEnabled(isEnabled: Boolean) {
         super.setEnabled(isEnabled)
         isClickable = !isEnabled
+        textLabel.isEnabled = isEnabled
         textLabel.apply {
             if (isEnabled) setTextColor(
                 ContextCompat.getColor(

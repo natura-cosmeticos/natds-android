@@ -11,6 +11,7 @@ data class NavigationItem(
     val selected: Boolean = false,
     val enabled: Boolean = true,
     var hasSubMenu: Boolean = true,
+    var tagAnalytics: String = "",
     var menuState: MenuView.MenuState = MenuView.MenuState.NONE,
     val childItems: MutableList<NavigationItemChild> = mutableListOf()
 ) : Navigation(id)
@@ -19,5 +20,6 @@ data class NavigationItemChild(
     override val id: String,
     var label: String,
     var selected: Boolean = false,
-    val enabled: Boolean = true
+    val enabled: Boolean = true,
+    var tagAnalytics: String = ""
 ) : Navigation(id)

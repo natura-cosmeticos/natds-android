@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.natura.android.menu.MenuView
 import com.natura.android.navigationview.ExpandableNavigationView
 import com.natura.android.navigationview.NavigationItem
 import com.natura.android.navigationview.NavigationItemChild
@@ -44,6 +45,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id",
                 label = "Item 2",
+                menuState = MenuView.MenuState.DISABLE,
                 iconDrawable = R.drawable.ic_home,
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
