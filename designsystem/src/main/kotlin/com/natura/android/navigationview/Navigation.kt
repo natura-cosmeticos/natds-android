@@ -14,7 +14,9 @@ data class NavigationItem(
     var tagAnalytics: String = "",
     var menuState: MenuView.MenuState = MenuView.MenuState.NONE,
     val childItems: MutableList<NavigationItemChild> = mutableListOf()
-) : Navigation(id)
+) : Navigation(id) {
+    fun indexOfChildItemId(childId: String) = childItems.indexOfFirst { it.id == childId  }
+}
 
 data class NavigationItemChild(
     override val id: String,
