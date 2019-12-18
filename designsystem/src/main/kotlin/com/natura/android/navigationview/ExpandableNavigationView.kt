@@ -93,7 +93,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
     }
 
     fun selectItemId(itemId: String) {
-        if(selectedItemId != itemId) {
+        if(selectedItemId != itemId && navigationItems.isNotEmpty()) {
             resetMenuSelected()
 
             var childIndex = NOT_FOUND_INDEX
