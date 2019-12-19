@@ -66,7 +66,7 @@ class ExpandableNavigationAdapter(
         navigationItems[groupPosition].let { item ->
             groupView.apply {
                 label = item.label
-                icon = item.iconDrawable
+                icon = item.iconText
                 showArrow(item.hasSubMenu)
                 configStateMenu(item.menuState)
             }

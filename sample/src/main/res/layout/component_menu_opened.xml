@@ -7,7 +7,7 @@
     <com.natura.android.menu.MenuView
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:menu_icon="@drawable/ic_home"
+        app:menu_icon="EA08"
         app:menu_is_opened="true"
         app:menu_label="Menu item"
         app:menu_label_color="@color/colorBrdNatGray"

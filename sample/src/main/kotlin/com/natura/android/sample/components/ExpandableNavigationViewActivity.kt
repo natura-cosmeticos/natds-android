@@ -7,6 +7,7 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.natura.android.menu.MenuView
 import com.natura.android.navigationview.ExpandableNavigationView
 import com.natura.android.navigationview.NavigationItem
 import com.natura.android.navigationview.NavigationItemChild
@@ -32,49 +33,56 @@ class ExpandableNavigationViewActivity :
 
         val list = listOf(
             NavigationItem(
+                id = "item_id_1",
                 label = "Item 1",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 1 sub 1", enabled = true),
-                    NavigationItemChild("Item 1 sub 2", enabled = false),
-                    NavigationItemChild("Item 1 sub 3")
+                    NavigationItemChild(id = "sub_item_id_1", label = "Item 1 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 1 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 1 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id_2",
                 label = "Item 2",
-                iconDrawable = R.drawable.ic_home,
+                menuState = MenuView.MenuState.DISABLE,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 2 sub 1", enabled = true),
-                    NavigationItemChild("Item 2 sub 2", enabled = false),
-                    NavigationItemChild("Item 2 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 2 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id_3",
                 label = "Item 3",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 3 sub 1", enabled = true),
-                    NavigationItemChild("Item 3 sub 2", enabled = false),
-                    NavigationItemChild("Item 3 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 1", enabled = true),
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 2", enabled = false),
+                    NavigationItemChild(id = "item_id", label = "Item 3 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id_4",
                 label = "Item 4",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
-                    NavigationItemChild("Item 4 sub 1"),
-                    NavigationItemChild("Item 4 sub 2"),
-                    NavigationItemChild("Item 4 sub 3")
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 1"),
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 2"),
+                    NavigationItemChild(id = "item_id", label = "Item 4 sub 3")
                 )
             ),
             NavigationItem(
+                id = "item_id_5",
                 label = "Item 5",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 hasSubMenu = false
             ),
             NavigationItem(
+                id = "item_id_6",
                 label = "Item 6",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 hasSubMenu = false
             )
         )
@@ -82,6 +90,8 @@ class ExpandableNavigationViewActivity :
         expandableNavigationMenu.initMenuItems(list)
 
         drawerLayout.setScrimColor(ContextCompat.getColor(this, R.color.colorBrdNatOrange))
+
+        expandableNavigationMenu.selectItemId("item_id_5")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

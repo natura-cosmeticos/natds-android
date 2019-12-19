@@ -32,11 +32,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_end="@dimen/ds_spacing_micro" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <com.natura.android.icon.FontIcon
         android:id="@+id/ds_menu_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tint="@color/colorBrdNatGray"
+        android:textColor="@color/colorBrdNatGray"
+        tools:text="&#xEA08;"
+        android:textSize="@dimen/ds_text_default_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toTopOf="parent"

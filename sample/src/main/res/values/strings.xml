@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">natds-android</string>
+    <string name="app_name">natds_android</string>
+
+    <!-- Ícones -->
+    <string name="icon_filled_alert_cancel">EA01</string>
+    <string name="icon_filled_alert_check">EA02</string>
+    <string name="icon_filled_media_pause">EA03</string>
+    <string name="icon_filled_media_play">EA04</string>
+    <string name="icon_outlined_action_autofilter">EA05</string>
+    <string name="icon_outlined_action_send">EA06</string>
+    <string name="icon_outlined_alert_cancel">EA07</string>
+    <string name="icon_outlined_alert_check">EA08</string>
+
 </resources>
