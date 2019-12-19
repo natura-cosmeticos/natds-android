@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
     <declare-styleable name="ds_menu">
         <attr name="menu_label" format="string" />
         <attr name="menu_label_color" format="reference" />
-        <attr name="menu_icon" format="reference" />
+        <attr name="menu_icon" format="string" />
         <attr name="menu_label_size" format="reference" />
         <attr name="menu_selected_drawable" format="reference" />
         <attr name="menu_opened_drawable" format="reference" />

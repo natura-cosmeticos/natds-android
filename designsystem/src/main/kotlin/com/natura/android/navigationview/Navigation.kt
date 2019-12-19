@@ -7,7 +7,7 @@ sealed class Navigation(open val id: String)
 data class NavigationItem(
     override val id: String,
     val label: String,
-    val iconDrawable: Int = 0,
+    val iconText: String = "",
     val selected: Boolean = false,
     val enabled: Boolean = true,
     var hasSubMenu: Boolean = true,
@@ -15,7 +15,7 @@ data class NavigationItem(
     var menuState: MenuView.MenuState = MenuView.MenuState.NONE,
     val childItems: MutableList<NavigationItemChild> = mutableListOf()
 ) : Navigation(id) {
-    fun indexOfChildItemId(childId: String) = childItems.indexOfFirst { it.id == childId  }
+    fun indexOfChildItemId(childId: String) = childItems.indexOfFirst { it.id == childId }
 }
 
 data class NavigationItemChild(

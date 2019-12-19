@@ -35,7 +35,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_1",
                 label = "Item 1",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "sub_item_id_1", label = "Item 1 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 1 sub 2", enabled = false),
@@ -46,7 +46,7 @@ class ExpandableNavigationViewActivity :
                 id = "item_id_2",
                 label = "Item 2",
                 menuState = MenuView.MenuState.DISABLE,
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 2", enabled = false),
@@ -56,7 +56,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_3",
                 label = "Item 3",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 3 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 3 sub 2", enabled = false),
@@ -66,7 +66,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_4",
                 label = "Item 4",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 1"),
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 2"),
@@ -76,13 +76,13 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_5",
                 label = "Item 5",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 hasSubMenu = false
             ),
             NavigationItem(
                 id = "item_id_6",
                 label = "Item 6",
-                iconDrawable = R.drawable.ic_home,
+                iconText = getString(R.string.icon_outlined_alert_check),
                 hasSubMenu = false
             )
         )

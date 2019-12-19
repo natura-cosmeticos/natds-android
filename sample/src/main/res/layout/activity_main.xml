@@ -32,5 +32,12 @@
             android:text="Navigation Drawer"
             android:textColor="@color/colorBrdNatGray" />
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ícones"
+            android:textColor="@color/colorBrdNatGray" />
+
     </LinearLayout>
 </ScrollView>

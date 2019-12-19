@@ -30,6 +30,10 @@
         <activity
             android:name=".components.MenuActivity"
             android:theme="@style/Theme.Natura" />
+
+        <activity
+            android:name=".components.IconActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
 
 

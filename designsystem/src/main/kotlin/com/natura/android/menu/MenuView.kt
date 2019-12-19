@@ -12,6 +12,7 @@ import android.util.TypedValue
 import android.view.View
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
+import com.natura.android.icon.FontIcon
 
 @SuppressLint("CustomViewStyleable")
 class MenuView @JvmOverloads constructor(
@@ -29,7 +30,7 @@ class MenuView @JvmOverloads constructor(
 
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
-    private val iconMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_icon) }
+    private val iconMenu by lazy { findViewById<FontIcon>(R.id.ds_menu_icon) }
     private val iconArrowMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_arrow) }
 
     private var selectedDrawable: Int
@@ -40,10 +41,10 @@ class MenuView @JvmOverloads constructor(
             textLabel.text = value
         }
 
-    var icon: Int = 0
+    var icon: String? = ""
         set(value) {
             field = value
-            iconMenu.setImageResource(value)
+            iconMenu.text = value
         }
 
     init {
@@ -64,10 +65,7 @@ class MenuView @JvmOverloads constructor(
             R.drawable.ds_menu_item_selected
         )
 
-        val iconDrawable = typedArray.getResourceId(
-            R.styleable.ds_menu_menu_icon,
-            0
-        )
+        val iconText = typedArray.getString(R.styleable.ds_menu_menu_icon)
 
         openedDrawable = typedArray.getResourceId(
             R.styleable.ds_menu_menu_opened_drawable,
@@ -81,7 +79,7 @@ class MenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        icon = iconDrawable
+        icon = iconText
 
         if (isOpened) {
             configOpened(isOpened)
@@ -138,11 +136,11 @@ class MenuView @JvmOverloads constructor(
         textLabel.isEnabled = isEnabled
         if (isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
-            setColorFilter(iconMenu, R.color.colorBrdNatGray)
+            iconMenu.setTextColor(getColor(R.color.colorBrdNatGray))
             setColorFilter(iconArrowMenu, R.color.colorBrdNatGray)
         } else {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray_48))
-            setColorFilter(iconMenu, R.color.colorBrdNatGray_48)
+            iconMenu.setTextColor(getColor(R.color.colorBrdNatGray_48))
             setColorFilter(iconArrowMenu, R.color.colorBrdNatGray_48)
         }
     }

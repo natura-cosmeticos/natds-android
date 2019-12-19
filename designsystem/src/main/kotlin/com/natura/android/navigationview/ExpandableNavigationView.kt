@@ -73,7 +73,10 @@ class ExpandableNavigationView @JvmOverloads constructor(
         }
     }
 
-    private fun resetMenuSelected(groupPosition: Int = oldGroupPosition, childPosition: Int = oldChildPosition) {
+    private fun resetMenuSelected(
+        groupPosition: Int = oldGroupPosition,
+        childPosition: Int = oldChildPosition
+    ) {
         navigationItems[groupPosition].apply {
             if (hasSubMenu) childItems[childPosition].selected = false
             else menuState = MenuView.MenuState.UNSELECTED
@@ -93,18 +96,21 @@ class ExpandableNavigationView @JvmOverloads constructor(
     }
 
     fun selectItemId(itemId: String) {
-        if(selectedItemId != itemId && navigationItems.isNotEmpty()) {
+        if (selectedItemId != itemId && navigationItems.isNotEmpty()) {
             resetMenuSelected()
 
             var childIndex = NOT_FOUND_INDEX
             val groupIndex = navigationItems.indexOfFirst { item ->
-                item.id == itemId || item.indexOfChildItemId(itemId).also { childIndex = it } != NOT_FOUND_INDEX
+                item.id == itemId || item.indexOfChildItemId(itemId).also {
+                    childIndex = it
+                } != NOT_FOUND_INDEX
             }
 
-            if(childIndex == NOT_FOUND_INDEX) {
+            if (childIndex == NOT_FOUND_INDEX) {
                 navigationItems.getOrNull(groupIndex)?.selectItem()
             } else {
-                navigationItems.getOrNull(groupIndex)?.childItems?.getOrNull(childIndex)?.selectItem()
+                navigationItems.getOrNull(groupIndex)?.childItems?.getOrNull(childIndex)
+                    ?.selectItem()
             }
             oldGroupPosition = groupIndex
             oldChildPosition = childIndex
