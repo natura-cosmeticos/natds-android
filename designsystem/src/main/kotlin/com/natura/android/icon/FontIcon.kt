@@ -21,7 +21,9 @@ class FontIcon @JvmOverloads constructor(
         if (text.isNullOrBlank()) {
             super.setText(text, type)
         } else {
-            super.setText(String(Character.toChars(Integer.parseInt(text.toString(), 16))), type)
+            super.setText(text.toString().toIcon())
         }
     }
 }
+
+private fun String.toIcon() = String(Character.toChars(Integer.parseInt(this, 16)))
