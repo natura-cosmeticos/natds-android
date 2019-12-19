@@ -7,6 +7,7 @@
 
     <!-- Text Size Default -->
     <dimen name="ds_text_small">14sp</dimen>
+    <dimen name="ds_text_default_icon_size">24sp</dimen>
 
     <!-- SubMenu dimens -->
     <dimen name="ds_submenu_text_margin_top_bottom">10dp</dimen>

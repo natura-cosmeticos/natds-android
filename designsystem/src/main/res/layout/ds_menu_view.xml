@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/colorBrdNatGray"
         tools:text="&#xEA08;"
-        android:textSize="24sp"
+        android:textSize="@dimen/ds_text_default_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toTopOf="parent"
