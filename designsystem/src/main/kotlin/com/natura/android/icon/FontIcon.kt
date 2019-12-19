@@ -21,7 +21,7 @@ class FontIcon @JvmOverloads constructor(
         if (text.isNullOrBlank()) {
             super.setText(text, type)
         } else {
-            super.setText(text.toString().toIcon())
+            super.setText(text.toString().toIcon(), type)
         }
     }
 }
