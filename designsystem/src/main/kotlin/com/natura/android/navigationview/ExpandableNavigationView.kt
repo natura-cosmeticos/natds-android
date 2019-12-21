@@ -15,8 +15,8 @@ class ExpandableNavigationView @JvmOverloads constructor(
 ) : NavigationView(context, attrs, defStyleAttr) {
 
     private val navigationMenu: ExpandableListView by lazy { findViewById<ExpandableListView>(R.id.navigation_menu) }
-    private lateinit var navigationAdapter: ExpandableNavigationAdapter
-    private lateinit var navigationItems: List<NavigationItem>
+    private var navigationAdapter: ExpandableNavigationAdapter? = null
+    private var navigationItems: List<NavigationItem>? = null
     private var oldGroupPosition = 0
     private var oldChildPosition = 0
     private var selectedItemId: String? = null
@@ -36,9 +36,15 @@ class ExpandableNavigationView @JvmOverloads constructor(
         setListener()
     }
 
+    private fun navigationItemAt(groupPosition: Int): NavigationItem? =
+        navigationItems?.getOrNull(groupPosition)
+
+    private fun navigationChildItemAt(groupPosition: Int, childPosition: Int): NavigationItemChild? =
+        navigationItems?.getOrNull(groupPosition)?.childItems?.getOrNull(childPosition)
+
     private fun setListener() {
         navigationMenu.setOnChildClickListener { _, _, groupPosition: Int, childPosition: Int, _ ->
-            navigationItems[groupPosition].childItems[childPosition].apply {
+            navigationChildItemAt(groupPosition, childPosition)?.apply {
                 selectItem()
                 onItemSelected(this)
             }
@@ -46,23 +52,23 @@ class ExpandableNavigationView @JvmOverloads constructor(
             oldGroupPosition = groupPosition
             oldChildPosition = childPosition
 
-            navigationAdapter.notifyDataSetChanged()
+            navigationAdapter?.notifyDataSetChanged()
             true
         }
 
         navigationMenu.setOnGroupExpandListener { groupPosition ->
             menuWhenNoHasSubmenu(groupPosition, MenuView.MenuState.OPEN)
-            navigationAdapter.notifyDataSetChanged()
+            navigationAdapter?.notifyDataSetChanged()
         }
 
         navigationMenu.setOnGroupCollapseListener { groupPosition ->
             menuWhenNoHasSubmenu(groupPosition, MenuView.MenuState.CLOSE)
-            navigationAdapter.notifyDataSetChanged()
+            navigationAdapter?.notifyDataSetChanged()
         }
     }
 
     private fun menuWhenNoHasSubmenu(groupPosition: Int, state: MenuView.MenuState) {
-        navigationItems[groupPosition].apply {
+        navigationItemAt(groupPosition)?.apply {
             if (hasSubMenu) {
                 menuState = state
             } else {
@@ -77,7 +83,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
         groupPosition: Int = oldGroupPosition,
         childPosition: Int = oldChildPosition
     ) {
-        navigationItems[groupPosition].apply {
+        navigationItemAt(groupPosition)?.apply {
             if (hasSubMenu) childItems[childPosition].selected = false
             else menuState = MenuView.MenuState.UNSELECTED
         }
@@ -96,26 +102,25 @@ class ExpandableNavigationView @JvmOverloads constructor(
     }
 
     fun selectItemId(itemId: String) {
-        if (selectedItemId != itemId && navigationItems.isNotEmpty()) {
+        if (selectedItemId != itemId && !navigationItems.isNullOrEmpty()) {
             resetMenuSelected()
 
             var childIndex = NOT_FOUND_INDEX
-            val groupIndex = navigationItems.indexOfFirst { item ->
+            val groupIndex = navigationItems?.indexOfFirst { item ->
                 item.id == itemId || item.indexOfChildItemId(itemId).also {
                     childIndex = it
                 } != NOT_FOUND_INDEX
-            }
+            } ?: NOT_FOUND_INDEX
 
             if (childIndex == NOT_FOUND_INDEX) {
-                navigationItems.getOrNull(groupIndex)?.selectItem()
+                navigationItemAt(groupIndex)?.selectItem()
             } else {
-                navigationItems.getOrNull(groupIndex)?.childItems?.getOrNull(childIndex)
-                    ?.selectItem()
+                navigationChildItemAt(groupIndex, childIndex)?.selectItem()
             }
             oldGroupPosition = groupIndex
             oldChildPosition = childIndex
 
-            navigationAdapter.notifyDataSetChanged()
+            navigationAdapter?.notifyDataSetChanged()
         }
     }
 
