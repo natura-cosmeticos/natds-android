@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/ds_spacing_small" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/ds_spacing_small" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/ds_default_error_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ds_ic_illustration_sad" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/ds_default_error_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_button_primary_label_margin"
+        android:layout_marginLeft="@dimen/ds_button_primary_label_margin"
+        android:layout_marginTop="@dimen/ds_spacin_tiny"
+        android:layout_marginEnd="@dimen/ds_button_primary_label_margin"
+        android:layout_marginRight="@dimen/ds_button_primary_label_margin"
+        android:textColor="@color/colorBrdNatGray"
+        android:textSize="@dimen/ds_text_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ds_default_error_icon"
+        tools:text="Desculpe, algo deu errado" />
+
+    <com.natura.android.button.DsPrimaryButton
+        android:id="@+id/ds_default_error_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ds_spacing_little"
+        app:button_enabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintStart_toStartOf="@+id/guide_start"
+        tools:button_label="RECARERGAR" />
+
+</merge>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".components.ErrorActivity">
+
+    <com.natura.android.error.DsErrorDefault
+        android:id="@+id/error_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:error_button_label="RECARREGAR"
+        app:error_icon="@drawable/ds_ic_illustration_sad"
+        app:error_label="Desculpe, algo deu errado" />
+
+</FrameLayout>

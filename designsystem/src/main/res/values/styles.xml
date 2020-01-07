@@ -5,4 +5,10 @@
         <item name="itemTextAppearance">?textAppearanceBody2</item>
         <item name="itemTextColor">@color/colorBrdNatGray</item>
     </style>
+
+    <!-- Roboto Medium-->
+    <style name="RobotoMedium">
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+    </style>
+
 </resources>

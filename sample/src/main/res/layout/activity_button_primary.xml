@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".components.ButtonPrimaryActivity">
+
+    <com.natura.android.button.DsPrimaryButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:button_enabled="true"
+        app:button_label="ENABLED" />
+
+    <com.natura.android.button.DsPrimaryButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:button_enabled="true"
+        app:button_icon_left="EA08"
+        app:button_label="ICON LEFT" />
+
+    <com.natura.android.button.DsPrimaryButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:button_enabled="true"
+        app:button_icon_right="EA08"
+        app:button_label="ICON RIGHT" />
+
+    <com.natura.android.button.DsPrimaryButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:button_enabled="false"
+        app:button_label="DISABLED" />
+
+</LinearLayout>
