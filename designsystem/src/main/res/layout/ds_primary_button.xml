@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/primary_button_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ds_button_primary_background"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <com.natura.android.icon.FontIcon
+        android:id="@+id/button_primary_icon_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/ds_spacing_small"
+        android:layout_marginLeft="@dimen/ds_spacing_small"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/ds_text_default_icon_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="EA08" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/button_primary_text"
+        style="@style/RobotoMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ds_spacing_little"
+        android:layout_marginLeft="@dimen/ds_spacing_little"
+        android:layout_marginEnd="@dimen/ds_spacing_little"
+        android:layout_marginRight="@dimen/ds_spacing_little"
+        android:paddingTop="@dimen/ds_spacing_little"
+        android:paddingBottom="@dimen/ds_spacing_little"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBrdNatGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_primary_icon_right"
+        app:layout_constraintStart_toEndOf="@+id/button_primary_icon_left"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="enable" />
+
+    <com.natura.android.icon.FontIcon
+        android:id="@+id/button_primary_icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/ds_spacing_small"
+        android:layout_marginRight="@dimen/ds_spacing_small"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/ds_text_default_icon_size"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="EA08" />
+</android.support.constraint.ConstraintLayout>

@@ -8,4 +8,5 @@
     <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
+    <color name="colorHighEmphasis_48">#3333330A</color>
 </resources>

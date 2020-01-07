@@ -11,6 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Natura">
+        <activity android:name=".components.ErrorActivity"></activity>
+        <activity android:name=".components.ButtonPrimaryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,23 +20,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".components.SubmenuActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity
             android:name=".components.ExpandableNavigationViewActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity
             android:name=".components.MenuActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity
             android:name=".components.IconActivity"
             android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.LoadingActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
-
 
 </manifest>

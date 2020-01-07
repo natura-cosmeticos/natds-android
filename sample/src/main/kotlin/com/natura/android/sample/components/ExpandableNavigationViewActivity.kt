@@ -35,9 +35,13 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_1",
                 label = "Item 1",
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 childItems = mutableListOf(
-                    NavigationItemChild(id = "sub_item_id_1", label = "Item 1 sub 1", enabled = true),
+                    NavigationItemChild(
+                        id = "sub_item_id_1",
+                        label = "Item 1 sub 1",
+                        enabled = true
+                    ),
                     NavigationItemChild(id = "item_id", label = "Item 1 sub 2", enabled = false),
                     NavigationItemChild(id = "item_id", label = "Item 1 sub 3")
                 )
@@ -46,7 +50,7 @@ class ExpandableNavigationViewActivity :
                 id = "item_id_2",
                 label = "Item 2",
                 menuState = MenuView.MenuState.DISABLE,
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 2", enabled = false),
@@ -56,7 +60,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_3",
                 label = "Item 3",
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 3 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 3 sub 2", enabled = false),
@@ -66,7 +70,7 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_4",
                 label = "Item 4",
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 1"),
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 2"),
@@ -76,13 +80,13 @@ class ExpandableNavigationViewActivity :
             NavigationItem(
                 id = "item_id_5",
                 label = "Item 5",
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 hasSubMenu = false
             ),
             NavigationItem(
                 id = "item_id_6",
                 label = "Item 6",
-                iconText = getString(R.string.icon_outlined_alert_check),
+                iconText = getString(R.string.icon_outlined_communication_occurrence),
                 hasSubMenu = false
             )
         )

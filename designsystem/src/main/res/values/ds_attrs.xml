@@ -22,4 +22,17 @@
         <attr name="submenu_is_enabled" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="ds_primary_button">
+        <attr name="button_label" format="string" />
+        <attr name="button_icon_left" format="string" />
+        <attr name="button_icon_right" format="string" />
+        <attr name="button_enabled" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ds_error_default">
+        <attr name="error_icon" format="reference" />
+        <attr name="error_label" format="string" />
+        <attr name="error_button_label" format="string" />
+    </declare-styleable>
+
 </resources>
