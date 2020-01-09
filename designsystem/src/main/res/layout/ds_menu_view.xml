@@ -37,10 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorBrdNatGray"
-        tools:text="&#xEA08;"
+        android:layout_marginEnd="@dimen/ds_spacing_standard"
+        android:layout_marginRight="@dimen/ds_spacing_standard"
+        tools:text="EA10"
         android:textSize="@dimen/ds_text_default_icon_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start"
+        app:layout_constraintEnd_toStartOf="@+id/ds_menu_label"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/colorBrdNatGray" />
 
@@ -60,8 +63,6 @@
         android:id="@+id/ds_menu_label"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/ds_spacing_standard"
-        android:layout_marginLeft="@dimen/ds_spacin_tiny"
         android:layout_marginTop="@dimen/ds_submenu_text_margin_top_bottom"
         android:layout_marginEnd="@dimen/ds_spacin_tiny"
         android:layout_marginRight="@dimen/ds_spacin_tiny"
