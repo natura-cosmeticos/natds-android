@@ -45,6 +45,7 @@ class MenuView @JvmOverloads constructor(
         set(value) {
             field = value
             iconMenu.text = value
+            iconMenu.setVisibilityFromBoolean(iconMenu.text.toString().isNotBlank())
         }
 
     init {
