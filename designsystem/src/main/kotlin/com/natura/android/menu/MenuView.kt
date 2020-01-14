@@ -45,7 +45,7 @@ class MenuView @JvmOverloads constructor(
         set(value) {
             field = value
             iconMenu.text = value
-            iconMenu.setVisibilityFromBoolean(iconMenu.text.toString().isNotBlank())
+            configDefaultIconIfEmpty()
         }
 
     init {
@@ -151,6 +151,12 @@ class MenuView @JvmOverloads constructor(
             getColor(color),
             PorterDuff.Mode.SRC_IN
         )
+    }
+
+    private fun configDefaultIconIfEmpty() {
+        if (iconMenu.text.isEmpty()) {
+            iconMenu.text = context.getString(R.string.icon_default_menu)
+        }
     }
 
     private fun getColor(color: Int) = ContextCompat.getColor(context, color)
