@@ -6,7 +6,7 @@ if (file("github_credentials.properties").file) {
 }
 
 def getVersionName = { ->
-    return "0.0.5"
+    return "0.0.6"
 }
 
 def getGroupId = { ->
