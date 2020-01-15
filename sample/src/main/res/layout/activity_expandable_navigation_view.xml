@@ -11,4 +11,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start" />
 
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </android.support.v4.widget.DrawerLayout>

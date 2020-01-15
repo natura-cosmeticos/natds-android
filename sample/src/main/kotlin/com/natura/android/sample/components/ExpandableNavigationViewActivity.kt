@@ -1,7 +1,6 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
@@ -91,8 +90,6 @@ class ExpandableNavigationViewActivity :
         )
 
         expandableNavigationMenu.initMenuItems(list)
-
-        drawerLayout.setScrimColor(ContextCompat.getColor(this, R.color.colorBrdNatOrange))
 
         expandableNavigationMenu.selectItemId("item_id_5")
     }

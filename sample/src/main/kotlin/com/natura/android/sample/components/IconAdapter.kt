@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.natura.android.sample.R
 
 class IconAdapter(
@@ -24,9 +25,11 @@ class IconAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val itemIcon = itemView.findViewById<AppCompatTextView>(R.id.item_icon)
+        private val code = itemView.findViewById<TextView>(R.id.item_icon_code)
 
         fun bind(option: CharSequence) {
             itemIcon.text = option
+            code.text = option
         }
     }
 }
