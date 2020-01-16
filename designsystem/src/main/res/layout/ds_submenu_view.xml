@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/ds_spacing_small" />
+        app:layout_constraintGuide_begin="@dimen/ds_submenu_margin_start" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guide_end"
