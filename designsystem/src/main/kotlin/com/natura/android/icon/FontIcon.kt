@@ -30,4 +30,4 @@ class FontIcon @JvmOverloads constructor(
     }
 }
 
-private fun String.toIcon() = String(Character.toChars(Integer.parseInt(this, 16)))
+fun String.toIcon() = String(Character.toChars(Integer.parseInt(this, 16)))

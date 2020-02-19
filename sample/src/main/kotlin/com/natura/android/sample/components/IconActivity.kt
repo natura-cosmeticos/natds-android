@@ -163,6 +163,11 @@ class IconActivity : AppCompatActivity() {
         R.string.icon_outlined_social_groupofpeople,
         R.string.icon_outlined_social_myprofile,
         R.string.icon_outlined_social_network,
-        R.string.icon_outlined_social_person
+        R.string.icon_outlined_social_person,
+        R.string.icon_outlined_content_planb,
+        R.string.icon_outlined_content_healthy,
+        R.string.icon_outlined_content_gallery,
+        R.string.icon_outlined_content_exchangereports,
+        R.string.icon_outlined_content_bellringing
     )
 }

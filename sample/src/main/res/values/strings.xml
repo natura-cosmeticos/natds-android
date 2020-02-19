@@ -143,10 +143,16 @@
     <string name="icon_outlined_social_birthday">EA8B</string>
     <string name="icon_outlined_social_collaborate">EA8C</string>
     <string name="icon_outlined_social_contact">EA8D</string>
-    <string name="icon_outlined_social_digitalconsultant">EA8E</string>
     <string name="icon_outlined_social_groupofpeople">EA8F</string>
     <string name="icon_outlined_social_myprofile">EA90</string>
     <string name="icon_outlined_social_network">EA91</string>
     <string name="icon_outlined_social_person">EA92</string>
+    <string name="icon_outlined_content_bellringing">EA47</string>
+    <string name="icon_outlined_content_exchangereports">EA50</string>
+    <string name="icon_outlined_content_gallery">EA51</string>
+    <string name="icon_outlined_content_healthy">EA55</string>
+    <string name="icon_outlined_content_planb">EA5B</string>
+    <string name="icon_outlined_social_digitalconsultant">EA93</string>
+
 
 </resources>
