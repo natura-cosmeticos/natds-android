@@ -147,12 +147,12 @@
     <string name="icon_outlined_social_myprofile">EA90</string>
     <string name="icon_outlined_social_network">EA91</string>
     <string name="icon_outlined_social_person">EA92</string>
-    <string name="icon_outlined_content_bellringing">EA47</string>
-    <string name="icon_outlined_content_exchangereports">EA50</string>
-    <string name="icon_outlined_content_gallery">EA51</string>
-    <string name="icon_outlined_content_healthy">EA55</string>
-    <string name="icon_outlined_content_planb">EA5B</string>
-    <string name="icon_outlined_social_digitalconsultant">EA93</string>
+    <string name="icon_outlined_content_bellringing">EA93</string>
+    <string name="icon_outlined_content_exchangereports">EA94</string>
+    <string name="icon_outlined_content_gallery">EA95</string>
+    <string name="icon_outlined_content_healthy">EA96</string>
+    <string name="icon_outlined_content_planb">EA97</string>
+    <string name="icon_outlined_social_digitalconsultant">EA8E</string>
 
 
 </resources>
