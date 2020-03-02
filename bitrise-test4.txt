@@ -1,3 +1,0 @@
-Teste para adicionar o bitrise
---Adicionando webhook para testes
-Adicionando mais linhas
