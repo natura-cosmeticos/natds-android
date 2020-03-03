@@ -43,6 +43,10 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_error_default).setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
         }
+
+        findViewById<Button>(R.id.btn_input_text_highlight).setOnClickListener {
+            startActivity(Intent(this, TextInputHighlightActivity::class.java))
+        }
     }
 }
 
