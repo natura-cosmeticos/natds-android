@@ -14,7 +14,7 @@
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
-        <item name="android:background">@color/lightDivider</item>
+        <item name="android:background">@color/colorBrdBlack_12</item>
     </style>
 
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
