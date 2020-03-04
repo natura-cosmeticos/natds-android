@@ -12,6 +12,13 @@
         android:padding="@dimen/ds_spacing_small">
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_textfield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text Field"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
