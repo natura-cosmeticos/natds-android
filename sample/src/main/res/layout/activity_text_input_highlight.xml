@@ -8,6 +8,7 @@
     android:theme="@style/Theme.Natura">
 
     <com.natura.android.widget.TextInputHighlight
+        android:id="@+id/highlightInitOnXml"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:description_label="Description on Xml"
@@ -18,7 +19,7 @@
         android:layout_height="20dp"/>
 
     <com.natura.android.widget.TextInputHighlight
-        android:id="@+id/second_text_input_highlight"
+        android:id="@+id/highlightInitViaCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

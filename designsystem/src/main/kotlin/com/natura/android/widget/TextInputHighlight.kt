@@ -12,7 +12,6 @@ class TextInputHighlight @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-//TODO: Testar na API 16
 
     private lateinit var descriptionLabel: TextView
     private lateinit var highlightInfoLabel: TextView

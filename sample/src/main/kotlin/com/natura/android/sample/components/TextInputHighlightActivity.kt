@@ -10,7 +10,7 @@ class TextInputHighlightActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_text_input_highlight)
 
-        val inputHighlight = findViewById<TextInputHighlight>(R.id.second_text_input_highlight)
+        val inputHighlight = findViewById<TextInputHighlight>(R.id.highlightInitViaCode)
         inputHighlight.setDescription("Add description via code")
         inputHighlight.setHighlightedInfo("$ 00.00")
     }
