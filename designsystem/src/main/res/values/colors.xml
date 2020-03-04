@@ -16,7 +16,6 @@
     <color name="colorHighEmphasis_48">#3333330A</color>
 
     <!--Light Text Content-->
-    <color name="lightDivider">#E7E7E7</color>
     <color name="lightHighlight">#000000</color>
     <color name="lightHighEmphasis">#333333</color>
     <color name="lightMediumEmphasis">#777777</color>
