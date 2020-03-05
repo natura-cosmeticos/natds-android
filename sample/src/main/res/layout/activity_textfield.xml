@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:hint="Hint"
         app:text_field_label="Text field"
+        app:text_field_text="Typed text"
         app:text_field_footer="this field accept any text"
         />
 
@@ -26,6 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
+        android:paddingTop="15dp"
         app:text_field_label="Number field"
         app:text_field_footer="this field accept only numbers"
         />
@@ -35,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:paddingTop="15dp"
         app:text_field_icon="EA37"
         app:text_field_label="Password field"
         app:text_field_footer="click on icon to change input type"
@@ -51,16 +54,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="3"
+        android:paddingTop="15dp"
         android:maxLength="10"
         android:inputType="textMultiLine"
         app:text_field_label="Text field with 3 lines"
         app:text_field_footer="This field accepts only 10 characters, including line breaks"
         />
 
-        <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextFieldInput
         android:id="@+id/clickable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="15dp"
         app:text_field_label="Text field with icon"
         app:text_field_text="Typed text"
         app:text_field_icon="EA70"
@@ -72,12 +77,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
+        android:paddingTop="15dp"
         app:text_field_label="Text field"
         app:text_field_text="Typed text"
         app:text_field_footer="this item is disabled"
         />
 
      <TextView
+         android:paddingTop="5dp"
          android:id="@+id/switch_item_disabled"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
@@ -87,6 +94,7 @@
          />
 
     <TextView
+        android:paddingTop="5dp"
         android:id="@+id/switch_item_succeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,6 +104,7 @@
         />
 
     <TextView
+        android:paddingTop="5dp"
         android:id="@+id/switch_item_errored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
