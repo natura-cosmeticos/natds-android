@@ -13,6 +13,7 @@
         android:id="@+id/text_field_input_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/RobotoMedium"
         tools:text="text_field_input_label"
         android:textSize="@dimen/ds_text_small"
         android:paddingBottom="@dimen/ds_spacing_micro"
@@ -26,6 +27,10 @@
         android:layout_gravity="center_vertical"
         android:orientation="horizontal"
         android:visibility="visible"
+        android:paddingTop="@dimen/ds_spacing_border_top"
+        android:paddingLeft="@dimen/ds_spacing_border_left"
+        android:paddingBottom="@dimen/ds_spacing_border_bottom"
+        android:paddingRight="@dimen/ds_spacing_border_right"
         android:background="@drawable/ds_custom_border"
         android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +41,7 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/RobotoRegular"
             android:background="@android:color/transparent"
             android:layout_gravity="center"
             android:gravity="top|left"
@@ -64,6 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingTop="@dimen/ds_spacing_micro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_box">
 
@@ -72,7 +79,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="@dimen/ds_text_default_icon_size"
+            android:paddingRight="@dimen/ds_spacing_micro"
+            android:textSize="@dimen/ds_text_default_icon_small_size"
             tools:text="EA13" />
 
         <TextView
@@ -80,6 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            style="@style/RobotoRegular"
             tools:text="text_field_input_footer"
             android:textSize="@dimen/ds_text_footer_size" />
 
