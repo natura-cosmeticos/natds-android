@@ -35,4 +35,11 @@
         <attr name="error_button_label" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="ds_text_field_input">
+        <attr name="text_field_text" format="string" />
+        <attr name="text_field_icon" format="string" />
+        <attr name="text_field_label" format="string" />
+        <attr name="text_field_footer" format="string" />
+    </declare-styleable>
+
 </resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text_field_input_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:parentTag="android.support.constraint.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/text_field_input_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="text_field_input_label"
+        android:textSize="@dimen/ds_text_small"
+        android:paddingBottom="@dimen/ds_spacing_micro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/text_field_input_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:background="@drawable/ds_custom_border"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_field_input_label">
+
+        <EditText
+            android:id="@+id/text_field_input_value"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            tools:text="text_field_input_value"
+            android:textSize="@dimen/ds_text_default_size"
+            />
+
+        <com.natura.android.icon.FontIcon
+            android:id="@+id/text_field_input_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:layout_marginRight="@dimen/ds_spacing_micro"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ds_text_default_icon_size"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            tools:text="EA70" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_field_input_footer_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_field_input_box">
+
+        <com.natura.android.icon.FontIcon
+            android:id="@+id/text_field_input_footer_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/ds_text_default_icon_size"
+            tools:text="EA13" />
+
+        <TextView
+            android:id="@+id/text_field_input_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:text="text_field_input_footer"
+            android:textSize="@dimen/ds_text_footer_size" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

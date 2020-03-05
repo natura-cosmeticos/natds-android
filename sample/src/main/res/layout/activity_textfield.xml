@@ -14,6 +14,29 @@
         android:orientation="vertical"
         android:padding="10dp">
 
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:text_field_label="Label"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:text_field_footer="Helper text"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        app:text_field_label="Label"
+        app:text_field_text="Typed text"
+        app:text_field_icon="EA70"
+        app:text_field_footer="Helper text"
+        />
 
     </LinearLayout>
 
