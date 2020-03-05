@@ -50,7 +50,7 @@ class TextFieldInputTest {
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
         assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
-        assertThat(textFieldInput.inputType).isEqualTo(InputType.TYPE_TEXT_VARIATION_NORMAL)
+        assertThat(textFieldInput.inputType).isEqualTo(InputType.TYPE_CLASS_TEXT)
         assertThat(textFieldInput.hint).isNull()
         assertThat(textFieldInput.lines).isEqualTo(1)
         assertThat(textFieldInput.maxLength).isEqualTo(Integer.MAX_VALUE)

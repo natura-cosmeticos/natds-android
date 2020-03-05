@@ -2,6 +2,7 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
@@ -51,10 +52,11 @@ class TextFieldInput @JvmOverloads constructor(
         inputIcon?.isEnabled = enabled
     }
 
-    var inputType: Int = EditorInfo.TYPE_TEXT_VARIATION_NORMAL
+    var inputType: Int = EditorInfo.TYPE_CLASS_TEXT
         set(value) {
             field = value
             inputValue?.inputType = value
+            inputValue?.setSelection(inputValue?.text?.length ?: 0)
         }
 
     var hint: String? = null
@@ -186,7 +188,7 @@ class TextFieldInput @JvmOverloads constructor(
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
 
-        val vinputType = typedArray.getInteger(R.styleable.ds_text_field_input_android_inputType, EditorInfo.TYPE_TEXT_VARIATION_NORMAL)
+        val vinputType = typedArray.getInteger(R.styleable.ds_text_field_input_android_inputType, EditorInfo.TYPE_CLASS_TEXT)
         val vhint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
         val vmaxLength = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLength, Integer.MAX_VALUE)
         val vmaxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
