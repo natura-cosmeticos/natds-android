@@ -3,6 +3,7 @@ package com.natura.android.textfield
 import android.app.Activity
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
+import android.text.InputFilter
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
@@ -50,6 +51,10 @@ class TextFieldInputTest {
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
         assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
         assertThat(textFieldInput.inputType).isEqualTo(InputType.TYPE_TEXT_VARIATION_NORMAL)
+        assertThat(textFieldInput.hint).isNull()
+        assertThat(textFieldInput.lines).isEqualTo(1)
+        assertThat(textFieldInput.maxLength).isEqualTo(Integer.MAX_VALUE)
+        assertThat(textFieldInput.maxLength).isEqualTo(Integer.MAX_VALUE)
     }
 
     @Test
@@ -181,14 +186,48 @@ class TextFieldInputTest {
 
     @Test
     fun setInputType() {
-        test_setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD, InputType.TYPE_TEXT_VARIATION_PASSWORD)
-    }
-
-    private fun test_setInputType(value: Int, expectedValue: Int) {
+        val expectedValue = InputType.TYPE_TEXT_VARIATION_PASSWORD
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
-        textFieldInput.inputType = value
+        textFieldInput.inputType = expectedValue
         assertThat(textView.inputType).isEqualTo(expectedValue)
+    }
+
+    @Test
+    fun setHint() {
+        val expectedValue = "test"
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.hint = expectedValue
+        assertThat(textView.hint).isEqualTo(expectedValue)
+    }
+
+    @Test
+    fun setLines() {
+        val expectedValue = 5
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.lines = expectedValue
+        assertThat(textView.maxLines).isEqualTo(expectedValue)
+        assertThat(textView.minLines).isEqualTo(expectedValue)
+    }
+
+    @Test
+    fun setMaxLines() {
+        val expectedValue = 5
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.maxLines = expectedValue
+        assertThat(textView.maxLines).isEqualTo(expectedValue)
+    }
+
+    @Test
+    fun setMaxLength() {
+        val expectedValue = 5
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.maxLength = expectedValue
+        assertThat((textView.filters[0] as InputFilter.LengthFilter).max).isEqualTo(expectedValue)
     }
 
     @Test

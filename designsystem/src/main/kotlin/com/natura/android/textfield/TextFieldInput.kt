@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
+import android.text.InputFilter
 import android.util.AttributeSet
 import android.view.View
 import android.view.inputmethod.EditorInfo
@@ -43,6 +44,33 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             inputValue?.inputType = value
+        }
+
+    var hint: String? = null
+        set(value) {
+            field = value
+            inputValue.hint = value
+        }
+
+    var maxLength: Int = 0
+        set(value) {
+            field = value
+
+            val fArray = arrayOfNulls<InputFilter>(1)
+            fArray[0] = InputFilter.LengthFilter(value)
+            inputValue.filters = fArray
+        }
+
+    var maxLines: Int = 0
+        set(value) {
+            field = value
+            inputValue.maxLines = value
+        }
+
+    var lines: Int = 0
+        set(value) {
+            field = value
+            inputValue.setLines(value)
         }
 
     var text: String? = null
@@ -137,6 +165,11 @@ class TextFieldInput @JvmOverloads constructor(
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
 
         val vinputType = typedArray.getInteger(R.styleable.ds_text_field_input_android_inputType, EditorInfo.TYPE_TEXT_VARIATION_NORMAL)
+        val vhint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
+        val vmaxLength = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLength, Integer.MAX_VALUE)
+        val vmaxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
+        val vlines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
+
         val vlabel = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
@@ -146,6 +179,11 @@ class TextFieldInput @JvmOverloads constructor(
         typedArray.recycle()
 
         inputType = vinputType
+        hint = vhint
+        maxLines = vmaxLines
+        maxLength = vmaxLength
+        lines = vlines
+
         text = vtext
         label = vlabel
         footer = vfooter

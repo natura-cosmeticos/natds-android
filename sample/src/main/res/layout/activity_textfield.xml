@@ -17,6 +17,7 @@
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="Hint"
         app:text_field_label="Text field"
         app:text_field_footer="this field accept any text"
         />
@@ -43,10 +44,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
-        app:text_field_footer="this field has no label"
+        android:hint="this field has no label and no detail footer"
         />
 
     <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:maxLength="10"
+        android:inputType="textMultiLine"
+        app:text_field_label="Text field with 3 lines"
+        app:text_field_footer="This field accepts only 10 characters, including line breaks"
+        />
+
+        <com.natura.android.textfield.TextFieldInput
         android:id="@+id/clickable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -73,7 +84,6 @@
         app:text_field_footer="Success message"
         app:text_field_state="success"
         />
-
     </LinearLayout>
 
 </ScrollView>
