@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         app:text_field_label="Label"
         app:text_field_text="Typed text"
-        app:text_field_footer="Error message"
+        app:text_field_footer="Success message"
         app:text_field_state="success"
         />
 

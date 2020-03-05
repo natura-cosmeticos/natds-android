@@ -2,6 +2,7 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
@@ -74,24 +75,28 @@ class TextFieldInput @JvmOverloads constructor(
     var state: State = State.NONE
         set(value) {
             field = value
+            resetGeneralColor()
             when (value) {
                 State.ERROR -> {
-                    setGeneralColor(R.color.colorBrdNatRed)
                     setFooterIcon(ERROR_ICON, View.VISIBLE)
                 }
                 State.SUCCESS -> {
-                    setGeneralColor(R.color.colorBrdNatGreen)
                     setFooterIcon(SUCCESS_ICON, View.VISIBLE)
                 }
                 else -> {
-                    resetGeneralColor()
                     setFooterIcon("", View.GONE)
                 }
             }
         }
 
     private fun resetGeneralColor() {
-        var color = R.color.colorHighEmphasis_48
+        var color =
+            when (state) {
+                State.ERROR -> R.color.colorBrdNatRed
+                State.SUCCESS -> R.color.colorBrdNatGreen
+                else -> R.color.colorHighEmphasis_48
+            }
+
         setGeneralColor(color)
     }
 
@@ -138,5 +143,17 @@ class TextFieldInput @JvmOverloads constructor(
         footer = vfooter
         icon = vicon
         state = intToState(vstate)
+
+        inputValue?.setOnFocusChangeListener({ v, hasFocus -> onFocusChanged(v, hasFocus)  })
+    }
+
+    private fun onFocusChanged(view: View, hasFocus: Boolean) {
+        if (isEnabled) {
+            if (hasFocus) {
+                borderColor =  ContextCompat.getColor(context, R.color.colorBrdNatOrange)
+            } else {
+                resetGeneralColor()
+            }
+        }
     }
 }

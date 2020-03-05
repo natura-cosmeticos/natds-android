@@ -47,7 +47,7 @@ class TextFieldInputTest {
         assertThat(textFieldInput.footer).isNull()
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
-        assertThat(textFieldInput.borderColor).isEqualTo(ContextCompat.getColor(textFieldInput.context, R.color.colorHighEmphasis_48))
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
     }
 
     @Test
@@ -145,19 +145,19 @@ class TextFieldInputTest {
 
     @Test
     fun setStatus_None() {
-        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorHighEmphasis_48)
+        val expectedStatusColor = getColor(R.color.colorHighEmphasis_48)
         test_setState(TextFieldInput.State.NONE, expectedStatusColor, View.GONE, "")
     }
 
     @Test
     fun setStatus_Error() {
-        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorBrdNatRed)
+        val expectedStatusColor = getColor(R.color.colorBrdNatRed)
         test_setState(TextFieldInput.State.ERROR, expectedStatusColor, View.VISIBLE, ERROR_ICON_CODE.toIcon())
     }
 
     @Test
     fun setStatus_Success() {
-        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorBrdNatGreen)
+        val expectedStatusColor = getColor(R.color.colorBrdNatGreen)
         test_setState(TextFieldInput.State.SUCCESS, expectedStatusColor, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
     }
 
@@ -176,5 +176,44 @@ class TextFieldInputTest {
         assertThat(footerIconView.visibility).isEqualTo(expectedIconVisibility)
         assertThat(footerIconView.text).isEqualTo(expectedIconValue)
     }
+
+    @Test
+    fun onFocusChange_RequestFocus_Value() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textView.requestFocus()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatOrange))
+    }
+
+    @Test
+    fun onFocusChange_ClearFocus_StateDefault() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textView.requestFocus()
+        textView.clearFocus()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+    }
+
+    @Test
+    fun onFocusChange_ClearFocus_StateError() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.state = TextFieldInput.State.ERROR
+        textView.requestFocus()
+        textView.clearFocus()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatRed))
+    }
+
+    @Test
+    fun onFocusChange_ClearFocus_StateSuccess() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.state = TextFieldInput.State.SUCCESS
+        textView.requestFocus()
+        textView.clearFocus()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatGreen))
+    }
+
+    private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)
 
 }

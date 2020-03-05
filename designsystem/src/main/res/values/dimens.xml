@@ -5,7 +5,7 @@
     <dimen name="ds_spacin_tiny">8dp</dimen>
     <dimen name="ds_spacing_micro">4dp</dimen>
     <dimen name="ds_spacing_standard">24dp</dimen>
-    <dimen name="ds_border">3dp</dimen>
+    <dimen name="ds_border">2dp</dimen>
 
     <!-- Text Size Default -->
     <dimen name="ds_text_footer_size">12sp</dimen>
