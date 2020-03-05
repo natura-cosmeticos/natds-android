@@ -68,7 +68,7 @@ class TextFieldInput @JvmOverloads constructor(
     var borderColor: Int = 0
         private set(value) {
             field = value
-            (inputBox.background as GradientDrawable).setStroke(4, value)
+            (inputBox.background as GradientDrawable).setStroke(resources.getDimensionPixelSize(R.dimen.ds_border), value)
         }
 
     var state: State = State.NONE

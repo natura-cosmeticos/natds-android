@@ -12,30 +12,46 @@
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="15dp">
 
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         app:text_field_label="Label"
         />
 
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:paddingTop="15dp"
         app:text_field_footer="Helper text"
         />
 
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         app:text_field_label="Label"
         app:text_field_text="Typed text"
         app:text_field_icon="EA70"
         app:text_field_footer="Helper text"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text_field_label="Label"
+        app:text_field_text="Typed text"
+        app:text_field_footer="Error message"
+        app:text_field_state="error"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:text_field_label="Label"
+        app:text_field_text="Typed text"
+        app:text_field_footer="Error message"
+        app:text_field_state="success"
         />
 
     </LinearLayout>
