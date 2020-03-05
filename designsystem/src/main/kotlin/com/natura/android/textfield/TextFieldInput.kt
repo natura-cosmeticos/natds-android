@@ -219,7 +219,7 @@ class TextFieldInput @JvmOverloads constructor(
     }
 
     private fun onFocusChanged(view: View, hasFocus: Boolean) {
-        if (isEnabled) {
+        isEnabled?.let {
             if (hasFocus) {
                 borderColor =  ContextCompat.getColor(context, R.color.colorBrdNatOrange)
             } else {

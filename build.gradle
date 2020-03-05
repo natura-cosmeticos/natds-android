@@ -44,8 +44,8 @@ ext {
     ktlintVersion = '0.35.0'
     androidXTestVersion = '1.2.0'
     truthVersion = '1.2.0'
-    core_ktx = '1.2.0'
-    androidx_runner = '1.2.0'
-    androidx_junit = '1.1.1'
+    coreKtx = '1.2.0'
+    androidxRunner = '1.2.0'
+    androidxJunit = '1.1.1'
     robolectricVersion = '4.3'
 }

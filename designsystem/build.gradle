@@ -46,9 +46,9 @@ dependencies {
 
     testImplementation "junit:junit:$rootProject.junitVersion"
     testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
-    testImplementation "androidx.test:runner:$rootProject.androidx_runner"
-    testImplementation "androidx.test:core-ktx:$rootProject.core_ktx"
-    testImplementation "androidx.test.ext:junit:$rootProject.androidx_junit"
+    testImplementation "androidx.test:runner:$rootProject.androidxRunner"
+    testImplementation "androidx.test:core-ktx:$rootProject.coreKtx"
+    testImplementation "androidx.test.ext:junit:$rootProject.androidxJunit"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
 
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
