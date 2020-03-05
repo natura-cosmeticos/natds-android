@@ -17,30 +17,49 @@
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:text_field_label="Label"
+        app:text_field_label="Text field"
+        app:text_field_footer="this field accept any text"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:text_field_label="Number field"
+        app:text_field_footer="this field accept only numbers"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:id="@+id/password_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        app:text_field_icon="EA37"
+        app:text_field_label="Password field"
+        app:text_field_footer="click on icon to change input type"
         />
 
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
-        app:text_field_footer="Helper text"
+        app:text_field_footer="this field has no label"
         />
 
     <com.natura.android.textfield.TextFieldInput
         android:id="@+id/clickable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:text_field_label="Label"
+        app:text_field_label="Text field with icon"
         app:text_field_text="Typed text"
         app:text_field_icon="EA70"
-        app:text_field_footer="Helper text"
+        app:text_field_footer="Click on icon to clean the text"
         />
 
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:text_field_label="Label"
+        app:text_field_label="Text field"
         app:text_field_text="Typed text"
         app:text_field_footer="Error message"
         app:text_field_state="error"
@@ -49,7 +68,7 @@
     <com.natura.android.textfield.TextFieldInput
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:text_field_label="Label"
+        app:text_field_label="Text field"
         app:text_field_text="Typed text"
         app:text_field_footer="Success message"
         app:text_field_state="success"

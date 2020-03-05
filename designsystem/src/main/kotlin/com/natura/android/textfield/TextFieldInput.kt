@@ -7,6 +7,7 @@ import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -37,6 +38,12 @@ class TextFieldInput @JvmOverloads constructor(
     private val footerBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
     private val footerIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_footer_icon) }
+
+    var inputType: Int = EditorInfo.TYPE_TEXT_VARIATION_NORMAL
+        set(value) {
+            field = value
+            inputValue?.inputType = value
+        }
 
     var text: String? = null
         set(value) {
@@ -129,6 +136,7 @@ class TextFieldInput @JvmOverloads constructor(
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
 
+        val vinputType = typedArray.getInteger(R.styleable.ds_text_field_input_android_inputType, EditorInfo.TYPE_TEXT_VARIATION_NORMAL)
         val vlabel = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
@@ -137,6 +145,7 @@ class TextFieldInput @JvmOverloads constructor(
 
         typedArray.recycle()
 
+        inputType = vinputType
         text = vtext
         label = vlabel
         footer = vfooter

@@ -3,6 +3,7 @@ package com.natura.android.textfield
 import android.app.Activity
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
@@ -48,6 +49,7 @@ class TextFieldInputTest {
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
         assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+        assertThat(textFieldInput.inputType).isEqualTo(InputType.TYPE_TEXT_VARIATION_NORMAL)
     }
 
     @Test
@@ -144,19 +146,19 @@ class TextFieldInputTest {
     }
 
     @Test
-    fun setStatus_None() {
+    fun setState_None() {
         val expectedStatusColor = getColor(R.color.colorHighEmphasis_48)
         test_setState(TextFieldInput.State.NONE, expectedStatusColor, View.GONE, "")
     }
 
     @Test
-    fun setStatus_Error() {
+    fun setState_Error() {
         val expectedStatusColor = getColor(R.color.colorBrdNatRed)
         test_setState(TextFieldInput.State.ERROR, expectedStatusColor, View.VISIBLE, ERROR_ICON_CODE.toIcon())
     }
 
     @Test
-    fun setStatus_Success() {
+    fun setState_Success() {
         val expectedStatusColor = getColor(R.color.colorBrdNatGreen)
         test_setState(TextFieldInput.State.SUCCESS, expectedStatusColor, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
     }
@@ -175,6 +177,18 @@ class TextFieldInputTest {
         assertThat(footerIconView.currentTextColor).isEqualTo(expectedStatusColor)
         assertThat(footerIconView.visibility).isEqualTo(expectedIconVisibility)
         assertThat(footerIconView.text).isEqualTo(expectedIconValue)
+    }
+
+    @Test
+    fun setInputType() {
+        test_setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD, InputType.TYPE_TEXT_VARIATION_PASSWORD)
+    }
+
+    private fun test_setInputType(value: Int, expectedValue: Int) {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.inputType = value
+        assertThat(textView.inputType).isEqualTo(expectedValue)
     }
 
     @Test
