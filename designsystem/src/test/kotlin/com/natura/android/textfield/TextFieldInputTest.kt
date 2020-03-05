@@ -178,7 +178,7 @@ class TextFieldInputTest {
     }
 
     @Test
-    fun onFocusChange_RequestFocus_Value() {
+    fun onRequestFocus_ChangeToFocusColor() {
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
         textView.requestFocus()
@@ -186,7 +186,7 @@ class TextFieldInputTest {
     }
 
     @Test
-    fun onFocusChange_ClearFocus_StateDefault() {
+    fun onClearFocus_ChangeToDefaultColor() {
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
         textView.requestFocus()
@@ -195,7 +195,7 @@ class TextFieldInputTest {
     }
 
     @Test
-    fun onFocusChange_ClearFocus_StateError() {
+    fun onClearFocus_ChangeToErrorColor() {
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
         textFieldInput.state = TextFieldInput.State.ERROR
@@ -205,13 +205,33 @@ class TextFieldInputTest {
     }
 
     @Test
-    fun onFocusChange_ClearFocus_StateSuccess() {
+    fun onClearFocus_ChangeToSuccessColor() {
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
         textFieldInput.state = TextFieldInput.State.SUCCESS
         textView.requestFocus()
         textView.clearFocus()
         assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatGreen))
+    }
+
+    @Test
+    fun onClickIcon_CallListener() {
+        val iconView = textFieldInput.findViewById(R.id.text_field_input_icon) as FontIcon
+        var clicked = false
+
+        textFieldInput.setOnIconClickListener(View.OnClickListener {
+            clicked = true
+        })
+        iconView.performClick()
+        assertThat(clicked).isTrue()
+    }
+
+    @Test
+    fun onClickIcon_ChangeToFocusColor() {
+        val iconView = textFieldInput.findViewById(R.id.text_field_input_icon) as FontIcon
+
+        iconView.performClick()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatOrange))
     }
 
     private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)

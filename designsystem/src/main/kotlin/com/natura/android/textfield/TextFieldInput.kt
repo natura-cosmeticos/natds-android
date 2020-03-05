@@ -2,7 +2,6 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
@@ -144,7 +143,8 @@ class TextFieldInput @JvmOverloads constructor(
         icon = vicon
         state = intToState(vstate)
 
-        inputValue?.setOnFocusChangeListener({ v, hasFocus -> onFocusChanged(v, hasFocus)  })
+        inputValue?.setOnFocusChangeListener { v, hasFocus -> onFocusChanged(v, hasFocus)  }
+        inputIcon?.setOnClickListener { v -> onFocusChanged(v, true) }
     }
 
     private fun onFocusChanged(view: View, hasFocus: Boolean) {
@@ -155,5 +155,9 @@ class TextFieldInput @JvmOverloads constructor(
                 resetGeneralColor()
             }
         }
+    }
+
+    fun setOnIconClickListener(l: OnClickListener?) {
+        inputIcon?.setOnClickListener(l)
     }
 }
