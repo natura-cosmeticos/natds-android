@@ -151,6 +151,29 @@ class TextFieldInputTest {
     }
 
     @Test
+    fun setError_NullValue() {
+        test_seError(null, EMPTY_TEXT, View.GONE, EMPTY_TEXT)
+    }
+
+    @Test
+    fun setError_NoEmptyValue() {
+        test_seError(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+    }
+
+    private fun test_seError(value: String?, expectedValue: String, expectedVisibility: Int,
+                             expectedIcon: String) {
+        val footerView = textFieldInput.findViewById(R.id.text_field_input_footer) as TextView
+        val footerIconView = textFieldInput.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+        val footerBoxView = textFieldInput.findViewById(R.id.text_field_input_footer_box) as View
+
+        textFieldInput.error = value
+        assertThat(footerView.text.toString()).isEqualTo(expectedValue)
+        assertThat(footerIconView.text).isEqualTo(expectedIcon)
+        assertThat(footerIconView.visibility).isEqualTo(expectedVisibility)
+        assertThat(footerBoxView.visibility).isEqualTo(expectedVisibility)
+    }
+
+    @Test
     fun setState_None() {
         val expectedStatusColor = getColor(R.color.colorHighEmphasis_48)
         test_setState(TextFieldInput.State.NONE, expectedStatusColor, View.GONE, "")

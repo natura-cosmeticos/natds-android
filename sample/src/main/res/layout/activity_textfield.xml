@@ -68,40 +68,41 @@
         />
 
     <com.natura.android.textfield.TextFieldInput
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:text_field_label="Text field"
-        app:text_field_text="Typed text"
-        app:text_field_footer="Error message"
-        app:text_field_state="error"
-        />
-
-    <com.natura.android.textfield.TextFieldInput
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:text_field_label="Text field"
-        app:text_field_text="Typed text"
-        app:text_field_footer="Success message"
-        app:text_field_state="success"
-        />
-
-    <com.natura.android.textfield.TextFieldInput
-        android:id="@+id/disabled_item"
+        android:id="@+id/mutable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:enabled="false"
+        app:text_field_label="Text field"
         app:text_field_text="Typed text"
-        app:text_field_footer="this is item is disabled"
+        app:text_field_footer="this item is disabled"
         />
 
      <TextView
-         android:id="@+id/switch_disabled_item"
+         android:id="@+id/switch_item_disabled"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:text="click here to enable/disable"
          android:textColor="@color/colorBrdNatRed"
          android:clickable="true"
          />
+
+    <TextView
+        android:id="@+id/switch_item_succeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to switch success"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:id="@+id/switch_item_errored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to switch error"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
 
     </LinearLayout>
 

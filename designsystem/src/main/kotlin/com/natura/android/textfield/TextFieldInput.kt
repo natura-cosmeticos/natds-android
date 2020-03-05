@@ -134,6 +134,17 @@ class TextFieldInput @JvmOverloads constructor(
             }
         }
 
+    var error: String? = null
+        set(value) {
+            field = value
+            footer = value
+            if (value != null) {
+                state = State.ERROR
+            } else {
+                state = State.NONE
+            }
+        }
+
     private fun resetGeneralColor() {
         var color =
             when (state) {

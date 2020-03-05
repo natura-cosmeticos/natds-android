@@ -19,17 +19,37 @@ class TextFieldActivity : AppCompatActivity() {
             clickable.requestFocus()
         })
 
-        val disabled = findViewById<TextFieldInput>(R.id.disabled_item)
-        val switchDisabledItem = findViewById<View>(R.id.switch_disabled_item)
-        switchDisabledItem.setOnClickListener(View.OnClickListener {
-            if (disabled.isEnabled) {
-                disabled.isEnabled = false
-                disabled.footer = "now is disabled again"
+        val mutable_item = findViewById<TextFieldInput>(R.id.mutable_item)
+        val switchDisabledItem = findViewById<View>(R.id.switch_item_disabled)
+        switchDisabledItem.setOnClickListener {
+            if (mutable_item.isEnabled) {
+                mutable_item.isEnabled = false
+                mutable_item.footer = "now is disabled again"
             } else {
-                disabled.isEnabled = true
-                disabled.footer = "now is enabled"
+                mutable_item.isEnabled = true
+                mutable_item.footer = "now is enabled"
             }
-        })
+        }
+
+        val switchErroredItem = findViewById<View>(R.id.switch_item_errored)
+        switchErroredItem.setOnClickListener {
+            if (mutable_item.state == TextFieldInput.State.ERROR) {
+                mutable_item.error = null
+            } else {
+                mutable_item.error = "error message"
+            }
+        }
+
+        val switchSucceedItem = findViewById<View>(R.id.switch_item_succeed)
+        switchSucceedItem.setOnClickListener {
+            if (mutable_item.state == TextFieldInput.State.SUCCESS) {
+                mutable_item.footer = ""
+                mutable_item.state = TextFieldInput.State.NONE
+            } else {
+                mutable_item.footer = "success message"
+                mutable_item.state = TextFieldInput.State.SUCCESS
+            }
+        }
 
         var password_mode = true
         val password = findViewById<TextFieldInput>(R.id.password_item)
