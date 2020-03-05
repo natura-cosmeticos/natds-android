@@ -54,3 +54,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
 }
+
+androidExtensions {
+    experimental = true
+}

@@ -2,7 +2,9 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
+import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
 import android.widget.EditText
@@ -18,6 +20,13 @@ class TextFieldInput @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
+
+    enum class State {
+        NONE, ERROR, SUCCESS
+    }
+
+    private val SUCCESS_ICON = "EA1A"
+    private val ERROR_ICON = "EA13"
 
     private val inputLabel by lazy { findViewById<TextView>(R.id.text_field_input_label) }
 
@@ -56,11 +65,60 @@ class TextFieldInput @JvmOverloads constructor(
             changeVisibilityByValue(footerBox, value)
         }
 
+    var borderColor: Int = 0
+        private set(value) {
+            field = value
+            (inputBox.background as GradientDrawable).setStroke(4, value)
+        }
+
+    var state: State = State.NONE
+        set(value) {
+            field = value
+            when (value) {
+                State.ERROR -> {
+                    setGeneralColor(R.color.colorBrdNatRed)
+                    setFooterIcon(ERROR_ICON, View.VISIBLE)
+                }
+                State.SUCCESS -> {
+                    setGeneralColor(R.color.colorBrdNatGreen)
+                    setFooterIcon(SUCCESS_ICON, View.VISIBLE)
+                }
+                else -> {
+                    resetGeneralColor()
+                    setFooterIcon("", View.GONE)
+                }
+            }
+        }
+
+    private fun resetGeneralColor() {
+        var color = R.color.colorHighEmphasis_48
+        setGeneralColor(color)
+    }
+
+    private fun setGeneralColor(id: Int) {
+        val color = ContextCompat.getColor(context, id)
+
+        borderColor = color
+        inputLabel.setTextColor(color)
+        footerValue.setTextColor(color)
+        footerIcon.setTextColor(color)
+    }
+
+    private fun setFooterIcon(value: String, visibility: Int) {
+        footerIcon.text = value
+        footerIcon.visibility = visibility
+    }
 
     private fun changeVisibilityByValue(view: View, value: String?) {
         if (value == null || value.isEmpty()) view.visibility = View.GONE
         else view.visibility = View.VISIBLE
     }
+
+    private fun intToState(vstate: Int)= when(vstate) {
+            1 -> State.SUCCESS
+            2 -> State.ERROR
+            else -> State.NONE
+        }
 
     init {
         View.inflate(context, R.layout.ds_text_field_input, this)
@@ -71,6 +129,7 @@ class TextFieldInput @JvmOverloads constructor(
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
         val vfooter = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
+        var vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
 
         typedArray.recycle()
 
@@ -78,5 +137,6 @@ class TextFieldInput @JvmOverloads constructor(
         label = vlabel
         footer = vfooter
         icon = vicon
+        state = intToState(vstate)
     }
 }

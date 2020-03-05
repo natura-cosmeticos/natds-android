@@ -40,6 +40,11 @@
         <attr name="text_field_icon" format="string" />
         <attr name="text_field_label" format="string" />
         <attr name="text_field_footer" format="string" />
+        <attr name="text_field_state" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="success" value="1"/>
+            <enum name="error" value="2"/>
+        </attr>
     </declare-styleable>
 
 </resources>

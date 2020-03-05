@@ -2,6 +2,7 @@ package com.natura.android.textfield
 
 import android.app.Activity
 import android.support.constraint.ConstraintLayout
+import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
@@ -25,6 +26,8 @@ class TextFieldInputTest {
 
     val EMPTY_TEXT = ""
     val NOT_EMPTY_TEXT = "test"
+    val ERROR_ICON_CODE = "EA13"
+    val SUCCESS_ICON_CODE = "EA1A"
 
     @Test
     fun basicLayout() {
@@ -43,6 +46,8 @@ class TextFieldInputTest {
         assertThat(textFieldInput.text).isNull()
         assertThat(textFieldInput.footer).isNull()
         assertThat(textFieldInput.icon).isNull()
+        assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
+        assertThat(textFieldInput.borderColor).isEqualTo(ContextCompat.getColor(textFieldInput.context, R.color.colorHighEmphasis_48))
     }
 
     @Test
@@ -103,7 +108,7 @@ class TextFieldInputTest {
 
     @Test
     fun setIcon_NoEmptyValue() {
-        test_setIcon("EA13", "EA13".toIcon(), View.VISIBLE)
+        test_setIcon(ERROR_ICON_CODE, ERROR_ICON_CODE.toIcon(), View.VISIBLE)
     }
 
     private fun test_setIcon(value: String?, expectedValue: String, expectedVisibility: Int) {
@@ -136,6 +141,40 @@ class TextFieldInputTest {
         textFieldInput.footer = value
         assertThat(footerView.text.toString()).isEqualTo(expectedValue)
         assertThat(footerBoxView.visibility).isEqualTo(expectedVisibility)
+    }
+
+    @Test
+    fun setStatus_None() {
+        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorHighEmphasis_48)
+        test_setState(TextFieldInput.State.NONE, expectedStatusColor, View.GONE, "")
+    }
+
+    @Test
+    fun setStatus_Error() {
+        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorBrdNatRed)
+        test_setState(TextFieldInput.State.ERROR, expectedStatusColor, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+    }
+
+    @Test
+    fun setStatus_Success() {
+        val expectedStatusColor = ContextCompat.getColor(textFieldInput.context, R.color.colorBrdNatGreen)
+        test_setState(TextFieldInput.State.SUCCESS, expectedStatusColor, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
+    }
+
+    private fun test_setState(state: TextFieldInput.State, expectedStatusColor: Int,
+                              expectedIconVisibility: Int, expectedIconValue: String) {
+        val labelView = textFieldInput.findViewById(R.id.text_field_input_label) as TextView
+        val footerView = textFieldInput.findViewById(R.id.text_field_input_footer) as TextView
+        val footerIconView = textFieldInput.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+
+        textFieldInput.state = state
+
+        assertThat(textFieldInput.borderColor).isEqualTo(expectedStatusColor)
+        assertThat(labelView.currentTextColor).isEqualTo(expectedStatusColor)
+        assertThat(footerView.currentTextColor).isEqualTo(expectedStatusColor)
+        assertThat(footerIconView.currentTextColor).isEqualTo(expectedStatusColor)
+        assertThat(footerIconView.visibility).isEqualTo(expectedIconVisibility)
+        assertThat(footerIconView.text).isEqualTo(expectedIconValue)
     }
 
 }
