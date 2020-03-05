@@ -19,6 +19,18 @@ class TextFieldActivity : AppCompatActivity() {
             clickable.requestFocus()
         })
 
+        val disabled = findViewById<TextFieldInput>(R.id.disabled_item)
+        val switchDisabledItem = findViewById<View>(R.id.switch_disabled_item)
+        switchDisabledItem.setOnClickListener(View.OnClickListener {
+            if (disabled.isEnabled) {
+                disabled.isEnabled = false
+                disabled.footer = "now is disabled again"
+            } else {
+                disabled.isEnabled = true
+                disabled.footer = "now is enabled"
+            }
+        })
+
         var password_mode = true
         val password = findViewById<TextFieldInput>(R.id.password_item)
         password.setOnIconClickListener(View.OnClickListener {

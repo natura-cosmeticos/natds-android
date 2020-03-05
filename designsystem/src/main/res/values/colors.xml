@@ -11,4 +11,5 @@
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
+    <color name="colorDisabled">#FAFAFA</color>
 </resources>

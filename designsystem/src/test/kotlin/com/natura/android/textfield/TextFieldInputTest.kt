@@ -287,6 +287,25 @@ class TextFieldInputTest {
         assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatOrange))
     }
 
+    @Test
+    fun setIsEnabledFalse_ChangeToDisabledColor() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.isEnabled = false
+        assertThat(textView.isEnabled).isFalse()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorDisabled))
+    }
+
+    @Test
+    fun setIsEnabledTrue_ChangeToDefaultColor() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+
+        textFieldInput.isEnabled = false
+        textFieldInput.isEnabled = true
+        assertThat(textView.isEnabled).isTrue()
+        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+    }
+
     private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)
 
 }

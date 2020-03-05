@@ -40,6 +40,17 @@ class TextFieldInput @JvmOverloads constructor(
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
     private val footerIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_footer_icon) }
 
+    override fun setEnabled(enabled: Boolean) {
+        if (enabled != isEnabled) {
+            if (enabled) resetGeneralColor()
+            else borderColor = ContextCompat.getColor(context, R.color.colorDisabled)
+        }
+
+        super.setEnabled(enabled)
+        inputValue?.isEnabled = enabled
+        inputIcon?.isEnabled = enabled
+    }
+
     var inputType: Int = EditorInfo.TYPE_TEXT_VARIATION_NORMAL
         set(value) {
             field = value
@@ -169,6 +180,7 @@ class TextFieldInput @JvmOverloads constructor(
         val vmaxLength = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLength, Integer.MAX_VALUE)
         val vmaxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
         val vlines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
+        val venabled = typedArray.getBoolean(R.styleable.ds_text_field_input_android_enabled, true)
 
         val vlabel = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
@@ -183,6 +195,7 @@ class TextFieldInput @JvmOverloads constructor(
         maxLines = vmaxLines
         maxLength = vmaxLength
         lines = vlines
+        isEnabled = venabled
 
         text = vtext
         label = vlabel
