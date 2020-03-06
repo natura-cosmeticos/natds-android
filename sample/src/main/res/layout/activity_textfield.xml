@@ -78,6 +78,7 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:paddingTop="15dp"
+        app:text_field_icon="EA06"
         app:text_field_label="Text field"
         app:text_field_text="Typed text"
         app:text_field_footer="this item is disabled"

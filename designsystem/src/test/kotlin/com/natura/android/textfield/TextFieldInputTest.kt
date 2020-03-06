@@ -49,7 +49,7 @@ class TextFieldInputTest {
         assertThat(textFieldInput.footer).isNull()
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.DEFAULT)
         assertThat(textFieldInput.inputType).isEqualTo(InputType.TYPE_CLASS_TEXT)
         assertThat(textFieldInput.hint).isNull()
         assertThat(textFieldInput.lines).isEqualTo(1)
@@ -175,23 +175,23 @@ class TextFieldInputTest {
 
     @Test
     fun setState_None() {
-        val expectedStatusColor = getColor(R.color.colorHighEmphasis_48)
-        test_setState(TextFieldInput.State.NONE, expectedStatusColor, View.GONE, "")
+        val expectedStatusColor = getColor(R.color.colorHighEmphasis)
+        test_setState(TextFieldInput.State.NONE, TextFieldInput.LayoutState.DEFAULT, View.GONE, "")
     }
 
     @Test
     fun setState_Error() {
         val expectedStatusColor = getColor(R.color.colorBrdNatRed)
-        test_setState(TextFieldInput.State.ERROR, expectedStatusColor, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+        test_setState(TextFieldInput.State.ERROR, TextFieldInput.LayoutState.ERROR, View.VISIBLE, ERROR_ICON_CODE.toIcon())
     }
 
     @Test
     fun setState_Success() {
         val expectedStatusColor = getColor(R.color.colorBrdNatGreen)
-        test_setState(TextFieldInput.State.SUCCESS, expectedStatusColor, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
+        test_setState(TextFieldInput.State.SUCCESS, TextFieldInput.LayoutState.SUCCESS, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
     }
 
-    private fun test_setState(state: TextFieldInput.State, expectedStatusColor: Int,
+    private fun test_setState(state: TextFieldInput.State, expectedLayoutState: TextFieldInput.LayoutState,
                               expectedIconVisibility: Int, expectedIconValue: String) {
         val labelView = textFieldInput.findViewById(R.id.text_field_input_label) as TextView
         val footerView = textFieldInput.findViewById(R.id.text_field_input_footer) as TextView
@@ -199,10 +199,10 @@ class TextFieldInputTest {
 
         textFieldInput.state = state
 
-        assertThat(textFieldInput.borderColor).isEqualTo(expectedStatusColor)
-        assertThat(labelView.currentTextColor).isEqualTo(expectedStatusColor)
-        assertThat(footerView.currentTextColor).isEqualTo(expectedStatusColor)
-        assertThat(footerIconView.currentTextColor).isEqualTo(expectedStatusColor)
+        assertThat(textFieldInput.layoutState).isEqualTo(expectedLayoutState)
+        assertThat(labelView.currentTextColor).isEqualTo(getColor(expectedLayoutState.labelColor))
+        assertThat(footerView.currentTextColor).isEqualTo(getColor(expectedLayoutState.footerColor))
+        assertThat(footerIconView.currentTextColor).isEqualTo(getColor(expectedLayoutState.footerColor))
         assertThat(footerIconView.visibility).isEqualTo(expectedIconVisibility)
         assertThat(footerIconView.text).isEqualTo(expectedIconValue)
     }
@@ -258,7 +258,7 @@ class TextFieldInputTest {
         val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
 
         textView.requestFocus()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatOrange))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.FOCUSED)
     }
 
     @Test
@@ -267,7 +267,7 @@ class TextFieldInputTest {
 
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.DEFAULT)
     }
 
     @Test
@@ -277,7 +277,7 @@ class TextFieldInputTest {
         textFieldInput.state = TextFieldInput.State.ERROR
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatRed))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.ERROR)
     }
 
     @Test
@@ -287,7 +287,7 @@ class TextFieldInputTest {
         textFieldInput.state = TextFieldInput.State.SUCCESS
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatGreen))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.SUCCESS)
     }
 
     @Test
@@ -307,7 +307,7 @@ class TextFieldInputTest {
         val iconView = textFieldInput.findViewById(R.id.text_field_input_icon) as FontIcon
 
         iconView.performClick()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorBrdNatOrange))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.FOCUSED)
     }
 
     @Test
@@ -316,7 +316,7 @@ class TextFieldInputTest {
 
         textFieldInput.isEnabled = false
         assertThat(textView.isEnabled).isFalse()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorDisabled))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.DISABLED)
     }
 
     @Test
@@ -326,7 +326,26 @@ class TextFieldInputTest {
         textFieldInput.isEnabled = false
         textFieldInput.isEnabled = true
         assertThat(textView.isEnabled).isTrue()
-        assertThat(textFieldInput.borderColor).isEqualTo(getColor(R.color.colorHighEmphasis_48))
+        assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.DEFAULT)
+    }
+
+    @Test
+    fun testFocusWhenBoxIsClicked() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+        val textBoxView = textFieldInput.findViewById(R.id.text_field_input_box) as View
+
+        textBoxView.callOnClick()
+        assertThat(textView.isFocused).isTrue()
+    }
+
+    @Test
+    fun testNoFocusWhenBoxIsClickedButIsDisabled() {
+        val textView = textFieldInput.findViewById(R.id.text_field_input_value) as EditText
+        val textBoxView = textFieldInput.findViewById(R.id.text_field_input_box) as View
+        textFieldInput.isEnabled = false
+
+        textBoxView.callOnClick()
+        assertThat(textView.isFocused).isFalse()
     }
 
     private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)

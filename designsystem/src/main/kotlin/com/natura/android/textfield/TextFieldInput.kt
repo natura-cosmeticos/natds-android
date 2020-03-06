@@ -2,7 +2,6 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Rect
 import android.graphics.drawable.GradientDrawable
 import android.support.constraint.ConstraintLayout
 import android.support.v4.content.ContextCompat
@@ -13,6 +12,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 
@@ -26,6 +26,14 @@ class TextFieldInput @JvmOverloads constructor(
 
     enum class State {
         NONE, ERROR, SUCCESS
+    }
+
+    enum class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int) {
+        DEFAULT(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
+        DISABLED(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis),
+        FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatOrange, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
+        ERROR(R.dimen.ds_border_emphasis, R.color.colorBrdNatRed, R.color.colorBrdNatRed, R.color.colorHighEmphasis, R.color.colorBrdNatRed),
+        SUCCESS(R.dimen.ds_border_tiny, R.color.colorBrdNatGreen, R.color.colorBrdNatGreen, R.color.colorHighEmphasis, R.color.colorBrdNatGreen)
     }
 
     private val SUCCESS_ICON = "EA1A"
@@ -42,14 +50,10 @@ class TextFieldInput @JvmOverloads constructor(
     private val footerIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_footer_icon) }
 
     override fun setEnabled(enabled: Boolean) {
-        if (enabled != isEnabled) {
-            if (enabled) resetGeneralColor()
-            else borderColor = ContextCompat.getColor(context, R.color.colorDisabled)
-        }
-
         super.setEnabled(enabled)
         inputValue?.isEnabled = enabled
         inputIcon?.isEnabled = enabled
+        resetLayoutState()
     }
 
     var inputType: Int = EditorInfo.TYPE_CLASS_TEXT
@@ -113,16 +117,21 @@ class TextFieldInput @JvmOverloads constructor(
             changeVisibilityByValue(footerBox, value)
         }
 
-    var borderColor: Int = 0
+    var layoutState: LayoutState = LayoutState.DEFAULT
         private set(value) {
             field = value
-            (inputBox.background as GradientDrawable).setStroke(resources.getDimensionPixelSize(R.dimen.ds_border), value)
+            inputLabel?.setTextColor(ContextCompat.getColor(context, value.labelColor))
+            (inputBox.background as GradientDrawable).setStroke(
+                resources.getDimensionPixelSize(value.borderWidth),
+                ContextCompat.getColor(context, value.borderColor))
+            footerValue?.setTextColor(ContextCompat.getColor(context, value.footerColor))
+            footerIcon?.setTextColor(ContextCompat.getColor(context, value.footerColor))
         }
 
     var state: State = State.NONE
         set(value) {
             field = value
-            resetGeneralColor()
+            resetLayoutState()
             when (value) {
                 State.ERROR -> {
                     setFooterIcon(ERROR_ICON, View.VISIBLE)
@@ -147,24 +156,16 @@ class TextFieldInput @JvmOverloads constructor(
             }
         }
 
-    private fun resetGeneralColor() {
-        var color =
-            when (state) {
-                State.ERROR -> R.color.colorBrdNatRed
-                State.SUCCESS -> R.color.colorBrdNatGreen
-                else -> R.color.colorHighEmphasis_48
+    private fun resetLayoutState() {
+        layoutState = when (state) {
+            State.ERROR -> LayoutState.ERROR
+            State.SUCCESS -> LayoutState.SUCCESS
+            else -> {
+                if (!isEnabled) LayoutState.DISABLED
+                else if (isFocusable) LayoutState.FOCUSED
+                else LayoutState.DEFAULT
             }
-
-        setGeneralColor(color)
-    }
-
-    private fun setGeneralColor(id: Int) {
-        val color = ContextCompat.getColor(context, id)
-
-        borderColor = color
-        inputLabel.setTextColor(color)
-        footerValue.setTextColor(color)
-        footerIcon.setTextColor(color)
+        }
     }
 
     private fun setFooterIcon(value: String, visibility: Int) {
@@ -218,14 +219,18 @@ class TextFieldInput @JvmOverloads constructor(
 
         inputValue?.setOnFocusChangeListener { v, hasFocus -> onFocusChanged(v, hasFocus)  }
         inputIcon?.setOnClickListener { v -> onFocusChanged(v, true) }
+
+        inputBox.setOnClickListener {
+            inputValue.requestFocus()
+        }
     }
 
     private fun onFocusChanged(view: View, hasFocus: Boolean) {
-        isEnabled?.let {
+        isEnabled.let {
             if (hasFocus) {
-                borderColor =  ContextCompat.getColor(context, R.color.colorBrdNatOrange)
+                layoutState = LayoutState.FOCUSED
             } else {
-                resetGeneralColor()
+                resetLayoutState()
             }
         }
     }

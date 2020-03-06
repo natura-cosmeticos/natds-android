@@ -10,6 +10,8 @@
     <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
+    <color name="colorLowEmphasis">#BBBBBB</color>
+    <color name="colorMediumEmphasis">#777777</color>
+    <color name="colorHighEmphasis">#333333</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
-    <color name="colorDisabled">#FAFAFA</color>
 </resources>
