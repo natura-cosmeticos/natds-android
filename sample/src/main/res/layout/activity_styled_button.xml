@@ -14,14 +14,14 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button"
                 android:text="Default Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button"
                 android:text="Default Button Disabled"
                 android:enabled="false"
@@ -29,14 +29,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Secondary"
                 android:text="Secondary Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Secondary"
                 android:text="Secondary Button Disabled"
                 android:enabled="false"
@@ -44,14 +44,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Outlined"
                 android:text="Outlined Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Outlined"
                 android:text="Outlined Button Disabled"
                 android:enabled="false"
@@ -59,14 +59,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Outlined.Secondary"
                 android:text="Secondary Outlined"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.Outlined.Secondary"
                 android:text="Secondary Outlined Disabled"
                 android:enabled="false"
@@ -74,14 +74,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.TextButton"
                 android:text="Text Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.TextButton"
                 android:text="Text Button Disabled"
                 android:enabled="false"
@@ -89,14 +89,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.TextButton.Secondary"
                 android:text="Secondary Text Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
-            <com.natura.android.button.NaturaButton
+            <android.support.design.button.MaterialButton
                 style="@style/Widget.Natura.Button.TextButton.Secondary"
                 android:text="Secondary Text Button Disabled"
                 android:enabled="false"

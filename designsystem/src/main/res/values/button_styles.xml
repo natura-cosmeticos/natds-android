@@ -13,14 +13,14 @@
 
     <style name="Widget.Natura.Button.Outlined.Secondary" parent="Widget.Natura.Button.Outlined">
         <item name="android:textColor">@color/ds_mtrl_sec_colored_btn_text_color_selector</item>
-        <item name="rippleColor">?colorSecondary</item>
+        <item name="rippleColor">@color/ds_mtrl_sec_colored_ripple_color_selector</item>
     </style>
 
     <style name="Widget.Natura.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton"/>
 
     <style name="Widget.Natura.Button.TextButton.Secondary" parent="Widget.Natura.Button.TextButton">
         <item name="android:textColor">@color/ds_mtrl_sec_colored_btn_text_color_selector</item>
-        <item name="rippleColor">?colorSecondary</item>
+        <item name="rippleColor">@color/ds_mtrl_sec_colored_ripple_color_selector</item>
     </style>
 
 </resources>
