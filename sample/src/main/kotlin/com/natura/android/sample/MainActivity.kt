@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<Button>(R.id.btn_textfield).setOnClickListener {
+            startActivity(Intent(this, TextFieldActivity::class.java))
+        }
+
         findViewById<Button>(R.id.btn_submenu).setOnClickListener {
             startActivity(Intent(this, SubmenuActivity::class.java))
         }

@@ -43,4 +43,8 @@ ext {
     expressoVersion = '3.1.1'
     ktlintVersion = '0.35.0'
     androidXTestVersion = '1.2.0'
+    testCoreKtxVersion = "1.2.0"
+    androidxJunitVersion = "1.1.1"
+    truthVersion = '1.2.0'
+    robolectricVersion = '4.3'
 }

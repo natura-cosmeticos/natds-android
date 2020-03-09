@@ -11,4 +11,8 @@
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
     </style>
 
+    <!-- Roboto Regular-->
+    <style name="RobotoRegular">
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
 </resources>

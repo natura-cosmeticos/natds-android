@@ -5,10 +5,19 @@
     <dimen name="ds_spacin_tiny">8dp</dimen>
     <dimen name="ds_spacing_micro">4dp</dimen>
     <dimen name="ds_spacing_standard">24dp</dimen>
+    <dimen name="ds_border_tiny">1dp</dimen>
+    <dimen name="ds_border_emphasis">2dp</dimen>
+    <dimen name="ds_spacing_border_top">18dp</dimen>
+    <dimen name="ds_spacing_border_left">16dp</dimen>
+    <dimen name="ds_spacing_border_right">16dp</dimen>
+    <dimen name="ds_spacing_border_bottom">17dp</dimen>
 
     <!-- Text Size Default -->
+    <dimen name="ds_text_footer_size">12sp</dimen>
     <dimen name="ds_text_small">14sp</dimen>
+    <dimen name="ds_text_default_size">16sp</dimen>
     <dimen name="ds_text_big">24sp</dimen>
+    <dimen name="ds_text_default_icon_small_size">16sp</dimen>
     <dimen name="ds_text_default_icon_size">24sp</dimen>
     <dimen name="ds_text_default_icon_big_size">56sp</dimen>
 
