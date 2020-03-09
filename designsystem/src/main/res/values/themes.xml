@@ -6,6 +6,7 @@
         <item name="colorSecondary">@color/colorBrdNatOrange</item>
 
         <item name="android:colorBackground">@color/colorBrdNatWhite</item>
+        <item name="colorError">@color/feedback_error</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
@@ -13,5 +14,13 @@
 
         <!--Component styles-->
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
+
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorAccent">?colorPrimary</item>
+    </style>
+
+    <style name="Theme.Avon" parent="Theme.Natura">
+        <item name="colorPrimary">#DE0085</item>
+        <item name="colorSecondary">#A70058</item>
     </style>
 </resources>
