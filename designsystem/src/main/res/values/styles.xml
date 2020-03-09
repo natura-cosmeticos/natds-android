@@ -13,6 +13,6 @@
 
     <!-- Roboto Regular-->
     <style name="RobotoRegular">
-        <item name="android:fontFamily">@string/font_fontFamily_regular</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 </resources>
