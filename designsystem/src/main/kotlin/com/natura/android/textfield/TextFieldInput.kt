@@ -162,7 +162,7 @@ class TextFieldInput @JvmOverloads constructor(
             State.SUCCESS -> LayoutState.SUCCESS
             else -> {
                 if (!isEnabled) LayoutState.DISABLED
-                else if (isFocusable) LayoutState.FOCUSED
+                else if (inputValue.isFocused) LayoutState.FOCUSED
                 else LayoutState.DEFAULT
             }
         }
@@ -217,8 +217,8 @@ class TextFieldInput @JvmOverloads constructor(
         icon = vicon
         state = intToState(vstate)
 
-        inputValue?.setOnFocusChangeListener { v, hasFocus -> onFocusChanged(v, hasFocus)  }
-        inputIcon?.setOnClickListener { v -> onFocusChanged(v, true) }
+        inputValue.setOnFocusChangeListener { v, hasFocus -> onFocusChanged(v, hasFocus) }
+        inputIcon.setOnClickListener { v -> onFocusChanged(v, true) }
 
         inputBox.setOnClickListener {
             inputValue.requestFocus()
@@ -226,12 +226,10 @@ class TextFieldInput @JvmOverloads constructor(
     }
 
     private fun onFocusChanged(view: View, hasFocus: Boolean) {
-        isEnabled.let {
-            if (hasFocus) {
-                layoutState = LayoutState.FOCUSED
-            } else {
-                resetLayoutState()
-            }
+        if (hasFocus) {
+            layoutState = LayoutState.FOCUSED
+        } else {
+            resetLayoutState()
         }
     }
 

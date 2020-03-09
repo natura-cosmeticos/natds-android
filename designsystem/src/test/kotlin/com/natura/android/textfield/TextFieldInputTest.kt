@@ -306,6 +306,7 @@ class TextFieldInputTest {
     fun onClickIcon_ChangeToFocusColor() {
         val iconView = textFieldInput.findViewById(R.id.text_field_input_icon) as FontIcon
 
+        textFieldInput.isEnabled = true
         iconView.performClick()
         assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.FOCUSED)
     }
@@ -317,6 +318,8 @@ class TextFieldInputTest {
         textFieldInput.isEnabled = false
         assertThat(textView.isEnabled).isFalse()
         assertThat(textFieldInput.layoutState).isEqualTo(TextFieldInput.LayoutState.DISABLED)
+
+        textFieldInput.isEnabled = true
     }
 
     @Test
@@ -346,6 +349,8 @@ class TextFieldInputTest {
 
         textBoxView.callOnClick()
         assertThat(textView.isFocused).isFalse()
+
+        textFieldInput.isEnabled = true
     }
 
     private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)

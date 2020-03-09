@@ -14,7 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/RobotoMedium"
-        android:textStyle="bold"
         android:textColor="@color/colorMediumEmphasis"
         tools:text="text_field_input_label"
         android:textSize="@dimen/ds_text_small"
