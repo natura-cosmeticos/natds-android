@@ -1,0 +1,57 @@
+package com.natura.android.sample.components
+
+import android.view.View
+import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.R
+import org.hamcrest.Matcher
+import org.hamcrest.Matchers.allOf
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+
+@RunWith(AndroidJUnit4::class)
+class TextInputHighlightActivityTest {
+
+    @Before
+    fun setup() {
+        ActivityScenario.launch(TextInputHighlightActivity::class.java)
+    }
+
+    @Test
+    fun shouldDisplayInitialViewValues() {
+        onView(matchHighlightChild(
+            childId = R.id.description_label,
+            parentId = R.id.highlightInitOnXml)
+        )
+            .check(matches(withText("Description on Xml")))
+
+        onView(matchHighlightChild(
+            childId = R.id.highlight_label,
+            parentId = R.id.highlightInitOnXml)
+        )
+            .check(matches(withText("R\$ 11,02")))
+
+        onView(matchHighlightChild(
+            childId = R.id.highlight_label,
+            parentId = R.id.highlightInitViaCode)
+        )
+            .check(matches(withText("\$ 00.00")))
+
+        onView(matchHighlightChild(
+            childId = R.id.description_label,
+            parentId = R.id.highlightInitViaCode)
+        )
+            .check(matches(withText("Add description via code")))
+    }
+
+    private fun matchHighlightChild(childId: Int, parentId: Int): Matcher<View>? {
+        return allOf(
+            withId(childId),
+            withParent(withId(parentId))
+        )
+    }
+}

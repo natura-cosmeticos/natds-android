@@ -35,6 +35,11 @@
         <attr name="error_button_label" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="ds_text_input_highlight">
+        <attr name="description_label" format="string" />
+        <attr name="highlight_label" format="string" />
+    </declare-styleable>
+
     <declare-styleable name="ds_text_field_input">
         <attr name="android:inputType" />
         <attr name="android:maxLines" />

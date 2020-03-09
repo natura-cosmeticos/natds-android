@@ -14,4 +14,16 @@
     <color name="colorMediumEmphasis">#777777</color>
     <color name="colorHighEmphasis">#333333</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
+
+    <!--Light Text Content-->
+    <color name="lightHighlight">#000000</color>
+    <color name="lightHighEmphasis">#333333</color>
+    <color name="lightMediumEmphasis">#777777</color>
+    <color name="lightLowEmphasis">#BBBBBB</color>
+    <color name="lightLink">#227BBD</color>
+
+    <!--Feedback-->
+    <color name="feedback_success">#569A32</color>
+    <color name="feedback_warning">#FCC433</color>
+    <color name="feedback_error">#E74627</color>
 </resources>
