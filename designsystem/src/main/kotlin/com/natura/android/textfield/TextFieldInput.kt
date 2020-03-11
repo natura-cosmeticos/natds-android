@@ -31,12 +31,12 @@ class TextFieldInput @JvmOverloads constructor(
     enum class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int) {
         DEFAULT(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         DISABLED(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis),
-        FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatOrange, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
+        FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatYellow, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         ERROR(R.dimen.ds_border_emphasis, R.color.colorBrdNatRed, R.color.colorBrdNatRed, R.color.colorHighEmphasis, R.color.colorBrdNatRed),
         SUCCESS(R.dimen.ds_border_tiny, R.color.colorBrdNatGreen, R.color.colorBrdNatGreen, R.color.colorHighEmphasis, R.color.colorBrdNatGreen)
     }
 
-    private val SUCCESS_ICON = "EA1A"
+    private val SUCCESS_ICON = "EA15"
     private val ERROR_ICON = "EA13"
 
     private val inputLabel by lazy { findViewById<TextView>(R.id.text_field_input_label) }
@@ -122,7 +122,7 @@ class TextFieldInput @JvmOverloads constructor(
             field = value
             inputLabel?.setTextColor(ContextCompat.getColor(context, value.labelColor))
             (inputBox.background as GradientDrawable).setStroke(
-                resources.getDimensionPixelSize(value.borderWidth),
+                resources.getDimension(value.borderWidth).toInt(),
                 ContextCompat.getColor(context, value.borderColor))
             footerValue?.setTextColor(ContextCompat.getColor(context, value.footerColor))
             footerIcon?.setTextColor(ContextCompat.getColor(context, value.footerColor))
