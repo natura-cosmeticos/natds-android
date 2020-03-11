@@ -68,6 +68,13 @@
             android:textColor="@color/colorBrdNatGray" />
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_style_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botão de estilo"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_input_text_highlight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
