@@ -27,5 +27,12 @@ class StyleButtonActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        findViewById<View>(R.id.bodyShopThemeBtn).setOnClickListener {
+            val intent = Intent(baseContext, StyleButtonActivity::class.java)
+            intent.putExtra("theme", R.style.Theme_BodyShop)
+            startActivity(intent)
+            finish()
+        }
     }
 }
