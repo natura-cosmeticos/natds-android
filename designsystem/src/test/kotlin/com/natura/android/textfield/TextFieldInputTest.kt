@@ -29,7 +29,7 @@ class TextFieldInputTest {
     val EMPTY_TEXT = ""
     val NOT_EMPTY_TEXT = "test"
     val ERROR_ICON_CODE = "EA13"
-    val SUCCESS_ICON_CODE = "EA1A"
+    val SUCCESS_ICON_CODE = "EA15"
 
     @Test
     fun basicLayout() {
