@@ -38,6 +38,12 @@
         <activity
             android:name=".components.LoadingActivity"
             android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.TextInputHighlightActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.StyleButtonActivity"
+            android:theme="@style/Theme.Natura" />
     </application>
 
 </manifest>

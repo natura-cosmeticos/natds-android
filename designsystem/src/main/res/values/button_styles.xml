@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.Natura.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/ds_mtrl_default_btn_text_color_selector</item>
+    </style>
+
+    <style name="Widget.Natura.Button.Secondary" parent="Widget.Natura.Button">
+        <item name="backgroundTint">@color/ds_mtrl_sec_btn_background_selector</item>
+    </style>
+
+    <style name="Widget.Natura.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <style name="Widget.Natura.Button.Outlined.Secondary" parent="Widget.Natura.Button.Outlined">
+        <item name="android:textColor">@color/ds_mtrl_sec_colored_btn_text_color_selector</item>
+        <item name="rippleColor">@color/ds_mtrl_sec_colored_ripple_color_selector</item>
+    </style>
+
+    <style name="Widget.Natura.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton"/>
+
+    <style name="Widget.Natura.Button.TextButton.Secondary" parent="Widget.Natura.Button.TextButton">
+        <item name="android:textColor">@color/ds_mtrl_sec_colored_btn_text_color_selector</item>
+        <item name="rippleColor">@color/ds_mtrl_sec_colored_ripple_color_selector</item>
+    </style>
+
+</resources>

@@ -5,6 +5,7 @@
     <dimen name="ds_spacin_tiny">8dp</dimen>
     <dimen name="ds_spacing_micro">4dp</dimen>
     <dimen name="ds_spacing_standard">24dp</dimen>
+    <dimen name="ds_size_line">1dp</dimen>
     <dimen name="ds_border_tiny">1dp</dimen>
     <dimen name="ds_border_emphasis">2dp</dimen>
     <dimen name="ds_spacing_border_top">18dp</dimen>
@@ -31,4 +32,7 @@
     <!-- Button dimens -->
     <dimen name="ds_button_primary_radius">4dp</dimen>
     <dimen name="ds_button_primary_label_margin">40dp</dimen>
+
+    <!-- Progress dimens -->
+    <dimen name="ds_loading_size">24dp</dimen>
 </resources>
