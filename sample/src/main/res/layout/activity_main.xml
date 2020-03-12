@@ -78,7 +78,7 @@
             android:id="@+id/btn_input_text_highlight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Input Text Highlight"
+            android:text="Value Text Highlight"
             android:textColor="@color/colorBrdNatGray" />
 
     </LinearLayout>
