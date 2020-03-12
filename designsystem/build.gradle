@@ -31,6 +31,11 @@ android {
     lintOptions {
         baseline file("lint-baseline.xml")
     }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
@@ -40,6 +45,16 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
+    testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
+    testImplementation "androidx.test:runner:$rootProject.androidXTestVersion"
+    testImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
+    testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+    testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
+
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
+}
+
+androidExtensions {
+    experimental = true
 }

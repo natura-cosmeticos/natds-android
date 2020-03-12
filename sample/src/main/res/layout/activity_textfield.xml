@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".components.TextFieldActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hint"
+        app:text_field_label="Text field"
+        app:text_field_text="Typed text"
+        app:text_field_footer="this field accept any text"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:paddingTop="15dp"
+        app:text_field_label="Number field"
+        app:text_field_footer="this field accept only numbers"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:id="@+id/password_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:paddingTop="15dp"
+        app:text_field_icon="EA37"
+        app:text_field_label="Password field"
+        app:text_field_footer="click on icon to change input type"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:hint="this field has no label and no detail footer"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="3"
+        android:paddingTop="15dp"
+        android:maxLength="10"
+        android:inputType="textMultiLine"
+        app:text_field_label="Text field with 3 lines"
+        app:text_field_footer="This field accepts only 10 characters, including line breaks"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:id="@+id/clickable_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        app:text_field_label="Text field with icon"
+        app:text_field_text="Typed text"
+        app:text_field_icon="EA70"
+        app:text_field_footer="Click on icon to clean the text"
+        />
+
+    <com.natura.android.textfield.TextFieldInput
+        android:id="@+id/mutable_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:paddingTop="15dp"
+        app:text_field_icon="EA06"
+        app:text_field_label="Text field"
+        app:text_field_text="Typed text"
+        app:text_field_footer="this item is disabled"
+        />
+
+     <TextView
+         android:paddingTop="5dp"
+         android:id="@+id/switch_item_disabled"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="click here to enable/disable"
+         android:textColor="@color/colorBrdNatRed"
+         android:clickable="true"
+         />
+
+    <TextView
+        android:paddingTop="5dp"
+        android:id="@+id/switch_item_succeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to switch success"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:paddingTop="5dp"
+        android:id="@+id/switch_item_errored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to switch error"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
+
+    </LinearLayout>
+
+</ScrollView>

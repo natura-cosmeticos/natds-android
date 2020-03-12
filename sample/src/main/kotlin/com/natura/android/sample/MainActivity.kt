@@ -12,6 +12,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<Button>(R.id.btn_textfield).setOnClickListener {
+            startActivity(Intent(this, TextFieldActivity::class.java))
+        }
+
         findViewById<Button>(R.id.btn_submenu).setOnClickListener {
             startActivity(Intent(this, SubmenuActivity::class.java))
         }
@@ -38,6 +42,14 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.btn_error_default).setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_input_text_highlight).setOnClickListener {
+            startActivity(Intent(this, TextInputHighlightActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_style_buttons).setOnClickListener {
+            startActivity(Intent(this, StyleButtonActivity::class.java))
         }
     }
 }

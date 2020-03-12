@@ -12,6 +12,13 @@
         android:padding="@dimen/ds_spacing_small">
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_textfield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text Field"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,6 +65,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Botão Primário"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_style_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Botão de estilo"
+            android:textColor="@color/colorBrdNatGray" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_input_text_highlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Text Highlight"
             android:textColor="@color/colorBrdNatGray" />
 
     </LinearLayout>

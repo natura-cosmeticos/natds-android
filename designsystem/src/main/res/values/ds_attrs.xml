@@ -35,4 +35,27 @@
         <attr name="error_button_label" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="ds_text_input_highlight">
+        <attr name="description_label" format="string" />
+        <attr name="highlight_label" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ds_text_field_input">
+        <attr name="android:inputType" />
+        <attr name="android:maxLines" />
+        <attr name="android:maxLength" />
+        <attr name="android:lines" />
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="text_field_text" format="string" />
+        <attr name="text_field_icon" format="string" />
+        <attr name="text_field_label" format="string" />
+        <attr name="text_field_footer" format="string" />
+        <attr name="text_field_state" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="success" value="1"/>
+            <enum name="error" value="2"/>
+        </attr>
+    </declare-styleable>
+
 </resources>
