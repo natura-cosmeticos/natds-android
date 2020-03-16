@@ -35,4 +35,8 @@
 
     <!-- Progress dimens -->
     <dimen name="ds_loading_size">24dp</dimen>
+
+    <!-- Menu Action Tag Text dimens -->
+    <dimen name="ds_menu_tag_vertical_distance">2dp</dimen>
+    <dimen name="ds_menu_tag_horizontal_distance">8dp</dimen>
 </resources>
