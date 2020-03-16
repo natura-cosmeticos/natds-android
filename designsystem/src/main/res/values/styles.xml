@@ -35,4 +35,18 @@
 
     <style name="Widget"/>
     <style name="Widget.Natura"/>
+
+    <style name="MenuTagActionText" parent="@android:style/Widget.TextView">
+        <item name="android:background">@drawable/ds_menu_tag_action</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/colorBrdNatWhite</item>
+        <item name="android:textAppearance">@string/font_roboto_medium</item>
+        <item name="android:textSize">@dimen/ds_text_footer_size</item>
+        <item name="android:paddingBottom">@dimen/ds_menu_tag_vertical_distance</item>
+        <item name="android:paddingTop">@dimen/ds_menu_tag_vertical_distance</item>
+        <item name="android:paddingStart">@dimen/ds_menu_tag_horizontal_distance</item>
+        <item name="android:paddingLeft">@dimen/ds_menu_tag_horizontal_distance</item>
+        <item name="android:paddingEnd">@dimen/ds_menu_tag_horizontal_distance</item>
+        <item name="android:paddingRight">@dimen/ds_menu_tag_horizontal_distance</item>
+    </style>
 </resources>
