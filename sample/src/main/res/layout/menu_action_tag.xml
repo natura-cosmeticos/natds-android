@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/MenuTagActionText"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Novo" />
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_gravity="center"
+        style="@style/MenuTagActionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Novo" />
+</FrameLayout>

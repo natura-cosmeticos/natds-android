@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!--Navigation Drawer-->
     <style name="Widget.Natura.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
@@ -38,9 +38,11 @@
 
     <style name="MenuTagActionText" parent="@android:style/Widget.TextView">
         <item name="android:background">@drawable/ds_menu_tag_action</item>
-        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:letterSpacing" tools:targetApi="lollipop">0.03</item>
         <item name="android:textColor">@color/colorBrdNatWhite</item>
-        <item name="android:textAppearance">@string/font_roboto_medium</item>
+        <item name="android:textAppearance">@style/RobotoRegular</item>
         <item name="android:textSize">@dimen/ds_text_footer_size</item>
         <item name="android:paddingBottom">@dimen/ds_menu_tag_vertical_distance</item>
         <item name="android:paddingTop">@dimen/ds_menu_tag_vertical_distance</item>
