@@ -15,6 +15,8 @@ In construction
 ### Testing
 We are using [Screenshot Tests for Android](https://github.com/facebook/screenshot-tests-for-android) to validate our built components state, color and behavior.
 
+For run your local tests the max supported device API is 27
+
 **Tip from library page to build tests for the first time**
 It is necessary to have python-2.7 installed for the gradle plugin to work, and we also recommending installing the python-pillow library which is required for recording and verifying screenshots.
 
