@@ -39,7 +39,7 @@
             android:name=".components.LoadingActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.TextInputHighlightActivity"
+            android:name=".components.ValueTextHighlightActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.StyleButtonActivity"

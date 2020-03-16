@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- To be replaced with default attr from google:material lib -->
+    <!-- Style to use for Material Outlined Buttons in this theme. -->
+    <!-- Since it's not available in support:design lib -->
+    <attr name="materialButtonOutlinedStyle" format="reference"/>
+    <attr name="materialBorderlessButtonStyle" format="reference"/>
+
+</resources>

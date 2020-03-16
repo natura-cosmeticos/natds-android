@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.widget.TextView
 import com.natura.android.R
 
-class TextInputHighlight @JvmOverloads constructor(
+class ValueTextHighlight @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
