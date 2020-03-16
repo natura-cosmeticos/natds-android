@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MenuActivity::class.java))
         }
 
+        findViewById<Button>(R.id.btn_menu_action_tag).setOnClickListener {
+            startActivity(Intent(this, MenuActionTagActivity::class.java))
+        }
+
         findViewById<Button>(R.id.btn_icons).setOnClickListener {
             startActivity(Intent(this, IconActivity::class.java))
         }
