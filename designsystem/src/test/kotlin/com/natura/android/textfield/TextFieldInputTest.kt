@@ -45,7 +45,7 @@ class TextFieldInputTest {
     @Test
     fun basicConstructor_NoStyledAttributes() {
         assertThat(textFieldInput.label).isNull()
-        assertThat(textFieldInput.text).isNull()
+        assertThat(textFieldInput.text).isEmpty()
         assertThat(textFieldInput.footer).isNull()
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)

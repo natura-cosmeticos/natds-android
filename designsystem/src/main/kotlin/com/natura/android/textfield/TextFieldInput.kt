@@ -16,7 +16,6 @@ import android.widget.Toast
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 
-
 @SuppressLint("CustomViewStyleable")
 class TextFieldInput @JvmOverloads constructor(
     context: Context,
@@ -94,6 +93,9 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             inputValue.setText(value)
+        }
+        get() {
+            return inputValue.text.toString()
         }
 
     var icon: String? = null
