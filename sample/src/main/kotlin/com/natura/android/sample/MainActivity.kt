@@ -36,10 +36,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, LoadingActivity::class.java))
         }
 
-        findViewById<Button>(R.id.btn_button_primary).setOnClickListener {
-            startActivity(Intent(this, ButtonPrimaryActivity::class.java))
-        }
-
         findViewById<Button>(R.id.btn_error_default).setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
         }

@@ -21,10 +21,40 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
 
+
+            <android.support.design.button.MaterialButton
+                style="?materialButtonStyle"
+                android:text="Default Button Icon Left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ds_ic_outlined_navigation_arrowright"
+                app:iconTint="@color/highEmphasis"
+                android:layout_marginBottom="10dp"/>
+
+
+            <android.support.design.button.MaterialButton
+                style="?materialButtonStyle"
+                android:text="Default Button Icon Right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ds_ic_outlined_navigation_arrowleft"
+                app:iconTint="@color/highEmphasis"
+                android:layoutDirection="rtl"
+                android:layout_marginBottom="10dp"/>
+
             <android.support.design.button.MaterialButton
                 style="?materialButtonStyle"
                 android:text="Default Button Disabled"
                 android:enabled="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <android.support.design.button.MaterialButton
+                style="?materialButtonStyle"
+                android:text="Default Button Disabled Icon Left"
+                android:enabled="false"
+                app:icon="@drawable/ds_ic_outlined_navigation_arrowright"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"/>
