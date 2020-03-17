@@ -35,6 +35,9 @@
             android:name=".components.IconActivity"
             android:theme="@style/Theme.Natura" />
         <activity
+            android:name=".components.DrawableActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
             android:name=".components.LoadingActivity"
             android:theme="@style/Theme.Natura" />
         <activity

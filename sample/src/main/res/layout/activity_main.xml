@@ -20,10 +20,18 @@
             />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_icons"
+            android:id="@+id/btn_icons_drawables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ícones"
+            android:text="Icons (drawables)"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_icons_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Icons (fonts)"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 

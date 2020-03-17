@@ -12,10 +12,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // tokens
+        findViewById<Button>(R.id.btn_icons_font).setOnClickListener {
+            startActivity(Intent(this, IconActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_icons_drawables).setOnClickListener {
+            startActivity(Intent(this, DrawableActivity::class.java))
+        }
+
+        // components
         findViewById<Button>(R.id.btn_textfield).setOnClickListener {
             startActivity(Intent(this, TextFieldActivity::class.java))
         }
 
+        findViewById<Button>(R.id.btn_input_text_highlight).setOnClickListener {
+            startActivity(Intent(this, ValueTextHighlightActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_style_buttons).setOnClickListener {
+            startActivity(Intent(this, StyleButtonActivity::class.java))
+        }
+
+        // patterns
         findViewById<Button>(R.id.btn_submenu).setOnClickListener {
             startActivity(Intent(this, SubmenuActivity::class.java))
         }
@@ -28,24 +47,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, MenuActivity::class.java))
         }
 
-        findViewById<Button>(R.id.btn_icons).setOnClickListener {
-            startActivity(Intent(this, IconActivity::class.java))
-        }
-
         findViewById<Button>(R.id.btn_loading).setOnClickListener {
             startActivity(Intent(this, LoadingActivity::class.java))
         }
 
         findViewById<Button>(R.id.btn_error_default).setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
-        }
-
-        findViewById<Button>(R.id.btn_input_text_highlight).setOnClickListener {
-            startActivity(Intent(this, ValueTextHighlightActivity::class.java))
-        }
-
-        findViewById<Button>(R.id.btn_style_buttons).setOnClickListener {
-            startActivity(Intent(this, StyleButtonActivity::class.java))
         }
     }
 }
