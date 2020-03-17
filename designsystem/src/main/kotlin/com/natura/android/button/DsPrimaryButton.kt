@@ -17,6 +17,7 @@ class DsPrimaryButton @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    // TODO remover esta classe pois android.support.design.button.MaterialButton ja atende
     private val buttonLabel by lazy { findViewById<AppCompatTextView>(R.id.button_primary_text) }
     private val buttonIconLeft by lazy { findViewById<FontIcon>(R.id.button_primary_icon_left) }
     private val buttonIconRight by lazy { findViewById<FontIcon>(R.id.button_primary_icon_right) }

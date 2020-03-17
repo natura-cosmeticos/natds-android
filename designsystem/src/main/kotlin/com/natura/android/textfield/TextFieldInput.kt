@@ -12,7 +12,6 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 
@@ -24,6 +23,7 @@ class TextFieldInput @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    // TODO trocar FontIcon por AppCompatImageView
     enum class State {
         NONE, ERROR, SUCCESS
     }
