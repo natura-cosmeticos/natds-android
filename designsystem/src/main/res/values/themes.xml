@@ -24,6 +24,11 @@
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton.DarkText</item>
     </style>
 
+    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!--Not supported officialy-->
     <style name="Theme.Avon" parent="Theme.Natura">
         <item name="colorPrimary">#DE0085</item>
