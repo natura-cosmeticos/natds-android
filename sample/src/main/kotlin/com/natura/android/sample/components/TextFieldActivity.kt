@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.text.InputType
 import android.view.View
 import com.natura.android.sample.R
-import com.natura.android.textfield.TextFieldInput
+import com.natura.android.textfield.TextField
 
 class TextFieldActivity : AppCompatActivity() {
 
@@ -13,13 +13,24 @@ class TextFieldActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_textfield)
 
-        val clickable = findViewById<TextFieldInput>(R.id.clickable_item)
+
+        val textItem = findViewById<TextField>(R.id.text_item)
+        val inputProgrammatically = findViewById<View>(R.id.input_text_programmatically)
+        inputProgrammatically.setOnClickListener {
+            textItem.text = "text added programmatically"
+        }
+        val clearProgrammatically = findViewById<View>(R.id.clear_text_programmatically)
+        clearProgrammatically.setOnClickListener {
+            textItem.text = ""
+        }
+
+        val clickable = findViewById<TextField>(R.id.clickable_item)
         clickable.setOnIconClickListener(View.OnClickListener {
             clickable.text = ""
             clickable.requestFocus()
         })
 
-        val mutableItem = findViewById<TextFieldInput>(R.id.mutable_item)
+        val mutableItem = findViewById<TextField>(R.id.mutable_item)
         val switchDisabledItem = findViewById<View>(R.id.switch_item_disabled)
         switchDisabledItem.setOnClickListener {
             if (mutableItem.isEnabled) {
@@ -33,7 +44,7 @@ class TextFieldActivity : AppCompatActivity() {
 
         val switchErroredItem = findViewById<View>(R.id.switch_item_errored)
         switchErroredItem.setOnClickListener {
-            if (mutableItem.state == TextFieldInput.State.ERROR) {
+            if (mutableItem.state == TextField.State.ERROR) {
                 mutableItem.error = null
             } else {
                 mutableItem.error = "error message"
@@ -42,17 +53,17 @@ class TextFieldActivity : AppCompatActivity() {
 
         val switchSucceedItem = findViewById<View>(R.id.switch_item_succeed)
         switchSucceedItem.setOnClickListener {
-            if (mutableItem.state == TextFieldInput.State.SUCCESS) {
+            if (mutableItem.state == TextField.State.SUCCESS) {
                 mutableItem.footer = ""
-                mutableItem.state = TextFieldInput.State.NONE
+                mutableItem.state = TextField.State.NONE
             } else {
                 mutableItem.footer = "success message"
-                mutableItem.state = TextFieldInput.State.SUCCESS
+                mutableItem.state = TextField.State.SUCCESS
             }
         }
 
         var passwordMode = true
-        val password = findViewById<TextFieldInput>(R.id.password_item)
+        val password = findViewById<TextField>(R.id.password_item)
         password.setOnIconClickListener(View.OnClickListener {
             if (passwordMode) {
                 password.inputType =

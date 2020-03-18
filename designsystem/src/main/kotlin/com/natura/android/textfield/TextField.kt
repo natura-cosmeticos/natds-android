@@ -16,7 +16,7 @@ import com.natura.android.R
 import com.natura.android.icon.FontIcon
 
 @SuppressLint("CustomViewStyleable")
-class TextFieldInput @JvmOverloads constructor(
+class TextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -28,7 +28,8 @@ class TextFieldInput @JvmOverloads constructor(
     }
 
     enum class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int) {
-        DEFAULT(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
+        DEFAULT(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis),
+        FILLED(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         DISABLED(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis),
         FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatYellow, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         ERROR(R.dimen.ds_border_emphasis, R.color.colorBrdNatRed, R.color.colorBrdNatRed, R.color.colorHighEmphasis, R.color.colorBrdNatRed),
@@ -54,6 +55,11 @@ class TextFieldInput @JvmOverloads constructor(
         inputIcon?.isEnabled = enabled
         resetLayoutState()
     }
+
+    val editTextView: EditText
+        get() {
+            return inputValue
+        }
 
     var inputType: Int = EditorInfo.TYPE_CLASS_TEXT
         set(value) {
@@ -93,6 +99,7 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             inputValue.setText(value)
+            resetLayoutState()
         }
         get() {
             return inputValue.text.toString()
@@ -165,6 +172,7 @@ class TextFieldInput @JvmOverloads constructor(
             else -> {
                 if (!isEnabled) LayoutState.DISABLED
                 else if (inputValue.isFocused) LayoutState.FOCUSED
+                else if (inputValue.text.isNotEmpty()) LayoutState.FILLED
                 else LayoutState.DEFAULT
             }
         }
