@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Natura">
         <activity android:name=".components.ErrorActivity"></activity>
-        <activity android:name=".components.ButtonPrimaryActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +33,9 @@
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.IconActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.LoadingActivity"

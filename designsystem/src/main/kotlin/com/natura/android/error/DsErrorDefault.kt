@@ -17,6 +17,7 @@ class DsErrorDefault @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    // TODO mover esta classe para com.natura.android.pattern
     private val erroIcon by lazy { findViewById<AppCompatImageView>(R.id.ds_default_error_icon) }
     private val errorLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_default_error_label) }
     private val errorButton by lazy { findViewById<DsPrimaryButton>(R.id.ds_default_error_button) }

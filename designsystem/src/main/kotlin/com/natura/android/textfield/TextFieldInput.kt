@@ -22,6 +22,7 @@ class TextFieldInput @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    // TODO trocar FontIcon por AppCompatImageView
     enum class State {
         NONE, ERROR, SUCCESS
     }
