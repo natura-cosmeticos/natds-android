@@ -12,10 +12,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
-
 
 @SuppressLint("CustomViewStyleable")
 class TextFieldInput @JvmOverloads constructor(
@@ -95,6 +93,9 @@ class TextFieldInput @JvmOverloads constructor(
             field = value
             inputValue.setText(value)
         }
+        get() {
+            return inputValue.text.toString()
+        }
 
     var icon: String? = null
         set(value) {
@@ -149,10 +150,10 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             footer = value
-            if (value != null) {
-                state = State.ERROR
+            state = if (value != null) {
+                State.ERROR
             } else {
-                state = State.NONE
+                State.NONE
             }
         }
 
@@ -178,7 +179,7 @@ class TextFieldInput @JvmOverloads constructor(
         else view.visibility = View.VISIBLE
     }
 
-    private fun intToState(vstate: Int)= when(vstate) {
+    private fun intToState(vstate: Int) = when (vstate) {
             1 -> State.SUCCESS
             2 -> State.ERROR
             else -> State.NONE
@@ -200,7 +201,7 @@ class TextFieldInput @JvmOverloads constructor(
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
         val vfooter = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
-        var vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
+        val vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
 
         typedArray.recycle()
 

@@ -20,7 +20,7 @@ import org.robolectric.Robolectric
 import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
-@Config(sdk=[28])
+@Config(sdk = [28])
 class TextFieldInputTest {
 
     val activityController = Robolectric.buildActivity(Activity::class.java)
@@ -45,7 +45,7 @@ class TextFieldInputTest {
     @Test
     fun basicConstructor_NoStyledAttributes() {
         assertThat(textFieldInput.label).isNull()
-        assertThat(textFieldInput.text).isNull()
+        assertThat(textFieldInput.text).isEmpty()
         assertThat(textFieldInput.footer).isNull()
         assertThat(textFieldInput.icon).isNull()
         assertThat(textFieldInput.state).isEqualTo(TextFieldInput.State.NONE)
@@ -160,8 +160,12 @@ class TextFieldInputTest {
         test_seError(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE, ERROR_ICON_CODE.toIcon())
     }
 
-    private fun test_seError(value: String?, expectedValue: String, expectedVisibility: Int,
-                             expectedIcon: String) {
+    private fun test_seError(
+        value: String?,
+        expectedValue: String,
+        expectedVisibility: Int,
+        expectedIcon: String
+    ) {
         val footerView = textFieldInput.findViewById(R.id.text_field_input_footer) as TextView
         val footerIconView = textFieldInput.findViewById(R.id.text_field_input_footer_icon) as FontIcon
         val footerBoxView = textFieldInput.findViewById(R.id.text_field_input_footer_box) as View
@@ -191,8 +195,12 @@ class TextFieldInputTest {
         test_setState(TextFieldInput.State.SUCCESS, TextFieldInput.LayoutState.SUCCESS, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
     }
 
-    private fun test_setState(state: TextFieldInput.State, expectedLayoutState: TextFieldInput.LayoutState,
-                              expectedIconVisibility: Int, expectedIconValue: String) {
+    private fun test_setState(
+        state: TextFieldInput.State,
+        expectedLayoutState: TextFieldInput.LayoutState,
+        expectedIconVisibility: Int,
+        expectedIconValue: String
+    ) {
         val labelView = textFieldInput.findViewById(R.id.text_field_input_label) as TextView
         val footerView = textFieldInput.findViewById(R.id.text_field_input_footer) as TextView
         val footerIconView = textFieldInput.findViewById(R.id.text_field_input_footer_icon) as FontIcon
@@ -354,5 +362,4 @@ class TextFieldInputTest {
     }
 
     private fun getColor(id: Int) = ContextCompat.getColor(textFieldInput.context, id)
-
 }
