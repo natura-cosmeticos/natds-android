@@ -114,6 +114,5 @@
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
-
     </LinearLayout>
 </ScrollView>
