@@ -12,24 +12,24 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 
-
 @SuppressLint("CustomViewStyleable")
-class TextFieldInput @JvmOverloads constructor(
+class TextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
+    // TODO trocar FontIcon por AppCompatImageView
     enum class State {
         NONE, ERROR, SUCCESS
     }
 
     enum class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int) {
-        DEFAULT(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
+        DEFAULT(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis),
+        FILLED(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         DISABLED(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis),
         FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatYellow, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
         ERROR(R.dimen.ds_border_emphasis, R.color.colorBrdNatRed, R.color.colorBrdNatRed, R.color.colorHighEmphasis, R.color.colorBrdNatRed),
@@ -55,6 +55,11 @@ class TextFieldInput @JvmOverloads constructor(
         inputIcon?.isEnabled = enabled
         resetLayoutState()
     }
+
+    val editTextView: EditText
+        get() {
+            return inputValue
+        }
 
     var inputType: Int = EditorInfo.TYPE_CLASS_TEXT
         set(value) {
@@ -94,6 +99,10 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             inputValue.setText(value)
+            resetLayoutState()
+        }
+        get() {
+            return inputValue.text.toString()
         }
 
     var icon: String? = null
@@ -149,10 +158,10 @@ class TextFieldInput @JvmOverloads constructor(
         set(value) {
             field = value
             footer = value
-            if (value != null) {
-                state = State.ERROR
+            state = if (value != null) {
+                State.ERROR
             } else {
-                state = State.NONE
+                State.NONE
             }
         }
 
@@ -163,6 +172,7 @@ class TextFieldInput @JvmOverloads constructor(
             else -> {
                 if (!isEnabled) LayoutState.DISABLED
                 else if (inputValue.isFocused) LayoutState.FOCUSED
+                else if (inputValue.text.isNotEmpty()) LayoutState.FILLED
                 else LayoutState.DEFAULT
             }
         }
@@ -178,7 +188,7 @@ class TextFieldInput @JvmOverloads constructor(
         else view.visibility = View.VISIBLE
     }
 
-    private fun intToState(vstate: Int)= when(vstate) {
+    private fun intToState(vstate: Int) = when (vstate) {
             1 -> State.SUCCESS
             2 -> State.ERROR
             else -> State.NONE
@@ -200,7 +210,7 @@ class TextFieldInput @JvmOverloads constructor(
         val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
         val vfooter = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
-        var vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
+        val vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
 
         typedArray.recycle()
 

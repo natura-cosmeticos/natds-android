@@ -14,7 +14,8 @@
         android:orientation="vertical"
         android:padding="15dp">
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
+        android:id="@+id/text_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Hint"
@@ -23,7 +24,27 @@
         app:text_field_footer="this field accept any text"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <TextView
+        android:paddingTop="5dp"
+        android:id="@+id/input_text_programmatically"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to insert text programmatically in text field"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
+
+    <TextView
+        android:paddingTop="5dp"
+        android:id="@+id/clear_text_programmatically"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="click here to clear text programmatically in text field"
+        android:textColor="@color/colorBrdNatRed"
+        android:clickable="true"
+        />
+
+    <com.natura.android.textfield.TextField
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"
@@ -32,7 +53,7 @@
         app:text_field_footer="this field accept only numbers"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
         android:id="@+id/password_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,14 +64,14 @@
         app:text_field_footer="click on icon to change input type"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="15dp"
         android:hint="this field has no label and no detail footer"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="3"
@@ -61,7 +82,7 @@
         app:text_field_footer="This field accepts only 10 characters, including line breaks"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
         android:id="@+id/clickable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,7 +93,7 @@
         app:text_field_footer="Click on icon to clean the text"
         />
 
-    <com.natura.android.textfield.TextFieldInput
+    <com.natura.android.textfield.TextField
         android:id="@+id/mutable_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

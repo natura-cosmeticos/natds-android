@@ -11,6 +11,7 @@ class FontIcon @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : AppCompatTextView(context, attrs, defStyleAttr) {
 
+    // TODO considerar usar esta classe como inner class de MenuView
     private val natDsFontPath = "fonts/natds_icons.ttf"
 
     init {

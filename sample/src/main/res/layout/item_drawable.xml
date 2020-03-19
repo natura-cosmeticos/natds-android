@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/ds_spacing_standard"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/item_icon"
+        android:layout_width="@dimen/ds_text_default_icon_big_size"
+        android:layout_height="@dimen/ds_text_default_icon_big_size"
+        android:layout_gravity="center"
+        tools:src="@drawable/ds_ic_outlined_navigation_arrowbottom" />
+    <TextView
+        android:id="@+id/item_icon_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ds_text_small"
+        tools:text="drawable name"/>
+</android.support.v7.widget.LinearLayoutCompat>
