@@ -21,15 +21,34 @@
         <item name="android:background">@color/colorBrdBlack_12</item>
     </style>
 
+    <style name="Widget.Natura.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/TextAppearence.Natura.Default</item>
+    </style>
+
+    <style name="Widget.Natura.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textAppearance">@style/TextAppearence.Natura.Default</item>
+    </style>
+
+    <style name="Widget.Natura.RadioButton.Secondary">
+        <item name="buttonTint">@color/ds_mtrl_secondary_color_selector</item>
+        <item name="android:textAppearance">@style/TextAppearence.Natura.Default</item>
+    </style>
+
+    <style name="Widget.Natura.CheckBox.Secondary">
+        <item name="buttonTint">@color/ds_mtrl_secondary_color_selector</item>
+        <item name="android:textAppearance">@style/TextAppearence.Natura.Default</item>
+    </style>
+
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/lightMediumEmphasis</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/colorLowEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
     <style name="TextAppearence.Natura.Highlight" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_big</item>
-        <item name="android:textColor">@color/lightHighEmphasis</item>
+        <item name="android:textColor">@color/colorHighEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 

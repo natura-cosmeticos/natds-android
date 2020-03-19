@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:background="@color/background"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="150dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TOKEN (A-Z)"
+            android:textColor="@color/highEmphasis"
             android:padding="16dp"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             />
 
         <android.support.v7.widget.AppCompatButton
@@ -24,6 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons (drawables)"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -32,6 +39,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons (fonts)"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -39,8 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="COMPONENT (A-Z)"
+            android:textColor="@color/highEmphasis"
             android:padding="16dp"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             />
 
         <android.support.v7.widget.AppCompatButton
@@ -48,6 +59,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Button"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_selection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selection Control"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -56,6 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Text Field"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -64,6 +92,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Value Text Highlight"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -71,14 +102,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="PATTERN (A-Z)"
+            android:textColor="@color/highEmphasis"
             android:padding="16dp"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             />
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu Item"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -87,6 +122,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submenu Item"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -95,6 +133,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Navigation Drawer"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -103,6 +144,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Loading"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
@@ -111,6 +155,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Error Default"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 

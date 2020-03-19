@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Natura">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         <activity android:name=".components.ErrorActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -24,6 +24,9 @@
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.SubmenuActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.SelectionControlActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.ExpandableNavigationViewActivity"

@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ValueTextHighlightActivity::class.java))
         }
 
+        findViewById<Button>(R.id.btn_selection).setOnClickListener {
+            startActivity(Intent(this, SelectionControlActivity::class.java))
+        }
+
         findViewById<Button>(R.id.btn_style_buttons).setOnClickListener {
             startActivity(Intent(this, StyleButtonActivity::class.java))
         }

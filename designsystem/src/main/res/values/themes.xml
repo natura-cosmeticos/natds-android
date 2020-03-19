@@ -2,11 +2,16 @@
 
 <resources>
     <style name="Theme.Natura" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorBrdNatYellow</item>
-        <item name="colorSecondary">@color/colorBrdNatOrange</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorAccent">?colorPrimary</item>
 
-        <item name="android:colorBackground">@color/colorBrdNatWhite</item>
-        <item name="colorError">@color/feedback_error</item>
+
+        <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
+        <item name="android:colorBackground">@color/surfaceSurface</item>
+        <item name="colorError">@color/feedbackAlert</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
@@ -14,9 +19,8 @@
 
         <!--Component styles-->
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
-
-        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
-        <item name="colorAccent">?colorPrimary</item>
+        <item name="checkboxStyle">@style/Widget.Natura.CheckBox</item>
+        <item name="radioButtonStyle">@style/Widget.Natura.RadioButton</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>
