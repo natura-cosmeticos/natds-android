@@ -39,6 +39,25 @@
         <item name="android:textAppearance">@style/TextAppearence.Natura.Default</item>
     </style>
 
+    <style name="Widget.Natura.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/surfaceSurface</item>
+        <item name="android:textSize">@dimen/ds_text_title_size</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@string/font_roboto_medium</item>
+    </style>
+
+    <style name="Widget.Natura.Toolbar.Primary">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Natura.Toolbar.Secondary">
+        <item name="android:background">?colorSecondary</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/colorMediumEmphasis</item>

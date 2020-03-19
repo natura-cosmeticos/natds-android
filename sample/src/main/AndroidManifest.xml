@@ -20,6 +20,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".components.AppBarActivity"
+            android:theme="@style/Theme.Natura.NoActionBar" />
+        <activity
             android:name=".components.TextFieldActivity"
             android:theme="@style/Theme.Natura" />
         <activity

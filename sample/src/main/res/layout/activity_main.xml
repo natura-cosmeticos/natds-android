@@ -55,6 +55,17 @@
             />
 
         <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Bar Top"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <android.support.v7.widget.AppCompatButton
             android:id="@+id/btn_style_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

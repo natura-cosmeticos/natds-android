@@ -8,19 +8,21 @@
         <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
         <item name="colorAccent">?colorPrimary</item>
 
-
-        <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
         <item name="android:colorBackground">@color/surfaceSurface</item>
         <item name="colorError">@color/feedbackAlert</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColorPrimary">@color/contentHighEmphasis</item>
+        <item name="android:textColorSecondary">@color/contentHighlight</item>
 
         <!--Component styles-->
+        <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
         <item name="checkboxStyle">@style/Widget.Natura.CheckBox</item>
         <item name="radioButtonStyle">@style/Widget.Natura.RadioButton</item>
+        <item name="toolbarStyle">@style/Widget.Natura.Toolbar</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>
@@ -44,6 +46,11 @@
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
     </style>
 
+    <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <!--Not supported officialy-->
     <style name="Theme.BodyShop" parent="Theme.Natura">
         <item name="colorPrimary">#004236</item>
@@ -52,5 +59,10 @@
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
+    </style>
+
+    <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>
