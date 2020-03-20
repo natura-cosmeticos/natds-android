@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="start"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_social_myprofile"
@@ -31,7 +31,7 @@
                 android:id="@+id/toolbar_lines"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_selectedalllines"
@@ -41,7 +41,7 @@
                 android:id="@+id/toolbar_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_search"
@@ -52,7 +52,7 @@
                 style="?materialBorderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:text="Button"
                 />
 
@@ -69,7 +69,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_social_myprofile"
@@ -78,7 +78,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_selectedalllines"
@@ -87,7 +87,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_search"
@@ -97,7 +97,7 @@
                 style="?materialBorderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:text="Button"
                 />
         </android.support.v7.widget.Toolbar>
@@ -114,7 +114,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_social_myprofile"
@@ -123,7 +123,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_selectedalllines"
@@ -132,7 +132,7 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:background="@drawable/ds_custom_circle"
                 android:layout_margin="10dp"
                 android:src="@drawable/ds_ic_outlined_action_search"
@@ -142,7 +142,7 @@
                 style="?materialBorderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:text="Button"
                 />
         </android.support.v7.widget.Toolbar>
