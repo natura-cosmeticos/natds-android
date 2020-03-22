@@ -23,6 +23,7 @@
         <item name="checkboxStyle">@style/Widget.Natura.CheckBox</item>
         <item name="radioButtonStyle">@style/Widget.Natura.RadioButton</item>
         <item name="toolbarStyle">@style/Widget.Natura.Toolbar</item>
+        <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>

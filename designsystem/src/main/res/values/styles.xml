@@ -58,6 +58,17 @@
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
 
+    <style name="Widget.Natura.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+        <item name="queryBackground">@null</item>
+        <item name="submitBackground">@null</item>
+        <item name="closeIcon">@drawable/ds_ic_outlined_navigation_close</item>
+        <item name="searchIcon">@null</item>
+        <item name="goIcon">@null</item>
+        <item name="voiceIcon">@drawable/ds_ic_outlined_action_mic</item>
+    </style>
+
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/colorMediumEmphasis</item>
