@@ -1,32 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F4AB34</color>
-    <color name="colorPrimaryDark">#EF8426</color>
-    <color name="colorPrimaryLight">#FEFDE8</color>
-    <color name="colorSecondary">#FF6B06</color>
-    <color name="colorSecondaryDark">#EF8426</color>
-    <color name="colorSecondaryLight">#FEFDE8</color>
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
     <color name="colorLowEmphasis">#BBBBBB</color>
     <color name="colorMediumEmphasis">#777777</color>
     <color name="colorHighEmphasis">#333333</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
-
-    <!--Surface-->
-    <color name="surfaceBackground">#FAFAFA</color>
-    <color name="surfaceSurface">#FFFFFF</color>
-
-    <!--Content-->
-    <color name="contentLowEmphasis">#BBBBBB</color>
-    <color name="contentHighlight">#000000</color>
-    <color name="contentHighEmphasis">#333333</color>
-    <color name="contentMediumEmphasis">#777777</color>
-    <color name="contentLink">#227BBD</color>
-
-    <!--Feedback-->
-    <color name="feedbackSuccess">#569A32</color>
-    <color name="feedbackWarning">#FCC433</color>
-    <color name="feedbackAlert">#E74627</color>
 
     <color name="colorBrdNatRed">#e74627</color>
     <color name="colorBrdNatGreen">#569A32</color>

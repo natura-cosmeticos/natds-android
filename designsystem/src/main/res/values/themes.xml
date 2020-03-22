@@ -2,20 +2,21 @@
 
 <resources>
     <style name="Theme.Natura" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <!--Remap legacy AppCompat attributes to MaterialComponent attributes-->
+        <item name="colorPrimary">#F4AB34</item>
+        <item name="colorPrimaryDark">#EF8426</item>
+        <item name="colorSecondary">#FF6B06</item>
+        <item name="colorError">#E74627</item>
+        <item name="android:colorBackground">#FFFFFF</item>
         <item name="colorAccent">?colorPrimary</item>
-
-        <item name="android:colorBackground">@color/surfaceSurface</item>
-        <item name="colorError">@color/feedbackAlert</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
-        <item name="android:textColorPrimary">@color/contentHighEmphasis</item>
-        <item name="android:textColorSecondary">@color/contentHighlight</item>
+        <item name="android:textColorPrimary">#333333</item>
+        <item name="android:textColorPrimaryDisableOnly">#BBBBBB</item>
+        <item name="android:textColorSecondary">#777777</item>
+        <item name="android:textColorLink">#227BBD</item>
+        <item name="android:textColorHighlight">#000000</item>
 
         <!--Component styles-->
         <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
