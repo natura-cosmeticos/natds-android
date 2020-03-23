@@ -12,6 +12,7 @@
     <dimen name="ds_spacing_border_left">16dp</dimen>
     <dimen name="ds_spacing_border_right">16dp</dimen>
     <dimen name="ds_spacing_border_bottom">17dp</dimen>
+    <dimen name="ds_toolbar_height">56dp</dimen>
 
     <!-- Text Size Default -->
     <dimen name="ds_text_footer_size">12sp</dimen>

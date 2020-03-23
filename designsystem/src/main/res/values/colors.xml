@@ -6,6 +6,13 @@
     <color name="colorHighEmphasis">#333333</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
 
+    <!--Light Text Content-->
+    <color name="lightHighlight">#000000</color>
+    <color name="lightHighEmphasis">#333333</color>
+    <color name="lightMediumEmphasis">#777777</color>
+    <color name="lightLowEmphasis">#BBBBBB</color>
+    <color name="lightLink">#227BBD</color>
+
     <color name="colorBrdNatRed">#e74627</color>
     <color name="colorBrdNatGreen">#569A32</color>
     <color name="colorBrdNatOrange">#FF6B06</color>
