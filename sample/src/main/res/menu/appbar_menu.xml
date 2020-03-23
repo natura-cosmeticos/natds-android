@@ -7,21 +7,18 @@
         android:id="@+id/linesMenuBtn"
         android:title="Lines"
         android:icon="@drawable/ds_ic_outlined_action_selectedalllines"
-        android:background="@drawable/ds_custom_circle"
         app:showAsAction="always|collapseActionView" />
 
     <item
         android:id="@+id/profileMenuBtn"
         android:title="Profile"
         android:icon="@drawable/ds_ic_outlined_social_myprofile"
-        android:background="@drawable/ds_custom_circle"
         app:showAsAction="always|collapseActionView" />
 
     <item
         android:id="@+id/searchMenuBtn"
         android:title="Search"
         android:icon="@drawable/ds_ic_outlined_action_search"
-        android:background="@drawable/ds_custom_circle"
         app:showAsAction="always|collapseActionView"
         app:actionViewClass="android.support.v7.widget.SearchView" />
 </menu>
