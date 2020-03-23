@@ -51,8 +51,11 @@ class TextField @JvmOverloads constructor(
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
+        inputLabel?.isEnabled = enabled
         inputValue?.isEnabled = enabled
         inputIcon?.isEnabled = enabled
+        footerIcon?.isEnabled = enabled
+        footerValue?.isEnabled = enabled
         resetLayoutState()
     }
 

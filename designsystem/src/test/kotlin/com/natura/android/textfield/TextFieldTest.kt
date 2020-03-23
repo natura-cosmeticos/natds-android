@@ -330,10 +330,9 @@ class TextFieldTest {
 
     @Test
     fun setIsEnabledFalse_ChangeToDisabledColor() {
-        val textView = textField.findViewById(R.id.text_field_input_value) as EditText
-
         textField.isEnabled = false
-        assertThat(textView.isEnabled).isFalse()
+
+        assertChildsEnabled(false)
         assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DISABLED)
 
         textField.isEnabled = true
@@ -341,12 +340,22 @@ class TextFieldTest {
 
     @Test
     fun setIsEnabledTrue_ChangeToDefaultColor() {
-        val textView = textField.findViewById(R.id.text_field_input_value) as EditText
-
-        textField.isEnabled = false
         textField.isEnabled = true
-        assertThat(textView.isEnabled).isTrue()
+        assertChildsEnabled(true)
         assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DEFAULT)
+    }
+
+    private fun assertChildsEnabled(enabled: Boolean) {
+        val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
+        val textView = textField.findViewById(R.id.text_field_input_value) as EditText
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
+        val footerView = textField.findViewById(R.id.text_field_input_footer) as TextView
+        val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+        assertThat(labelView.isEnabled).isEqualTo(enabled)
+        assertThat(textView.isEnabled).isEqualTo(enabled)
+        assertThat(iconView.isEnabled).isEqualTo(enabled)
+        assertThat(footerView.isEnabled).isEqualTo(enabled)
+        assertThat(footerIconView.isEnabled).isEqualTo(enabled)
     }
 
     @Test
