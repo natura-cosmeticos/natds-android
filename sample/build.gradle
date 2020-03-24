@@ -43,3 +43,7 @@ dependencies {
     androidTestImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
 }
+
+screenshots {
+    multipleDevices true
+}

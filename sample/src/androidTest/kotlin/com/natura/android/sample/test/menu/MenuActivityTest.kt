@@ -8,12 +8,15 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.facebook.testing.screenshot.Screenshot
 import com.facebook.testing.screenshot.ViewHelpers
 import com.natura.android.sample.R
+import com.natura.android.sample.test.ScreenShotActivityTestBase
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class MenuActivityTest {
+@Ignore
+class MenuActivityTest: ScreenShotActivityTestBase() {
     private lateinit var inflater: LayoutInflater
 
     @Before

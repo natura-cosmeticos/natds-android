@@ -12,11 +12,43 @@ Copy and paste the file **github_credentials.properties.sample** and rename it t
 ### Library
 In construction
 
-### Testing
+### Testing with Screenshots
 We are using [Screenshot Tests for Android](https://github.com/facebook/screenshot-tests-for-android) to validate our built components state, color and behavior.
 
 **Tip from library page to build tests for the first time**
 It is necessary to have python-2.7 installed for the gradle plugin to work, and we also recommending installing the python-pillow library which is required for recording and verifying screenshots.
+
+#### Prerequisites
+1 - Install python-pillow
+```
+$ pip install mock
+$ pip install Pillow
+```
+
+2 - Configure emulator with follow mandatory details:
+```
+CPU/ABI: Google Play Intel Atom (x86)
+Target: google_apis_playstore [Google Play] (API level 29)
+Skin: pixel_2
+hw.lcd.width: 1080
+hw.lcd.height: 1920
+hw.initialOrientation: Portrait
+image.androidVersion.api: 29
+tag.id: google_apis_playstore
+hw.lcd.density: 420
+```
+
+#### Recording and Verifying screenshots
+```
+$ ./gradlew recordDebugAndroidTestScreenshotTest
+$ ./gradlew verifyDebugAndroidTestScreenshotTest
+```
+All new screenshots will be recorded on folder `screenshots\<device_folder>`
+
+#### Execution integration tests
+```
+$ ./gradlew clean connectedAndroidTest
+```
 
 ### Sample
 In construction
