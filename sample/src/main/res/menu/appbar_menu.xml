@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/linesMenuBtn"
+        android:title="Lines"
+        android:icon="@drawable/ds_ic_outlined_action_selectedalllines"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/profileMenuBtn"
+        android:title="Profile"
+        android:icon="@drawable/ds_ic_outlined_social_myprofile"
+        app:showAsAction="always|collapseActionView" />
+
+    <item
+        android:id="@+id/searchMenuBtn"
+        android:title="Search"
+        android:icon="@drawable/ds_ic_outlined_action_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+</menu>

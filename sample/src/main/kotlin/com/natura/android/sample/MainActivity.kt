@@ -24,12 +24,20 @@ class MainActivity : AppCompatActivity() {
         }
 
         // components
+        findViewById<Button>(R.id.btn_appbar).setOnClickListener {
+            startActivity(Intent(this, AppBarActivity::class.java))
+        }
+
         findViewById<Button>(R.id.btn_textfield).setOnClickListener {
             startActivity(Intent(this, TextFieldActivity::class.java))
         }
 
         findViewById<Button>(R.id.btn_input_text_highlight).setOnClickListener {
             startActivity(Intent(this, ValueTextHighlightActivity::class.java))
+        }
+
+        findViewById<Button>(R.id.btn_selection).setOnClickListener {
+            startActivity(Intent(this, SelectionControlActivity::class.java))
         }
 
         findViewById<Button>(R.id.btn_style_buttons).setOnClickListener {

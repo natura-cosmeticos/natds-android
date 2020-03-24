@@ -18,6 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".components.AppBarActivity"
+            android:theme="@style/Theme.Natura.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
         <activity android:name=".components.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
@@ -25,6 +36,9 @@
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.SubmenuActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.SelectionControlActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.ExpandableNavigationViewActivity"
