@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.MenuItem
 import com.natura.android.sample.R
 
 class DrawableActivity : AppCompatActivity() {
@@ -15,6 +16,13 @@ class DrawableActivity : AppCompatActivity() {
         iconGrid.layoutManager = GridLayoutManager(this, 2)
 
         iconGrid.adapter = DrawableAdapter(this, recoverListIds(), recoverListNames())
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle("Icons (drawables)")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun recoverListIds() = listOf(
