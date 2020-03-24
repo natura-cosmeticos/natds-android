@@ -3,7 +3,7 @@
     <!--Navigation Drawer-->
     <style name="Widget.Natura.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
-        <item name="itemTextColor">@color/colorBrdNatGray</item>
+        <item name="itemTextColor">?android:textColorPrimary</item>
     </style>
 
     <!-- Roboto Medium-->
@@ -18,7 +18,7 @@
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
-        <item name="android:background">@color/colorBrdBlack_12</item>
+        <item name="android:background">?colorControlHighlight</item>
     </style>
 
     <style name="Widget.Natura.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
@@ -34,11 +34,11 @@
     </style>
 
     <style name="Widget.Natura.RadioButton.Secondary">
-        <item name="buttonTint">@color/ds_selection_color_secondary_selector</item>
+        <item name="buttonTint">@color/ds_text_color_secondary_selector</item>
     </style>
 
     <style name="Widget.Natura.CheckBox.Secondary">
-        <item name="buttonTint">@color/ds_selection_color_secondary_selector</item>
+        <item name="buttonTint">@color/ds_text_color_secondary_selector</item>
     </style>
 
     <style name="Widget.Natura.Toolbar" parent="Widget.AppCompat.Toolbar">

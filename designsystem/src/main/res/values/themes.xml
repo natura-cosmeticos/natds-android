@@ -8,6 +8,7 @@
         <item name="colorError">#E74627</item>
         <item name="android:colorBackground">#FFFFFF</item>
         <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
