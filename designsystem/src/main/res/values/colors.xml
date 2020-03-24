@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorBrdNatRed">#e74627</color>
-    <color name="colorBrdNatGreen">#569A32</color>
-    <color name="colorBrdNatOrange">#FF6B06</color>
-    <color name="colorBrdNatOrangeDark">#EF8426</color>
-    <color name="colorBrdNatYellow">#F4AB34</color>
-    <color name="colorBrdNatYellowDark">#EF8426</color>
-    <color name="colorBrdNatWhite">#FFFFFF</color>
-    <color name="colorBrdNatGray">#333333</color>
-    <color name="colorBrdBlack_12">#1F000000</color>
-    <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
-    <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
     <color name="colorLowEmphasis">#BBBBBB</color>
     <color name="colorMediumEmphasis">#777777</color>
     <color name="colorHighEmphasis">#333333</color>
     <color name="colorHighEmphasis_48">#3333330A</color>
-    <color name="mtrlBtnTextColorDisabled">#61000000</color>
 
     <!--Light Text Content-->
     <color name="lightHighlight">#000000</color>
@@ -25,8 +13,14 @@
     <color name="lightLowEmphasis">#BBBBBB</color>
     <color name="lightLink">#227BBD</color>
 
-    <!--Feedback-->
-    <color name="feedback_success">#569A32</color>
-    <color name="feedback_warning">#FCC433</color>
-    <color name="feedback_error">#E74627</color>
+    <color name="colorBrdNatRed">#e74627</color>
+    <color name="colorBrdNatGreen">#569A32</color>
+    <color name="colorBrdNatOrange">#FF6B06</color>
+    <color name="colorBrdNatYellow">#F4AB34</color>
+    <color name="colorBrdNatGray">#333333</color>
+    <color name="colorBrdBlack_12">#1F000000</color>
+    <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
+    <color name="colorBrdNatGray_48">#7A333333</color>
+    <color name="mtrlBtnTextColorDisabled">#61000000</color>
+
 </resources>
