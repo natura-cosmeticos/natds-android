@@ -45,7 +45,7 @@ $ ./gradlew verifyDebugAndroidTestScreenshotTest
 ```
 All new screenshots will be recorded on folder `screenshots\<device_folder>`
 
-#### Execution integration tests
+#### Executing integration tests
 ```
 $ ./gradlew clean connectedAndroidTest
 ```
