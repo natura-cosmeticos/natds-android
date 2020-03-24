@@ -11,7 +11,6 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.natura.android.sample.R
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 
 class AppBarActivity : AppCompatActivity() {

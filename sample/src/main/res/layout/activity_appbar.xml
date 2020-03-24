@@ -23,7 +23,7 @@
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page"/>
+            app:title="Title Page Primary"/>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbarSecondary"
@@ -31,7 +31,7 @@
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page"/>
+            app:title="Title Page Secondary"/>
 
     </android.support.design.widget.AppBarLayout>
 
