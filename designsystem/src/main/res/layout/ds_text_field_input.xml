@@ -13,11 +13,8 @@
         android:id="@+id/text_field_input_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/RobotoMedium"
-        android:textColor="@color/colorMediumEmphasis"
+        style="@style/TextAppearence.Natura.Label"
         tools:text="text_field_input_label"
-        android:textSize="@dimen/ds_text_small"
-        android:paddingBottom="@dimen/ds_spacing_micro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +29,7 @@
         android:paddingLeft="@dimen/ds_spacing_border_left"
         android:paddingBottom="@dimen/ds_spacing_border_bottom"
         android:paddingRight="@dimen/ds_spacing_border_right"
-        android:background="@drawable/ds_custom_border"
+        android:background="@drawable/ds_shape_rounded_corners"
         android:clickable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_label">
@@ -42,15 +39,11 @@
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/RobotoRegular"
-            android:textColor="@drawable/ds_text_field_selector"
-            android:background="@android:color/transparent"
+            style="@style/TextAppearence.Natura.EditText"
             android:layout_gravity="center"
             android:gravity="top|left"
             android:scrollbars="vertical"
-            tools:text="text_field_input_value"
-            android:textSize="@dimen/ds_text_default_size"
-            />
+            tools:text="text_field_input_value" />
 
         <com.natura.android.icon.FontIcon
             android:id="@+id/text_field_input_icon"
@@ -59,7 +52,7 @@
             android:layout_gravity="center"
             android:layout_marginEnd="@dimen/ds_spacing_micro"
             android:layout_marginRight="@dimen/ds_spacing_micro"
-            android:textColor="@drawable/ds_text_field_selector"
+            android:textColor="@color/ds_text_color_primary_selector"
             android:textSize="@dimen/ds_text_default_icon_size"
             android:clickable="true"
             android:layout_alignParentRight="true"
@@ -82,18 +75,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingRight="@dimen/ds_spacing_micro"
+            android:textColor="@color/ds_text_color_secondary_selector"
             android:textSize="@dimen/ds_text_default_icon_small_size"
             tools:text="EA13" />
 
         <TextView
             android:id="@+id/text_field_input_footer"
+            style="@style/TextAppearence.Natura.Footer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            style="@style/RobotoRegular"
-            android:textColor="@color/colorMediumEmphasis"
-            tools:text="text_field_input_footer"
-            android:textSize="@dimen/ds_text_footer_size" />
+            tools:text="text_field_input_footer" />
 
     </LinearLayout>
 
