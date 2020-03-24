@@ -27,7 +27,6 @@ android {
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
-        androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 
     lintOptions {
@@ -52,9 +51,6 @@ dependencies {
     testImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
-
-    androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
 }
 
 androidExtensions {
