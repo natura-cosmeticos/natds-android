@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="@dimen/ds_spacing_standard"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?textAppearanceHeadline6"
+                android:text="Radio"
+                android:padding="16dp"
+                android:textAlignment="center"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/radioPrimary"
+                        android:text="Radio Primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RadioButton
+                        android:id="@+id/radioSecondary"
+                        style="@style/Widget.Natura.RadioButton.Secondary"
+                        android:text="Radio Secondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RadioButton
+                        android:text="Radio Primary Disabled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:layout_marginBottom="10dp"/>
+            </RadioGroup>
+
+            <View style="@style/Widget.Natura.Divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?textAppearanceHeadline6"
+                android:text="Checkbox"
+                android:padding="16dp"
+                android:textAlignment="center"
+                />
+
+            <CheckBox
+                android:id="@+id/checkboxPrimary"
+                android:text="CheckBox Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <CheckBox
+                android:id="@+id/checkboxSecondary"
+                android:text="CheckBox Secondary"
+                style="@style/Widget.Natura.CheckBox.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <CheckBox
+                android:text="CheckBox Primary Disabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:layout_marginBottom="10dp"/>
+
+            <View style="@style/Widget.Natura.Divider" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/frame_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -36,11 +36,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
 
-    testImplementation "junit:junit:$rootProject.junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
     androidTestImplementation "androidx.test:rules:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:runner:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+}
+
+screenshots {
+    multipleDevices true
 }
