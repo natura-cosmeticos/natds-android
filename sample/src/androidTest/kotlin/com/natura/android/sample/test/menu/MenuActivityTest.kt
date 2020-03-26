@@ -9,10 +9,12 @@ import com.facebook.testing.screenshot.Screenshot
 import com.facebook.testing.screenshot.ViewHelpers
 import com.natura.android.sample.R
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
+@Ignore
 class MenuActivityTest {
     private lateinit var inflater: LayoutInflater
 

@@ -51,8 +51,11 @@ class TextField @JvmOverloads constructor(
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
+        inputLabel?.isEnabled = enabled
         inputValue?.isEnabled = enabled
         inputIcon?.isEnabled = enabled
+        footerIcon?.isEnabled = enabled
+        footerValue?.isEnabled = enabled
         resetLayoutState()
     }
 
@@ -227,15 +230,15 @@ class TextField @JvmOverloads constructor(
         icon = vicon
         state = intToState(vstate)
 
-        inputValue.setOnFocusChangeListener { v, hasFocus -> onFocusChanged(v, hasFocus) }
-        inputIcon.setOnClickListener { v -> onFocusChanged(v, true) }
+        inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
+        inputIcon.setOnClickListener { _ -> onFocusChanged(true) }
 
         inputBox.setOnClickListener {
             inputValue.requestFocus()
         }
     }
 
-    private fun onFocusChanged(view: View, hasFocus: Boolean) {
+    private fun onFocusChanged(hasFocus: Boolean) {
         if (hasFocus) {
             layoutState = LayoutState.FOCUSED
         } else {

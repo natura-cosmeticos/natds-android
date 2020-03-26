@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.MenuItem
 import com.natura.android.sample.R
 
 class IconActivity : AppCompatActivity() {
@@ -15,6 +16,13 @@ class IconActivity : AppCompatActivity() {
         iconGrid.layoutManager = GridLayoutManager(this, 3)
 
         iconGrid.adapter = IconAdapter(this, recoverListIcons())
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle("Icons (fonts)")
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        onBackPressed()
+        return true
     }
 
     private fun recoverListIcons() = listOf(

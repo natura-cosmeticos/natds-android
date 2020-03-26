@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarDefault"
+            style="@style/Widget.Natura.Toolbar"
+            android:layout_height="56dp"
+            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
+            app:title="Title Page" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarPrimary"
+            style="@style/Widget.Natura.Toolbar.Primary"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
+            app:title="Title Page Primary"/>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarSecondary"
+            style="@style/Widget.Natura.Toolbar.Secondary"
+            android:layout_height="56dp"
+            android:visibility="gone"
+            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
+            app:title="Title Page Secondary"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="150dp">
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/style_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Default" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/style_primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Primary" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/style_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Secondary" />
+    </LinearLayout>
+
+</RelativeLayout>

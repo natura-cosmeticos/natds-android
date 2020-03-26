@@ -6,13 +6,13 @@ import android.view.MenuItem
 import com.natura.android.sample.R
 import com.natura.android.sample.setContentViewWithBrand
 
-class StyleButtonActivity : AppCompatActivity() {
+class SelectionControlActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentViewWithBrand(R.layout.activity_styled_button)
+        setContentViewWithBrand(R.layout.activity_selection_control)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Button")
+        supportActionBar?.setTitle("Selection Control")
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
