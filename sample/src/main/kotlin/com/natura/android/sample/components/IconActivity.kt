@@ -176,6 +176,7 @@ class IconActivity : AppCompatActivity() {
         R.string.icon_outlined_content_healthy,
         R.string.icon_outlined_content_gallery,
         R.string.icon_outlined_content_exchangereports,
-        R.string.icon_outlined_content_bellringing
+        R.string.icon_outlined_content_bellringing,
+        R.string.icon_outlined_content_wellness
     )
 }
