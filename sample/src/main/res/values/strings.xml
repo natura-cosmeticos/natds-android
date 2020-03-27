@@ -143,6 +143,7 @@
     <string name="icon_outlined_social_birthday">EA8B</string>
     <string name="icon_outlined_social_collaborate">EA8C</string>
     <string name="icon_outlined_social_contact">EA8D</string>
+    <string name="icon_outlined_social_digitalconsultant">EA8E</string>
     <string name="icon_outlined_social_groupofpeople">EA8F</string>
     <string name="icon_outlined_social_myprofile">EA90</string>
     <string name="icon_outlined_social_network">EA91</string>
@@ -152,7 +153,7 @@
     <string name="icon_outlined_content_gallery">EA95</string>
     <string name="icon_outlined_content_healthy">EA96</string>
     <string name="icon_outlined_content_planb">EA97</string>
-    <string name="icon_outlined_social_digitalconsultant">EA8E</string>
+    <string name="icon_outlined_content_wellness">EA98</string>
 
 
 </resources>
