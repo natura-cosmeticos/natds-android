@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+
+    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
     <style name="Theme.Natura" parent="Theme.MaterialComponents.Light">
         <item name="colorPrimary">#F4AB34</item>
         <item name="colorPrimaryDark">#EF8426</item>
         <item name="colorSecondary">#FF6B06</item>
         <item name="colorError">#E74627</item>
-        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="android:colorBackground">@android:color/white</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">#BBBBBB</item>
@@ -32,11 +38,6 @@
         <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.DarkText</item>
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton.DarkText</item>
-    </style>
-
-    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 
     <!--Not supported officialy-->
