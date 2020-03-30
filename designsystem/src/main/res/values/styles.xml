@@ -4,6 +4,7 @@
     <style name="Widget.Natura.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
         <item name="itemTextColor">?android:textColorPrimary</item>
+        <item name="itemIconTint">?android:textColorPrimary</item>
     </style>
 
     <!-- Roboto Medium-->
