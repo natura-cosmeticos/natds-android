@@ -37,7 +37,11 @@ class DrawableActivity : AppCompatActivity() {
         R.drawable.ds_ic_outlined_navigation_arrowright,
         R.drawable.ds_ic_outlined_navigation_arrowtop,
         R.drawable.ds_ic_outlined_navigation_close,
-        R.drawable.ds_ic_outlined_navigation_directionright
+        R.drawable.ds_ic_outlined_navigation_directionright,
+        R.drawable.ds_ic_filled_brand_naturarosacea,
+        R.drawable.ds_ic_outlined_finance_money,
+        R.drawable.ds_ic_outlined_action_visibility,
+        R.drawable.ds_ic_outlined_action_visibilityoff
     )
 
     private fun recoverListNames() = listOf(
@@ -52,6 +56,10 @@ class DrawableActivity : AppCompatActivity() {
         "ds_ic_outlined_navigation_arrowright",
         "ds_ic_outlined_navigation_arrowtop",
         "ds_ic_outlined_navigation_close",
-        "ds_ic_outlined_navigation_directionright"
+        "ds_ic_outlined_navigation_directionright",
+        "ds_ic_filled_brand_naturarosacea",
+        "ds_ic_outlined_finance_money",
+        "ds_ic_outlined_action_visibility",
+        "ds_ic_outlined_action_visibilityoff"
     )
 }
