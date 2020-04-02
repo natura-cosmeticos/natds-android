@@ -69,5 +69,14 @@ before_script:
   - adb shell input keyevent 82 &
   #   Android test (screenshot) end
 
-script:
-  - ./tools/pipeline_build.sh
+jobs:
+  include:
+    - stage: "Lint"
+      script: ./gradlew ktlintFormat ktlint
+    - stage: "Testes"
+      name: "Unit Tests"
+      script: ./ gradlew clean designsystem:test
+    - script: ./gradlew clean connectedAndroidTest
+      name: "Integration Tests"
+    - stage: Build and Publish
+      script: ./tools/pipeline_build.sh
