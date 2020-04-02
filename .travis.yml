@@ -75,7 +75,7 @@ jobs:
       script: ./gradlew ktlintFormat ktlint
     - stage: "Testes"
       name: "Unit Tests"
-      script: ./ gradlew clean designsystem:test
+      script: ./gradlew clean designsystem:test
     - script: ./gradlew clean connectedAndroidTest
       name: "Integration Tests"
     - stage: Build and Publish
