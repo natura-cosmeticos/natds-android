@@ -12,7 +12,7 @@ class StyleButtonActivity : AppCompatActivity() {
 
         setContentViewWithBrand(R.layout.activity_styled_button)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Button")
+        supportActionBar?.title = "Button"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
