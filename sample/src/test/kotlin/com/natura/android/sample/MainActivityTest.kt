@@ -31,7 +31,7 @@ class MainActivityTest {
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(IconActivity::class.java, shadowIntent.intentClass)
+        assertEquals(MainActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
@@ -53,7 +53,7 @@ class MainActivityTest {
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(AppBarActivity::class.java, shadowIntent.intentClass)
+        assertEquals(MainActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
@@ -64,7 +64,7 @@ class MainActivityTest {
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(TextFieldActivity::class.java, shadowIntent.intentClass)
+        assertEquals(MainActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
