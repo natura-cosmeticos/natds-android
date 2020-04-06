@@ -14,6 +14,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.natura.android.sample.test.ScreenShotTestRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
     }
 
     buildTypes {
@@ -29,14 +35,14 @@ android {
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
 
-    android {
-        testOptions {
-            unitTests {
-                includeAndroidResources = true
-                unitTests.returnDefaultValues = true
-            }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            unitTests.returnDefaultValues = true
         }
     }
+
 }
 
 dependencies {
