@@ -38,4 +38,8 @@
 
     <!-- Progress dimens -->
     <dimen name="ds_loading_size">24dp</dimen>
+
+    <!-- Card -->
+    <dimen name="ds_default_card_elevation">2dp</dimen>
+    <dimen name="ds_default_card_corner_radius">4dp</dimen>
 </resources>
