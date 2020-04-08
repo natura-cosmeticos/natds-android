@@ -12,7 +12,7 @@ class SelectionControlActivity : AppCompatActivity() {
 
         setContentViewWithBrand(R.layout.activity_selection_control)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Selection Control")
+        supportActionBar?.title = "Selection Control"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

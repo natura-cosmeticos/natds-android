@@ -6,6 +6,7 @@ apply plugin: 'com.facebook.testing.screenshot'
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
+
     defaultConfig {
         applicationId "com.natura.android.sample"
         minSdkVersion rootProject.minSdkVersion
@@ -13,7 +14,14 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "com.natura.android.sample.test.ScreenShotTestRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,6 +34,15 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
         androidTest.java.srcDirs += 'src/androidTest/kotlin'
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            unitTests.returnDefaultValues = true
+        }
+    }
+
+    aaptOptions { cruncherEnabled = false }
 }
 
 dependencies {
@@ -42,6 +59,10 @@ dependencies {
     androidTestImplementation "androidx.test:runner:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+    testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
 }
 
 screenshots {

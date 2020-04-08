@@ -21,11 +21,10 @@
             android:textColor="@color/highEmphasis"
             android:padding="16dp"
             android:textAlignment="textStart"
-            android:layout_gravity="start"
-            />
+            android:layout_gravity="start" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_icons_drawables"
+            android:id="@+id/btnIconsDrawables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons (drawables)"
@@ -37,7 +36,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_icons_font"
+            android:id="@+id/btnIconsFont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons (fonts)"
@@ -59,7 +58,7 @@
             />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_appbar"
+            android:id="@+id/btnAppbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="App Bar (Top and Search)"
@@ -71,7 +70,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_style_buttons"
+            android:id="@+id/btnStyleButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Button"
@@ -83,7 +82,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_selection"
+            android:id="@+id/btnSelection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Selection Control"
@@ -95,7 +94,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_textfield"
+            android:id="@+id/btnTextfield"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Text Field"
@@ -107,7 +106,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_input_text_highlight"
+            android:id="@+id/btnValueTextHighlight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Value Text Highlight"
@@ -125,10 +124,10 @@
             android:textColor="@color/highEmphasis"
             android:padding="16dp"
             android:textAlignment="textStart"
-            android:layout_gravity="start"
-            />
+            android:layout_gravity="start" />
+
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_menu"
+            android:id="@+id/btnMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu Item"
@@ -140,7 +139,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_submenu"
+            android:id="@+id/btnSubmenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submenu Item"
@@ -152,7 +151,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_navigation_drawer"
+            android:id="@+id/btnNavigationDrawer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Navigation Drawer"
@@ -164,7 +163,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_loading"
+            android:id="@+id/btnLoader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Loading"
@@ -176,7 +175,7 @@
             android:textColor="@color/highEmphasis" />
 
         <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_error_default"
+            android:id="@+id/btnErrorDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Error Default"
@@ -186,6 +185,5 @@
             android:padding="16dp"
             android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
-
     </LinearLayout>
 </ScrollView>

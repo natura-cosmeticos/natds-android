@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">DesignSystem</string>
-
+    <string name="app_title">Natura Design System</string>
     <string name="icon_default_menu">EA6D</string>
-
 </resources>

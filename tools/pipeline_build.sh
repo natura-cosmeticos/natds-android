@@ -5,4 +5,3 @@ if [ $TRAVIS_BRANCH = "master" -a $TRAVIS_PULL_REQUEST = "false" ]; then
 else
     ./gradlew clean build -PdisablePreDex --stacktrace
 fi
-
