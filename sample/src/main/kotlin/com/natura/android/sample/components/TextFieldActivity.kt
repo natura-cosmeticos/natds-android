@@ -14,7 +14,6 @@ class TextFieldActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_textfield)
 
-
         val textItem = findViewById<TextField>(R.id.text_item)
         val inputProgrammatically = findViewById<View>(R.id.input_text_programmatically)
         inputProgrammatically.setOnClickListener {
@@ -77,7 +76,6 @@ class TextFieldActivity : AppCompatActivity() {
             }
             passwordMode = !passwordMode
         })
-
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle("Text Field")

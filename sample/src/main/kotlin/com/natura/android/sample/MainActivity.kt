@@ -3,9 +3,18 @@ package com.natura.android.sample
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.View
-import android.widget.Button
-import com.natura.android.sample.components.*
+import com.natura.android.sample.components.AppBarActivity
+import com.natura.android.sample.components.DrawableActivity
+import com.natura.android.sample.components.ErrorActivity
+import com.natura.android.sample.components.ExpandableNavigationViewActivity
+import com.natura.android.sample.components.IconActivity
+import com.natura.android.sample.components.LoadingActivity
+import com.natura.android.sample.components.MenuActivity
+import com.natura.android.sample.components.SelectionControlActivity
+import com.natura.android.sample.components.StyleButtonActivity
+import com.natura.android.sample.components.SubmenuActivity
+import com.natura.android.sample.components.TextFieldActivity
+import com.natura.android.sample.components.ValueTextHighlightActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -68,4 +77,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-

@@ -9,7 +9,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class AppBarActivityTest: ScreenShotActivityTestBase() {
+class AppBarActivityTest : ScreenShotActivityTestBase() {
     @get:Rule
     var activityTestRule = ActivityTestRule(AppBarActivity::class.java, false, false)
 
@@ -17,15 +17,15 @@ class AppBarActivityTest: ScreenShotActivityTestBase() {
     fun test_Snapshot_With_SearchExpanded() {
         val activity = activityTestRule.launchActivity(null)
 
-        checkScreenshot(activity,"default")
+        checkScreenshot(activity, "default")
 
         performClick(R.id.searchMenuBtn)
-        checkScreenshot(activity,"search_expanded")
+        checkScreenshot(activity, "search_expanded")
 
         performClick(R.id.style_primary)
-        checkScreenshot(activity,"primary")
+        checkScreenshot(activity, "primary")
 
         performClick(R.id.style_secondary)
-        checkScreenshot(activity,"secondary")
+        checkScreenshot(activity, "secondary")
     }
 }

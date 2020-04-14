@@ -8,7 +8,7 @@ import com.facebook.testing.screenshot.Screenshot
 
 abstract class ScreenShotActivityTestBase {
 
-    private val prefix = this.javaClass.name+"."
+    private val prefix = this.javaClass.name + "."
 
     fun checkScreenshot(activity: Activity, name: String) {
         Screenshot.snapActivity(activity).setName(prefix + name).record()

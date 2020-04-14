@@ -12,7 +12,6 @@ import android.view.View
 import android.widget.Toast
 import com.natura.android.sample.R
 
-
 class AppBarActivity : AppCompatActivity() {
 
     private val toolbarDefault by lazy { findViewById<Toolbar>(R.id.toolbarDefault) }
@@ -47,7 +46,6 @@ class AppBarActivity : AppCompatActivity() {
             toolbarSecondary.visibility = View.VISIBLE
             Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private var searchMenuItem: MenuItem? = null

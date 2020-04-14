@@ -9,7 +9,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class SelectionControlActivityTest: ScreenShotActivityTestBase() {
+class SelectionControlActivityTest : ScreenShotActivityTestBase() {
     @get:Rule
     var activityTestRule = ActivityTestRule(SelectionControlActivity::class.java, false, false)
 
@@ -17,15 +17,14 @@ class SelectionControlActivityTest: ScreenShotActivityTestBase() {
     fun test_Snapshot_WithControls() {
         val activity = activityTestRule.launchActivity(null)
 
-        checkScreenshot(activity,"no_selection")
+        checkScreenshot(activity, "no_selection")
 
         performClick(R.id.radioPrimary)
         performClick(R.id.checkboxPrimary)
-        checkScreenshot(activity,"radio_and_checkbox_primary_on")
+        checkScreenshot(activity, "radio_and_checkbox_primary_on")
 
         performClick(R.id.radioSecondary)
         performClick(R.id.checkboxSecondary)
-        checkScreenshot(activity,"radio_and_checkbox_secondary_on")
+        checkScreenshot(activity, "radio_and_checkbox_secondary_on")
     }
-
 }

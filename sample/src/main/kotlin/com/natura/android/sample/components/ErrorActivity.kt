@@ -7,7 +7,6 @@ import android.view.MenuItem
 import com.natura.android.error.DsErrorDefault
 import com.natura.android.sample.R
 
-
 class ErrorActivity : AppCompatActivity() {
 
     private val errorButton by lazy { findViewById<DsErrorDefault>(R.id.error_default) }

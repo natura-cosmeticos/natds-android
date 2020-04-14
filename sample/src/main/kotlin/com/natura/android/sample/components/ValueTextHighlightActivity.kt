@@ -6,7 +6,7 @@ import android.view.MenuItem
 import com.natura.android.sample.R
 import com.natura.android.widget.ValueTextHighlight
 
-class ValueTextHighlightActivity: AppCompatActivity() {
+class ValueTextHighlightActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_text_input_highlight)
