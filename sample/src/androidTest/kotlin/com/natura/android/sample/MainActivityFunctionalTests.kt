@@ -62,6 +62,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenMenuScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnMenu)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnMenu)).perform(click())
 
         onView(ViewMatchers.withText("Menu Pattern")).check(matches(ViewMatchers.isDisplayed()))
