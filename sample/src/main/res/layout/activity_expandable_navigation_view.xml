@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
     <com.natura.android.navigationview.ExpandableNavigationView
         style="?navigationViewStyle"
         android:id="@+id/expandable_navigation_menu"
