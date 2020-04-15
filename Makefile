@@ -38,4 +38,4 @@ enable-animations:
 	adb shell settings put global animator_duration_scale 1
 
 publish-ds-lib-prod: clean
-	./gradlew build publish --PdisablePreDex --stacktrace
+	./gradlew build publish --stacktrace
