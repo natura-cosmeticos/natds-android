@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorLowEmphasis_16">#29BBBBBB</color>
-    <color name="colorLowEmphasis">#BBBBBB</color>
-    <color name="colorMediumEmphasis">#777777</color>
-    <color name="colorHighEmphasis">#333333</color>
-    <color name="colorHighEmphasis_48">#3333330A</color>
-
-    <!--Light Text Content-->
-    <color name="lightHighEmphasis">#333333</color>
-    <color name="lightMediumEmphasis">#777777</color>
-    <color name="lightLowEmphasis">#BBBBBB</color>
-    <color name="lightLink">#227BBD</color>
-
-    <color name="colorBrdNatRed">#e74627</color>
-    <color name="colorBrdNatGreen">#569A32</color>
-    <color name="colorBrdNatOrange">#FF6B06</color>
-    <color name="colorBrdNatYellow">#F4AB34</color>
-    <color name="colorBrdNatGray">#333333</color>
-    <color name="colorBrdBlack_12">#1F000000</color>
-    <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
-    <color name="colorBrdNatGray_48">#7A333333</color>
-    <color name="mtrlBtnTextColorDisabled">#61000000</color>
-
     <!-- GRAY SCALE -->
     <color name="black">@android:color/black</color>
     <color name="superHighGrey">#121212</color>
@@ -73,9 +51,7 @@
     <color name="natSecondary">#FF6B0B</color>
     <color name="natOnSecondary">@color/black</color>
     <color name="natSecondaryLight">#FFF8E1</color>
-    <color name="natOnSecondaryLight">@color/black</color>
     <color name="natSecondaryDark">#FF5808</color>
-    <color name="natOnSecondaryDark">@color/black</color>
 
     <!-- NATURA LIGHT THEME BASE COLOR TOKENS -->
     <color name="natLightBackground">@color/lowerGrey</color>
@@ -139,4 +115,26 @@
     <color name="tbsDarkSecondaryDark">#A07E65</color>
     <color name="tbsDarkOnColors">@color/black</color>
 
+    <!-- LEGACY COLORS REFERENCES -->
+    <color name="colorLowEmphasis_16">#29BBBBBB</color>
+    <color name="colorLowEmphasis">#BBBBBB</color>
+    <color name="colorMediumEmphasis">#777777</color>
+    <color name="colorHighEmphasis">#333333</color>
+    <color name="colorHighEmphasis_48">#3333330A</color>
+
+    <!--Light Text Content-->
+    <color name="lightHighEmphasis">#333333</color>
+    <color name="lightMediumEmphasis">#777777</color>
+    <color name="lightLowEmphasis">#BBBBBB</color>
+    <color name="lightLink">#227BBD</color>
+
+    <color name="colorBrdNatRed">#e74627</color>
+    <color name="colorBrdNatGreen">#569A32</color>
+    <color name="colorBrdNatOrange">#FF6B06</color>
+    <color name="colorBrdNatYellow">#F4AB34</color>
+    <color name="colorBrdNatGray">#333333</color>
+    <color name="colorBrdBlack_12">#1F000000</color>
+    <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
+    <color name="colorBrdNatGray_48">#7A333333</color>
+    <color name="mtrlBtnTextColorDisabled">#61000000</color>
 </resources>
