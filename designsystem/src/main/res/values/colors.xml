@@ -121,4 +121,15 @@
     <color name="avonDarkPrimaryDark">#BC6198</color>
     <color name="avonDarkOnPrimaryDark">@color/black</color>
 
+    <!-- THE BODY SHOP THEME BASE COLOR TOKENS -->
+    <color name="tbsLightOnColors">@color/white</color>
+
+    <!-- THE BODY SHOP LIGHT THEME BASE COLOR TOKENS -->
+    <color name="tbsLightPrimary">#004236</color>
+    <color name="tbsLightPrimaryLight">#356D60</color>
+    <color name="tbsLightPrimaryDark">#001D10</color>
+    <color name="tbsLightSecondary">#A55F53</color>
+    <color name="tbsLightSecondaryLight">#D98D7F</color>
+    <color name="tbsLightSecondaryDark">#73342A</color>
+
 </resources>
