@@ -23,4 +23,45 @@
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="mtrlBtnTextColorDisabled">#61000000</color>
 
+    <!-- COMMON COLOR TO ALL THEMES -->
+    <color name="link">#227BBD</color>
+    <color name="onlink">@color/white</color>
+    <color name="success">#569A32</color>
+    <color name="onSuccess">@color/white</color>
+    <color name="warning">#FCC433</color>
+    <color name="onWarning">@color/highGrey</color>
+    <color name="alert">#E74627</color>
+    <color name="onAlert">@color/black</color>
+
+    <!-- GRAY SCALE -->
+    <color name="black">@android:color/black</color>
+    <color name="highGrey">#333333</color>
+    <color name="mediumGrey">#777777</color>
+    <color name="lowGrey">#BBBBBB</color>
+    <color name="lowerGrey">#FAFAFA</color>
+    <color name="white">@android:color/white</color>
+
+    <!-- NATURA LIGHT THEME BASE COLOR TOKENS -->
+    <color name="natLightPrimary">#F4AB34</color>
+    <color name="natLightOnPrimary">@color/highGrey</color>
+    <color name="natLightPrimaryLight">#FEFDE8</color>
+    <color name="natLightOnPrimaryLight">@color/highGrey</color>
+    <color name="natLightPrimaryDark">#EF8426</color>
+    <color name="natLightOnPrimaryDark">@color/highGrey</color>
+    <color name="natLightSecondary">#FF6B0B</color>
+    <color name="natLightOnSecondary">@color/black</color>
+    <color name="natLightSecondaryLight">#FFF8E1</color>
+    <color name="natLightOnSecondaryLight">@color/black</color>
+    <color name="natLightSecondaryDark">#FF5808</color>
+    <color name="natLightOnSecondaryDark">@color/black</color>
+
+    <color name="natLightBackground">@color/lowerGrey</color>
+    <color name="natLightOnBackground">@color/highGrey</color>
+    <color name="natLightSurface">@color/white</color>
+    <color name="natLightOnSurface">@color/highGrey</color>
+
+    <color name="natLightHighlight">@color/black</color>
+    <color name="natLightHighlightEmphasis">@color/highGrey</color>
+    <color name="natLightHighMediumEmphasis">@color/mediumGrey</color>
+    <color name="natLightHighLowEmphasis">@color/lowerGrey</color>
 </resources>
