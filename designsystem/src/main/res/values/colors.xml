@@ -99,6 +99,12 @@
     <color name="natDarkHighMediumEmphasis">@color/lowGrey</color>
     <color name="natDarkHighLowEmphasis">@color/mediumGrey</color>
 
+    <!-- AVON THEME BASE COLOR TOKENS -->
+    <color name="avonSecondary">#E9E9E9</color>
+    <color name="avonOnSecondary">@color/highGrey</color>
+    <color name="avonSecondaryLight">@color/white</color>
+    <color name="avonSecondaryDark">#B7B7B7</color>
+
     <!-- AVON LIGHT THEME BASE COLOR TOKENS -->
     <color name="avonLightPrimary">#DE0085</color>
     <color name="avonLightOnPrimary">@color/white</color>
@@ -106,11 +112,13 @@
     <color name="avonLightOnPrimaryLight">@color/black</color>
     <color name="avonLightPrimaryDark">#A70058</color>
     <color name="avonLightOnPrimaryDark">@color/white</color>
-    <color name="avonLightSecondary">#E9E9E9</color>
-    <color name="avonLightOnSecondary">@color/highGrey</color>
-    <color name="avonLightSecondaryLight">@color/white</color>
-    <color name="avonLightOnSecondaryLight">@color/highGrey</color>
-    <color name="avonLightSecondaryDark">#B7B7B7</color>
-    <color name="avonLightOnSecondaryDark">@color/highGrey</color>
+
+    <!-- AVON DARK THEME BASE COLOR TOKENS -->
+    <color name="avonDarkPrimary">#F091C9</color>
+    <color name="avonDarkOnPrimary">@color/black</color>
+    <color name="avonDarkPrimaryLight">#FFC3FC</color>
+    <color name="avonDarkOnPrimaryLight">@color/black</color>
+    <color name="avonDarkPrimaryDark">#BC6198</color>
+    <color name="avonDarkOnPrimaryDark">@color/black</color>
 
 </resources>
