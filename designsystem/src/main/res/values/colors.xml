@@ -7,7 +7,6 @@
     <color name="colorHighEmphasis_48">#3333330A</color>
 
     <!--Light Text Content-->
-    <color name="lightHighlight">#000000</color>
     <color name="lightHighEmphasis">#333333</color>
     <color name="lightMediumEmphasis">#777777</color>
     <color name="lightLowEmphasis">#BBBBBB</color>
@@ -23,6 +22,15 @@
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="mtrlBtnTextColorDisabled">#61000000</color>
 
+    <!-- GRAY SCALE -->
+    <color name="black">@android:color/black</color>
+    <color name="superHighGrey">#121212</color>
+    <color name="highGrey">#333333</color>
+    <color name="mediumGrey">#777777</color>
+    <color name="lowGrey">#BBBBBB</color>
+    <color name="lowerGrey">#FAFAFA</color>
+    <color name="white">@android:color/white</color>
+
     <!-- COMMON COLOR TO ALL THEMES -->
     <color name="link">#227BBD</color>
     <color name="onlink">@color/white</color>
@@ -33,14 +41,27 @@
     <color name="alert">#E74627</color>
     <color name="onAlert">@color/black</color>
 
-    <!-- GRAY SCALE -->
-    <color name="black">@android:color/black</color>
-    <color name="superHighGrey">#121212</color>
-    <color name="highGrey">#333333</color>
-    <color name="mediumGrey">#777777</color>
-    <color name="lowGrey">#BBBBBB</color>
-    <color name="lowerGrey">#FAFAFA</color>
-    <color name="white">@android:color/white</color>
+    <!--COMMON COLOR TO LIGHT THEMES -->
+    <color name="lightBackground">@color/lowerGrey</color>
+    <color name="lightOnBackground">@color/highGrey</color>
+    <color name="lightSurface">@color/white</color>
+    <color name="lightOnSurface">@color/highGrey</color>
+
+    <color name="lightHighlight">@color/black</color>
+    <color name="lightHighlightEmphasis">@color/highGrey</color>
+    <color name="lightHighMediumEmphasis">@color/mediumGrey</color>
+    <color name="lightHighLowEmphasis">@color/lowerGrey</color>
+
+    <!--COMMON COLOR TO DARK THEMES -->
+    <color name="darkBackground">@color/superHighGrey</color>
+    <color name="darkOnBackground">@color/white</color>
+    <color name="darkSurface">@color/highGrey</color>
+    <color name="darkOnSurface">@color/white</color>
+
+    <color name="darkHighlight">@color/white</color>
+    <color name="darkHighlightEmphasis">@color/lowerGrey</color>
+    <color name="darkHighMediumEmphasis">@color/lowGrey</color>
+    <color name="darkHighLowEmphasis">@color/mediumGrey</color>
 
     <!-- NATURA THEME BASE COLOR TOKENS -->
     <color name="natPrimary">#F4AB34</color>
@@ -77,4 +98,19 @@
     <color name="natDarkHighlightEmphasis">@color/lowerGrey</color>
     <color name="natDarkHighMediumEmphasis">@color/lowGrey</color>
     <color name="natDarkHighLowEmphasis">@color/mediumGrey</color>
+
+    <!-- AVON LIGHT THEME BASE COLOR TOKENS -->
+    <color name="avonLightPrimary">#DE0085</color>
+    <color name="avonLightOnPrimary">@color/white</color>
+    <color name="avonLightPrimaryLight">#FF56B5</color>
+    <color name="avonLightOnPrimaryLight">@color/black</color>
+    <color name="avonLightPrimaryDark">#A70058</color>
+    <color name="avonLightOnPrimaryDark">@color/white</color>
+    <color name="avonLightSecondary">#E9E9E9</color>
+    <color name="avonLightOnSecondary">@color/highGrey</color>
+    <color name="avonLightSecondaryLight">@color/white</color>
+    <color name="avonLightOnSecondaryLight">@color/highGrey</color>
+    <color name="avonLightSecondaryDark">#B7B7B7</color>
+    <color name="avonLightOnSecondaryDark">@color/highGrey</color>
+
 </resources>
