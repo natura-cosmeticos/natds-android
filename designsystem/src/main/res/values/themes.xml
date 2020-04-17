@@ -8,23 +8,23 @@
     </style>
 
     <style name="Theme.Natura" parent="Theme.MaterialComponents.Light">
-        <item name="colorPrimary">#F4AB34</item>
-        <item name="colorPrimaryDark">#EF8426</item>
-        <item name="colorSecondary">#FF6B06</item>
-        <item name="colorError">#E74627</item>
-        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorPrimary">@color/natPrimary</item>
+        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
+        <item name="colorSecondary">@color/natSecondary</item>
+        <item name="colorError">@color/alert</item>
+        <item name="android:colorBackground">@color/white</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">#BBBBBB</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
-        <item name="android:textColorPrimary">#333333</item>
-        <item name="android:textColorPrimaryDisableOnly">#BBBBBB</item>
-        <item name="android:textColorSecondary">#777777</item>
-        <item name="android:textColorLink">#227BBD</item>
-        <item name="android:textColorHighlight">#000000</item>
+        <item name="android:textColorPrimary">@color/highGrey</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
+        <item name="android:textColorSecondary">@color/mediumGrey</item>
+        <item name="android:textColorLink">@color/link</item>
+        <item name="android:textColorHighlight">@color/white</item>
 
         <!--Component styles-->
         <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
@@ -42,8 +42,8 @@
 
     <!--Not supported officialy-->
     <style name="Theme.Avon" parent="Theme.Natura">
-        <item name="colorPrimary">#DE0085</item>
-        <item name="colorSecondary">#E9E9E9</item>
+        <item name="colorPrimary">@color/avonLightPrimary</item>
+        <item name="colorSecondary">@color/avonSecondary</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
@@ -58,8 +58,8 @@
 
     <!--Not supported officialy-->
     <style name="Theme.BodyShop" parent="Theme.Natura">
-        <item name="colorPrimary">#004236</item>
-        <item name="colorSecondary">#A55F53</item>
+        <item name="colorPrimary">@color/tbsLightPrimary</item>
+        <item name="colorSecondary">@color/tbsLightSecondary</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
