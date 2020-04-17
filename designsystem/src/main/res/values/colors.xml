@@ -35,26 +35,28 @@
 
     <!-- GRAY SCALE -->
     <color name="black">@android:color/black</color>
+    <color name="superHighGrey">#121212</color>
     <color name="highGrey">#333333</color>
     <color name="mediumGrey">#777777</color>
     <color name="lowGrey">#BBBBBB</color>
     <color name="lowerGrey">#FAFAFA</color>
     <color name="white">@android:color/white</color>
 
-    <!-- NATURA LIGHT THEME BASE COLOR TOKENS -->
-    <color name="natLightPrimary">#F4AB34</color>
-    <color name="natLightOnPrimary">@color/highGrey</color>
-    <color name="natLightPrimaryLight">#FEFDE8</color>
-    <color name="natLightOnPrimaryLight">@color/highGrey</color>
-    <color name="natLightPrimaryDark">#EF8426</color>
-    <color name="natLightOnPrimaryDark">@color/highGrey</color>
-    <color name="natLightSecondary">#FF6B0B</color>
-    <color name="natLightOnSecondary">@color/black</color>
-    <color name="natLightSecondaryLight">#FFF8E1</color>
-    <color name="natLightOnSecondaryLight">@color/black</color>
-    <color name="natLightSecondaryDark">#FF5808</color>
-    <color name="natLightOnSecondaryDark">@color/black</color>
+    <!-- NATURA THEME BASE COLOR TOKENS -->
+    <color name="natPrimary">#F4AB34</color>
+    <color name="natOnPrimary">@color/highGrey</color>
+    <color name="natPrimaryLight">#FEFDE8</color>
+    <color name="natOnPrimaryLight">@color/highGrey</color>
+    <color name="natPrimaryDark">#EF8426</color>
+    <color name="natOnPrimaryDark">@color/highGrey</color>
+    <color name="natSecondary">#FF6B0B</color>
+    <color name="natOnSecondary">@color/black</color>
+    <color name="natSecondaryLight">#FFF8E1</color>
+    <color name="natOnSecondaryLight">@color/black</color>
+    <color name="natSecondaryDark">#FF5808</color>
+    <color name="natOnSecondaryDark">@color/black</color>
 
+    <!-- NATURA LIGHT THEME BASE COLOR TOKENS -->
     <color name="natLightBackground">@color/lowerGrey</color>
     <color name="natLightOnBackground">@color/highGrey</color>
     <color name="natLightSurface">@color/white</color>
@@ -64,4 +66,15 @@
     <color name="natLightHighlightEmphasis">@color/highGrey</color>
     <color name="natLightHighMediumEmphasis">@color/mediumGrey</color>
     <color name="natLightHighLowEmphasis">@color/lowerGrey</color>
+
+    <!-- NATURA DARK THEME BASE COLOR TOKENS -->
+    <color name="natDarkBackground">@color/superHighGrey</color>
+    <color name="natDarkOnBackground">@color/white</color>
+    <color name="natDarkSurface">@color/highGrey</color>
+    <color name="natDarkOnSurface">@color/white</color>
+
+    <color name="natDarkHighlight">@color/white</color>
+    <color name="natDarkHighlightEmphasis">@color/lowerGrey</color>
+    <color name="natDarkHighMediumEmphasis">@color/lowGrey</color>
+    <color name="natDarkHighLowEmphasis">@color/mediumGrey</color>
 </resources>
