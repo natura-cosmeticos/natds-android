@@ -109,7 +109,7 @@
     <!-- THE BODY SHOP DARK THEME BASE COLOR TOKENS -->
     <color name="tbsDarkPrimary">#62B3AE</color>
     <color name="tbsDarkPrimaryLight">#94E5E0</color>
-    <color name="tbsDarkPrimaryDark">#2F837F0</color>
+    <color name="tbsDarkPrimaryDark">#2F837F</color>
     <color name="tbsDarkSecondary">#D2AD93</color>
     <color name="tbsDarkSecondaryLight">#FFDFC4</color>
     <color name="tbsDarkSecondaryDark">#A07E65</color>
