@@ -1,8 +1,8 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 
 class LoadingActivity : AppCompatActivity() {
@@ -10,7 +10,7 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Loading Pattern")
+        supportActionBar?.title = "Loading Pattern"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

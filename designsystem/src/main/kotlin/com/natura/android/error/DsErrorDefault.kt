@@ -2,11 +2,11 @@ package com.natura.android.error
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.AppCompatImageView
-import android.support.v7.widget.AppCompatTextView
 import android.util.AttributeSet
 import android.view.View
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.button.DsPrimaryButton
 

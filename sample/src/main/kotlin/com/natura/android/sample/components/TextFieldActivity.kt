@@ -1,10 +1,10 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.text.InputType
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.textfield.TextField
 

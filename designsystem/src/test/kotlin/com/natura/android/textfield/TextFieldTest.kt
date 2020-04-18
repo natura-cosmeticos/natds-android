@@ -1,14 +1,14 @@
 package com.natura.android.textfield
 
 import android.app.Activity
-import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat
 import android.text.InputFilter
 import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R

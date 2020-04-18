@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:parentTag="android.support.constraint.ConstraintLayout">
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_start"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/ds_spacing_small" />
 
-    <android.support.constraint.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_end"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/ds_spacing_small" />
 
-    <android.support.v7.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ds_default_error_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/ds_ic_illustration_sad" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/ds_default_error_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,5 +56,4 @@
         app:layout_constraintEnd_toEndOf="@id/guide_end"
         app:layout_constraintStart_toStartOf="@+id/guide_start"
         tools:button_label="RECARERGAR" />
-
 </merge>

@@ -1,11 +1,11 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.natura.android.menu.MenuView
 import com.natura.android.navigationview.ExpandableNavigationView
 import com.natura.android.navigationview.NavigationItem
