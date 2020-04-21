@@ -2,15 +2,12 @@
 
 <resources>
     <style name="Theme.Natura" parent="Theme.DsBaseLight">
-        <!-- rewriting material color definitions -->
         <item name="colorPrimary">@color/natPrimary</item>
         <item name="colorOnPrimary">@color/natOnPrimary</item>
         <item name="colorPrimaryVariant">@color/natPrimaryDark</item>
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
-
-        <!-- adding tokens custom colors to theme -->
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
@@ -54,8 +51,6 @@
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
-
-        <!-- adding tokens custom colors to theme -->
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
@@ -63,7 +58,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- legacy definitions based on appcompat colors -->
+        <!-- definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -82,14 +77,18 @@
         <item name="colorSecondary">@color/avonSecondary</item>
         <item name="colorOnSecondary">@color/avonOnSecondary</item>
         <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
-
-        <!-- adding tokens custom colors to theme -->
         <item name="colorPrimaryLight">@color/avonLightPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/avonLightOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/avonLightOnPrimaryDark</item>
         <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/avonLightPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
@@ -109,14 +108,18 @@
         <item name="colorSecondary">@color/avonSecondary</item>
         <item name="colorOnSecondary">@color/avonOnSecondary</item>
         <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
-
-        <!-- adding tokens custom colors to theme -->
         <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/avonDarkOnPrimaryDark</item>
         <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -131,14 +134,18 @@
         <item name="colorSecondary">@color/tbsLightSecondary</item>
         <item name="colorOnSecondary">@color/tbsLightOnColors</item>
         <item name="colorSecondaryVariant">@color/tbsLightSecondaryDark</item>
-
-        <!-- adding tokens custom colors to theme -->
         <item name="colorPrimaryLight">@color/tbsLightPrimaryLight</item>
         <item name="colorOnPrimaryLight">?colorOnPrimary</item>
         <item name="colorOnPrimaryDark">?colorOnPrimary</item>
         <item name="colorSecondaryLight">@color/tbsLightSecondaryLight</item>
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
@@ -157,13 +164,18 @@
         <item name="colorSecondary">@color/tbsDarkSecondary</item>
         <item name="colorOnSecondary">@color/tbsLightOnColors</item>
         <item name="colorSecondaryVariant">@color/tbsDarkSecondaryDark</item>
-
         <item name="colorPrimaryLight">@color/tbsDarkPrimaryLight</item>
         <item name="colorOnPrimaryLight">?colorOnPrimary</item>
         <item name="colorOnPrimaryDark">?colorOnPrimary</item>
         <item name="colorSecondaryLight">@color/tbsDarkSecondaryLight</item>
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/tbsDarkPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>

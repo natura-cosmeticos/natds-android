@@ -11,6 +11,7 @@
         android:layout_width="@dimen/ds_text_default_icon_big_size"
         android:layout_height="@dimen/ds_text_default_icon_big_size"
         android:layout_gravity="center"
+        android:backgroundTint="?colorOnBackground"
         tools:src="@drawable/ds_ic_outlined_navigation_arrowbottom" />
     <TextView
         android:id="@+id/item_icon_code"
