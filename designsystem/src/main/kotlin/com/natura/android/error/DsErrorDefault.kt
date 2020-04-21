@@ -7,8 +7,8 @@ import android.view.View
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.material.button.MaterialButton
 import com.natura.android.R
-import com.natura.android.button.DsPrimaryButton
 
 @SuppressLint("CustomViewStyleable")
 class DsErrorDefault @JvmOverloads constructor(
@@ -20,7 +20,7 @@ class DsErrorDefault @JvmOverloads constructor(
     // TODO mover esta classe para com.natura.android.pattern
     private val erroIcon by lazy { findViewById<AppCompatImageView>(R.id.ds_default_error_icon) }
     private val errorLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_default_error_label) }
-    private val errorButton by lazy { findViewById<DsPrimaryButton>(R.id.ds_default_error_button) }
+    private val errorButton by lazy { findViewById<MaterialButton>(R.id.ds_default_error_button) }
 
     var listener: (() -> Unit)? = null
 
@@ -39,7 +39,7 @@ class DsErrorDefault @JvmOverloads constructor(
     var labelButton: String? = ""
         set(value) {
             field = value
-            errorButton.label = value
+            errorButton.text = value
         }
 
     init {
@@ -59,6 +59,6 @@ class DsErrorDefault @JvmOverloads constructor(
     }
 
     private fun configListener() {
-        errorButton.clickListener = { listener?.invoke() }
+        errorButton.setOnClickListener { listener?.invoke() }
     }
 }
