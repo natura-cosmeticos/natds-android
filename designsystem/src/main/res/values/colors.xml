@@ -53,28 +53,6 @@
     <color name="natSecondaryLight">#FFF8E1</color>
     <color name="natSecondaryDark">#FF5808</color>
 
-    <!-- NATURA LIGHT THEME BASE COLOR TOKENS -->
-    <color name="natLightBackground">@color/lowerGrey</color>
-    <color name="natLightOnBackground">@color/highGrey</color>
-    <color name="natLightSurface">@color/white</color>
-    <color name="natLightOnSurface">@color/highGrey</color>
-
-    <color name="natLightHighlight">@color/black</color>
-    <color name="natLightHighlightEmphasis">@color/highGrey</color>
-    <color name="natLightHighMediumEmphasis">@color/mediumGrey</color>
-    <color name="natLightHighLowEmphasis">@color/lowerGrey</color>
-
-    <!-- NATURA DARK THEME BASE COLOR TOKENS -->
-    <color name="natDarkBackground">@color/superHighGrey</color>
-    <color name="natDarkOnBackground">@color/white</color>
-    <color name="natDarkSurface">@color/highGrey</color>
-    <color name="natDarkOnSurface">@color/white</color>
-
-    <color name="natDarkHighlight">@color/white</color>
-    <color name="natDarkHighlightEmphasis">@color/lowerGrey</color>
-    <color name="natDarkHighMediumEmphasis">@color/lowGrey</color>
-    <color name="natDarkHighLowEmphasis">@color/mediumGrey</color>
-
     <!-- AVON THEME BASE COLOR TOKENS -->
     <color name="avonSecondary">#E9E9E9</color>
     <color name="avonOnSecondary">@color/highGrey</color>
