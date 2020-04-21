@@ -10,7 +10,7 @@ class LoadingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Loading Pattern")
+        supportActionBar?.title = "Loading Pattern"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

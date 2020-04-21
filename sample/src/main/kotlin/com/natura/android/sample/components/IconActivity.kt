@@ -17,7 +17,7 @@ class IconActivity : AppCompatActivity() {
 
         iconGrid.adapter = IconAdapter(this, recoverListIcons())
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Icons (fonts)")
+        supportActionBar?.title = "Icons (fonts)"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
