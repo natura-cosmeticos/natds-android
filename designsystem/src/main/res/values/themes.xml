@@ -124,10 +124,21 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <!--Not supported officialy-->
-    <style name="Theme.BodyShop" parent="Theme.Natura">
+    <style name="Theme.BodyShop" parent="Theme.DsBaseLight">
         <item name="colorPrimary">@color/tbsLightPrimary</item>
+        <item name="colorOnPrimary">@color/tbsLightOnColors</item>
+        <item name="colorPrimaryVariant">@color/tbsLightPrimaryDark</item>
         <item name="colorSecondary">@color/tbsLightSecondary</item>
+        <item name="colorOnSecondary">@color/tbsLightOnColors</item>
+        <item name="colorSecondaryVariant">@color/tbsLightSecondaryDark</item>
+
+        <!-- adding tokens custom colors to theme -->
+        <item name="colorPrimaryLight">@color/tbsLightPrimaryLight</item>
+        <item name="colorOnPrimaryLight">?colorOnPrimary</item>
+        <item name="colorOnPrimaryDark">?colorOnPrimary</item>
+        <item name="colorSecondaryLight">@color/tbsLightSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
@@ -135,6 +146,31 @@
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.BodyShopDark" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/tbsDarkPrimary</item>
+        <item name="colorOnPrimary">@color/tbsDarkOnColors</item>
+        <item name="colorPrimaryVariant">@color/tbsDarkPrimaryDark</item>
+        <item name="colorSecondary">@color/tbsDarkSecondary</item>
+        <item name="colorOnSecondary">@color/tbsLightOnColors</item>
+        <item name="colorSecondaryVariant">@color/tbsDarkSecondaryDark</item>
+
+        <item name="colorPrimaryLight">@color/tbsDarkPrimaryLight</item>
+        <item name="colorOnPrimaryLight">?colorOnPrimary</item>
+        <item name="colorOnPrimaryDark">?colorOnPrimary</item>
+        <item name="colorSecondaryLight">@color/tbsDarkSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
+        <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
+    </style>
+
+    <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -164,7 +200,6 @@
         <item name="android:textColorSecondary">@color/mediumGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
-
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -193,7 +228,6 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
     </style>
-
 
     <!-- tokens attributes not covered by material theme -->
     <attr name="colorPrimaryLight" format="color"/>

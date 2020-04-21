@@ -5,4 +5,7 @@
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.AvonDark.NoActionBar"/>
     <style name="Theme.Avon" parent="Theme.AvonDark"/>
+
+    <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShopDark.NoActionBar"/>
+    <style name="Theme.BodyShop" parent="Theme.BodyShopDark"/>
 </resources>
