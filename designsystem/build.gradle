@@ -48,7 +48,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.google.android.material:material:$rootProject.material"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
 
     testImplementation "junit:junit:$rootProject.junitVersion"
