@@ -6,12 +6,25 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Natura" parent="Theme.MaterialComponents.Light">
+    <style name="Theme.Natura" parent="Theme.DsBaseLight">
+        <!-- rewriting material color definitions -->
         <item name="colorPrimary">@color/natPrimary</item>
-        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
+        <item name="colorOnPrimary">@color/natOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/natPrimaryDark</item>
         <item name="colorSecondary">@color/natSecondary</item>
-        <item name="colorError">@color/alert</item>
-        <item name="android:colorBackground">@color/white</item>
+        <item name="colorOnSecondary">@color/natOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+
+        <!-- adding tokens custom colors to theme -->
+        <item name="colorPrimaryLight">@color/natPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/natSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- legacy definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">@color/lowGrey</item>
@@ -69,4 +82,66 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
+    <style name="Theme.DsBaseLight" parent="Theme.MaterialComponents.Light">
+        <item name="colorHighlight">@color/lightHighlight</item>
+        <item name="colorHighEmphasis">@color/lightHighEmphasis</item>
+        <item name="colorMediumEmphasis">@color/lightMediumEmphasis</item>
+        <item name="colorLowEmphasis">@color/lightLowEmphasis</item>
+
+        <item name="android:colorBackground">@color/lightBackground</item>
+        <item name="colorOnBackground">@color/lightOnBackground</item>
+        <item name="colorSurface">@color/lightSurface</item>
+        <item name="colorOnSurface">@color/lightOnSurface</item>
+
+        <item name="colorLink">@color/link</item>
+        <item name="colorOnLink">@color/onLink</item>
+        <item name="colorSuccess">@color/success</item>
+        <item name="colorWarning">@color/warning</item>
+        <item name="colorError">@color/alert</item>
+        <item name="colorOnSuccess">@color/onSuccess</item>
+        <item name="colorOnWarning">@color/onWarning</item>
+        <item name="colorOnError">@color/onAlert</item>
+
+    </style>
+
+    <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
+        <item name="colorHighlight">@color/darkHighlight</item>
+        <item name="colorHighEmphasis">@color/darkHighEmphasis</item>
+        <item name="colorMediumEmphasis">@color/darkMediumEmphasis</item>
+        <item name="colorLowEmphasis">@color/darkLowEmphasis</item>
+
+        <item name="android:colorBackground">@color/darkBackground</item>
+        <item name="colorOnBackground">@color/darkOnBackground</item>
+        <item name="colorSurface">@color/darkSurface</item>
+        <item name="colorOnSurface">@color/darkOnSurface</item>
+
+        <item name="colorLink">@color/link</item>
+        <item name="colorOnLink">@color/onLink</item>
+        <item name="colorSuccess">@color/success</item>
+        <item name="colorWarning">@color/warning</item>
+        <item name="colorError">@color/alert</item>
+        <item name="colorOnSuccess">@color/onSuccess</item>
+        <item name="colorOnWarning">@color/onWarning</item>
+        <item name="colorOnError">@color/onAlert</item>
+    </style>
+
+
+    <!-- tokens attributes not covered by material theme -->
+    <attr name="colorPrimaryLight" format="color"/>
+    <attr name="colorOnPrimaryLight" format="color"/>
+    <attr name="colorOnPrimaryDark" format="color"/>
+    <attr name="colorSecondaryLight" format="color"/>
+    <attr name="colorOnSecondaryLight" format="color"/>
+    <attr name="colorOnSecondaryDark" format="color"/>
+    <attr name="colorHighlight" format="color"/>
+    <attr name="colorHighEmphasis" format="color"/>
+    <attr name="colorMediumEmphasis" format="color"/>
+    <attr name="colorLowEmphasis" format="color"/>
+    <attr name="colorLink" format="color"/>
+    <attr name="colorOnLink" format="color"/>
+    <attr name="colorSuccess" format="color"/>
+    <attr name="colorOnSuccess" format="color"/>
+    <attr name="colorWarning" format="color"/>
+    <attr name="colorOnWarning" format="color"/>
 </resources>

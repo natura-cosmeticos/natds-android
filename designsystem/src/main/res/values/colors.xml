@@ -11,7 +11,7 @@
 
     <!-- COMMON COLOR TO ALL THEMES -->
     <color name="link">#227BBD</color>
-    <color name="onlink">@color/white</color>
+    <color name="onLink">@color/white</color>
     <color name="success">#569A32</color>
     <color name="onSuccess">@color/white</color>
     <color name="warning">#FCC433</color>
@@ -26,9 +26,9 @@
     <color name="lightOnSurface">@color/highGrey</color>
 
     <color name="lightHighlight">@color/black</color>
-    <color name="lightHighlightEmphasis">@color/highGrey</color>
-    <color name="lightHighMediumEmphasis">@color/mediumGrey</color>
-    <color name="lightHighLowEmphasis">@color/lowerGrey</color>
+    <color name="lightHighEmphasis">@color/highGrey</color>
+    <color name="lightMediumEmphasis">@color/mediumGrey</color>
+    <color name="lightLowEmphasis">@color/lowerGrey</color>
 
     <!--COMMON COLOR TO DARK THEMES -->
     <color name="darkBackground">@color/superHighGrey</color>
@@ -37,9 +37,9 @@
     <color name="darkOnSurface">@color/white</color>
 
     <color name="darkHighlight">@color/white</color>
-    <color name="darkHighlightEmphasis">@color/lowerGrey</color>
-    <color name="darkHighMediumEmphasis">@color/lowGrey</color>
-    <color name="darkHighLowEmphasis">@color/mediumGrey</color>
+    <color name="darkHighEmphasis">@color/lowerGrey</color>
+    <color name="darkMediumEmphasis">@color/lowGrey</color>
+    <color name="darkLowEmphasis">@color/mediumGrey</color>
 
     <!-- NATURA THEME BASE COLOR TOKENS -->
     <color name="natPrimary">#F4AB34</color>
@@ -101,9 +101,6 @@
     <color name="colorHighEmphasis_48">#3333330A</color>
 
     <!--Light Text Content-->
-    <color name="lightHighEmphasis">#333333</color>
-    <color name="lightMediumEmphasis">#777777</color>
-    <color name="lightLowEmphasis">#BBBBBB</color>
     <color name="lightLink">#227BBD</color>
 
     <color name="colorBrdNatRed">#e74627</color>
