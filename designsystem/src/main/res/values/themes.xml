@@ -35,7 +35,6 @@
         <item name="android:textColorPrimary">@color/highGrey</item>
         <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
         <item name="android:textColorSecondary">@color/mediumGrey</item>
-        <item name="android:textColorLink">@color/link</item>
         <item name="android:textColorHighlight">@color/white</item>
 
         <!--Component styles-->
@@ -50,6 +49,34 @@
         <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.DarkText</item>
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton.DarkText</item>
+    </style>
+
+    <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.NaturaDark" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/natPrimary</item>
+        <item name="colorOnPrimary">@color/natOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/natPrimaryDark</item>
+        <item name="colorSecondary">@color/natSecondary</item>
+        <item name="colorOnSecondary">@color/natOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+
+        <!-- adding tokens custom colors to theme -->
+        <item name="colorPrimaryLight">@color/natPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/natSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- legacy definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">@color/lowGrey</item>
     </style>
 
     <!--Not supported officialy-->
@@ -103,6 +130,12 @@
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
 
+        <item name="android:textColorPrimary">@color/highGrey</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
+        <item name="android:textColorSecondary">@color/mediumGrey</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorLink">@color/link</item>
+
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -124,6 +157,12 @@
         <item name="colorOnSuccess">@color/onSuccess</item>
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
+
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
+        <item name="android:textColorSecondary">@color/lowerGrey</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorLink">@color/link</item>
     </style>
 
 
