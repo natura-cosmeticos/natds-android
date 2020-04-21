@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
     <style name="Theme.Natura" parent="Theme.DsBaseLight">
         <!-- rewriting material color definitions -->
         <item name="colorPrimary">@color/natPrimary</item>
@@ -32,10 +27,6 @@
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
-        <item name="android:textColorPrimary">@color/highGrey</item>
-        <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
-        <item name="android:textColorSecondary">@color/mediumGrey</item>
-        <item name="android:textColorHighlight">@color/white</item>
 
         <!--Component styles-->
         <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
@@ -51,7 +42,7 @@
         <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton.DarkText</item>
     </style>
 
-    <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
+    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -79,10 +70,26 @@
         <item name="colorControlNormal">@color/lowGrey</item>
     </style>
 
-    <!--Not supported officialy-->
-    <style name="Theme.Avon" parent="Theme.Natura">
+    <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Avon" parent="Theme.DsBaseLight">
         <item name="colorPrimary">@color/avonLightPrimary</item>
+        <item name="colorOnPrimary">@color/avonLightOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/avonLightPrimaryDark</item>
         <item name="colorSecondary">@color/avonSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
+
+        <!-- adding tokens custom colors to theme -->
+        <item name="colorPrimaryLight">@color/avonLightPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/avonLightOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/avonLightOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
@@ -91,6 +98,28 @@
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AvonDark" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/avonDarkPrimary</item>
+        <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/avonDarkPrimaryDark</item>
+        <item name="colorSecondary">@color/avonSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
+
+        <!-- adding tokens custom colors to theme -->
+        <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/avonDarkOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+    </style>
+
+    <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

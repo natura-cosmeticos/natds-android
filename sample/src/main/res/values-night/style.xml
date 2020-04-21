@@ -2,4 +2,7 @@
 <resources>
     <style name="Theme.Natura.NoActionBar" parent="Theme.NaturaDark.NoActionBar"/>
     <style name="Theme.Natura" parent="Theme.NaturaDark"/>
+
+    <style name="Theme.Avon.NoActionBar" parent="Theme.AvonDark.NoActionBar"/>
+    <style name="Theme.Avon" parent="Theme.AvonDark"/>
 </resources>
