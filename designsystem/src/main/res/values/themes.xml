@@ -52,6 +52,7 @@
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
@@ -105,7 +106,7 @@
     <style name="Theme.AvonDark" parent="Theme.DsBaseDark">
         <item name="colorPrimary">@color/avonDarkPrimary</item>
         <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
-        <item name="colorPrimaryVariant">@color/avonDarkPrimaryDark</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/avonSecondary</item>
         <item name="colorOnSecondary">@color/avonOnSecondary</item>
         <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
@@ -131,16 +132,16 @@
     <style name="Theme.BodyShop" parent="Theme.DsBaseLight">
         <item name="colorPrimary">@color/tbsLightPrimary</item>
         <item name="colorOnPrimary">@color/tbsLightOnColors</item>
-        <item name="colorPrimaryVariant">@color/tbsLightPrimaryDark</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/tbsLightSecondary</item>
-        <item name="colorOnSecondary">@color/tbsLightOnColors</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
         <item name="colorSecondaryVariant">@color/tbsLightSecondaryDark</item>
         <item name="colorPrimaryLight">@color/tbsLightPrimaryLight</item>
         <item name="colorOnPrimaryLight">?colorOnPrimary</item>
         <item name="colorOnPrimaryDark">?colorOnPrimary</item>
         <item name="colorSecondaryLight">@color/tbsLightSecondaryLight</item>
-        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
-        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+        <item name="colorOnSecondaryLight">?colorOnPrimary</item>
+        <item name="colorOnSecondaryDark">?colorOnPrimary</item>
 
         <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
@@ -161,10 +162,11 @@
     <style name="Theme.BodyShopDark" parent="Theme.DsBaseDark">
         <item name="colorPrimary">@color/tbsDarkPrimary</item>
         <item name="colorOnPrimary">@color/tbsDarkOnColors</item>
-        <item name="colorPrimaryVariant">@color/tbsDarkPrimaryDark</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/tbsDarkSecondary</item>
-        <item name="colorOnSecondary">@color/tbsLightOnColors</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
         <item name="colorSecondaryVariant">@color/tbsDarkSecondaryDark</item>
+
         <item name="colorPrimaryLight">@color/tbsDarkPrimaryLight</item>
         <item name="colorOnPrimaryLight">?colorOnPrimary</item>
         <item name="colorOnPrimaryDark">?colorOnPrimary</item>
