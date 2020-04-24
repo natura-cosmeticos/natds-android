@@ -3,8 +3,6 @@ package com.natura.android.textfield
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
-import android.support.constraint.ConstraintLayout
-import android.support.v4.content.ContextCompat
 import android.text.InputFilter
 import android.util.AttributeSet
 import android.view.View
@@ -12,6 +10,8 @@ import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 

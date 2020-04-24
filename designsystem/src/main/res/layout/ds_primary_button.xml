@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/primary_button_main"
@@ -8,7 +9,7 @@
     android:background="@drawable/ds_button_primary_background"
     android:clickable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    tools:parentTag="android.support.constraint.ConstraintLayout">
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <com.natura.android.icon.FontIcon
         android:id="@+id/button_primary_icon_left"
@@ -24,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="EA08" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/button_primary_text"
         style="@style/RobotoMedium"
         android:layout_width="wrap_content"
@@ -57,4 +58,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="EA08" />
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

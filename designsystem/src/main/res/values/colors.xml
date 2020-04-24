@@ -1,5 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- GRAY SCALE -->
+    <color name="black">@android:color/black</color>
+    <color name="superHighGrey">#121212</color>
+    <color name="highGrey">#333333</color>
+    <color name="mediumGrey">#777777</color>
+    <color name="lowGrey">#BBBBBB</color>
+    <color name="lowerGrey">#FAFAFA</color>
+    <color name="white">@android:color/white</color>
+
+    <!-- COMMON COLOR TO ALL THEMES -->
+    <color name="link">#227BBD</color>
+    <color name="onLink">@color/white</color>
+    <color name="success">#569A32</color>
+    <color name="onSuccess">@color/white</color>
+    <color name="warning">#FCC433</color>
+    <color name="onWarning">@color/highGrey</color>
+    <color name="alert">#E74627</color>
+    <color name="onAlert">@color/white</color>
+
+    <!--COMMON COLOR TO LIGHT THEMES -->
+    <color name="lightBackground">@color/lowerGrey</color>
+    <color name="lightOnBackground">@color/highGrey</color>
+    <color name="lightSurface">@color/white</color>
+    <color name="lightOnSurface">@color/highGrey</color>
+
+    <color name="lightHighlight">@color/black</color>
+    <color name="lightHighEmphasis">@color/highGrey</color>
+    <color name="lightMediumEmphasis">@color/mediumGrey</color>
+    <color name="lightLowEmphasis">@color/lowGrey</color>
+
+    <!--COMMON COLOR TO DARK THEMES -->
+    <color name="darkBackground">@color/superHighGrey</color>
+    <color name="darkOnBackground">@color/white</color>
+    <color name="darkSurface">@color/highGrey</color>
+    <color name="darkOnSurface">@color/white</color>
+
+    <color name="darkHighlight">@color/white</color>
+    <color name="darkHighEmphasis">@color/lowerGrey</color>
+    <color name="darkMediumEmphasis">@color/lowGrey</color>
+    <color name="darkLowEmphasis">@color/mediumGrey</color>
+
+    <!-- NATURA THEME BASE COLOR TOKENS -->
+    <color name="natPrimary">#F4AB34</color>
+    <color name="natOnPrimary">@color/highGrey</color>
+    <color name="natPrimaryLight">#FEFDE8</color>
+    <color name="natOnPrimaryLight">@color/highGrey</color>
+    <color name="natPrimaryDark">#EF8426</color>
+    <color name="natOnPrimaryDark">@color/highGrey</color>
+    <color name="natSecondary">#FF6B0B</color>
+    <color name="natOnSecondary">@color/black</color>
+    <color name="natSecondaryLight">#FFF8E1</color>
+    <color name="natSecondaryDark">#FF5808</color>
+
+    <!-- AVON THEME BASE COLOR TOKENS -->
+    <color name="avonSecondary">#E9E9E9</color>
+    <color name="avonOnSecondary">@color/highGrey</color>
+    <color name="avonSecondaryLight">@color/white</color>
+    <color name="avonSecondaryDark">#B7B7B7</color>
+
+    <!-- AVON LIGHT THEME BASE COLOR TOKENS -->
+    <color name="avonLightPrimary">#DE0085</color>
+    <color name="avonLightOnPrimary">@color/white</color>
+    <color name="avonLightPrimaryLight">#FF56B5</color>
+    <color name="avonLightOnPrimaryLight">@color/black</color>
+    <color name="avonLightPrimaryDark">#A70058</color>
+    <color name="avonLightOnPrimaryDark">@color/white</color>
+
+    <!-- AVON DARK THEME BASE COLOR TOKENS -->
+    <color name="avonDarkPrimary">#F091C9</color>
+    <color name="avonDarkOnPrimary">@color/black</color>
+    <color name="avonDarkPrimaryLight">#FFC3FC</color>
+    <color name="avonDarkOnPrimaryLight">@color/black</color>
+    <color name="avonDarkPrimaryDark">#BC6198</color>
+    <color name="avonDarkOnPrimaryDark">@color/black</color>
+
+    <!-- THE BODY SHOP LIGHT THEME BASE COLOR TOKENS -->
+    <color name="tbsLightPrimary">#004236</color>
+    <color name="tbsLightPrimaryLight">#356D60</color>
+    <color name="tbsLightPrimaryDark">#001D10</color>
+    <color name="tbsLightSecondary">#A55F53</color>
+    <color name="tbsLightSecondaryLight">#D98D7F</color>
+    <color name="tbsLightSecondaryDark">#73342A</color>
+    <color name="tbsLightOnColors">@color/white</color>
+
+    <!-- THE BODY SHOP DARK THEME BASE COLOR TOKENS -->
+    <color name="tbsDarkPrimary">#62B3AE</color>
+    <color name="tbsDarkPrimaryLight">#94E5E0</color>
+    <color name="tbsDarkPrimaryDark">#2F837F</color>
+    <color name="tbsDarkSecondary">#D2AD93</color>
+    <color name="tbsDarkSecondaryLight">#FFDFC4</color>
+    <color name="tbsDarkSecondaryDark">#A07E65</color>
+    <color name="tbsDarkOnColors">@color/black</color>
+
+    <!-- LEGACY COLORS REFERENCES -->
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
     <color name="colorLowEmphasis">#BBBBBB</color>
     <color name="colorMediumEmphasis">#777777</color>
@@ -7,12 +101,7 @@
     <color name="colorHighEmphasis_48">#3333330A</color>
 
     <!--Light Text Content-->
-    <color name="lightHighlight">#000000</color>
-    <color name="lightHighEmphasis">#333333</color>
-    <color name="lightMediumEmphasis">#777777</color>
-    <color name="lightLowEmphasis">#BBBBBB</color>
     <color name="lightLink">#227BBD</color>
-
     <color name="colorBrdNatRed">#e74627</color>
     <color name="colorBrdNatGreen">#569A32</color>
     <color name="colorBrdNatOrange">#FF6B06</color>
@@ -22,5 +111,4 @@
     <color name="colorBrdNatOrange_16">#1FFF6B0B</color>
     <color name="colorBrdNatGray_48">#7A333333</color>
     <color name="mtrlBtnTextColorDisabled">#61000000</color>
-
 </resources>

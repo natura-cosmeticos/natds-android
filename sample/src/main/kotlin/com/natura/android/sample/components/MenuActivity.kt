@@ -1,8 +1,8 @@
 package com.natura.android.sample.components
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 
 class MenuActivity : AppCompatActivity() {

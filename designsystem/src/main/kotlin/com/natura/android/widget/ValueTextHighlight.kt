@@ -1,10 +1,10 @@
 package com.natura.android.widget
 
 import android.content.Context
-import android.support.constraint.ConstraintLayout
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 
 class ValueTextHighlight @JvmOverloads constructor(

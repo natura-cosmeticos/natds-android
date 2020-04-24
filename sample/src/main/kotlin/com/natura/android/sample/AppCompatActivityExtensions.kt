@@ -1,8 +1,8 @@
 package com.natura.android.sample
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 fun AppCompatActivity.setContentViewWithBrand(layout: Int) {
     setContentViewWithBrand(layout, R.style.Theme_Natura, R.style.Theme_Avon, R.style.Theme_BodyShop)

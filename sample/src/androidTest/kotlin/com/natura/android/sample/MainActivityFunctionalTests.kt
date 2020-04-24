@@ -20,6 +20,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenIconDrawableScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(click())
 
         onView(ViewMatchers.withText("Icons (drawables)")).check(matches(ViewMatchers.isDisplayed()))
@@ -27,6 +28,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenIconFontsScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnIconsFont)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnIconsFont)).perform(click())
 
         onView(ViewMatchers.withText("Icons (fonts)")).check(matches(ViewMatchers.isDisplayed()))
@@ -34,6 +36,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenButtonScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(click())
 
         onView(ViewMatchers.withText("Button")).check(matches(ViewMatchers.isDisplayed()))
@@ -41,6 +44,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenSelectionControlScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnSelection)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnSelection)).perform(click())
 
         onView(ViewMatchers.withText("Selection Control")).check(matches(ViewMatchers.isDisplayed()))
@@ -48,6 +52,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenTextFieldScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnTextfield)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnTextfield)).perform(click())
 
         onView(ViewMatchers.withText("Text Field")).check(matches(ViewMatchers.isDisplayed()))
@@ -55,6 +60,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenValueTextHighlightScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(click())
 
         onView(ViewMatchers.withText("Value Text Highlight")).check(matches(ViewMatchers.isDisplayed()))
