@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setButtonsActions() {
-        btnIconsFont.setOnClickListener {
-            startActivity(Intent(this, IconActivity::class.java))
-        }
-
         btnIconsDrawables.setOnClickListener {
             startActivity(Intent(this, DrawableActivity::class.java))
+        }
+
+        btnIconsFont.setOnClickListener {
+            startActivity(Intent(this, IconActivity::class.java))
         }
 
         btnAppbar.setOnClickListener {
