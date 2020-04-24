@@ -53,7 +53,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="@dimen/ds_spacing_little"
-        android:text="RECARERGAR"
+        android:text="RECARRERGAR"
         app:button_enabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guide_end"
