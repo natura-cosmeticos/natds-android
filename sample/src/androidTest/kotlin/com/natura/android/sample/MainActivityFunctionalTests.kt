@@ -55,6 +55,7 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenValueTextHighlightScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(click())
 
         onView(ViewMatchers.withText("Value Text Highlight")).check(matches(ViewMatchers.isDisplayed()))
