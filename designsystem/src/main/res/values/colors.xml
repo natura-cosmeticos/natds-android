@@ -17,7 +17,7 @@
     <color name="warning">#FCC433</color>
     <color name="onWarning">@color/highGrey</color>
     <color name="alert">#E74627</color>
-    <color name="onAlert">@color/black</color>
+    <color name="onAlert">@color/white</color>
 
     <!--COMMON COLOR TO LIGHT THEMES -->
     <color name="lightBackground">@color/lowerGrey</color>
@@ -28,7 +28,7 @@
     <color name="lightHighlight">@color/black</color>
     <color name="lightHighEmphasis">@color/highGrey</color>
     <color name="lightMediumEmphasis">@color/mediumGrey</color>
-    <color name="lightLowEmphasis">@color/lowerGrey</color>
+    <color name="lightLowEmphasis">@color/lowGrey</color>
 
     <!--COMMON COLOR TO DARK THEMES -->
     <color name="darkBackground">@color/superHighGrey</color>

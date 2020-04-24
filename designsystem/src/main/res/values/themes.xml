@@ -4,10 +4,11 @@
     <style name="Theme.Natura" parent="Theme.DsBaseLight">
         <item name="colorPrimary">@color/natPrimary</item>
         <item name="colorOnPrimary">@color/natOnPrimary</item>
-        <item name="colorPrimaryVariant">@color/natPrimaryDark</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
@@ -15,7 +16,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- legacy definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -58,7 +59,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -84,7 +85,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/avonLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -115,7 +116,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -141,7 +142,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
@@ -171,7 +172,7 @@
         <item name="colorOnSecondaryLight">?colorOnSecondary</item>
         <item name="colorOnSecondaryDark">?colorOnSecondary</item>
 
-        <!-- definitions based on appcompat colors -->
+        <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryDark">@color/tbsDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
