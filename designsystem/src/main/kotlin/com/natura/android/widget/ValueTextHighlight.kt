@@ -57,8 +57,8 @@ class ValueTextHighlight @JvmOverloads constructor(
     }
 
     fun displayEditButton(shouldDisplay: Boolean) {
-        if (shouldDisplay) { editButton.visibility = View.VISIBLE }
-        else { editButton.visibility = View.GONE }
+        if (shouldDisplay) editButton.visibility = View.VISIBLE
+        else editButton.visibility = View.GONE
     }
 
     fun setEditButtonClickListener(listener: () -> Unit) {

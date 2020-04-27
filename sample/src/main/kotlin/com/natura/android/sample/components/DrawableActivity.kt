@@ -40,8 +40,11 @@ class DrawableActivity : AppCompatActivity() {
         R.drawable.ds_ic_outlined_navigation_directionright,
         R.drawable.ds_ic_filled_brand_naturarosacea,
         R.drawable.ds_ic_outlined_finance_money,
+        R.drawable.ds_ic_outlined_finance_charging,
         R.drawable.ds_ic_outlined_action_visibility,
-        R.drawable.ds_ic_outlined_action_visibilityoff
+        R.drawable.ds_ic_outlined_action_visibilityoff,
+        R.drawable.ds_ic_outlined_action_copy,
+        R.drawable.ds_ic_outlined_action_edit
     )
 
     private fun recoverListNames() = listOf(
