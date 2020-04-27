@@ -14,6 +14,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
+import com.natura.android.sample.components.ColorsActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -164,5 +165,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(ErrorActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksColorButtonClickStartsColorScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.colorTokensButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(ColorsActivity::class.java, shadowIntent.intentClass)
     }
 }

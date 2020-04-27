@@ -55,7 +55,7 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
 
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.expressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
     androidTestImplementation "androidx.test:rules:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:runner:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"

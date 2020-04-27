@@ -15,6 +15,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
+import com.natura.android.sample.components.ColorsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setButtonsActions() {
+        colorTokensButton.setOnClickListener {
+            startActivity(Intent(this, ColorsActivity::class.java))
+        }
+
         btnIconsDrawables.setOnClickListener {
             startActivity(Intent(this, DrawableActivity::class.java))
         }
