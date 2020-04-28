@@ -8,3 +8,4 @@
 .externalNativeBuild
 .cxx
 github_credentials.properties
+.java-version

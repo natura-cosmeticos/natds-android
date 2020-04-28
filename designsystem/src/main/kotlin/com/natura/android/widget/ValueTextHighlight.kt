@@ -3,6 +3,8 @@ package com.natura.android.widget
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
@@ -15,6 +17,7 @@ class ValueTextHighlight @JvmOverloads constructor(
 
     private lateinit var descriptionLabel: TextView
     private lateinit var highlightInfoLabel: TextView
+    private lateinit var editButton: ImageView
 
     init {
         LayoutInflater.from(context)
@@ -23,8 +26,10 @@ class ValueTextHighlight @JvmOverloads constructor(
         with(context.obtainStyledAttributes(attrs, R.styleable.ds_text_input_highlight)) {
             val description = this.getString(R.styleable.ds_text_input_highlight_description_label)
             val highlight = this.getString(R.styleable.ds_text_input_highlight_highlight_label)
+            val isEditMode = this.getBoolean(R.styleable.ds_text_input_highlight_edit_mode, false)
 
             setupView(description, highlight)
+            displayEditButton(isEditMode)
 
             this.recycle()
         }
@@ -33,6 +38,7 @@ class ValueTextHighlight @JvmOverloads constructor(
     private fun setupView(description: String?, highlight: String?) {
         descriptionLabel = findViewById(R.id.description_label)
         highlightInfoLabel = findViewById(R.id.highlight_label)
+        editButton = findViewById(R.id.edit_button)
 
         description?.let { descriptionLabel.text = it }
         highlight?.let { highlightInfoLabel.text = it }
@@ -48,5 +54,14 @@ class ValueTextHighlight @JvmOverloads constructor(
         highlightInfoLabel.text = highlightStr
         highlightInfoLabel.invalidate()
         highlightInfoLabel.requestLayout()
+    }
+
+    fun displayEditButton(shouldDisplay: Boolean) {
+        if (shouldDisplay) editButton.visibility = View.VISIBLE
+        else editButton.visibility = View.GONE
+    }
+
+    fun setEditButtonClickListener(listener: () -> Unit) {
+        editButton.setOnClickListener { listener.invoke() }
     }
 }
