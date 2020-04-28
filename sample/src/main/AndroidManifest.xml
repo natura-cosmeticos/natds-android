@@ -62,6 +62,8 @@
         <activity
             android:name=".components.StyleButtonActivity"
             android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".components.colors.ColorsActivity" />
     </application>
 
 </manifest>
