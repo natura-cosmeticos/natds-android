@@ -13,11 +13,12 @@ class ColorsTabAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
     }
 
     override fun getItem(position: Int): Fragment {
-       return  when (position) {
+        return (
+        when (position) {
             0 -> NaturaFragment()
             1 -> AvonFragment()
             else -> TheBodyShopFragment()
-        }
+        })
     }
 
     override fun getCount(): Int {

@@ -10,8 +10,7 @@ import com.natura.android.sample.R
 class AvonFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        context?.theme?.applyStyle(R.style.Theme_Avon_NoActionBar,true)
+        context?.theme?.applyStyle(R.style.Theme_Avon_NoActionBar, true)
         return inflater.inflate(R.layout.fragment_avon, container, false)
     }
-
 }
