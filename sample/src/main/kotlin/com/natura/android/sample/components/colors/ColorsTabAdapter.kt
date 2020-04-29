@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 
-class ColorsAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
+class ColorsTabAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
 
-    private val tabTitles = listOf("Natura", "Avon", "The Body Shop")
+    private val tabTitles = listOf("Natura", "Avon", "TBS")
 
     override fun getPageTitle(position: Int): CharSequence? {
         return tabTitles[position]

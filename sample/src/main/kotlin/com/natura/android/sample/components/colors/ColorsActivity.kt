@@ -12,7 +12,7 @@ class ColorsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_color)
 
-        val colorsAdapter = ColorsAdapter(supportFragmentManager)
+        val colorsAdapter = ColorsTabAdapter(supportFragmentManager)
         val viewPager: ViewPager = findViewById(R.id.brandsViewPager)
         viewPager.adapter = colorsAdapter
 
