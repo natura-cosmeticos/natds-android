@@ -3,8 +3,10 @@ package com.natura.android.sample.components.colors
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager.widget.PagerAdapter
 
-class ColorsTabAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(fragmentManager) {
+class ColorsTabAdapter(private val darkMode: Boolean, fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
 
     private val tabTitles = listOf("Natura", "Avon", "TBS")
 
@@ -12,12 +14,16 @@ class ColorsTabAdapter(fragmentManager: FragmentManager) : FragmentPagerAdapter(
         return tabTitles[position]
     }
 
+    override fun getItemPosition(`object`: Any): Int {
+        return PagerAdapter.POSITION_NONE
+    }
+
     override fun getItem(position: Int): Fragment {
         return (
         when (position) {
-            0 -> NaturaFragment()
-            1 -> AvonFragment()
-            else -> TheBodyShopFragment()
+            0 -> NaturaFragment(darkMode)
+            1 -> AvonFragment(darkMode)
+            else -> TheBodyShopFragment(darkMode)
         })
     }
 
