@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightHighlight">
+        android:background="?attr/colorHighlight">
         <TextView
             android:id="@+id/hightlightLabel"
             android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/highEmphasis">
+        android:background="?attr/colorHighEmphasis">
         <TextView
             android:id="@+id/highEmphasisLabel"
             android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightMediumEmphasis">
+        android:background="?attr/colorMediumEmphasis">
         <TextView
             android:id="@+id/mediumEmphasisLabel"
             android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightLowEmphasis">
+        android:background="?attr/colorLowEmphasis">
         <TextView
             android:id="@+id/LowEmphasisLabel"
             android:layout_width="wrap_content"

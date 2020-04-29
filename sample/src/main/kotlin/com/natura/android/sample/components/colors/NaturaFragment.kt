@@ -8,9 +8,7 @@ import androidx.fragment.app.Fragment
 import com.natura.android.sample.R
 
 class NaturaFragment : Fragment() {
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_natura, container, false)
     }
-
 }

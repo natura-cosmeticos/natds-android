@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightBackground">
+        android:background="?android:attr/colorBackground">
         <TextView
             android:id="@+id/colorBackgroundLabel"
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:layout_marginBottom="16dp"
             android:text="Background"
             android:textSize="16sp"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toTopOf="@+id/backgroundLabelText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#FAFAFA / ON: #333333"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnBackground"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorBackgroundLabel" />
@@ -48,7 +48,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/lightSurface">
+        android:background="?attr/colorSurface">
         <TextView
             android:id="@+id/colorSurfaceLabel"
             android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="16dp"
             android:text="Surface"
             android:textSize="16sp"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnSurface"
             app:layout_constraintBottom_toTopOf="@+id/colorSurfaceCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#FFFFFF / ON: #333333"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorSurfaceLabel" />
@@ -80,6 +80,5 @@
         android:layout_width="match_parent"
         android:background="@color/mediumGrey"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp">
-    </ImageView>
+        android:layout_marginBottom="10dp" />
 </merge>

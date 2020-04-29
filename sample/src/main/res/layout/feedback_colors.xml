@@ -18,7 +18,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/success">
+        android:background="?attr/colorSuccess">
         <TextView
             android:id="@+id/successLabel"
             android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
             android:layout_marginBottom="16dp"
             android:text="Success"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnSuccess"
             app:layout_constraintBottom_toTopOf="@+id/successCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="#569A32 / ON: #FFFFFF"
+            android:text="?attr/colorOnSuccess"
             android:textColor="@color/white"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/warning">
+        android:background="?attr/colorWarning">
         <TextView
             android:id="@+id/warningLabel"
             android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="16dp"
             android:text="Warning"
             android:textSize="16sp"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnWarning"
             app:layout_constraintBottom_toTopOf="@+id/warningCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#FCC433 / ON: #333333"
-            android:textColor="@color/highGrey"
+            android:textColor="?attr/colorOnWarning"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/warningLabel" />
@@ -78,7 +78,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/alert">
+        android:background="?attr/colorError">
         <TextView
             android:id="@+id/alertLabel"
             android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
             android:layout_marginBottom="16dp"
             android:text="Alert"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnError"
             app:layout_constraintBottom_toTopOf="@+id/alertCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#E74627 / ON: #FFFFFF"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnError"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/alertLabel" />
@@ -108,7 +108,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/link">
+        android:background="?attr/colorLink">
         <TextView
             android:id="@+id/linkLabel"
             android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
             android:layout_marginBottom="16dp"
             android:text="Link"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnLink"
             app:layout_constraintBottom_toTopOf="@+id/linkCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#227BBD / ON: #FFFFFF"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnLink"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/linkLabel" />

@@ -64,7 +64,7 @@
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.colors.ColorsActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.Natura.NoActionBar"/>
     </application>
 
 </manifest>
