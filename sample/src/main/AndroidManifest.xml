@@ -63,8 +63,7 @@
             android:name=".components.StyleButtonActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.colors.ColorsActivity"
-            android:theme="@style/Theme.Natura.NoActionBar"/>
+            android:name=".components.colors.ColorsActivity"/>
     </application>
 
 </manifest>

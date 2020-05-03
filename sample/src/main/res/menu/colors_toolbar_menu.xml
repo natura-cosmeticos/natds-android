@@ -9,5 +9,6 @@
         android:orderInCategory="300"
         app:showAsAction="always"
         android:icon="@drawable/ds_ic_outlined_action_lighton"
+        app:iconTint="?colorOnBackground"
         android:title="Dark Theme" />
 </menu>

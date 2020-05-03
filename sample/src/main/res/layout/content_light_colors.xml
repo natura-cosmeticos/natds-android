@@ -59,7 +59,7 @@
             android:layout_marginBottom="16dp"
             android:text="HighEmphasis"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnBackground"
             app:layout_constraintBottom_toTopOf="@+id/highEmphasisCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

@@ -11,26 +11,20 @@
         android:id="@+id/colorAppBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:outlineAmbientShadowColor="@color/white"
-        android:outlineSpotShadowColor="@color/white">
+        app:elevation="0dp">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/colorToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/ds_ic_outlined_navigation_directionright"
             app:title="Color"
-            android:background="@color/white"/>
+            android:background="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/colorTabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:tabIndicatorColor="?attr/colorHighEmphasis"
-        app:tabSelectedTextColor="?attr/colorHighEmphasis"
-        app:tabTextColor="?attr/colorMediumEmphasis"/>
+        android:layout_height="wrap_content"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/brandsViewPager"
