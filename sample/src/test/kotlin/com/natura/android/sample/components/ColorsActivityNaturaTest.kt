@@ -26,13 +26,58 @@ class ColorsActivityNaturaTest {
 
     @Test
     fun checksIfPrimaryColorMatchesWithNaturaTheme() {
-        colorsActivityScenario = ActivityScenario.launch(ColorsActivity::class.java)
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
 
             assertEquals(Color.parseColor("#F4AB34"), colorCode.color)
         }
     }
+
+    @Test
+    fun checksIfPrimaryDarkColorMatchesWithNaturaTheme() {
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
+
+            assertEquals(Color.parseColor("#EF8426"), colorCode.color)
+        }
+    }
+
+    @Test
+    fun checksIfPrimaryLightColorMatchesWithNaturaTheme() {
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
+
+            assertEquals(Color.parseColor("#FEFDE8"), colorCode.color)
+        }
+    }
+
+    @Test
+    fun checksIfSecondaryColorMatchesWithNaturaTheme() {
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
+
+            assertEquals(Color.parseColor("#FF6B0B"), colorCode.color)
+        }
+    }
+
+    @Test
+    fun checksIfSecondaryDarkColorMatchesWithNaturaTheme() {
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
+
+            assertEquals(Color.parseColor("#FF5808"), colorCode.color)
+        }
+    }
+
+    @Test
+    fun checksIfSecondaryyLightColorMatchesWithNaturaTheme() {
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
+
+            assertEquals(Color.parseColor("#FFF8E1"), colorCode.color)
+        }
+    }
+
 
     @Test
     fun checksIfLightPrimaryColorMatchesWithAvonTheme() {
