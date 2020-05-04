@@ -48,6 +48,7 @@
             app:layout_constraintStart_toStartOf="@+id/colorPrimaryLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorPrimaryDarkContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryVariant">
@@ -78,6 +79,7 @@
             app:layout_constraintStart_toStartOf="@+id/colorPrimaryDarkLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorPrimaryLightContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryLight">
@@ -109,6 +111,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorSecondaryContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSecondary">
@@ -139,6 +142,7 @@
             app:layout_constraintStart_toStartOf="@+id/colorSecondaryLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorSecondaryDarkContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSecondaryVariant">
@@ -169,6 +173,7 @@
             app:layout_constraintStart_toStartOf="@+id/colorSecondaryDarkLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorSecondaryLightContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSecondaryLight">

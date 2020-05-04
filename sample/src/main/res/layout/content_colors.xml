@@ -29,7 +29,7 @@
             android:layout_marginBottom="16dp"
             android:text="Hightlight"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorSurface"
             app:layout_constraintBottom_toTopOf="@+id/hightlightCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#000000"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/hightlightLabel" />
@@ -59,7 +59,7 @@
             android:layout_marginBottom="16dp"
             android:text="HighEmphasis"
             android:textSize="16sp"
-            android:textColor="?attr/colorOnBackground"
+            android:textColor="?attr/colorSurface"
             app:layout_constraintBottom_toTopOf="@+id/highEmphasisCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#333333"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/highEmphasisLabel" />
@@ -89,7 +89,7 @@
             android:layout_marginBottom="16dp"
             android:text="MediumEmphasis"
             android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorSurface"
             app:layout_constraintBottom_toTopOf="@+id/mediumEmphasisCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#333333"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/mediumEmphasisLabel" />
@@ -119,7 +119,7 @@
             android:layout_marginBottom="16dp"
             android:text="LowEmphasis"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorSurface"
             app:layout_constraintBottom_toTopOf="@+id/LowEmphasisCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="#BBBBBB"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/LowEmphasisLabel" />

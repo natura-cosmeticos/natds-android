@@ -12,7 +12,7 @@
         android:layout_marginBottom="10dp">
         <include layout="@layout/primary_secondary_colors" />
         <include layout="@layout/background_surface_colors" />
-        <include layout="@layout/content_light_colors"/>
+        <include layout="@layout/content_colors"/>
         <include layout="@layout/feedback_colors" />
     </LinearLayout>
 </ScrollView>
