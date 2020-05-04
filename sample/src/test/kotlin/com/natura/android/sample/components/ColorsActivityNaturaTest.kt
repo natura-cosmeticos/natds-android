@@ -78,7 +78,6 @@ class ColorsActivityNaturaTest {
         }
     }
 
-
     @Test
     fun checksIfLightPrimaryColorMatchesWithAvonTheme() {
         val avonIntent = Intent(context, ColorsActivity::class.java)
