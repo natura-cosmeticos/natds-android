@@ -17,6 +17,7 @@
         android:textColor="@color/lowGrey"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorPrimaryContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary">

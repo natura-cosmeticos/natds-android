@@ -38,7 +38,7 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if(item?.itemId == R.id.darkThemeButton) {
+        if (item?.itemId == R.id.darkThemeButton) {
             darkMode = !darkMode
             restartScreenToApplyTheme(darkMode, currentTab)
         } else {
@@ -48,7 +48,7 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     private fun colorToolBar(darkMode: Boolean) {
-        if(darkMode) {
+        if (darkMode) {
             colorToolbar.background = ColorDrawable(resources.getColor(R.color.darkSurface))
         }
     }
@@ -60,7 +60,6 @@ class ColorsActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
@@ -71,7 +70,7 @@ class ColorsActivity : AppCompatActivity() {
     private fun restartScreenToApplyTheme(darkMode: Boolean, currentTab: Int? = 0) {
         val intent = Intent(baseContext, ColorsActivity::class.java)
         intent.putExtra("darkMode", darkMode)
-        intent.putExtra("currentTab",currentTab)
+        intent.putExtra("currentTab", currentTab)
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
         startActivity(intent)
         finish()
@@ -79,19 +78,18 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     private fun setGlobalTheme(darkMode: Boolean, currentTab: Int) {
-        if(darkMode) {
-            when(currentTab) {
+        if (darkMode) {
+            when (currentTab) {
                 0 -> this.theme.applyStyle(R.style.Theme_NaturaDark_NoActionBar, true)
                 1 -> this.theme.applyStyle(R.style.Theme_AvonDark_NoActionBar, true)
                 else -> this.theme.applyStyle(R.style.Theme_BodyShopDark_NoActionBar, true)
             }
         } else {
-            when(currentTab) {
+            when (currentTab) {
                 0 -> this.theme.applyStyle(R.style.Theme_Natura_NoActionBar, true)
                 1 -> this.theme.applyStyle(R.style.Theme_Avon_NoActionBar, true)
                 else -> this.theme.applyStyle(R.style.Theme_BodyShop_NoActionBar, true)
             }
         }
     }
-
 }
