@@ -14,7 +14,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
-import com.natura.android.sample.components.colors.ColorsActivity
+import com.natura.android.sample.components.ColorsActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
