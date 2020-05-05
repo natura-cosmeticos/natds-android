@@ -39,3 +39,5 @@ enable-animations:
 
 publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
+
+run-all-sanitycheck-steps: lint unit-test instrumentation-test
