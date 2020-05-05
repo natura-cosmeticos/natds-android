@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.content_colors.*
 import kotlinx.android.synthetic.main.feedback_colors.*
 import kotlinx.android.synthetic.main.primary_secondary_colors.*
 import org.junit.Assert.assertEquals
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -319,5 +318,3 @@ class ColorsActivityAvonTest {
         const val AVON_TAB = 1
     }
 }
-
-

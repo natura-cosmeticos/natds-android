@@ -313,5 +313,3 @@ class ColorsActivityNaturaTest {
         const val NATURA_TAB = 0
     }
 }
-
-
