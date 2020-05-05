@@ -12,172 +12,173 @@ import kotlinx.android.synthetic.main.content_colors.*
 import kotlinx.android.synthetic.main.feedback_colors.*
 import kotlinx.android.synthetic.main.primary_secondary_colors.*
 import org.junit.Assert.assertEquals
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ColorsActivityNaturaTest {
+class ColorsActivityAvonTest {
 
     private lateinit var colorsActivityScenario: ActivityScenario<ColorsActivity>
 
     @Test
-    fun checksIfPrimaryColorMatchesWithNaturaTheme() {
+    fun checksIfPrimaryColorMatchesWithAvonTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#F4AB34"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#DE0085"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfPrimaryColorMatchesWithNaturaDarkTheme() {
+    fun checksIfPrimaryColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#F4AB34"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#F091C9"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfPrimaryDarkColorMatchesWithNaturaTheme() {
+    fun checksIfPrimaryDarkColorMatchesWithAvonTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#EF8426"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#A70058"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfPrimaryDarkColorMatchesWithNaturaDarkTheme() {
+    fun checksIfPrimaryDarkColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#EF8426"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#BC6198"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfPrimaryLightColorMatchesWithNaturaTheme() {
+    fun checksIfPrimaryLightColorMatchesWithAvonTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FEFDE8"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#FF56B5"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfPrimaryLightColorMatchesWithNaturaDarkTheme() {
+    fun checksIfPrimaryLightColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FEFDE8"), colorCode.color)
+            assertEquals(Color.parseColor("#FFC3FC"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
+        }
+    }
+
+    @Test
+    fun checksIfSecondaryColorMatchesWithAvonTheme() {
+        launchActivityScenarioWithLightMode()
+
+        colorsActivityScenario.onActivity { colorsActivity ->
+            val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
+            val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
+
+            assertEquals(Color.parseColor("#E9E9E9"), colorCode.color)
             assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfSecondaryColorMatchesWithNaturaTheme() {
-        launchActivityScenarioWithLightMode()
-
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
-
-            assertEquals(Color.parseColor("#FF6B0B"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
-        }
-    }
-
-    @Test
-    fun checksIfSecondaryColorMatchesWithNaturaDarkTheme() {
+    fun checksIfSecondaryColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FF6B0B"), colorCode.color)
+            assertEquals(Color.parseColor("#E9E9E9"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfSecondaryDarkColorMatchesWithNaturaTheme() {
+    fun checksIfSecondaryDarkColorMatchesWithAvonTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FF5808"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#B7B7B7"), colorCode.color)
+            assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfSecondaryDarkColorMatchesWithNaturaDarkTheme() {
+    fun checksIfSecondaryDarkColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FF5808"), colorCode.color)
+            assertEquals(Color.parseColor("#B7B7B7"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfSecondaryLightColorMatchesWithNaturaTheme() {
+    fun checksIfSecondaryLightColorMatchesWithAvonTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFF8E1"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
+            assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfSecondaryLightColorMatchesWithNaturaDarkTheme() {
+    fun checksIfSecondaryLightColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
             val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFF8E1"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
     @Test
-    fun checksIfBackgroundColorMatchesWithNaturaLightTheme() {
+    fun checksIfBackgroundColorMatchesWithAvonLightTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -190,7 +191,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfBackgroundColorMatchesWithNaturaDarkTheme() {
+    fun checksIfBackgroundColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -203,7 +204,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfSurfaceColorMatchesWithNaturaLightTheme() {
+    fun checksIfSurfaceColorMatchesWithAvonLightTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -216,7 +217,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfSurfaceColorMatchesWithNaturaDarkTheme() {
+    fun checksIfSurfaceColorMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -229,7 +230,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfContentColorsMatchesWithNaturaLightTheme() {
+    fun checksIfContentColorsMatchesWithAvonLightTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -246,7 +247,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfContentColorsMatchesWithNaturaDarkTheme() {
+    fun checksIfContentColorsMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -263,7 +264,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfFeedbackColorsMatchesWithNaturaLightTheme() {
+    fun checksIfFeedbackColorsMatchesWithAvonLightTheme() {
         launchActivityScenarioWithLightMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -280,7 +281,7 @@ class ColorsActivityNaturaTest {
     }
 
     @Test
-    fun checksIfFeedbackColorsMatchesWithNaturaDarkTheme() {
+    fun checksIfFeedbackColorsMatchesWithAvonDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
         colorsActivityScenario.onActivity { colorsActivity ->
@@ -297,7 +298,12 @@ class ColorsActivityNaturaTest {
     }
 
     private fun launchActivityScenarioWithLightMode() {
-        colorsActivityScenario = ActivityScenario.launch(ColorsActivity::class.java)
+        val context: Context = getApplicationContext()
+
+        val avonIntent = Intent(context, ColorsActivity::class.java)
+        avonIntent.putExtra("darkMode", false)
+        avonIntent.putExtra("currentTab", AVON_TAB)
+        colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 
     private fun launchActivityScenarioWithDarkMode() {
@@ -305,12 +311,12 @@ class ColorsActivityNaturaTest {
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", true)
-        avonIntent.putExtra("currentTab", NATURA_TAB)
+        avonIntent.putExtra("currentTab", AVON_TAB)
         colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 
     companion object {
-        const val NATURA_TAB = 0
+        const val AVON_TAB = 1
     }
 }
 

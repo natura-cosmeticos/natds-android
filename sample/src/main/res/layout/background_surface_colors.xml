@@ -16,6 +16,7 @@
         android:textSize="12sp"
         android:textColor="@color/lowGrey"/>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorBackgroundContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/colorBackground">
@@ -46,6 +47,7 @@
             app:layout_constraintStart_toStartOf="@+id/colorBackgroundLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorSurfaceContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSurface">

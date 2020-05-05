@@ -16,6 +16,7 @@
         android:textSize="12sp"
         android:textColor="@color/lowGrey"/>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorSuccessContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSuccess">
@@ -46,6 +47,7 @@
             app:layout_constraintStart_toStartOf="@+id/successLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorWarningContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorWarning">
@@ -76,6 +78,7 @@
             app:layout_constraintStart_toStartOf="@+id/warningLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorAlertContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorError">
@@ -106,6 +109,7 @@
             app:layout_constraintStart_toStartOf="@+id/alertLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/colorLinkContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorLink">

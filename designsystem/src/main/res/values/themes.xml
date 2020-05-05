@@ -108,7 +108,7 @@
         <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/avonSecondary</item>
-        <item name="colorOnSecondary">@color/avonOnSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondaryDark</item>
         <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
         <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>

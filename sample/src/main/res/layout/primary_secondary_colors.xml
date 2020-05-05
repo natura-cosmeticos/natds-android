@@ -185,7 +185,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="SecondaryDark"
+            android:text="SecondaryLight"
             android:textSize="16sp"
             android:textColor="?attr/colorOnSecondaryLight"
             app:layout_constraintBottom_toTopOf="@+id/colorSecondaryLightCodeLabel"
