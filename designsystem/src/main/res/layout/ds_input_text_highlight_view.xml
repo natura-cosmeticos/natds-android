@@ -34,25 +34,10 @@
         android:layout_marginRight="@dimen/ds_spacin_tiny"
         android:gravity="end"
         app:layout_constraintBottom_toBottomOf="@id/description_label"
-        app:layout_constraintEnd_toStartOf="@id/edit_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/description_label"
         app:layout_constraintTop_toTopOf="@id/description_label"
         tools:text="$ 120,75" />
-
-    <ImageView
-        android:id="@+id/edit_button"
-        android:layout_width="@dimen/ds_spacing_border_top"
-        android:layout_height="@dimen/ds_spacing_border_top"
-        android:layout_marginStart="@dimen/ds_spacing_micro"
-        android:layout_marginLeft="@dimen/ds_spacing_micro"
-        android:layout_marginEnd="@dimen/ds_spacin_tiny"
-        android:layout_marginRight="@dimen/ds_spacin_tiny"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        app:layout_constraintBottom_toBottomOf="@id/highlight_label"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/highlight_label"
-        app:layout_constraintTop_toTopOf="@id/highlight_label"
-        app:srcCompat="@drawable/ds_ic_outlined_action_edit" />
 
     <View
         android:id="@+id/inferior_divider"

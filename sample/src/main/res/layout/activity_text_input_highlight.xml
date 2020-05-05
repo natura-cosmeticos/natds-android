@@ -22,7 +22,6 @@
     <com.natura.android.widget.ValueTextHighlight
         android:id="@+id/highlightInitViaCode"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:edit_mode="true" />
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
