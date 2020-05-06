@@ -52,7 +52,7 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
-    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayout"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
 
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
