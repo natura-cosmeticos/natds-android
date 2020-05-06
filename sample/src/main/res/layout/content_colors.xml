@@ -15,36 +15,26 @@
         android:padding="10dp"
         android:textSize="12sp"
         android:textColor="@color/lowGrey"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorHighLightContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorHighlight">
+
         <TextView
             android:id="@+id/hightlightLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="8dp"
             android:text="Hightlight"
-            android:textSize="16sp"
             android:textColor="?attr/colorSurface"
-            app:layout_constraintBottom_toTopOf="@+id/hightlightCodeLabel"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/hightlightCodeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="#000000"
-            android:textColor="?attr/colorSurface"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/hightlightLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorHighEmphasisContainer"
@@ -56,26 +46,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="HighEmphasis"
             android:textSize="16sp"
             android:textColor="?attr/colorSurface"
-            app:layout_constraintBottom_toTopOf="@+id/highEmphasisCodeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/highEmphasisCodeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="#333333"
-            android:textColor="?attr/colorSurface"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/highEmphasisLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorMediumEmphasisContainer"
@@ -87,26 +65,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="MediumEmphasis"
             android:textSize="16sp"
             android:textColor="?attr/colorSurface"
-            app:layout_constraintBottom_toTopOf="@+id/mediumEmphasisCodeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/mediumEmphasisCodeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="#333333"
-            android:textColor="?attr/colorSurface"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/mediumEmphasisLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorLowEmphasisContainer"
@@ -118,26 +84,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="LowEmphasis"
             android:textSize="16sp"
             android:textColor="?attr/colorSurface"
-            app:layout_constraintBottom_toTopOf="@+id/LowEmphasisCodeLabel"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/LowEmphasisCodeLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="#BBBBBB"
-            android:textColor="?attr/colorSurface"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/LowEmphasisLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <ImageView
         android:layout_height="0.5dp"
