@@ -12,7 +12,7 @@
         android:layout_gravity="center_vertical"
         android:background="@color/background"
         android:orientation="vertical"
-        android:paddingTop="280dp">
+        android:paddingTop="320dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -52,6 +52,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Icons (fonts)"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSpacing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spacing"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
