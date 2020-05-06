@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ColorsActivity">
+
+    <item
+        android:id="@+id/darkThemeButton"
+        android:orderInCategory="300"
+        app:showAsAction="always"
+        android:icon="@drawable/ds_ic_outlined_action_lighton"
+        app:iconTint="?colorOnBackground"
+        android:title="Dark Theme" />
+</menu>

@@ -20,7 +20,7 @@
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
@@ -64,7 +64,7 @@
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -90,7 +90,7 @@
         <item name="colorPrimaryDark">@color/avonLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
 
         <!--Material buttons style-->
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
@@ -108,7 +108,7 @@
         <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/avonSecondary</item>
-        <item name="colorOnSecondary">@color/avonOnSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondaryDark</item>
         <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
         <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>
@@ -121,7 +121,7 @@
         <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -147,7 +147,7 @@
         <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
@@ -178,7 +178,7 @@
         <item name="colorPrimaryDark">@color/tbsDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">@color/lowGrey</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
 
         <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>

@@ -12,6 +12,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$android_tools_gradle"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
     }
 }
@@ -30,7 +31,7 @@ task clean(type: Delete) {
 
 ext {
     // Sdk and tools
-    minSdkVersion = 16
+    minSdkVersion = 19
     targetSdkVersion = 29
     compileSdkVersion = 29
     buildToolsVersion = '29.0.2'
@@ -39,7 +40,7 @@ ext {
     constraintLayout = '1.1.3'
     junitVersion = '4.12'
     junitExtVersion = '1.1.0'
-    expressoVersion = '3.1.1'
+    espressoVersion = '3.1.1'
     ktlintVersion = '0.35.0'
     androidXTestVersion = '1.2.0'
     testCoreKtxVersion = "1.2.0"

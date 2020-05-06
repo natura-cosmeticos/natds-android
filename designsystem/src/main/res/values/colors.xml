@@ -56,6 +56,7 @@
     <!-- AVON THEME BASE COLOR TOKENS -->
     <color name="avonSecondary">#E9E9E9</color>
     <color name="avonOnSecondary">@color/highGrey</color>
+    <color name="avonOnSecondaryDark">@color/black</color>
     <color name="avonSecondaryLight">@color/white</color>
     <color name="avonSecondaryDark">#B7B7B7</color>
 
