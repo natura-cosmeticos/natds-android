@@ -27,6 +27,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenBorderRadiusScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(click())
+
+        onView(ViewMatchers.withText("Border Radius")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenSpacingScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.btnSpacing)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnSpacing)).perform(click())
