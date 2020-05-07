@@ -215,6 +215,15 @@
         <item name="android:textColorSecondary">@color/mediumGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
+
+        <item name="spacingNone">@dimen/ds_spacing_none</item>
+        <item name="spacingMicro">@dimen/ds_spacing_micro</item>
+        <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
+        <item name="spacingSmall">@dimen/ds_spacing_small</item>
+        <item name="spacingStandard">@dimen/ds_spacing_standard</item>
+        <item name="spacingSemi">@dimen/ds_spacing_semi</item>
+        <item name="spacingLarge">@dimen/ds_spacing_large</item>
+        <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -242,9 +251,18 @@
         <item name="android:textColorSecondary">@color/lowerGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
+
+        <item name="spacingNone">@dimen/ds_spacing_none</item>
+        <item name="spacingMicro">@dimen/ds_spacing_micro</item>
+        <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
+        <item name="spacingSmall">@dimen/ds_spacing_small</item>
+        <item name="spacingStandard">@dimen/ds_spacing_standard</item>
+        <item name="spacingSemi">@dimen/ds_spacing_semi</item>
+        <item name="spacingLarge">@dimen/ds_spacing_large</item>
+        <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
     </style>
 
-    <!-- tokens attributes not covered by material theme -->
+    <!-- color tokens attributes not covered by material theme -->
     <attr name="colorPrimaryLight" format="color"/>
     <attr name="colorOnPrimaryLight" format="color"/>
     <attr name="colorOnPrimaryDark" format="color"/>
@@ -261,4 +279,14 @@
     <attr name="colorOnSuccess" format="color"/>
     <attr name="colorWarning" format="color"/>
     <attr name="colorOnWarning" format="color"/>
+
+    <!-- spacing tokens attributes not covered by material theme -->
+    <attr name="spacingNone" format="dimension"/>
+    <attr name="spacingMicro" format="dimension"/>
+    <attr name="spacingTiny" format="dimension"/>
+    <attr name="spacingSmall" format="dimension"/>
+    <attr name="spacingStandard" format="dimension"/>
+    <attr name="spacingSemi" format="dimension"/>
+    <attr name="spacingLarge" format="dimension"/>
+    <attr name="spacingXLarge" format="dimension"/>
 </resources>

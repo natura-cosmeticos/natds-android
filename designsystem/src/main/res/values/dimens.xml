@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- SPACING TOKENS -->
+    <dimen name="ds_spacing_none">0dp</dimen>
+    <dimen name="ds_spacing_micro">4dp</dimen>
+    <dimen name="ds_spacing_tiny">8dp</dimen>
     <dimen name="ds_spacing_small">16dp</dimen>
+    <dimen name="ds_spacing_standard">24dp</dimen>
+    <dimen name="ds_spacing_semi">32dp</dimen>
+    <dimen name="ds_spacing_large">48dp</dimen>
+    <dimen name="ds_spacing_x_large">64dp</dimen>
+
+    <!-- Legacy Spacing -->
     <dimen name="ds_spacing_little">12dp</dimen>
     <dimen name="ds_spacin_tiny">8dp</dimen>
-    <dimen name="ds_spacing_micro">4dp</dimen>
-    <dimen name="ds_spacing_standard">24dp</dimen>
     <dimen name="ds_appbar_overlay">2dp</dimen>
     <dimen name="ds_size_line">1dp</dimen>
     <dimen name="ds_border_tiny">1dp</dimen>
