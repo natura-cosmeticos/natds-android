@@ -34,7 +34,6 @@ class MainActivityFunctionalTests {
         onView(ViewMatchers.withText("Icons (fonts)")).check(matches(ViewMatchers.isDisplayed()))
     }
 
-
     @Test
     fun shouldOpenSizeScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.sizeButton)).perform(scrollTo())
