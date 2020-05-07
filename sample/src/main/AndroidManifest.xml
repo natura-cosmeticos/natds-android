@@ -12,6 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".SizeActivity"
+            android:theme="@style/Theme.Natura"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +33,8 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".components.ErrorActivity"
+        <activity
+            android:name=".components.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.TextFieldActivity"
@@ -48,10 +52,10 @@
             android:name=".components.MenuActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.IconActivity"
+            android:name=".tokens.IconActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.DrawableActivity"
+            android:name=".tokens.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.LoadingActivity"
@@ -62,8 +66,7 @@
         <activity
             android:name=".components.StyleButtonActivity"
             android:theme="@style/Theme.Natura" />
-        <activity
-            android:name=".components.ColorsActivity"/>
+        <activity android:name=".tokens.ColorsActivity" />
     </application>
 
 </manifest>

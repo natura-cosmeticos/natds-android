@@ -42,4 +42,24 @@
     <!-- Card -->
     <dimen name="ds_default_card_elevation">2dp</dimen>
     <dimen name="ds_default_card_corner_radius">4dp</dimen>
+
+    <!-- Size definitions -->
+    <dimen name="ds_size_none">0dp</dimen>
+    <dimen name="ds_size_micro">4dp</dimen>
+    <dimen name="ds_size_tiny">8dp</dimen>
+    <dimen name="ds_size_small">16dp</dimen>
+    <dimen name="ds_size_standard">24dp</dimen>
+    <dimen name="ds_size_semi">32dp</dimen>
+    <dimen name="ds_size_semi_x">40dp</dimen>
+    <dimen name="ds_size_medium">48dp</dimen>
+    <dimen name="ds_size_medium_x">56dp</dimen>
+    <dimen name="ds_size_large">64dp</dimen>
+    <dimen name="ds_size_large_x">72dp</dimen>
+    <dimen name="ds_size_large_xx">80dp</dimen>
+    <dimen name="ds_size_large_xxx">88dp</dimen>
+    <dimen name="ds_size_huge">96dp</dimen>
+    <dimen name="ds_size_huge_x">128dp</dimen>
+    <dimen name="ds_size_huge_xx">144dp</dimen>
+    <dimen name="ds_size_huge_xxx">192dp</dimen>
+    <dimen name="ds_size_very_huge">256dp</dimen>
 </resources>

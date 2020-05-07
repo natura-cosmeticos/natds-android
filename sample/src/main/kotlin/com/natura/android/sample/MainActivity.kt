@@ -4,10 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.AppBarActivity
-import com.natura.android.sample.components.DrawableActivity
+import com.natura.android.sample.tokens.DrawableActivity
 import com.natura.android.sample.components.ErrorActivity
 import com.natura.android.sample.components.ExpandableNavigationViewActivity
-import com.natura.android.sample.components.IconActivity
+import com.natura.android.sample.tokens.IconActivity
 import com.natura.android.sample.components.LoadingActivity
 import com.natura.android.sample.components.MenuActivity
 import com.natura.android.sample.components.SelectionControlActivity
@@ -15,7 +15,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
-import com.natura.android.sample.components.ColorsActivity
+import com.natura.android.sample.tokens.ColorsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

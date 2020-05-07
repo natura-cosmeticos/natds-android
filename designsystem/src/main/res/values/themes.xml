@@ -215,6 +215,25 @@
         <item name="android:textColorSecondary">@color/mediumGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
+
+        <item name="sizeNone">@dimen/ds_size_none</item>
+        <item name="sizeMicro">@dimen/ds_size_micro</item>
+        <item name="sizeTiny">@dimen/ds_size_tiny</item>
+        <item name="sizeSmall">@dimen/ds_size_small</item>
+        <item name="sizeStandard">@dimen/ds_size_standard</item>
+        <item name="sizeSemi">@dimen/ds_size_semi</item>
+        <item name="sizeSemiX">@dimen/ds_size_semi_x</item>
+        <item name="sizeMedium">@dimen/ds_size_medium</item>
+        <item name="sizeMediumX">@dimen/ds_size_medium_x</item>
+        <item name="sizeLarge">@dimen/ds_size_large</item>
+        <item name="sizeLargeX">@dimen/ds_size_large_x</item>
+        <item name="sizeLargeXX">@dimen/ds_size_large_xx</item>
+        <item name="sizeLargeXXX">@dimen/ds_size_large_xxx</item>
+        <item name="sizeHuge">@dimen/ds_size_huge</item>
+        <item name="sizeHugeX">@dimen/ds_size_huge_x</item>
+        <item name="sizeHugeXX">@dimen/ds_size_huge_xx</item>
+        <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
+        <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -242,6 +261,25 @@
         <item name="android:textColorSecondary">@color/lowerGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
+
+        <item name="sizeNone">@dimen/ds_size_none</item>
+        <item name="sizeMicro">@dimen/ds_size_micro</item>
+        <item name="sizeTiny">@dimen/ds_size_tiny</item>
+        <item name="sizeSmall">@dimen/ds_size_small</item>
+        <item name="sizeStandard">@dimen/ds_size_standard</item>
+        <item name="sizeSemi">@dimen/ds_size_semi</item>
+        <item name="sizeSemiX">@dimen/ds_size_semi_x</item>
+        <item name="sizeMedium">@dimen/ds_size_medium</item>
+        <item name="sizeMediumX">@dimen/ds_size_medium_x</item>
+        <item name="sizeLarge">@dimen/ds_size_large</item>
+        <item name="sizeLargeX">@dimen/ds_size_large_x</item>
+        <item name="sizeLargeXX">@dimen/ds_size_large_xx</item>
+        <item name="sizeLargeXXX">@dimen/ds_size_large_xxx</item>
+        <item name="sizeHuge">@dimen/ds_size_huge</item>
+        <item name="sizeHugeX">@dimen/ds_size_huge_x</item>
+        <item name="sizeHugeXX">@dimen/ds_size_huge_xx</item>
+        <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
+        <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
     </style>
 
     <!-- tokens attributes not covered by material theme -->
@@ -261,4 +299,23 @@
     <attr name="colorOnSuccess" format="color"/>
     <attr name="colorWarning" format="color"/>
     <attr name="colorOnWarning" format="color"/>
+
+    <attr name="sizeNone" format="dimension"/>
+    <attr name="sizeMicro" format="dimension"/>
+    <attr name="sizeTiny" format="dimension"/>
+    <attr name="sizeSmall" format="dimension"/>
+    <attr name="sizeStandard" format="dimension"/>
+    <attr name="sizeSemi" format="dimension"/>
+    <attr name="sizeSemiX" format="dimension"/>
+    <attr name="sizeMedium" format="dimension"/>
+    <attr name="sizeMediumX" format="dimension"/>
+    <attr name="sizeLarge" format="dimension"/>
+    <attr name="sizeLargeX" format="dimension"/>
+    <attr name="sizeLargeXX" format="dimension"/>
+    <attr name="sizeLargeXXX" format="dimension"/>
+    <attr name="sizeHuge" format="dimension"/>
+    <attr name="sizeHugeX" format="dimension"/>
+    <attr name="sizeHugeXX" format="dimension"/>
+    <attr name="sizeHugeXXX" format="dimension"/>
+    <attr name="sizeVeryHuge" format="dimension"/>
 </resources>
