@@ -36,7 +36,7 @@
                 android:text="None - 0dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
             android:text="Micro - 4dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
                 android:text="Tiny - 8dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
                 android:text="Small - 16dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -331,7 +331,7 @@
                 android:text="Standard - 24dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -404,7 +404,7 @@
                 android:text="Semi - 32dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -477,7 +477,7 @@
                 android:text="Large - 48dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -550,7 +550,7 @@
                 android:text="XLarge - 64dp"
                 android:padding="10dp"
                 android:textSize="12sp"
-                android:textColor="@color/lowGrey"/>
+                android:textColor="?attr/colorMediumEmphasis"/>
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

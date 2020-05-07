@@ -16,7 +16,7 @@
             android:text="Size None - 0dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeNone"
             android:backgroundTint="?colorPrimary"
@@ -38,7 +38,7 @@
             android:text="Size Micro - 4dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMicro"
             android:backgroundTint="?colorPrimary"
@@ -60,7 +60,7 @@
             android:text="Size Tiny - 8dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeTiny"
             android:backgroundTint="?colorPrimary"
@@ -82,7 +82,7 @@
             android:text="Size Small - 16dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSmall"
             android:backgroundTint="?colorPrimary"
@@ -104,7 +104,7 @@
             android:text="Size Standard - 24dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeStandard"
             android:backgroundTint="?colorPrimary"
@@ -126,7 +126,7 @@
             android:text="Size Semi - 32dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSemi"
             android:backgroundTint="?colorPrimary"
@@ -148,7 +148,7 @@
             android:text="Size SemiX - 40dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSemiX"
             android:backgroundTint="?colorPrimary"
@@ -170,7 +170,7 @@
             android:text="Size Medium - 48dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMedium"
             android:backgroundTint="?colorPrimary"
@@ -192,7 +192,7 @@
             android:text="Size MediumX - 56dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMediumX"
             android:backgroundTint="?colorPrimary"
@@ -214,7 +214,7 @@
             android:text="Size Large - 64dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLarge"
             android:backgroundTint="?colorPrimary"
@@ -236,7 +236,7 @@
             android:text="Size LargeX - 72dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeX"
             android:backgroundTint="?colorPrimary"
@@ -258,7 +258,7 @@
             android:text="Size LargeXX - 80dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeXX"
             android:backgroundTint="?colorPrimary"
@@ -280,7 +280,7 @@
             android:text="Size LargeXXX - 88dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeXXX"
             android:backgroundTint="?colorPrimary"
@@ -302,7 +302,7 @@
             android:text="Size Huge - 96dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHuge"
             android:backgroundTint="?colorPrimary"
@@ -324,7 +324,7 @@
             android:text="Size HugeX - 128dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeX"
             android:backgroundTint="?colorPrimary"
@@ -346,7 +346,7 @@
             android:text="Size HugeXX - 144dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeXX"
             android:backgroundTint="?colorPrimary"
@@ -368,7 +368,7 @@
             android:text="Size HugeXXX - 192dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeXXX"
             android:backgroundTint="?colorPrimary"
@@ -390,7 +390,7 @@
             android:text="Size Very Huge - 256dp"
             android:padding="10dp"
             android:textSize="12sp"
-            android:textColor="@color/lowGrey"/>
+            android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeVeryHuge"
             android:backgroundTint="?colorPrimary"
