@@ -177,4 +177,15 @@ class MainActivityTest {
 
         assertEquals(ColorsActivity::class.java, shadowIntent.intentClass)
     }
+
+    @Test
+    fun checksSizeButtonClickStartsSizerScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.sizeButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(SizeActivity::class.java, shadowIntent.intentClass)
+    }
 }

@@ -41,6 +41,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, IconActivity::class.java))
         }
 
+        sizeButton.setOnClickListener {
+            startActivity(Intent(this, SizeActivity::class.java))
+        }
+
         btnAppbar.setOnClickListener {
             startActivity(Intent(this, AppBarActivity::class.java))
         }
