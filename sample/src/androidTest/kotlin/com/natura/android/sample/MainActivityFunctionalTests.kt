@@ -19,6 +19,22 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenColorScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
+
+        onView(ViewMatchers.withText("Color")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenSpacingScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.btnSpacing)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.btnSpacing)).perform(click())
+
+        onView(ViewMatchers.withText("Spacing")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenIconDrawableScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(click())

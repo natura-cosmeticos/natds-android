@@ -216,6 +216,15 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
 
+        <item name="spacingNone">@dimen/ds_spacing_none</item>
+        <item name="spacingMicro">@dimen/ds_spacing_micro</item>
+        <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
+        <item name="spacingSmall">@dimen/ds_spacing_small</item>
+        <item name="spacingStandard">@dimen/ds_spacing_standard</item>
+        <item name="spacingSemi">@dimen/ds_spacing_semi</item>
+        <item name="spacingLarge">@dimen/ds_spacing_large</item>
+        <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
+
         <item name="sizeNone">@dimen/ds_size_none</item>
         <item name="sizeMicro">@dimen/ds_size_micro</item>
         <item name="sizeTiny">@dimen/ds_size_tiny</item>
@@ -262,6 +271,15 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
 
+        <item name="spacingNone">@dimen/ds_spacing_none</item>
+        <item name="spacingMicro">@dimen/ds_spacing_micro</item>
+        <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
+        <item name="spacingSmall">@dimen/ds_spacing_small</item>
+        <item name="spacingStandard">@dimen/ds_spacing_standard</item>
+        <item name="spacingSemi">@dimen/ds_spacing_semi</item>
+        <item name="spacingLarge">@dimen/ds_spacing_large</item>
+        <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
+
         <item name="sizeNone">@dimen/ds_size_none</item>
         <item name="sizeMicro">@dimen/ds_size_micro</item>
         <item name="sizeTiny">@dimen/ds_size_tiny</item>
@@ -282,7 +300,7 @@
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
     </style>
 
-    <!-- tokens attributes not covered by material theme -->
+    <!-- color tokens attributes not covered by material theme -->
     <attr name="colorPrimaryLight" format="color"/>
     <attr name="colorOnPrimaryLight" format="color"/>
     <attr name="colorOnPrimaryDark" format="color"/>
@@ -300,6 +318,17 @@
     <attr name="colorWarning" format="color"/>
     <attr name="colorOnWarning" format="color"/>
 
+    <!-- spacing tokens attributes -->
+    <attr name="spacingNone" format="dimension"/>
+    <attr name="spacingMicro" format="dimension"/>
+    <attr name="spacingTiny" format="dimension"/>
+    <attr name="spacingSmall" format="dimension"/>
+    <attr name="spacingStandard" format="dimension"/>
+    <attr name="spacingSemi" format="dimension"/>
+    <attr name="spacingLarge" format="dimension"/>
+    <attr name="spacingXLarge" format="dimension"/>
+
+    <!-- size tokens attributes -->
     <attr name="sizeNone" format="dimension"/>
     <attr name="sizeMicro" format="dimension"/>
     <attr name="sizeTiny" format="dimension"/>

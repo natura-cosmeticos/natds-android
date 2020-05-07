@@ -16,6 +16,7 @@ import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
 import com.natura.android.sample.tokens.ColorsActivity
+import com.natura.android.sample.components.SpacingActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         btnIconsFont.setOnClickListener {
             startActivity(Intent(this, IconActivity::class.java))
+        }
+
+        btnSpacing.setOnClickListener {
+            startActivity(Intent(this, SpacingActivity::class.java))
         }
 
         sizeButton.setOnClickListener {

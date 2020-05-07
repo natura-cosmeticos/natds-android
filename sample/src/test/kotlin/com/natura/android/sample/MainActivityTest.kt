@@ -14,6 +14,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
+import com.natura.android.sample.components.SpacingActivity
 import com.natura.android.sample.tokens.ColorsActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -187,5 +188,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(SizeActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksSpacingButtonClickStartsSpacingScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.btnSpacing)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(SpacingActivity::class.java, shadowIntent.intentClass)
     }
 }
