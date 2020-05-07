@@ -10,6 +10,12 @@
     <dimen name="ds_spacing_large">48dp</dimen>
     <dimen name="ds_spacing_x_large">64dp</dimen>
 
+    <!-- BORDER RADIUS TOKENS -->
+    <dimen name="ds_radius_none">0dp</dimen>
+    <dimen name="ds_radius_small">2dp</dimen>
+    <dimen name="ds_radius_medium">4dp</dimen>
+    <dimen name="ds_radius_large">8dp</dimen>
+
     <!-- Legacy Spacing -->
     <dimen name="ds_spacing_little">12dp</dimen>
     <dimen name="ds_spacin_tiny">8dp</dimen>

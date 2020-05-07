@@ -13,8 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".BorderRadiusActivity"
+            android:theme="@style/Theme.Natura"/>
+        <activity
             android:name=".components.SpacingActivity"
-            android:theme="@style/Theme.Natura.NoActionBar"/>
+            android:theme="@style/Theme.Natura.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -66,8 +69,7 @@
         <activity
             android:name=".components.StyleButtonActivity"
             android:theme="@style/Theme.Natura" />
-        <activity
-            android:name=".components.ColorsActivity"/>
+        <activity android:name=".components.ColorsActivity" />
     </application>
 
 </manifest>

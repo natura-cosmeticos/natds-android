@@ -260,6 +260,12 @@
         <item name="spacingSemi">@dimen/ds_spacing_semi</item>
         <item name="spacingLarge">@dimen/ds_spacing_large</item>
         <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
+
+        <item name="borderRadiusNone">@dimen/ds_radius_none</item>
+        <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
+        <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
+        <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
+
     </style>
 
     <!-- color tokens attributes not covered by material theme -->
@@ -289,4 +295,11 @@
     <attr name="spacingSemi" format="dimension"/>
     <attr name="spacingLarge" format="dimension"/>
     <attr name="spacingXLarge" format="dimension"/>
+
+    <!-- border radius tokens attributes -->
+    <attr name="borderRadiusNone" format="dimension"/>
+    <attr name="borderRadiusSmall" format="dimension"/>
+    <attr name="borderRadiusMedium" format="dimension"/>
+    <attr name="borderRadiusLarge" format="dimension"/>
+
 </resources>
