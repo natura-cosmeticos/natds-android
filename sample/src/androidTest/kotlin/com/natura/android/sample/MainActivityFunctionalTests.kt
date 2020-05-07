@@ -20,7 +20,6 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenColorScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
 
         onView(ViewMatchers.withText("Color")).check(matches(ViewMatchers.isDisplayed()))
