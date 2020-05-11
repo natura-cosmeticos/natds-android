@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.content.Context
 import android.view.LayoutInflater

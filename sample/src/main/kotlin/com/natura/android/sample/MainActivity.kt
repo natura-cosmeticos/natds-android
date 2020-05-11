@@ -3,7 +3,21 @@ package com.natura.android.sample
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.natura.android.sample.components.*
+import com.natura.android.sample.components.AppBarActivity
+import com.natura.android.sample.tokens.DrawableActivity
+import com.natura.android.sample.components.ErrorActivity
+import com.natura.android.sample.components.ExpandableNavigationViewActivity
+import com.natura.android.sample.tokens.IconActivity
+import com.natura.android.sample.components.LoadingActivity
+import com.natura.android.sample.components.MenuActivity
+import com.natura.android.sample.components.SelectionControlActivity
+import com.natura.android.sample.components.StyleButtonActivity
+import com.natura.android.sample.components.SubmenuActivity
+import com.natura.android.sample.components.TextFieldActivity
+import com.natura.android.sample.components.ValueTextHighlightActivity
+import com.natura.android.sample.tokens.ColorsActivity
+import com.natura.android.sample.tokens.SpacingActivity
+import com.natura.android.sample.tokens.SizeActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +45,10 @@ class MainActivity : AppCompatActivity() {
 
         btnSpacing.setOnClickListener {
             startActivity(Intent(this, SpacingActivity::class.java))
+        }
+
+        sizeButton.setOnClickListener {
+            startActivity(Intent(this, SizeActivity::class.java))
         }
 
         btnAppbar.setOnClickListener {

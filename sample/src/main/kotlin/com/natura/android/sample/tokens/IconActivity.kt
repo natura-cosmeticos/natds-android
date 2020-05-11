@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -15,7 +15,10 @@ class IconActivity : AppCompatActivity() {
         val iconGrid = findViewById<RecyclerView>(R.id.icon_grid)
         iconGrid.layoutManager = GridLayoutManager(this, 3)
 
-        iconGrid.adapter = IconAdapter(this, recoverListIcons())
+        iconGrid.adapter = IconAdapter(
+            this,
+            recoverListIcons()
+        )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Icons (fonts)"
     }

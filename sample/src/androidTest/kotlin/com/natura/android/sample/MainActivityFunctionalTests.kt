@@ -51,6 +51,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenSizeScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.sizeButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.sizeButton)).perform(click())
+
+        onView(ViewMatchers.withText("Size")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenButtonScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(click())

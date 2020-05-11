@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.content.Context
 import android.content.Intent
@@ -305,7 +305,9 @@ class ColorsActivityNaturaTest {
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", true)
-        avonIntent.putExtra("currentTab", NATURA_TAB)
+        avonIntent.putExtra("currentTab",
+            NATURA_TAB
+        )
         colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 
