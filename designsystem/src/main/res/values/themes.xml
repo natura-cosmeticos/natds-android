@@ -224,6 +224,11 @@
         <item name="spacingSemi">@dimen/ds_spacing_semi</item>
         <item name="spacingLarge">@dimen/ds_spacing_large</item>
         <item name="spacingXLarge">@dimen/ds_spacing_x_large</item>
+
+        <item name="borderRadiusNone">@dimen/ds_radius_none</item>
+        <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
+        <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
+        <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -265,7 +270,6 @@
         <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
         <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
         <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
-
     </style>
 
     <!-- color tokens attributes not covered by material theme -->

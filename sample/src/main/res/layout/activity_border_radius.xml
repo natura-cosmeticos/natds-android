@@ -10,28 +10,6 @@
     tools:context=".BorderRadiusActivity"
     android:orientation="vertical"
     android:paddingBottom="40dp">
-
-    <TextView
-        android:id="@+id/borderCircleLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Border Circule"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderCircle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_circle"
-        android:orientation="vertical"
-        android:layout_gravity="center"/>
-    <ImageView
-        android:layout_height="0.5dp"
-        android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
     <TextView
         android:id="@+id/borderNoneLabel"
         android:layout_width="match_parent"
@@ -110,5 +88,27 @@
         android:background="@drawable/ds_border_radius_large"
         android:orientation="vertical"
         android:layout_gravity="center"/>
+    <ImageView
+        android:layout_height="0.5dp"
+        android:layout_width="match_parent"
+        android:background="@color/mediumGrey"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/borderCircleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Border Circule"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:textColor="?attr/colorMediumEmphasis"/>
+    <LinearLayout
+        android:id="@+id/borderCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ds_border_circle"
+        android:orientation="vertical"
+        android:layout_gravity="center"/>
+
 </LinearLayout>
 </ScrollView>
