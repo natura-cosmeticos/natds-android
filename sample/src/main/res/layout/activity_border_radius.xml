@@ -98,7 +98,7 @@
         android:id="@+id/borderCircleLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Border Circule"
+        android:text="Border Circle"
         android:padding="10dp"
         android:textSize="12sp"
         android:textColor="?attr/colorMediumEmphasis"/>
