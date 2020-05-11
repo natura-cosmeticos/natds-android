@@ -10,6 +10,20 @@
     <dimen name="ds_spacing_large">48dp</dimen>
     <dimen name="ds_spacing_x_large">64dp</dimen>
 
+    <!-- OPACITY TOKENS -->
+    <dimen name="ds_opacity0">0.0</dimen>
+    <dimen name="ds_opacity1">0.04</dimen>
+    <dimen name="ds_opacity2">0.08</dimen>
+    <dimen name="ds_opacity3">0.12</dimen>
+    <dimen name="ds_opacity4">0.16</dimen>
+    <dimen name="ds_opacity5">0.24</dimen>
+    <dimen name="ds_opacity6">0.32</dimen>
+    <dimen name="ds_opacity7">0.48</dimen>
+    <dimen name="ds_opacity8">0.56</dimen>
+    <dimen name="ds_opacity9">0.64</dimen>
+    <dimen name="ds_opacity10">0.8</dimen>
+
+
     <!-- Legacy Spacing -->
     <dimen name="ds_spacing_little">12dp</dimen>
     <dimen name="ds_spacin_tiny">8dp</dimen>
