@@ -1,18 +1,18 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
-import kotlinx.android.synthetic.main.activity_spacing.*
 
-class SpacingActivity : AppCompatActivity() {
+class SizeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_spacing)
-        setSupportActionBar(spacingToolBar)
+        setContentView(R.layout.activity_size)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Size"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

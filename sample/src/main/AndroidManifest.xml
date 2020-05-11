@@ -16,7 +16,10 @@
             android:name=".BorderRadiusActivity"
             android:theme="@style/Theme.Natura"/>
         <activity
-            android:name=".components.SpacingActivity"
+            android:name=".tokens.SizeActivity"
+            android:theme="@style/Theme.Natura"/>"
+        <activity
+            android:name=".tokens.SpacingActivity"
             android:theme="@style/Theme.Natura.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -55,10 +58,10 @@
             android:name=".components.MenuActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.IconActivity"
+            android:name=".tokens.IconActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.DrawableActivity"
+            android:name=".tokens.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.LoadingActivity"
@@ -69,7 +72,7 @@
         <activity
             android:name=".components.StyleButtonActivity"
             android:theme="@style/Theme.Natura" />
-        <activity android:name=".components.ColorsActivity" />
+        <activity android:name=".tokens.ColorsActivity" />
     </application>
 
 </manifest>

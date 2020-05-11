@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.content.Context
 import android.content.Intent
@@ -301,7 +301,9 @@ class ColorsActivityAvonTest {
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", false)
-        avonIntent.putExtra("currentTab", AVON_TAB)
+        avonIntent.putExtra("currentTab",
+            AVON_TAB
+        )
         colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 
@@ -310,7 +312,9 @@ class ColorsActivityAvonTest {
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", true)
-        avonIntent.putExtra("currentTab", AVON_TAB)
+        avonIntent.putExtra("currentTab",
+            AVON_TAB
+        )
         colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 

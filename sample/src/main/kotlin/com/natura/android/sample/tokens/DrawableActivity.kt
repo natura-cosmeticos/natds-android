@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -15,7 +15,11 @@ class DrawableActivity : AppCompatActivity() {
         val iconGrid = findViewById<RecyclerView>(R.id.icon_grid)
         iconGrid.layoutManager = GridLayoutManager(this, 2)
 
-        iconGrid.adapter = DrawableAdapter(this, recoverListIds(), recoverListNames())
+        iconGrid.adapter = DrawableAdapter(
+            this,
+            recoverListIds(),
+            recoverListNames()
+        )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle("Icons (drawables)")
     }
