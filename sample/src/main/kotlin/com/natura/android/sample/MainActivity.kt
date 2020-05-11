@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.AppBarActivity
-import com.natura.android.sample.tokens.DrawableActivity
 import com.natura.android.sample.components.ErrorActivity
 import com.natura.android.sample.components.ExpandableNavigationViewActivity
-import com.natura.android.sample.tokens.IconActivity
 import com.natura.android.sample.components.LoadingActivity
 import com.natura.android.sample.components.MenuActivity
 import com.natura.android.sample.components.SelectionControlActivity
@@ -15,9 +13,7 @@ import com.natura.android.sample.components.StyleButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
-import com.natura.android.sample.tokens.ColorsActivity
-import com.natura.android.sample.tokens.SpacingActivity
-import com.natura.android.sample.tokens.SizeActivity
+import com.natura.android.sample.tokens.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         btnIconsFont.setOnClickListener {
             startActivity(Intent(this, IconActivity::class.java))
+        }
+
+        opacityTokensButton.setOnClickListener {
+            startActivity(Intent(this, OpacityActivity::class.java))
         }
 
         btnSpacing.setOnClickListener {
