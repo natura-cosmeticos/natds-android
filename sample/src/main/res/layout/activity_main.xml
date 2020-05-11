@@ -22,6 +22,18 @@
             android:layout_gravity="start" />
 
         <Button
+            android:id="@+id/borderRadiusButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Radius"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/colorTokensButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,10 +46,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/borderRadiusButton"
+            android:id="@+id/elevationTokensButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Border Radius"
+            android:text="Elevation"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
@@ -70,10 +82,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/btnSpacing"
+            android:id="@+id/sizeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spacing"
+            android:text="Size"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
@@ -82,10 +94,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/sizeButton"
+            android:id="@+id/btnSpacing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size"
+            android:text="Spacing"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
