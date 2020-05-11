@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:name=".SizeActivity"
+            android:name=".tokens.SizeActivity"
             android:theme="@style/Theme.Natura"/>
         <activity
-            android:name=".components.SpacingActivity"
+            android:name=".tokens.SpacingActivity"
             android:theme="@style/Theme.Natura.NoActionBar"/>
         <activity android:name=".MainActivity">
             <intent-filter>

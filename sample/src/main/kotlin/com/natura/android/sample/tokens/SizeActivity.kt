@@ -1,8 +1,9 @@
-package com.natura.android.sample
+package com.natura.android.sample.tokens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import com.natura.android.sample.R
 
 class SizeActivity : AppCompatActivity() {
 

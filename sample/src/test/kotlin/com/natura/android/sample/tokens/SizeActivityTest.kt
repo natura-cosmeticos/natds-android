@@ -1,4 +1,4 @@
-package com.natura.android.sample
+package com.natura.android.sample.tokens
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".components.SpacingActivity">
+    tools:context=".tokens.SpacingActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/spacingBarLayout"
@@ -18,8 +18,7 @@
             android:id="@+id/spacingToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Spacing"
-            android:background="@color/white" />
+            app:title="Spacing" />
     </com.google.android.material.appbar.AppBarLayout>
     <ScrollView
         android:layout_width="match_parent"
