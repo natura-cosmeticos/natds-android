@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".tokens.SizeActivity"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/elevation0Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elevation None - 0dp"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardElevationNone"
+            android:backgroundTint="?android:attr/colorBackground"
+            android:layout_width="?attr/sizeMediumX"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
+            android:elevation="?attr/elevation0"/>
+        <ImageView
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/mediumGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</ScrollView>
