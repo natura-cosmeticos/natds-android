@@ -97,7 +97,7 @@
             android:id="@+id/elevation4Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 4
+            android:text="Elevation 4"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -139,7 +139,7 @@
             android:id="@+id/elevation6Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 6
+            android:text="Elevation 6"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
