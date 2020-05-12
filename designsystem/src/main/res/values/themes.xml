@@ -263,19 +263,19 @@
         <item name="elevation16">@dimen/ds_elevation16</item>
         <item name="elevation24">@dimen/ds_elevation24</item>
 
-        <item name="textAppearanceHeadline1">@style/TextAppearance.DS.Heading1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.DS.Heading2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.DS.Heading3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.DS.Heading4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.DS.Heading5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.DS.Heading6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.DS.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.DS.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.DS.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.DS.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.DS.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.DS.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.DS.Overline</item>
+        <item name="textAppearanceHeadline1">@style/Heading1</item>
+        <item name="textAppearanceHeadline2">@style/Heading2</item>
+        <item name="textAppearanceHeadline3">@style/Heading3</item>
+        <item name="textAppearanceHeadline4">@style/Heading4</item>
+        <item name="textAppearanceHeadline5">@style/Heading5</item>
+        <item name="textAppearanceHeadline6">@style/Heading6</item>
+        <item name="textAppearanceSubtitle1">@style/Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/Subtitle2</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
+        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceOverline">@style/Overline</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -351,19 +351,19 @@
         <item name="elevation16">@dimen/ds_elevation16</item>
         <item name="elevation24">@dimen/ds_elevation24</item>
 
-        <item name="textAppearanceHeadline1">@style/TextAppearance.DS.Heading1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.DS.Heading2</item>
-        <item name="textAppearanceHeadline3">@style/TextAppearance.DS.Heading3</item>
-        <item name="textAppearanceHeadline4">@style/TextAppearance.DS.Heading4</item>
-        <item name="textAppearanceHeadline5">@style/TextAppearance.DS.Heading5</item>
-        <item name="textAppearanceHeadline6">@style/TextAppearance.DS.Heading6</item>
-        <item name="textAppearanceSubtitle1">@style/TextAppearance.DS.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/TextAppearance.DS.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.DS.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.DS.Body2</item>
-        <item name="textAppearanceButton">@style/TextAppearance.DS.Button</item>
-        <item name="textAppearanceCaption">@style/TextAppearance.DS.Caption</item>
-        <item name="textAppearanceOverline">@style/TextAppearance.DS.Overline</item>
+        <item name="textAppearanceHeadline1">@style/Heading1</item>
+        <item name="textAppearanceHeadline2">@style/Heading2</item>
+        <item name="textAppearanceHeadline3">@style/Heading3</item>
+        <item name="textAppearanceHeadline4">@style/Heading4</item>
+        <item name="textAppearanceHeadline5">@style/Heading5</item>
+        <item name="textAppearanceHeadline6">@style/Heading6</item>
+        <item name="textAppearanceSubtitle1">@style/Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/Subtitle2</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
+        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceOverline">@style/Overline</item>
     </style>
 
     <!-- color tokens attributes not covered by material theme -->

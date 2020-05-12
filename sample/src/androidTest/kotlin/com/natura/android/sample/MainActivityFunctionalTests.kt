@@ -74,6 +74,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenTypographyScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.typographyButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.typographyButton)).perform(click())
+
+        onView(ViewMatchers.withText("Typography")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenButtonScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(click())

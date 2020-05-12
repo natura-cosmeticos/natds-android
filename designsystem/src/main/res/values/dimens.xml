@@ -67,19 +67,19 @@
     <dimen name="ds_size_overline">12sp</dimen>
 
     <!-- TYPOGRAPHY LINE SPACING TOKENS -->
-    <dimen name="ds_letter_spacing_h1">0.0</dimen>
-    <dimen name="ds_letter_spacing_h2">0.0</dimen>
+    <dimen name="ds_letter_spacing_h1">0</dimen>
+    <dimen name="ds_letter_spacing_h2">0</dimen>
     <dimen name="ds_letter_spacing_h3">0.0</dimen>
-    <dimen name="ds_letter_spacing_h4">0.8</dimen>
+    <dimen name="ds_letter_spacing_h4">0.25</dimen>
     <dimen name="ds_letter_spacing_h5">0</dimen>
-    <dimen name="ds_letter_spacing_h6">0.12</dimen>
-    <dimen name="ds_letter_spacing_subtitle1">0.8</dimen>
-    <dimen name="ds_letter_spacing_subtitle2">0.8</dimen>
-    <dimen name="ds_letter_spacing_body1">0.32</dimen>
-    <dimen name="ds_letter_spacing_body2">0.16</dimen>
-    <dimen name="ds_letter_spacing_button">0.88</dimen>
-    <dimen name="ds_letter_spacing_caption">0.32</dimen>
-    <dimen name="ds_letter_spacing_overline">1.6</dimen>
+    <dimen name="ds_letter_spacing_h6">0.15</dimen>
+    <dimen name="ds_letter_spacing_subtitle1">0.15</dimen>
+    <dimen name="ds_letter_spacing_subtitle2">0.15</dimen>
+    <dimen name="ds_letter_spacing_body1">0.5</dimen>
+    <dimen name="ds_letter_spacing_body2">0.25</dimen>
+    <dimen name="ds_letter_spacing_button">1.25</dimen>
+    <dimen name="ds_letter_spacing_caption">0.4</dimen>
+    <dimen name="ds_letter_spacing_overline">1.5</dimen>
 
     <!-- TYPOGRAPHY LINE HEIGHT TOKENS -->
     <dimen name="ds_line_height_reset">1</dimen>

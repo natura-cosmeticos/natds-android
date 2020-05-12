@@ -1,108 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- TYPOGRAPHY STYLES -->
-    <style name="TextAppearance.DS.Heading1" parent="TextAppearance.MaterialComponents.Headline1">
+    <style name="Heading1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h1</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h1</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
     </style>
 
-    <style name="TextAppearance.DS.Heading2" parent="TextAppearance.MaterialComponents.Headline2">
+    <style name="Heading2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h2</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h2</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Heading3" parent="TextAppearance.MaterialComponents.Headline3">
+    <style name="Heading3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h3</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h3</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Heading4" parent="TextAppearance.MaterialComponents.Headline4">
+    <style name="Heading4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h4</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h4</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Heading5" parent="TextAppearance.MaterialComponents.Headline5">
+    <style name="Heading5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h5</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h5</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Heading6" parent="TextAppearance.MaterialComponents.Headline6">
+    <style name="Heading6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h6</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_h6</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+    <style name="Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_subtitle1</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_subtitle1</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+    <style name="Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_subtitle2</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_subtitle2</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Body1" parent="TextAppearance.MaterialComponents.Body1">
+    <style name="Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_body1</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_body1</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Body2" parent="TextAppearance.MaterialComponents.Body2">
+    <style name="Body2" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_body2</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_body2</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Button" parent="TextAppearance.MaterialComponents.Button">
+    <style name="Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_button</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_button</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Caption" parent="TextAppearance.MaterialComponents.Caption">
+    <style name="Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_caption</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_caption</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
-    <style name="TextAppearance.DS.Overline" parent="TextAppearance.MaterialComponents.Overline">
+    <style name="Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_overline</item>
-        <item name="android:letterSpacing">@dimen/ds_letter_spacing_overline</item>
-        <item name="android:lineSpacingMultiplier">0</item>
+        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
     </style>
 
     <!--Navigation Drawer-->

@@ -32,6 +32,9 @@
             android:name=".tokens.SpacingActivity"
             android:theme="@style/Theme.Natura.NoActionBar" />
         <activity
+            android:name=".tokens.TypographyActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
             android:name=".components.AppBarActivity"
             android:theme="@style/Theme.Natura.NoActionBar">
             <intent-filter>
