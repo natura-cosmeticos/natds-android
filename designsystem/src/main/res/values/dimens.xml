@@ -87,7 +87,6 @@
     <dimen name="ds_line_height_medium">1.5</dimen>
     <dimen name="ds_line_height_large">2.0</dimen>
 
-
     <!-- Legacy Spacing -->
     <dimen name="ds_spacing_little">12dp</dimen>
     <dimen name="ds_spacin_tiny">8dp</dimen>
