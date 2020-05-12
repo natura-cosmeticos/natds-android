@@ -13,7 +13,7 @@
             android:id="@+id/elevation0Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation None - 0dp"
+            android:text="Elevation None"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -34,7 +34,7 @@
             android:id="@+id/elevation1Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 1 - 1dp"
+            android:text="Elevation 1"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -55,7 +55,7 @@
             android:id="@+id/elevation2Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 2 - 2dp"
+            android:text="Elevation 2"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -76,7 +76,7 @@
             android:id="@+id/elevation3Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 3 - 3dp"
+            android:text="Elevation 3"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -97,7 +97,7 @@
             android:id="@+id/elevation4Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 4 - 4dp"
+            android:text="Elevation 4
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -118,7 +118,7 @@
             android:id="@+id/elevation5Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 5 - 5dp"
+            android:text="Elevation 5"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -139,7 +139,7 @@
             android:id="@+id/elevation6Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 6 - 6dp"
+            android:text="Elevation 6
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -160,7 +160,7 @@
             android:id="@+id/elevation7Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 7 - 7dp"
+            android:text="Elevation 7"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -181,7 +181,7 @@
             android:id="@+id/elevation8Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 8 - 8dp"
+            android:text="Elevation 8"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -202,7 +202,7 @@
             android:id="@+id/elevation9Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 9 - 9dp"
+            android:text="Elevation 9"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -223,7 +223,7 @@
             android:id="@+id/elevation12Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 12 - 12dp"
+            android:text="Elevation 12"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -244,7 +244,7 @@
             android:id="@+id/elevation16Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 16 - 16dp"
+            android:text="Elevation 16"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
@@ -265,7 +265,7 @@
             android:id="@+id/elevation24Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 24 - 24dp"
+            android:text="Elevation 24"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
