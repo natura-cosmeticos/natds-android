@@ -243,6 +243,11 @@
         <item name="sizeHugeXX">@dimen/ds_size_huge_xx</item>
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
+
+        <item name="borderRadiusNone">@dimen/ds_radius_none</item>
+        <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
+        <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
+        <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -298,6 +303,11 @@
         <item name="sizeHugeXX">@dimen/ds_size_huge_xx</item>
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
+
+        <item name="borderRadiusNone">@dimen/ds_radius_none</item>
+        <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
+        <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
+        <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
     </style>
 
     <!-- color tokens attributes not covered by material theme -->
@@ -347,4 +357,11 @@
     <attr name="sizeHugeXX" format="dimension"/>
     <attr name="sizeHugeXXX" format="dimension"/>
     <attr name="sizeVeryHuge" format="dimension"/>
+
+    <!-- border radius tokens attributes -->
+    <attr name="borderRadiusNone" format="dimension"/>
+    <attr name="borderRadiusSmall" format="dimension"/>
+    <attr name="borderRadiusMedium" format="dimension"/>
+    <attr name="borderRadiusLarge" format="dimension"/>
+
 </resources>

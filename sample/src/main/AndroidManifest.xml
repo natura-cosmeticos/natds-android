@@ -13,11 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:name=".tokens.SizeActivity"
+            android:name=".BorderRadiusActivity"
             android:theme="@style/Theme.Natura"/>
         <activity
+            android:name=".tokens.SizeActivity"
+            android:theme="@style/Theme.Natura"/>"
+        <activity
             android:name=".tokens.SpacingActivity"
-            android:theme="@style/Theme.Natura.NoActionBar"/>
+            android:theme="@style/Theme.Natura.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +39,8 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".components.ErrorActivity"
+        <activity
+            android:name=".components.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.TextFieldActivity"

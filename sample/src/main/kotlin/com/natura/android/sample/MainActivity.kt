@@ -35,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ColorsActivity::class.java))
         }
 
+        borderRadiusButton.setOnClickListener {
+            startActivity(Intent(this, BorderRadiusActivity::class.java))
+        }
+
         btnIconsDrawables.setOnClickListener {
             startActivity(Intent(this, DrawableActivity::class.java))
         }
