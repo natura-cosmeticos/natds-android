@@ -34,6 +34,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenElevationScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(click())
+
+        onView(ViewMatchers.withText("Elevation")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenSpacingScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.btnSpacing)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.btnSpacing)).perform(click())

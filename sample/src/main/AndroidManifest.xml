@@ -12,15 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity
-            android:name=".BorderRadiusActivity"
-            android:theme="@style/Theme.Natura"/>
-        <activity
-            android:name=".tokens.SizeActivity"
-            android:theme="@style/Theme.Natura"/>"
-        <activity
-            android:name=".tokens.SpacingActivity"
-            android:theme="@style/Theme.Natura.NoActionBar" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".tokens.ElevationActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".BorderRadiusActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".tokens.SizeActivity"
+            android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".tokens.SpacingActivity"
+            android:theme="@style/Theme.Natura.NoActionBar" />
         <activity
             android:name=".components.AppBarActivity"
             android:theme="@style/Theme.Natura.NoActionBar">
