@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class ElevationActivityTest {
-    lateinit var elevationActivityScenario: ActivityScenario<ElevationActivity>
+    private lateinit var elevationActivityScenario: ActivityScenario<ElevationActivity>
 
     @Before
     fun setUp() {
@@ -67,7 +67,7 @@ class ElevationActivityTest {
         elevationActivityScenario.onActivity { elevationActivity ->
             val elevation = elevationActivity.cardElevation5.cardElevation.toInt()
 
-            assertEquals(5, elevation)
+            assertEquals(6, elevation)
         }
     }
 
@@ -76,7 +76,7 @@ class ElevationActivityTest {
         elevationActivityScenario.onActivity { elevationActivity ->
             val elevation = elevationActivity.cardElevation6.cardElevation.toInt()
 
-            assertEquals(6, elevation)
+            assertEquals(8, elevation)
         }
     }
 
@@ -85,7 +85,7 @@ class ElevationActivityTest {
         elevationActivityScenario.onActivity { elevationActivity ->
             val elevation = elevationActivity.cardElevation7.cardElevation.toInt()
 
-            assertEquals(7, elevation)
+            assertEquals(9, elevation)
         }
     }
 
@@ -94,7 +94,7 @@ class ElevationActivityTest {
         elevationActivityScenario.onActivity { elevationActivity ->
             val elevation = elevationActivity.cardElevation8.cardElevation.toInt()
 
-            assertEquals(8, elevation)
+            assertEquals(12, elevation)
         }
     }
 
@@ -103,32 +103,14 @@ class ElevationActivityTest {
         elevationActivityScenario.onActivity { elevationActivity ->
             val elevation = elevationActivity.cardElevation9.cardElevation.toInt()
 
-            assertEquals(9, elevation)
-        }
-    }
-
-    @Test
-    fun checksElevation12Size() {
-        elevationActivityScenario.onActivity { elevationActivity ->
-            val elevation = elevationActivity.cardElevation12.cardElevation.toInt()
-
-            assertEquals(12, elevation)
-        }
-    }
-
-    @Test
-    fun checksElevation16Size() {
-        elevationActivityScenario.onActivity { elevationActivity ->
-            val elevation = elevationActivity.cardElevation16.cardElevation.toInt()
-
             assertEquals(16, elevation)
         }
     }
 
     @Test
-    fun checksElevation24Size() {
+    fun checksElevation10Size() {
         elevationActivityScenario.onActivity { elevationActivity ->
-            val elevation = elevationActivity.cardElevation24.cardElevation.toInt()
+            val elevation = elevationActivity.cardElevation10.cardElevation.toInt()
 
             assertEquals(24, elevation)
         }

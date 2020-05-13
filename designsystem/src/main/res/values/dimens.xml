@@ -10,6 +10,20 @@
     <dimen name="ds_spacing_large">48dp</dimen>
     <dimen name="ds_spacing_x_large">64dp</dimen>
 
+    <!-- OPACITY TOKENS -->
+    <dimen name="ds_opacityNone">1.0</dimen>
+    <dimen name="ds_opacity01">0.8</dimen>
+    <dimen name="ds_opacity02">0.64</dimen>
+    <dimen name="ds_opacity03">0.56</dimen>
+    <dimen name="ds_opacity04">0.48</dimen>
+    <dimen name="ds_opacity05">0.32</dimen>
+    <dimen name="ds_opacity06">0.24</dimen>
+    <dimen name="ds_opacity07">0.16</dimen>
+    <dimen name="ds_opacity08">0.12</dimen>
+    <dimen name="ds_opacity09">0.08</dimen>
+    <dimen name="ds_opacity10">0.04</dimen>
+
+
     <!-- BORDER RADIUS TOKENS -->
     <dimen name="ds_radius_none">0dp</dimen>
     <dimen name="ds_radius_small">2dp</dimen>
@@ -38,18 +52,16 @@
 
     <!-- ELEVATION TOKENS -->
     <dimen name="ds_elevation00">0dp</dimen>
-    <dimen name="ds_elevation1">1dp</dimen>
-    <dimen name="ds_elevation2">2dp</dimen>
-    <dimen name="ds_elevation3">3dp</dimen>
-    <dimen name="ds_elevation4">4dp</dimen>
-    <dimen name="ds_elevation5">5dp</dimen>
-    <dimen name="ds_elevation6">6dp</dimen>
-    <dimen name="ds_elevation7">7dp</dimen>
-    <dimen name="ds_elevation8">8dp</dimen>
-    <dimen name="ds_elevation9">9dp</dimen>
-    <dimen name="ds_elevation12">12dp</dimen>
-    <dimen name="ds_elevation16">16dp</dimen>
-    <dimen name="ds_elevation24">24dp</dimen>
+    <dimen name="ds_elevation01">1dp</dimen>
+    <dimen name="ds_elevation02">2dp</dimen>
+    <dimen name="ds_elevation03">3dp</dimen>
+    <dimen name="ds_elevation04">4dp</dimen>
+    <dimen name="ds_elevation05">6dp</dimen>
+    <dimen name="ds_elevation06">8dp</dimen>
+    <dimen name="ds_elevation07">9dp</dimen>
+    <dimen name="ds_elevation08">12dp</dimen>
+    <dimen name="ds_elevation09">16dp</dimen>
+    <dimen name="ds_elevation10">24dp</dimen>
 
     <!-- TYPOGRAPHY SIZE TOKENS -->
     <dimen name="ds_size_h1">96sp</dimen>
