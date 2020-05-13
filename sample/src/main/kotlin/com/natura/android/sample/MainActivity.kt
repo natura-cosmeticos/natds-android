@@ -31,6 +31,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ColorsActivity::class.java))
         }
 
+        borderRadiusButton.setOnClickListener {
+            startActivity(Intent(this, BorderRadiusActivity::class.java))
+        }
+
+        elevationTokensButton.setOnClickListener {
+            startActivity(Intent(this, ElevationActivity::class.java))
+        }
+
         btnIconsDrawables.setOnClickListener {
             startActivity(Intent(this, DrawableActivity::class.java))
         }

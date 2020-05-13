@@ -24,6 +24,45 @@
     <dimen name="ds_opacity10">0.04</dimen>
 
 
+    <!-- BORDER RADIUS TOKENS -->
+    <dimen name="ds_radius_none">0dp</dimen>
+    <dimen name="ds_radius_small">2dp</dimen>
+    <dimen name="ds_radius_medium">4dp</dimen>
+    <dimen name="ds_radius_large">8dp</dimen>
+
+    <!-- SIZE TOKENS -->
+    <dimen name="ds_size_none">0dp</dimen>
+    <dimen name="ds_size_micro">4dp</dimen>
+    <dimen name="ds_size_tiny">8dp</dimen>
+    <dimen name="ds_size_small">16dp</dimen>
+    <dimen name="ds_size_standard">24dp</dimen>
+    <dimen name="ds_size_semi">32dp</dimen>
+    <dimen name="ds_size_semi_x">40dp</dimen>
+    <dimen name="ds_size_medium">48dp</dimen>
+    <dimen name="ds_size_medium_x">56dp</dimen>
+    <dimen name="ds_size_large">64dp</dimen>
+    <dimen name="ds_size_large_x">72dp</dimen>
+    <dimen name="ds_size_large_xx">80dp</dimen>
+    <dimen name="ds_size_large_xxx">88dp</dimen>
+    <dimen name="ds_size_huge">96dp</dimen>
+    <dimen name="ds_size_huge_x">128dp</dimen>
+    <dimen name="ds_size_huge_xx">144dp</dimen>
+    <dimen name="ds_size_huge_xxx">192dp</dimen>
+    <dimen name="ds_size_very_huge">256dp</dimen>
+
+    <!-- ELEVATION TOKENS -->
+    <dimen name="ds_elevation00">0dp</dimen>
+    <dimen name="ds_elevation01">1dp</dimen>
+    <dimen name="ds_elevation02">2dp</dimen>
+    <dimen name="ds_elevation03">3dp</dimen>
+    <dimen name="ds_elevation04">4dp</dimen>
+    <dimen name="ds_elevation05">6dp</dimen>
+    <dimen name="ds_elevation06">8dp</dimen>
+    <dimen name="ds_elevation07">9dp</dimen>
+    <dimen name="ds_elevation08">12dp</dimen>
+    <dimen name="ds_elevation09">16dp</dimen>
+    <dimen name="ds_elevation10">24dp</dimen>
+
     <!-- Legacy Spacing -->
     <dimen name="ds_spacing_little">12dp</dimen>
     <dimen name="ds_spacin_tiny">8dp</dimen>
@@ -64,24 +103,4 @@
     <!-- Card -->
     <dimen name="ds_default_card_elevation">2dp</dimen>
     <dimen name="ds_default_card_corner_radius">4dp</dimen>
-
-    <!-- Size definitions -->
-    <dimen name="ds_size_none">0dp</dimen>
-    <dimen name="ds_size_micro">4dp</dimen>
-    <dimen name="ds_size_tiny">8dp</dimen>
-    <dimen name="ds_size_small">16dp</dimen>
-    <dimen name="ds_size_standard">24dp</dimen>
-    <dimen name="ds_size_semi">32dp</dimen>
-    <dimen name="ds_size_semi_x">40dp</dimen>
-    <dimen name="ds_size_medium">48dp</dimen>
-    <dimen name="ds_size_medium_x">56dp</dimen>
-    <dimen name="ds_size_large">64dp</dimen>
-    <dimen name="ds_size_large_x">72dp</dimen>
-    <dimen name="ds_size_large_xx">80dp</dimen>
-    <dimen name="ds_size_large_xxx">88dp</dimen>
-    <dimen name="ds_size_huge">96dp</dimen>
-    <dimen name="ds_size_huge_x">128dp</dimen>
-    <dimen name="ds_size_huge_xx">144dp</dimen>
-    <dimen name="ds_size_huge_xxx">192dp</dimen>
-    <dimen name="ds_size_very_huge">256dp</dimen>
 </resources>

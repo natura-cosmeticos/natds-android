@@ -20,10 +20,25 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenColorScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(scrollTo())
         onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
 
         onView(ViewMatchers.withText("Color")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenBorderRadiusScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(click())
+
+        onView(ViewMatchers.withText("Border Radius")).check(matches(ViewMatchers.isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenElevationScreenWhenTapOnItButton() {
+        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(scrollTo())
+        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(click())
+
+        onView(ViewMatchers.withText("Elevation")).check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test

@@ -210,6 +210,28 @@ class MainActivityTest {
     }
 
     @Test
+    fun checksBorderRadiusButtonClickStartsBorderRadiusScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.borderRadiusButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(BorderRadiusActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksElevationButtonClickStartsElevationScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.elevationTokensButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(ElevationActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
     fun checksOpacityButtonClickStartsSpacingScreen() {
         val button = mainActivity.findViewById<Button>(R.id.opacityTokensButton)
 
