@@ -106,10 +106,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/typographyButton"
+            android:id="@+id/btnSpacing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Typography"
+            android:text="Spacing"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
@@ -118,10 +118,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/btnSpacing"
+            android:id="@+id/typographyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spacing"
+            android:text="Typography"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
