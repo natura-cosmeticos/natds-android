@@ -56,6 +56,17 @@ class MainActivityTest {
     }
 
     @Test
+    fun checksOpacityButtonClickStartsOpacityScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.opacityTokensButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(OpacityActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
     fun checksAppBarButtonClickStartsAppBarScreen() {
         val button = mainActivity.findViewById<Button>(R.id.btnAppbar)
 
@@ -218,5 +229,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(ElevationActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksOpacityButtonClickStartsSpacingScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.opacityTokensButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(OpacityActivity::class.java, shadowIntent.intentClass)
     }
 }

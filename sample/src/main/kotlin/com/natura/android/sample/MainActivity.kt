@@ -47,6 +47,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, IconActivity::class.java))
         }
 
+        opacityTokensButton.setOnClickListener {
+            startActivity(Intent(this, OpacityActivity::class.java))
+        }
+
         btnSpacing.setOnClickListener {
             startActivity(Intent(this, SpacingActivity::class.java))
         }

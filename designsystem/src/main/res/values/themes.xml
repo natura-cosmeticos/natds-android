@@ -244,6 +244,18 @@
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
 
+        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacity01">@dimen/ds_opacity01</item>
+        <item name="opacity02">@dimen/ds_opacity02</item>
+        <item name="opacity03">@dimen/ds_opacity03</item>
+        <item name="opacity04">@dimen/ds_opacity04</item>
+        <item name="opacity05">@dimen/ds_opacity05</item>
+        <item name="opacity06">@dimen/ds_opacity06</item>
+        <item name="opacity07">@dimen/ds_opacity07</item>
+        <item name="opacity08">@dimen/ds_opacity08</item>
+        <item name="opacity09">@dimen/ds_opacity09</item>
+        <item name="opacity10">@dimen/ds_opacity10</item>
+
         <item name="borderRadiusNone">@dimen/ds_radius_none</item>
         <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
         <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
@@ -332,6 +344,19 @@
         <item name="elevation08">@dimen/ds_elevation08</item>
         <item name="elevation09">@dimen/ds_elevation09</item>
         <item name="elevation10">@dimen/ds_elevation10</item>
+
+        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacity01">@dimen/ds_opacity01</item>
+        <item name="opacity02">@dimen/ds_opacity02</item>
+        <item name="opacity03">@dimen/ds_opacity03</item>
+        <item name="opacity04">@dimen/ds_opacity04</item>
+        <item name="opacity05">@dimen/ds_opacity05</item>
+        <item name="opacity06">@dimen/ds_opacity06</item>
+        <item name="opacity07">@dimen/ds_opacity07</item>
+        <item name="opacity08">@dimen/ds_opacity08</item>
+        <item name="opacity09">@dimen/ds_opacity09</item>
+        <item name="opacity10">@dimen/ds_opacity10</item>
+
     </style>
 
     <!-- color tokens attributes not covered by material theme -->
@@ -381,6 +406,20 @@
     <attr name="sizeHugeXX" format="dimension"/>
     <attr name="sizeHugeXXX" format="dimension"/>
     <attr name="sizeVeryHuge" format="dimension"/>
+
+    <!-- opacity tokens attributes -->
+    <attr name="opacityNone" format="dimension"/>
+    <attr name="opacity01" format="dimension"/>
+    <attr name="opacity02" format="dimension"/>
+    <attr name="opacity03" format="dimension"/>
+    <attr name="opacity04" format="dimension"/>
+    <attr name="opacity05" format="dimension"/>
+    <attr name="opacity06" format="dimension"/>
+    <attr name="opacity07" format="dimension"/>
+    <attr name="opacity08" format="dimension"/>
+    <attr name="opacity09" format="dimension"/>
+    <attr name="opacity10" format="dimension"/>
+
 
     <!-- border radius tokens attributes -->
     <attr name="borderRadiusNone" format="dimension"/>
