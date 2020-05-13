@@ -244,16 +244,16 @@
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
 
-        <item name="opacity0">@dimen/ds_opacity0</item>
-        <item name="opacity1">@dimen/ds_opacity1</item>
-        <item name="opacity2">@dimen/ds_opacity2</item>
-        <item name="opacity3">@dimen/ds_opacity3</item>
-        <item name="opacity4">@dimen/ds_opacity4</item>
-        <item name="opacity5">@dimen/ds_opacity5</item>
-        <item name="opacity6">@dimen/ds_opacity6</item>
-        <item name="opacity7">@dimen/ds_opacity7</item>
-        <item name="opacity8">@dimen/ds_opacity8</item>
-        <item name="opacity9">@dimen/ds_opacity9</item>
+        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacity01">@dimen/ds_opacity01</item>
+        <item name="opacity02">@dimen/ds_opacity02</item>
+        <item name="opacity03">@dimen/ds_opacity03</item>
+        <item name="opacity04">@dimen/ds_opacity04</item>
+        <item name="opacity05">@dimen/ds_opacity05</item>
+        <item name="opacity06">@dimen/ds_opacity06</item>
+        <item name="opacity07">@dimen/ds_opacity07</item>
+        <item name="opacity08">@dimen/ds_opacity08</item>
+        <item name="opacity09">@dimen/ds_opacity09</item>
         <item name="opacity10">@dimen/ds_opacity10</item>
     </style>
 
@@ -311,16 +311,16 @@
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
 
-        <item name="opacity0">@dimen/ds_opacity0</item>
-        <item name="opacity1">@dimen/ds_opacity1</item>
-        <item name="opacity2">@dimen/ds_opacity2</item>
-        <item name="opacity3">@dimen/ds_opacity3</item>
-        <item name="opacity4">@dimen/ds_opacity4</item>
-        <item name="opacity5">@dimen/ds_opacity5</item>
-        <item name="opacity6">@dimen/ds_opacity6</item>
-        <item name="opacity7">@dimen/ds_opacity7</item>
-        <item name="opacity8">@dimen/ds_opacity8</item>
-        <item name="opacity9">@dimen/ds_opacity9</item>
+        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacity01">@dimen/ds_opacity01</item>
+        <item name="opacity02">@dimen/ds_opacity02</item>
+        <item name="opacity03">@dimen/ds_opacity03</item>
+        <item name="opacity04">@dimen/ds_opacity04</item>
+        <item name="opacity05">@dimen/ds_opacity05</item>
+        <item name="opacity06">@dimen/ds_opacity06</item>
+        <item name="opacity07">@dimen/ds_opacity07</item>
+        <item name="opacity08">@dimen/ds_opacity08</item>
+        <item name="opacity09">@dimen/ds_opacity09</item>
         <item name="opacity10">@dimen/ds_opacity10</item>
 
     </style>
@@ -374,16 +374,16 @@
     <attr name="sizeVeryHuge" format="dimension"/>
 
     <!-- opacity tokens attributes -->
-    <attr name="opacity0" format="dimension"/>
-    <attr name="opacity1" format="dimension"/>
-    <attr name="opacity2" format="dimension"/>
-    <attr name="opacity3" format="dimension"/>
-    <attr name="opacity4" format="dimension"/>
-    <attr name="opacity5" format="dimension"/>
-    <attr name="opacity6" format="dimension"/>
-    <attr name="opacity7" format="dimension"/>
-    <attr name="opacity8" format="dimension"/>
-    <attr name="opacity9" format="dimension"/>
+    <attr name="opacityNone" format="dimension"/>
+    <attr name="opacity01" format="dimension"/>
+    <attr name="opacity02" format="dimension"/>
+    <attr name="opacity03" format="dimension"/>
+    <attr name="opacity04" format="dimension"/>
+    <attr name="opacity05" format="dimension"/>
+    <attr name="opacity06" format="dimension"/>
+    <attr name="opacity07" format="dimension"/>
+    <attr name="opacity08" format="dimension"/>
+    <attr name="opacity09" format="dimension"/>
     <attr name="opacity10" format="dimension"/>
 
 </resources>

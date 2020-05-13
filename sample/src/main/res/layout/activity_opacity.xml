@@ -13,14 +13,14 @@
             android:id="@+id/opacity0Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 0"
+            android:text="Opacity None"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity0CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity0"
+            android:alpha="?attr/opacityNone"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -42,7 +42,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity1CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity1"
+            android:alpha="?attr/opacity01"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -65,7 +65,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity2CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity2"
+            android:alpha="?attr/opacity02"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -88,7 +88,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity3CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity3"
+            android:alpha="?attr/opacity03"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -111,7 +111,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity4CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity4"
+            android:alpha="?attr/opacity04"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -134,7 +134,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity5CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity5"
+            android:alpha="?attr/opacity05"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -157,7 +157,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity6CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity6"
+            android:alpha="?attr/opacity06"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -180,7 +180,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity7CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity7"
+            android:alpha="?attr/opacity07"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -203,7 +203,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity8CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity8"
+            android:alpha="?attr/opacity08"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -226,7 +226,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity9CardView"
             android:backgroundTint="?colorHighEmphasis"
-            android:alpha="?attr/opacity9"
+            android:alpha="?attr/opacity09"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"/>
@@ -253,6 +253,6 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>
