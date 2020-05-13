@@ -272,6 +272,20 @@
         <item name="elevation08">@dimen/ds_elevation08</item>
         <item name="elevation09">@dimen/ds_elevation09</item>
         <item name="elevation10">@dimen/ds_elevation10</item>
+
+        <item name="textAppearanceHeadline1">@style/Heading1</item>
+        <item name="textAppearanceHeadline2">@style/Heading2</item>
+        <item name="textAppearanceHeadline3">@style/Heading3</item>
+        <item name="textAppearanceHeadline4">@style/Heading4</item>
+        <item name="textAppearanceHeadline5">@style/Heading5</item>
+        <item name="textAppearanceHeadline6">@style/Heading6</item>
+        <item name="textAppearanceSubtitle1">@style/Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/Subtitle2</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
+        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceOverline">@style/Overline</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -357,6 +371,19 @@
         <item name="opacity09">@dimen/ds_opacity09</item>
         <item name="opacity10">@dimen/ds_opacity10</item>
 
+        <item name="textAppearanceHeadline1">@style/Heading1</item>
+        <item name="textAppearanceHeadline2">@style/Heading2</item>
+        <item name="textAppearanceHeadline3">@style/Heading3</item>
+        <item name="textAppearanceHeadline4">@style/Heading4</item>
+        <item name="textAppearanceHeadline5">@style/Heading5</item>
+        <item name="textAppearanceHeadline6">@style/Heading6</item>
+        <item name="textAppearanceSubtitle1">@style/Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/Subtitle2</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
+        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceOverline">@style/Overline</item>
     </style>
 
     <!-- color tokens attributes not covered by material theme -->
@@ -419,7 +446,6 @@
     <attr name="opacity08" format="dimension"/>
     <attr name="opacity09" format="dimension"/>
     <attr name="opacity10" format="dimension"/>
-
 
     <!-- border radius tokens attributes -->
     <attr name="borderRadiusNone" format="dimension"/>

@@ -232,6 +232,17 @@ class MainActivityTest {
     }
 
     @Test
+    fun checksTypographyButtonClickStartsTypographyScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.typographyButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(TypographyActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
     fun checksOpacityButtonClickStartsSpacingScreen() {
         val button = mainActivity.findViewById<Button>(R.id.opacityTokensButton)
 
