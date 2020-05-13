@@ -249,19 +249,17 @@
         <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
         <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
 
-        <item name="elevation0">@dimen/ds_elevation00</item>
-        <item name="elevation1">@dimen/ds_elevation1</item>
-        <item name="elevation2">@dimen/ds_elevation2</item>
-        <item name="elevation3">@dimen/ds_elevation3</item>
-        <item name="elevation4">@dimen/ds_elevation4</item>
-        <item name="elevation5">@dimen/ds_elevation5</item>
-        <item name="elevation6">@dimen/ds_elevation6</item>
-        <item name="elevation7">@dimen/ds_elevation7</item>
-        <item name="elevation8">@dimen/ds_elevation8</item>
-        <item name="elevation9">@dimen/ds_elevation9</item>
-        <item name="elevation12">@dimen/ds_elevation12</item>
-        <item name="elevation16">@dimen/ds_elevation16</item>
-        <item name="elevation24">@dimen/ds_elevation24</item>
+        <item name="elevation00">@dimen/ds_elevation00</item>
+        <item name="elevation01">@dimen/ds_elevation01</item>
+        <item name="elevation02">@dimen/ds_elevation02</item>
+        <item name="elevation03">@dimen/ds_elevation03</item>
+        <item name="elevation04">@dimen/ds_elevation04</item>
+        <item name="elevation05">@dimen/ds_elevation05</item>
+        <item name="elevation06">@dimen/ds_elevation06</item>
+        <item name="elevation07">@dimen/ds_elevation07</item>
+        <item name="elevation08">@dimen/ds_elevation08</item>
+        <item name="elevation09">@dimen/ds_elevation09</item>
+        <item name="elevation10">@dimen/ds_elevation10</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -323,19 +321,17 @@
         <item name="borderRadiusMedium">@dimen/ds_radius_medium</item>
         <item name="borderRadiusLarge">@dimen/ds_radius_large</item>
 
-        <item name="elevation0">@dimen/ds_elevation00</item>
-        <item name="elevation1">@dimen/ds_elevation1</item>
-        <item name="elevation2">@dimen/ds_elevation2</item>
-        <item name="elevation3">@dimen/ds_elevation3</item>
-        <item name="elevation4">@dimen/ds_elevation4</item>
-        <item name="elevation5">@dimen/ds_elevation5</item>
-        <item name="elevation6">@dimen/ds_elevation6</item>
-        <item name="elevation7">@dimen/ds_elevation7</item>
-        <item name="elevation8">@dimen/ds_elevation8</item>
-        <item name="elevation9">@dimen/ds_elevation9</item>
-        <item name="elevation12">@dimen/ds_elevation12</item>
-        <item name="elevation16">@dimen/ds_elevation16</item>
-        <item name="elevation24">@dimen/ds_elevation24</item>
+        <item name="elevation00">@dimen/ds_elevation00</item>
+        <item name="elevation01">@dimen/ds_elevation01</item>
+        <item name="elevation02">@dimen/ds_elevation02</item>
+        <item name="elevation03">@dimen/ds_elevation03</item>
+        <item name="elevation04">@dimen/ds_elevation04</item>
+        <item name="elevation05">@dimen/ds_elevation05</item>
+        <item name="elevation06">@dimen/ds_elevation06</item>
+        <item name="elevation07">@dimen/ds_elevation07</item>
+        <item name="elevation08">@dimen/ds_elevation08</item>
+        <item name="elevation09">@dimen/ds_elevation09</item>
+        <item name="elevation10">@dimen/ds_elevation10</item>
     </style>
 
     <!-- color tokens attributes not covered by material theme -->
@@ -393,19 +389,15 @@
     <attr name="borderRadiusLarge" format="dimension"/>
 
     <!-- elevation tokens attributes -->
-    <attr name="elevation0" format="dimension"/>
-    <attr name="elevation1" format="dimension"/>
-    <attr name="elevation2" format="dimension"/>
-    <attr name="elevation3" format="dimension"/>
-    <attr name="elevation4" format="dimension"/>
-    <attr name="elevation5" format="dimension"/>
-    <attr name="elevation6" format="dimension"/>
-    <attr name="elevation7" format="dimension"/>
-    <attr name="elevation8" format="dimension"/>
-    <attr name="elevation9" format="dimension"/>
-    <attr name="elevation12" format="dimension"/>
-    <attr name="elevation16" format="dimension"/>
-    <attr name="elevation24" format="dimension"/>
-
-
+    <attr name="elevation00" format="dimension"/>
+    <attr name="elevation01" format="dimension"/>
+    <attr name="elevation02" format="dimension"/>
+    <attr name="elevation03" format="dimension"/>
+    <attr name="elevation04" format="dimension"/>
+    <attr name="elevation05" format="dimension"/>
+    <attr name="elevation06" format="dimension"/>
+    <attr name="elevation07" format="dimension"/>
+    <attr name="elevation08" format="dimension"/>
+    <attr name="elevation09" format="dimension"/>
+    <attr name="elevation10" format="dimension"/>
 </resources>

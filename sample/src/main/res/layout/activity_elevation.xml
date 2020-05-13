@@ -23,7 +23,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation0"/>
+            app:cardElevation="?attr/elevation00"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation1"/>
+            app:cardElevation="?attr/elevation01"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation2"/>
+            app:cardElevation="?attr/elevation02"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -86,7 +86,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation3"/>
+            app:cardElevation="?attr/elevation03"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation4"/>
+            app:cardElevation="?attr/elevation04"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -128,7 +128,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation5"/>
+            app:cardElevation="?attr/elevation05"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -149,7 +149,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation6"/>
+            app:cardElevation="?attr/elevation06"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -170,7 +170,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation7"/>
+            app:cardElevation="?attr/elevation07"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -191,7 +191,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation8"/>
+            app:cardElevation="?attr/elevation08"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -212,7 +212,7 @@
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation9"/>
+            app:cardElevation="?attr/elevation09"/>
         <ImageView
             android:layout_height="0.5dp"
             android:layout_width="match_parent"
@@ -220,67 +220,20 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="10dp"/>
         <TextView
-            android:id="@+id/elevation12Label"
+            android:id="@+id/elevation10Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation 12"
+            android:text="Elevation 10"
             android:padding="10dp"
             android:textSize="12sp"
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardElevation12"
+            android:id="@+id/cardElevation10"
             android:backgroundTint="?attr/colorSurface"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
-            app:cardElevation="?attr/elevation12"/>
-        <ImageView
-            android:layout_height="0.5dp"
-            android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/elevation16Label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Elevation 16"
-            android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardElevation16"
-            android:backgroundTint="?attr/colorSurface"
-            android:layout_width="?attr/sizeLargeXXX"
-            android:layout_height="?attr/sizeLargeXXX"
-            android:layout_gravity="center"
-            app:cardElevation="?attr/elevation16"/>
-        <ImageView
-            android:layout_height="0.5dp"
-            android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"/>
-        <TextView
-            android:id="@+id/elevation24Label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Elevation 24"
-            android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardElevation24"
-            android:backgroundTint="?attr/colorSurface"
-            android:layout_width="?attr/sizeLargeXXX"
-            android:layout_height="?attr/sizeLargeXXX"
-            android:layout_gravity="center"
-            app:cardElevation="?attr/elevation24"/>
-        <ImageView
-            android:layout_height="0.5dp"
-            android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"/>
+            app:cardElevation="?attr/elevation10"
+            android:layout_marginBottom="20dp"/>
     </LinearLayout>
 </ScrollView>
