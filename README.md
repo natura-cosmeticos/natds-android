@@ -88,4 +88,5 @@ And:
 
     dependencies {
         implementation "com.natura.android:designsystem:<version>"
+        implementation 'com.google.android.material:material:1.1.0'
     }
