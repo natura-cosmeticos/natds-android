@@ -114,20 +114,22 @@
         <item name="android:background">?colorControlHighlight</item>
     </style>
 
+    <!--{@deprecated Use Widget.DS.RadioButton instead} -->
     <style name="Widget.Natura.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/ds_text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
+    <!--{@deprecated Use Widget.DS.RadioButton.Secondary instead} -->
+    <style name="Widget.Natura.RadioButton.Secondary">
+        <item name="buttonTint">@color/ds_control_secondary_selector</item>
+    </style>
+
     <style name="Widget.Natura.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/ds_text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="Widget.Natura.RadioButton.Secondary">
-        <item name="buttonTint">@color/ds_control_secondary_selector</item>
     </style>
 
     <style name="Widget.Natura.CheckBox.Secondary">
@@ -163,6 +165,16 @@
         <item name="searchIcon">@null</item>
         <item name="goIcon">@null</item>
         <item name="voiceIcon">@drawable/ds_ic_outlined_action_mic</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">

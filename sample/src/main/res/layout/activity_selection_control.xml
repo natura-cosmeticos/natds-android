@@ -37,7 +37,7 @@
 
                     <RadioButton
                         android:id="@+id/radioSecondary"
-                        style="@style/Widget.Natura.RadioButton.Secondary"
+                        style="@style/Widget.DS.RadioButton.Secondary"
                         android:text="Radio Secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -48,6 +48,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:enabled="false"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RadioButton
+                        android:text="Radio Primary Disabled Checked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:checked="true"
+                        android:layout_marginBottom="10dp"/>
+
+                    <RadioButton
+                        style="@style/Widget.DS.RadioButton.Secondary"
+                        android:text="Radio Secondary Disable Checked"
+                        android:enabled="false"
+                        android:checked="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"/>
             </RadioGroup>
 

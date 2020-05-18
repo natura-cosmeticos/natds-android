@@ -20,13 +20,11 @@
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
 
-        <item name="android:textColorPrimary">?colorOnBackground</item>
+        <item name="android:textColorPrimary">?colorMediumEmphasis</item>
         <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
         <item name="android:textColorSecondary">@color/mediumGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
-
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -98,6 +96,9 @@
         <item name="textAppearanceButton">@style/Button</item>
         <item name="textAppearanceCaption">@style/Caption</item>
         <item name="textAppearanceOverline">@style/Overline</item>
+
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
+
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -126,8 +127,6 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
 
-<!--        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>-->
-
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
         <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
@@ -198,5 +197,7 @@
         <item name="textAppearanceButton">@style/Button</item>
         <item name="textAppearanceCaption">@style/Caption</item>
         <item name="textAppearanceOverline">@style/Overline</item>
+
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
     </style>
 </resources>
