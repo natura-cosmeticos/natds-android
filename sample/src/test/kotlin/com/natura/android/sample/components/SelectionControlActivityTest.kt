@@ -48,6 +48,36 @@ class SelectionControlActivityTest {
     }
 
     @Test
+    fun checkCheckBoxButtonPrimaryColorsWhenThemeIsNatura() {
+        launchActivityWithNaturaTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxPrimary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxPrimary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#F4AB34"), colorSelected)
+        }
+    }
+
+    @Test
+    fun checkCheckBoxButtonSecondaryColorsWhenThemeIsNatura() {
+        launchActivityWithNaturaTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxSecondary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxSecondary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#FF6B0B"), colorSelected)
+        }
+    }
+
+    @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsAvon() {
         launchActivityWithAvonTheme()
         selectionControlActivityScenario.onActivity { selectionControlActivity ->
@@ -78,6 +108,36 @@ class SelectionControlActivityTest {
     }
 
     @Test
+    fun checkCheckBoxButtonPrimaryColorsWhenThemeIsAvon() {
+        launchActivityWithAvonTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxPrimary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxPrimary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#DE0085"), colorSelected)
+        }
+    }
+
+    @Test
+    fun checkCheckBoxButtonSecondaryColorsWhenThemeIsAvon() {
+        launchActivityWithAvonTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxSecondary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxSecondary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#E9E9E9"), colorSelected)
+        }
+    }
+
+    @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsTheBodyShop() {
         launchActivityWithBodyShopTheme()
         selectionControlActivityScenario.onActivity { selectionControlActivity ->
@@ -98,6 +158,36 @@ class SelectionControlActivityTest {
         selectionControlActivityScenario.onActivity { selectionControlActivity ->
             val colorText = selectionControlActivity.radioSecondary.textColors.defaultColor
             val colorByState = selectionControlActivity.radioSecondary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#A55F53"), colorSelected)
+        }
+    }
+
+    @Test
+    fun checkCheckBoxButtonPrimaryColorsWhenThemeIsTheBodyShop() {
+        launchActivityWithBodyShopTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxPrimary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxPrimary.buttonTintList
+            val state = listOf(android.R.attr.state_selected).toIntArray()
+
+            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
+
+            assertEquals(Color.parseColor("#333333"), colorText)
+            assertEquals(Color.parseColor("#004236"), colorSelected)
+        }
+    }
+
+    @Test
+    fun checkCheckBoxButtonSecondaryColorsWhenThemeIsTheBodyShop() {
+        launchActivityWithBodyShopTheme()
+        selectionControlActivityScenario.onActivity { selectionControlActivity ->
+            val colorText = selectionControlActivity.checkboxSecondary.textColors.defaultColor
+            val colorByState = selectionControlActivity.checkboxSecondary.buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)

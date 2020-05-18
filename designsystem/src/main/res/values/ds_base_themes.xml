@@ -98,7 +98,7 @@
         <item name="textAppearanceOverline">@style/Overline</item>
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
-
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -199,5 +199,6 @@
         <item name="textAppearanceOverline">@style/Overline</item>
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
     </style>
 </resources>
