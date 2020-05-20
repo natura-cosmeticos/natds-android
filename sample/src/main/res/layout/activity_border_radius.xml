@@ -4,111 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".BorderRadiusActivity"
-    android:orientation="vertical"
-    android:paddingBottom="40dp">
-    <TextView
-        android:id="@+id/borderNoneLabel"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Border None"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderNone"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_radius_none"
+        tools:context=".tokens.BorderRadiusActivity"
         android:orientation="vertical"
-        android:layout_gravity="center"/>
-    <ImageView
-        android:layout_height="0.5dp"
-        android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
-    <TextView
-        android:id="@+id/borderSmallLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Border Small"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderSmall"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_radius_small"
-        android:orientation="vertical"
-        android:layout_gravity="center"/>
-    <ImageView
-        android:layout_height="0.5dp"
-        android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
-    <TextView
-        android:id="@+id/borderMediumLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Border Medium"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderMedium"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_radius_medium"
-        android:orientation="vertical"
-        android:layout_gravity="center"/>
-    <ImageView
-        android:layout_height="0.5dp"
-        android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
-    <TextView
-        android:id="@+id/borderLargeLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Border Large"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderLarge"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_radius_large"
-        android:orientation="vertical"
-        android:layout_gravity="center"/>
-    <ImageView
-        android:layout_height="0.5dp"
-        android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"/>
-    <TextView
-        android:id="@+id/borderCircleLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Border Circle"
-        android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?attr/colorMediumEmphasis"/>
-    <LinearLayout
-        android:id="@+id/borderCircle"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/ds_border_circle"
-        android:orientation="vertical"
-        android:layout_gravity="center"/>
-
-</LinearLayout>
+        android:paddingBottom="40dp">
+        <TextView
+            android:id="@+id/borderNoneLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border None"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <LinearLayout
+            android:id="@+id/borderNone"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ds_border_radius_none"
+            android:orientation="vertical"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/mediumGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/borderSmallLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Small"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <LinearLayout
+            android:id="@+id/borderSmall"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ds_border_radius_small"
+            android:orientation="vertical"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/mediumGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/borderMediumLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Medium"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <LinearLayout
+            android:id="@+id/borderMedium"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ds_border_radius_medium"
+            android:orientation="vertical"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/mediumGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/borderLargeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Large"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <LinearLayout
+            android:id="@+id/borderLarge"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ds_border_radius_large"
+            android:orientation="vertical"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_height="0.5dp"
+            android:layout_width="match_parent"
+            android:background="@color/mediumGrey"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/borderCircleLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Border Circle"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:textColor="?attr/colorMediumEmphasis"/>
+        <LinearLayout
+            android:id="@+id/borderCircle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ds_border_circle"
+            android:orientation="vertical"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 </ScrollView>
