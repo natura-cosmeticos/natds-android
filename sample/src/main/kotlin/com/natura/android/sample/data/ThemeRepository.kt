@@ -13,12 +13,50 @@ class ThemeRepository(context: Context) {
             return appContext.getSharedPreferences("themes", Context.MODE_PRIVATE)
         }
 
-    fun saveChosenTheme(themeId: Int) {
+    fun saveChosenTheme(brandName: String) {
         sharedPreferences
             .edit()
-            .putInt("theme", themeId)
+            .putString("theme", brandName)
             .apply()
     }
 
-    fun getChosenTheme(): Int = sharedPreferences.getInt("theme", R.style.Theme_Natura)
+    fun getChosenTheme(): Int {
+        val chosenBrand = sharedPreferences.getString("theme", "natura")
+
+        return when (chosenBrand) {
+            "natura" -> R.style.Theme_Natura
+            "avon" -> R.style.Theme_Avon
+            else -> R.style.Theme_BodyShop
+        }
+    }
+
+    fun getChosenDarkTheme(): Int {
+        val chosenBrand = sharedPreferences.getString("theme", "natura")
+
+        return when (chosenBrand) {
+            "natura" -> R.style.Theme_NaturaDark
+            "avon" -> R.style.Theme_AvonDark
+            else -> R.style.Theme_BodyShopDark
+        }
+    }
+
+    fun getChosenThemeWithNoActionBar(): Int {
+        val chosenBrand = sharedPreferences.getString("theme", "natura")
+
+        return when (chosenBrand) {
+            "natura" -> R.style.Theme_Natura_NoActionBar
+            "avon" -> R.style.Theme_Avon_NoActionBar
+            else -> R.style.Theme_BodyShop_NoActionBar
+        }
+    }
+
+    fun getChosenDarkThemeWithNoActionBar(): Int {
+        val chosenBrand = sharedPreferences.getString("theme", "natura")
+
+        return when (chosenBrand) {
+            "natura" -> R.style.Theme_NaturaDark_NoActionBar
+            "avon" -> R.style.Theme_AvonDark_NoActionBar
+            else -> R.style.Theme_BodyShopDark_NoActionBar
+        }
+    }
 }

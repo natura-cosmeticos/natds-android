@@ -27,11 +27,38 @@ class ThemeRepositoryTest {
     }
 
     @Test
-    fun saveAndRecoverThemeAtSharedPreferences() {
-        themeRepository.saveChosenTheme(R.style.Theme_BodyShop)
+    fun saveAndRecoverDefaultThemeAtSharedPreferences() {
+        themeRepository.saveChosenTheme("BodyShop")
 
         val savedTheme = themeRepository.getChosenTheme()
 
         assertEquals(R.style.Theme_BodyShop, savedTheme)
+    }
+
+    @Test
+    fun saveAndRecoverDefaultThemeNoActionBarAtSharedPreferences() {
+        themeRepository.saveChosenTheme("natura")
+
+        val savedTheme = themeRepository.getChosenThemeWithNoActionBar()
+
+        assertEquals(R.style.Theme_Natura_NoActionBar, savedTheme)
+    }
+
+    @Test
+    fun saveAndRecoverDarkThemeAtSharedPreferences() {
+        themeRepository.saveChosenTheme("avon")
+
+        val savedTheme = themeRepository.getChosenDarkTheme()
+
+        assertEquals(R.style.Theme_AvonDark, savedTheme)
+    }
+
+    @Test
+    fun saveAndRecoverDarkThemeNoActionBarAtSharedPreferences() {
+        themeRepository.saveChosenTheme("natura")
+
+        val savedTheme = themeRepository.getChosenDarkThemeWithNoActionBar()
+
+        assertEquals(R.style.Theme_NaturaDark_NoActionBar, savedTheme)
     }
 }

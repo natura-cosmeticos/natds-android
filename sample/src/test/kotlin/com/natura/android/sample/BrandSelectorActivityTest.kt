@@ -5,6 +5,9 @@ import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.BrandSelectorActivity.Companion.AVON
+import com.natura.android.sample.BrandSelectorActivity.Companion.NATURA
+import com.natura.android.sample.BrandSelectorActivity.Companion.TBS
 import com.natura.android.sample.data.ThemeRepository
 import io.mockk.MockKAnnotations
 import io.mockk.every
@@ -45,7 +48,7 @@ class BrandSelectorActivityTest {
             brandSelectorActivity.naturaThemeButton.performClick()
 
             verify {
-                themeRepository.saveChosenTheme(R.style.Theme_Natura)
+                themeRepository.saveChosenTheme(NATURA)
             }
         }
     }
@@ -57,7 +60,7 @@ class BrandSelectorActivityTest {
             brandSelectorActivity.avonThemeButton.performClick()
 
             verify {
-                themeRepository.saveChosenTheme(R.style.Theme_Avon)
+                themeRepository.saveChosenTheme(AVON)
             }
         }
     }
@@ -69,7 +72,7 @@ class BrandSelectorActivityTest {
             brandSelectorActivity.tbsThemeButton.performClick()
 
             verify {
-                themeRepository.saveChosenTheme(R.style.Theme_BodyShop)
+                themeRepository.saveChosenTheme(TBS)
             }
         }
     }

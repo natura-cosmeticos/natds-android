@@ -30,9 +30,9 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            naturaThemeButton.id -> openSampleBy(R.style.Theme_Natura)
-            avonThemeButton.id -> openSampleBy(R.style.Theme_Avon)
-            else -> openSampleBy(R.style.Theme_BodyShop)
+            naturaThemeButton.id -> openSampleBy(NATURA)
+            avonThemeButton.id -> openSampleBy(AVON)
+            else -> openSampleBy(TBS)
         }
     }
 
@@ -42,9 +42,15 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         tbsThemeButton.setOnClickListener(this)
     }
 
-    private fun openSampleBy(brandTheme: Int) {
+    private fun openSampleBy(brandTheme: String) {
             themeRepository.saveChosenTheme(brandTheme)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+    }
+
+    companion object {
+        const val NATURA = "natura"
+        const val AVON = "avon"
+        const val TBS = "bodyshop"
     }
 }
