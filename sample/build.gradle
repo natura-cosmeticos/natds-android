@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.natura.android.sample"
-        minSdkVersion 21
+        minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode 1
         versionName "1.0"
