@@ -1,6 +1,5 @@
 package com.natura.android.sample
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
@@ -9,9 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.data.ThemeRepository
 import kotlinx.android.synthetic.main.activity_brand_selector.*
 
-
-class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener  {
-
+class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var themeRepository: ThemeRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,10 +29,10 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener  {
     }
 
     override fun onClick(v: View?) {
-        when(v?.id) {
+        when (v?.id) {
             naturaThemeButton.id -> openSampleBy(R.style.Theme_Natura)
             avonThemeButton.id -> openSampleBy(R.style.Theme_Avon)
-            tbsThemeButton.id -> openSampleBy(R.style.Theme_BodyShop)
+            else -> openSampleBy(R.style.Theme_BodyShop)
         }
     }
 

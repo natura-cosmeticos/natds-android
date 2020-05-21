@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.sample.R
+import com.natura.android.sample.setChosenTheme
 
 class AppBarActivity : AppCompatActivity() {
 

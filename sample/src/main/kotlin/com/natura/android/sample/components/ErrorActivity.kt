@@ -6,12 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.natura.android.error.DsErrorDefault
 import com.natura.android.sample.R
+import com.natura.android.sample.setChosenTheme
 
 class ErrorActivity : AppCompatActivity() {
 
     private val errorButton by lazy { findViewById<DsErrorDefault>(R.id.error_default) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenTheme()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_error)
 

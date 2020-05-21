@@ -19,7 +19,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevationNone"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -40,7 +40,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation1"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -61,7 +61,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation2"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -82,7 +82,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation3"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -103,7 +103,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation4"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -124,7 +124,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation5"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -145,7 +145,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation6"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -166,7 +166,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation7"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -187,7 +187,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation8"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -208,7 +208,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation9"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"
@@ -229,7 +229,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/cardElevation10"
-            android:backgroundTint="?attr/colorSurface"
+            android:backgroundTint="?attr/colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
             android:layout_gravity="center"

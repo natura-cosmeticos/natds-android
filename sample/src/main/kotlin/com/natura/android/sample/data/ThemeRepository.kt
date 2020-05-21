@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.natura.android.sample.R
 
-class ThemeRepository (context: Context) {
+class ThemeRepository(context: Context) {
 
     private val appContext = context.applicationContext
 

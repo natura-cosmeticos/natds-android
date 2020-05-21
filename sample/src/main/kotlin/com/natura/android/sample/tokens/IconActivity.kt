@@ -6,9 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.natura.android.sample.R
+import com.natura.android.sample.setChosenTheme
 
 class IconActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenTheme()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_icon)
 
