@@ -20,6 +20,8 @@ class ThemeRepository(context: Context) {
             .apply()
     }
 
+    fun getChosenBrand() = sharedPreferences.getString("theme", "natura")
+
     fun getChosenTheme(): Int {
         val chosenBrand = sharedPreferences.getString("theme", "natura")
 

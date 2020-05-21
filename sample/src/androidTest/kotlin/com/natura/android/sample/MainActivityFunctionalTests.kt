@@ -22,7 +22,7 @@ class MainActivityFunctionalTests {
     fun shouldOpenColorScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
 
-        onView(ViewMatchers.withText("Color")).check(matches(ViewMatchers.isDisplayed()))
+        onView(ViewMatchers.withText("Colors NATURA")).check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test

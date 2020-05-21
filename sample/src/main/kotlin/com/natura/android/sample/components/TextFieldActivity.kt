@@ -6,13 +6,13 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
-import com.natura.android.sample.setChosenTheme
+import com.natura.android.sample.setChosenDefaultTheme
 import com.natura.android.textfield.TextField
 
 class TextFieldActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setChosenTheme()
+        setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_textfield)

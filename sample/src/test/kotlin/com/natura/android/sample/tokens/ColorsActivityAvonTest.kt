@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.data.ThemeRepository
 import kotlinx.android.synthetic.main.background_surface_colors.*
 import kotlinx.android.synthetic.main.content_colors.*
 import kotlinx.android.synthetic.main.feedback_colors.*
@@ -298,27 +299,23 @@ class ColorsActivityAvonTest {
 
     private fun launchActivityScenarioWithLightMode() {
         val context: Context = getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("avon")
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", false)
-        avonIntent.putExtra("currentTab",
-            AVON_TAB
-        )
+
         colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 
     private fun launchActivityScenarioWithDarkMode() {
         val context: Context = getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("avon")
 
         val avonIntent = Intent(context, ColorsActivity::class.java)
         avonIntent.putExtra("darkMode", true)
-        avonIntent.putExtra("currentTab",
-            AVON_TAB
-        )
-        colorsActivityScenario = ActivityScenario.launch(avonIntent)
-    }
 
-    companion object {
-        const val AVON_TAB = 1
+        colorsActivityScenario = ActivityScenario.launch(avonIntent)
     }
 }

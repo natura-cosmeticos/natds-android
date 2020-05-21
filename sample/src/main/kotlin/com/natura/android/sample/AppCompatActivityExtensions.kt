@@ -9,9 +9,28 @@ fun AppCompatActivity.setContentViewWithBrand(layout: Int) {
     setContentViewWithBrand(layout, R.style.Theme_Natura, R.style.Theme_Avon, R.style.Theme_BodyShop)
 }
 
-fun AppCompatActivity.setChosenTheme() {
+fun AppCompatActivity.getChosenBrand(): String {
+    return ThemeRepository(this).getChosenBrand() ?: "natura"
+}
+
+fun AppCompatActivity.setChosenDefaultTheme() {
     val themeRepository = ThemeRepository(this)
     setTheme(themeRepository.getChosenTheme())
+}
+
+fun AppCompatActivity.setChosenDefaultWithNoActionBarTheme() {
+    val themeRepository = ThemeRepository(this)
+    setTheme(themeRepository.getChosenThemeWithNoActionBar())
+}
+
+fun AppCompatActivity.setChosenDarkTheme() {
+    val themeRepository = ThemeRepository(this)
+    setTheme(themeRepository.getChosenDarkTheme())
+}
+
+fun AppCompatActivity.setChosenDarkThemeWithNoActionBar() {
+    val themeRepository = ThemeRepository(this)
+    setTheme(themeRepository.getChosenDarkThemeWithNoActionBar())
 }
 
 private fun AppCompatActivity.setContentViewWithBrand(layout: Int, themeNatura: Int, themeAvon: Int, themeBodyShop: Int) {

@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.natura.android.sample.R
-import com.natura.android.sample.setChosenTheme
+import com.natura.android.sample.setChosenDefaultTheme
 
 class ElevationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setChosenTheme()
+        setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_elevation)

@@ -1,13 +1,13 @@
 package com.natura.android.sample.tokens
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.tabs.TabLayout
 import com.natura.android.sample.R
-import kotlinx.android.synthetic.main.activity_color.*
+import com.natura.android.sample.getChosenBrand
+import com.natura.android.sample.setChosenDarkTheme
+import com.natura.android.sample.setChosenDefaultTheme
 
 class ColorsActivity : AppCompatActivity() {
 
@@ -18,18 +18,11 @@ class ColorsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         darkMode = intent.getBooleanExtra("darkMode", false)
-        currentTab = intent.getIntExtra("currentTab", 0)
-        setGlobalTheme(darkMode, currentTab)
+        setGlobalTheme(darkMode)
 
         setContentView(R.layout.activity_color)
-        setSupportActionBar(colorToolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        colorToolBar(darkMode)
-
-        val selectedTab = colorTabs.getTabAt(currentTab)
-        selectedTab?.select()
-
-        setTabClickAction()
+        supportActionBar?.title = "Colors ${getChosenBrand().toUpperCase()}"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -42,7 +35,7 @@ class ColorsActivity : AppCompatActivity() {
         if (item?.itemId == R.id.darkThemeButton) {
             setDarkModeButtonIcon(darkMode, item)
             darkMode = !darkMode
-            restartScreenToApplyTheme(darkMode, currentTab)
+            restartScreenToApplyTheme(darkMode)
         } else {
             onBackPressed()
         }
@@ -57,49 +50,20 @@ class ColorsActivity : AppCompatActivity() {
         }
     }
 
-    private fun colorToolBar(darkMode: Boolean) {
-        if (darkMode) {
-            colorToolbar.background = ColorDrawable(resources.getColor(R.color.darkSurface))
-        }
-    }
-
-    private fun setTabClickAction() {
-        colorTabs.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                restartScreenToApplyTheme(darkMode, tab?.position)
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
-        })
-    }
-
-    private fun restartScreenToApplyTheme(darkMode: Boolean, currentTab: Int? = 0) {
+    private fun restartScreenToApplyTheme(darkMode: Boolean) {
         val intent = Intent(baseContext, ColorsActivity::class.java)
         intent.putExtra("darkMode", darkMode)
-        intent.putExtra("currentTab", currentTab)
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
         startActivity(intent)
         finish()
         overridePendingTransition(0, 0)
     }
 
-    private fun setGlobalTheme(darkMode: Boolean, currentTab: Int) {
+    private fun setGlobalTheme(darkMode: Boolean) {
         if (darkMode) {
-            when (currentTab) {
-                0 -> this.theme.applyStyle(R.style.Theme_NaturaDark_NoActionBar, true)
-                1 -> this.theme.applyStyle(R.style.Theme_AvonDark_NoActionBar, true)
-                else -> this.theme.applyStyle(R.style.Theme_BodyShopDark_NoActionBar, true)
-            }
+            setChosenDarkTheme()
         } else {
-            when (currentTab) {
-                0 -> this.theme.applyStyle(R.style.Theme_Natura_NoActionBar, true)
-                1 -> this.theme.applyStyle(R.style.Theme_Avon_NoActionBar, true)
-                else -> this.theme.applyStyle(R.style.Theme_BodyShop_NoActionBar, true)
-            }
+            setChosenDefaultTheme()
         }
     }
 }

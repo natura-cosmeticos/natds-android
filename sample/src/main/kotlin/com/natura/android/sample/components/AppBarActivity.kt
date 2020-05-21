@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.sample.R
-import com.natura.android.sample.setChosenTheme
+import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 
 class AppBarActivity : AppCompatActivity() {
 
@@ -20,6 +20,8 @@ class AppBarActivity : AppCompatActivity() {
     private val toolbarSecondary by lazy { findViewById<Toolbar>(R.id.toolbarSecondary) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenDefaultWithNoActionBarTheme()
+
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)

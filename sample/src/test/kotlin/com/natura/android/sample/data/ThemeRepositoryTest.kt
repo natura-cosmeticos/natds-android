@@ -27,6 +27,15 @@ class ThemeRepositoryTest {
     }
 
     @Test
+    fun saveAndRecoverSelectedBrand() {
+        themeRepository.saveChosenTheme("BodyShop")
+
+        val savedTheme = themeRepository.getChosenBrand()
+
+        assertEquals("BodyShop", savedTheme)
+    }
+
+    @Test
     fun saveAndRecoverDefaultThemeAtSharedPreferences() {
         themeRepository.saveChosenTheme("BodyShop")
 
