@@ -5,7 +5,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
-import com.natura.android.sample.setContentViewWithBrand
 
 class SelectionControlActivity : AppCompatActivity() {
 
@@ -13,8 +12,8 @@ class SelectionControlActivity : AppCompatActivity() {
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_selection_control)
 
-        setContentViewWithBrand(R.layout.activity_selection_control)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Selection Control"
     }

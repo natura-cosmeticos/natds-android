@@ -5,7 +5,6 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
-import com.natura.android.sample.setContentViewWithBrand
 
 class StyleButtonActivity : AppCompatActivity() {
 
@@ -13,8 +12,8 @@ class StyleButtonActivity : AppCompatActivity() {
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_styled_button)
 
-        setContentViewWithBrand(R.layout.activity_styled_button)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Button"
     }

@@ -6,7 +6,7 @@ import android.graphics.Color
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.natura.android.sample.R
+import com.natura.android.sample.data.ThemeRepository
 import kotlinx.android.synthetic.main.activity_selection_control.*
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -199,28 +199,25 @@ class SelectionControlActivityTest {
 
     private fun launchActivityWithAvonTheme() {
         val context: Context = ApplicationProvider.getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("avon")
 
-        val avonIntent = Intent(context, SelectionControlActivity::class.java)
-        avonIntent.putExtra("theme", R.style.Theme_Avon)
-
-        selectionControlActivityScenario = ActivityScenario.launch(avonIntent)
+        selectionControlActivityScenario = ActivityScenario.launch(Intent(context, SelectionControlActivity::class.java))
     }
 
     private fun launchActivityWithNaturaTheme() {
         val context: Context = ApplicationProvider.getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("natura")
 
-        val avonIntent = Intent(context, SelectionControlActivity::class.java)
-        avonIntent.putExtra("theme", R.style.Theme_Natura)
-
-        selectionControlActivityScenario = ActivityScenario.launch(avonIntent)
+        selectionControlActivityScenario = ActivityScenario.launch(Intent(context, SelectionControlActivity::class.java))
     }
 
     private fun launchActivityWithBodyShopTheme() {
         val context: Context = ApplicationProvider.getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("bodyshop")
 
-        val avonIntent = Intent(context, SelectionControlActivity::class.java)
-        avonIntent.putExtra("theme", R.style.Theme_BodyShop)
-
-        selectionControlActivityScenario = ActivityScenario.launch(avonIntent)
+        selectionControlActivityScenario = ActivityScenario.launch(Intent(context, SelectionControlActivity::class.java))
     }
 }
