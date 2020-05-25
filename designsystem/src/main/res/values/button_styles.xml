@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- DS Style Buttons -->
+    <style name="Widget.DS.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="strokeColor">@color/ds_mtrl_colored_stroke_color_selector</item>
+    </style>
+
+    <style name="Widget.DS.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">?colorHighEmphasis</item>
+    </style>
+
+    <!-- {@deprecated Use Theme.Natura instead.} -->
     <style name="Widget.Natura.Button" parent="Widget.MaterialComponents.Button"/>
 
+    <!-- {@deprecated Use Theme.Natura instead.} -->
     <style name="Widget.Natura.Button.DarkText" parent="Widget.Natura.Button">
         <item name="android:textColor">@color/ds_mtrl_default_btn_text_color_selector</item>
     </style>
 
+    <!-- {@deprecated Use Widget.DS.Button.Outlined instead} -->
     <style name="Widget.Natura.Button.Outlined.DarkText" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/ds_mtrl_default_btn_text_color_selector</item>
     </style>
 
+    <!-- {@deprecated Use Widget.DS.Button.Outlined instead} -->
     <style name="Widget.Natura.Button.Outlined.StrokeColored" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/ds_mtrl_colored_stroke_color_selector</item>
     </style>
 
+    <!-- {@deprecated Use Widget.DS.Button.TextButton instead} -->
     <style name="Widget.Natura.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton"/>
 
+    <!-- {@deprecated Use Widget.DS.Button.TextButton instead} -->
     <style name="Widget.Natura.Button.TextButton.DarkText" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/ds_mtrl_default_btn_text_color_selector</item>
     </style>
-
 </resources>

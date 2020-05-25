@@ -101,6 +101,8 @@
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="toolbarStyle">@style/Widget.DS.Toolbar</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -204,5 +206,7 @@
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="toolbarStyle">@style/Widget.DS.Toolbar</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton</item>
     </style>
 </resources>
