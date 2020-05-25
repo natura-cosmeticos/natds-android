@@ -12,10 +12,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/naturaThemeButton"
+            android:id="@+id/avonThemeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Natura"
+            android:text="Avon"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
@@ -24,10 +24,10 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/avonThemeButton"
+            android:id="@+id/naturaThemeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Avon"
+            android:text="Natura"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
