@@ -12,7 +12,7 @@ class StyleButtonActivity : AppCompatActivity() {
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_styled_button)
+        setContentView(R.layout.activity_button)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Button"

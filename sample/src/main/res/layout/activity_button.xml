@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/containedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minWidth="?sizeHuge"
+                android:text="contained"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/outlinedButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/textButton"
+                style="?textButton"
+                android:layout_width="wrap_content"
+                android:minWidth="?sizeHuge"
+                android:layout_height="wrap_content"
+                android:text="text"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/outlinedButton"
+                app:layout_constraintTop_toTopOf="@+id/outlinedButton"
+                app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/outlinedButton"
+                style="?outlinedButton"
+                android:layout_width="wrap_content"
+                android:minWidth="?sizeHuge"
+                android:layout_height="wrap_content"
+                android:text="outlined"
+                app:layout_constraintBottom_toBottomOf="@+id/containedButton"
+                app:layout_constraintEnd_toStartOf="@+id/textButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/containedButton"
+                app:layout_constraintTop_toTopOf="@+id/containedButton"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/containedButtonDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minWidth="?sizeHuge"
+                android:enabled="false"
+                android:text="contained"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/outlinedButtonDisable"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/textButtonDisable"
+                style="?textButton"
+                android:layout_width="wrap_content"
+                android:minWidth="?sizeHuge"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="text"
+                app:layout_constraintBottom_toBottomOf="@+id/outlinedButtonDisable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/outlinedButtonDisable"
+                app:layout_constraintTop_toTopOf="@+id/outlinedButtonDisable"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/outlinedButtonDisable"
+                style="?outlinedButton"
+                android:layout_width="wrap_content"
+                android:minWidth="?sizeHuge"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="outlined"
+                app:layout_constraintBottom_toBottomOf="@+id/containedButtonDisable"
+                app:layout_constraintEnd_toStartOf="@+id/textButtonDisable"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/containedButtonDisable"
+                app:layout_constraintTop_toTopOf="@+id/containedButtonDisable"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/hugeContainedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="contained" />
+        <Button
+            android:id="@+id/hugeContainedButtonDisable"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="disable contained" />
+        <Button
+            android:id="@+id/hugeOutlinedButton"
+            style="?outlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="outlined" />
+        <Button
+            android:id="@+id/hugeOutlinedButtonDisable"
+            style="?outlinedButton"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:text="disable outlined" />
+        <Button
+            android:id="@+id/hugeTextButton"
+            style="?textButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="text" />
+        <Button
+            android:id="@+id/hugeTextButtonDisable"
+            style="?textButton"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content"
+            android:text="disable text" />
+</LinearLayout>
+</ScrollView>
