@@ -22,9 +22,9 @@ class OpacityActivityTest {
     @Test
     fun checksOpacity0Value() {
         opacityActivityScenario.onActivity { opacityActivity ->
-            val cardOpacity = opacityActivity.opacity0CardView.alpha
+            val cardOpacity = opacityActivity.opacityTransparentCardView.alpha
 
-            assertEquals(1.0F, cardOpacity)
+            assertEquals(0.0F, cardOpacity)
         }
     }
 
@@ -33,7 +33,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity1CardView.alpha
 
-            assertEquals(0.8F, cardOpacity)
+            assertEquals(0.04F, cardOpacity)
         }
     }
 
@@ -42,7 +42,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity2CardView.alpha
 
-            assertEquals(0.64F, cardOpacity)
+            assertEquals(0.08F, cardOpacity)
         }
     }
 
@@ -51,7 +51,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity3CardView.alpha
 
-            assertEquals(0.56F, cardOpacity)
+            assertEquals(0.12F, cardOpacity)
         }
     }
 
@@ -60,7 +60,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity4CardView.alpha
 
-            assertEquals(0.48F, cardOpacity)
+            assertEquals(0.16F, cardOpacity)
         }
     }
 
@@ -69,7 +69,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity5CardView.alpha
 
-            assertEquals(0.32F, cardOpacity)
+            assertEquals(0.24F, cardOpacity)
         }
     }
 
@@ -78,7 +78,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity6CardView.alpha
 
-            assertEquals(0.24F, cardOpacity)
+            assertEquals(0.32F, cardOpacity)
         }
     }
 
@@ -87,7 +87,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity7CardView.alpha
 
-            assertEquals(0.16F, cardOpacity)
+            assertEquals(0.48F, cardOpacity)
         }
     }
 
@@ -96,7 +96,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity8CardView.alpha
 
-            assertEquals(0.12F, cardOpacity)
+            assertEquals(0.56F, cardOpacity)
         }
     }
 
@@ -105,7 +105,7 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity9CardView.alpha
 
-            assertEquals(0.08F, cardOpacity)
+            assertEquals(0.64F, cardOpacity)
         }
     }
 
@@ -114,7 +114,16 @@ class OpacityActivityTest {
         opacityActivityScenario.onActivity { opacityActivity ->
             val cardOpacity = opacityActivity.opacity10CardView.alpha
 
-            assertEquals(0.04F, cardOpacity)
+            assertEquals(0.8F, cardOpacity)
+        }
+    }
+
+    @Test
+    fun checksOpacityFullValue() {
+        opacityActivityScenario.onActivity { opacityActivity ->
+            val cardOpacity = opacityActivity.opacityFullCardView.alpha
+
+            assertEquals(1.0F, cardOpacity)
         }
     }
 }

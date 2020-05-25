@@ -11,17 +11,18 @@
     <dimen name="ds_spacing_x_large">64dp</dimen>
 
     <!-- OPACITY TOKENS -->
-    <dimen name="ds_opacityNone">1.0</dimen>
-    <dimen name="ds_opacity01">0.8</dimen>
-    <dimen name="ds_opacity02">0.64</dimen>
-    <dimen name="ds_opacity03">0.56</dimen>
-    <dimen name="ds_opacity04">0.48</dimen>
-    <dimen name="ds_opacity05">0.32</dimen>
-    <dimen name="ds_opacity06">0.24</dimen>
-    <dimen name="ds_opacity07">0.16</dimen>
-    <dimen name="ds_opacity08">0.12</dimen>
-    <dimen name="ds_opacity09">0.08</dimen>
-    <dimen name="ds_opacity10">0.04</dimen>
+    <dimen name="ds_opacity_full">1.0</dimen>
+    <dimen name="ds_opacity10">0.8</dimen>
+    <dimen name="ds_opacity09">0.64</dimen>
+    <dimen name="ds_opacity08">0.56</dimen>
+    <dimen name="ds_opacity07">0.48</dimen>
+    <dimen name="ds_opacity06">0.32</dimen>
+    <dimen name="ds_opacity05">0.24</dimen>
+    <dimen name="ds_opacity04">0.16</dimen>
+    <dimen name="ds_opacity03">0.12</dimen>
+    <dimen name="ds_opacity02">0.08</dimen>
+    <dimen name="ds_opacity01">0.04</dimen>
+    <dimen name="ds_opacity_transparent">0.0</dimen>
 
 
     <!-- BORDER RADIUS TOKENS -->
