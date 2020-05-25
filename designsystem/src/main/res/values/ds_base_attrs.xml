@@ -55,7 +55,7 @@
     <attr name="sizeVeryHuge" format="dimension"/>
 
     <!-- opacity tokens attributes -->
-    <attr name="opacityNone" format="dimension"/>
+    <attr name="opacityTransparent" format="dimension"/>
     <attr name="opacity01" format="dimension"/>
     <attr name="opacity02" format="dimension"/>
     <attr name="opacity03" format="dimension"/>
@@ -66,6 +66,7 @@
     <attr name="opacity08" format="dimension"/>
     <attr name="opacity09" format="dimension"/>
     <attr name="opacity10" format="dimension"/>
+    <attr name="opacityFull" format="dimension"/>
 
     <!-- border radius tokens attributes -->
     <attr name="borderRadiusNone" format="dimension"/>

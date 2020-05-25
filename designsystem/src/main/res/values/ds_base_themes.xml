@@ -54,7 +54,7 @@
         <item name="sizeHugeXXX">@dimen/ds_size_huge_xxx</item>
         <item name="sizeVeryHuge">@dimen/ds_size_very_huge</item>
 
-        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacityTransparent">@dimen/ds_opacity_transparent</item>
         <item name="opacity01">@dimen/ds_opacity01</item>
         <item name="opacity02">@dimen/ds_opacity02</item>
         <item name="opacity03">@dimen/ds_opacity03</item>
@@ -65,6 +65,7 @@
         <item name="opacity08">@dimen/ds_opacity08</item>
         <item name="opacity09">@dimen/ds_opacity09</item>
         <item name="opacity10">@dimen/ds_opacity10</item>
+        <item name="opacityFull">@dimen/ds_opacity_full</item>
 
         <item name="borderRadiusNone">@dimen/ds_radius_none</item>
         <item name="borderRadiusSmall">@dimen/ds_radius_small</item>
@@ -173,7 +174,7 @@
         <item name="elevation09">@dimen/ds_elevation09</item>
         <item name="elevation10">@dimen/ds_elevation10</item>
 
-        <item name="opacityNone">@dimen/ds_opacityNone</item>
+        <item name="opacityTransparent">@dimen/ds_opacity_transparent</item>
         <item name="opacity01">@dimen/ds_opacity01</item>
         <item name="opacity02">@dimen/ds_opacity02</item>
         <item name="opacity03">@dimen/ds_opacity03</item>
@@ -184,6 +185,7 @@
         <item name="opacity08">@dimen/ds_opacity08</item>
         <item name="opacity09">@dimen/ds_opacity09</item>
         <item name="opacity10">@dimen/ds_opacity10</item>
+        <item name="opacityFull">@dimen/ds_opacity_full</item>
 
         <item name="textAppearanceHeadline1">@style/Heading1</item>
         <item name="textAppearanceHeadline2">@style/Heading2</item>
