@@ -7,6 +7,7 @@ import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.hamcrest.CoreMatchers.containsString
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,7 +23,7 @@ class MainActivityFunctionalTests {
     fun shouldOpenColorScreenWhenTapOnItButton() {
         onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
 
-        onView(ViewMatchers.withText("Color")).check(matches(ViewMatchers.isDisplayed()))
+        onView(ViewMatchers.withText(containsString("Colors"))).check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test

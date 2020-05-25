@@ -19,7 +19,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity0CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacityNone"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -41,7 +41,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity1CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity01"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -64,7 +64,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity2CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity02"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -87,7 +87,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity3CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity03"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -110,7 +110,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity4CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity04"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -133,7 +133,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity5CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity05"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -156,7 +156,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity6CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity06"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -179,7 +179,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity7CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity07"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -202,7 +202,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity8CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity08"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -225,7 +225,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity9CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity09"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
@@ -248,7 +248,7 @@
             android:textColor="?attr/colorMediumEmphasis"/>
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity10CardView"
-            android:backgroundTint="?colorHighEmphasis"
+            android:backgroundTint="?colorPrimary"
             android:alpha="?attr/opacity10"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"

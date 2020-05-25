@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.data.ThemeRepository
 import kotlinx.android.synthetic.main.background_surface_colors.*
 import kotlinx.android.synthetic.main.content_colors.*
 import kotlinx.android.synthetic.main.feedback_colors.*
@@ -302,16 +303,12 @@ class ColorsActivityNaturaTest {
 
     private fun launchActivityScenarioWithDarkMode() {
         val context: Context = getApplicationContext()
+        val themeRepository = ThemeRepository(context)
+        themeRepository.saveChosenTheme("natura")
 
-        val avonIntent = Intent(context, ColorsActivity::class.java)
-        avonIntent.putExtra("darkMode", true)
-        avonIntent.putExtra("currentTab",
-            NATURA_TAB
-        )
-        colorsActivityScenario = ActivityScenario.launch(avonIntent)
-    }
+        val intent = Intent(context, ColorsActivity::class.java)
+        intent.putExtra("darkMode", true)
 
-    companion object {
-        const val NATURA_TAB = 0
+        colorsActivityScenario = ActivityScenario.launch(intent)
     }
 }

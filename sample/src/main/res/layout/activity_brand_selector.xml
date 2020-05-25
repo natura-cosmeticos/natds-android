@@ -1,0 +1,50 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/avonThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Avon"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/naturaThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Natura"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/tbsThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The Body Shop"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+    </LinearLayout>
+</ScrollView>

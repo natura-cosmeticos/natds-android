@@ -146,6 +146,15 @@
         <item name="android:windowContentOverlay">@dimen/ds_appbar_overlay</item>
     </style>
 
+    <style name="Widget.DS.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?colorSurface</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="titleTextColor">?colorOnSurface</item>
+        <item name="colorControlNormal">?colorOnSurface</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
+    </style>
+
     <style name="Widget.Natura.Toolbar.Primary">
         <item name="android:background">?colorPrimary</item>
         <item name="android:textColor">?android:textColorPrimary</item>

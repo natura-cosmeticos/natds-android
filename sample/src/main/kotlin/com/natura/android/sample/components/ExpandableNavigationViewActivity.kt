@@ -11,9 +11,9 @@ import com.natura.android.navigationview.ExpandableNavigationView
 import com.natura.android.navigationview.NavigationItem
 import com.natura.android.navigationview.NavigationItemChild
 import com.natura.android.sample.R
+import com.natura.android.sample.setChosenDefaultTheme
 
-class ExpandableNavigationViewActivity :
-    AppCompatActivity() {
+class ExpandableNavigationViewActivity : AppCompatActivity() {
 
     private val expandableNavigationMenu: ExpandableNavigationView by lazy {
         findViewById<ExpandableNavigationView>(
@@ -23,6 +23,8 @@ class ExpandableNavigationViewActivity :
     private val drawerLayout: DrawerLayout by lazy { findViewById<DrawerLayout>(R.id.drawer_layout) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenDefaultTheme()
+
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_expandable_navigation_view)

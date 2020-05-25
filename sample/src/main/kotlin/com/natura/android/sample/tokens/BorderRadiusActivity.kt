@@ -1,12 +1,16 @@
-package com.natura.android.sample
+package com.natura.android.sample.tokens
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
+import com.natura.android.sample.R
+import com.natura.android.sample.setChosenDefaultTheme
 
 class BorderRadiusActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenDefaultTheme()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_border_radius)
 

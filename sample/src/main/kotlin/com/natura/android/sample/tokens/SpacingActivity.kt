@@ -4,15 +4,17 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
-import kotlinx.android.synthetic.main.activity_spacing.*
+import com.natura.android.sample.setChosenDefaultTheme
 
 class SpacingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenDefaultTheme()
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spacing)
-        setSupportActionBar(spacingToolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Spacing"
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
