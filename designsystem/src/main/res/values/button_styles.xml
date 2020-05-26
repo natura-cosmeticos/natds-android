@@ -3,18 +3,18 @@
 
     <!-- DS Style Buttons -->
     <style name="Widget.DS.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:textColor">@color/ds_button_text_color_selector</item>
         <item name="strokeColor">@color/ds_mtrl_colored_stroke_color_selector</item>
     </style>
 
     <style name="Widget.DS.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:textColor">@color/ds_button_text_color_selector</item>
     </style>
 
-    <!-- {@deprecated Use Theme.Natura instead.} -->
+    <!-- {@deprecated Use Theme.{brand} instead.} -->
     <style name="Widget.Natura.Button" parent="Widget.MaterialComponents.Button"/>
 
-    <!-- {@deprecated Use Theme.Natura instead.} -->
+    <!-- {@deprecated Use Theme.{brand} instead.} -->
     <style name="Widget.Natura.Button.DarkText" parent="Widget.Natura.Button">
         <item name="android:textColor">@color/ds_mtrl_default_btn_text_color_selector</item>
     </style>
