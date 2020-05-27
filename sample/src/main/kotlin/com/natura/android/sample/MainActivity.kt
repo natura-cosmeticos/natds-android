@@ -9,7 +9,7 @@ import com.natura.android.sample.components.ExpandableNavigationViewActivity
 import com.natura.android.sample.components.LoadingActivity
 import com.natura.android.sample.components.MenuActivity
 import com.natura.android.sample.components.SelectionControlActivity
-import com.natura.android.sample.components.StyleButtonActivity
+import com.natura.android.sample.components.ButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnStyleButtons.setOnClickListener {
-            startActivity(Intent(this, StyleButtonActivity::class.java))
+            startActivity(Intent(this, ButtonActivity::class.java))
         }
 
         btnSelection.setOnClickListener {

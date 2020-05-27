@@ -8,7 +8,6 @@
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
-
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
