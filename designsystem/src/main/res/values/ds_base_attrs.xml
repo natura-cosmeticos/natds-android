@@ -87,4 +87,9 @@
     <attr name="elevation09" format="dimension"/>
     <attr name="elevation10" format="dimension"/>
 
+    <!-- Button style references -->
+    <attr name="outlinedButton" format="reference"/>
+    <attr name="textButton" format="reference"/>
+
+
 </resources>

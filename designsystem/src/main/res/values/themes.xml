@@ -8,7 +8,6 @@
         <item name="colorSecondary">@color/natSecondary</item>
         <item name="colorOnSecondary">@color/natOnSecondary</item>
         <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
-
         <item name="colorPrimaryLight">@color/natPrimaryLight</item>
         <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
         <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
@@ -27,15 +26,9 @@
         <item name="textAppearanceBody2">@style/TextAppearance.MaterialComponents.Body2</item>
 
         <!--Component styles-->
-        <item name="buttonStyle">@style/Widget.Natura.Button.DarkText</item>
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
         <item name="toolbarStyle">@style/Widget.Natura.Toolbar</item>
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
-
-        <!--Material buttons style-->
-        <item name="materialButtonStyle">@style/Widget.Natura.Button.DarkText</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.DarkText</item>
-        <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton.DarkText</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -89,11 +82,6 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
-
-        <!--Material buttons style-->
-        <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
-        <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -146,10 +134,6 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
-
-        <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
-        <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -177,10 +161,6 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
-
-        <item name="materialButtonStyle">@style/Widget.Natura.Button</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.Natura.Button.Outlined.StrokeColored</item>
-        <item name="materialBorderlessButtonStyle">@style/Widget.Natura.Button.TextButton</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

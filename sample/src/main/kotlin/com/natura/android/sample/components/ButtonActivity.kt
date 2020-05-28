@@ -6,13 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
 
-class StyleButtonActivity : AppCompatActivity() {
+class ButtonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_styled_button)
+        setContentView(R.layout.activity_button)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Button"
