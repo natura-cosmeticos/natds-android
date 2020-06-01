@@ -22,8 +22,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 1"
-                android:textAppearance="?attr/textAppearanceHeadline1"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline1"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -37,8 +37,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 2"
-                android:textAppearance="?attr/textAppearanceHeadline2"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline2"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -52,8 +52,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 3"
-                android:textAppearance="?attr/textAppearanceHeadline3"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline3"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -67,8 +67,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 4"
-                android:textAppearance="?attr/textAppearanceHeadline4"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline4"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -82,8 +82,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 5"
-                android:textAppearance="?attr/textAppearanceHeadline5"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline5"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -97,8 +97,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 6"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -112,8 +112,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Subtitle 1"
-                android:textAppearance="?attr/textAppearanceSubtitle1"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceSubtitle1"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -127,8 +127,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Subtitle 2"
-                android:textAppearance="?attr/textAppearanceSubtitle2"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceSubtitle2"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -142,8 +142,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Body 1"
-                android:textAppearance="?attr/textAppearanceBody1"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceBody1"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -157,8 +157,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Body 2"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceBody2"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -172,8 +172,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Button"
-                android:textAppearance="?attr/textAppearanceButton"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceButton"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -187,8 +187,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Caption"
-                android:textAppearance="?attr/textAppearanceCaption"
-                android:textColor="?attr/colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceCaption"
+                android:textColor="?colorHighEmphasis"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -202,8 +202,8 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Overline"
-                android:textAppearance="?attr/textAppearanceOverline"
-                android:textColor="?attr/colorHighEmphasis"
+                android:textAppearance="?textAppearanceOverline"
+                android:textColor="?colorHighEmphasis"
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>
