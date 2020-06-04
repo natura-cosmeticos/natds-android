@@ -2,13 +2,20 @@
 <resources>
 
     <!-- DS Style Buttons -->
+
+    <style name="Widget.DS.Button" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/ds_button_ripple_color</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/ds_button_text_color_selector</item>
         <item name="strokeColor">@color/ds_mtrl_colored_stroke_color_selector</item>
+        <item name="rippleColor">@color/ds_button_ripple_color</item>
     </style>
 
     <style name="Widget.DS.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/ds_button_text_color_selector</item>
+        <item name="rippleColor">@color/ds_button_ripple_color</item>
     </style>
 
     <!-- {@deprecated Use Theme.{brand} instead.} -->
