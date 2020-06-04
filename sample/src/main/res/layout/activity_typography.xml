@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,8 +21,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 1"
-                android:textAppearance="?textAppearanceHeadline1"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline1"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -37,8 +35,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 2"
-                android:textAppearance="?textAppearanceHeadline2"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline2"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -52,8 +49,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 3"
-                android:textAppearance="?textAppearanceHeadline3"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline3"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -67,8 +63,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 4"
-                android:textAppearance="?textAppearanceHeadline4"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline4"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -82,8 +77,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 5"
-                android:textAppearance="?textAppearanceHeadline5"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline5"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -97,8 +91,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Heading 6"
-                android:textAppearance="?textAppearanceHeadline6"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceHeadline6"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -112,8 +105,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Subtitle 1"
-                android:textAppearance="?textAppearanceSubtitle1"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceSubtitle1"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -127,8 +119,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Subtitle 2"
-                android:textAppearance="?textAppearanceSubtitle2"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceSubtitle2"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -142,8 +133,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Body 1"
-                android:textAppearance="?textAppearanceBody1"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceBody1"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -157,8 +147,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Body 2"
-                android:textAppearance="?textAppearanceBody2"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceBody2"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -172,8 +161,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Button"
-                android:textAppearance="?textAppearanceButton"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceButton"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -187,8 +175,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="Caption"
-                android:textAppearance="?textAppearanceCaption"
-                android:textColor="?colorHighEmphasis"/>
+                android:textAppearance="?textAppearanceCaption"/>
             <ImageView
                 android:layout_height="0.5dp"
                 android:layout_width="match_parent"
@@ -203,7 +190,6 @@
                 android:maxLines="1"
                 android:text="Overline"
                 android:textAppearance="?textAppearanceOverline"
-                android:textColor="?colorHighEmphasis"
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
     </ScrollView>

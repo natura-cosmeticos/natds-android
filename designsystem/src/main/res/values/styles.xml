@@ -14,6 +14,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h2</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -22,6 +23,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h3</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -30,6 +32,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h4</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -38,6 +41,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h5</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -46,6 +50,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h6</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -54,6 +59,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_subtitle1</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -62,6 +68,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_subtitle2</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -70,6 +77,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_body1</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -78,6 +86,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_body2</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -86,6 +95,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_button</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -94,6 +104,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_caption</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
@@ -102,6 +113,7 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_overline</item>
         <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 

@@ -20,7 +20,7 @@
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
 
-        <item name="android:textColorPrimary">?colorMediumEmphasis</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
         <item name="android:textColorSecondary">@color/mediumGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
@@ -125,7 +125,7 @@
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
 
-        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
         <item name="android:textColorSecondary">@color/lowerGrey</item>
         <item name="android:textColorHighlight">@color/white</item>
