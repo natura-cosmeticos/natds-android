@@ -1,4 +1,4 @@
-package com.natura.android.sample.tokens
+package com.natura.android.sample.tokens.icons
 
 import android.os.Bundle
 import android.view.MenuItem

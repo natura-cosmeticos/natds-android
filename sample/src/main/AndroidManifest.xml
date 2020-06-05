@@ -66,10 +66,10 @@
             android:name=".components.MenuActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".tokens.IconActivity"
+            android:name=".tokens.icons.IconActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".tokens.DrawableActivity"
+            android:name=".tokens.icons.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.LoadingActivity"
