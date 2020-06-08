@@ -1,12 +1,10 @@
 package com.natura.android.sample.data
 
 import android.content.Context
-import android.content.res.Resources
 import com.natura.android.sample.R
 import java.io.BufferedReader
-import java.io.File
 
-class IconsRepository (val context: Context) {
+class IconsRepository (private val context: Context) {
 
     fun getIconsIdsList(): List<Int> {
         val rawIconList = getIconsNamesFromFile()
