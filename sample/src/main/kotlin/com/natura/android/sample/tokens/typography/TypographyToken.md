@@ -11,7 +11,7 @@ Every time you need an text on your application, you can use the attribute *text
 
 ### How to use it?
 Right now Nat DS Typography Tokens support these variets:
-[Typography Sample](https://postimg.cc/YGrgGgmw)
+[![typography.png](https://i.postimg.cc/mDMSnyLh/typography.png)](https://postimg.cc/YGrgGgmw)
 
 Today all brands supported by Nat DS use the same typography token reference
 
