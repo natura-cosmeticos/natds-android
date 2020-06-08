@@ -1,15 +1,13 @@
 package com.natura.android.sample.data
 
 import android.content.Context
-import com.natura.android.sample.R
 import java.io.BufferedReader
 
-class IconsRepository (private val context: Context) {
+class IconsRepository(private val context: Context) {
 
     fun getIconsIdsList(): List<Int> {
         val rawIconList = getIconsNamesFromFile()
         val iconsIdsList = mutableListOf<Int>()
-        val id = R.drawable.filled_action_add
         for (iconName in rawIconList) {
             iconsIdsList.add(context.resources.getIdentifier(iconName, "drawable", context.packageName))
         }
