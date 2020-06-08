@@ -11,7 +11,7 @@ Every time you need an text on your application, you can use the attribute *text
 
 ### How to use it?
 Right now Nat DS Typography Tokens support these variets:
-![Typography Samples!](/typographySamples.png "Typography Samples")
+![Typography Samples!](sample/src/main/kotlin/com/natura/android/sample/tokens/typography/typographySamples.png "Typography Samples")
 
 Today all brands supported by Nat DS use the same typography token reference
 
