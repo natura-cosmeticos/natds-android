@@ -1,4 +1,4 @@
-package com.natura.android.sample.tokens.typography
+package com.natura.android.sample.tokens
 
 import android.os.Bundle
 import android.view.MenuItem

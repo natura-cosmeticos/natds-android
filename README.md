@@ -102,4 +102,4 @@ And:
 - Opacity
 - Size
 - Spacing
-- [Typography](sample/src/main/kotlin/com/natura/android/sample/tokens/typography/TypographyToken.md)
+- [Typography](doc/TypographyToken.md)
