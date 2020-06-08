@@ -70,6 +70,8 @@ In the file **publish.gradle** update field in the method **getVersionName** wit
     }
 
 ## How to use
+
+### How to add dependency
 Copy and paste the file **github_credentials.properties.sample** and rename it to **github_credentials.properties**. Updating the fields **github.username** and **github.password**. For getting your GitHub password see the [Tutorial](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line). Its important to check **read:packages** when generating you password.
 In the file build.gradle, insert the informations:
 
@@ -90,3 +92,14 @@ And:
         implementation "com.natura.android:designsystem:<version>"
         implementation 'com.google.android.material:material:1.1.0'
     }
+
+### How to use Tokens
+- Border Radius
+- Color
+- Elevation
+- Icons (drawables)
+- Icons (Fonts)
+- Opacity
+- Size
+- Spacing
+- [Typography](com/natura/android/sample/tokens/typography/TypographyToken.md)

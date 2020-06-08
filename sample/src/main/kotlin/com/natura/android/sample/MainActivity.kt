@@ -14,6 +14,7 @@ import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
 import com.natura.android.sample.tokens.*
+import com.natura.android.sample.tokens.typography.TypographyActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

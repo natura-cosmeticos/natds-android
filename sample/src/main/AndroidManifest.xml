@@ -35,7 +35,7 @@
             android:name=".tokens.SpacingActivity"
             android:theme="@style/Theme.Natura.NoActionBar" />
         <activity
-            android:name=".tokens.TypographyActivity"
+            android:name=".tokens.typography.TypographyActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.AppBarActivity"

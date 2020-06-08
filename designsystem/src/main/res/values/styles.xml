@@ -5,7 +5,8 @@
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/ds_size_h1</item>
-        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:lineSpacingMultiplier">ds_line_height_medium</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
