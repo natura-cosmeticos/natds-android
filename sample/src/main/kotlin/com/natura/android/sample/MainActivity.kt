@@ -16,6 +16,7 @@ import com.natura.android.sample.components.ValueTextHighlightActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
 import com.natura.android.sample.tokens.icons.IconActivity
+import com.natura.android.sample.tokens.TypographyActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
