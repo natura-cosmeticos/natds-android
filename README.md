@@ -103,5 +103,3 @@ And:
 - Size
 - Spacing
 - [Typography](sample/src/main/kotlin/com/natura/android/sample/tokens/typography/TypographyToken.md)
-https://github.com/natura-cosmeticos/natds-android/blob/DSY-1079-typography-color/com/natura/android/sample/tokens/typography/TypographyToken.md
-https://github.com/natura-cosmeticos/natds-android/blob/DSY-1079-typography-color/sample/src/main/kotlin/com/natura/android/sample/tokens/typography/TypographyToken.md
