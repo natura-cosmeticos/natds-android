@@ -33,48 +33,4 @@ class DrawableActivity : AppCompatActivity() {
         onBackPressed()
         return true
     }
-
-    private fun recoverListIds() = listOf(
-        R.drawable.ds_ic_filled_action_cancel,
-        R.drawable.ds_ic_filled_action_check,
-        R.drawable.ds_ic_outlined_action_cancel,
-        R.drawable.ds_ic_outlined_action_mic,
-        R.drawable.ds_ic_outlined_action_search,
-        R.drawable.ds_ic_outlined_finance_transfermoney,
-        R.drawable.ds_ic_outlined_navigation_arrowbottom,
-        R.drawable.ds_ic_outlined_navigation_arrowleft,
-        R.drawable.ds_ic_outlined_navigation_arrowright,
-        R.drawable.ds_ic_outlined_navigation_arrowtop,
-        R.drawable.ds_ic_outlined_navigation_close,
-        R.drawable.ds_ic_outlined_navigation_directionright,
-        R.drawable.ds_ic_filled_brand_naturarosacea,
-        R.drawable.ds_ic_outlined_finance_money,
-        R.drawable.ds_ic_outlined_finance_charging,
-        R.drawable.ds_ic_outlined_action_visibility,
-        R.drawable.ds_ic_outlined_action_visibilityoff,
-        R.drawable.ds_ic_outlined_action_copy,
-        R.drawable.ds_ic_outlined_action_edit
-    )
-
-    private fun recoverListNames() = listOf(
-        "ds_ic_filled_action_cancel",
-        "ds_ic_filled_action_check",
-        "ds_ic_outlined_action_cancel",
-        "ds_ic_outlined_action_mic",
-        "ds_ic_outlined_action_search",
-        "ds_ic_outlined_finance_transfermoney",
-        "ds_ic_outlined_navigation_arrowbottom",
-        "ds_ic_outlined_navigation_arrowleft",
-        "ds_ic_outlined_navigation_arrowright",
-        "ds_ic_outlined_navigation_arrowtop",
-        "ds_ic_outlined_navigation_close",
-        "ds_ic_outlined_navigation_directionright",
-        "ds_ic_filled_brand_naturarosacea",
-        "ds_ic_outlined_finance_money",
-        "ds_ic_outlined_finance_charging",
-        "ds_ic_outlined_action_visibility",
-        "ds_ic_outlined_action_visibilityoff",
-        "ds_ic_outlined_action_copy",
-        "ds_ic_outlined_action_edit"
-    )
 }
