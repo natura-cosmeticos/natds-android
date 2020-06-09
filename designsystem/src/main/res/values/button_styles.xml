@@ -2,7 +2,6 @@
 <resources>
 
     <!-- DS Style Buttons -->
-
     <style name="Widget.DS.Button" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/ds_button_ripple_color</item>
     </style>
