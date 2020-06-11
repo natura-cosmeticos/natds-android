@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarDefault"
-            style="@style/Widget.Natura.Toolbar"
+            style="@style/Widget.DS.Toolbar"
             android:layout_height="56dp"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
             app:title="Title Page" />
@@ -23,7 +26,7 @@
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page Primary"/>
+            app:title="Title Page Primary" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarSecondary"
@@ -31,36 +34,49 @@
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page Secondary"/>
+            app:title="Title Page Secondary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="150dp">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_default"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Default" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_primary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Primary" />
+    <Button
+        android:id="@+id/style_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginEnd="13dp"
+        android:text="Default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/style_primary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_secondary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Secondary" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/style_primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginEnd="13dp"
+        android:text="Primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/style_secondary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/style_default"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/style_secondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/style_primary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
