@@ -22,7 +22,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarPrimary"
-            style="@style/Widget.Natura.Toolbar.Primary"
+            style="@style/Widget.DS.Toolbar.Primary"
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
@@ -30,7 +30,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarSecondary"
-            style="@style/Widget.Natura.Toolbar.Secondary"
+            style="@style/Widget.DS.Toolbar.Secondary"
             android:layout_height="56dp"
             android:visibility="gone"
             app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
