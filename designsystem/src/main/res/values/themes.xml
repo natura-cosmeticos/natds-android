@@ -85,6 +85,7 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="android:statusBarColor">#7A333333</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -111,6 +112,7 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="android:statusBarColor">#7AFFFFFF</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -137,6 +139,7 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="android:statusBarColor">#7A333333</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -164,6 +167,7 @@
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="android:statusBarColor">#7AFFFFFF</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">
