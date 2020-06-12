@@ -13,6 +13,8 @@ import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
 import com.natura.android.sample.tokens.*
+import com.natura.android.sample.tokens.icons.DrawableActivity
+import com.natura.android.sample.tokens.icons.IconActivity
 import com.natura.android.sample.tokens.TypographyActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
