@@ -92,8 +92,8 @@ And:
 - Border Radius
 - Color
 - Elevation
-- [Icons (drawables)](doc/IconsToken.md)
+- [Icons (drawables)](doc/icon-token.md)
 - Opacity
 - Size
 - Spacing
-- [Typography](doc/TypographyToken.md)
+- [Typography](doc/typography-token.md)

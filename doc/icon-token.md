@@ -1,4 +1,4 @@
-# Icons Token - How to Use
+# Icon Token - How to Use
 
 ### What is it?
 Icons drawables supported by Nat Design System
