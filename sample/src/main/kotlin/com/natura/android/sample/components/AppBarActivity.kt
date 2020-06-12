@@ -9,16 +9,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
 
 class AppBarActivity : AppCompatActivity() {
-
-    private val toolbarDefault by lazy { findViewById<Toolbar>(R.id.toolbarDefault) }
-    private val toolbarPrimary by lazy { findViewById<Toolbar>(R.id.toolbarPrimary) }
-    private val toolbarSecondary by lazy { findViewById<Toolbar>(R.id.toolbarSecondary) }
 
     private var searchMenuItem: MenuItem? = null
     private var profileMenuItem: MenuItem? = null
@@ -75,24 +70,22 @@ class AppBarActivity : AppCompatActivity() {
     private fun setUpButtonActions() {
         val styleDefault = findViewById<View>(R.id.style_default)
         styleDefault.setOnClickListener {
-            toolbarDefault.visibility = View.VISIBLE
-            toolbarPrimary.visibility = View.GONE
-            toolbarSecondary.visibility = View.GONE
+            appBarTop.color = DEFAULT
+            recreate()
         }
 
         val stylePrimary = findViewById<View>(R.id.style_primary)
         stylePrimary.setOnClickListener {
-            toolbarDefault.visibility = View.GONE
-            toolbarPrimary.visibility = View.VISIBLE
-            toolbarSecondary.visibility = View.GONE
+            appBarTop.color = PRIMARY
+            it.background
+            recreate()
             Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
         }
 
         val styleSecondary = findViewById<View>(R.id.style_secondary)
         styleSecondary.setOnClickListener {
-            toolbarDefault.visibility = View.GONE
-            toolbarPrimary.visibility = View.GONE
-            toolbarSecondary.visibility = View.VISIBLE
+            appBarTop.color = SECONDARY
+            recreate()
             Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
         }
     }
@@ -112,4 +105,14 @@ class AppBarActivity : AppCompatActivity() {
         profileMenuItem?.isVisible = menuMode
         linesMenuItem?.isVisible = menuMode
     }
+
+    companion object {
+        const val DEFAULT = 0
+        const val PRIMARY = 1
+        const val SECONDARY = 2
+        const val INHERIT = 3
+
+    }
 }
+
+

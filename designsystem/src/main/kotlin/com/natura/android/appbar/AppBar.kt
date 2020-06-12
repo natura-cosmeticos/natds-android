@@ -1,9 +1,7 @@
 package com.natura.android.appbar
 
-import com.natura.android.R
 import android.app.Activity
 import android.content.Context
-import android.content.res.Resources
 import android.graphics.Color
 import android.os.Build
 import android.util.AttributeSet
@@ -11,6 +9,7 @@ import android.util.TypedValue
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.Toolbar
+import com.natura.android.R
 import kotlin.math.sqrt
 
 class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
