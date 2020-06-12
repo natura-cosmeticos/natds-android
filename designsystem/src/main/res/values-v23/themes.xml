@@ -18,7 +18,7 @@
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
 
         <!-- Type styles -->
         <item name="textAppearanceHeadline6">@style/TextAppearance.MaterialComponents.Headline6</item>
@@ -55,7 +55,7 @@
         <item name="colorPrimaryDark">@color/natPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:statusBarColor">?colorSurface</item>
     </style>
 
@@ -82,7 +82,7 @@
         <item name="colorPrimaryDark">@color/avonLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
     </style>
@@ -110,7 +110,7 @@
         <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:statusBarColor">?colorSurface</item>
     </style>
 
@@ -137,7 +137,7 @@
         <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
     </style>
@@ -167,7 +167,7 @@
         <item name="colorPrimaryDark">@color/tbsDarkPrimaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

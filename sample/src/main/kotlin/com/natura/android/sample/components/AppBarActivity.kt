@@ -12,6 +12,7 @@ import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
+import kotlinx.android.synthetic.main.activity_appbar.*
 
 class AppBarActivity : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class AppBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)
-        setSupportActionBar(toolbarDefault)
+        setSupportActionBar(appBarTop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setUpButtonActions()
