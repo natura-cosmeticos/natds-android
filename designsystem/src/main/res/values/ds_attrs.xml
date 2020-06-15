@@ -58,4 +58,9 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="ds_expansion_panel">
+        <attr name="subtitle" format="string" />
+        <attr name="description" format="string" />
+    </declare-styleable>
+
 </resources>
