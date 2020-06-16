@@ -36,12 +36,11 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         this.setBackgroundColor(getThemeColor(getMainColorFromAttrs()))
         this.setTitleTextColor(getThemeColor(getMainOnColorFromAttrs()))
 
-        if(isOnColorTooLight(getThemeColor(getMainOnColorFromAttrs()))) {
+        if (isOnColorTooLight(getThemeColor(getMainOnColorFromAttrs()))) {
             setStatusBarIconsLighter()
         } else {
             setStatusBarIconsDarker()
         }
-
     }
 
     private fun isOnColorTooLight(color: Int): Boolean {
@@ -57,21 +56,20 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
             val window = context.window
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.statusBarColor = getThemeColor(getMainColorFromAttrs())
-
         }
     }
 
     private fun getMainColorFromAttrs(): Int {
-        return when(color) {
-            1 -> R.attr.colorPrimary
-            2 -> R.attr.colorSecondary
-            3 -> android.R.color.transparent
-            else -> R.attr.colorSurface
-        }
+        return when (color) {
+                1 -> R.attr.colorPrimary
+                2 -> R.attr.colorSecondary
+                3 -> android.R.color.transparent
+                else -> R.attr.colorSurface
+            }
     }
 
     private fun getMainOnColorFromAttrs(): Int {
-        return when(color) {
+        return when (color) {
             1 -> R.attr.colorOnPrimary
             2 -> R.attr.colorOnSecondary
             3 -> R.attr.colorOnSurface
@@ -84,7 +82,6 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         context.theme.resolveAttribute(colorAttr, outValue, true)
         return outValue.data
     }
-
 
     private fun setStatusBarIconsDarker() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

@@ -24,8 +24,6 @@
 <!--            app:title="Testing custom App Bar"-->
 <!--            app:appBarType="appBarInherit" />-->
 
-
-
     <Button
         android:id="@+id/style_default"
         android:layout_width="wrap_content"
