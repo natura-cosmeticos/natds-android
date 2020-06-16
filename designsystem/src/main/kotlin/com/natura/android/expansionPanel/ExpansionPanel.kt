@@ -28,7 +28,7 @@ class ExpansionPanel @JvmOverloads constructor(
     private val description by lazy { findViewById<TextView>(R.id.ds_expansion_panel_description) }
 
     init {
-        View.inflate(context, R.layout.ds_expasion_panel, this)
+        View.inflate(context, R.layout.ds_expansion_panel, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_expansion_panel)
         val subtitleText = typedArray.getString(R.styleable.ds_expansion_panel_subtitle)
