@@ -13,6 +13,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 
+
 @SuppressLint("CustomViewStyleable")
 class ExpansionPanel @JvmOverloads constructor(
     context: Context,
@@ -23,21 +24,17 @@ class ExpansionPanel @JvmOverloads constructor(
     private val container by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val content by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content) }
-
     private val subtitle by lazy { findViewById<TextView>(R.id.ds_expansion_panel_subtitle) }
-    private val description by lazy { findViewById<TextView>(R.id.ds_expansion_panel_description) }
 
     init {
         View.inflate(context, R.layout.ds_expansion_panel, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_expansion_panel)
         val subtitleText = typedArray.getString(R.styleable.ds_expansion_panel_subtitle)
-        val descriptionText = typedArray.getString(R.styleable.ds_expansion_panel_description)
 
         typedArray.recycle()
 
         subtitle.text = subtitleText
-        description.text = descriptionText
 
         container.setOnClickListener {
             toggleContent()
@@ -48,8 +45,13 @@ class ExpansionPanel @JvmOverloads constructor(
         }
     }
 
+    override fun onFinishInflate() {
+        super.onFinishInflate()
+        moveChildrenToContentArea()
+    }
+
     private fun toggleContent() {
-        if (content.visibility == View.GONE){
+        if (content.visibility == View.GONE) {
             TransitionManager.beginDelayedTransition(container, AutoTransition())
             content.visibility = View.VISIBLE
             icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
@@ -59,5 +61,17 @@ class ExpansionPanel @JvmOverloads constructor(
             icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
         }
     }
+
+    private fun moveChildrenToContentArea() {
+        while (haveChildren()) {
+            val view = getFirstGivenChild()
+            removeView(view)
+            content.addView(view)
+        }
+    }
+
+    private fun haveChildren(): Boolean = getChildAt(1) != null
+
+    private fun getFirstGivenChild(): View? = getChildAt(1)
 
 }

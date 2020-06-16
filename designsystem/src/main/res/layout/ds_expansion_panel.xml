@@ -8,7 +8,8 @@
     android:layout_height="wrap_content"
     android:background="#fff"
     android:orientation="vertical"
-    android:animateLayoutChanges="true">
+    android:animateLayoutChanges="true"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ds_expansion_panel_top"
@@ -61,20 +62,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top">
-
-        <TextView
-            android:id="@+id/ds_expansion_panel_description"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="?spacingStandard"
-            android:layout_marginEnd="?spacingStandard"
-            android:layout_marginBottom="?spacingStandard"
-            tools:text="description_text"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:textAppearance="?textAppearanceBody1"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

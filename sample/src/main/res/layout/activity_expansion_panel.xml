@@ -18,8 +18,35 @@
     <com.natura.android.expansionPanel.ExpansionPanel
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:subtitle="Hello World!"
-        app:description="Hi for you!\nHi for me!\nHi for everyone!"/>
+        app:subtitle="Hello World!">
+
+        <TextView
+            android:id="@+id/example_text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="description_text 1"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard"
+            android:layout_marginBottom="?spacingStandard"
+            app:layout_constraintBottom_toTopOf="@id/example_text2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/example_text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="description_text 2"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard"
+            android:layout_marginBottom="?spacingStandard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/example_text1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </com.natura.android.expansionPanel.ExpansionPanel>
 
     </LinearLayout>
 
