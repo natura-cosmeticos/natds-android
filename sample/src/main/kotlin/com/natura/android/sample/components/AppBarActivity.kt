@@ -27,8 +27,6 @@ class AppBarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_appbar)
         setSupportActionBar(appBarTop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        setUpButtonActions()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,29 +65,6 @@ class AppBarActivity : AppCompatActivity() {
         return true
     }
 
-    private fun setUpButtonActions() {
-        val styleDefault = findViewById<View>(R.id.style_default)
-        styleDefault.setOnClickListener {
-            appBarTop.color = DEFAULT
-            recreate()
-        }
-
-        val stylePrimary = findViewById<View>(R.id.style_primary)
-        stylePrimary.setOnClickListener {
-            appBarTop.color = PRIMARY
-            it.background
-            recreate()
-            Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
-        }
-
-        val styleSecondary = findViewById<View>(R.id.style_secondary)
-        styleSecondary.setOnClickListener {
-            appBarTop.color = SECONDARY
-            recreate()
-            Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
-        }
-    }
-
     private fun setupSearchView(searchView: SearchView) {
         searchView.queryHint = "Search..."
         // Get the SearchView and set the searchable configuration
@@ -104,14 +79,6 @@ class AppBarActivity : AppCompatActivity() {
         searchMenuItem?.isVisible = menuMode
         profileMenuItem?.isVisible = menuMode
         linesMenuItem?.isVisible = menuMode
-    }
-
-    companion object {
-        const val DEFAULT = 0
-        const val PRIMARY = 1
-        const val SECONDARY = 2
-        const val INHERIT = 3
-
     }
 }
 

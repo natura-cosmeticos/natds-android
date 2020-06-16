@@ -12,6 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import com.natura.android.R
 import kotlin.math.sqrt
 
+// WIP
 class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
     var color: Int
 

@@ -92,6 +92,4 @@
     <attr name="textButton" format="reference"/>
 
     <attr name="toolbarHeight" format="dimension"/>
-
-
 </resources>
