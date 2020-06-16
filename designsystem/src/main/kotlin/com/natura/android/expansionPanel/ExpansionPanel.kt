@@ -21,7 +21,6 @@ class ExpansionPanel @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private val container by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel) }
-    private val bar by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_bar) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val content by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content) }
 
@@ -40,7 +39,7 @@ class ExpansionPanel @JvmOverloads constructor(
         subtitle.text = subtitleText
         description.text = descriptionText
 
-        bar.setOnClickListener {
+        container.setOnClickListener {
             toggleContent()
         }
 
