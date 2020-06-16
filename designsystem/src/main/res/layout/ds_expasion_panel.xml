@@ -45,7 +45,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/ds_expansion_panel_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,12 +55,14 @@
                     android:layout_marginEnd="@dimen/ds_spacing_standard"
                     android:layout_marginRight="@dimen/ds_spacing_standard"
                     android:layout_marginBottom="@dimen/ds_spacing_standard"
-                    android:contentDescription="TODO"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ds_expansion_panel_subtitle"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom" />
+                    app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom"
+                    android:background="?selectableItemBackgroundBorderless"/>
+
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

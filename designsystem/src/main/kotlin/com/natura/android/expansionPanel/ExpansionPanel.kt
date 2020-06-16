@@ -41,15 +41,23 @@ class ExpansionPanel @JvmOverloads constructor(
         description.text = descriptionText
 
         bar.setOnClickListener {
-            if (content.visibility == View.GONE){
-                TransitionManager.beginDelayedTransition(container, AutoTransition())
-                content.visibility = View.VISIBLE
-                icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
-            } else {
-                TransitionManager.beginDelayedTransition(container, AutoTransition())
-                content.visibility = View.GONE
-                icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
-            }
+            toggleContent()
+        }
+
+        icon.setOnClickListener {
+            toggleContent()
+        }
+    }
+
+    private fun toggleContent() {
+        if (content.visibility == View.GONE){
+            TransitionManager.beginDelayedTransition(container, AutoTransition())
+            content.visibility = View.VISIBLE
+            icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
+        } else {
+            TransitionManager.beginDelayedTransition(container, AutoTransition())
+            content.visibility = View.GONE
+            icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
         }
     }
 
