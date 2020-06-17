@@ -3,6 +3,7 @@ package com.natura.android.expansionPanel
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -31,7 +32,7 @@ class ExpansionPanelTest {
     fun basicLayout() {
         val layout = LayoutInflater.from(activityController.get()).inflate(R.layout.ds_expansion_panel, null) as ConstraintLayout
 
-        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel) as View).isNotNull()
+        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_box) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_top) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_subtitle) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_icon) as View).isNotNull()
@@ -49,16 +50,16 @@ class ExpansionPanelTest {
     fun borderlessWhenCollapsed() {
         val expectedBackground = ContextCompat.getDrawable(activityController.get(), R.drawable.ds_expansion_panel_border_collapsed)
 
-        val panel = expansionPanel.findViewById(R.id.ds_expansion_panel) as ConstraintLayout
+        val box = expansionPanel.findViewById(R.id.ds_expansion_panel_box) as LinearLayout
 
-        Truth.assertThat(panel.background.constantState).isEqualTo(expectedBackground?.constantState)
+        Truth.assertThat(box.background.constantState).isEqualTo(expectedBackground?.constantState)
     }
 
     @Test
     fun showContentWhenOnClick() {
-        val panel = expansionPanel.findViewById(R.id.ds_expansion_panel) as ConstraintLayout
+        val box = expansionPanel.findViewById(R.id.ds_expansion_panel_box) as LinearLayout
 
-        panel.callOnClick()
+        box.callOnClick()
 
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content) as ConstraintLayout
 
@@ -69,19 +70,19 @@ class ExpansionPanelTest {
     fun withBorderWhenExpanded() {
         val expectedBackground = ContextCompat.getDrawable(activityController.get(), R.drawable.ds_expansion_panel_border_expanded)
 
-        val panel = expansionPanel.findViewById(R.id.ds_expansion_panel) as ConstraintLayout
+        val box = expansionPanel.findViewById(R.id.ds_expansion_panel_box) as LinearLayout
 
-        panel.callOnClick()
+        box.callOnClick()
 
-        Truth.assertThat(panel.background.constantState).isEqualTo(expectedBackground?.constantState)
+        Truth.assertThat(box.background.constantState).isEqualTo(expectedBackground?.constantState)
     }
 
     @Test
     fun hideContentWhenOnClickAfterBeingExpanded() {
-        val panel = expansionPanel.findViewById(R.id.ds_expansion_panel) as ConstraintLayout
+        val box = expansionPanel.findViewById(R.id.ds_expansion_panel_box) as LinearLayout
 
-        panel.callOnClick()
-        panel.callOnClick()
+        box.callOnClick()
+        box.callOnClick()
 
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content) as ConstraintLayout
 

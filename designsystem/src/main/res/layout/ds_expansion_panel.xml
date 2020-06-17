@@ -3,75 +3,89 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ds_expansion_panel"
+    android:id="@+id/ds_expansion_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/ds_expansion_panel_border_collapsed"
-    android:orientation="vertical"
-    android:animateLayoutChanges="true"
+    android:paddingBottom="?spacingSmall"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ds_expansion_panel_top"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?sizeLarge"
-        android:layout_marginEnd="0dp"
-        app:layout_constraintBottom_toTopOf="@id/ds_expansion_panel_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ds_expansion_panel_box"
+        android:background="@drawable/ds_expansion_panel_border_collapsed"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:elevation="?elevation03"
+        android:layout_marginBottom="?elevation03"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <TextView
-            android:id="@+id/ds_expansion_panel_subtitle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="?spacingStandard"
-            android:layout_marginEnd="?spacingSmall"
-            tools:text="subtitle_label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ds_expansion_panel_icon"
-            android:textAppearance="?textAppearanceSubtitle1"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:singleLine="true"/>
-
-        <ImageButton
-            android:id="@+id/ds_expansion_panel_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="?spacingStandard"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ds_expansion_panel_top"
+            android:layout_width="match_parent"
+            android:layout_height="?sizeLarge"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintBottom_toTopOf="@id/ds_expansion_panel_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_subtitle"
-            app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom"
-            android:background="?selectableItemBackgroundBorderless"
-            android:contentDescription="Collapse Arrow Icon" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ds_expansion_panel_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:visibility="gone"
-        android:paddingLeft="?spacingStandard"
-        android:paddingRight="?spacingStandard"
-        android:paddingBottom="?spacingStandard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top"
-        app:layout_constraintBottom_toBottomOf="parent">
+            <TextView
+                android:id="@+id/ds_expansion_panel_subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingStandard"
+                android:layout_marginEnd="?spacingSmall"
+                tools:text="subtitle_label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ds_expansion_panel_icon"
+                android:textAppearance="?textAppearanceSubtitle1"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:singleLine="true"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/ds_expansion_panel_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="?spacingStandard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_subtitle"
+                app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="Collapse Arrow Icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ds_expansion_panel_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:visibility="gone"
+            android:paddingLeft="?spacingStandard"
+            android:paddingRight="?spacingStandard"
+            android:paddingBottom="?spacingStandard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,7 +18,7 @@
         <com.natura.android.expansionPanel.ExpansionPanel
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:subtitle="Expansion Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel Panel">
+            app:subtitle="Expansion Panel 1">
 
             <LinearLayout
                 android:id="@+id/circle"
