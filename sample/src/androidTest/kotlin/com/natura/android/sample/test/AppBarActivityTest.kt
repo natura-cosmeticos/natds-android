@@ -21,11 +21,5 @@ class AppBarActivityTest : ScreenShotActivityTestBase() {
 
         performClick(R.id.searchMenuBtn)
         checkScreenshot(activity, "search_expanded")
-
-        performClick(R.id.style_primary)
-        checkScreenshot(activity, "primary")
-
-        performClick(R.id.style_secondary)
-        checkScreenshot(activity, "secondary")
     }
 }
