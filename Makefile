@@ -41,3 +41,6 @@ publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
 
 run-all-sanitycheck-steps: lint unit-test instrumentation-test
+
+update-icons:
+	sh ./tools/update_icons.sh
