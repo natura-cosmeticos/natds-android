@@ -14,7 +14,6 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 
-
 @SuppressLint("CustomViewStyleable")
 class ExpansionPanel @JvmOverloads constructor(
     context: Context,
