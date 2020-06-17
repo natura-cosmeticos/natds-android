@@ -28,27 +28,27 @@ class ExpansionPanelActivityTest {
 
     @Test
     fun shouldRenderCollapsed() {
-        onView(withId(R.id.ds_expansion_panel_content)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(not(isDisplayed())))
     }
 
     @Test
     fun shouldExpandContent() {
         onView(withId(R.id.ds_expansion_panel_box)).perform(click())
-        onView(withId(R.id.ds_expansion_panel_content)).check(matches(isDisplayed()))
+        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldRenderGivenComponentsInsideContainer() {
         onView(withId(R.id.ds_expansion_panel_box)).perform(click())
-        onView(allOf(withId(R.id.circle_example), withParent(withId(R.id.ds_expansion_panel_content))))
+        onView(allOf(withId(R.id.circle_example), withParent(withId(R.id.ds_expansion_panel_content_area))))
             .check(matches(isDisplayed()))
-        onView(allOf(withId(R.id.text_example), withParent(withId(R.id.ds_expansion_panel_content))))
+        onView(allOf(withId(R.id.text_example), withParent(withId(R.id.ds_expansion_panel_content_area))))
             .check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldRenderCollapseWhenClickedOnExpandedContent() {
         onView(withId(R.id.ds_expansion_panel_box)).perform(click()).perform(click())
-        onView(withId(R.id.ds_expansion_panel_content)).check(matches(not(isDisplayed())))
+        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(not(isDisplayed())))
     }
 }
