@@ -43,7 +43,7 @@ Important! If you are adding the toolbar component at you xml layou file, DO NOT
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    ```
+ ```
 
 After that, the App Bar will be displayed at the top of the screen and in the root view code, you can add some basic actions:
 ```android
@@ -55,5 +55,6 @@ After that, the App Bar will be displayed at the top of the screen and in the ro
           supportActionBar?.setDisplayHomeAsUpEnabled(true)
           supportActionBar?.title = "App Bar Top"
       }
-    ```
+ ```
+
 
