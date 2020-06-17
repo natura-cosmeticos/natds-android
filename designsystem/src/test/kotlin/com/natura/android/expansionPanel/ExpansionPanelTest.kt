@@ -36,12 +36,12 @@ class ExpansionPanelTest {
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_top) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_subtitle) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_icon) as View).isNotNull()
-        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_content) as View).isNotNull()
+        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_content_area) as View).isNotNull()
     }
 
     @Test
     fun contentNotVisibleByDefault() {
-        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content) as ConstraintLayout
+        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
         Truth.assertThat(content.visibility).isEqualTo(View.GONE)
     }
@@ -61,7 +61,7 @@ class ExpansionPanelTest {
 
         box.callOnClick()
 
-        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content) as ConstraintLayout
+        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
         Truth.assertThat(content.visibility).isEqualTo(View.VISIBLE)
     }
@@ -84,7 +84,7 @@ class ExpansionPanelTest {
         box.callOnClick()
         box.callOnClick()
 
-        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content) as ConstraintLayout
+        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
         Truth.assertThat(content.visibility).isEqualTo(View.GONE)
     }
