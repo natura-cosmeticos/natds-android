@@ -1,6 +1,5 @@
 package com.natura.android.expansionPanel
 
-
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
@@ -102,5 +101,4 @@ class ExpansionPanel @JvmOverloads constructor(
     private fun haveChildrenToMove(): Boolean = getChildAt(1) != null
 
     private fun getNextChild(): View? = getChildAt(1)
-
 }

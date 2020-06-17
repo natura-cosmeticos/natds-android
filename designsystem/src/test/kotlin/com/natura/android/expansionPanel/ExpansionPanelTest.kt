@@ -88,5 +88,4 @@ class ExpansionPanelTest {
 
         Truth.assertThat(content.visibility).isEqualTo(View.GONE)
     }
-
 }
