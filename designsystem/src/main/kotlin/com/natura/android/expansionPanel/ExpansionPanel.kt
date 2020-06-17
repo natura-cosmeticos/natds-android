@@ -21,7 +21,7 @@ class ExpansionPanel @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val panel by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel) }
+    private val panel by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val content by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content) }
     private val subtitle by lazy { findViewById<TextView>(R.id.ds_expansion_panel_subtitle) }
