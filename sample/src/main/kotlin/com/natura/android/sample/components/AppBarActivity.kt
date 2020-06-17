@@ -9,8 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import com.natura.android.sample.R
-import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
-import kotlinx.android.synthetic.main.activity_appbar.*
+import com.natura.android.sample.setChosenDefaultTheme
 
 class AppBarActivity : AppCompatActivity() {
 
@@ -19,13 +18,13 @@ class AppBarActivity : AppCompatActivity() {
     private var linesMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setChosenDefaultWithNoActionBarTheme()
+        setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)
-        setSupportActionBar(appBarTop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "App Bar Top"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
