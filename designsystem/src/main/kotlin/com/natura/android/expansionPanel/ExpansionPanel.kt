@@ -21,7 +21,7 @@ class ExpansionPanel @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val container by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel) }
+    private val panel by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val content by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content) }
     private val subtitle by lazy { findViewById<TextView>(R.id.ds_expansion_panel_subtitle) }
@@ -36,7 +36,7 @@ class ExpansionPanel @JvmOverloads constructor(
 
         subtitle.text = subtitleText
 
-        container.setOnClickListener {
+        panel.setOnClickListener {
             toggleContent()
         }
 
@@ -52,13 +52,15 @@ class ExpansionPanel @JvmOverloads constructor(
 
     private fun toggleContent() {
         if (content.visibility == View.GONE) {
-            TransitionManager.beginDelayedTransition(container, AutoTransition())
+            TransitionManager.beginDelayedTransition(panel, AutoTransition())
             content.visibility = View.VISIBLE
             icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
+            panel.setBackgroundResource(R.drawable.ds_expansion_panel_border_expanded)
         } else {
-            TransitionManager.beginDelayedTransition(container, AutoTransition())
+            TransitionManager.beginDelayedTransition(panel, AutoTransition())
             content.visibility = View.GONE
             icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
+            panel.setBackgroundResource(R.drawable.ds_expansion_panel_border_collapsed)
         }
     }
 
