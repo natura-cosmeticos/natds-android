@@ -100,12 +100,13 @@
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="toolbarStyle">@style/Widget.DS.Toolbar</item>
         <item name="buttonStyle">@style/Widget.DS.Button</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
+        <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -208,11 +209,12 @@
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="toolbarStyle">@style/Widget.DS.Toolbar</item>
         <item name="buttonStyle">@style/Widget.DS.Button</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton</item>
+        <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
+        <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
     </style>
 </resources>

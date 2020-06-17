@@ -27,7 +27,6 @@
 
         <!--Component styles-->
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
-        <item name="toolbarStyle">@style/Widget.DS.Toolbar</item>
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
         <item name="android:statusBarColor">#7A333333</item>
     </style>

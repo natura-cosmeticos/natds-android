@@ -162,7 +162,7 @@
         <item name="buttonTint">@color/ds_control_secondary_selector</item>
     </style>
 
-    <style name="Widget.DS.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+    <style name="Widget.DS.AppBarTop" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:background">?colorSurface</item>
         <item name="android:textColor">?colorOnSurface</item>
         <item name="titleTextColor">?colorOnSurface</item>
@@ -170,18 +170,18 @@
         <item name="android:layout_height">@dimen/ds_toolbar_height</item>
     </style>
 
-    <style name="ToolBarTheme" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+    <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="colorOnPrimary">?colorOnSurface</item>
         <item name="colorControlNormal">?colorOnSurface</item>
     </style>
 
-    <style name="Widget.DS.Toolbar.Primary" parent="Widget.DS.Toolbar">
+    <style name="Widget.DS.Toolbar.Primary" parent="Widget.DS.AppBarTop">
         <item name="android:background">?colorPrimary</item>
         <item name="android:textColor">?colorOnPrimary</item>
         <item name="titleTextColor">?colorOnPrimary</item>
     </style>
 
-    <style name="Widget.DS.Toolbar.Secondary" parent="Widget.DS.Toolbar">
+    <style name="Widget.DS.Toolbar.Secondary" parent="Widget.DS.AppBarTop">
         <item name="android:background">?colorSecondary</item>
         <item name="android:textColor">?colorOnSecondary</item>
         <item name="titleTextColor">?colorOnSecondary</item>
