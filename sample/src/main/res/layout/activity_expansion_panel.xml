@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:animateLayoutChanges="true">
 
         <com.natura.android.expansionPanel.ExpansionPanel
             android:layout_width="match_parent"

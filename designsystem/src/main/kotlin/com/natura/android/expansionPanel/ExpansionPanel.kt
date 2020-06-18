@@ -20,7 +20,7 @@ class ExpansionPanel @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val box by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel_box) }
+    private val container by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel_container) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val contentArea by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content_area) }
     private val subtitle by lazy { findViewById<TextView>(R.id.ds_expansion_panel_subtitle) }
@@ -47,7 +47,7 @@ class ExpansionPanel @JvmOverloads constructor(
     }
 
     private fun setupClickableComponents() {
-        box.setOnClickListener {
+        container.setOnClickListener {
             toggleContentArea()
         }
 
@@ -57,15 +57,11 @@ class ExpansionPanel @JvmOverloads constructor(
     }
 
     private fun toggleContentArea() {
-        startAnimation()
-
         if (isContentAreaVisible()) {
             hideContentArea()
         } else {
             showContentArea()
         }
-
-        finishAnimation()
     }
 
     private fun isContentAreaVisible(): Boolean = contentArea.visibility == View.VISIBLE
@@ -73,21 +69,13 @@ class ExpansionPanel @JvmOverloads constructor(
     private fun showContentArea() {
         contentArea.visibility = View.VISIBLE
         icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
-        box.setBackgroundResource(R.drawable.ds_expansion_panel_border_expanded)
+        container.setBackgroundResource(R.drawable.ds_expansion_panel_border_expanded)
     }
 
     private fun hideContentArea() {
         contentArea.visibility = View.GONE
         icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
-        box.setBackgroundResource(R.drawable.ds_expansion_panel_border_collapsed)
-    }
-
-    private fun startAnimation() = TransitionManager.beginDelayedTransition(box, AutoTransition())
-
-    private fun finishAnimation() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            TransitionManager.endTransitions(box)
-        }
+        container.setBackgroundResource(R.drawable.ds_expansion_panel_border_collapsed)
     }
 
     private fun moveGivenChildrenToContentArea() {
