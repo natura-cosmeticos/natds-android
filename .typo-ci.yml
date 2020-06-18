@@ -1,5 +1,8 @@
 dictionaries:
   - en
+excluded_files:
+  - ".typo-ci.yml"
+  - "designsystem/build.gradle"
 excluded_words:
   - androidx
   - appbar
