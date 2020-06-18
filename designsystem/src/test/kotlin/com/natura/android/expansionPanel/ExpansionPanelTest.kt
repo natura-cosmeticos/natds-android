@@ -34,7 +34,7 @@ class ExpansionPanelTest {
 
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_container) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_top) as View).isNotNull()
-        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_subtitle) as View).isNotNull()
+        Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_title) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_icon) as View).isNotNull()
         Truth.assertThat(layout.findViewById(R.id.ds_expansion_panel_content_area) as View).isNotNull()
     }

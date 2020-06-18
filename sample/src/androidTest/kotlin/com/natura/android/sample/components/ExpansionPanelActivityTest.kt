@@ -23,7 +23,7 @@ class ExpansionPanelActivityTest {
 
     @Test
     fun shouldRenderSubtitle() {
-        onView(withId(R.id.ds_expansion_panel_subtitle)).check(matches(withText("Expansion Panel")))
+        onView(withId(R.id.ds_expansion_panel_title)).check(matches(withText("Expansion Panel")))
     }
 
     @Test

@@ -29,7 +29,7 @@
 
 
         <TextView
-            android:id="@+id/ds_expansion_panel_subtitle"
+            android:id="@+id/ds_expansion_panel_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingStandard"
@@ -52,8 +52,8 @@
             android:background="?selectableItemBackgroundBorderless"
             android:contentDescription="Collapse Arrow Icon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_subtitle"
-            app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_subtitle"
+            app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_title"
+            app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_title"
             app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

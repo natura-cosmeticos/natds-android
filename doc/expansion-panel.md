@@ -1,12 +1,12 @@
 # Expansion Panel - How to Use
 
 ### What is it?
-Expansion Panel is a component to display a subtitle when collapsed and
+Expansion Panel is a component to display a title when collapsed and
 can have any other component inside it. This other component can be
 displayed when Expansion Panel is opened.
 
 ### How to use it?
-Expansion Panel receives a subtitle (string type) attribute. It can have
+Expansion Panel receives a title (string type) attribute. It can have
 any type of child that will be rendered inside collapsed area.
 
 Following there's an example of an Expansion Panel with an LinearLayout
@@ -16,7 +16,7 @@ and TextField children:
 <com.natura.android.expansionPanel.ExpansionPanel
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:subtitle="Expansion Panel">
+    app:title="Expansion Panel">
 
     <LinearLayout
         android:id="@+id/circle_example"

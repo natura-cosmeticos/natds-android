@@ -20,7 +20,7 @@ class ExpansionPanel @JvmOverloads constructor(
     private val container by lazy { findViewById<LinearLayout>(R.id.ds_expansion_panel_container) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val contentArea by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content_area) }
-    private val subtitle by lazy { findViewById<TextView>(R.id.ds_expansion_panel_subtitle) }
+    private val title by lazy { findViewById<TextView>(R.id.ds_expansion_panel_title) }
 
     init {
         View.inflate(context, R.layout.ds_expansion_panel, this)
@@ -36,11 +36,11 @@ class ExpansionPanel @JvmOverloads constructor(
 
     private fun setupSubtitle(context: Context, attrs: AttributeSet?) {
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_expansion_panel)
-        val subtitleText = typedArray.getString(R.styleable.ds_expansion_panel_subtitle)
+        val titleText = typedArray.getString(R.styleable.ds_expansion_panel_title)
 
         typedArray.recycle()
 
-        subtitle.text = subtitleText
+        title.text = titleText
     }
 
     private fun setupClickableComponents() {
