@@ -35,14 +35,23 @@ However if you need an more complex App Bar Top, you can use Android Toolbar com
 Important! If you are adding the toolbar component at you xml layou file, DO NOT use the default theme, use the NoActionBar variant. You can check more infos [here](getting-started.md).
 
 ```android
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBarTop"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="?toolbarHeight"
-        android:theme="?toolbarDefaultTheme"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+        
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBarTop"
+            android:layout_width="match_parent"
+            android:layout_height="?toolbarHeight"
+            android:theme="?toolbarDefaultTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+            
+    </com.google.android.material.appbar.AppBarLayout>
  ```
 
 After that, the App Bar will be displayed at the top of the screen and in the root view code, you can add some basic actions:
