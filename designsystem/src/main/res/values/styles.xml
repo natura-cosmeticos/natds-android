@@ -168,11 +168,13 @@
         <item name="titleTextColor">?colorOnSurface</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_toolbar_height</item>
+        <item name="navigationIcon">@drawable/outlined_navigation_directionright</item>
     </style>
 
     <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="colorOnPrimary">?colorOnSurface</item>
         <item name="colorControlNormal">?colorOnSurface</item>
+        <item name="navigationIcon">@drawable/outlined_navigation_directionright</item>
     </style>
 
     <style name="Widget.DS.Toolbar.Primary" parent="Widget.DS.AppBarTop">
