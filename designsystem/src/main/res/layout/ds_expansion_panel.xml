@@ -20,7 +20,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ds_expansion_panel_top"
         android:layout_width="match_parent"
-        android:layout_height="?sizeLarge"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="?spacingNone"
         app:layout_constraintBottom_toTopOf="@id/ds_expansion_panel_content_area"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,28 +34,27 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingSmall"
-            tools:text="subtitle_label"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginBottom="?spacingSmall"
+            android:text="subtitle_label "
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/ds_expansion_panel_icon"
-            android:textAppearance="?textAppearanceSubtitle1"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:singleLine="true"/>
+            android:textAppearance="?textAppearanceSubtitle1"/>
 
         <ImageButton
             android:id="@+id/ds_expansion_panel_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingNone"
             android:layout_marginEnd="?spacingStandard"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_subtitle"
-            app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom"
             android:background="?selectableItemBackgroundBorderless"
-            android:contentDescription="Collapse Arrow Icon" />
+            android:contentDescription="Collapse Arrow Icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_subtitle"
+            app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_subtitle"
+            app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
