@@ -2,9 +2,6 @@ package com.natura.android.expansionPanel
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Build
-import android.transition.AutoTransition
-import android.transition.TransitionManager
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
