@@ -4,5 +4,6 @@ excluded_words:
   - androidx
   - appbar
   - appcompat
+  - drawables
   - natura
   - robolectric
