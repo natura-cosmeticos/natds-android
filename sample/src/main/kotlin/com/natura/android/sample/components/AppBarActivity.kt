@@ -5,19 +5,18 @@ import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
+import kotlinx.android.synthetic.main.activity_appbar.*
 
 class AppBarActivity : AppCompatActivity() {
 
-    private val toolbarDefault by lazy { findViewById<Toolbar>(R.id.toolbarDefault) }
-    private val toolbarPrimary by lazy { findViewById<Toolbar>(R.id.toolbarPrimary) }
-    private val toolbarSecondary by lazy { findViewById<Toolbar>(R.id.toolbarSecondary) }
+    private var searchMenuItem: MenuItem? = null
+    private var profileMenuItem: MenuItem? = null
+    private var linesMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
@@ -25,35 +24,10 @@ class AppBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)
-        setSupportActionBar(toolbarDefault)
-
-        val styleDefault = findViewById<View>(R.id.style_default)
-        styleDefault.setOnClickListener {
-            toolbarDefault.visibility = View.VISIBLE
-            toolbarPrimary.visibility = View.GONE
-            toolbarSecondary.visibility = View.GONE
-        }
-
-        val stylePrimary = findViewById<View>(R.id.style_primary)
-        stylePrimary.setOnClickListener {
-            toolbarDefault.visibility = View.GONE
-            toolbarPrimary.visibility = View.VISIBLE
-            toolbarSecondary.visibility = View.GONE
-            Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
-        }
-
-        val styleSecondary = findViewById<View>(R.id.style_secondary)
-        styleSecondary.setOnClickListener {
-            toolbarDefault.visibility = View.GONE
-            toolbarPrimary.visibility = View.GONE
-            toolbarSecondary.visibility = View.VISIBLE
-            Toast.makeText(this, "toolbar icons disabled", Toast.LENGTH_SHORT).show()
-        }
+        setSupportActionBar(toolBarTop)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "App Bar Top"
     }
-
-    private var searchMenuItem: MenuItem? = null
-    private var profileMenuItem: MenuItem? = null
-    private var linesMenuItem: MenuItem? = null
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.appbar_menu, menu)
@@ -80,6 +54,17 @@ class AppBarActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.searchMenuBtn -> updateToolbarMode(false)
+            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
+            else -> onBackPressed()
+        }
+
+        return true
+    }
+
     private fun setupSearchView(searchView: SearchView) {
         searchView.queryHint = "Search..."
         // Get the SearchView and set the searchable configuration
@@ -94,15 +79,5 @@ class AppBarActivity : AppCompatActivity() {
         searchMenuItem?.isVisible = menuMode
         profileMenuItem?.isVisible = menuMode
         linesMenuItem?.isVisible = menuMode
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.searchMenuBtn -> updateToolbarMode(false)
-            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
-            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
-        }
-
-        return true
     }
 }

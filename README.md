@@ -57,6 +57,11 @@ In construction
 
 You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/natds-android/pulls).
 
+### How to add resource icons
+It is preferable that the icon resources are saved as vectors (XML format). The nomenclature of drawables must be `ds_ic_<pack>_<scope>_<name withuot separators>`.
+
+For instance: `ds_ic_outlined_navigation_arrowbottom.xml`
+
 ### How to create a new version
 In the file **publish.gradle** update field in the method **getVersionName** with the new version number. Example, for the version 1.0.1:
 
@@ -96,4 +101,7 @@ And:
 - Opacity
 - Size
 - Spacing
-- [Typography](doc/typography-token.md)
+- [Typography](doc/TypographyToken.md)
+
+### How to use Components
+- [App Bar Top](doc/app-bar-top.md)
