@@ -8,8 +8,9 @@
     android:layout_height="wrap_content"
     android:background="@drawable/ds_expansion_panel_border_collapsed"
     android:animateLayoutChanges="true"
-    android:layout_margin="?elevation05"
-    app:cardElevation="?elevation03"
+    android:layout_margin="?elevation02"
+    app:cardElevation="?elevation01"
+    app:rippleColor="@android:color/transparent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -65,18 +66,18 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ds_expansion_panel_content_area"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="?spacingNone"
-        android:visibility="gone"
-        android:paddingLeft="?spacingStandard"
-        android:paddingRight="?spacingStandard"
-        android:paddingBottom="?spacingStandard"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top"
-        app:layout_constraintBottom_toBottomOf="parent">
+            android:id="@+id/ds_expansion_panel_content_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingNone"
+            android:visibility="gone"
+            android:paddingLeft="?spacingStandard"
+            android:paddingRight="?spacingStandard"
+            android:paddingBottom="?spacingStandard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top"
+            app:layout_constraintBottom_toBottomOf="parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
