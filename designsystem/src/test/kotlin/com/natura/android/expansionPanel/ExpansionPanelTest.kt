@@ -3,7 +3,6 @@ package com.natura.android.expansionPanel
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
