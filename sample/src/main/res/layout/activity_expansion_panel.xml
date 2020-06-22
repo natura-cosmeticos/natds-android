@@ -42,7 +42,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/circle_example"/>
+                app:layout_constraintLeft_toRightOf="@id/circle_example"
+                android:textAppearance="?textAppearanceBody1"
+                android:textColor="?colorMediumEmphasis"/>
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 
