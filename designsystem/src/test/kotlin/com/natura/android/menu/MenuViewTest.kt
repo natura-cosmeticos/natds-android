@@ -1,20 +1,20 @@
 package com.natura.android.menu
 
 import android.app.Activity
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
-import kotlinx.android.synthetic.main.ds_menu_view.view.*
 import kotlinx.android.synthetic.main.ds_menu_view_in_layout.view.*
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
+import org.robolectric.Shadows.shadowOf
 
 @RunWith(AndroidJUnit4::class)
 class MenuViewTest {
@@ -43,9 +43,16 @@ class MenuViewTest {
 
     @Test
     fun checksIfDefaultIconIsSetWhenIconAttributeIsEmpty() {
-        val icon = layout.menuItemBase.ds_menu_icon
+        val icon = shadowOf(layout.menuItemBase.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
 
-        assertEquals('\uEA6D', icon.text[0])
+        assertEquals(R.drawable.outlined_default_mockup, icon.createdFromResId)
+    }
+
+    @Test
+    fun checksIfIconDrawableWasSetWhenAttributeIsFilledWithIconName() {
+        val icon = shadowOf(layout.menuItemWithIcon.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
+
+        assertEquals(R.drawable.outlined_action_change, icon.createdFromResId)
     }
 
     @Test

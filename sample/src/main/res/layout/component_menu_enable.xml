@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         app:menu_label="Menu item"
-        app:menu_icon="EA08"
+        app:menu_icon="outlined-action-add"
         app:menu_label_color="@color/colorBrdNatGray"
         app:menu_label_size="@dimen/ds_text_small" />
 
