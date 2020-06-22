@@ -44,7 +44,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/circle_example"
                 android:textAppearance="?textAppearanceBody1"
-                android:textColor="?colorMediumEmphasis"/>
+                android:textColor="?colorOnSurface"/>
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 
