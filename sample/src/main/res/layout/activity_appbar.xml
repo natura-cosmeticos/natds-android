@@ -1,66 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarDefault"
-            style="@style/Widget.Natura.Toolbar"
-            android:layout_height="56dp"
-            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page" />
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarPrimary"
-            style="@style/Widget.Natura.Toolbar.Primary"
-            android:layout_height="56dp"
-            android:visibility="gone"
-            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page Primary"/>
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarSecondary"
-            style="@style/Widget.Natura.Toolbar.Secondary"
-            android:layout_height="56dp"
-            android:visibility="gone"
-            app:navigationIcon="@drawable/ds_ic_outlined_navigation_menu"
-            app:title="Title Page Secondary"/>
-
+            android:id="@+id/toolBarTop"
+            android:layout_width="match_parent"
+            android:layout_height="?toolbarHeight"
+            android:theme="?toolbarDefaultTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingTop="150dp">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_default"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Default" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_primary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Primary" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/style_secondary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:text="Secondary" />
-    </LinearLayout>
-
-</RelativeLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the App Bar Top - Default variant"
+        android:textAppearance="?textAppearanceBody2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+</androidx.constraintlayout.widget.ConstraintLayout>

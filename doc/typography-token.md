@@ -138,8 +138,8 @@ Today all brands supported by Nat DS use the same typography token reference
  ### Body 1
  Theme attribute name: textAppearanceBody1
  - Font Family: Roboto
- - Font Size: 24sp
- - Letter Spacing: 0
+ - Font Size: 16sp
+ - Letter Spacing: 0.03125
  - Font weight: Regular
  - Lineheight: Medium (1.5)
    ```android

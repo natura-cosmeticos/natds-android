@@ -91,5 +91,6 @@
     <attr name="outlinedButton" format="reference"/>
     <attr name="textButton" format="reference"/>
 
-
+    <attr name="toolbarHeight" format="dimension"/>
+    <attr name="toolbarDefaultTheme" format="reference"/>
 </resources>

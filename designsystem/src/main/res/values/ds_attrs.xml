@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="AppBar" >
+        <attr name="appBarType" format="enum">
+            <enum name="appBarDefault" value="0"/>
+            <enum name="appBarPrimary" value="1"/>
+            <enum name="appBarSecondary" value="2"/>
+            <enum name="appBarInherit" value="3"/>
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="ds_menu">
         <attr name="menu_label" format="string" />
         <attr name="menu_label_color" format="reference" />

@@ -1,0 +1,47 @@
+# chore: update Typo CI 
+---
+
+dictionaries:
+  - en
+
+excluded_files:
+  - "vendor/**/*"
+  - "node_modules/**/*"
+  - "*.key"
+  - "*.enc"
+  - "*.min.css"
+  - "*.css.map"
+  - "*.min.js"
+  - "*.js.map"
+  - "*.mk"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "Gemfile.lock"
+  - ".typo-ci.yml"
+  - "designsystem/build.gradle"
+
+excluded_words:
+  - androidx
+  - appbar
+  - appcompat
+  - dimen
+  - drawables
+  - kotlinx
+  - mockup
+  - nat
+  - natOnPrimary
+  - natOnPrimaryDark
+  - natOnPrimaryLight
+  - natOnSecondary
+  - natPrimary
+  - natPrimaryDark
+  - natPrimaryLight
+  - natSecondary
+  - natSecondaryDark
+  - natSecondaryLight
+  - natura
+  - Natura
+  - robolectric
+  - typoci
+
+spellcheck_filenames: true
