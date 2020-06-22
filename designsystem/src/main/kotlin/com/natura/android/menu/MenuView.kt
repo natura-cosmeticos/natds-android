@@ -66,7 +66,7 @@ class MenuView @JvmOverloads constructor(
             R.drawable.ds_menu_item_selected
         )
 
-        val iconText = typedArray.getString(R.styleable.ds_menu_menu_icon)
+        icon = typedArray.getString(R.styleable.ds_menu_menu_icon)
 
         openedDrawable = typedArray.getResourceId(
             R.styleable.ds_menu_menu_opened_drawable,
@@ -80,7 +80,6 @@ class MenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        icon = iconText
 
         if (isOpened) {
             configOpened(isOpened)
