@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
-import com.natura.android.icon.FontIcon
 
 @SuppressLint("CustomViewStyleable")
 class MenuView @JvmOverloads constructor(
@@ -21,20 +20,14 @@ class MenuView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED, DISABLE }
-
-    companion object {
-        const val ROTATION_ARROW_MENU_OPEN = 180f
-        const val ROTATION_ARROW_MENU_CLOSED = 0f
-    }
-
     private val textLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_menu_label) }
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
-    private val iconMenu by lazy { findViewById<FontIcon>(R.id.ds_menu_icon) }
+    private val iconMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_icon) }
     private val iconArrowMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_arrow) }
 
     private var selectedDrawable: Int
     private var openedDrawable: Int
+
     var label: String? = ""
         set(value) {
             field = value
@@ -44,9 +37,8 @@ class MenuView @JvmOverloads constructor(
     var icon: String? = ""
         set(value) {
             field = value
-            iconMenu.text = value
-            configDefaultIconIfEmpty()
-        }
+            setMenuIconImage(value)
+    }
 
     init {
         View.inflate(context, R.layout.ds_menu_view, this)
@@ -66,7 +58,7 @@ class MenuView @JvmOverloads constructor(
             R.drawable.ds_menu_item_selected
         )
 
-        val iconText = typedArray.getString(R.styleable.ds_menu_menu_icon)
+        icon = typedArray.getString(R.styleable.ds_menu_menu_icon)
 
         openedDrawable = typedArray.getResourceId(
             R.styleable.ds_menu_menu_opened_drawable,
@@ -80,7 +72,6 @@ class MenuView @JvmOverloads constructor(
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
-        icon = iconText
 
         if (isOpened) {
             configOpened(isOpened)
@@ -92,27 +83,23 @@ class MenuView @JvmOverloads constructor(
         isEnabled = enabled
     }
 
-    private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
-        label = labelText
-        textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
-        textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
-    }
-
-    private fun configOpened(isOpened: Boolean) {
-        changeBackground(isOpened, openedDrawable)
-        if (isOpened) iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_OPEN).start()
-        else iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_CLOSED).start()
-    }
-
     override fun setSelected(isSelected: Boolean) {
         super.setSelected(isSelected)
         changeBackground(isSelected, selectedDrawable)
     }
 
-    private fun changeBackground(changeBackground: Boolean, selectedColor: Int) {
-        labelContainer.apply {
-            if (changeBackground) setBackgroundResource(selectedColor)
-            else setBackgroundResource(0)
+    override fun setEnabled(isEnabled: Boolean) {
+        super.setEnabled(isEnabled)
+        isClickable = !isEnabled
+        textLabel.isEnabled = isEnabled
+        if (isEnabled) {
+            textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
+            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray)
+            setColorFilter(iconMenu, R.color.colorBrdNatGray)
+        } else {
+            textLabel.setTextColor(getColor(R.color.colorBrdNatGray_48))
+            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray_48)
+            setColorFilter(iconMenu, R.color.colorBrdNatGray_48)
         }
     }
 
@@ -131,18 +118,22 @@ class MenuView @JvmOverloads constructor(
         iconArrowMenu.setVisibilityFromBoolean(hasSubMenu, View.INVISIBLE)
     }
 
-    override fun setEnabled(isEnabled: Boolean) {
-        super.setEnabled(isEnabled)
-        isClickable = !isEnabled
-        textLabel.isEnabled = isEnabled
-        if (isEnabled) {
-            textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
-            iconMenu.setTextColor(getColor(R.color.colorBrdNatGray))
-            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray)
-        } else {
-            textLabel.setTextColor(getColor(R.color.colorBrdNatGray_48))
-            iconMenu.setTextColor(getColor(R.color.colorBrdNatGray_48))
-            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray_48)
+    private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
+        label = labelText
+        textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
+        textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
+    }
+
+    private fun configOpened(isOpened: Boolean) {
+        changeBackground(isOpened, openedDrawable)
+        if (isOpened) iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_OPEN).start()
+        else iconArrowMenu.animate().rotation(ROTATION_ARROW_MENU_CLOSED).start()
+    }
+
+    private fun changeBackground(changeBackground: Boolean, selectedColor: Int) {
+        labelContainer.apply {
+            if (changeBackground) setBackgroundResource(selectedColor)
+            else setBackgroundResource(0)
         }
     }
 
@@ -154,10 +145,33 @@ class MenuView @JvmOverloads constructor(
     }
 
     private fun configDefaultIconIfEmpty() {
-        if (iconMenu.text.isEmpty()) {
-            iconMenu.text = context.getString(R.string.icon_default_menu)
+        iconMenu.setImageResource(R.drawable.outlined_default_mockup)
+    }
+
+    private fun setMenuIconImage(iconName: String?) {
+        if (iconName != null) {
+            setDrawableByIconName(iconName)
+        } else {
+            configDefaultIconIfEmpty()
+        }
+    }
+
+    private fun setDrawableByIconName(iconName: String) {
+        val drawableId = context.resources.getIdentifier(iconName?.replace("-", "_"), "drawable", context.packageName)
+        if (drawableId == ICON_NOT_FOUND) {
+            configDefaultIconIfEmpty()
+        } else {
+            iconMenu.setImageResource(drawableId)
         }
     }
 
     private fun getColor(color: Int) = ContextCompat.getColor(context, color)
+
+    enum class MenuState { NONE, OPEN, CLOSE, SELECTED, UNSELECTED, DISABLE }
+
+    companion object {
+        const val ROTATION_ARROW_MENU_OPEN = 180f
+        const val ROTATION_ARROW_MENU_CLOSED = 0f
+        const val ICON_NOT_FOUND = 0
+    }
 }
