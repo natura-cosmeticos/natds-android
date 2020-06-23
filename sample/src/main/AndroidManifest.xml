@@ -80,6 +80,11 @@
         <activity
             android:name=".components.ButtonActivity"
             android:theme="@style/Theme.Natura" />
+
+        <activity
+            android:name=".components.ExpansionPanelActivity"
+            android:theme="@style/Theme.Natura" />
+
         <activity android:name=".tokens.ColorsActivity" />
     </application>
 

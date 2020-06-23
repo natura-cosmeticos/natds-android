@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ds_expansion_panel_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ds_expansion_panel_border_collapsed"
+    android:animateLayoutChanges="true"
+    android:layout_margin="?elevation02"
+    app:cardElevation="?elevation01"
+    app:rippleColor="@android:color/transparent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ds_expansion_panel_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingNone"
+            app:layout_constraintBottom_toTopOf="@id/ds_expansion_panel_content_area"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:id="@+id/ds_expansion_panel_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingStandard"
+                android:layout_marginEnd="?spacingSmall"
+                android:layout_marginTop="?spacingSmall"
+                android:layout_marginBottom="?spacingSmall"
+                android:text="subtitle_label "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ds_expansion_panel_icon"
+                android:textAppearance="?textAppearanceSubtitle1" />
+
+            <ImageButton
+                android:id="@+id/ds_expansion_panel_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingNone"
+                android:layout_marginEnd="?spacingStandard"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="Collapse Arrow Icon"
+                android:tint="?colorOnBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_title"
+                app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_title"
+                app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ds_expansion_panel_content_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingNone"
+            android:visibility="gone"
+            android:paddingLeft="?spacingStandard"
+            android:paddingRight="?spacingStandard"
+            android:paddingBottom="?spacingStandard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ds_expansion_panel_top"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

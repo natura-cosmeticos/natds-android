@@ -101,7 +101,15 @@ And:
 - Opacity
 - Size
 - Spacing
-- [Typography](doc/TypographyToken.md)
+- [Typography](doc/typography-token.md)
 
 ### How to use Components
 - [App Bar Top](doc/app-bar-top.md)
+- Error
+- [Expansion Panel](doc/expansion-panel.md)
+- Ext
+- Icon
+- Menu
+- Navigation View
+- Text Field
+- Widget
