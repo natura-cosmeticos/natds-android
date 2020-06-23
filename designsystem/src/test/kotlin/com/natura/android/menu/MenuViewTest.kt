@@ -59,6 +59,6 @@ class MenuViewTest {
     fun checksLabelValueWhenMenuInflated() {
         val label = layout.menuItemBase.label
 
-        assertEquals("Menu item to test", layout.menuItemBase.label)
+        assertEquals("Menu item to test", label)
     }
 }

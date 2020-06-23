@@ -157,7 +157,7 @@ class MenuView @JvmOverloads constructor(
     }
 
     private fun setDrawableByIconName(iconName: String) {
-        val drawableId = context.resources.getIdentifier(iconName?.replace("-", "_"), "drawable", context.packageName)
+        val drawableId = context.resources.getIdentifier(iconName.replace("-", "_"), "drawable", context.packageName)
         if (drawableId == ICON_NOT_FOUND) {
             configDefaultIconIfEmpty()
         } else {
