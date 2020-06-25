@@ -2,7 +2,8 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="false" android:state_checked="true"
-        android:color="?colorSecondary"/>
+        android:color="?colorSecondary"
+        android:alpha="?opacity06"/>
     <item
         android:state_checked="true"
         android:color="?colorSecondary"/>
@@ -14,7 +15,8 @@
         android:color="?colorSecondary"/>
     <item
         android:state_enabled="false"
-        android:color="?colorHighEmphasisOpacity06" />
+        android:color="?colorMediumEmphasis"
+        android:alpha="?opacity06"/>
 
     <item android:color="?colorMediumEmphasis"/>
 </selector>

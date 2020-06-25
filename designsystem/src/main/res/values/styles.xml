@@ -245,6 +245,16 @@
         <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 
+    <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/ds_selectors_primary_v23</item>
+        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
+        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+    </style>
+
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/ds_text_color_primary_selector</item>

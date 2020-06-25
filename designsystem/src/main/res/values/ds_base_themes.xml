@@ -26,6 +26,9 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
 
+        <item name="colorHighEmphasisOpacity06">#51333333</item>
+        <item name="colorMediumEmphasisOpacity06">#51777777</item>
+
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
         <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
@@ -99,11 +102,14 @@
         <item name="textAppearanceOverline">@style/Overline</item>
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.V23</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary.V23</item>
+
         <item name="buttonStyle">@style/Widget.DS.Button</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton</item>
+
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
@@ -135,6 +141,9 @@
         <item name="android:textColorHighlight">@color/white</item>
         <item name="android:textColorLink">@color/link</item>
 
+        <item name="colorHighEmphasisOpacity06">#51FAFAFA</item>
+        <item name="colorMediumEmphasisOpacity06">#51BBBBBB</item>
+
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
         <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
@@ -208,7 +217,9 @@
         <item name="textAppearanceOverline">@style/Overline</item>
 
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton</item>
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.V23</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary.V23</item>
+
         <item name="buttonStyle">@style/Widget.DS.Button</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined</item>

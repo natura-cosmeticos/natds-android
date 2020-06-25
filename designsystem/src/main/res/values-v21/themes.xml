@@ -29,6 +29,9 @@
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
         <item name="android:statusBarColor">#7A333333</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -58,6 +61,9 @@
         <item name="colorControlNormal">?colorOnBackground</item>
 
         <item name="android:statusBarColor">#7AFFFFFF</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -85,6 +91,9 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
         <item name="android:statusBarColor">#7A333333</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -112,6 +121,9 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
         <item name="android:statusBarColor">#7AFFFFFF</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -139,6 +151,9 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
         <item name="android:statusBarColor">#7A333333</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -167,6 +182,9 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
         <item name="android:statusBarColor">#7AFFFFFF</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">
