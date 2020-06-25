@@ -30,6 +30,8 @@
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Natura.Light</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -60,6 +62,8 @@
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Natura.Dark</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -89,6 +93,8 @@
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Avon</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -118,6 +124,8 @@
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Avon</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -147,6 +155,8 @@
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.TBS.Light</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -177,6 +187,8 @@
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.TBS.Dark</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

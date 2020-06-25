@@ -225,23 +225,78 @@
         <item name="voiceIcon">@drawable/ds_ic_outlined_action_mic</item>
     </style>
 
-    <style name="Widget.DS.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary</item>
+    <style name="Widget.DS.RadioButton.Natura.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
         <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Secondary" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary</item>
+    <style name="Widget.DS.RadioButton.Secondary.Natura.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary_natura_light</item>
         <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Avon.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.Avon" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary_avon</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.TBS.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_tbs_light</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.TBS.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary_tbs_light</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Natura.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_natura_dark</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.Natura.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/ds_selectors_secondary_natura_dark</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Avon.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_avon_dark</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.TBS.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_tbs_dark</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.TBS.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary_tbs_dark</item>
+        <item name="android:textColor">@color/ds_text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_primary_v23</item>
+        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
+        <item name="android:textColor">@color/ds_text_selectors_v23</item>
     </style>
 
     <style name="Widget.DS.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_primary</item>
+        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
         <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Secondary" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_secondary</item>
+        <item name="buttonTint">@color/ds_selectors_secondary_natura_light</item>
         <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 

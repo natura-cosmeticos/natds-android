@@ -39,7 +39,7 @@
 
                     <RadioButton
                         android:id="@+id/radioSecondary"
-                        style="@style/Widget.DS.RadioButton.Secondary"
+                        style="?radioButtonStyleSecondary"
                         android:text="Radio Secondary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -61,7 +61,7 @@
                         android:layout_marginBottom="10dp"/>
 
                     <RadioButton
-                        style="@style/Widget.DS.RadioButton.Secondary"
+                        style="?radioButtonStyleSecondary"
                         android:text="Radio Secondary Disable Checked"
                         android:enabled="false"
                         android:checked="true"

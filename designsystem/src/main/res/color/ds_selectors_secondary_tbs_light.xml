@@ -2,19 +2,19 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="false" android:state_checked="true"
-        android:color="?colorPrimary"/>
+        android:color="@color/tbsLightSecondary"/>
     <item
         android:state_checked="true"
-        android:color="?colorPrimary"/>
+        android:color="@color/tbsLightSecondary"/>
     <item
         android:state_selected="true"
-        android:color="?colorPrimary"/>
+        android:color="@color/tbsLightSecondary"/>
     <item
         android:state_activated="true"
-        android:color="?colorPrimary"/>
+        android:color="@color/tbsLightSecondary"/>
     <item
         android:state_enabled="false"
-        android:color="?colorHighEmphasisOpacity06" />
+        android:color="@color/lightHighEmphasis" />
 
-    <item android:color="?colorMediumEmphasis"/>
+    <item android:color="@color/lightMediumEmphasis"/>
 </selector>

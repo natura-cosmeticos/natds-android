@@ -98,6 +98,7 @@
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>
 
-    <!-- Checkbox Style references -->
+    <!-- Selection control Style references -->
     <attr name="checkboxStyleSecondary" format="reference"/>
+    <attr name="radioButtonStyleSecondary" format="reference"/>
 </resources>
