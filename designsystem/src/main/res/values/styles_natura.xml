@@ -111,6 +111,18 @@
         <item name="android:textColor">@color/text_selectors</item>
     </style>
 
+    <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_natura_light</item>
+        <item name="backgroundTint">@color/button_background_color_selector_natura_light</item>
+    </style>
+
+    <style name="Widget.DS.Button.Natura.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_natura_dark</item>
+        <item name="backgroundTint">@color/button_background_color_selector_natura_dark</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined.Natura.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/button_text_color_selector_light</item>
         <item name="strokeColor">@color/stroke_color_selector_natura_light</item>

@@ -83,7 +83,7 @@
     <color name="tbsLightSecondary">#A55F53</color>
     <color name="tbsLightSecondaryLight">#D98D7F</color>
     <color name="tbsLightSecondaryDark">#73342A</color>
-    <color name="tbsLightOnColors">@color/white</color>
+    <color name="tbsLightOnColor">@color/white</color>
 
     <!-- THE BODY SHOP DARK THEME BASE COLOR TOKENS -->
     <color name="tbsDarkPrimary">#62B3AE</color>
@@ -92,7 +92,7 @@
     <color name="tbsDarkSecondary">#D2AD93</color>
     <color name="tbsDarkSecondaryLight">#FFDFC4</color>
     <color name="tbsDarkSecondaryDark">#A07E65</color>
-    <color name="tbsDarkOnColors">@color/black</color>
+    <color name="tbsDarkOnColor">@color/black</color>
 
     <!-- LEGACY COLORS REFERENCES -->
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
