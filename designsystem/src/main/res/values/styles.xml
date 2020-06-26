@@ -118,15 +118,15 @@
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
-    <!-- Roboto Medium-->
+    <!-- FONT FAMILY STYLES -->
     <style name="RobotoMedium">
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
     </style>
-    <!-- Roboto Regular-->
     <style name="RobotoRegular">
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
+    <!-- APP BAR TOP STYLES -->
     <style name="Widget.DS.AppBarTop" parent="Widget.MaterialComponents.Toolbar">
         <item name="android:background">?colorSurface</item>
         <item name="android:textColor">?colorOnSurface</item>
@@ -156,6 +156,8 @@
         <item name="titleTextColor">?colorOnSecondary</item>
     </style>
 
+    <!-- SELECTION CONTROL STYLES -->
+
     <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
@@ -176,13 +178,7 @@
         <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
-    <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
-    </style>
-
-    <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
-    </style>
+    <!-- BUTTON STYLES -->
 
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>

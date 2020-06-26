@@ -94,6 +94,15 @@
     <color name="tbsDarkSecondaryDark">#A07E65</color>
     <color name="tbsDarkOnColors">@color/black</color>
 
+    <!-- HARD CODED COLORS TO ATTEND OLD API SPECS -->
+    <color name="colorHighlightLightOpacity05">#3D000000</color>
+    <color name="colorHighlightDarkOpacity05">#3DFFFFFF</color>
+    <color name="colorOnSurfaceLightOpacity06">#51FFFFFF</color>
+    <color name="colorOnSurfaceDarkOpacity06">#3DFFFFFF</color>
+    <color name="colorOnSurfaceLightOpacity03">#1E000000</color>
+    <color name="colorOnSurfaceDarkOpacity03">#1EFFFFFF</color>
+
+
     <!-- LEGACY COLORS REFERENCES -->
     <color name="colorLowEmphasis_16">#29BBBBBB</color>
     <color name="colorLowEmphasis">#BBBBBB</color>
