@@ -157,22 +157,55 @@
     </style>
 
     <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_v23</item>
-        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
-        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
     <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_primary_v23</item>
-        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
-        <item name="android:textColor">@color/ds_text_selectors_v23</item>
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+    </style>
+
+    <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+    </style>
+
+    <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+    </style>
+
+    <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_v23</item>
+    </style>
+
+    <style name="Widget.DS.Button.Outlined.V23" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/button_text_color_selector_v23</item>
+        <item name="strokeColor">@color/stroke_color_selector_v23</item>
+        <item name="rippleColor">@color/button_ripple_color_v23</item>
+    </style>
+
+    <style name="Widget.DS.Button.TextButton.V23" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text_color_selector_v23</item>
+        <item name="rippleColor">@color/button_ripple_color_v23</item>
+    </style>
+
+    <style name="Widget.DS.Button.TextButton.Light" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text_color_selector_light</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+    </style>
+
+    <style name="Widget.DS.Button.TextButton.Dark" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/button_text_color_selector_dark</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
     </style>
 </resources>

@@ -33,6 +33,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Light</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -65,6 +70,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Dark</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Dark</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Dark</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Dark</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -96,6 +106,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -127,6 +142,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Dark</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -158,6 +178,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Light</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -190,6 +215,11 @@
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Dark</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Dark</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Dark</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Dark</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Dark</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

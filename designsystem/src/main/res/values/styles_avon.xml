@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Widget.DS.RadioButton.Avon.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_avon_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_light</item>
+        <item name="android:textColor">@color/text_selectors</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Avon.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_avon_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_dark</item>
+        <item name="android:textColor">@color/text_selectors</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Avon.Secondary" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_avon</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon</item>
+        <item name="android:textColor">@color/text_selectors</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_primary_avon_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_light</item>
+        <item name="android:textColor">@color/text_selectors</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_primary_avon_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_dark</item>
+        <item name="android:textColor">@color/text_selectors</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon.Secondary" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_secondary_avon</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon</item>
+        <item name="android:textColor">@color/text_selectors</item>
+    </style>
+
+    <style name="Widget.DS.Button.Outlined.Avon.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/button_text_color_selector_light</item>
+        <item name="strokeColor">@color/stroke_color_selector_avon_light</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+    </style>
+
+    <style name="Widget.DS.Button.Outlined.Avon.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/button_text_color_selector_dark</item>
+        <item name="strokeColor">@color/stroke_color_selector_avon_dark</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
     </style>
 </resources>
