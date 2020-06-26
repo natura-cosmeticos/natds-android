@@ -179,9 +179,16 @@
     </style>
 
     <!-- BUTTON STYLES -->
-
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+    </style>
+
+    <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+    </style>
+
+    <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.V23" parent="Widget.MaterialComponents.Button.OutlinedButton">

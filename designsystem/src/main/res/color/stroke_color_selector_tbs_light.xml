@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="@color/tbsLightPrimary" android:state_enabled="true"/>
-    <item android:color="color/colorOnSurfaceLightOpacity03"/>
+    <item android:color="@color/colorOnSurfaceLightOpacity03"/>
 </selector>
