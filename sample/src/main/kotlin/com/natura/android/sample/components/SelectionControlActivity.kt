@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
+import com.natura.android.sample.setChosenDarkTheme
 import com.natura.android.sample.setChosenDefaultTheme
 
 class SelectionControlActivity : AppCompatActivity() {

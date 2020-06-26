@@ -28,10 +28,11 @@
         <!--Component styles-->
         <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Light</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Natura.Light</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Light</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Light</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -60,10 +61,10 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Dark</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Natura.Dark</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura.Primary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Dark</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Dark</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -91,10 +92,10 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Light</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Avon</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -122,10 +123,10 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Dark</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.Avon</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon.Primary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -153,10 +154,10 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Light</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.TBS.Light</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Light</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Light</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -185,10 +186,10 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary</item>
-        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Dark</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.TBS.Dark</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Dark</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Dark</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

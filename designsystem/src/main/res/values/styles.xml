@@ -118,13 +118,6 @@
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
-    <!--Navigation Drawer-->
-    <style name="Widget.Natura.NavigationView" parent="Widget.MaterialComponents.NavigationView">
-        <item name="itemTextAppearance">?textAppearanceBody2</item>
-        <item name="itemTextColor">?android:textColorPrimary</item>
-        <item name="itemIconTint">?android:textColorPrimary</item>
-    </style>
-
     <!-- Roboto Medium-->
     <style name="RobotoMedium">
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
@@ -132,34 +125,6 @@
     <!-- Roboto Regular-->
     <style name="RobotoRegular">
         <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="Widget.Natura.Divider">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/ds_size_line</item>
-        <item name="android:background">?colorControlHighlight</item>
-    </style>
-
-    <!--{@deprecated Use Widget.DS.RadioButton instead} -->
-    <style name="Widget.Natura.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/ds_text_color_primary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <!--{@deprecated Use Widget.DS.RadioButton.Secondary instead} -->
-    <style name="Widget.Natura.RadioButton.Secondary">
-        <item name="buttonTint">@color/ds_control_secondary_selector</item>
-    </style>
-
-    <style name="Widget.Natura.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/ds_text_color_primary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="Widget.Natura.CheckBox.Secondary">
-        <item name="buttonTint">@color/ds_control_secondary_selector</item>
     </style>
 
     <style name="Widget.DS.AppBarTop" parent="Widget.MaterialComponents.Toolbar">
@@ -191,95 +156,6 @@
         <item name="titleTextColor">?colorOnSecondary</item>
     </style>
 
-    <!-- {@deprecated Use Widiget.DS.Toolbar instead.} -->
-    <style name="Widget.Natura.Toolbar" parent="Widget.AppCompat.Toolbar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
-        <item name="android:background">?android:colorBackground</item>
-        <item name="android:textSize">@dimen/ds_text_title_size</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
-        <item name="android:fontFamily">@string/font_roboto_medium</item>
-        <item name="android:windowContentOverlay">@dimen/ds_appbar_overlay</item>
-    </style>
-
-    <!-- {@deprecated Use Widiget.DS.Toolbar.Primary instead.} -->
-    <style name="Widget.Natura.Toolbar.Primary">
-        <item name="android:background">?colorPrimary</item>
-        <item name="android:textColor">?android:textColorPrimary</item>
-    </style>
-
-    <!-- {@deprecated Use Widiget.DS.Toolbar.Secondary instead.} -->
-    <style name="Widget.Natura.Toolbar.Secondary">
-        <item name="android:background">?colorSecondary</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-    </style>
-
-    <style name="Widget.Natura.SearchView" parent="Widget.AppCompat.SearchView">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-        <item name="queryBackground">@null</item>
-        <item name="submitBackground">@null</item>
-        <item name="closeIcon">@drawable/ds_ic_outlined_navigation_close</item>
-        <item name="searchIcon">@null</item>
-        <item name="goIcon">@null</item>
-        <item name="voiceIcon">@drawable/ds_ic_outlined_action_mic</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Natura.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.Natura.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_natura_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Avon.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.Avon" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_avon</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.TBS.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_tbs_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.TBS.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_tbs_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Natura.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_natura_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.Natura.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="android:textColor">@color/ds_text_selectors</item>
-        <item name="buttonTint">@color/ds_selectors_secondary_natura_dark</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Avon.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_avon_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.TBS.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_primary_tbs_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.TBS.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/ds_selectors_secondary_tbs_dark</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
     <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/ds_selectors_primary_v23</item>
         <item name="android:textColor">@color/ds_text_selectors_v23</item>
@@ -288,16 +164,6 @@
     <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
         <item name="android:textColor">@color/ds_text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_primary_natura_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.Secondary" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/ds_selectors_secondary_natura_light</item>
-        <item name="android:textColor">@color/ds_text_selectors</item>
     </style>
 
     <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -309,40 +175,4 @@
         <item name="buttonTint">@color/ds_selectors_secondary_v23</item>
         <item name="android:textColor">@color/ds_text_selectors_v23</item>
     </style>
-
-    <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/ds_text_color_primary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="TextAppearence.Natura.Label" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/ds_text_color_secondary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_medium</item>
-        <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
-    </style>
-
-    <style name="TextAppearence.Natura.EditText" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">@dimen/ds_text_default_size</item>
-        <item name="android:textColor">@color/ds_text_color_primary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-        <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-
-    <style name="TextAppearence.Natura.Footer" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/ds_text_footer_size</item>
-        <item name="android:textColor">@color/ds_text_color_secondary_selector</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="TextAppearence.Natura.Highlight" parent="TextAppearance.AppCompat">
-        <item name="android:textSize">@dimen/ds_text_big</item>
-        <item name="android:textColor">@color/colorHighEmphasis</item>
-        <item name="android:fontFamily">@string/font_roboto_regular</item>
-    </style>
-
-    <style name="Widget"/>
-    <style name="Widget.Natura"/>
 </resources>
