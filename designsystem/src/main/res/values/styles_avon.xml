@@ -10,8 +10,13 @@
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Avon.Secondary" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_avon</item>
+    <style name="Widget.DS.RadioButton.Avon.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_avon_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Avon.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_avon_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
@@ -25,8 +30,13 @@
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.Avon.Secondary" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_avon</item>
+    <style name="Widget.DS.CheckBox.Avon.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_avon_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.Avon.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_avon_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 

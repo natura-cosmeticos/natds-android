@@ -108,9 +108,9 @@
         <item name="android:statusBarColor">#7A333333</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon.Primary.Light</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Light</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary.Light</item>
 
         <item name="buttonStyle">@style/Widget.DS.Button.Light</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button.Light</item>
@@ -145,9 +145,9 @@
         <item name="android:statusBarColor">#7AFFFFFF</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon.Primary.Dark</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary.Dark</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Dark</item>
-        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary.Dark</item>
 
         <item name="buttonStyle">@style/Widget.DS.Button.Dark</item>
         <item name="materialButtonStyle">@style/Widget.DS.Button.Dark</item>
