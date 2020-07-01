@@ -53,7 +53,7 @@
             android:layout_gravity="center"
             android:layout_marginEnd="@dimen/ds_spacing_micro"
             android:layout_marginRight="@dimen/ds_spacing_micro"
-            android:textColor="@color/ds_text_color_primary_selector"
+            android:textColor="@color/text_color_primary_selector"
             android:textSize="@dimen/ds_text_default_icon_size"
             android:clickable="true"
             android:layout_alignParentRight="true"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingRight="@dimen/ds_spacing_micro"
-            android:textColor="@color/ds_text_color_secondary_selector"
+            android:textColor="@color/text_color_secondary_selector"
             android:textSize="@dimen/ds_text_default_icon_small_size"
             tools:text="EA13" />
 
