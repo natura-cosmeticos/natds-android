@@ -157,7 +157,6 @@
     </style>
 
     <!-- SELECTION CONTROL STYLES -->
-
     <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
@@ -181,6 +180,8 @@
     <!-- BUTTON STYLES -->
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_v23</item>
+        <item name="backgroundTint">@color/button_background_color_selector_v23</item>
     </style>
 
     <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
