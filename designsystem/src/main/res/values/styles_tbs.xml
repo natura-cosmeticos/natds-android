@@ -2,42 +2,42 @@
 <resources>
     <style name="Widget.DS.RadioButton.TBS.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_tbs_light</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.RadioButton.TBS.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_tbs_light</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.RadioButton.TBS.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_tbs_dark</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.RadioButton.TBS.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_tbs_dark</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.TBS.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_primary_tbs_light</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.TBS.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_primary_tbs_dark</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.TBS.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_secondary_tbs_light</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.TBS.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_secondary_tbs_dark</item>
-        <item name="android:textColor">@color/text_selectors</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.Button.TBS.Light" parent="Widget.MaterialComponents.Button">

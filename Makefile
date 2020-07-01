@@ -44,3 +44,6 @@ run-all-sanitycheck-steps: lint unit-test instrumentation-test
 
 update-icons:
 	sh ./tools/update_icons.sh
+
+kill-all-emulators:
+	sh ./tools/kill_emulators.sh
