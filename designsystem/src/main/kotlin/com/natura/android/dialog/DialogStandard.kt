@@ -1,0 +1,44 @@
+package com.natura.android.dialog
+
+import android.content.Context
+import android.content.DialogInterface
+import android.view.View
+import androidx.appcompat.app.AlertDialog
+import com.natura.android.R
+
+class DialogStandard @JvmOverloads constructor(
+    private val context: Context,
+    private val dialogTitle: String,
+    private val contentLayout: Int = 0,
+    private val contentView: View? = null,
+    private val mainButtonTitle: String,
+    private val mainButtonAction: DialogInterface.OnClickListener,
+    private val secondaryButtonTitle: String,
+    private val secondaryButtonAction: DialogInterface.OnClickListener,
+    private val isCancelable: Boolean = true) {
+
+    lateinit var dialog: AlertDialog
+
+    fun create(): DialogStandard {
+        dialog =  AlertDialog.Builder(context, R.style.Theme_AppCompat).create().apply {
+            setTitle(dialogTitle)
+            setButton(DialogInterface.BUTTON_POSITIVE, mainButtonTitle, mainButtonAction)
+            setButton(DialogInterface.BUTTON_NEGATIVE, secondaryButtonTitle, secondaryButtonAction)
+            setCancelable(isCancelable)
+
+            if(contentLayout == 0 && contentView != null) {
+               setContentView(contentView)
+            } else {
+                setContentView(contentLayout)
+            }
+        }
+        return this
+    }
+
+    fun show() {
+        dialog?.run{
+            this.show()
+        }
+    }
+
+}
