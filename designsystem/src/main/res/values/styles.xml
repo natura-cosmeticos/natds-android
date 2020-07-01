@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.DS.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.DS.Button.TextButton</item>
+        <item name="android:windowTitleStyle">@style/Heading6</item>
+    </style>
+
     <!-- TYPOGRAPHY STYLES -->
     <style name="Heading1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="fontFamily">@string/font_roboto_regular</item>

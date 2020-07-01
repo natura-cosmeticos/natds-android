@@ -20,7 +20,7 @@ class DialogStandard @JvmOverloads constructor(
     lateinit var dialog: AlertDialog
 
     fun create(): DialogStandard {
-        dialog =  AlertDialog.Builder(context, R.style.Theme_AppCompat).create().apply {
+        dialog =  AlertDialog.Builder(context, R.style.Theme_DS_Dialog_Standard).create().apply {
             setTitle(dialogTitle)
             setButton(DialogInterface.BUTTON_POSITIVE, mainButtonTitle, mainButtonAction)
             setButton(DialogInterface.BUTTON_NEGATIVE, secondaryButtonTitle, secondaryButtonAction)
