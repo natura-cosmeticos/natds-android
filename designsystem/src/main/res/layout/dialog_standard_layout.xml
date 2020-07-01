@@ -13,7 +13,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/dialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="?spacingSmall"
@@ -25,9 +25,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/dialogContent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="?spacingSmall"
+        android:layout_marginBottom="?spacingSmall"
         tools:background="?colorMediumEmphasis"
         android:layout_gravity="center">
 
@@ -37,27 +39,24 @@
             android:src="@drawable/ds_ic_filled_brand_naturarosacea"/>
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.appcompat.widget.ButtonBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        android:gravity="right">
+        android:gravity="right"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/secondaryButton"
             style="?outlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="0dp"
             tools:text="Secondary Button" />
 
         <Button
             android:id="@+id/mainButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="217dp"
-            tools:layout_editor_absoluteY="0dp"
             tools:text="Main Button" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.ButtonBarLayout>
+
 </LinearLayout>

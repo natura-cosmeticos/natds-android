@@ -2,8 +2,8 @@
 <resources>
 
     <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Widget.DS.Button</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Widget.DS.Button.TextButton</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.DS.Button.V23</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.DS.Button.TextButton.V23</item>
         <item name="android:windowTitleStyle">@style/Heading6</item>
     </style>
 
