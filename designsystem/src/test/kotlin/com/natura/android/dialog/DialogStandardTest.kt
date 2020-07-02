@@ -1,5 +1,6 @@
 package com.natura.android.dialog
 
+import android.content.DialogInterface
 import androidx.appcompat.widget.DialogTitle
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -21,12 +22,12 @@ class DialogStandardTest {
             R.layout.test_standard_dialog,
             null,
             "Main Button",
-            { },
+            DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
-            { },
+            DialogInterface.OnClickListener { _, _ -> },
             true)
 
-        dialog.show()
+        dialog.create().show()
     }
 
     @Test
