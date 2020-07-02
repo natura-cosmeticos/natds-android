@@ -1,8 +1,6 @@
 package com.natura.android.dialog
 
 import android.content.Context
-import android.content.DialogInterface
-import android.service.autofill.TextValueSanitizer
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -19,12 +17,13 @@ class DialogStandard @JvmOverloads constructor(
     private val mainButtonAction: () -> Unit,
     private val secondaryButtonTitle: String,
     private val secondaryButtonAction: () -> Unit,
-    private val isCancelable: Boolean = true) {
+    private val isCancelable: Boolean = true
+) {
 
     lateinit var dialog: AlertDialog
 
     fun create(): DialogStandard {
-        dialog =  AlertDialog.Builder(context, R.style.Theme_DS_Dialog_Standard).setView(R.layout.dialog_standard_layout).create().apply {
+        dialog = AlertDialog.Builder(context, R.style.Theme_Natura).setView(R.layout.dialog_standard_layout).create().apply {
             findViewById<TextView>(R.id.dialogTitle)?.text = dialogTitle
             findViewById<LinearLayout>(R.id.dialogContent)?.addView(contentView)
             findViewById<Button>(R.id.mainButton)?.text = mainButtonTitle
@@ -39,7 +38,7 @@ class DialogStandard @JvmOverloads constructor(
             }
             setCancelable(isCancelable)
 
-            if(contentLayout == 0 && contentView != null) {
+            if (contentLayout == 0 && contentView != null) {
                 findViewById<LinearLayout>(R.id.dialogContent)?.addView(contentView)
             } else {
                 findViewById<LinearLayout>(R.id.dialogContent)?.addView(layoutInflater.inflate(contentLayout, null))
@@ -49,9 +48,8 @@ class DialogStandard @JvmOverloads constructor(
     }
 
     fun show() {
-        dialog?.run{
+        dialog?.run {
             this.show()
         }
     }
-
 }
