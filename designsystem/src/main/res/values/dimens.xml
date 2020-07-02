@@ -122,6 +122,7 @@
     <dimen name="ds_text_default_icon_small_size">16sp</dimen>
     <dimen name="ds_text_default_icon_size">24sp</dimen>
     <dimen name="ds_text_default_icon_big_size">56sp</dimen>
+    <dimen name="ds_text_default_icon_smallest_size">4sp</dimen>
 
     <!-- SubMenu dimens -->
     <dimen name="ds_submenu_text_margin_top_bottom">10dp</dimen>

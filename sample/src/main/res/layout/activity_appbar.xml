@@ -22,7 +22,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvExample"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="This is the App Bar Top - Default variant"
@@ -32,4 +32,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.25" />
+
+    <Button
+        android:id="@+id/btnIncrement"
+        android:layout_margin="30dp"
+        android:text="incrementa notification"
+        app:layout_constraintTop_toBottomOf="@id/tvExample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
