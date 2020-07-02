@@ -24,7 +24,7 @@ class DialogStandardTest {
             { },
             "Secondary Button",
             { },
-            true).create()
+            true)
 
         dialog.show()
     }

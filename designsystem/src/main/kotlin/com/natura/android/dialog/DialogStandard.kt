@@ -22,10 +22,10 @@ class DialogStandard @JvmOverloads constructor(
 
     lateinit var dialog: AlertDialog
 
-    fun create(): DialogStandard {
-        dialog = AlertDialog.Builder(context).setView(R.layout.dialog_standard_layout).create().apply {
+    fun show(): DialogStandard {
+        dialog = AlertDialog.Builder(context, R.style.Theme_DS_Dialog_Standard).setView(R.layout.dialog_standard_layout).create().apply {
+            show()
             findViewById<TextView>(R.id.dialogTitle)?.text = dialogTitle
-            findViewById<LinearLayout>(R.id.dialogContent)?.addView(contentView)
             findViewById<Button>(R.id.mainButton)?.text = mainButtonTitle
             findViewById<View>(R.id.mainButton)?.setOnClickListener {
                 mainButtonAction()
@@ -45,11 +45,5 @@ class DialogStandard @JvmOverloads constructor(
             }
         }
         return this
-    }
-
-    fun show() {
-        dialog?.run {
-            this.show()
-        }
     }
 }

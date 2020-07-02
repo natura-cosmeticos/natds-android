@@ -40,6 +40,6 @@ class DialogActivity : AppCompatActivity() {
             { Toast.makeText(this, "Dialog is working", Toast.LENGTH_LONG) },
             "Secondary Button",
             { Toast.makeText(this, "Dialog is working", Toast.LENGTH_LONG) },
-            true).create()
+            true)
     }
 }
