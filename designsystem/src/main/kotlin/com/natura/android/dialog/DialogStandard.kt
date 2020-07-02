@@ -23,7 +23,7 @@ class DialogStandard @JvmOverloads constructor(
     lateinit var dialog: AlertDialog
 
     fun create(): DialogStandard {
-        dialog = AlertDialog.Builder(context, R.style.Theme_Natura).setView(R.layout.dialog_standard_layout).create().apply {
+        dialog = AlertDialog.Builder(context).setView(R.layout.dialog_standard_layout).create().apply {
             findViewById<TextView>(R.id.dialogTitle)?.text = dialogTitle
             findViewById<LinearLayout>(R.id.dialogContent)?.addView(contentView)
             findViewById<Button>(R.id.mainButton)?.text = mainButtonTitle
