@@ -20,7 +20,7 @@ class AppBarActivity : AppCompatActivity() {
     private var profileMenuItem: MenuItem? = null
     private var linesMenuItem: MenuItem? = null
 
-    lateinit var myMenu: Menu
+    private lateinit var myMenu: Menu
 
     private var mCount = 4
 
@@ -49,12 +49,9 @@ class AppBarActivity : AppCompatActivity() {
 
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.custom_menu, menu)
         if (menu != null) {
             myMenu = menu
-        }
-        menuInflater.inflate(R.menu.custom_menu, menu)
-        //o parametro count pode vir de um livedata?
-        if (menu != null) {
             updateNotificationBadge(menu)
         }
         return true
@@ -76,7 +73,6 @@ class AppBarActivity : AppCompatActivity() {
     private fun updateNotificationBadge(menu: Menu) {
         menu.findItem(R.id.ic_group)?.let { setCount(this@AppBarActivity, mCount.toString(), it) }
     }
-
 
     private fun setupSearchView(searchView: SearchView) {
         searchView.queryHint = "Search..."
@@ -108,7 +104,7 @@ class AppBarActivity : AppCompatActivity() {
         countDrawable = if (reuse != null && reuse is CountDrawable) {
             reuse
         } else {
-            CountDrawable(context)
+            CountDrawable(context, R.color.alert)
         }
         countDrawable.setCount(count)
         icon.mutate()

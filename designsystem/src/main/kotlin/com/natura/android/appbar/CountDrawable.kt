@@ -1,6 +1,5 @@
 package com.natura.android.appbar
 
-import android.R
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
@@ -9,7 +8,8 @@ import kotlin.math.max
 
 
 class CountDrawable(
-    context: Context
+    context: Context,
+    alertColor: Int
 ) : Drawable() {
 
     private var mBadgePaint = Paint()
@@ -22,8 +22,7 @@ class CountDrawable(
     init {
         mBadgePaint.color = ContextCompat.getColor(
             context.applicationContext,
-            R.color.holo_red_dark
-        )
+            alertColor)
         mBadgePaint.isAntiAlias = true
         mBadgePaint.style = Paint.Style.FILL
         mTextPaint.color = Color.WHITE
@@ -44,6 +43,9 @@ class CountDrawable(
         val centerX = width - radius - 1 + 5
         val centerY = radius - 5
 
+        val textHeight = mTxtRect.bottom - mTxtRect.top.toFloat()
+        val textY = centerY + textHeight / 2f
+
         if (mCount.length <= 2) {
             mBadgePaint.let { canvas.drawCircle(centerX, centerY, (radius + 5.5).toFloat() , it) }
         } else {
@@ -53,15 +55,8 @@ class CountDrawable(
         // Draw badge count text inside the circle.
         mTextPaint.getTextBounds(mCount, 0, mCount.length, mTxtRect)
 
-        val textHeight = mTxtRect.bottom - mTxtRect.top.toFloat()
-        val textY = centerY + textHeight / 2f
 
-        if (mCount.length > 1) canvas.drawText(
-            "10+",
-            centerX,
-            textY,
-            mTextPaint
-        ) else canvas.drawText(mCount, centerX, textY, mTextPaint)
+       canvas.drawText(mCount, centerX, textY, mTextPaint)
     }
 
     fun setCount(count: String) {
