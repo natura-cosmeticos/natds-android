@@ -34,36 +34,38 @@ class CountDrawable(
 
     override fun draw(canvas: Canvas) {
 
-        val bounds = bounds
-        val width = bounds.right - bounds.left.toFloat()
-        val height = bounds.bottom - bounds.top.toFloat()
+        if(mWillDraw){
+            val bounds = bounds
+            val width = bounds.right - bounds.left.toFloat()
+            val height = bounds.bottom - bounds.top.toFloat()
 
-        // Position the badge in the top-right quadrant of the icon.
-        val radius = max(width, height) / 2 / 2
-        val centerX = width - radius - 1 + 5
-        val centerY = radius - 5
+            // Position the badge in the top-right quadrant of the icon.
+            val radius = max(width, height) / 2 / 2
+            val centerX = width - radius - 1 + 5
+            val centerY = radius - 5
 
-        val textHeight = mTxtRect.bottom - mTxtRect.top.toFloat()
-        val textY = centerY + textHeight / 2f
+            val textHeight = mTxtRect.bottom - mTxtRect.top.toFloat()
+            val textY = centerY + textHeight / 2f
 
-        if (mCount.length <= 2) {
-            mBadgePaint.let { canvas.drawCircle(centerX, centerY, (radius + 5.5).toFloat() , it) }
-        } else {
-            mBadgePaint.let { canvas.drawCircle(centerX, centerY, ((radius + 6.5).toFloat()), it) }
-        }
+            if (mCount.length <= 2) {
+                mBadgePaint.let { canvas.drawCircle(centerX, centerY, (radius + 5.5).toFloat() , it) }
+            } else {
+                mBadgePaint.let { canvas.drawCircle(centerX, centerY, ((radius + 6.5).toFloat()), it) }
+            }
 
-        // Draw badge count text inside the circle.
-        mTextPaint.getTextBounds(mCount, 0, mCount.length, mTxtRect)
+            // Draw badge count text inside the circle.
+            mTextPaint.getTextBounds(mCount, 0, mCount.length, mTxtRect)
 
+            canvas.drawText(mCount, centerX, textY, mTextPaint)
+        }else return
 
-       canvas.drawText(mCount, centerX, textY, mTextPaint)
     }
 
-    fun setCount(count: String) {
-        mCount = count
+    fun setCount(count: Int) {
+        mCount = count.toString()
 
         // Only draw a badge if there are notifications.
-        mWillDraw = count.isNotEmpty()
+        mWillDraw = count > 0
         invalidateSelf()
     }
 
@@ -78,9 +80,5 @@ class CountDrawable(
     override fun getOpacity(): Int {
         return PixelFormat.UNKNOWN
     }
-
-}
-
-private fun Canvas.drawCircle(centerX: Float, centerY: Float, fl: Float, unit: Unit, mBadgePaint: Paint?) {
 
 }
