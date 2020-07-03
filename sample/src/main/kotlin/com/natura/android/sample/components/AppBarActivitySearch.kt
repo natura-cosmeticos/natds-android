@@ -14,15 +14,11 @@ import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
 
-class AppBarActivity : AppCompatActivity() {
+class AppBarActivitySearch : AppCompatActivity() {
 
     private var searchMenuItem: MenuItem? = null
     private var profileMenuItem: MenuItem? = null
     private var linesMenuItem: MenuItem? = null
-
-    private lateinit var myMenu: Menu
-
-    private var mCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
@@ -33,44 +29,42 @@ class AppBarActivity : AppCompatActivity() {
         setSupportActionBar(toolBarTop)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "App Bar Top"
-
-        btnIncrement.apply {
-            setOnClickListener {
-                mCount++
-
-                tvExample.text = mCount.toString()
-
-                updateNotificationBadge(myMenu)
-
-            }
-        }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.custom_menu, menu)
-        if (menu != null) {
-            myMenu = menu
-            updateNotificationBadge(menu)
+        menuInflater.inflate(R.menu.appbar_menu, menu)
+        searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
+        profileMenuItem = menu?.findItem(R.id.profileMenuBtn)
+        linesMenuItem = menu?.findItem(R.id.linesMenuBtn)
+
+        (searchMenuItem?.actionView as? SearchView)?.let {
+            setupSearchView(it)
         }
+
+        searchMenuItem?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(menuItem: MenuItem): Boolean {
+                updateToolbarMode(false)
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(menuItem: MenuItem): Boolean {
+                updateToolbarMode(true)
+                return true
+            }
+        })
+
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            R.id.ic_schedule -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT)
-                .show()
-//            R.id.searchMenuBtn -> updateToolbarMode(false)
-//            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
-//            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.searchMenuBtn -> updateToolbarMode(false)
+            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
             else -> onBackPressed()
         }
 
         return true
-    }
-
-    private fun updateNotificationBadge(menu: Menu) {
-        menu.findItem(R.id.ic_group)?.let { setCount(this@AppBarActivity, mCount, it) }
     }
 
     private fun setupSearchView(searchView: SearchView) {
@@ -87,27 +81,6 @@ class AppBarActivity : AppCompatActivity() {
         searchMenuItem?.isVisible = menuMode
         profileMenuItem?.isVisible = menuMode
         linesMenuItem?.isVisible = menuMode
-    }
-
-    fun setCount(
-        context: Context,
-        count: Int,
-        menuItem: MenuItem
-    ) {
-
-        val icon = menuItem.icon as LayerDrawable
-        val countDrawable: CountDrawable
-        val reuse =
-            icon.findDrawableByLayerId(R.id.ic_group_count)
-
-        countDrawable = if (reuse != null && reuse is CountDrawable) {
-            reuse
-        } else {
-            CountDrawable(context, R.color.alert)
-        }
-        countDrawable.setCount(count)
-        icon.mutate()
-        icon.setDrawableByLayerId(R.id.ic_group_count, countDrawable)
     }
 
 }
