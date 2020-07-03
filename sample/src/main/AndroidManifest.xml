@@ -49,7 +49,7 @@
         </activity>
         <activity
             android:name=".components.DialogActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".components.ErrorActivity"
             android:theme="@style/Theme.Natura" />
