@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android-extensions'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
 
+apply plugin: 'com.github.dcendents.android-maven'
+
+group='com.github.systemteamopensource'
+
 android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
@@ -37,6 +41,7 @@ android {
 
     lintOptions {
         baseline file("lint-baseline.xml")
+        abortOnError false
     }
 
     testOptions {

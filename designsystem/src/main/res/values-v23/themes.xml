@@ -121,7 +121,7 @@
 
     <style name="Theme.BodyShop" parent="Theme.DsBaseLight">
         <item name="colorPrimary">@color/tbsLightPrimary</item>
-        <item name="colorOnPrimary">@color/tbsLightOnColors</item>
+        <item name="colorOnPrimary">@color/tbsLightOnColor</item>
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/tbsLightSecondary</item>
         <item name="colorOnSecondary">?colorOnPrimary</item>
@@ -149,7 +149,7 @@
 
     <style name="Theme.BodyShopDark" parent="Theme.DsBaseDark">
         <item name="colorPrimary">@color/tbsDarkPrimary</item>
-        <item name="colorOnPrimary">@color/tbsDarkOnColors</item>
+        <item name="colorOnPrimary">@color/tbsDarkOnColor</item>
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondary">@color/tbsDarkSecondary</item>
         <item name="colorOnSecondary">?colorOnPrimary</item>

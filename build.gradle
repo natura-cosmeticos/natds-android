@@ -14,6 +14,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
     }
 }
 
@@ -46,7 +47,7 @@ ext {
     testCoreKtxVersion = "1.2.0"
     androidxJunitVersion = "1.1.1"
     truthVersion = '1.2.0'
-    robolectricVersion = '4.3'
+    robolectricVersion = '4.3.1'
     materialVersion = '1.1.0'
     espressoIntentsVersion = '3.1.0'
     mockKVersion = '1.10.0'
