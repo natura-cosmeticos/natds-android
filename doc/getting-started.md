@@ -1,5 +1,4 @@
-# Getting Started - Nat Design System
-### we are working on this content
+# Getting Started - Nat Design System - WIP
 
 ### How DS is structured for use on Android - Applying themes
 Our lib is being built from Android themes and styles. This means to consume any of resources available in the library you need, at some level, to define as a base theme for the use of your view a design system theme.
@@ -16,8 +15,7 @@ give feedback that some task were completed successfully. Let's say you want to 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="?colorSucess">
-    ```
-
+ ```
 
 Notice: we use ?colorSucess to fill the backgroundTint attribute of the Button component.
 When we write ?attributeName, we are indicating to Android that we want to pull this reference from the theme applied to this view.
@@ -36,14 +34,14 @@ But, if for some reason is not possible, fine. Define the theme locally in the v
 Now you get how to access DS themes, let's talk about the most basic portion of our DS: the design tokens.
 We call design tokens all the basic attributes of design systems. For example: colors, ypography definitions, etc.
 Currently android lib provide the following tokens:
-Border radius​
-Color​
-Elevation​
-Icons​
-Opacity​
-Size​
-Spacing​
-Typography
+- Border radius​
+- Color​
+- Elevation​
+- Icons​
+- Opacity​
+- Size​
+- Spacing​
+- Typography
 
 And how can this be used by applications?
 First of all, it is worth remembering that the components made available by DS are built from these tokens. In addition, you can explore our tokens
