@@ -1,6 +1,9 @@
 package com.natura.android.dialog
 
+import android.content.Context
 import android.content.DialogInterface
+import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.appcompat.widget.DialogTitle
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -13,27 +16,85 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class DialogStandardTest {
     private lateinit var dialog: DialogStandard
+    private lateinit var context: Context
 
     @Before
     fun setUp() {
-        dialog = DialogStandard(
-            ApplicationProvider.getApplicationContext(),
+        context = ApplicationProvider.getApplicationContext()
+        context.setTheme(R.style.Theme_Natura)
+
+        dialog = createDialogWithCustomContentFromResourceId()
+    }
+
+    @Test
+    fun checksDialogTitle() {
+        dialog.show()
+
+        val alertTitle = dialog.dialog.findViewById<DialogTitle>(R.id.alertTitle)
+
+        assertThat(alertTitle?.text).isEqualTo("Dialog Title")
+    }
+
+    @Test
+    fun checksMainButtonTitle() {
+        dialog.show()
+
+        val mainButton = dialog.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
+
+        assertThat(mainButton?.text).isEqualTo("Main Button")
+    }
+
+    @Test
+    fun checksSecondaryButtonTitle() {
+        dialog.show()
+
+        val mainButton = dialog.dialog.getButton(DialogInterface.BUTTON_NEGATIVE)
+
+        assertThat(mainButton?.text).isEqualTo("Secondary Button")
+    }
+
+    @Test
+    fun checksDialogCustomContentSetByLayoutResource() {
+        dialog.show()
+
+        val dialogCustomContent = dialog.dialog.findViewById<FrameLayout>(R.id.custom)
+
+        assertThat(dialogCustomContent?.childCount).isEqualTo(1)
+    }
+
+    @Test
+    fun checksDialogCustomContentSetByView() {
+        dialog = createDialogWithCustomContentFromView()
+        dialog.show()
+
+        val dialogCustomContent = dialog.dialog.findViewById<FrameLayout>(R.id.custom)
+
+        assertThat(dialogCustomContent?.childCount).isEqualTo(1)
+    }
+
+    private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
+        return DialogStandard(
+            context,
             "Dialog Title",
-            R.layout.test_standard_dialog,
-            null,
             "Main Button",
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            true)
-
-        dialog.create().show()
+            R.layout.test_standard_dialog).create()
     }
 
-    @Test
-    fun checksIfTitleDialogIsAsSet() {
-        val alertTitle = dialog.dialog.findViewById<DialogTitle>(R.id.alertTitle)
+    private fun createDialogWithCustomContentFromView(): DialogStandard {
+        val view = ImageView(context)
+            view.setImageResource(R.drawable.filled_action_add)
 
-        assertThat(alertTitle?.text).isEqualTo("Dialog Title")
+        return DialogStandard(
+            context,
+            "Dialog Title",
+            "Main Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Secondary Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            0,
+            view).create()
     }
 }

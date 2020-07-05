@@ -32,7 +32,7 @@ class DialogStandard @JvmOverloads constructor(
 
             if(contentLayout == 0 && contentView != null) {
                 setView(contentView)
-            } else {
+            } else if (contentView == null && contentLayout != 0){
                 setView(layoutInflater.inflate(contentLayout, null))
             }
         }
@@ -45,7 +45,8 @@ class DialogStandard @JvmOverloads constructor(
 
     private fun resolveThemeResource(): Int {
         val dialogThemeResource = TypedValue()
-         dialogTheme?.let {
+
+        dialogTheme?.let {
             context.setTheme(dialogTheme)
         }
 
@@ -53,6 +54,4 @@ class DialogStandard @JvmOverloads constructor(
 
         return dialogThemeResource.resourceId
     }
-
-
 }
