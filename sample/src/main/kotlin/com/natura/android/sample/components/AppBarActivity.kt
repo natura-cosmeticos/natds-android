@@ -2,17 +2,20 @@ package com.natura.android.sample.components
 
 import android.app.SearchManager
 import android.content.Context
-import android.graphics.drawable.LayerDrawable
+import android.content.res.Resources.Theme
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import com.natura.android.appbar.CountDrawable
+import com.natura.android.appbar.getColorFromTheme
+import com.natura.android.appbar.setAppbarConfig
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
+
 
 class AppBarActivity : AppCompatActivity() {
 
@@ -37,22 +40,42 @@ class AppBarActivity : AppCompatActivity() {
         btnIncrement.apply {
             setOnClickListener {
                 mCount++
-
                 tvExample.text = mCount.toString()
-
-                updateNotificationBadge(myMenu)
-
+                updateNotificationBadge(myMenu, mCount)
             }
         }
 
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.custom_menu, menu)
+        menuInflater.inflate(R.menu.appbar_menu, menu)
         if (menu != null) {
             myMenu = menu
-            updateNotificationBadge(menu)
+            updateNotificationBadge(menu, mCount)
         }
+
+        searchMenuItem?.isVisible = false
+
+        searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
+        profileMenuItem = menu?.findItem(R.id.profileMenuBtn)
+        linesMenuItem = menu?.findItem(R.id.linesMenuBtn)
+
+        (searchMenuItem?.actionView as? SearchView)?.let {
+            setupSearchView(it)
+        }
+
+        searchMenuItem?.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(menuItem: MenuItem): Boolean {
+                updateToolbarMode(false)
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(menuItem: MenuItem): Boolean {
+                updateToolbarMode(true)
+                return true
+            }
+        })
+
         return true
     }
 
@@ -60,17 +83,22 @@ class AppBarActivity : AppCompatActivity() {
         when (item?.itemId) {
             R.id.ic_schedule -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT)
                 .show()
-//            R.id.searchMenuBtn -> updateToolbarMode(false)
-//            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
-//            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.searchMenuBtn -> updateToolbarMode(false)
+            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
             else -> onBackPressed()
         }
 
         return true
     }
 
-    private fun updateNotificationBadge(menu: Menu) {
-        menu.findItem(R.id.ic_group)?.let { setCount(this@AppBarActivity, mCount, it) }
+    private fun updateNotificationBadge(menu: Menu, mCount: Int) {
+        setAppbarConfig(
+            this,
+            mCount,
+            menu.findItem(R.id.ic_notification),
+            getString(com.natura.android.R.string.notification_limit_placeholder)
+        )
     }
 
     private fun setupSearchView(searchView: SearchView) {
@@ -87,27 +115,6 @@ class AppBarActivity : AppCompatActivity() {
         searchMenuItem?.isVisible = menuMode
         profileMenuItem?.isVisible = menuMode
         linesMenuItem?.isVisible = menuMode
-    }
-
-    fun setCount(
-        context: Context,
-        count: Int,
-        menuItem: MenuItem
-    ) {
-
-        val icon = menuItem.icon as LayerDrawable
-        val countDrawable: CountDrawable
-        val reuse =
-            icon.findDrawableByLayerId(R.id.ic_group_count)
-
-        countDrawable = if (reuse != null && reuse is CountDrawable) {
-            reuse
-        } else {
-            CountDrawable(context, R.color.alert)
-        }
-        countDrawable.setCount(count)
-        icon.mutate()
-        icon.setDrawableByLayerId(R.id.ic_group_count, countDrawable)
     }
 
 }

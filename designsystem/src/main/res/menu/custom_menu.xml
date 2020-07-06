@@ -12,7 +12,7 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/ic_group"
+        android:id="@+id/ic_notification"
         android:icon="@drawable/icon_badge"
         android:title="notificacoes"
         app:showAsAction="always" />
