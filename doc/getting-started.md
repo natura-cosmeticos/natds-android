@@ -30,18 +30,18 @@ However, we need to define this theme somewhere. You know where? I'll show you:
 Our suggestion: always try to apply the DS theme to the most generic layers of your App. This greatly simplifies the use :)
 But, if for some reason is not possible, fine. Define the theme locally in the view where you want to apply DS.
 
-### Uso dos Design Tokens - A fundação do Nat DS
+### Design Tokens - The foundation of Nat DS
 Now you get how to access DS themes, let's talk about the most basic portion of our DS: the design tokens.
 We call design tokens all the basic attributes of design systems. For example: colors, ypography definitions, etc.
 Currently android lib provide the following tokens:
 - Border radius​
 - Color​
 - Elevation​
-- Icons​
+- [Icons (drawables)](icon-token.md)
 - Opacity​
 - Size​
 - Spacing​
-- Typography
+- [Typography](typography-token.md)
 
 And how can this be used by applications?
 First of all, it is worth remembering that the components made available by DS are built from these tokens. In addition, you can explore our tokens
@@ -91,6 +91,8 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
           textColor:"?colorPrimary"
           ..../>
   ```
+  
+  💡 **More info about [typography here](typography-token.md)**
 
   ### How to Use Components
 
