@@ -36,18 +36,16 @@ class DialogActivity : AppCompatActivity() {
     }
 
     private fun createDialog() {
-
-        val textfield = TextField(this)
-
-        val clickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog is working", Toast.LENGTH_LONG).show() }
+        val mainClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show() }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Secondary Action", Toast.LENGTH_LONG).show() }
 
         dialogStandard = DialogStandard(
             this,
-            "Dialog Standard Super Big Title To Check It's Behavior. Two lines are great! What about three or more?",
+            "Dialog Standard Title",
             "Main Button",
-            clickListener,
-            "Mini",
-            clickListener,
+            mainClickListener,
+            "Secondary Button",
+            secondaryClickListener,
             R.layout.test_standard_dialog).create()
     }
 }

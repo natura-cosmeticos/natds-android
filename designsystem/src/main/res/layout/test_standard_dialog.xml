@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:id="@+id/dialogCustomContent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,7 +9,6 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="350.00dp"
         android:layout_height="350.00dp"
         android:layout_gravity="center"
