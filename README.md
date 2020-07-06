@@ -5,7 +5,7 @@
 
 
 ### What for
-Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/25ddaa7f8/p/07a27e).
+Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
 
 ### Setup
 For use this repository, you need [Git-LFS](https://git-lfs.github.com/). Please follow the instructions and install **Git-LFS** before starting your contribution to this repository.
