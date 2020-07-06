@@ -1,5 +1,9 @@
 # Design System Natura for Android
 
+![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
+
+
+
 ### What for
 Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/25ddaa7f8/p/07a27e).
 
