@@ -24,9 +24,11 @@ excluded_words:
   - androidx
   - appbar
   - appcompat
+  - CoreMatchers
   - dimen
   - drawables
   - kotlinx
+  - Matchers
   - mockup
   - nat
   - natOnPrimary
@@ -42,6 +44,8 @@ excluded_words:
   - natura
   - Natura
   - robolectric
+  - RootMatchers
   - typoci
+  - ViewMatchers
 
 spellcheck_filenames: true
