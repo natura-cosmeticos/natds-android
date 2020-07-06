@@ -7,8 +7,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.natura.android.R
 
-
-class DialogStandard @JvmOverloads constructor(
+class DialogStandard @JvmOverloads constructor (
     private val context: Context,
     private val dialogTitle: String,
     private val mainButtonTitle: String,
@@ -24,15 +23,15 @@ class DialogStandard @JvmOverloads constructor(
     lateinit var dialog: AlertDialog
 
     fun create(): DialogStandard {
-        dialog =  AlertDialog.Builder(context, resolveThemeResource()).create().apply {
+        dialog = AlertDialog.Builder(context, resolveThemeResource()).create().apply {
             setTitle(dialogTitle)
             setButton(DialogInterface.BUTTON_POSITIVE, mainButtonTitle, mainButtonAction)
             setButton(DialogInterface.BUTTON_NEGATIVE, secondaryButtonTitle, secondaryButtonAction)
             setCancelable(isCancelable)
 
-            if(contentLayout == 0 && contentView != null) {
+            if (contentLayout == 0 && contentView != null) {
                 setView(contentView)
-            } else if (contentView == null && contentLayout != 0){
+            } else if (contentView == null && contentLayout != 0) {
                 setView(layoutInflater.inflate(contentLayout, null))
             }
         }

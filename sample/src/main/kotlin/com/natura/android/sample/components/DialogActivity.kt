@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.dialog.DialogStandard
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
-import com.natura.android.textfield.TextField
 import kotlinx.android.synthetic.main.activity_dialog.*
 
 class DialogActivity : AppCompatActivity() {

@@ -21,9 +21,7 @@ class DialogActivityFunctionalTest {
 
     @Before
     fun setup() {
-       dialogActivityScenario = ActivityScenario.launch(DialogActivity::class.java).onActivity {
-           decorView = it.window.decorView
-       }
+        dialogActivityScenario = ActivityScenario.launch(DialogActivity::class.java).onActivity { decorView = it.window.decorView }
     }
 
     @Test
@@ -46,7 +44,6 @@ class DialogActivityFunctionalTest {
 
         onView(withText("Main Button")).check(matches(isDisplayed()))
     }
-
 
     @Test
     fun shouldShowDialogSecondaryButton() {
