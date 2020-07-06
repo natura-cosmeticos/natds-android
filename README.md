@@ -10,7 +10,7 @@ Copy and paste the file **github_credentials.properties.sample** and rename it t
 **Important:** The file **github_credentials.properties** can not be commited.
 
 ### Getting Started
-To start usign our lib, check [here](getting-started.md).
+To start usign our lib, check [here](doc/getting-started.md).
 
 ### Testing with Screenshots
 We are using [Screenshot Tests for Android](https://github.com/facebook/screenshot-tests-for-android) to validate our built components state, color and behavior.
