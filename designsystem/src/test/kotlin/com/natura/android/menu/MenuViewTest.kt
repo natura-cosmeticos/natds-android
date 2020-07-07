@@ -15,6 +15,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.Shadows.shadowOf
+import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
 class MenuViewTest {
@@ -41,6 +42,7 @@ class MenuViewTest {
         assertThat(layout.findViewById(R.id.ds_menu_view_background) as View).isNotNull()
     }
 
+    @Config(sdk = [28])
     @Test
     fun checksIfDefaultIconIsSetWhenIconAttributeIsEmpty() {
         val icon = shadowOf(layout.menuItemBase.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
@@ -48,6 +50,7 @@ class MenuViewTest {
         assertEquals(R.drawable.outlined_default_mockup, icon.createdFromResId)
     }
 
+    @Config(sdk = [28])
     @Test
     fun checksIfIconDrawableWasSetWhenAttributeIsFilledWithIconName() {
         val icon = shadowOf(layout.menuItemWithIcon.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
