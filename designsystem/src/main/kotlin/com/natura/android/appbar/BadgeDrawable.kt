@@ -15,6 +15,7 @@ class BadgeDrawable(
     private var mTextPaint = Paint()
     private val mTxtRect = Rect()
     private var mCountText = ""
+    private var mCount = 0
     private var mWillDraw = false
 
     init {
@@ -24,8 +25,8 @@ class BadgeDrawable(
     override fun draw(canvas: Canvas) {
 
         val bounds = bounds
-        val width = bounds.right - bounds.left.toFloat()
-        val height = bounds.bottom - bounds.top.toFloat()
+        val width = bounds.width()
+        val height = bounds.height()
 
         val radius = max(width, height) / 4
         val centerX = width - radius + 4
@@ -35,9 +36,9 @@ class BadgeDrawable(
         val textY = centerY + textHeight / 2f
 
         if (mWillDraw) {
-            drawBadgeWithText(canvas, centerX, centerY, radius, textY)
+            drawBadgeWithText(canvas, centerX.toFloat(), centerY.toFloat(), radius.toFloat(), textY)
         } else
-            defineInitialBounds()
+            defineTextBounds(mCountText)
     }
 
     override fun setAlpha(alpha: Int) {}
@@ -46,19 +47,16 @@ class BadgeDrawable(
 
     override fun getOpacity() = PixelFormat.UNKNOWN
 
+    internal fun updateBadgeDrawable(count: Int) {
+        mCountText = count.toString()
+        mCount = count
+        mWillDraw = count > 0
+        invalidateSelf()
+    }
+
     private fun initializeBadgeElement() {
         setBadgeBackgroundStyle()
         setBadgeFontStyle()
-    }
-
-    private fun setBadgeFontStyle() {
-        mTextPaint.apply {
-            color = getColorFromTheme(context, R.attr.colorOnError)
-            typeface = Typeface.DEFAULT
-            textSize = 20.0f
-            isAntiAlias = true
-            textAlign = Paint.Align.CENTER
-        }
     }
 
     private fun setBadgeBackgroundStyle() {
@@ -66,6 +64,15 @@ class BadgeDrawable(
             color = getColorFromTheme(context, R.attr.colorError)
             isAntiAlias = true
             style = Paint.Style.FILL
+        }
+    }
+    private fun setBadgeFontStyle() {
+        mTextPaint.apply {
+            color = getColorFromTheme(context, R.attr.colorOnError)
+            typeface = Typeface.DEFAULT
+            textSize = 16f
+            isAntiAlias = true
+            textAlign = Paint.Align.CENTER
         }
     }
 
@@ -76,17 +83,13 @@ class BadgeDrawable(
         radius: Float,
         textY: Float
     ) {
-        definePlaceToDrawBadge(canvas, centerX, centerY, radius)
-
-        mTextPaint.getTextBounds(mCountText, 0, mCountText.length, mTxtRect)
-
+        defineTextBounds(mCountText)
+        definePositionToDrawBadge(canvas, centerX, centerY, radius)
         drawBadgeText(canvas, centerX, textY)
-
-
     }
 
-    private fun defineInitialBounds() {
-        mTextPaint.getTextBounds("0", 0, mCountText.length, mTxtRect)
+    private fun defineTextBounds(text: String) {
+        mTextPaint.getTextBounds(text, 0, mCountText.length, mTxtRect)
     }
 
     private fun drawBadgeText(
@@ -94,70 +97,26 @@ class BadgeDrawable(
         centerX: Float,
         textY: Float
     ) {
-        if (mCountText.length >= 2) {
-            canvas.drawText(placeholderText, centerX + 4f, textY + 2f, mTextPaint)
-        } else {
-            canvas.drawText(mCountText, centerX, textY, mTextPaint)
-        }
+
+        canvas.drawText(
+            if (mCount > 99) placeholderText else mCountText,
+            centerX,
+            textY,
+            mTextPaint
+        )
     }
 
-    private fun definePlaceToDrawBadge(
+    private fun definePositionToDrawBadge(
         canvas: Canvas,
         centerX: Float,
         centerY: Float,
         radius: Float
     ) {
-
-        val bounds = bounds
-        val width = bounds.right - bounds.left.toFloat()
-
-        //começa a imprimir a badge do meio do icone em diante
-
-        var mRect: RectF
-
-        if (mCountText.length >= 2) {
-            mRect = RectF(width / 2, 0f, width + 16f, 30f)
-            canvas.drawRoundRect(mRect, 16f, 16f, mBadgePaint)
-        } else {
-            mRect = RectF(width / 2, 0f, width + 12f, 30f)
-            //canvas.drawRoundRect(mRect, 16f, 16f, mBadgePaint)
-
-
-            canvas.drawCircle(
-                    centerX,
-                    centerY,
-                    (radius + 5.5).toFloat(), mBadgePaint
-                )
-
-
-        }
-
-
-
-//        if (mCountText.length <= 2) {
-//            mBadgePaint.let {
-//                canvas.drawCircle(
-//                    centerX,
-//                    centerY,
-//                    (radius + 5.5).toFloat(),
-//                    it
-//                )
-//            }
-//        } else {
-//            mBadgePaint.let {
-//                canvas.drawCircle(
-//                    centerX,
-//                    centerY,
-//                    ((radius + 6.5).toFloat()),
-//                    it
-//                )
-//            }
-//        }
-    }
-
-    fun updateBadgeDrawable(count: Int){
-        mCountText = count.toString()
-        mWillDraw = count > 0
-        invalidateSelf()
+        canvas.drawCircle(
+            centerX,
+            centerY,
+            radius + 5f,
+            mBadgePaint
+        )
     }
 }
