@@ -2,20 +2,16 @@ package com.natura.android.sample.components
 
 import android.app.SearchManager
 import android.content.Context
-import android.content.res.Resources.Theme
 import android.os.Bundle
-import android.util.TypedValue
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import com.natura.android.appbar.getColorFromTheme
 import com.natura.android.appbar.setAppbarConfig
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
-
 
 class AppBarActivity : AppCompatActivity() {
 
@@ -53,8 +49,6 @@ class AppBarActivity : AppCompatActivity() {
             myMenu = menu
             updateNotificationBadge(menu, mCount)
         }
-
-        searchMenuItem?.isVisible = false
 
         searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
         profileMenuItem = menu?.findItem(R.id.profileMenuBtn)

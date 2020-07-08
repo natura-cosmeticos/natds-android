@@ -18,7 +18,7 @@ class DsErrorDefault @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     // TODO mover esta classe para com.natura.android.pattern
-    private val erroIcon by lazy { findViewById<AppCompatImageView>(R.id.ds_default_error_icon) }
+    private val errorIcon by lazy { findViewById<AppCompatImageView>(R.id.ds_default_error_icon) }
     private val errorLabel by lazy { findViewById<AppCompatTextView>(R.id.ds_default_error_label) }
     private val errorButton by lazy { findViewById<MaterialButton>(R.id.ds_default_error_button) }
 
@@ -33,7 +33,7 @@ class DsErrorDefault @JvmOverloads constructor(
     var icon: Int = 0
         set(value) {
             field = value
-            erroIcon.setImageResource(icon)
+            errorIcon.setImageResource(icon)
         }
 
     var labelButton: String? = ""

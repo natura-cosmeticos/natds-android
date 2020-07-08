@@ -18,20 +18,7 @@ class BadgeDrawable(
     private var mWillDraw = false
 
     init {
-
-        mBadgePaint.apply {
-            color = getColorFromTheme(context, R.attr.colorError)
-            isAntiAlias = true
-            style = Paint.Style.FILL
-        }
-
-        mTextPaint.apply {
-            color = getColorFromTheme(context, R.attr.colorOnError)
-            typeface = Typeface.DEFAULT
-            textSize = 20.0f
-            isAntiAlias = true
-            textAlign = Paint.Align.CENTER
-        }
+        initializeBadgeElement()
     }
 
     override fun draw(canvas: Canvas) {
@@ -53,6 +40,35 @@ class BadgeDrawable(
             defineInitialBounds()
     }
 
+    override fun setAlpha(alpha: Int) {}
+
+    override fun setColorFilter(cf: ColorFilter?) {}
+
+    override fun getOpacity() = PixelFormat.UNKNOWN
+
+    private fun initializeBadgeElement() {
+        setBadgeBackgroundStyle()
+        setBadgeFontStyle()
+    }
+
+    private fun setBadgeFontStyle() {
+        mTextPaint.apply {
+            color = getColorFromTheme(context, R.attr.colorOnError)
+            typeface = Typeface.DEFAULT
+            textSize = 20.0f
+            isAntiAlias = true
+            textAlign = Paint.Align.CENTER
+        }
+    }
+
+    private fun setBadgeBackgroundStyle() {
+        mBadgePaint.apply {
+            color = getColorFromTheme(context, R.attr.colorError)
+            isAntiAlias = true
+            style = Paint.Style.FILL
+        }
+    }
+
     private fun drawBadgeWithText(
         canvas: Canvas,
         centerX: Float,
@@ -65,6 +81,8 @@ class BadgeDrawable(
         mTextPaint.getTextBounds(mCountText, 0, mCountText.length, mTxtRect)
 
         drawBadgeText(canvas, centerX, textY)
+
+
     }
 
     private fun defineInitialBounds() {
@@ -76,8 +94,8 @@ class BadgeDrawable(
         centerX: Float,
         textY: Float
     ) {
-        if (mCountText.length > 2) {
-            canvas.drawText(placeholderText, centerX, textY, mTextPaint)
+        if (mCountText.length >= 2) {
+            canvas.drawText(placeholderText, centerX + 4f, textY + 2f, mTextPaint)
         } else {
             canvas.drawText(mCountText, centerX, textY, mTextPaint)
         }
@@ -89,25 +107,52 @@ class BadgeDrawable(
         centerY: Float,
         radius: Float
     ) {
-        if (mCountText.length <= 2) {
-            mBadgePaint.let {
-                canvas.drawCircle(
-                    centerX,
-                    centerY,
-                    (radius + 5.5).toFloat(),
-                    it
-                )
-            }
+
+        val bounds = bounds
+        val width = bounds.right - bounds.left.toFloat()
+
+        //começa a imprimir a badge do meio do icone em diante
+
+        var mRect: RectF
+
+        if (mCountText.length >= 2) {
+            mRect = RectF(width / 2, 0f, width + 16f, 30f)
+            canvas.drawRoundRect(mRect, 16f, 16f, mBadgePaint)
         } else {
-            mBadgePaint.let {
-                canvas.drawCircle(
+            mRect = RectF(width / 2, 0f, width + 12f, 30f)
+            //canvas.drawRoundRect(mRect, 16f, 16f, mBadgePaint)
+
+
+            canvas.drawCircle(
                     centerX,
                     centerY,
-                    ((radius + 6.5).toFloat()),
-                    it
+                    (radius + 5.5).toFloat(), mBadgePaint
                 )
-            }
+
+
         }
+
+
+
+//        if (mCountText.length <= 2) {
+//            mBadgePaint.let {
+//                canvas.drawCircle(
+//                    centerX,
+//                    centerY,
+//                    (radius + 5.5).toFloat(),
+//                    it
+//                )
+//            }
+//        } else {
+//            mBadgePaint.let {
+//                canvas.drawCircle(
+//                    centerX,
+//                    centerY,
+//                    ((radius + 6.5).toFloat()),
+//                    it
+//                )
+//            }
+//        }
     }
 
     fun updateBadgeDrawable(count: Int){
@@ -115,17 +160,4 @@ class BadgeDrawable(
         mWillDraw = count > 0
         invalidateSelf()
     }
-
-    override fun setAlpha(alpha: Int) {
-        // do nothing
-    }
-
-    override fun setColorFilter(cf: ColorFilter?) {
-        // do nothing
-    }
-
-    override fun getOpacity(): Int {
-        return PixelFormat.UNKNOWN
-    }
-
 }
