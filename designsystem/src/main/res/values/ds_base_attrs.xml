@@ -101,4 +101,10 @@
     <!-- Selection control Style references -->
     <attr name="checkboxStyleSecondary" format="reference"/>
     <attr name="radioButtonStyleSecondary" format="reference"/>
+
+    <!-- Logo references -->
+    <attr name="verticalLogo" format="reference"/>
+    <attr name="horizontalLogo" format="reference"/>
+    <attr name="verticalLogoCustom" format="reference"/>
+    <attr name="horizontalLogoCustom" format="reference"/>
 </resources>

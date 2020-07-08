@@ -38,6 +38,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.Natura.Light</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="verticalLogo">@drawable/natura_vertical_custom</item>
+        <item name="verticalLogoCustom">@drawable/natura_vertical_custom</item>
+        <item name="horizontalLogoCustom">@drawable/natura_horizontal_custom</item>
+        <item name="horizontalLogo">@drawable/natura_horizontal_custom</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -75,6 +80,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.Natura.Dark</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="verticalLogo">@drawable/natura_vertical_custom</item>
+        <item name="verticalLogoCustom">@drawable/natura_vertical_custom</item>
+        <item name="horizontalLogoCustom">@drawable/natura_horizontal_custom</item>
+        <item name="horizontalLogo">@drawable/natura_horizontal_custom</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -111,6 +121,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.Avon.Light</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="verticalLogo">@drawable/avon_horizontal</item>
+        <item name="verticalLogoCustom">@drawable/avon_horizontal_custom</item>
+        <item name="horizontalLogoCustom">@drawable/avon_horizontal</item>
+        <item name="horizontalLogo">@drawable/avon_horizontal_custom</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -147,6 +162,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.Avon.Dark</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="verticalLogo">@drawable/avon_horizontal</item>
+        <item name="verticalLogoCustom">@drawable/avon_horizontal_custom</item>
+        <item name="horizontalLogoCustom">@drawable/avon_horizontal</item>
+        <item name="horizontalLogo">@drawable/avon_horizontal_custom</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -183,6 +203,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.TBS.Light</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="verticalLogo">@drawable/tbs_horizontal</item>
+        <item name="verticalLogoCustom">@drawable/tbs_horizontal_custom</item>
+        <item name="horizontalLogoCustom">@drawable/tbs_horizontal</item>
+        <item name="horizontalLogo">@drawable/tbs_horizontal_custom</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -220,6 +245,11 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.TBS.Dark</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="verticalLogo">@drawable/tbs_horizontal</item>
+        <item name="verticalLogoCustom">@drawable/tbs_horizontal_custom</item>
+        <item name="horizontalLogoCustom">@drawable/tbs_horizontal</item>
+        <item name="horizontalLogo">@drawable/tbs_horizontal_custom</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">
