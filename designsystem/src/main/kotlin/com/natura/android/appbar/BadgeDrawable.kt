@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
 import com.natura.android.R
-import kotlin.math.max
 
 class BadgeDrawable(
     private val context: Context,
@@ -23,20 +22,8 @@ class BadgeDrawable(
     }
 
     override fun draw(canvas: Canvas) {
-
-        val bounds = bounds
-        val width = bounds.width()
-        val height = bounds.height()
-
-        val radius = max(width, height) / 4
-        val centerX = width - radius + 4
-        val centerY = radius - 4
-
-        val textHeight = mTxtRect.bottom - mTxtRect.top.toFloat()
-        val textY = centerY + textHeight / 2f
-
         if (mWillDraw) {
-            drawBadgeWithText(canvas, centerX.toFloat(), centerY.toFloat(), radius.toFloat(), textY)
+            drawBadgeWithText(canvas)
         } else
             defineTextBounds(mCountText)
     }
@@ -66,57 +53,45 @@ class BadgeDrawable(
             style = Paint.Style.FILL
         }
     }
+
     private fun setBadgeFontStyle() {
         mTextPaint.apply {
             color = getColorFromTheme(context, R.attr.colorOnError)
             typeface = Typeface.DEFAULT
-            textSize = 16f
+            textSize = 20f
             isAntiAlias = true
             textAlign = Paint.Align.CENTER
         }
     }
 
     private fun drawBadgeWithText(
-        canvas: Canvas,
-        centerX: Float,
-        centerY: Float,
-        radius: Float,
-        textY: Float
+        canvas: Canvas
     ) {
+
         defineTextBounds(mCountText)
-        definePositionToDrawBadge(canvas, centerX, centerY, radius)
-        drawBadgeText(canvas, centerX, textY)
+        definePositionToDrawBadge(canvas)
     }
 
     private fun defineTextBounds(text: String) {
         mTextPaint.getTextBounds(text, 0, mCountText.length, mTxtRect)
     }
 
-    private fun drawBadgeText(
-        canvas: Canvas,
-        centerX: Float,
-        textY: Float
+    private fun definePositionToDrawBadge(
+        canvas: Canvas
     ) {
+        val bounds = bounds
+        val width = bounds.right - bounds.left.toFloat()
+        val height = bounds.bottom - bounds.top.toFloat()
+
+        val rect = RectF(width / 2, 0f, if (mCount > 9) (width * 1.2f) else width, height / 2)
+
+        canvas.drawRoundRect(rect, 16f, 16f, mBadgePaint)
 
         canvas.drawText(
             if (mCount > 99) placeholderText else mCountText,
-            centerX,
-            textY,
+            rect.centerX(),
+            rect.centerY() + 8f,
             mTextPaint
-        )
-    }
-
-    private fun definePositionToDrawBadge(
-        canvas: Canvas,
-        centerX: Float,
-        centerY: Float,
-        radius: Float
-    ) {
-        canvas.drawCircle(
-            centerX,
-            centerY,
-            radius + 5f,
-            mBadgePaint
         )
     }
 }
