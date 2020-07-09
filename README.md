@@ -113,7 +113,7 @@ And:
 - [Expansion Panel](doc/expansion-panel.md)
 - Ext
 - Icon
-[Logo](doc/logo.md)
+- [Logo](doc/logo.md)
 - Menu
 - Navigation View
 - Text Field
