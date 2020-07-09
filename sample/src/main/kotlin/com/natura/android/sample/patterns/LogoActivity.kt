@@ -26,7 +26,7 @@ class LogoActivity : AppCompatActivity() {
     private fun setTheme() {
         val darkMode = intent.getBooleanExtra("darkMode", false)
 
-        if(darkMode) {
+        if (darkMode) {
             setChosenDarkTheme()
         } else {
             setChosenDefaultTheme()
