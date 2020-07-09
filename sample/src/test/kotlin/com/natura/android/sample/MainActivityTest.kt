@@ -1,17 +1,21 @@
 package com.natura.android.sample
 
 import android.widget.Button
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.components.AppBarActivity
-import com.natura.android.sample.components.ErrorActivity
+import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.ExpandableNavigationViewActivity
-import com.natura.android.sample.components.LoadingActivity
+import com.natura.android.sample.patterns.LoadingActivity
 import com.natura.android.sample.components.MenuActivity
 import com.natura.android.sample.components.SelectionControlActivity
 import com.natura.android.sample.components.ButtonActivity
 import com.natura.android.sample.components.SubmenuActivity
 import com.natura.android.sample.components.TextFieldActivity
 import com.natura.android.sample.components.ValueTextHighlightActivity
+import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
 import com.natura.android.sample.tokens.icons.IconActivity
@@ -254,5 +258,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(OpacityActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksLogoPatternButtonClickStartsLogoPatternScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.logoPatternButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(LogoActivity::class.java, shadowIntent.intentClass)
     }
 }

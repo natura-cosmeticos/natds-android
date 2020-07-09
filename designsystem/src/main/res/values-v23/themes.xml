@@ -30,10 +30,8 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="verticalLogo">@drawable/natura_vertical_custom</item>
-        <item name="verticalLogoCustom">@drawable/natura_vertical_custom</item>
-        <item name="horizontalLogoCustom">@drawable/natura_horizontal_custom</item>
-        <item name="horizontalLogo">@drawable/natura_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/natura_vertical</item>
+        <item name="horizontalLogo">@drawable/natura_horizontal</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -63,10 +61,8 @@
         <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="verticalLogo">@drawable/natura_vertical_custom</item>
-        <item name="verticalLogoCustom">@drawable/natura_vertical_custom</item>
-        <item name="horizontalLogoCustom">@drawable/natura_horizontal_custom</item>
-        <item name="horizontalLogo">@drawable/natura_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/natura_vertical_dark</item>
+        <item name="horizontalLogo">@drawable/natura_horizontal_dark</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -96,10 +92,8 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="verticalLogo">@drawable/avon_horizontal</item>
-        <item name="verticalLogoCustom">@drawable/avon_horizontal_custom</item>
-        <item name="horizontalLogoCustom">@drawable/avon_horizontal</item>
-        <item name="horizontalLogo">@drawable/avon_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/logo_placeholder</item>
+        <item name="horizontalLogo">@drawable/avon_horizontal</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -128,10 +122,8 @@
         <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="verticalLogo">@drawable/avon_horizontal</item>
-        <item name="verticalLogoCustom">@drawable/avon_horizontal_custom</item>
-        <item name="horizontalLogoCustom">@drawable/avon_horizontal</item>
-        <item name="horizontalLogo">@drawable/avon_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/logo_placeholder</item>
+        <item name="horizontalLogo">@drawable/avon_horizontal_dark</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -161,10 +153,8 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="verticalLogo">@drawable/tbs_horizontal</item>
-        <item name="verticalLogoCustom">@drawable/tbs_horizontal_custom</item>
-        <item name="horizontalLogoCustom">@drawable/tbs_horizontal</item>
-        <item name="horizontalLogo">@drawable/tbs_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/tbs_vertical</item>
+        <item name="horizontalLogo">@drawable/tbs_horizontal</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -194,10 +184,8 @@
         <item name="colorControlHighlight">#1F000000</item>
         <item name="colorControlNormal">?colorOnPrimary</item>
 
-        <item name="verticalLogo">@drawable/tbs_horizontal</item>
-        <item name="verticalLogoCustom">@drawable/tbs_horizontal_custom</item>
-        <item name="horizontalLogoCustom">@drawable/tbs_horizontal</item>
-        <item name="horizontalLogo">@drawable/tbs_horizontal_custom</item>
+        <item name="verticalLogo">@drawable/tbs_vertical_dark</item>
+        <item name="horizontalLogo">@drawable/tbs_horizontal_dark</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">
