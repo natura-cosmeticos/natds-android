@@ -103,6 +103,6 @@
     <attr name="radioButtonStyleSecondary" format="reference"/>
 
     <!-- Logo references -->
-    <attr name="verticalLogo" format="reference"/>
-    <attr name="horizontalLogo" format="reference"/>
+    <attr name="logoVertical" format="reference"/>
+    <attr name="logoHorizontal" format="reference"/>
 </resources>
