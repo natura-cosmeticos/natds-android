@@ -6,7 +6,7 @@
     android:gravity="center" />
 
 <item
-    android:id="@+id/ic_group_notification_count"
+    android:id="@+id/ic_badge_placeholder"
     android:drawable="@android:color/transparent" />
 
 </layer-list>

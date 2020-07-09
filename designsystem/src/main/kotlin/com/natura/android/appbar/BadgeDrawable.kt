@@ -3,21 +3,35 @@ package com.natura.android.appbar
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.LayerDrawable
+import android.util.TypedValue
 import com.natura.android.R
+
+const val DEFAULT_MAX_VALUE = "99+"
 
 class BadgeDrawable(
     private val context: Context,
-    private val placeholderText: String
+    private val count: Int,
+    private val parent: Drawable
 ) : Drawable() {
 
     private var mBadgePaint = Paint()
     private var mTextPaint = Paint()
     private val mTxtRect = Rect()
     private var mCountText = ""
-    private var mCount = 0
+    private var mCount = count
 
     init {
-        initializeBadgeElement()
+        initializeBadgeTheme()
+        setBadge()
+    }
+
+    private fun setBadge(){
+        val icon = parent as LayerDrawable
+
+        this.updateBadgeDrawable(count)
+        icon.mutate()
+        icon.setDrawableByLayerId(R.id.ic_badge_placeholder, this)
     }
 
     override fun draw(canvas: Canvas) {
@@ -39,7 +53,7 @@ class BadgeDrawable(
         invalidateSelf()
     }
 
-    private fun initializeBadgeElement() {
+    private fun initializeBadgeTheme() {
         setBadgeBackgroundStyle()
         setBadgeFontStyle()
     }
@@ -47,7 +61,6 @@ class BadgeDrawable(
     private fun setBadgeBackgroundStyle() {
         mBadgePaint.apply {
             color = getColorFromTheme(context, R.attr.colorError)
-            isAntiAlias = true
             style = Paint.Style.FILL
         }
     }
@@ -57,7 +70,6 @@ class BadgeDrawable(
             color = getColorFromTheme(context, R.attr.colorOnError)
             typeface = Typeface.DEFAULT
             textSize = 20f
-            isAntiAlias = true
             textAlign = Paint.Align.CENTER
         }
     }
@@ -85,10 +97,17 @@ class BadgeDrawable(
         canvas.drawRoundRect(rect, 16f, 16f, mBadgePaint)
 
         canvas.drawText(
-            if (mCount > 99) placeholderText else mCountText,
+            if (mCount > 99) DEFAULT_MAX_VALUE else mCountText,
             rect.centerX(),
             rect.centerY() + 8f,
             mTextPaint
         )
     }
+
+    private fun getColorFromTheme(context: Context, attrColorId: Int): Int {
+        val value = TypedValue()
+        context.theme.resolveAttribute(attrColorId, value, true)
+        return value.data
+    }
+
 }
