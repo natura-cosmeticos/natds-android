@@ -12,7 +12,7 @@ fun getColorFromTheme(context: Context, attrColorId: Int): Int{
     return value.data
 }
 
-fun setAppbarConfig(
+fun setBadgeConfiguration(
     context: Context,
     count: Int,
     menuItem: MenuItem,

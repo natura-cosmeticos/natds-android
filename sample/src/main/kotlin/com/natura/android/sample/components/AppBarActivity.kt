@@ -8,20 +8,17 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import com.natura.android.appbar.setAppbarConfig
+import com.natura.android.appbar.SetupAppBarImpl
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
+import kotlinx.android.synthetic.main.custom_app_bar.*
 
 class AppBarActivity : AppCompatActivity() {
 
-    private var searchMenuItem: MenuItem? = null
-    private var profileMenuItem: MenuItem? = null
-    private var linesMenuItem: MenuItem? = null
-
-    private lateinit var myMenu: Menu
-
-    private var mCount = 0
+    private var mMenu: Menu? = null
+    private var mCount = 15
+    private var setupAppBarImpl = SetupAppBarImpl()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
@@ -30,6 +27,7 @@ class AppBarActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_appbar)
         setSupportActionBar(toolBarTop)
+
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "App Bar Top"
 
@@ -37,17 +35,21 @@ class AppBarActivity : AppCompatActivity() {
             setOnClickListener {
                 mCount++
                 tvExample.text = mCount.toString()
-                updateNotificationBadge(myMenu, mCount)
+                setupAppBarImpl.updateNotificationBadge(context, mMenu, mCount, R.id.ic_notification)
             }
         }
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.appbar_menu, menu)
+        mMenu = menu
+        setupAppBarImpl.displayMenuWithBadge(this, menu, R.menu.custom_menu, mCount)
+
+
+
+      /*  menuInflater.inflate(R.menu.appbar_menu, menu)
         if (menu != null) {
             myMenu = menu
-            updateNotificationBadge(menu, mCount)
+            setupAppBarImpl.updateNotificationBadge(this, menu, mCount)
         }
 
         searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
@@ -68,7 +70,7 @@ class AppBarActivity : AppCompatActivity() {
                 updateToolbarMode(true)
                 return true
             }
-        })
+        })*/
 
         return true
     }
@@ -86,15 +88,6 @@ class AppBarActivity : AppCompatActivity() {
         return true
     }
 
-    private fun updateNotificationBadge(menu: Menu, mCount: Int) {
-        setAppbarConfig(
-            this,
-            mCount,
-            menu.findItem(R.id.ic_notification),
-            getString(com.natura.android.R.string.notification_limit_placeholder)
-        )
-    }
-
     private fun setupSearchView(searchView: SearchView) {
         searchView.queryHint = "Search..."
         // Get the SearchView and set the searchable configuration
@@ -106,9 +99,9 @@ class AppBarActivity : AppCompatActivity() {
     }
 
     private fun updateToolbarMode(menuMode: Boolean) {
-        searchMenuItem?.isVisible = menuMode
-        profileMenuItem?.isVisible = menuMode
-        linesMenuItem?.isVisible = menuMode
+//        searchMenuItem?.isVisible = menuMode
+//        profileMenuItem?.isVisible = menuMode
+//        linesMenuItem?.isVisible = menuMode
     }
 
 }
