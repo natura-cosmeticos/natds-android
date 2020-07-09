@@ -15,14 +15,13 @@ class BadgeDrawable(
     private val mTxtRect = Rect()
     private var mCountText = ""
     private var mCount = 0
-    private var mWillDraw = false
 
     init {
         initializeBadgeElement()
     }
 
     override fun draw(canvas: Canvas) {
-        if (mWillDraw) {
+        if (mCount > 0) {
             drawBadgeWithText(canvas)
         } else
             defineTextBounds(mCountText)
@@ -37,7 +36,6 @@ class BadgeDrawable(
     internal fun updateBadgeDrawable(count: Int) {
         mCountText = count.toString()
         mCount = count
-        mWillDraw = count > 0
         invalidateSelf()
     }
 
@@ -67,7 +65,6 @@ class BadgeDrawable(
     private fun drawBadgeWithText(
         canvas: Canvas
     ) {
-
         defineTextBounds(mCountText)
         definePositionToDrawBadge(canvas)
     }
