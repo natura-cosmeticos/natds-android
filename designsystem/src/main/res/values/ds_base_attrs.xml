@@ -102,5 +102,10 @@
     <attr name="checkboxStyleSecondary" format="reference"/>
     <attr name="radioButtonStyleSecondary" format="reference"/>
 
+    <!-- Logo references -->
+    <attr name="logoVertical" format="reference"/>
+    <attr name="logoHorizontal" format="reference"/>
+
+    <!-- Dialog references -->
     <attr name="dialogStandardTheme" format="reference"/>
 </resources>

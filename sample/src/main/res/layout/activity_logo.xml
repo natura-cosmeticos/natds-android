@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".patterns.LogoActivity">
+
+    <TextView
+        android:id="@+id/logoHorizontalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Logo Horizontal"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintEnd_toEndOf="@+id/logoHorizontal"
+        app:layout_constraintStart_toStartOf="@+id/logoHorizontal"
+        app:layout_constraintTop_toBottomOf="@+id/logoHorizontal" />
+
+    <ImageView
+        android:id="@+id/logoVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="?attr/logoVertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoHorizontal" />
+
+    <ImageView
+        android:id="@+id/logoHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="?attr/logoHorizontal"
+        app:layout_constraintBottom_toTopOf="@+id/logoVertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelLogoVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Logo Vertical"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintEnd_toEndOf="@+id/logoVertical"
+        app:layout_constraintStart_toStartOf="@+id/logoVertical"
+        app:layout_constraintTop_toBottomOf="@+id/logoVertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

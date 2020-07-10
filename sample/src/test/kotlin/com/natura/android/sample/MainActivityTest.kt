@@ -3,10 +3,13 @@ package com.natura.android.sample
 import android.widget.Button
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.components.*
+import com.natura.android.sample.components.*
+import com.natura.android.sample.patterns.ErrorActivity
+import com.natura.android.sample.patterns.LoadingActivity
+import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
 import com.natura.android.sample.tokens.icons.IconActivity
-import com.natura.android.sample.tokens.TypographyActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -256,5 +259,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(DialogActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksLogoPatternButtonClickStartsLogoPatternScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.logoPatternButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(LogoActivity::class.java, shadowIntent.intentClass)
     }
 }

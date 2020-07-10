@@ -39,6 +39,9 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
 
+        <item name="logoVertical">@drawable/natura_vertical</item>
+        <item name="logoHorizontal">@drawable/natura_horizontal</item>
+
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Light</item>
     </style>
 
@@ -78,6 +81,9 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
 
+        <item name="logoVertical">@drawable/natura_vertical_dark</item>
+        <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
+
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Dark</item>
     </style>
 
@@ -115,6 +121,9 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.Avon.Light</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
+        <item name="logoHorizontal">@drawable/avon_horizontal</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Light</item>
     </style>
@@ -154,6 +163,9 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
 
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
+        <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Dark</item>
     </style>
 
@@ -191,6 +203,9 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.TBS.Light</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="logoVertical">@drawable/tbs_vertical</item>
+        <item name="logoHorizontal">@drawable/tbs_horizontal</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Light</item>
     </style>
@@ -230,6 +245,9 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.TBS.Dark</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="logoVertical">@drawable/tbs_vertical_dark</item>
+        <item name="logoHorizontal">@drawable/tbs_horizontal_dark</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Dark</item>
     </style>

@@ -188,4 +188,12 @@ class MainActivityFunctionalTests {
 
         onView(withText("Error Pattern")).check(matches(isDisplayed()))
     }
+
+    @Test
+    fun shouldOpenLogoScreenWhenTapOnItButton() {
+        onView(withId(R.id.logoPatternButton)).perform(scrollTo())
+        onView(withId(R.id.logoPatternButton)).perform(click())
+
+        onView(withText("Logo Pattern")).check(matches(isDisplayed()))
+    }
 }
