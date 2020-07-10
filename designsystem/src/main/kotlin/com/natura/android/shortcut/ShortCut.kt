@@ -1,6 +1,7 @@
 package com.natura.android.shortcut
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
@@ -78,9 +79,7 @@ class ShortCut @JvmOverloads constructor(
     }
 
     private fun setBackgroundContained() {
-        val drawableBackground = context.getDrawable(R.drawable.shortcut_background)
-        drawableBackground?.setTint(backgroundColorResourceAttribute)
-        backgroundContainer.background = drawableBackground
+        backgroundContainer.backgroundTintList = resources.getColorStateList(backgroundColorResourceAttribute, null)
     }
 
     private fun setBackgroundOutlined() {
@@ -90,8 +89,8 @@ class ShortCut @JvmOverloads constructor(
     }
 
     companion object {
-        const val CONTAINED = 0
-        const val OUTLINED = 1
+        const val OUTLINED = 0
+        const val CONTAINED = 1
     }
 }
 
