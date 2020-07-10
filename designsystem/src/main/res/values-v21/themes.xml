@@ -122,7 +122,7 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Light</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
 
-        <item name="logoVertical">@drawable/logo_placeholder</item>
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal</item>
     </style>
 
@@ -162,7 +162,7 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
 
-        <item name="logoVertical">@drawable/logo_placeholder</item>
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
     </style>
 
