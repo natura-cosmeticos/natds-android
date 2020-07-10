@@ -15,10 +15,11 @@
         <activity android:name=".BrandSelectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".tokens.ElevationActivity"
             android:theme="@style/Theme.Natura" />
@@ -43,6 +44,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -80,12 +82,14 @@
         <activity
             android:name=".components.ButtonActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity
             android:name=".components.ExpansionPanelActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity android:name=".tokens.ColorsActivity" />
+        <activity
+            android:name=".components.ShortcutActivity"
+            android:theme="@style/Theme.Natura"/>
+
     </application>
 
 </manifest>

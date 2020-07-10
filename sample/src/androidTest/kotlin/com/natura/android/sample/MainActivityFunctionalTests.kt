@@ -129,6 +129,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenShortcutScreenWhenTapOnItButton() {
+        onView(withId(R.id.shortcutButton)).perform(scrollTo())
+        onView(withId(R.id.shortcutButton)).perform(click())
+
+        onView(withText("Shortcut")).check(matches(isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenTextFieldScreenWhenTapOnItButton() {
         onView(withId(R.id.btnTextfield)).perform(scrollTo())
         onView(withId(R.id.btnTextfield)).perform(click())

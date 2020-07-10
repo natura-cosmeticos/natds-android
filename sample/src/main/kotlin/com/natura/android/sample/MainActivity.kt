@@ -73,6 +73,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SelectionControlActivity::class.java))
         }
 
+        shortcutButton.setOnClickListener {
+            startActivity(Intent(this, ShortcutActivity::class.java))
+        }
+
         btnTextfield.setOnClickListener {
             startActivity(Intent(this, TextFieldActivity::class.java))
         }
