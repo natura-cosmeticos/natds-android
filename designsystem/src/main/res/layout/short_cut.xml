@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxWidth="56dp"
+    android:layout_marginStart="?spacingSmall"
+    android:layout_marginEnd="?spacingSmall"
+    tools:background="#BABABA">
+    <LinearLayout
+        android:id="@+id/shortcutBackground"
+        android:layout_width="?sizeMediumX"
+        android:layout_height="?sizeMediumX"
+        android:background="@drawable/shortcut_background"
+        android:elevation="?elevation03"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:backgroundTint="@color/natPrimary">
+        <ImageView
+            android:id="@+id/shortCutIcon"
+            android:layout_width="?sizeSemi"
+            android:layout_height="?sizeSemi"
+            tools:srcCompat="@drawable/ds_ic_filled_brand_naturarosacea" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/shortCutLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingTiny"
+        tools:text="Shortcut bla bla bla bla laljadslkjalkjdfljasdf"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/shortcutBackground"
+        app:layout_constraintStart_toStartOf="@+id/shortcutBackground"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutBackground"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
