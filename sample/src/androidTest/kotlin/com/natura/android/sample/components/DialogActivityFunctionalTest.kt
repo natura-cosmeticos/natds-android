@@ -28,7 +28,7 @@ class DialogActivityFunctionalTest {
     fun shouldShowDialogTitle() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withText("Dialog Standard Title")).check(matches(isDisplayed()))
+        onView(withText("Title")).check(matches(isDisplayed()))
     }
 
     @Test
@@ -42,21 +42,21 @@ class DialogActivityFunctionalTest {
     fun shouldShowDialogMainButton() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withText("Main Button")).check(matches(isDisplayed()))
+        onView(withText("Confirm Button")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldShowDialogSecondaryButton() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withText("Secondary Button")).check(matches(isDisplayed()))
+        onView(withText("Close")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldShowMainButtonActionWhenClickOnIt() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withText("Main Button")).perform(click())
+        onView(withText("Confirm Button")).perform(click())
 
         onView(withText("Dialog Main Action")).inRoot(withDecorView(not(decorView))).check(matches(isDisplayed()))
     }
@@ -65,7 +65,7 @@ class DialogActivityFunctionalTest {
     fun shouldShowSecondaryButtonActionWhenClickOnIt() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withText("Secondary Button")).perform(click())
+        onView(withText("Close")).perform(click())
 
         onView(withText("Dialog Secondary Action")).inRoot(withDecorView(not(decorView))).check(matches(isDisplayed()))
     }

@@ -12,7 +12,6 @@ import com.natura.android.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.shadows.ShadowAlertDialog
 
 @RunWith(AndroidJUnit4::class)
 class DialogStandardTest {
@@ -95,7 +94,6 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            0,
             view).create()
     }
 }
