@@ -7,8 +7,7 @@
     android:layout_height="wrap_content"
     android:maxWidth="56dp"
     android:layout_marginStart="?spacingSmall"
-    android:layout_marginEnd="?spacingSmall"
-    tools:background="#BABABA">
+    android:layout_marginEnd="?spacingSmall">
     <LinearLayout
         android:id="@+id/shortcutBackground"
         android:layout_width="?sizeMediumX"
@@ -21,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:backgroundTint="@color/natPrimary">
+        tools:backgroundTint="?colorPrimary">
         <ImageView
             android:id="@+id/shortCutIcon"
             android:layout_width="?sizeSemi"

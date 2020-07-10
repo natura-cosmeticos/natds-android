@@ -8,10 +8,12 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
+import com.natura.android.extensions.setAppearance
 
 class ShortCut @JvmOverloads constructor(
     context: Context,
@@ -47,18 +49,13 @@ class ShortCut @JvmOverloads constructor(
 
     fun setLabel(text: String?) {
         labelContainer.text = text
-
-        labelContainer.setTextAppearance(labelTextAppearanceResourceAttribute)
+        labelContainer.setAppearance(labelTextAppearanceResourceAttribute)
     }
 
     fun setIcon(icon: Int) {
         val iconDrawable = context.getDrawable(icon)
-        iconDrawable?.setTint(iconColorResourceAttribute)
         iconContainer.setImageResource(icon)
-    }
-
-    private fun setLabelTextAppearanceByAPI() {
-
+        iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
     }
 
     private fun configureShortCutByType(type: Int) {
