@@ -1,14 +1,17 @@
 package com.natura.android.sample
 
+import android.widget.TextView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import androidx.test.espresso.matcher.ViewMatchers.withResourceName
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import org.hamcrest.CoreMatchers.*
 import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Before
@@ -23,74 +26,90 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenColorScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.colorTokensButton)).perform(click())
+    fun shouldOpenBorderRadiusScreenWhenTapOnItButton() {
+        onView(withId(R.id.borderRadiusButton)).perform(scrollTo())
+        onView(withId(R.id.borderRadiusButton)).perform(click())
 
-        onView(ViewMatchers.withText(containsString("Colors"))).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Border Radius")).check(matches(isDisplayed()))
     }
 
     @Test
-    fun shouldOpenBorderRadiusScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.borderRadiusButton)).perform(click())
+    fun shouldOpenColorScreenWhenTapOnItButton() {
+        onView(withId(R.id.colorTokensButton)).perform(click())
 
-        onView(ViewMatchers.withText("Border Radius")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText(containsString("Colors"))).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenElevationScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.elevationTokensButton)).perform(click())
+        onView(withId(R.id.elevationTokensButton)).perform(scrollTo())
+        onView(withId(R.id.elevationTokensButton)).perform(click())
 
-        onView(ViewMatchers.withText("Elevation")).check(matches(ViewMatchers.isDisplayed()))
-    }
-
-    @Test
-    fun shouldOpenSpacingScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnSpacing)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnSpacing)).perform(click())
-
-        onView(ViewMatchers.withText("Spacing")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Elevation")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenIconDrawableScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnIconsDrawables)).perform(click())
+        onView(withId(R.id.btnIconsDrawables)).perform(scrollTo())
+        onView(withId(R.id.btnIconsDrawables)).perform(click())
 
-        onView(ViewMatchers.withText("Icons (drawables)")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Icons (drawables)")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenIconFontsScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnIconsFont)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnIconsFont)).perform(click())
+        onView(withId(R.id.btnIconsFont)).perform(scrollTo())
+        onView(withId(R.id.btnIconsFont)).perform(click())
 
-        onView(ViewMatchers.withText("Icons (fonts)")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Icons (fonts)")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenOpacityScreenWhenTapOnItButton() {
+        onView(withId(R.id.opacityTokensButton)).perform(scrollTo())
+        onView(withId(R.id.opacityTokensButton)).perform(click())
+
+        onView(withText("Opacity")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenSizeScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.sizeButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.sizeButton)).perform(click())
+        onView(withId(R.id.sizeButton)).perform(scrollTo())
+        onView(withId(R.id.sizeButton)).perform(click())
 
-        onView(ViewMatchers.withText("Size")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Size")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenSpacingScreenWhenTapOnItButton() {
+        onView(withId(R.id.btnSpacing)).perform(scrollTo())
+        onView(withId(R.id.btnSpacing)).perform(click())
+
+        onView(withText("Spacing")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenTypographyScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.typographyButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.typographyButton)).perform(click())
+        onView(withId(R.id.typographyButton)).perform(scrollTo())
+        onView(withId(R.id.typographyButton)).perform(click())
 
-        onView(ViewMatchers.withText("Typography")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Typography")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenAppBarTopScreenWhenTapOnItButton() {
+        onView(withId(R.id.btnAppbar)).perform(scrollTo())
+        onView(withId(R.id.btnAppbar)).perform(click())
+
+        onView(withText("App Bar Top")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenButtonScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnStyleButtons)).perform(click())
+        onView(withId(R.id.btnStyleButtons)).perform(scrollTo())
+        onView(withId(R.id.btnStyleButtons)).perform(click())
 
-        onView(ViewMatchers.withText("Button")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Button")).check(matches(isDisplayed()))
     }
 
     @Test
@@ -112,57 +131,65 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenSelectionControlScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnSelection)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnSelection)).perform(click())
+        onView(withId(R.id.btnSelection)).perform(scrollTo())
+        onView(withId(R.id.btnSelection)).perform(click())
 
-        onView(ViewMatchers.withText("Selection Control")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Selection Control")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenTextFieldScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnTextfield)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnTextfield)).perform(click())
+        onView(withId(R.id.btnTextfield)).perform(scrollTo())
+        onView(withId(R.id.btnTextfield)).perform(click())
 
-        onView(ViewMatchers.withText("Text Field")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Text Field")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenValueTextHighlightScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnValueTextHighlight)).perform(click())
+        onView(withId(R.id.btnValueTextHighlight)).perform(scrollTo())
+        onView(withId(R.id.btnValueTextHighlight)).perform(click())
 
-        onView(ViewMatchers.withText("Value Text Highlight")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Value Text Highlight")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenMenuScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnMenu)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnMenu)).perform(click())
+        onView(withId(R.id.btnMenu)).perform(scrollTo())
+        onView(withId(R.id.btnMenu)).perform(click())
 
-        onView(ViewMatchers.withText("Menu Pattern")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Menu Pattern")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenSubmenuScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnSubmenu)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnSubmenu)).perform(click())
+        onView(withId(R.id.btnSubmenu)).perform(scrollTo())
+        onView(withId(R.id.btnSubmenu)).perform(click())
 
-        onView(ViewMatchers.withText("Submenu Pattern")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Submenu Pattern")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenNavigationDrawerScreenWhenTapOnItButton() {
+        onView(withId(R.id.btnNavigationDrawer)).perform(scrollTo())
+        onView(withId(R.id.btnNavigationDrawer)).perform(click())
+
+        onView(withText("Navigation Drawer")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenLoadingScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnLoader)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnLoader)).perform(click())
+        onView(withId(R.id.btnLoader)).perform(scrollTo())
+        onView(withId(R.id.btnLoader)).perform(click())
 
-        onView(ViewMatchers.withText("Loading Pattern")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Loading Pattern")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenErrorScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnErrorDefault)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnErrorDefault)).perform(click())
+        onView(withId(R.id.btnErrorDefault)).perform(scrollTo())
+        onView(withId(R.id.btnErrorDefault)).perform(click())
 
-        onView(ViewMatchers.withText("Error Pattern")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Error Pattern")).check(matches(isDisplayed()))
     }
 }

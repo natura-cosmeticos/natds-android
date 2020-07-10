@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.google.android.material.card.MaterialCardView
 import com.natura.android.R
 
 @SuppressLint("CustomViewStyleable")
@@ -17,7 +17,7 @@ class ExpansionPanel @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private val container by lazy { findViewById<MaterialCardView>(R.id.ds_expansion_panel_container) }
+    private val container by lazy { findViewById<CardView>(R.id.ds_expansion_panel_container) }
     private val icon by lazy { findViewById<ImageView>(R.id.ds_expansion_panel_icon) }
     private val contentArea by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content_area) }
     private val title by lazy { findViewById<TextView>(R.id.ds_expansion_panel_title) }
