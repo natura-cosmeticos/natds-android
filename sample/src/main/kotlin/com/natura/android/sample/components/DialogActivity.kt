@@ -40,11 +40,11 @@ class DialogActivity : AppCompatActivity() {
 
         dialogStandard = DialogStandard(
             this,
-            "Dialog Standard Title",
-            "Main Button",
+            "Title",
+            "Confirm Button",
             mainClickListener,
-            "Secondary Button",
+            "Close",
             secondaryClickListener,
-            R.layout.test_standard_dialog).create()
+            R.layout.standard_dialog_content).create()
     }
 }
