@@ -89,18 +89,22 @@ class BadgeDrawable(
         canvas: Canvas
     ) {
         val bounds = bounds
-        val width = bounds.right - bounds.left.toFloat()
-        val height = bounds.bottom - bounds.top.toFloat()
-
-        val rect = RectF(width / 2.5f, 0f, if (mCount > 9) (width * 1.2f) else width, height / 1.5f)
-
         val badgeCorner =  context.resources.getDimension(R.dimen.ds_default_badge_corner_radius)
+
+        val badgeWith = when{
+            count > 99 -> context.resources.getDimension(R.dimen.big_badge_width)
+            count > 9 -> context.resources.getDimension(R.dimen.badge_width)
+            else -> context.resources.getDimension(R.dimen.small_badge_width)
+        }
+
+        val rect = RectF(bounds.exactCenterX(), bounds.top.toFloat(), badgeWith, bounds.exactCenterY())
+
         canvas.drawRoundRect(rect, badgeCorner, badgeCorner, mBadgePaint)
 
         canvas.drawText(
             if (mCount > 99) DEFAULT_MAX_VALUE else mCountText,
             rect.centerX(),
-            rect.centerY() + 12f,
+            rect.centerY() + context.resources.getDimension(R.dimen.ds_button_primary_radius),
             mTextPaint
         )
     }

@@ -18,7 +18,9 @@ class BadgeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Badge"
 
-        BadgeDrawable(this, 150, imageView.drawable)
+        BadgeDrawable(this, 100, imageViewBig.drawable)
+        BadgeDrawable(this, 90, imageViewNormal.drawable)
+        BadgeDrawable(this, 1, imageViewSmall.drawable)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

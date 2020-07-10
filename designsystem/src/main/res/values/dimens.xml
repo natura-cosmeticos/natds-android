@@ -143,5 +143,10 @@
     <dimen name="ds_default_card_corner_radius">4dp</dimen>
 
     <!-- Badge -->
-    <dimen name="ds_default_badge_corner_radius">16dp</dimen>
+    <dimen name="ds_default_badge_corner_radius">12dp</dimen>
+    <dimen name="badge_width">30dp</dimen>
+    <dimen name="small_badge_width">22dp</dimen>
+    <dimen name="big_badge_width">36dp</dimen>
+    <dimen name="badge_height">16dp</dimen>
+
 </resources>
