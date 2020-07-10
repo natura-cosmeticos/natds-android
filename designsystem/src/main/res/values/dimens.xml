@@ -141,4 +141,7 @@
     <!-- Card -->
     <dimen name="ds_default_card_elevation">2dp</dimen>
     <dimen name="ds_default_card_corner_radius">4dp</dimen>
+
+    <!-- Badge -->
+    <dimen name="ds_default_badge_corner_radius">16dp</dimen>
 </resources>

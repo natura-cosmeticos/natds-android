@@ -4,7 +4,7 @@ import android.app.Activity
 import android.view.Menu
 import com.natura.android.icon.BadgeDrawable
 
-class SetupAppBar{
+class SetupAppBar {
 
     lateinit var badgeDrawable: BadgeDrawable
 

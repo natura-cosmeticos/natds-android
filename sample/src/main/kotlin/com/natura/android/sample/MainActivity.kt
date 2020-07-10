@@ -100,5 +100,9 @@ class MainActivity : AppCompatActivity() {
         btnErrorDefault.setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
         }
+
+        btnBadge.setOnClickListener {
+            startActivity(Intent(this, BadgeActivity::class.java))
+        }
     }
 }
