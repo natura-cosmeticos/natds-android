@@ -23,7 +23,7 @@ class ShortCut @JvmOverloads constructor(
     private var typeAttribute = 0
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
-    private var labelColorResourceAttribute = 0
+    private var labelTextAppearanceResourceAttribute = 0
     private var iconResourceAttribute = 0
 
     private val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
@@ -35,25 +35,30 @@ class ShortCut @JvmOverloads constructor(
         View.inflate(context, R.layout.short_cut, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.shortCut)
-        labelAttribute = typedArray.getStringOrThrow(R.styleable.shortCut_shortCutLabel)
-        backgroundColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortCutBackgroundColor)
-        iconColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortCutIconColor)
-        labelColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortCutLabelColor)
-        iconResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortCutIcon)
-        typeAttribute = typedArray.getIntOrThrow(R.styleable.shortCut_shortCutType)
+        labelAttribute = typedArray.getStringOrThrow(R.styleable.shortCut_shortcutLabel)
+        backgroundColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
+        iconColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
+        labelTextAppearanceResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
+        iconResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutIcon)
+        typeAttribute = typedArray.getIntOrThrow(R.styleable.shortCut_shortcutType)
 
         configureShortCutByType(typeAttribute)
     }
 
     fun setLabel(text: String?) {
         labelContainer.text = text
-        labelContainer.setTextColor(labelColorResourceAttribute)
+
+        labelContainer.setTextAppearance(labelTextAppearanceResourceAttribute)
     }
 
     fun setIcon(icon: Int) {
         val iconDrawable = context.getDrawable(icon)
         iconDrawable?.setTint(iconColorResourceAttribute)
         iconContainer.setImageResource(icon)
+    }
+
+    private fun setLabelTextAppearanceByAPI() {
+
     }
 
     private fun configureShortCutByType(type: Int) {

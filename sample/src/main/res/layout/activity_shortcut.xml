@@ -12,15 +12,14 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/shortCut"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shortCutBackgroundColor="?colorPrimary"
-        app:shortCutIcon="@drawable/outlined_default_mockup"
-        app:shortCutIconColor="?colorOnPrimary"
-        app:shortCutLabel="Shortcut label"
-        app:shortCutLabelColor="?colorOnSurface"
-        app:shortCutType="contained" />
+        app:shortcutBackgroundColor="?colorPrimary"
+        app:shortcutIcon="@drawable/outlined_default_mockup"
+        app:shortcutIconColor="?colorOnPrimary"
+        app:shortcutLabel="Shortcut label"
+        app:shortcutLabelAppearance="?textAppearanceCaption"
+        app:shortcutType="contained" />
 
     <com.natura.android.shortcut.ShortCut
         android:id="@+id/shortCut"
@@ -31,11 +30,10 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortCut2"
         app:layout_constraintTop_toTopOf="parent"
-        app:shortCutBackgroundColor="?colorPrimary"
-        app:shortCutIcon="@drawable/outlined_default_mockup"
-        app:shortCutIconColor="?colorOnPrimary"
-        app:shortCutLabel="Shortcut label"
-        app:shortCutLabelColor="?colorOnSurface"
-        app:shortCutType="outlined" />
-
+        app:shortcutBackgroundColor="?colorPrimary"
+        app:shortcutIcon="@drawable/outlined_default_mockup"
+        app:shortcutIconColor="?colorOnPrimary"
+        app:shortcutLabel="Shortcut label"
+        app:shortcutLabelAppearance="?textAppearanceCaption"
+        app:shortcutType="outlined" />
 </androidx.constraintlayout.widget.ConstraintLayout>
