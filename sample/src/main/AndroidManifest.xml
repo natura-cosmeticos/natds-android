@@ -15,10 +15,11 @@
         <activity android:name=".BrandSelectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".tokens.ElevationActivity"
             android:theme="@style/Theme.Natura" />
@@ -48,8 +49,11 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".components.ErrorActivity"
+            android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".patterns.LogoActivity"
+            android:theme="@style/Theme.Natura"/>
         <activity
             android:name=".components.TextFieldActivity"
             android:theme="@style/Theme.Natura" />
@@ -72,7 +76,7 @@
             android:name=".tokens.icons.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.LoadingActivity"
+            android:name=".patterns.LoadingActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.ValueTextHighlightActivity"
@@ -80,11 +84,9 @@
         <activity
             android:name=".components.ButtonActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity
             android:name=".components.ExpansionPanelActivity"
             android:theme="@style/Theme.Natura" />
-
         <activity android:name=".tokens.ColorsActivity" />
     </application>
 
