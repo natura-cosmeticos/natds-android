@@ -1,4 +1,4 @@
-package com.natura.android.appbar
+package com.natura.android.icon
 
 import android.content.Context
 import android.graphics.*
