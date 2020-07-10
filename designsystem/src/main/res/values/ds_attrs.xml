@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="shortCut" >
+        <attr name="shortCutType" format="enum">
+            <enum name="outlined" value="0"/>
+            <enum name="contained" value="1"/>
+        </attr>
+        <attr name="shortCutBackgroundColor" format="color"/>
+        <attr name="shortCutIconColor" format="color"/>
+        <attr name="shortCutLabelColor" format="color"/>
+        <attr name="shortCutLabel" format="string"/>
+        <attr name="shortCutIcon" format="reference"/>
+    </declare-styleable>
 
     <declare-styleable name="AppBar" >
         <attr name="appBarType" format="enum">

@@ -55,6 +55,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
+    implementation "androidx.core:core-ktx:$rootProject.coreKTXVersion"
+
 
     testImplementation "junit:junit:$rootProject.junitVersion"
     testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
