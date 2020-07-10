@@ -69,7 +69,7 @@ class BadgeDrawable(
         mTextPaint.apply {
             color = getColorFromTheme(context, R.attr.colorOnError)
             typeface = Typeface.DEFAULT
-            textSize = 20f
+            textSize = context.resources.getDimension(R.dimen.ds_text_footer_size)
             textAlign = Paint.Align.CENTER
         }
     }
@@ -92,14 +92,15 @@ class BadgeDrawable(
         val width = bounds.right - bounds.left.toFloat()
         val height = bounds.bottom - bounds.top.toFloat()
 
-        val rect = RectF(width / 2, 0f, if (mCount > 9) (width * 1.2f) else width, height / 2)
+        val rect = RectF(width / 2.5f, 0f, if (mCount > 9) (width * 1.2f) else width, height / 1.5f)
 
-        canvas.drawRoundRect(rect, 16f, 16f, mBadgePaint)
+        val badgeCorner =  context.resources.getDimension(R.dimen.ds_default_badge_corner_radius)
+        canvas.drawRoundRect(rect, badgeCorner, badgeCorner, mBadgePaint)
 
         canvas.drawText(
             if (mCount > 99) DEFAULT_MAX_VALUE else mCountText,
             rect.centerX(),
-            rect.centerY() + 8f,
+            rect.centerY() + 12f,
             mTextPaint
         )
     }
