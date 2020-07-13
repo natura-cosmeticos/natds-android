@@ -27,6 +27,7 @@ excluded_words:
   - CoreMatchers
   - dimen
   - drawables
+  - enum
   - kotlinx
   - Matchers
   - mockup
