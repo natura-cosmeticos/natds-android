@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.*
+import com.natura.android.sample.patterns.ErrorActivity
+import com.natura.android.sample.patterns.LoadingActivity
+import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
 import com.natura.android.sample.tokens.icons.IconActivity
@@ -65,6 +68,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ButtonActivity::class.java))
         }
 
+        dialogButton.setOnClickListener {
+            startActivity(Intent(this, DialogActivity::class.java))
+        }
+
         btnExpansionPanel.setOnClickListener {
             startActivity(Intent(this, ExpansionPanelActivity::class.java))
         }
@@ -99,6 +106,10 @@ class MainActivity : AppCompatActivity() {
 
         btnErrorDefault.setOnClickListener {
             startActivity(Intent(this, ErrorActivity::class.java))
+        }
+
+        logoPatternButton.setOnClickListener {
+            startActivity(Intent(this, LogoActivity::class.java))
         }
 
         btnBadge.setOnClickListener {

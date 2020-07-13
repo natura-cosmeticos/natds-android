@@ -63,8 +63,14 @@
 
         </activity>
         <activity
-            android:name=".components.ErrorActivity"
+            android:name=".components.DialogActivity"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity
+            android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />
+        <activity
+            android:name=".patterns.LogoActivity"
+            android:theme="@style/Theme.Natura"/>
         <activity
             android:name=".components.TextFieldActivity"
             android:theme="@style/Theme.Natura" />
@@ -87,7 +93,7 @@
             android:name=".tokens.icons.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".components.LoadingActivity"
+            android:name=".patterns.LoadingActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.ValueTextHighlightActivity"

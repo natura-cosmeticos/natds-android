@@ -29,6 +29,7 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_expandable_navigation_view)
 
+        supportActionBar?.title = "Navigation Drawer"
         supportActionBar?.setHomeAsUpIndicator(android.R.drawable.ic_menu_more)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 

@@ -20,7 +20,6 @@ import org.robolectric.Robolectric
 import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
-@Config(sdk = [28])
 class TextFieldTest {
 
     val activityController = Robolectric.buildActivity(Activity::class.java)
@@ -367,6 +366,7 @@ class TextFieldTest {
         assertThat(textView.isFocused).isTrue()
     }
 
+    @Config(sdk = [28])
     @Test
     fun testNoFocusWhenBoxIsClickedButIsDisabled() {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText

@@ -1,0 +1,33 @@
+package com.natura.android.sample.components
+
+import androidx.test.core.app.ActivityScenario
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import junit.framework.Assert.assertEquals
+import kotlinx.android.synthetic.main.activity_dialog.*
+import org.junit.Before
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.shadows.ShadowAlertDialog
+
+@RunWith(AndroidJUnit4::class)
+class DialogActivityTest {
+
+    lateinit var dialogActivityScenario: ActivityScenario<DialogActivity>
+
+    @Before
+    fun setUp() {
+        dialogActivityScenario = ActivityScenario.launch(DialogActivity::class.java)
+    }
+
+    @Test
+    fun dialogStandardButtonStartsDialogStandard() {
+        dialogActivityScenario.onActivity { dialogActivity ->
+            val buttonDialogStandard = dialogActivity.standardDialogButton
+            buttonDialogStandard.performClick()
+
+            val dialogDisplayed = ShadowAlertDialog.getLatestDialog()
+
+            assertEquals(dialogDisplayed.isShowing, true)
+        }
+    }
+}

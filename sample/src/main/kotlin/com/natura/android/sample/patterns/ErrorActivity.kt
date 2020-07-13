@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.patterns
 
 import android.os.Bundle
 import android.view.MenuItem
