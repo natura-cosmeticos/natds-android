@@ -49,11 +49,23 @@
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 
-        <Button
-            android:id="@+id/current_state_button"
+        <TextView
+            android:id="@+id/last_action_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceCaption" />
+
+        <Button
+            android:id="@+id/current_state_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Check ExpansionPanel's\ncurrent state"/>
+        
+        <TextView
+            android:id="@+id/current_state_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceCaption" />
 
     </LinearLayout>
 
