@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto" >
-
-    <!-- add the following item to your menu.xml -->
 
     <item
         android:id="@+id/ic_schedule"
-        android:icon="@drawable/icon_badge"
+        android:icon="@drawable/icon_base_badge"
         android:title="agenda"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/ic_notification"
-        android:icon="@drawable/icon_badge"
+        android:icon="@drawable/icon_base_badge"
         android:title="notificacoes"
         app:showAsAction="always" />
 </menu>

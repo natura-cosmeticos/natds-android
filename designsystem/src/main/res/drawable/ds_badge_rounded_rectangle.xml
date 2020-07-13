@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="?attr/colorError"/>
-
-    <padding android:top="10dp"
-        android:left="10dp"
-        android:bottom="10dp"
-        android:right="10dp"
-        />
-
     <corners android:radius="@dimen/ds_default_badge_corner_radius" />
 </shape>

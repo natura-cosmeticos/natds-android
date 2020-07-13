@@ -11,34 +11,29 @@ const val DEFAULT_MAX_VALUE = "99+"
 
 class BadgeDrawable(
     private val context: Context,
-    private val count: Int,
-    private val parent: Drawable
+    private var count: Int,
+    private var parent: Drawable
 ) : Drawable() {
 
-    private var mBadgePaint = Paint()
     private var mTextPaint = Paint()
     private val mTxtRect = Rect()
-    private var mCountText = ""
-    private var mCount = count
 
     init {
-        initializeBadgeTheme()
+        setBadgeFontStyle()
         setBadge()
     }
 
-    private fun setBadge(){
+    private fun setBadge() {
         val icon = parent as LayerDrawable
-
-        this.updateBadgeDrawable(count)
         icon.mutate()
         icon.setDrawableByLayerId(R.id.ic_badge_placeholder, this)
     }
 
     override fun draw(canvas: Canvas) {
-        if (mCount > 0) {
+        if (this.count > 0) {
             drawBadgeWithText(canvas)
         } else
-            defineTextBounds(mCountText)
+            defineTextBounds(count.toString())
     }
 
     override fun setAlpha(alpha: Int) {}
@@ -48,21 +43,8 @@ class BadgeDrawable(
     override fun getOpacity() = PixelFormat.UNKNOWN
 
     internal fun updateBadgeDrawable(count: Int) {
-        mCountText = count.toString()
-        mCount = count
+        this.count = count
         invalidateSelf()
-    }
-
-    private fun initializeBadgeTheme() {
-        setBadgeBackgroundStyle()
-        setBadgeFontStyle()
-    }
-
-    private fun setBadgeBackgroundStyle() {
-        mBadgePaint.apply {
-            color = getColorFromTheme(context, R.attr.colorError)
-            style = Paint.Style.FILL
-        }
     }
 
     private fun setBadgeFontStyle() {
@@ -77,34 +59,45 @@ class BadgeDrawable(
     private fun drawBadgeWithText(
         canvas: Canvas
     ) {
-        defineTextBounds(mCountText)
+        defineTextBounds(count.toString())
         definePositionToDrawBadge(canvas)
     }
 
     private fun defineTextBounds(text: String) {
-        mTextPaint.getTextBounds(text, 0, mCountText.length, mTxtRect)
+        mTextPaint.getTextBounds(text, 0, count.toString().length, mTxtRect)
     }
 
     private fun definePositionToDrawBadge(
         canvas: Canvas
     ) {
         val bounds = bounds
-        val badgeCorner =  context.resources.getDimension(R.dimen.ds_default_badge_corner_radius)
 
-        val badgeWith = when{
-            count > 99 -> context.resources.getDimension(R.dimen.big_badge_width)
-            count > 9 -> context.resources.getDimension(R.dimen.badge_width)
-            else -> context.resources.getDimension(R.dimen.small_badge_width)
+        val badgeWith = when {
+            count > 9 -> context.resources.getDimension(R.dimen.big_badge_width)
+            else -> context.resources.getDimension(R.dimen.badge_width)
         }
 
-        val rect = RectF(bounds.exactCenterX(), bounds.top.toFloat(), badgeWith, bounds.exactCenterY())
+        context.resources.getDrawable(R.drawable.ds_badge_rounded_rectangle, context.theme).apply {
+            setBounds(
+                bounds.centerX(),
+                bounds.top,
+                badgeWith.toInt(),
+                context.resources.getDimension(R.dimen.badge_height).toInt()
+            )
+            draw(canvas)
+            drawText(
+                canvas,
+                this.bounds.exactCenterX(),
+                this.bounds.centerY() + context.resources.getDimension(R.dimen.ds_button_primary_radius)
+            )
+        }
+    }
 
-        canvas.drawRoundRect(rect, badgeCorner, badgeCorner, mBadgePaint)
-
+    private fun drawText(canvas: Canvas, x: Float, y: Float) {
         canvas.drawText(
-            if (mCount > 99) DEFAULT_MAX_VALUE else mCountText,
-            rect.centerX(),
-            rect.centerY() + context.resources.getDimension(R.dimen.ds_button_primary_radius),
+            if (this@BadgeDrawable.count > 99) DEFAULT_MAX_VALUE else count.toString(),
+            x,
+            y,
             mTextPaint
         )
     }

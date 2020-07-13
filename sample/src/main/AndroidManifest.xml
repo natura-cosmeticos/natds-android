@@ -44,6 +44,7 @@
             android:theme="@style/Theme.Natura.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
             <meta-data
@@ -52,7 +53,15 @@
         </activity>
         <activity
             android:name=".components.BadgeActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.Natura">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".components.ErrorActivity"
             android:theme="@style/Theme.Natura" />
