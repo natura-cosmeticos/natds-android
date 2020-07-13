@@ -1,70 +1,85 @@
-# Dialog - WIP
+# Dialog
 
 ### What is it?
 Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
 
 ### Why should I use it?
-A dialog can be an easy and interactive way to infor users
+A dialog can be an easy and interactive way to informe users
 
 ### When should I use it?
-You should use dialog according to its variantions: check dialog variantions [![here](https://zeroheight.com/08f80f4e1/p/94868f-dialog/b/993274)
+You should use dialog according to its variantions: check dialog variantions [here](https://zeroheight.com/08f80f4e1/p/94868f-dialog/b/993274)
 
 ### How to use it?
 
-#### Standard Dialog
+## Standard Dialog
+A dialog standard is a Nat DS component created over the native android AlertDialog, form AndroidX App Compat. The DS component MUST have:
+- Title
+- Content (can be anything you need, a text, an image et)
+- A main action button
+- A secondary action button
 
+The usage of Dialog Standard is really simple. First you create the dialog, than you show it.
+
+### Creating the dialog:
+You can create this dialog provinding some attributes to DialogStandard constructor:
+
+##### Context
+*Android Context*
+
+##### Dialog Title
+*String that will be show as a dialog title*
+
+##### Dialog Main Button Title
+*String with main button's label, this button will be show as a *contained* button*
+
+##### Dialog Main Action
+*DialogInterface.OnClickListener that will be call when user perform a click at main button*
+
+##### Dialog Secondary Button Title
+*String with secondary button's label, this button will be show as a *text* button*
+
+##### Dialog Secondary Action
+*DialogInterface.OnClickListener that will be call when user perform a click at secondary button*
+
+##### Content View or Content Layout
+*Content that will be show inside dialog. You can provide an View or a Layout reference to fill it.*
+
+##### Cancelable
+*Flag that set if dialog can be closed by clicking out of it or not. You can omite this parameter and it will be assumed as true*
+
+##### Dialog Theme
+*If the view where dialog is in has not a DS theme applyed, you can pass the DS theme reference at the constructor. The theme will be used only inside the dialog. <p>⚠️ **If you omit this, the parent theme will be used to set the dialog. If the parent theme is not an Nat DS Theme, the dialog will not be set as expected**</P>
+
+
+
+Check bellow an code exemple of how you can create an Dialog Standard:
 
 ```android
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+private fun createDialog() {
+    val mainClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show() }
+    val secondaryClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Secondary Action", Toast.LENGTH_LONG).show() }
 
-        setContentView(R.layout.activity_appbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "App Bar Top"
-    }
-   ```
-To configure the back button action:
-```android
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        onBackPressed()
-        return true
-    }
-   ```
+    dialogStandard = DialogStandard(
+        this,
+        "Title",
+        "Confirm Button",
+        mainClickListener,
+        "Close",
+        secondaryClickListener,
+        R.layout.standard_dialog_content).create()
+}
+```
+### Showing the dialog
 
-
-However if you need an more complex App Bar Top, you can use Android Toolbar component with the DS theme applied.
-Important! If you are adding the toolbar component at you xml layou file, DO NOT use the default theme, use the NoActionBar variant. You can check more infos [here](getting-started.md).
+With the dialog created, you can show it whenever you want, calling *show()* method :)
 
 ```android
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+button.setOnClickListener {
+    dialogStandard.show()
+}
+```
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBarTop"
-            android:layout_width="match_parent"
-            android:layout_height="?toolbarHeight"
-            android:theme="?toolbarDefaultTheme"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-    </com.google.android.material.appbar.AppBarLayout>
- ```
 
-After that, the App Bar will be displayed at the top of the screen and in the root view code, you can add some basic actions:
-```android
-      override fun onCreate(savedInstanceState: Bundle?) {
-          super.onCreate(savedInstanceState)
-
-          setContentView(R.layout.activity_appbar)
-          setSupportActionBar(toolBarTop)
-          supportActionBar?.setDisplayHomeAsUpEnabled(true)
-          supportActionBar?.title = "App Bar Top"
-      }
- ```
 
 
