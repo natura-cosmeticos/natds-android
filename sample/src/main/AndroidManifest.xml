@@ -15,11 +15,10 @@
         <activity android:name=".BrandSelectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"/>
         <activity
             android:name=".tokens.ElevationActivity"
             android:theme="@style/Theme.Natura" />
@@ -48,6 +47,9 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
+        <activity
+            android:name=".components.DialogActivity"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />

@@ -42,6 +42,7 @@
 
         <item name="logoVertical">@drawable/natura_vertical</item>
         <item name="logoHorizontal">@drawable/natura_horizontal</item>
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Light</item>
     </style>
 
     <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
@@ -84,6 +85,8 @@
 
         <item name="logoVertical">@drawable/natura_vertical_dark</item>
         <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Dark</item>
     </style>
 
     <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
@@ -124,6 +127,8 @@
 
         <item name="logoVertical">@drawable/outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Light</item>
     </style>
 
     <style name="Theme.Avon.NoActionBar" parent="Theme.Avon">
@@ -164,6 +169,8 @@
 
         <item name="logoVertical">@drawable/outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Dark</item>
     </style>
 
     <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
@@ -204,6 +211,8 @@
 
         <item name="logoVertical">@drawable/tbs_vertical</item>
         <item name="logoHorizontal">@drawable/tbs_horizontal</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Light</item>
     </style>
 
     <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
@@ -245,6 +254,8 @@
 
         <item name="logoVertical">@drawable/tbs_vertical_dark</item>
         <item name="logoHorizontal">@drawable/tbs_horizontal_dark</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Dark</item>
     </style>
 
     <style name="Theme.BodyShopDark.NoActionBar" parent="Theme.BodyShopDark">

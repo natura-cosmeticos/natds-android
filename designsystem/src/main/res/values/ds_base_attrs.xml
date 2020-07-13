@@ -105,4 +105,7 @@
     <!-- Logo references -->
     <attr name="logoVertical" format="reference"/>
     <attr name="logoHorizontal" format="reference"/>
+
+    <!-- Dialog references -->
+    <attr name="dialogStandardTheme" format="reference"/>
 </resources>

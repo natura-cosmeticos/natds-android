@@ -68,6 +68,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ButtonActivity::class.java))
         }
 
+        dialogButton.setOnClickListener {
+            startActivity(Intent(this, DialogActivity::class.java))
+        }
+
         btnExpansionPanel.setOnClickListener {
             startActivity(Intent(this, ExpansionPanelActivity::class.java))
         }
