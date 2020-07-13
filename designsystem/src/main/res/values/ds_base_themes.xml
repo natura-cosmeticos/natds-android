@@ -116,6 +116,9 @@
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
+
+        <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
+        <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -233,5 +236,8 @@
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
+
+        <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
+        <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
     </style>
 </resources>

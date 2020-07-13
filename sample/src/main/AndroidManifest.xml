@@ -95,7 +95,6 @@
         <activity
             android:name=".components.ShortcutActivity"
             android:theme="@style/Theme.Natura"/>
-
     </application>
 
 </manifest>

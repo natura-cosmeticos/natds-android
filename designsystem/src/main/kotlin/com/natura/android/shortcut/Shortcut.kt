@@ -16,10 +16,11 @@ import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.extensions.setAppearance
 
-class ShortCut @JvmOverloads constructor(
+class Shortcut @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyleAttr: Int = 0
+    defStyleAttr: Int = 0,
+    themeAttr: Int? = null
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var labelAttribute: String?
@@ -39,13 +40,44 @@ class ShortCut @JvmOverloads constructor(
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.shortCut)
         labelAttribute = typedArray.getStringOrThrow(R.styleable.shortCut_shortcutLabel)
-        backgroundColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
-        iconColorResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
-        labelTextAppearanceResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
         iconResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutIcon)
         typeAttribute = typedArray.getIntOrThrow(R.styleable.shortCut_shortcutType)
 
+        themeAttr?.apply {
+            context.setTheme(this)
+        }
+
+        if(typeAttribute == CONTAINED) {
+            context
+                .theme
+                .obtainStyledAttributes(
+                    attrs,
+                    R.styleable.shortCut,
+                    R.attr.shortcutContained,
+                    0
+                )
+                .apply {
+                    backgroundColorResourceAttribute =
+                        this.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
+                    iconColorResourceAttribute =
+                        this.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
+                    labelTextAppearanceResourceAttribute =
+                        this.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
+                }
+        } else {
+            context
+                .theme
+                .obtainStyledAttributes(attrs, R.styleable.shortCut, R.attr.shortcutOutlined, 0)
+                .apply {
+                    backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
+                    iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
+                    labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
+                }
+        }
+
         configureShortCutByType(typeAttribute)
+
+        typedArray.recycle()
     }
 
     fun setLabel(text: String?) {
@@ -88,7 +120,9 @@ class ShortCut @JvmOverloads constructor(
 
     private fun setBackgroundOutlined() {
         val background = resources.getDrawable(R.drawable.shortcut_background, null) as GradientDrawable
-        background.setStroke(1, ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        val backgroundWrap = DrawableCompat.wrap(background).mutate()
+        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
 
         backgroundContainer.background = background
     }

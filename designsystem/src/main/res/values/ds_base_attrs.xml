@@ -108,4 +108,8 @@
 
     <!-- Dialog references -->
     <attr name="dialogStandardTheme" format="reference"/>
+
+    <!-- Shortcut references -->
+    <attr name="shortcutOutlined" format="reference"/>
+    <attr name="shortcutContained" format="reference"/>
 </resources>
