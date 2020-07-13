@@ -63,6 +63,9 @@
 
         </activity>
         <activity
+            android:name=".components.DialogActivity"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity
             android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
