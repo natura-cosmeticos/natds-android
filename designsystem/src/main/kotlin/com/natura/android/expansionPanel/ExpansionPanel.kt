@@ -22,11 +22,17 @@ class ExpansionPanel @JvmOverloads constructor(
     private val contentArea by lazy { findViewById<ConstraintLayout>(R.id.ds_expansion_panel_content_area) }
     private val title by lazy { findViewById<TextView>(R.id.ds_expansion_panel_title) }
 
+    private var onStateChangeListener: (isExpanded: Boolean) -> Unit = {}
+
     init {
         View.inflate(context, R.layout.ds_expansion_panel, this)
 
         setupSubtitle(context, attrs)
         setupClickableComponents()
+    }
+
+    fun setOnStateChangeListener(listener: (Boolean) -> Unit) {
+        onStateChangeListener = listener
     }
 
     fun isExpanded(): Boolean = contentArea.visibility == View.VISIBLE
@@ -67,12 +73,16 @@ class ExpansionPanel @JvmOverloads constructor(
         contentArea.visibility = View.VISIBLE
         icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
         container.setBackgroundResource(R.drawable.ds_expansion_panel_border_expanded)
+
+        onStateChangeListener.invoke(true)
     }
 
     private fun hideContentArea() {
         contentArea.visibility = View.GONE
         icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
         container.setBackgroundResource(R.drawable.ds_expansion_panel_border_collapsed)
+
+        onStateChangeListener.invoke(false)
     }
 
     private fun moveGivenChildrenToContentArea() {
