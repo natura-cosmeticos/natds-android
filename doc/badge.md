@@ -58,7 +58,7 @@ my_menu.xml
     <item
         android:id="@+id/ic_notification"
         android:icon="@drawable/icon_base_badge"
-        android:title="notificacoes"
+        android:title="notification"
         app:showAsAction="always" />
 </menu>
    ```

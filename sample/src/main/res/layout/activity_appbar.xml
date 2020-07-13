@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/btnIncrement"
         android:layout_margin="30dp"
-        android:text="incrementa notification"
+        android:text="increment notification"
         app:layout_constraintTop_toBottomOf="@id/tvExample"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
