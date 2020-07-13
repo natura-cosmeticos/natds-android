@@ -120,8 +120,7 @@ class Shortcut @JvmOverloads constructor(
 
     private fun setBackgroundOutlined() {
         val background = resources.getDrawable(R.drawable.shortcut_background, null) as GradientDrawable
-        val backgroundWrap = DrawableCompat.wrap(background).mutate()
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
         background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
 
         backgroundContainer.background = background

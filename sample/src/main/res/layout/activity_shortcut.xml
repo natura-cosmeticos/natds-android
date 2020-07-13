@@ -28,7 +28,6 @@
         app:layout_constraintStart_toEndOf="@+id/shortCut2"
         app:layout_constraintTop_toTopOf="parent"
         app:shortcutIcon="@drawable/outlined_default_mockup"
-        app:shortcutIconColor="?colorSecondary"
         app:shortcutLabel="Shortcut outlined"
         app:shortcutType="outlined" />
 </androidx.constraintlayout.widget.ConstraintLayout>
