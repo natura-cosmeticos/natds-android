@@ -109,10 +109,12 @@ And:
 
 ### How to use Components
 - [App Bar Top](doc/app-bar-top.md)
+- [Dialog](doc/dialog.md)
 - Error
 - [Expansion Panel](doc/expansion-panel.md)
 - Ext
 - Icon
+- [Logo](doc/logo.md)
 - Menu
 - Navigation View
 - Text Field
