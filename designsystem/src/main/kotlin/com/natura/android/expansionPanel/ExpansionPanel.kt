@@ -29,6 +29,8 @@ class ExpansionPanel @JvmOverloads constructor(
         setupClickableComponents()
     }
 
+    fun isExpanded(): Boolean = contentArea.visibility == View.VISIBLE
+
     override fun onFinishInflate() {
         super.onFinishInflate()
         moveGivenChildrenToContentArea()
@@ -54,14 +56,12 @@ class ExpansionPanel @JvmOverloads constructor(
     }
 
     private fun toggleContentArea() {
-        if (isContentAreaVisible()) {
+        if (isExpanded()) {
             hideContentArea()
         } else {
             showContentArea()
         }
     }
-
-    private fun isContentAreaVisible(): Boolean = contentArea.visibility == View.VISIBLE
 
     private fun showContentArea() {
         contentArea.visibility = View.VISIBLE
