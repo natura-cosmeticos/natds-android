@@ -1,7 +1,11 @@
 # Design System Natura for Android
 
+![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
+
+
+
 ### What for
-Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/25ddaa7f8/p/07a27e).
+Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
 
 ### Setup
 For use this repository, you need [Git-LFS](https://git-lfs.github.com/). Please follow the instructions and install **Git-LFS** before starting your contribution to this repository.
@@ -9,8 +13,8 @@ Copy and paste the file **github_credentials.properties.sample** and rename it t
 
 **Important:** The file **github_credentials.properties** can not be commited.
 
-### Library
-In construction
+### Getting Started
+To start usign our lib, check [here](doc/getting-started.md).
 
 ### Testing with Screenshots
 We are using [Screenshot Tests for Android](https://github.com/facebook/screenshot-tests-for-android) to validate our built components state, color and behavior.
@@ -105,10 +109,12 @@ And:
 
 ### How to use Components
 - [App Bar Top](doc/app-bar-top.md)
+- [Dialog](doc/dialog.md)
 - Error
 - [Expansion Panel](doc/expansion-panel.md)
 - Ext
 - Icon
+- [Logo](doc/logo.md)
 - Menu
 - Navigation View
 - Text Field

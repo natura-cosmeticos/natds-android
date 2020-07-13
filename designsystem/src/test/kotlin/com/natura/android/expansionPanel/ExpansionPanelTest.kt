@@ -6,7 +6,6 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.google.android.material.card.MaterialCardView
 import com.google.common.truth.Truth
 import com.natura.android.R
 import org.junit.Before
@@ -48,7 +47,7 @@ class ExpansionPanelTest {
     fun borderlessWhenCollapsed() {
         val expectedBackground = ContextCompat.getDrawable(activityController.get(), R.drawable.ds_expansion_panel_border_collapsed)
 
-        val container = expansionPanel.findViewById(R.id.ds_expansion_panel_container) as MaterialCardView
+        val container = expansionPanel.findViewById(R.id.ds_expansion_panel_container) as View
 
         container.callOnClick()
         container.callOnClick()

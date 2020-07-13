@@ -176,6 +176,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/dialogButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dialog"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/btnExpansionPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -233,34 +245,10 @@
             android:layout_gravity="start" />
 
         <Button
-            android:id="@+id/btnMenu"
+            android:id="@+id/btnErrorDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Item"
-            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
-            android:layout_gravity="start"
-            android:padding="16dp"
-            android:background="@color/surface"
-            android:textColor="@color/highEmphasis" />
-
-        <Button
-            android:id="@+id/btnSubmenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submenu Item"
-            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
-            android:layout_gravity="start"
-            android:padding="16dp"
-            android:background="@color/surface"
-            android:textColor="@color/highEmphasis" />
-
-        <Button
-            android:id="@+id/btnNavigationDrawer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Navigation Drawer"
+            android:text="Error Default"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"
@@ -281,10 +269,46 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/btnErrorDefault"
+            android:id="@+id/logoPatternButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Error Default"
+            android:text="Logo"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnNavigationDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Navigation Drawer"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu Item"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnSubmenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submenu Item"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"

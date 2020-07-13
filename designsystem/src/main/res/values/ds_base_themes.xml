@@ -114,6 +114,8 @@
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -229,5 +231,7 @@
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
     </style>
 </resources>
