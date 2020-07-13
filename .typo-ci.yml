@@ -26,6 +26,7 @@ excluded_words:
   - appcompat
   - CoreMatchers
   - dimen
+  - dimens
   - drawables
   - enum
   - kotlinx
