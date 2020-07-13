@@ -59,7 +59,7 @@
             android:id="@+id/current_state_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Check ExpansionPanel's\ncurrent state"/>
+            android:text="Check ExpansionPanel's\n current state"/>
         
         <TextView
             android:id="@+id/current_state_text"
