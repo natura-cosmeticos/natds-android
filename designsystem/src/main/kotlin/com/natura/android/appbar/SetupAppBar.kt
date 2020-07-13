@@ -6,7 +6,7 @@ import com.natura.android.icon.BadgeDrawable
 
 class SetupAppBar {
 
-    lateinit var badgeDrawable: BadgeDrawable
+    private lateinit var badgeDrawable: BadgeDrawable
 
     fun displayMenuWithBadge(
         activity: Activity,
@@ -16,10 +16,9 @@ class SetupAppBar {
         iconToFind: Int) {
 
         menu?.let {
-            menu ->
-            configureOptionsMenu(activity, menu, appbarMenu)
+            configureOptionsMenu(activity, it, appbarMenu)
 
-            menu.findItem(iconToFind)?.let { menuItem ->
+            it.findItem(iconToFind)?.let { menuItem ->
                 badgeDrawable = BadgeDrawable(
                     activity,
                     mCount,
