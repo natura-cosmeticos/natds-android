@@ -49,6 +49,12 @@
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 
+        <Button
+            android:id="@+id/current_state_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check ExpansionPanel's\ncurrent state"/>
+
     </LinearLayout>
 
 </ScrollView>
