@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:shortcutBackgroundColor="?colorSecondary"
         app:shortcutIcon="@drawable/outlined_default_mockup"
-        app:shortcutIconColor="?colorOnSecondary"
+        app:shortcutIconColor="?colorSecondary"
         app:shortcutLabel="Shortcut outlined"
         app:shortcutLabelAppearance="?textAppearanceCaption"
         app:shortcutType="outlined" />
