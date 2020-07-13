@@ -67,6 +67,18 @@ class ExpansionPanelTest {
     }
 
     @Test
+    fun invokeListenerWhenOnClick() {
+        var isPanelExpanded = false
+        expansionPanel.setOnStateChangeListener { isPanelExpanded = it }
+
+        val container = expansionPanel.findViewById(R.id.ds_expansion_panel_container) as View
+
+        container.callOnClick()
+
+        Truth.assertThat(isPanelExpanded).isTrue()
+    }
+
+    @Test
     fun withBorderWhenExpanded() {
         val expectedBackground = ContextCompat.getDrawable(activityController.get(), R.drawable.ds_expansion_panel_border_expanded)
 
@@ -87,5 +99,19 @@ class ExpansionPanelTest {
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
         Truth.assertThat(content.visibility).isEqualTo(View.GONE)
+    }
+
+    @Test
+    fun invokeListenerWhenOnClickAfterBeingExpanded() {
+        var isPanelExpanded = false
+        expansionPanel.setOnStateChangeListener { isPanelExpanded = it }
+
+        val container = expansionPanel.findViewById(R.id.ds_expansion_panel_container) as View
+
+        container.callOnClick()
+        Truth.assertThat(isPanelExpanded).isTrue()
+
+        container.callOnClick()
+        Truth.assertThat(isPanelExpanded).isFalse()
     }
 }
