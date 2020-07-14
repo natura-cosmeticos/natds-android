@@ -42,7 +42,7 @@ class BadgeDrawable(
 
     override fun getOpacity() = PixelFormat.UNKNOWN
 
-    internal fun updateBadgeDrawable(count: Int) {
+    fun updateBadgeDrawable(count: Int) {
         this.count = count
         invalidateSelf()
     }
@@ -53,6 +53,7 @@ class BadgeDrawable(
             typeface = Typeface.DEFAULT
             textSize = context.resources.getDimension(R.dimen.ds_text_footer_size)
             textAlign = Paint.Align.CENTER
+            style = Paint.Style.FILL
         }
     }
 
@@ -73,8 +74,8 @@ class BadgeDrawable(
         val bounds = bounds
 
         val badgeWith = when {
-            count > 9 -> context.resources.getDimension(R.dimen.big_badge_width)
-            else -> context.resources.getDimension(R.dimen.badge_width)
+            count > 9 -> context.resources.getDimension(R.dimen.ds_big_badge_width)
+            else -> context.resources.getDimension(R.dimen.ds_badge_width)
         }
 
         context.resources.getDrawable(R.drawable.ds_badge_rounded_rectangle, context.theme).apply {
@@ -82,9 +83,10 @@ class BadgeDrawable(
                 bounds.centerX(),
                 bounds.top,
                 badgeWith.toInt(),
-                context.resources.getDimension(R.dimen.badge_height).toInt()
+                context.resources.getDimension(R.dimen.ds_badge_height).toInt()
             )
             draw(canvas)
+
             drawText(
                 canvas,
                 this.bounds.exactCenterX(),

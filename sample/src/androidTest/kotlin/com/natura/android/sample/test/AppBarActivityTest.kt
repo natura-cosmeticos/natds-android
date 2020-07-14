@@ -19,7 +19,6 @@ class AppBarActivityTest : ScreenShotActivityTestBase() {
         val activity = activityTestRule.launchActivity(null)
 
         checkScreenshot(activity, "default")
-
         performClick(R.id.searchMenuBtn)
         checkScreenshot(activity, "search_expanded")
     }
@@ -27,7 +26,8 @@ class AppBarActivityTest : ScreenShotActivityTestBase() {
     @Test
     fun test_Snapshot_With_Notification_Badge(){
         val activity = activityTestRule.launchActivity(null)
+        checkScreenshot(activity, "badge_count_hide")
         performClick(R.id.btnIncrement)
-        checkScreenshot(activity, "badge_count")
+        checkScreenshot(activity, "badge_count_incremented")
     }
 }
