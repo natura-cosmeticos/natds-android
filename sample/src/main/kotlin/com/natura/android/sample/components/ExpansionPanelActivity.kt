@@ -21,10 +21,10 @@ class ExpansionPanelActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Expansion Panel"
 
-        val expansionPanel = findViewById<ExpansionPanel>(R.id.expansion_panel)
         val currentStateButton = findViewById<Button>(R.id.current_state_button)
         val currentStateText = findViewById<TextView>(R.id.current_state_text)
         val lastActionText = findViewById<TextView>(R.id.last_action_text)
+        val expansionPanel = findViewById<ExpansionPanel>(R.id.first_expansion_panel)
 
         expansionPanel.setOnStateChangeListener { isExpanded ->
             val action = if (isExpanded) "expanded" else "collapsed"

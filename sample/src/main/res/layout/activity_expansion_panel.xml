@@ -17,10 +17,10 @@
         android:animateLayoutChanges="true">
 
         <com.natura.android.expansionPanel.ExpansionPanel
-            android:id="@+id/expansion_panel"
+            android:id="@+id/first_expansion_panel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Expansion Panel">
+            app:title="Expansion Panel 1">
 
             <LinearLayout
                 android:id="@+id/circle_example"
