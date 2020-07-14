@@ -31,7 +31,7 @@ class AppBarActivity : AppCompatActivity() {
         btnIncrement.apply {
             setOnClickListener {
                 mCount++
-                tvExample.text = mCount.toString()
+                textViewExample.text = mCount.toString()
                 setupAppBarImpl.updateNotificationBadge(mMenu, mCount, R.id.ic_notification)
             }
         }

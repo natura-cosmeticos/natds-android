@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="TOKEN (A-Z)"
             android:textColor="@color/highEmphasis"
-            android:padding="16dp"
+            android:padding="@dimen/ds_spacing_small"
             android:textAlignment="textStart"
             android:layout_gravity="start" />
 
