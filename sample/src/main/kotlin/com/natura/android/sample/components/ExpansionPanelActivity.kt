@@ -2,8 +2,6 @@ package com.natura.android.sample.components
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.expansionPanel.ExpansionPanel
 import com.natura.android.sample.R
@@ -21,26 +19,28 @@ class ExpansionPanelActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Expansion Panel"
 
-        val currentStateButton = findViewById<Button>(R.id.current_state_button)
-        val currentStateText = findViewById<TextView>(R.id.current_state_text)
-        val lastActionText = findViewById<TextView>(R.id.last_action_text)
-        val expansionPanel = findViewById<ExpansionPanel>(R.id.first_expansion_panel)
+        val expansionPanel1 = findViewById<ExpansionPanel>(R.id.first_expansion_panel)
+        val expansionPanel2 = findViewById<ExpansionPanel>(R.id.second_expansion_panel)
 
-        expansionPanel.setOnStateChangeListener { isExpanded ->
-            val action = if (isExpanded) "expanded" else "collapsed"
-
-            lastActionText.text = "The panel $action."
-        }
-
-        currentStateButton.setOnClickListener {
-            val state = if (expansionPanel.isExpanded()) "expanded" else "collapsed"
-
-            currentStateText.text = "The panel is $state."
-        }
+        listOf(expansionPanel1, expansionPanel2).toggleVisibility()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun List<ExpansionPanel>.toggleVisibility() {
+        forEach { expansionPanel ->
+            expansionPanel.setOnStateChangeListener { isOpen ->
+                if (isOpen) {
+                    filter {
+                        it != expansionPanel && it.isExpanded
+                    }.map { otherExpansionPanel ->
+                        otherExpansionPanel.isExpanded = false
+                    }
+                }
+            }
+        }
     }
 }
