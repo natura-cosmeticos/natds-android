@@ -53,12 +53,16 @@ and TextField children:
 
 ### How to handle state
 
-You can get the ExpansionPanel's current state by calling the `isExpanded()` method.
+You can get or set the ExpansionPanel's current state by using the `isExpanded` attribute.
 
 ```kotlin
-val expansionPanel = findViewById<ExpansionPanel>(R.id.expansion_panel)
+fun expandFirstExpansionPanel() {
+    val expansionPanel = findViewById<ExpansionPanel>(R.id.first_expansion_panel)
+    expansionPanel.isExpanded = true
+}
 
-val currentState = if (expansionPanel.isExpanded()) "expanded" else "collapsed"
+val expansionPanel = findViewById<ExpansionPanel>(R.id.second_expansion_panel)
+val secondExpansionPanelState = if (secondExpansionPanel.isExpanded) "expanded" else "collapsed"
 ```
 
 Set a `OnStateChangeListener` if you need to be notified when the state changes.
