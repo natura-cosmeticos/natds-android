@@ -41,6 +41,7 @@ class ExpansionPanelTest {
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
         Truth.assertThat(content.visibility).isEqualTo(View.GONE)
+        Truth.assertThat(expansionPanel.isExpanded).isFalse()
     }
 
     @Test
@@ -60,6 +61,15 @@ class ExpansionPanelTest {
         val container = expansionPanel.findViewById(R.id.ds_expansion_panel_container) as View
 
         container.callOnClick()
+
+        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
+
+        Truth.assertThat(content.visibility).isEqualTo(View.VISIBLE)
+    }
+
+    @Test
+    fun showContentWhenSetExpanded() {
+        expansionPanel.isExpanded = true
 
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 
@@ -95,6 +105,16 @@ class ExpansionPanelTest {
 
         container.callOnClick()
         container.callOnClick()
+
+        val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
+
+        Truth.assertThat(content.visibility).isEqualTo(View.GONE)
+    }
+
+    @Test
+    fun hideContentWhenSetCollapsed() {
+        expansionPanel.isExpanded = true
+        expansionPanel.isExpanded = false
 
         val content = expansionPanel.findViewById(R.id.ds_expansion_panel_content_area) as ConstraintLayout
 

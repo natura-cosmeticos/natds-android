@@ -24,6 +24,16 @@ class ExpansionPanel @JvmOverloads constructor(
 
     private var onStateChangeListener: (isExpanded: Boolean) -> Unit = {}
 
+    var isExpanded: Boolean
+        get() = contentArea.visibility == View.VISIBLE
+        set(value) {
+            if (value) {
+                showContentArea()
+            } else {
+                hideContentArea()
+            }
+        }
+
     init {
         View.inflate(context, R.layout.ds_expansion_panel, this)
 
@@ -34,8 +44,6 @@ class ExpansionPanel @JvmOverloads constructor(
     fun setOnStateChangeListener(listener: (Boolean) -> Unit) {
         onStateChangeListener = listener
     }
-
-    fun isExpanded(): Boolean = contentArea.visibility == View.VISIBLE
 
     override fun onFinishInflate() {
         super.onFinishInflate()
@@ -62,7 +70,7 @@ class ExpansionPanel @JvmOverloads constructor(
     }
 
     private fun toggleContentArea() {
-        if (isExpanded()) {
+        if (isExpanded) {
             hideContentArea()
         } else {
             showContentArea()
