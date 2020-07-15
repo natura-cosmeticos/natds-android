@@ -59,7 +59,7 @@ In construction
 
 ## How to contribute
 
-You can contribute submitting [pull requests](https://github.com/natura-cosmeticos/natds-android/pulls).
+[Check here how to help us to grow!](doc/how-to-contribute.md)
 
 ### How to add resource icons
 It is preferable that the icon resources are saved as vectors (XML format). The nomenclature of drawables must be `ds_ic_<pack>_<scope>_<name withuot separators>`.
