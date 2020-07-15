@@ -5,17 +5,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.natura.android.appbar.SetupAppBar
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
-import kotlinx.android.synthetic.main.custom_app_bar.*
 
 class AppBarActivity : AppCompatActivity() {
 
-    private var mMenu: Menu? = null
     private var mCount = 0
-    private var setupAppBarImpl = SetupAppBar()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
@@ -23,30 +19,23 @@ class AppBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)
-        setSupportActionBar(toolBarTop)
+        setSupportActionBar(appBar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "App Bar Top"
+        appBar.showLogo()
 
         btnIncrement.apply {
             setOnClickListener {
                 mCount++
                 tvExample.text = mCount.toString()
-                setupAppBarImpl.updateNotificationBadge(mMenu, mCount, R.id.ic_notification)
+                appBar.updateNotificationBadge(mCount)
             }
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        mMenu = menu
-        setupAppBarImpl.displayMenuWithBadge(
-            this,
-            menu,
-            R.menu.custom_menu,
-            mCount,
-            R.id.ic_notification
-        )
-
+        menuInflater.inflate(R.menu.custom_menu, menu)
+        appBar.displayMenuWithBadge(menu, R.id.ic_notification, mCount)
         return true
     }
 

@@ -13,25 +13,19 @@ class SetupAppBar {
         menu: Menu?,
         appbarMenu: Int,
         mCount: Int,
-        iconToFind: Int) {
+        iconToFind: Int
+    ) {
 
         menu?.let {
-            configureOptionsMenu(activity, it, appbarMenu)
+            activity.menuInflater.inflate(appbarMenu, menu)
 
             it.findItem(iconToFind)?.let { menuItem ->
-                badgeDrawable = BadgeDrawable(
-                    activity,
-                    mCount,
-                    menuItem.icon
-                )
-            }}
+                badgeDrawable = BadgeDrawable(activity, mCount, menuItem.icon)
+            }
+        }
     }
 
-    private fun configureOptionsMenu(activity: Activity, menu: Menu, appbarMenu: Int) {
-        activity.menuInflater.inflate(appbarMenu, menu)
-    }
-
-     fun updateNotificationBadge(menu: Menu?, mCount: Int, icon: Int) {
+    fun updateNotificationBadge(menu: Menu?, mCount: Int, icon: Int) {
         menu?.findItem(icon)?.let {
             badgeDrawable.updateBadgeDrawable(mCount)
         }
