@@ -18,7 +18,6 @@ class AppBarActivity : AppCompatActivity() {
     private var searchMenuItem: MenuItem? = null
     private var notificationMenuItem: MenuItem? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
 
