@@ -21,7 +21,7 @@ class IconsRepositoryTest {
     fun checksIfIconsListHasTheRightSize() {
         val iconsList = iconsRepository.getIconsNamesFromFile()
 
-        assertEquals(199, iconsList.size)
+        assertEquals(200, iconsList.size)
     }
 
     @Test
@@ -92,6 +92,7 @@ class IconsRepositoryTest {
                 "outlined_alert_empty",
                 "outlined_alert_indeterminate",
                 "outlined_alert_info",
+                "outlined_alert_notification",
                 "outlined_alert_warning",
                 "outlined_communication_chat",
                 "outlined_communication_email",
