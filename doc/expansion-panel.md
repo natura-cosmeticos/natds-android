@@ -1,4 +1,4 @@
-# Expansion Panel - How to Use
+# Expansion Panel
 
 ### What is it?
 Expansion Panel is a component to display a title when collapsed and
@@ -50,3 +50,27 @@ and TextField children:
 
 #### Opened:
 [![Expanded](expansion_panel_opened.png)](https://postimg.cc/kR45M5mH)
+
+### How to handle state
+
+You can get or set the ExpansionPanel's current state by using the `isExpanded` attribute.
+
+```kotlin
+fun expandFirstExpansionPanel() {
+    val expansionPanel = findViewById<ExpansionPanel>(R.id.first_expansion_panel)
+    expansionPanel.isExpanded = true
+}
+
+val expansionPanel = findViewById<ExpansionPanel>(R.id.second_expansion_panel)
+val secondExpansionPanelState = if (secondExpansionPanel.isExpanded) "expanded" else "collapsed"
+```
+
+Set a `OnStateChangeListener` if you need to be notified when the state changes.
+
+```kotlin
+val expansionPanel = findViewById<ExpansionPanel>(R.id.expansion_panel)
+
+expansionPanel.setOnStateChangeListener { isExpanded ->
+    // isExpanded is the current state of the ExpansionPanel.
+}
+```
