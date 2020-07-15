@@ -1,4 +1,4 @@
-package com.natura.android.icon
+package com.natura.android.badge
 
 import android.content.Context
 import android.graphics.*

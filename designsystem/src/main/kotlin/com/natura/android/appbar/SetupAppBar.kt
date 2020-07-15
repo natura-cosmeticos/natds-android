@@ -2,7 +2,7 @@ package com.natura.android.appbar
 
 import android.app.Activity
 import android.view.Menu
-import com.natura.android.icon.BadgeDrawable
+import com.natura.android.badge.BadgeDrawable
 
 class SetupAppBar {
 
