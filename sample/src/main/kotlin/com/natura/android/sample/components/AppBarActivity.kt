@@ -27,7 +27,6 @@ class AppBarActivity : AppCompatActivity() {
         setSupportActionBar(appBar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        appBar.showLogo()
 
         btnIncrement.apply {
             setOnClickListener {

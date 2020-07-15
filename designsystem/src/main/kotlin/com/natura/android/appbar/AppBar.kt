@@ -5,27 +5,45 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.R
+import com.natura.android.ext.setVisibilityFromBoolean
 import com.natura.android.icon.BadgeDrawable
 
 class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
     private lateinit var badgeDrawable: BadgeDrawable
+    private var showLogo: Boolean
     private val logo: ImageView
 
     init {
         logo = createLogo(context, attrs)
+
+        val typedValue = context.obtainStyledAttributes(attrs, R.styleable.AppBar)
+        showLogo = typedValue.getBoolean(R.styleable.AppBar_showLogo, false)
+        setLogoVisibility()
+
         addView(logo)
-        title = ""
+    }
+
+    private fun setLogoVisibility() {
+        logo.setVisibilityFromBoolean(showLogo)
+
+        if (showLogo) {
+            title = ""
+        }
     }
 
     fun showLogo() {
-        logo.visibility = View.VISIBLE
-        title = ""
+        showLogo = true
+        setLogoVisibility()
+    }
+
+    fun hideLogo() {
+        showLogo = false
+        setLogoVisibility()
     }
 
     fun addMenuIconBadge(menuIcon: Drawable, initBadgeValue: Int) {
