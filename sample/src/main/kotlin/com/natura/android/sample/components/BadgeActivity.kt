@@ -23,7 +23,6 @@ class BadgeActivity : AppCompatActivity() {
 
         btnIncrementBadge.setOnClickListener {
             count++
-            imageViewBadged.contentDescription = count.toString()
             smallBadge.updateBadgeDrawable(count)
         }
     }

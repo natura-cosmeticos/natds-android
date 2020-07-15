@@ -109,5 +109,4 @@ class BadgeDrawable(
         context.theme.resolveAttribute(attrColorId, value, true)
         return value.data
     }
-
 }
