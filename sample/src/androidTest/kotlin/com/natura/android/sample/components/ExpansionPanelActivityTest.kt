@@ -4,7 +4,11 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.withParent
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.R
 import org.hamcrest.Matchers.allOf
@@ -23,32 +27,132 @@ class ExpansionPanelActivityTest {
 
     @Test
     fun shouldRenderSubtitle() {
-        onView(withId(R.id.ds_expansion_panel_title)).check(matches(withText("Expansion Panel")))
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_title),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(withText("Expansion Panel 1")))
     }
 
     @Test
     fun shouldRenderCollapsed() {
-        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(not(isDisplayed())))
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(not(isDisplayed())))
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).check(matches(not(isDisplayed())))
     }
 
     @Test
     fun shouldExpandContent() {
-        onView(withId(R.id.ds_expansion_panel_container)).perform(click())
-        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(isDisplayed()))
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldRenderGivenComponentsInsideContainer() {
-        onView(withId(R.id.ds_expansion_panel_container)).perform(click())
-        onView(allOf(withId(R.id.circle_example), withParent(withId(R.id.ds_expansion_panel_content_area))))
-            .check(matches(isDisplayed()))
-        onView(allOf(withId(R.id.text_example), withParent(withId(R.id.ds_expansion_panel_content_area))))
-            .check(matches(isDisplayed()))
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.circle_example),
+            withParent(withId(R.id.ds_expansion_panel_content_area)),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(isDisplayed()))
+
+        onView(allOf(
+            withId(R.id.text_example),
+            withParent(withId(R.id.ds_expansion_panel_content_area)),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldRenderCollapseWhenClickedOnExpandedContent() {
-        onView(withId(R.id.ds_expansion_panel_container)).perform(click()).perform(click())
-        onView(withId(R.id.ds_expansion_panel_content_area)).check(matches(not(isDisplayed())))
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click()).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(not(isDisplayed())))
+    }
+
+    @Test
+    fun shouldCollapseExpandedFirstPanelWhenTheSecondOneExpands() {
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(not(isDisplayed())))
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldCollapseExpandedSecondPanelWhenTheFirstOneExpands() {
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).check(matches(not(isDisplayed())))
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldNotExpandOneExpansionPanelWhenCollapsingAnother() {
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_container),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).perform(click()).perform(click())
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.second_expansion_panel))
+        )).check(matches(not(isDisplayed())))
+
+        onView(allOf(
+            withId(R.id.ds_expansion_panel_content_area),
+            isDescendantOfA(withId(R.id.first_expansion_panel))
+        )).check(matches(not(isDisplayed())))
     }
 }
