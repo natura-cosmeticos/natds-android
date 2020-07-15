@@ -1,6 +1,7 @@
 package com.natura.android.appbar
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
@@ -27,16 +28,14 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         title = ""
     }
 
-    fun displayMenuWithBadge(menu: Menu?, menuIcon: Int, initBadgeValue: Int) {
-        menu?.let {
-            it.findItem(menuIcon)?.let { menuItem ->
-                badgeDrawable = BadgeDrawable(context, initBadgeValue, menuItem.icon)
-            }
-        }
+    fun addMenuIconBadge(menuIcon: Drawable, initBadgeValue: Int) {
+        badgeDrawable = BadgeDrawable(context, initBadgeValue, menuIcon)
     }
 
-    fun updateNotificationBadge(value: Int) {
-        badgeDrawable.updateBadgeDrawable(value)
+    fun updateBadgeValue(value: Int) {
+        if (this::badgeDrawable.isInitialized) {
+            badgeDrawable.updateBadgeDrawable(value)
+        }
     }
 
     private fun createLogo(context: Context, attrs: AttributeSet): ImageView {
