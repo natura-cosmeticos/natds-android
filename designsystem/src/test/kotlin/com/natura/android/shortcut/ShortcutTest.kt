@@ -10,7 +10,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows.shadowOf
 
-
 @RunWith(AndroidJUnit4::class)
 class ShortcutTest {
 
@@ -112,15 +111,17 @@ class ShortcutTest {
             .build()
     }
 
-    private fun buildShortcutOutlined(): Shortcut =
-        ShortcutFixture
+    private fun buildShortcutOutlined(): Shortcut {
+        return ShortcutFixture
             .aShortcut()
             .withTypeOutlined()
             .build()
+    }
 
-    private fun buildShortcutContainedWithRequiredAttributes(): Shortcut =
-         ShortcutFixture
+    private fun buildShortcutContainedWithRequiredAttributes(): Shortcut {
+        return ShortcutFixture
             .aShortcut()
             .withTypeContained()
             .build()
+    }
 }

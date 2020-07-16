@@ -5,11 +5,12 @@ import androidx.test.core.app.ApplicationProvider
 import com.natura.android.R
 import org.robolectric.Robolectric
 
-internal class ShortcutFixture private constructor (private var type: Int? = null,
-                                                    private var label: String? = null,
-                                                    private var iconPath: String? = null,
-                                                    private var context: Context = ApplicationProvider.getApplicationContext()) {
-
+internal class ShortcutFixture private constructor(
+    private var type: Int? = null,
+    private var label: String? = null,
+    private var iconPath: String? = null,
+    private var context: Context = ApplicationProvider.getApplicationContext()
+) {
 
     companion object {
         private const val OUTLINED = 0

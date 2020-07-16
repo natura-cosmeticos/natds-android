@@ -36,7 +36,6 @@ class Shortcut @JvmOverloads constructor(
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
 
-
     init {
         try {
             View.inflate(context, R.layout.shortcut, this)
@@ -131,7 +130,7 @@ class Shortcut @JvmOverloads constructor(
     private fun getIconAttribute() {
         try {
             iconAttribute = shortcutAttributesArray.getResourceIdOrThrow(R.styleable.Shortcut_icon)
-        }  catch (e: Exception) {
+        } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
         }
     }
@@ -186,5 +185,3 @@ class Shortcut @JvmOverloads constructor(
         const val CONTAINED = 1
     }
 }
-
-

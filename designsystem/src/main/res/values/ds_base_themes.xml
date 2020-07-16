@@ -28,6 +28,7 @@
 
         <item name="colorHighEmphasisOpacity06">#51333333</item>
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
+        <item name="colorHighlightOpacity02">#14000000</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -149,6 +150,7 @@
 
         <item name="colorHighEmphasisOpacity06">#51FAFAFA</item>
         <item name="colorMediumEmphasisOpacity06">#51BBBBBB</item>
+        <item name="colorHighlightOpacity02">#14FFFFFF</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>

@@ -26,6 +26,7 @@
 
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
+    <attr name="colorHighlightOpacity02" format="color"/>
 
     <!-- spacing tokens attributes -->
     <attr name="spacingNone" format="dimension"/>
