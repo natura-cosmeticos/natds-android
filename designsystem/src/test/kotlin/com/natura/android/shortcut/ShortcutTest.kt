@@ -20,7 +20,6 @@ class ShortcutTest {
     @Before
     fun setUp() {
         context = ApplicationProvider.getApplicationContext()
-        shortcut = buildShortcutOutlined()
     }
 
     @Test
@@ -113,23 +112,15 @@ class ShortcutTest {
             .build()
     }
 
-    private fun buildShortcutOutlined(): Shortcut {
-        context.setTheme(R.style.Theme_Natura)
-
-        return ShortcutFixture
+    private fun buildShortcutOutlined(): Shortcut =
+        ShortcutFixture
             .aShortcut()
             .withTypeOutlined()
-            .withContext(context)
             .build()
-    }
 
-    private fun buildShortcutContainedWithRequiredAttributes(): Shortcut {
-        context.setTheme(R.style.Theme_Natura)
-
-        return ShortcutFixture
+    private fun buildShortcutContainedWithRequiredAttributes(): Shortcut =
+         ShortcutFixture
             .aShortcut()
             .withTypeContained()
-            .withContext(context)
             .build()
-    }
 }

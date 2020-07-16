@@ -18,9 +18,10 @@ internal class ShortcutFixture private constructor (private var type: Int? = nul
         private const val defaultType = OUTLINED
         private const val defaultLabel = "shortcut label"
         private const val defaultIcon = "@drawable/outlined_default_mockup"
-        private val context = ApplicationProvider.getApplicationContext<Context>()
+        private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aShortcut(): ShortcutFixture {
+            context.setTheme(R.style.Theme_Natura)
             return ShortcutFixture(defaultType, defaultLabel, defaultIcon, context)
         }
 

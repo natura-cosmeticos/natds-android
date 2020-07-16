@@ -15,6 +15,7 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
+import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setAppearance
 
 class Shortcut @JvmOverloads constructor(
@@ -40,14 +41,15 @@ class Shortcut @JvmOverloads constructor(
         try {
             View.inflate(context, R.layout.shortcut, this)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("Missing DS Theme. You MUST set a DS theme at the component or in a parent view", e))
+            throw (MissingThemeException())
         }
 
         shortcutAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Shortcut)
 
         getShortcutAttributes()
-        getThemeAttributes()
+        getAttributesFromTheme()
         configureShortCutByType(typeAttribute)
+
         shortcutAttributesArray.recycle()
     }
 
@@ -73,7 +75,7 @@ class Shortcut @JvmOverloads constructor(
         return iconContainer
     }
 
-    private fun getThemeAttributes() {
+    private fun getAttributesFromTheme() {
         try {
             if (typeAttribute == CONTAINED) {
                 setContainedTypeAttributes()
@@ -81,7 +83,7 @@ class Shortcut @JvmOverloads constructor(
                 setOutlinedTypeAttributes()
             }
         } catch (e: Exception) {
-            throw (IllegalArgumentException("Missing DS Theme. You are using a DS component without setting a DS Theme. You MUST set a DS theme at the component or in a parent view", e))
+            throw (MissingThemeException())
         }
     }
 
@@ -122,7 +124,7 @@ class Shortcut @JvmOverloads constructor(
         try {
             typeAttribute = shortcutAttributesArray.getIntOrThrow(R.styleable.Shortcut_type)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut type(contained or outlined).", e))
+            throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut type(contained or outlined).", e))
         }
     }
 
@@ -130,7 +132,7 @@ class Shortcut @JvmOverloads constructor(
         try {
             iconAttribute = shortcutAttributesArray.getResourceIdOrThrow(R.styleable.Shortcut_icon)
         }  catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
+            throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
         }
     }
 
@@ -138,7 +140,7 @@ class Shortcut @JvmOverloads constructor(
         try {
             labelAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_textLabel)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut label(string).", e))
+            throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut label(string).", e))
         }
     }
 
