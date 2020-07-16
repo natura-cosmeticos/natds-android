@@ -8,7 +8,6 @@ import com.natura.android.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.Robolectric
 import org.robolectric.Shadows.shadowOf
 
 
@@ -21,11 +20,13 @@ class ShortcutTest {
     @Before
     fun setUp() {
         context = ApplicationProvider.getApplicationContext()
-        shortcut = buildShortCutOutlinedWithRequiredAttributes()
+        shortcut = buildShortcutOutlined()
     }
 
     @Test
     fun checksIfShortcutOutlinedIconWasSet() {
+        shortcut = buildShortcutOutlined()
+
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
         assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
@@ -33,7 +34,7 @@ class ShortcutTest {
 
     @Test
     fun checksIfShortcutContainedIconWasSet() {
-        shortcut = buildShortCutContainedWithRequiredAttributes()
+        shortcut = buildShortcutContainedWithRequiredAttributes()
 
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
@@ -42,6 +43,8 @@ class ShortcutTest {
 
     @Test
     fun checksIfShortcutOutlinedLabelWasSet() {
+        shortcut = buildShortcutOutlined()
+
         val label = shortcut.getLabel()
 
         assertThat(label).isEqualTo("shortcut label")
@@ -49,7 +52,7 @@ class ShortcutTest {
 
     @Test
     fun checksIfShortcutContainedLabelWasSet() {
-        shortcut = buildShortCutContainedWithRequiredAttributes()
+        shortcut = buildShortcutContainedWithRequiredAttributes()
 
         val label = shortcut.getLabel()
 
@@ -58,6 +61,8 @@ class ShortcutTest {
 
     @Test
     fun checksIfShortcutOutlinedTypeWasSet() {
+        shortcut = buildShortcutOutlined()
+
         val type = shortcut.getType()
 
         assertThat(type).isEqualTo(0)
@@ -65,32 +70,66 @@ class ShortcutTest {
 
     @Test
     fun checksIfShortcutContainedTypeWasSet() {
-        shortcut = buildShortCutContainedWithRequiredAttributes()
+        shortcut = buildShortcutContainedWithRequiredAttributes()
 
         val type = shortcut.getType()
 
         assertThat(type).isEqualTo(1)
     }
 
-    private fun buildShortCutOutlinedWithRequiredAttributes(): Shortcut {
-       val attributeSet =  Robolectric.buildAttributeSet()
-           .addAttribute(R.attr.type, "0")
-           .addAttribute(R.attr.icon, "@drawable/outlined_default_mockup")
-           .addAttribute(R.attr.textLabel, "shortcut label")
-           .build()
-
-        context.setTheme(R.style.Theme_Natura)
-        return Shortcut(context, attributeSet)
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingContainedShortCutWithoutAnIcon() {
+        shortcut = ShortcutFixture
+            .aEmptyShortcut()
+            .withLabel("Label")
+            .withTypeContained()
+            .build()
     }
 
-    private fun buildShortCutContainedWithRequiredAttributes(): Shortcut {
-        val attributeSet =  Robolectric.buildAttributeSet()
-            .addAttribute(R.attr.type, "1")
-            .addAttribute(R.attr.icon, "@drawable/outlined_default_mockup")
-            .addAttribute(R.attr.textLabel, "shortcut label")
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingOutlinedShortCutWithoutAnIcon() {
+        shortcut = ShortcutFixture
+            .aEmptyShortcut()
+            .withLabel("Label")
+            .withTypeOutlined()
             .build()
+    }
 
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingContainedShortCutWithoutALabel() {
+        shortcut = ShortcutFixture
+            .aEmptyShortcut()
+            .withTypeContained()
+            .withIcon("@drawable/outlined_default_mockup")
+            .build()
+    }
+
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingOutlinedShortCutWithoutALabel() {
+        shortcut = ShortcutFixture
+            .aEmptyShortcut()
+            .withTypeOutlined()
+            .withIcon("@drawable/outlined_default_mockup")
+            .build()
+    }
+
+    private fun buildShortcutOutlined(): Shortcut {
         context.setTheme(R.style.Theme_Natura)
-        return Shortcut(context, attributeSet)
+
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeOutlined()
+            .withContext(context)
+            .build()
+    }
+
+    private fun buildShortcutContainedWithRequiredAttributes(): Shortcut {
+        context.setTheme(R.style.Theme_Natura)
+
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeContained()
+            .withContext(context)
+            .build()
     }
 }
