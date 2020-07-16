@@ -238,17 +238,17 @@
 
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
-        <item name="shortcutBackgroundColor">?colorPrimary</item>
-        <item name="shortcutIconColor">?colorOnPrimary</item>
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorIcon">?colorOnPrimary</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Outlined" parent="Widget.DS.Shortcut">
-        <item name="shortcutBackgroundColor">?colorSurface</item>
-        <item name="shortcutIconColor">?colorPrimary</item>
+        <item name="colorBackground">?colorSurface</item>
+        <item name="colorIcon">?colorPrimary</item>
     </style>
 
     <style name="Widget.DS.Shortcut">
-        <item name="shortcutLabelAppearance">?textAppearanceCaption</item>
+        <item name="labelAppearance">?textAppearanceCaption</item>
     </style>
 
     <style name="Widget.DS"/>

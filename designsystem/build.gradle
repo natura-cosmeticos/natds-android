@@ -64,6 +64,7 @@ dependencies {
     testImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
+    testImplementation "io.mockk:mockk:$rootProject.mockKVersion"
 }
 
 androidExtensions {

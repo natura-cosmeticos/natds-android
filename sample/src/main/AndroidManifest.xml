@@ -93,8 +93,7 @@
             android:theme="@style/Theme.Natura" />
         <activity android:name=".tokens.ColorsActivity" />
         <activity
-            android:name=".components.ShortcutActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:name=".components.ShortcutActivity"/>
     </application>
 
 </manifest>

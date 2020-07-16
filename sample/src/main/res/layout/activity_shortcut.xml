@@ -14,9 +14,10 @@
         app:layout_constraintEnd_toStartOf="@+id/shortCut"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shortcutIcon="@drawable/outlined_default_mockup"
-        app:shortcutLabel="Shortcut contained"
-        app:shortcutType="contained" />
+        app:icon="@drawable/outlined_default_mockup"
+        app:textLabel="Shortcut contained"
+        app:type="contained"
+        android:theme="@style/Theme.Natura"/>
 
     <com.natura.android.shortcut.Shortcut
         android:id="@+id/shortCut"
@@ -27,7 +28,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortCut2"
         app:layout_constraintTop_toTopOf="parent"
-        app:shortcutIcon="@drawable/outlined_default_mockup"
-        app:shortcutLabel="Shortcut outlined"
-        app:shortcutType="outlined" />
+        app:icon="@drawable/outlined_default_mockup"
+        app:textLabel="Shortcut outlined"
+        app:type="outlined"
+        android:theme="@style/Theme.Natura"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

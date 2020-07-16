@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="shortCut" >
-        <attr name="shortcutType" format="enum">
+    <declare-styleable name="Shortcut" >
+        <attr name="type" format="enum">
             <enum name="outlined" value="0"/>
             <enum name="contained" value="1"/>
         </attr>
-        <attr name="shortcutBackgroundColor" format="color"/>
-        <attr name="shortcutIconColor" format="color"/>
-        <attr name="shortcutLabelAppearance" format="reference"/>
-        <attr name="shortcutLabel" format="string"/>
-        <attr name="shortcutIcon" format="reference"/>
+        <attr name="colorBackground" format="color"/>
+        <attr name="colorIcon" format="color"/>
+        <attr name="labelAppearance" format="reference"/>
+        <attr name="textLabel" format="string"/>
+        <attr name="icon" format="reference"/>
     </declare-styleable>
 
     <declare-styleable name="AppBar" >

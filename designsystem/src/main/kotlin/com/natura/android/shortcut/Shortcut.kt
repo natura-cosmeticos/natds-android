@@ -1,6 +1,7 @@
 package com.natura.android.shortcut
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
@@ -19,16 +20,16 @@ import com.natura.android.extensions.setAppearance
 class Shortcut @JvmOverloads constructor(
     context: Context,
     private val attrs: AttributeSet? = null,
-    private val defStyleAttr: Int = 0,
-    private val themeAttr: Int? = null
+    defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var labelAttribute: String? = null
-    private var typeAttribute = 0
+    private var typeAttribute: Int? = null
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
-    private var iconResourceAttribute = 0
+    private var iconAttribute: Int? = null
+    private var shortcutAttributesArray: TypedArray
 
     private val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
@@ -36,14 +37,18 @@ class Shortcut @JvmOverloads constructor(
 
 
     init {
-        View.inflate(context, R.layout.short_cut, this)
-        getShortcutAttributes()
-        themeAttr?.apply {
-            context.setTheme(this)
+        try {
+            View.inflate(context, R.layout.shortcut, this)
+        } catch (e: Exception) {
+            throw (IllegalArgumentException("Missing DS Theme. You MUST set a DS theme at the component or in a parent view", e))
         }
+
+        shortcutAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Shortcut)
+
+        getShortcutAttributes()
         getThemeAttributes()
         configureShortCutByType(typeAttribute)
-        context.obtainStyledAttributes(attrs, R.styleable.shortCut).recycle()
+        shortcutAttributesArray.recycle()
     }
 
     fun setLabel(text: String?) {
@@ -51,17 +56,32 @@ class Shortcut @JvmOverloads constructor(
         labelContainer.setAppearance(labelTextAppearanceResourceAttribute)
     }
 
-    fun setIcon(icon: Int) {
-        val iconDrawable = context.getDrawable(icon)
-        iconContainer.setImageResource(icon)
-        iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
+    fun getLabel(): CharSequence? {
+        return labelContainer.text
+    }
+
+    fun getType(): Int? = typeAttribute
+
+    fun setIcon(icon: Int?) {
+        icon?.apply {
+            iconContainer.setImageResource(icon)
+            iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
+        }
+    }
+
+    fun getIcon(): ImageView {
+        return iconContainer
     }
 
     private fun getThemeAttributes() {
-        if(typeAttribute == CONTAINED) {
-            setContainedTypeAttributes()
-        } else {
-            setOutlinedTypeAttributes()
+        try {
+            if (typeAttribute == CONTAINED) {
+                setContainedTypeAttributes()
+            } else {
+                setOutlinedTypeAttributes()
+            }
+        } catch (e: Exception) {
+            throw (IllegalArgumentException("Missing DS Theme. You are using a DS component without setting a DS Theme. You MUST set a DS theme at the component or in a parent view", e))
         }
     }
 
@@ -70,54 +90,76 @@ class Shortcut @JvmOverloads constructor(
             .theme
             .obtainStyledAttributes(
                 attrs,
-                R.styleable.shortCut,
+                R.styleable.Shortcut,
                 R.attr.shortcutContained,
                 0
             )
             .apply {
-                backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
-                iconColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
-                labelTextAppearanceResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
+                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
             }
     }
 
     private fun setOutlinedTypeAttributes() {
         context
             .theme
-            .obtainStyledAttributes(attrs, R.styleable.shortCut, R.attr.shortcutOutlined, 0)
+            .obtainStyledAttributes(attrs, R.styleable.Shortcut, R.attr.shortcutOutlined, 0)
             .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutBackgroundColor)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutIconColor)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.shortCut_shortcutLabelAppearance)
+                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
             }
     }
 
     private fun getShortcutAttributes() {
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.shortCut)
-        labelAttribute = typedArray.getStringOrThrow(R.styleable.shortCut_shortcutLabel)
-        iconResourceAttribute = typedArray.getResourceIdOrThrow(R.styleable.shortCut_shortcutIcon)
-        typeAttribute = typedArray.getIntOrThrow(R.styleable.shortCut_shortcutType)
+        getShortcutLabel()
+        getIconAttribute()
+        getTypeAttribute()
     }
 
-    private fun configureShortCutByType(type: Int) {
-        when (typeAttribute) {
-            CONTAINED -> configureContainedShortCut()
-            OUTLINED -> configureOutlinedShortCut()
+    private fun getTypeAttribute() {
+        try {
+            typeAttribute = shortcutAttributesArray.getIntOrThrow(R.styleable.Shortcut_type)
+        } catch (e: Exception) {
+            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut type(contained or outlined).", e))
+        }
+    }
+
+    private fun getIconAttribute() {
+        try {
+            iconAttribute = shortcutAttributesArray.getResourceIdOrThrow(R.styleable.Shortcut_icon)
+        }  catch (e: Exception) {
+            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
+        }
+    }
+
+    private fun getShortcutLabel() {
+        try {
+            labelAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_textLabel)
+        } catch (e: Exception) {
+            throw (IllegalArgumentException("⚠️⚠️Missing shortcut required argument. You MUST set the shortcut label(string).", e))
+        }
+    }
+
+    private fun configureShortCutByType(type: Int?) {
+        type?.apply {
+            when (this) {
+                CONTAINED -> configureContainedShortCut()
+                OUTLINED -> configureOutlinedShortCut()
+            }
         }
     }
 
     private fun configureOutlinedShortCut() {
         setLabel(labelAttribute)
-        setIcon(iconResourceAttribute)
+        setIcon(iconAttribute)
         setBackgroundOutlined()
     }
 
     private fun configureContainedShortCut() {
         setLabel(labelAttribute)
-        setIcon(iconResourceAttribute)
+        setIcon(iconAttribute)
         setBackgroundContained()
     }
 
