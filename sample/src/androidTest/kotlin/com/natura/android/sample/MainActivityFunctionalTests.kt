@@ -97,7 +97,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.btnAppbar)).perform(scrollTo())
         onView(withId(R.id.btnAppbar)).perform(click())
 
-        onView(withText("App Bar Top")).check(matches(isDisplayed()))
+        onView(withId(R.id.appBar)).check(matches(isDisplayed()))
     }
 
     @Test
