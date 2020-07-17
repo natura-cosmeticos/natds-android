@@ -18,8 +18,6 @@ Every time you want to display an component with a badge
 
  - Create a drawable layer-list with two items inside. The first item should be your base icon and the second should be the placeholder for your badge.
 
- 
-
 ``` android
  icon_base_badge.xml
  
@@ -35,7 +33,7 @@ Every time you want to display an component with a badge
 
    ```
 
-* Use base-badge.xml inside a imageview in your layout
+* Use icon_base_badge.xml as your ImageView source.
 
 * Create a new instance of BadgeDrawable passing the context, the number that you want to be displayed and the image will be inflated with Badge.
 
@@ -49,7 +47,7 @@ Every time you want to display an component with a badge
     }
    ```
 
-* If you need update the number inside a Badge, call the method 'updateNotificationBadge'
+* If you need to update the number inside a Badge, call the method 'updateNotificationBadge'
 ```android
    badgeDrawable.updateBadgeDrawable(number)
    ```
