@@ -1,34 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shortcutContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".components.ShortcutActivity">
 
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortCut2"
+        android:id="@+id/shortcutContained1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/shortCut"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="?spacingSmall"
         app:icon="@drawable/outlined_default_mockup"
-        app:textLabel="Shortcut contained"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutContained2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textLabel="Contained/ Primary"
         app:type="contained" />
 
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortCut"
+        android:id="@+id/shortcutContained2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutContained1"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutContained1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutContained3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textLabel="Contained/ Primary"
+        app:type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutContained3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutContained2"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutContained2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutContained4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textLabel="Contained/ Primary"
+        app:type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutContained4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutContained3"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutContained3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textLabel="Contained/ Primary"
+        app:type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlined1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortCut2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:icon="@drawable/outlined_default_mockup"
-        app:textLabel="Shortcut outlined"
+        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined2"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContained1"
+        app:textLabel="Outlined/ Primary"
         app:type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlined2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined1"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined3"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContained2"
+        app:textLabel="Outlined/ Primary"
+        app:type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlined3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined2"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined4"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContained3"
+        app:textLabel="Outlined/ Primary"
+        app:type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlined4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:icon="@drawable/outlined_default_mockup"
+        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined3"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContained4"
+        app:textLabel="Outlined/ Primary"
+        app:type="outlined" />
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Counter click 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
