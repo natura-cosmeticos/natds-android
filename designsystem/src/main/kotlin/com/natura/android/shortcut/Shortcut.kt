@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -170,6 +171,10 @@ class Shortcut @JvmOverloads constructor(
         DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
         backgroundContainer.background = background
+
+        var themeValue = TypedValue()
+        context.theme.resolveAttribute(R.attr.elevation02, themeValue, true)
+        backgroundContainer.elevation = context.resources.getDimension(themeValue.resourceId)
     }
 
     private fun setBackgroundOutlined() {
