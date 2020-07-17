@@ -2,11 +2,12 @@
 
 ### What is it?
 
-Badge represents dynamic information such as number of notifications unread with some styles to match Nat DS appearance.
+The Badge is a screen element used to signal the user's points of attention.
+Represents dynamic information such as number of notifications unread with some styles to match Nat DS appearance.
 
 ### Why should I use it?
 
-This component can help you to show some simple information on the top of chosen image.
+This component can help you to display some simple information on the top of chosen drawable.
 
 ### When should I use it?
 
@@ -14,9 +15,18 @@ Every time you want to display an component with a badge
 
 ### How to use it?
 
+We use BadgeDrawable class to draw this component on screen. 
+For that to happen, it is necessary to instantiate the BadgeDrawable class, passing three parameters: 
+
+        1. context application
+        2. number that will be drawn
+        3. the drawable that will receive the badge
+        
+#### Examples
+
 ##### If you want to display an icon with a Badge with number
 
- - Create a drawable layer-list with two items inside. The first item should be your base icon and the second should be the placeholder for your badge.
+* Create a drawable layer-list with two items inside. The first item should be your base icon and the second should be the placeholder for your badge.
 
 ``` android
  icon_base_badge.xml
