@@ -51,7 +51,7 @@ class BadgeDrawable(
         mTextPaint.apply {
             color = getColorFromTheme(context, R.attr.colorOnError)
             typeface = Typeface.DEFAULT
-            textSize = context.resources.getDimension(R.dimen.ds_text_footer_size)
+            textSize = context.resources.getDimension(R.dimen.badge_text_size)
             textAlign = Paint.Align.CENTER
             style = Paint.Style.FILL
         }
@@ -74,23 +74,23 @@ class BadgeDrawable(
         val bounds = bounds
 
         val badgeWith = when {
-            count > 9 -> context.resources.getDimension(R.dimen.ds_big_badge_width)
-            else -> context.resources.getDimension(R.dimen.ds_badge_width)
+            count > 9 -> context.resources.getDimension(R.dimen.big_badge_width)
+            else -> context.resources.getDimension(R.dimen.badge_width)
         }
 
-        context.resources.getDrawable(R.drawable.ds_badge_rounded_rectangle, context.theme).apply {
+        context.resources.getDrawable(R.drawable.badge_rounded_rectangle, context.theme).apply {
             setBounds(
                 bounds.centerX(),
                 bounds.top,
                 badgeWith.toInt(),
-                context.resources.getDimension(R.dimen.ds_badge_height).toInt()
+                getDimenFromTheme(R.attr.sizeSmall).toInt()
             )
             draw(canvas)
 
             drawText(
                 canvas,
                 this.bounds.exactCenterX(),
-                this.bounds.centerY() + context.resources.getDimension(R.dimen.ds_button_primary_radius)
+                this.bounds.centerY() + getDimenFromTheme(R.attr.sizeMicro)
             )
         }
     }
@@ -108,5 +108,11 @@ class BadgeDrawable(
         val value = TypedValue()
         context.theme.resolveAttribute(attrColorId, value, true)
         return value.data
+    }
+
+    private fun getDimenFromTheme(attributeName: Int): Float {
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(attributeName, typedValue, true)
+        return typedValue.getDimension(context.resources.displayMetrics)
     }
 }

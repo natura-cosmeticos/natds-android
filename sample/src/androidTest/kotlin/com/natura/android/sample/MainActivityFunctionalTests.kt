@@ -196,4 +196,12 @@ class MainActivityFunctionalTests {
 
         onView(withText("Logo Pattern")).check(matches(isDisplayed()))
     }
+
+    @Test
+    fun shouldOpenBadgeScreenWhenTapOnItButton() {
+        onView(withId(R.id.btnBadge)).perform(scrollTo())
+        onView(withId(R.id.btnBadge)).perform(click())
+
+        onView(withText("Badge")).check(matches(isDisplayed()))
+    }
 }

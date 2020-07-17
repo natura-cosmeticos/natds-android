@@ -3,7 +3,6 @@ package com.natura.android.sample
 import android.widget.Button
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.components.*
-import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.patterns.LoadingActivity
 import com.natura.android.sample.patterns.LogoActivity
@@ -270,5 +269,16 @@ class MainActivityTest {
         val shadowIntent = shadowOf(startedIntent)
 
         assertEquals(LogoActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
+    fun checksBadgeButtonClickStartsBadgeScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.btnBadge)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(BadgeActivity::class.java, shadowIntent.intentClass)
     }
 }
