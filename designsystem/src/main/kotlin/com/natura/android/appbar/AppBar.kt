@@ -28,7 +28,10 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         showLogo = typedValue.getBoolean(R.styleable.AppBar_showLogo, false)
         setLogoVisibility()
 
+        contentInsetStartWithNavigation = 0
+
         addView(logo)
+        typedValue.recycle()
     }
 
     private fun setLogoVisibility() {
