@@ -13,7 +13,7 @@ import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
-import com.natura.android.icon.BadgeDrawable
+import com.natura.android.badge.BadgeDrawable
 
 class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
 
