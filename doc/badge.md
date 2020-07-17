@@ -53,7 +53,7 @@ For that to happen, it is necessary to instantiate the BadgeDrawable class, pass
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_badge)
-        BadgeDrawable(this, number, imageViewBadged.drawable)
+        badgeDrawable = BadgeDrawable(this, number, imageViewBadged.drawable)
     }
    ```
 
