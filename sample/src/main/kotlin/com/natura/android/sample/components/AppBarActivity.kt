@@ -32,7 +32,6 @@ class AppBarActivity : AppCompatActivity() {
             setOnClickListener {
                 mCount++
                 appBar.updateBadgeValue(mCount)
-                textViewExample.text = mCount.toString()
             }
         }
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,24 +14,16 @@
       android:theme="?toolbarDefaultTheme"
       app:showLogo="true"/>
 
-    <TextView
-        android:id="@+id/textViewExample"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is the App Bar Top - Default variant"
-        android:textAppearance="?textAppearanceBody2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textSize="@dimen/ds_text_footer_size"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
 
-    <Button
-        android:id="@+id/btnIncrement"
-        android:layout_margin="30dp"
-        android:text="increment notification"
-        app:layout_constraintTop_toBottomOf="@id/textViewExample"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+  <Button
+      android:id="@+id/btnIncrement"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="30dp"
+      android:text="increment notification"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.18" />
 </androidx.constraintlayout.widget.ConstraintLayout>
