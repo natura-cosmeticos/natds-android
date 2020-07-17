@@ -655,6 +655,7 @@ outlined_alert_check.xml
 outlined_alert_empty.xml
 outlined_alert_indeterminate.xml
 outlined_alert_info.xml
+outlined_alert_notification.xml
 outlined_alert_warning.xml
 outlined_communication_chat.xml
 outlined_communication_email.xml
