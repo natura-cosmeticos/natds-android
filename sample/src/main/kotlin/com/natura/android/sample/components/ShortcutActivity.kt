@@ -21,12 +21,12 @@ class ShortcutActivity : AppCompatActivity() {
         supportActionBar?.title = "Shortcut"
         supportActionBar?.setHomeButtonEnabled(true)
 
-        button.setOnClickListener {
-            Toast.makeText(this, "Teste", Toast.LENGTH_LONG).show()
+        shortCut2.setOnClickListener {
+            Toast.makeText(this, "Teste", Toast.LENGTH_SHORT).show()
         }
 
-        shortCut2.setOnClickListener {
-            Toast.makeText(this, "Teste", Toast.LENGTH_LONG).show()
+        shortCut.setOnClickListener {
+            Toast.makeText(this, "Teste 2", Toast.LENGTH_SHORT).show()
         }
     }
 

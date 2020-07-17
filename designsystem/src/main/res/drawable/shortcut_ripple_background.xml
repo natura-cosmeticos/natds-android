@@ -5,8 +5,8 @@
     <item
         android:id="@android:id/mask"
         android:gravity="center">
-        <shape android:shape="oval" android:width="56dp" android:height="56dp">
-            <solid android:color="#FFFFFF"/>
+        <shape android:shape="oval">
+            <solid android:color="@android:color/white"/>
         </shape>
     </item>
 </ripple>
