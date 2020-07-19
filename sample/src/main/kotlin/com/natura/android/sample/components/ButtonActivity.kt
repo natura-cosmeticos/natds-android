@@ -18,7 +18,7 @@ class ButtonActivity : AppCompatActivity() {
         supportActionBar?.title = "Button"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

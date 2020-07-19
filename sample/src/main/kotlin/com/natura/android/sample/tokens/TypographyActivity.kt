@@ -17,7 +17,7 @@ class TypographyActivity : AppCompatActivity() {
         supportActionBar?.title = "Typography"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

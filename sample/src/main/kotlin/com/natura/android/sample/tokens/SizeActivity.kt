@@ -18,7 +18,7 @@ class SizeActivity : AppCompatActivity() {
         supportActionBar?.title = "Size"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }
