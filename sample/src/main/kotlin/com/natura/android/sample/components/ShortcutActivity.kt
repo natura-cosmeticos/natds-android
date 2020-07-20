@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_shortcut.*
 
 
 class ShortcutActivity : AppCompatActivity() {
-    var count = 0
+    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()

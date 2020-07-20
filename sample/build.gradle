@@ -64,8 +64,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoIntentsVersion"
     testImplementation "io.mockk:mockk:$rootProject.mockKVersion"
-
-
+    testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
     testImplementation "junit:junit:$rootProject.junitVersion"
     testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
