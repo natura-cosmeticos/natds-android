@@ -7,7 +7,7 @@ Shortcut is a component that represents a shortcut to some action.
 Shortcut receives an icon, a label and its type. The shortcut type represents
 it's visual style: contained or outlined.
 
-![](shortcut_style.png)
+![Shortcut](shortcut_type.png)
 
 Following there's an example of an shortcut outlined code:
 
