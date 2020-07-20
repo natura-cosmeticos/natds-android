@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_badge.*
 const val EXAMPLE_BADGE_COUNT_1 = 1
 const val EXAMPLE_BADGE_COUNT_90 = 90
 const val EXAMPLE_BADGE_COUNT_100 = 100
+
 class BadgeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
