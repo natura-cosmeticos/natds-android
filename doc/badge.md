@@ -1,6 +1,6 @@
 # Badge Component - Default variant
 
-### What is it?
+## What is it?
 
 The Badge is a screen element used to signal the user's points of attention.
 Represents dynamic information such as number of notifications unread with some styles to match Nat DS appearance.
@@ -18,9 +18,9 @@ Every time you want to display an component with a badge
 We use BadgeDrawable class to draw this component on screen. 
 For that to happen, it is necessary to instantiate the BadgeDrawable class, passing three parameters: 
 
-        1. context application
-        2. number that will be drawn
-        3. the drawable that will receive the badge
+1. context application
+2. number that will be drawn
+3. the drawable that will receive the badge
         
 #### Examples
 
