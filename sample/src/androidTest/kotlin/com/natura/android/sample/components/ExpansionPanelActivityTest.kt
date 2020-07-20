@@ -139,7 +139,7 @@ class ExpansionPanelActivityTest {
     }
 
     @Test
-    fun shouldNotExpandOneExpansionPanelWhenCollapsingAnother() {
+    fun shouldToggleExpansionPanelOpeningFunctionality() {
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.first_expansion_panel))
@@ -148,7 +148,7 @@ class ExpansionPanelActivityTest {
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),
             isDescendantOfA(withId(R.id.second_expansion_panel))
-        )).check(matches(not(isDisplayed())))
+        )).check(matches(isDisplayed()))
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),

@@ -1,6 +1,11 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "semanticCommits": true
+  "additionalReviewers": ["jimmyandrade", "mlcsouza"],
+  "assignees": ["mlcsouza"],
+  "extends": ["config:base"],
+  "labels": ["dependencies", "renovate"],
+  "lockFileMaintenance": { "enabled": true },
+  "semanticCommits": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
 }

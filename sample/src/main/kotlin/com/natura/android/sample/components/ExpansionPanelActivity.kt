@@ -30,6 +30,12 @@ class ExpansionPanelActivity : AppCompatActivity() {
         return true
     }
 
+    /**
+     * This is an example of how we can use isExpanded.
+     * If you need to handle a group of Expansion Panels (more than one panel), that is not the best approach.
+     * * Checks Expansion Panel Group component
+     */
+
     private fun List<ExpansionPanel>.toggleVisibility() {
         forEach { expansionPanel ->
             expansionPanel.setOnStateChangeListener { isOpen ->
@@ -38,6 +44,12 @@ class ExpansionPanelActivity : AppCompatActivity() {
                         it != expansionPanel && it.isExpanded
                     }.map { otherExpansionPanel ->
                         otherExpansionPanel.isExpanded = false
+                    }
+                } else {
+                    filter {
+                        it != expansionPanel && !it.isExpanded
+                    }.map { otherExpansionPanel ->
+                        otherExpansionPanel.isExpanded = true
                     }
                 }
             }
