@@ -118,3 +118,4 @@ And:
 - Menu
 - Navigation View
 - Text Field
+- [Shortcut](doc/shortcut.md)
