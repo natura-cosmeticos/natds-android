@@ -101,7 +101,8 @@
         app:layout_constraintStart_toEndOf="@+id/shortcutOutlined4"
         app:layout_constraintTop_toBottomOf="@+id/shortcutContained3"
         app:textLabel="Outlined/ Primary"
-        app:type="outlined" />
+        app:type="outlined"
+        android:theme="@style/Theme.Natura"/>
 
     <com.natura.android.shortcut.Shortcut
         android:id="@+id/shortcutOutlined4"

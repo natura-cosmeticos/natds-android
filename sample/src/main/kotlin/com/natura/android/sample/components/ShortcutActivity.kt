@@ -8,19 +8,17 @@ import com.natura.android.sample.setChosenDefaultTheme
 import com.natura.android.shortcut.Shortcut
 import kotlinx.android.synthetic.main.activity_shortcut.*
 
-
 class ShortcutActivity : AppCompatActivity() {
     private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
-        
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_shortcut)
 
         supportActionBar?.title = "Shortcut"
         supportActionBar?.setHomeButtonEnabled(true)
-
         setClickListener()
     }
 
@@ -31,7 +29,7 @@ class ShortcutActivity : AppCompatActivity() {
 
     private fun setClickListener() {
         for (i in 0 until shortcutContainer.childCount) {
-            if (shortcutContainer.getChildAt(i) is Shortcut){
+            if (shortcutContainer.getChildAt(i) is Shortcut) {
                 shortcutContainer.getChildAt(i).setOnClickListener {
                     increaseCount()
                 }
@@ -44,4 +42,3 @@ class ShortcutActivity : AppCompatActivity() {
         counter.text = "Counter click $count"
     }
 }
-
