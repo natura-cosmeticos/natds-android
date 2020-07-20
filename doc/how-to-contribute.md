@@ -44,3 +44,47 @@ Fine, now you should be asking your self, which critearia will be checked? Here 
 you can open an Issue and explain to us yout point. We're always checking new issues an working to keep your lib updated
 
 #### Do you have any questions about the lib? Please contact us in XXXXXXX
+
+## Setup Project
+For use this repository, you need [Git-LFS](https://git-lfs.github.com/). Please follow the instructions and install **Git-LFS** before starting your contribution to this repository.
+Copy and paste the file **github_credentials.properties.sample** and rename it to **github_credentials.properties**. Updating the fields **github.username** and **github.password**. For getting your GitHub password see the [Tutorial](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line). Its important to check **read:packages** and when generating you password.
+
+**Important:** The file **github_credentials.properties** can not be commited.
+
+### Testing with Screenshots
+We are using [Screenshot Tests for Android](https://github.com/facebook/screenshot-tests-for-android) to validate our built components state, color and behavior.
+
+**Tip from library page to build tests for the first time**
+It is necessary to have python-2.7 installed for the gradle plugin to work, and we also recommending installing the python-pillow library which is required for recording and verifying screenshots.
+
+#### Prerequisites
+1 - Install python-pillow
+```
+$ pip install mock
+$ pip install Pillow
+```
+
+2 - Configure emulator with follow mandatory details:
+```
+CPU/ABI: Google Play Intel Atom (x86)
+Target: google_apis_playstore [Google Play] (API level 29)
+Skin: pixel_2
+hw.lcd.width: 1080
+hw.lcd.height: 1920
+hw.initialOrientation: Portrait
+image.androidVersion.api: 29
+tag.id: google_apis_playstore
+hw.lcd.density: 420
+```
+
+#### Recording and Verifying screenshots
+```
+$ ./gradlew recordDebugAndroidTestScreenshotTest
+$ ./gradlew verifyDebugAndroidTestScreenshotTest
+```
+All new screenshots will be recorded on folder `screenshots\<device_folder>`
+
+#### Executing integration tests
+```
+$ ./gradlew clean connectedAndroidTest
+```
