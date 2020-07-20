@@ -142,7 +142,8 @@
 
     <!-- Badge -->
     <dimen name="badge_width">28dp</dimen>
-    <dimen name="big_badge_width">38dp</dimen>
+    <dimen name="normal_badge_width">38dp</dimen>
+    <dimen name="big_badge_width">42dp</dimen>
     <dimen name="badge_text_size">@dimen/ds_text_footer_size</dimen>
 
 </resources>

@@ -74,7 +74,8 @@ class BadgeDrawable(
         val bounds = bounds
 
         val badgeWith = when {
-            count > 9 -> context.resources.getDimension(R.dimen.big_badge_width)
+            count > 99 -> context.resources.getDimension(R.dimen.big_badge_width)
+            count > 9 -> context.resources.getDimension(R.dimen.normal_badge_width)
             else -> context.resources.getDimension(R.dimen.badge_width)
         }
 
