@@ -29,6 +29,7 @@ excluded_words:
   - dimens
   - drawables
   - enum
+  - jimmyandrade
   - kotlinx
   - Matchers
   - mockup
