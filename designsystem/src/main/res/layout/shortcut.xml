@@ -7,7 +7,8 @@
     android:layout_width="64dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="?spacingSmall"
-    android:layout_marginEnd="?spacingSmall">
+    android:layout_marginEnd="?spacingSmall"
+    tools:theme="@style/Theme.Natura">
 
     <LinearLayout
         android:id="@+id/shortcutRippleBackground"
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingTiny"
         android:textAlignment="center"
-        tools:text="Shortcut adsf asdf asdf asdf asdfasdf asdf sdf asdf asdf "
+        tools:text="Shortcut big label to check the behavior"
         android:textAppearance="?textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
