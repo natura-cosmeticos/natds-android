@@ -1,15 +1,15 @@
 # Shortcut
 
-### What is it?
-Shortcut is a component that represents a shortcut to some action
+## What is it?
+Shortcut is a component that represents a shortcut to some action.
 
-### How to use it?
+## How to use it?
 Shortcut receives an icon, a label and its type. The shortcut type represents
-it's visual style: contained or outlined
+it's visual style: contained or outlined.
 
 [![Shortcut](shortcut_style.png)]
 
-Following there's an example of an shortcut outlined code
+Following there's an example of an shortcut outlined code:
 
 ```android
     <com.natura.android.shortcut.Shortcut
@@ -21,7 +21,7 @@ Following there's an example of an shortcut outlined code
         app:type="outlined" />
 ```
 
-Following there's an example of an shortcut contained code
+Following there's an example of an shortcut contained code:
 
 ```android
     <com.natura.android.shortcut.Shortcut
@@ -36,7 +36,7 @@ Following there's an example of an shortcut contained code
 **A shortcut is a DS component based on DS multibrand themes. It means
 if you want to use a shortcut in your app, you MUST set the DS theme
 on a view parent or in the shortcut component itself. You can check
-more infos about how to set DS themes in your app here.**
+more info about how to set DS themes in your app [here](getting-started.md).**
 
 ```android
     <com.natura.android.shortcut.Shortcut
@@ -49,9 +49,9 @@ more infos about how to set DS themes in your app here.**
         android:theme="@style/Theme.Natura"/>
 ```
 
-#### Setting shortcut action
+### Setting shortcut action
 A shortcut behave similar to a button. So, to add action to it
-just set a shortcut click lister
+just set a shortcut click lister:
 
 ```kotlin
     shortcutContained1.setOnClickListener {
