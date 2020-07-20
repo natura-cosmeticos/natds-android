@@ -8,27 +8,37 @@
     tools:context=".components.BadgeActivity">
 
     <ImageView
-        android:id="@+id/imageViewBadged"
-        android:layout_width="271dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="308dp"
-        android:src="@drawable/icon_base_badge"
-        app:layout_constraintBottom_toTopOf="@+id/btnIncrementBadge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
-
-    <Button
-        android:id="@+id/btnIncrementBadge"
+        android:id="@+id/imageViewSmall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/ds_spacing_semi"
-        android:layout_marginTop="32dp"
-        android:text="@string/increment_notification"
+        android:layout_margin="?attr/sizeSmall"
+        android:src="@drawable/icon_base_badge"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewNormal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewBadged" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/sizeSmall"
+        android:src="@drawable/icon_base_badge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageViewBig"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="?attr/sizeSmall"
+        android:src="@drawable/icon_base_badge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewNormal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

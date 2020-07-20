@@ -74,15 +74,16 @@ class BadgeDrawable(
         val bounds = bounds
 
         val badgeWith = when {
-            count > 9 -> context.resources.getDimension(R.dimen.big_badge_width)
-            else -> context.resources.getDimension(R.dimen.badge_width)
+            count > 99 -> getDimenFromTheme(R.attr.sizeSemi)
+            count > 9 -> getDimenFromTheme(R.attr.sizeStandard)
+            else -> getDimenFromTheme(R.attr.sizeSmall)
         }
 
         context.resources.getDrawable(R.drawable.badge_rounded_rectangle, context.theme).apply {
             setBounds(
-                bounds.centerX(),
+                bounds.right - badgeWith.toInt(),
                 bounds.top,
-                badgeWith.toInt(),
+                bounds.right,
                 getDimenFromTheme(R.attr.sizeSmall).toInt()
             )
             draw(canvas)
