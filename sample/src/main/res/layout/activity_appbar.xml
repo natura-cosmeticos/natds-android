@@ -14,7 +14,6 @@
       android:theme="?toolbarDefaultTheme"
       app:showLogo="true"/>
 
-
   <Button
       android:id="@+id/btnIncrement"
       android:layout_width="match_parent"
