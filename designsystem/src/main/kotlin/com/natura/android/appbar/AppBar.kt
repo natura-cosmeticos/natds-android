@@ -107,7 +107,7 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         }
     }
 
-    companion object{
+    companion object {
         private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
     }
 }
