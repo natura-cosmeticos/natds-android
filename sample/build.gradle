@@ -42,8 +42,6 @@ android {
             unitTests.returnDefaultValues = true
         }
     }
-
-    aaptOptions { cruncherEnabled = false }
 }
 
 dependencies {
