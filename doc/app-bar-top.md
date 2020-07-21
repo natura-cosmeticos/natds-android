@@ -4,14 +4,14 @@
 App Bar Top is the Android native Action bar with some customizations to match Nat DS appearance and integrate with other components, such as badge and logo.
 
 ### Why should I use it?
-This component can help you to show some infos and/or actions on the top of the screen
+This component can help you to show some info and/or actions on the top of the screen
 
 ### When should I use it?
-Every time you want to configure an quick acess to some basic infos or actions
+Every time you want to configure an quick acess to some basic info or actions
 
 ### How to use it?
 Add the app bar component in your xml layout file
-Important! Do not use the default theme, use the NoActionBar variant. You can check more infos [here](getting-started.md).
+Important! Do not use the default theme, use the NoActionBar variant. You can check more info [Getting Started guide](getting-started.md).
 ```android
       <com.natura.android.appbar.AppBar
           android:id="@+id/appBar"
@@ -71,7 +71,7 @@ To update badge value:
 
 ### How create a customized App Bar
 If you need an more customize App Bar Top, you can use Android Toolbar component with the DS theme applied.
-Important! If you are adding the toolbar component at you xml layou file, DO NOT use the default theme, use the NoActionBar variant. You can check more infos [here](getting-started.md).
+Important! If you are adding the toolbar component at you xml layout file, DO NOT use the default theme, use the NoActionBar variant. You can check more info [Getting Started guide](getting-started.md).
 
 ```android
     <com.google.android.material.appbar.AppBarLayout
