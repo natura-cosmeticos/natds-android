@@ -49,5 +49,11 @@ excluded_words:
   - RootMatchers
   - typoci
   - ViewMatchers
+  - ldpi
+  - mdpi
+  - hdpi
+  - xhdpi
+  - xxhdpi
+  - xxxhdpi
 
 spellcheck_filenames: true
