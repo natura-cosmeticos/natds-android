@@ -39,6 +39,8 @@ Fine, now you should be asking your self, which critearia will be checked? Here 
 - You added a sample of the increment at Sample App (remember to updated the tests related to it)
 - Your have made corresponding changes to the documentation
 - Your changes generate no new warnings
+- The component works fine with dark mode
+- Your code uses DS design tokens
 
 #### Do you find something that could be diferent in the lib and you want to let us know?
 you can open an Issue and explain to us yout point. We're always checking new issues an working to keep your lib updated
