@@ -110,6 +110,7 @@ And:
 
 ### How to use Components
 - [App Bar Top](doc/app-bar-top.md)
+- [Badge](doc/badge.md)
 - [Dialog](doc/dialog.md)
 - Error
 - [Expansion Panel](doc/expansion-panel.md)
