@@ -36,11 +36,4 @@ And:
 ## How to contribute
 [Help us to grow!](doc/how-to-contribute.md)
 
-### How to create a new version
-In the file **publish.gradle** update field in the method **getVersionName** with the new version number. Example, for the version 1.0.1:
-
-    def getVersionName = { ->
-        return "1.0.1"
-    }
-
 

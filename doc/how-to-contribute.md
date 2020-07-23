@@ -88,3 +88,10 @@ All new screenshots will be recorded on folder `screenshots\<device_folder>`
 ```
 $ ./gradlew clean connectedAndroidTest
 ```
+
+### How to create a new version
+In the file **publish.gradle** update field in the method **getVersionName** with the new version number. Example, for the version 1.0.1:
+
+    def getVersionName = { ->
+        return "1.0.1"
+    }
