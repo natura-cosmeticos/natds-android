@@ -31,35 +31,10 @@ And:
     }
 
 ### Getting Started
-To start usign our lib, check [here](doc/getting-started.md).
-
-### How to use Tokens
-- Border Radius
-- Color
-- Elevation
-- [Icons (drawables)](doc/icon-token.md)
-- Opacity
-- Size
-- Spacing
-- [Typography](doc/typography-token.md)
-
-### How to use Components
-- [App Bar Top](doc/app-bar-top.md)
-- [Dialog](doc/dialog.md)
-- Error
-- [Expansion Panel](doc/expansion-panel.md)
-- Ext
-- Icon
-- [Logo](doc/logo.md)
-- Menu
-- Navigation View
-- Text Field
-
-### Sample
-In construction
+[Start usign our lib](doc/getting-started.md).
 
 ## How to contribute
-[Check here how to help us to grow!](doc/how-to-contribute.md)
+[Help us to grow!](doc/how-to-contribute.md)
 
 ### How to create a new version
 In the file **publish.gradle** update field in the method **getVersionName** with the new version number. Example, for the version 1.0.1:

@@ -1,14 +1,17 @@
 # Getting Started - Nat Design System - WIP
 
 ### How DS is structured for use on Android - Applying themes
-Our lib is being built from Android themes and styles. This means to consume any of resources available in the library you need, at some level, to define as a base theme for the use of your view a design system theme.
+Our lib is being built from Android themes and styles. This means to consume any of resources
+available in the library you need, at some level, to define as a base theme for the use of your
+view a design system theme.
 
 Perhaps now you are asking yourself: what? wait...
 
 Look at this example:
 
-We have several colors available on the DS. One is the colorSucess color. This should be used in any context where we want
-give feedback that some task were completed successfully. Let's say you want to color a button with that color. With DS this is super easy:
+We have several colors available on the DS. One is the colorSucess color. This should be used in any
+context where we want give feedback that some task were completed successfully. Let's say you want
+to color a button with that color:
 
 ```android
     <Button
@@ -18,7 +21,8 @@ give feedback that some task were completed successfully. Let's say you want to 
  ```
 
 Notice: we use ?colorSucess to fill the backgroundTint attribute of the Button component.
-When we write ?attributeName, we are indicating to Android that we want to pull this reference from the theme applied to this view.
+When we write ?attributeName, we are indicating to Android that we want to pull this reference
+from the theme applied to this view.
 
 However, we need to define this theme somewhere. You know where? I'll show you:
 
@@ -34,6 +38,7 @@ But, if for some reason is not possible, fine. Define the theme locally in the v
 Now you get how to access DS themes, let's talk about the most basic portion of our DS: the design tokens.
 We call design tokens all the basic attributes of design systems. For example: colors, ypography definitions, etc.
 Currently android lib provide the following tokens:
+
 - Border radius​
 - Color​
 - Elevation​
@@ -95,4 +100,14 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   💡 **More info about [typography here](typography-token.md)**
 
   ### How to Use Components
+  - [App Bar Top](doc/app-bar-top.md)
+  - [Dialog](doc/dialog.md)
+  - Error
+  - [Expansion Panel](doc/expansion-panel.md)
+  - Ext
+  - Icon
+  - [Logo](doc/logo.md)
+  - Menu
+  - Navigation View
+  - Text Field
 
