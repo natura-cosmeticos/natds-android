@@ -8,6 +8,7 @@ import org.junit.Ignore
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+
 @Ignore
 @RunWith(AndroidJUnit4::class)
 class AppBarActivityTest : ScreenShotActivityTestBase() {
@@ -19,7 +20,6 @@ class AppBarActivityTest : ScreenShotActivityTestBase() {
         val activity = activityTestRule.launchActivity(null)
 
         checkScreenshot(activity, "default")
-
         performClick(R.id.searchMenuBtn)
         checkScreenshot(activity, "search_expanded")
     }

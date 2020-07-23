@@ -111,5 +111,9 @@ class MainActivity : AppCompatActivity() {
         logoPatternButton.setOnClickListener {
             startActivity(Intent(this, LogoActivity::class.java))
         }
+
+        btnBadge.setOnClickListener {
+            startActivity(Intent(this, BadgeActivity::class.java))
+        }
     }
 }

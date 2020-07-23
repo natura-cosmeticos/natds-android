@@ -16,6 +16,12 @@
         app:showAsAction="always|collapseActionView" />
 
     <item
+        android:id="@+id/ic_notification"
+        android:icon="@drawable/icon_base_badge"
+        android:title="notifications"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/searchMenuBtn"
         android:title="Search"
         android:icon="@drawable/ds_ic_outlined_action_search"
