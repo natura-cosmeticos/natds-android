@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!-- DIALOG STYLES -->
     <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
@@ -22,7 +22,6 @@
         <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
-
 
     <!-- TYPOGRAPHY STYLES -->
     <style name="Heading1" parent="TextAppearance.MaterialComponents.Headline1">
@@ -236,4 +235,21 @@
         <item name="android:textColor">@color/button_text_color_selector_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
     </style>
+
+    <!-- SHORTCUT STYLES -->
+    <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="colorIcon">?colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.DS.Shortcut.Outlined" parent="Widget.DS.Shortcut">
+        <item name="colorBackground">?colorSurface</item>
+        <item name="colorIcon">?colorPrimary</item>
+    </style>
+
+    <style name="Widget.DS.Shortcut">
+        <item name="labelAppearance">?textAppearanceCaption</item>
+    </style>
+
+    <style name="Widget.DS"/>
 </resources>

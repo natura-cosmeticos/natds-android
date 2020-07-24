@@ -28,6 +28,7 @@
 
         <item name="colorHighEmphasisOpacity06">#51333333</item>
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
+        <item name="colorHighlightOpacity05">#3D000000</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -116,6 +117,9 @@
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
+
+        <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
+        <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -146,6 +150,7 @@
 
         <item name="colorHighEmphasisOpacity06">#51FAFAFA</item>
         <item name="colorMediumEmphasisOpacity06">#51BBBBBB</item>
+        <item name="colorHighlightOpacity05">#3DFFFFFF</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -233,5 +238,8 @@
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
+
+        <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
+        <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
     </style>
 </resources>

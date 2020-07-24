@@ -45,6 +45,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -95,6 +96,8 @@
             android:name=".components.ExpansionPanelActivity"
             android:theme="@style/Theme.Natura" />
         <activity android:name=".tokens.ColorsActivity" />
+        <activity
+            android:name=".components.ShortcutActivity"/>
     </application>
 
 </manifest>

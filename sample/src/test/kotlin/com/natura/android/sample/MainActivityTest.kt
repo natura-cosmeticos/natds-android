@@ -239,14 +239,14 @@ class MainActivityTest {
     }
 
     @Test
-    fun checksOpacityButtonClickStartsSpacingScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.opacityTokensButton)
+    fun checksShortcutyButtonClickStartsShortcutScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.shortcutButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(OpacityActivity::class.java, shadowIntent.intentClass)
+        assertEquals(ShortcutActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
