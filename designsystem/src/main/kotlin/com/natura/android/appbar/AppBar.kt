@@ -28,14 +28,9 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         showLogo = typedValue.getBoolean(R.styleable.AppBar_showLogo, false)
         setLogoVisibility()
 
-        contentInsetStartWithNavigation = 0
-
-        var themeValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.elevation02, themeValue, true)
-        this.elevation = context.resources.getDimension(themeValue.resourceId)
-
         addView(logo)
 
+        contentInsetStartWithNavigation = 0
         elevation = getElevationFromTheme(context)
 
         typedValue.recycle()
