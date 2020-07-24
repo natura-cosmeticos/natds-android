@@ -49,12 +49,31 @@ class ShortcutTest {
     }
 
     @Test
+    fun checksIfShortcutIconChangesWhenSetIcon() {
+        shortcut = buildShortcutOutlined()
+
+        shortcut.setIcon(R.drawable.outlined_action_add)
+        val iconShadow = shadowOf(shortcut.getIcon().drawable)
+
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_action_add)
+    }
+
+    @Test
     fun checksIfShortcutContainedLabelWasSet() {
         shortcut = buildShortcutContainedWithRequiredAttributes()
 
         val label = shortcut.getLabel()
 
         assertThat(label).isEqualTo("shortcut label")
+    }
+
+    @Test
+    fun checksIfShortcutLabelChangeWhenSetLabel() {
+        shortcut = buildShortcutContainedWithRequiredAttributes()
+
+        shortcut.setLabel("New label")
+
+        assertThat(shortcut.getLabel()).isEqualTo("New label")
     }
 
     @Test

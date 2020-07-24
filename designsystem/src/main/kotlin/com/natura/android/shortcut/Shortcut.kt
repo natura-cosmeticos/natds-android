@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -115,7 +114,7 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun getShortcutAttributes() {
-        getShortcutLabel()
+        getLabelAttribute()
         getIconAttribute()
         getTypeAttribute()
     }
@@ -136,7 +135,7 @@ class Shortcut @JvmOverloads constructor(
         }
     }
 
-    private fun getShortcutLabel() {
+    private fun getLabelAttribute() {
         try {
             labelAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_textLabel)
         } catch (e: Exception) {
@@ -146,23 +145,14 @@ class Shortcut @JvmOverloads constructor(
 
     private fun configureShortCutByType(type: Int?) {
         type?.apply {
+            setLabel(labelAttribute)
+            setIcon(iconAttribute)
+
             when (this) {
-                CONTAINED -> configureContainedShortCut()
-                OUTLINED -> configureOutlinedShortCut()
+                CONTAINED -> setBackgroundContained()
+                OUTLINED -> setBackgroundOutlined()
             }
         }
-    }
-
-    private fun configureOutlinedShortCut() {
-        setLabel(labelAttribute)
-        setIcon(iconAttribute)
-        setBackgroundOutlined()
-    }
-
-    private fun configureContainedShortCut() {
-        setLabel(labelAttribute)
-        setIcon(iconAttribute)
-        setBackgroundContained()
     }
 
     private fun setBackgroundContained() {
@@ -171,10 +161,6 @@ class Shortcut @JvmOverloads constructor(
         DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
         backgroundContainer.background = background
-
-        var themeValue = TypedValue()
-        context.theme.resolveAttribute(R.attr.elevation02, themeValue, true)
-        backgroundContainer.elevation = context.resources.getDimension(themeValue.resourceId)
     }
 
     private fun setBackgroundOutlined() {
@@ -183,6 +169,7 @@ class Shortcut @JvmOverloads constructor(
         background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
 
         backgroundContainer.background = background
+        backgroundContainer.elevation = 0F
     }
 
     companion object {

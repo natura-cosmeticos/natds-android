@@ -16,7 +16,7 @@
         android:layout_height="?sizeMediumX"
         android:background="@drawable/shortcut_ripple_background"
         android:orientation="horizontal"
-        android:elevation="5dp"
+        android:elevation="?elevation04"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/shortcutBackground" />
@@ -28,6 +28,7 @@
         android:background="@drawable/shortcut_background"
         android:gravity="center"
         android:orientation="vertical"
+        android:elevation="?elevation02"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
