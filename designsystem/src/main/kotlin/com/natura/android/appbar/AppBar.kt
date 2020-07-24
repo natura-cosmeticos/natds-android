@@ -31,6 +31,9 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         contentInsetStartWithNavigation = 0
 
         addView(logo)
+
+        elevation = getElevationFromTheme(context)
+
         typedValue.recycle()
     }
 
@@ -87,6 +90,15 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
         }
 
         return ViewGroup.LayoutParams.WRAP_CONTENT
+    }
+
+    private fun getElevationFromTheme(context: Context): Float {
+        val typedValue = TypedValue()
+        if (context.theme.resolveAttribute(R.attr.elevation02, typedValue, true)) {
+            return TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics).toFloat()
+        }
+
+        return 0f
     }
 
     private fun getLogoResId(context: Context, attrs: AttributeSet): Int {
