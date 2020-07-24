@@ -26,6 +26,7 @@
 
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
+    <attr name="colorHighlightOpacity05" format="color"/>
 
     <!-- spacing tokens attributes -->
     <attr name="spacingNone" format="dimension"/>
@@ -108,4 +109,8 @@
 
     <!-- Dialog references -->
     <attr name="dialogStandardTheme" format="reference"/>
+
+    <!-- Shortcut references -->
+    <attr name="shortcutOutlined" format="reference"/>
+    <attr name="shortcutContained" format="reference"/>
 </resources>

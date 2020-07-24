@@ -97,7 +97,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.btnAppbar)).perform(scrollTo())
         onView(withId(R.id.btnAppbar)).perform(click())
 
-        onView(withText("App Bar Top")).check(matches(isDisplayed()))
+        onView(withId(R.id.appBar)).check(matches(isDisplayed()))
     }
 
     @Test
@@ -131,6 +131,14 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.btnSelection)).perform(click())
 
         onView(withText("Selection Control")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenShortcutScreenWhenTapOnItButton() {
+        onView(withId(R.id.shortcutButton)).perform(scrollTo())
+        onView(withId(R.id.shortcutButton)).perform(click())
+
+        onView(withText("Shortcut")).check(matches(isDisplayed()))
     }
 
     @Test

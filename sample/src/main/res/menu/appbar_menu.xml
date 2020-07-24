@@ -4,27 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/linesMenuBtn"
-        android:title="Lines"
-        android:icon="@drawable/outlined_default_mockup"
-        app:showAsAction="always|collapseActionView" />
-
-    <item
-        android:id="@+id/profileMenuBtn"
-        android:title="Profile"
-        android:icon="@drawable/outlined_default_mockup"
-        app:showAsAction="always|collapseActionView" />
+        android:id="@+id/searchMenuBtn"
+        android:title="Search"
+        android:icon="@drawable/ds_ic_outlined_action_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
     <item
         android:id="@+id/ic_notification"
         android:icon="@drawable/icon_base_badge"
         android:title="notifications"
         app:showAsAction="always" />
-
-    <item
-        android:id="@+id/searchMenuBtn"
-        android:title="Search"
-        android:icon="@drawable/ds_ic_outlined_action_search"
-        app:showAsAction="always|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>

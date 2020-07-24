@@ -1,101 +1,124 @@
 package com.natura.android.appbar
 
-import android.app.Activity
 import android.content.Context
-import android.graphics.Color
-import android.os.Build
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.DisplayMetrics
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
+import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import com.natura.android.R
-import kotlin.math.sqrt
+import com.natura.android.ext.setVisibilityFromBoolean
+import com.natura.android.badge.BadgeDrawable
 
-// WIP
 class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
-    var color: Int
+
+    private lateinit var badgeDrawable: BadgeDrawable
+    private var showLogo: Boolean
+    private val logo: ImageView
 
     init {
-        context
-            .theme
-            .obtainStyledAttributes(attrs, R.styleable.AppBar, 0, 0)
-            .apply {
-                try {
-                    color = this.getInt(R.styleable.AppBar_appBarType, 0)
-                } finally {
-                    recycle()
-                }
-            }
+        logo = createLogo(context, attrs)
+
+        val typedValue = context.obtainStyledAttributes(attrs, R.styleable.AppBar)
+        showLogo = typedValue.getBoolean(R.styleable.AppBar_showLogo, false)
+        setLogoVisibility()
+
+        addView(logo)
+
+        contentInsetStartWithNavigation = 0
+        elevation = getElevationFromTheme(context)
+
+        typedValue.recycle()
     }
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-        setStatusBarStyle()
+    private fun setLogoVisibility() {
+        logo.setVisibilityFromBoolean(showLogo)
 
-        this.setBackgroundColor(getThemeColor(getMainColorFromAttrs()))
-        this.setTitleTextColor(getThemeColor(getMainOnColorFromAttrs()))
+        if (showLogo) {
+            title = ""
+        }
+    }
 
-        if (isOnColorTooLight(getThemeColor(getMainOnColorFromAttrs()))) {
-            setStatusBarIconsLighter()
+    fun showLogo() {
+        showLogo = true
+        setLogoVisibility()
+    }
+
+    fun hideLogo() {
+        showLogo = false
+        setLogoVisibility()
+    }
+
+    fun addMenuIconBadge(menuIcon: Drawable, initBadgeValue: Int) {
+        badgeDrawable = BadgeDrawable(context, initBadgeValue, menuIcon)
+    }
+
+    fun updateBadgeValue(value: Int) {
+        if (this::badgeDrawable.isInitialized) {
+            badgeDrawable.updateBadgeDrawable(value)
+        }
+    }
+
+    private fun createLogo(context: Context, attrs: AttributeSet): ImageView {
+        val imageView = ImageView(context)
+        imageView.setImageResource(getLogoResId(context, attrs))
+        val logoWidth = getLogoWidthFromTheme(context)
+        imageView.layoutParams =
+            LayoutParams(logoWidth, ViewGroup.LayoutParams.WRAP_CONTENT, getLogoAlign(context))
+        imageView.visibility = View.GONE
+        return imageView
+    }
+
+    private fun getLogoAlign(context: Context): Int {
+        return if (getWindowWidthInPx(context) < MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO) {
+            Gravity.START
         } else {
-            setStatusBarIconsDarker()
+            Gravity.CENTER
         }
     }
 
-    private fun isOnColorTooLight(color: Int): Boolean {
-        val rgb = intArrayOf(Color.red(color), Color.green(color), Color.blue(color))
-        val brightness = sqrt(rgb[0] * rgb[0] * .241 + (rgb[1] * rgb[1] * .691) + rgb[2] * rgb[2] * .068).toInt()
-        return brightness >= 200
+    private fun getLogoWidthFromTheme(context: Context): Int {
+        val typedValue = TypedValue()
+        if (context.theme.resolveAttribute(R.attr.sizeHugeX, typedValue, true)) {
+            return TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
+        }
+
+        return ViewGroup.LayoutParams.WRAP_CONTENT
     }
 
-    private fun setStatusBarStyle() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+    private fun getElevationFromTheme(context: Context): Float {
+        val typedValue = TypedValue()
+        if (context.theme.resolveAttribute(R.attr.elevation02, typedValue, true)) {
+            return TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics).toFloat()
+        }
 
-            val context = context as Activity
-            val window = context.window
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            window.statusBarColor = getThemeColor(getMainColorFromAttrs())
+        return 0f
+    }
+
+    private fun getLogoResId(context: Context, attrs: AttributeSet): Int {
+        val typedValue = context.theme
+            .obtainStyledAttributes(attrs, intArrayOf(R.attr.logoHorizontal), 0, 0)
+        return typedValue.getResourceId(0, 0)
+    }
+
+    private fun getWindowWidthInPx(context: Context): Int {
+        return try {
+            val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
+            val metrics = DisplayMetrics()
+            windowManager.defaultDisplay.getMetrics(metrics)
+
+            metrics.widthPixels
+        } catch (ex: Exception) {
+            MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO
         }
     }
 
-    private fun getMainColorFromAttrs(): Int {
-        return when (color) {
-                1 -> R.attr.colorPrimary
-                2 -> R.attr.colorSecondary
-                3 -> android.R.color.transparent
-                else -> R.attr.colorSurface
-            }
-    }
-
-    private fun getMainOnColorFromAttrs(): Int {
-        return when (color) {
-            1 -> R.attr.colorOnPrimary
-            2 -> R.attr.colorOnSecondary
-            3 -> R.attr.colorOnSurface
-            else -> R.attr.colorOnSurface
-        }
-    }
-
-    private fun getThemeColor(colorAttr: Int): Int {
-        val outValue = TypedValue()
-        context.theme.resolveAttribute(colorAttr, outValue, true)
-        return outValue.data
-    }
-
-    private fun setStatusBarIconsDarker() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val context = context as Activity
-            val window = context.window
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
-    }
-
-    private fun setStatusBarIconsLighter() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            val context = context as Activity
-            val window = context.window
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-        }
+    companion object {
+        private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
     }
 }
