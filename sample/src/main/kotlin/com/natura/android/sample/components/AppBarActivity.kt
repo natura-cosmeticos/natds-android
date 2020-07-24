@@ -8,22 +8,15 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import com.natura.android.badge.BadgeDrawable
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
-import kotlinx.android.synthetic.main.custom_app_bar.*
 
 class AppBarActivity : AppCompatActivity() {
 
-    private var searchMenuItem: MenuItem? = null
-    private var profileMenuItem: MenuItem? = null
-    private var linesMenuItem: MenuItem? = null
-    private var notificationMenuItem: MenuItem? = null
-
-    private var mMenu: Menu? = null
     private var mCount = 0
-    private lateinit var badgeDrawable: BadgeDrawable
+    private var searchMenuItem: MenuItem? = null
+    private var notificationMenuItem: MenuItem? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
@@ -31,36 +24,25 @@ class AppBarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_appbar)
-        setSupportActionBar(toolBarTop)
+        setSupportActionBar(appBar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "App Bar Top"
 
         btnIncrement.apply {
             setOnClickListener {
                 mCount++
-                textViewExample.text = mCount.toString()
-                badgeDrawable.updateBadgeDrawable(mCount)
+                appBar.updateBadgeValue(mCount)
             }
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
-        mMenu = menu
-
         menuInflater.inflate(R.menu.appbar_menu, menu)
-        searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
-        profileMenuItem = menu?.findItem(R.id.profileMenuBtn)
-        linesMenuItem = menu?.findItem(R.id.linesMenuBtn)
-        notificationMenuItem = menu?.findItem(R.id.ic_notification)
 
-        menu?.findItem(R.id.ic_notification)?.let { menuItem ->
-            badgeDrawable = BadgeDrawable(
-                this,
-                mCount,
-                menuItem.icon
-            )
+        searchMenuItem = menu?.findItem(R.id.searchMenuBtn)
+        notificationMenuItem = menu?.findItem(R.id.ic_notification)
+        notificationMenuItem?.let {
+            appBar.addMenuIconBadge(it.icon, mCount)
         }
 
         (searchMenuItem?.actionView as? SearchView)?.let {
@@ -85,8 +67,7 @@ class AppBarActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.searchMenuBtn -> updateToolbarMode(false)
-            R.id.linesMenuBtn -> Toast.makeText(this, "lines menu clicked", Toast.LENGTH_SHORT).show()
-            R.id.profileMenuBtn -> Toast.makeText(this, "profile menu clicked", Toast.LENGTH_SHORT).show()
+            R.id.ic_notification -> Toast.makeText(this, "notifications menu clicked", Toast.LENGTH_SHORT).show()
             else -> onBackPressed()
         }
 
@@ -105,8 +86,6 @@ class AppBarActivity : AppCompatActivity() {
 
     private fun updateToolbarMode(menuMode: Boolean) {
         searchMenuItem?.isVisible = menuMode
-        profileMenuItem?.isVisible = menuMode
-        linesMenuItem?.isVisible = menuMode
         notificationMenuItem?.isVisible = menuMode
     }
 }
