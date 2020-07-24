@@ -30,6 +30,10 @@ class AppBar(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
 
         contentInsetStartWithNavigation = 0
 
+        var themeValue = TypedValue()
+        context.theme.resolveAttribute(R.attr.elevation02, themeValue, true)
+        this.elevation = context.resources.getDimension(themeValue.resourceId)
+
         addView(logo)
 
         elevation = getElevationFromTheme(context)
