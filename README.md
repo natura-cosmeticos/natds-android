@@ -35,5 +35,3 @@ And:
 
 ## How to contribute
 [Help us to grow!](doc/how-to-contribute.md)
-
-

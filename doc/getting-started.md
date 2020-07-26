@@ -40,7 +40,7 @@ We call design tokens all the basic attributes of design systems. For example: c
 Currently android lib provide the following tokens:
 
 - Border radius​
-- Color​
+- [Color​](color.md)
 - Elevation​
 - [Icons (drawables)](icon-token.md)
 - Opacity​
