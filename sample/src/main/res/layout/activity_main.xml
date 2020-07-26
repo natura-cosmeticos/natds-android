@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="TOKEN (A-Z)"
             android:textColor="@color/highEmphasis"
-            android:padding="16dp"
+            android:padding="@dimen/ds_spacing_small"
             android:textAlignment="textStart"
             android:layout_gravity="start" />
 
@@ -152,6 +152,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/btnBadge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Badge"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/btnStyleButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -192,6 +204,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Selection Control"
+            android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/shortcutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shortcut"
             android:drawableRight="@drawable/ds_ic_outlined_navigation_arrowleft"
             android:textAlignment="textStart"
             android:layout_gravity="start"

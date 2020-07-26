@@ -24,7 +24,6 @@
     <dimen name="ds_opacity01">0.04</dimen>
     <dimen name="ds_opacity_transparent">0.0</dimen>
 
-
     <!-- BORDER RADIUS TOKENS -->
     <dimen name="ds_radius_none">0dp</dimen>
     <dimen name="ds_radius_small">2dp</dimen>
@@ -140,4 +139,8 @@
     <!-- Card -->
     <dimen name="ds_default_card_elevation">2dp</dimen>
     <dimen name="ds_default_card_corner_radius">4dp</dimen>
+
+    <!-- Badge -->
+    <dimen name="badge_text_size">@dimen/ds_text_footer_size</dimen>
+
 </resources>

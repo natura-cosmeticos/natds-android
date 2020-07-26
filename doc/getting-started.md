@@ -101,6 +101,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
 
   ### How to Use Components
   - [App Bar Top](doc/app-bar-top.md)
+  - [Badge](doc/badge.md)
   - [Dialog](doc/dialog.md)
   - Error
   - [Expansion Panel](doc/expansion-panel.md)
@@ -109,5 +110,6 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [Logo](doc/logo.md)
   - Menu
   - Navigation View
+  - [Shortcut](doc/shortcut.md)
   - Text Field
 
