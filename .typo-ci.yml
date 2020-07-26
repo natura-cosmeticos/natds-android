@@ -56,5 +56,7 @@ excluded_words:
   - xhdpi
   - xxhdpi
   - xxxhdpi
+  - commited
+  - gradlew
 
 spellcheck_filenames: true

@@ -9,7 +9,7 @@ Perhaps now you are asking yourself: what? wait...
 
 Look at this example:
 
-We have several colors available on the DS. One is the colorSucess color. This should be used in any
+We have several colors available on the DS. One is the colorSuccess color. This should be used in any
 context where we want give feedback that some task were completed successfully. Let's say you want
 to color a button with that color:
 
@@ -17,10 +17,10 @@ to color a button with that color:
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="?colorSucess">
+        android:backgroundTint="?colorSuccess">
  ```
 
-Notice: we use ?colorSucess to fill the backgroundTint attribute of the Button component.
+Notice: we use ?colorSuccess to fill the backgroundTint attribute of the Button component.
 When we write ?attributeName, we are indicating to Android that we want to pull this reference
 from the theme applied to this view.
 
