@@ -46,7 +46,7 @@ Ex: `colorOnSuccess`
 💡[Values for theme colors by brand and more info about theme colors](https://zeroheight.com/08f80f4e1/p/79d8b0--colors).
 
 ## How to use it?
-###You should access colors from theme to set it on layouts
+### You should access colors from theme to set it on layouts
 
 ```android
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,7 +54,8 @@ Ex: `colorOnSuccess`
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimary">
-    ```
+```
+
 Setting the attribute `android:background` as `?colorPrimary` to put this brand color as background of a layout.
 To add a text over this layout, you can set its colors as `colorOnPrimary`
 
@@ -64,6 +65,7 @@ To add a text over this layout, you can set its colors as `colorOnPrimary`
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="colorPrimary">
+        
         <TextView
             android:id="@+id/colorPrimaryLabel"
             android:layout_width="wrap_content"
@@ -72,7 +74,7 @@ To add a text over this layout, you can set its colors as `colorOnPrimary`
             android:textColor="?colorOnPrimary" />
 ```
 
-###You should access colors from theme to set on code
+### You should access colors from theme to set on code
 ```kotlin
         val typedValue = TypedValue()
         context.theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
