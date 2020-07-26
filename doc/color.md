@@ -1,13 +1,13 @@
 # Color token
 
 ## What is it?
-Colors suported by DS.
+Colors supported by DS.
 
 ## Why should I use it?
-It helps your aplication to be multibrand
+It helps your application to be multibrand
 
 ## When should I use it?
-Every time you need to color something in your aplication.
+Every time you need to color something in your application.
 The actual supported colors are:
 
 ### App Major Colors
@@ -29,21 +29,21 @@ _use those colors over surface colors_
 Ex: `colorOnSurface`
 
 ### Content
-- Color Highlight
-- Color High Emphasis
-- Color Medium Emphasis
-- Color LowEmphasis
+- Color Highlight `colorHighlight`
+- Color High Emphasis `colorHighEmphasis`
+- Color Medium Emphasis `colorMediumEmphasis`
+- Color LowEmphasis `colorLowEmphasis`
 
 ### Feedback
-- Color Link
-- Color Alert
-- Color Warning
-- Color Success
+- Color Link `colorLink`
+- Color Alert `colorError`
+- Color Warning `colorWarning`
+- Color Success `colorSuccess`
 - On Colors
 _use those colors over feedback colors_
 Ex: `colorOnSuccess`
 
-💡[Values for theme colors by brand and more infos about theme colors](https://zeroheight.com/08f80f4e1/p/79d8b0--colors).
+💡[Values for theme colors by brand and more info about theme colors](https://zeroheight.com/08f80f4e1/p/79d8b0--colors).
 
 ## How to use it?
 ###You should access colors from theme to set it on layouts

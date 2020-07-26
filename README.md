@@ -31,7 +31,7 @@ And:
     }
 
 ### Getting Started
-[Start usign our lib](doc/getting-started.md).
+[Start using our lib](doc/getting-started.md).
 
 ## How to contribute
 [Help us to grow!](doc/how-to-contribute.md)
