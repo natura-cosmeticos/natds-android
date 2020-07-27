@@ -24,11 +24,13 @@ excluded_words:
   - androidx
   - appbar
   - appcompat
+  - committed
   - CoreMatchers
   - dimen
   - dimens
   - drawables
   - enum
+  - gradlew
   - jimmyandrade
   - kotlinx
   - Matchers
@@ -56,7 +58,5 @@ excluded_words:
   - xhdpi
   - xxhdpi
   - xxxhdpi
-  - commited
-  - gradlew
 
 spellcheck_filenames: true
