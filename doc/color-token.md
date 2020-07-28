@@ -4,7 +4,7 @@
 Color tokens can help you color applications.
 
 ## Why should I use it?
-With color tokens it is posible to explore semantic colors with multibrand support.
+With color tokens it is possible to explore semantic colors with multibrand support.
 You can check [our docs](https://zeroheight.com/08f80f4e1/p/79d8b0--colors) about color
 to understand better the usage
 
