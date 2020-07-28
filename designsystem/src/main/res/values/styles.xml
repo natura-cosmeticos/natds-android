@@ -158,7 +158,6 @@
         <item name="android:layout_height">@dimen/ds_toolbar_height</item>
         <item name="navigationIcon">@drawable/outlined_navigation_directionright</item>
         <item name="collapseIcon">@drawable/outlined_navigation_directionright</item>
-        <item name="actionButtonStyle">@style/ActionButton</item>
     </style>
 
     <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
@@ -166,7 +165,6 @@
         <item name="colorControlNormal">?colorOnSurface</item>
         <item name="navigationIcon">@drawable/outlined_navigation_directionright</item>
         <item name="collapseIcon">@drawable/outlined_navigation_directionright</item>
-        <item name="actionButtonStyle">@style/ActionButton</item>
     </style>
 
     <style name="Widget.DS.Toolbar.Primary" parent="Widget.DS.AppBarTop">
@@ -179,11 +177,6 @@
         <item name="android:background">?colorSecondary</item>
         <item name="android:textColor">?colorOnSecondary</item>
         <item name="titleTextColor">?colorOnSecondary</item>
-    </style>
-
-    <style name="ActionButton" parent="@android:style/Widget.ActionButton">
-        <item name="paddingEnd">?spacingTiny</item>
-        <item name="paddingStart">?spacingTiny</item>
     </style>
 
     <!-- SELECTION CONTROL STYLES -->
