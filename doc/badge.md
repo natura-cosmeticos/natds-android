@@ -28,7 +28,7 @@ For that to happen, it is necessary to instantiate the BadgeDrawable class, pass
 
 * Create a drawable layer-list with two items inside. The first item should be your base icon and the second should be the placeholder for your badge.
 
-``` android
+```android
  icon_base_badge.xml
  
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
