@@ -40,6 +40,9 @@ enable-animations:
 publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
 
+generate-pr-snapshot:
+	bash ./tools/generate_snapshot.sh
+
 run-all-sanitycheck-steps: lint unit-test instrumentation-test
 
 update-icons:
