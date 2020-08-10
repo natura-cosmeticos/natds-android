@@ -11,23 +11,20 @@ For this to happen, it is necessary that the execution of the pull request pipel
 
 **build.gradle** (root) :
 
-```
     allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
-```
+
 
 **build.gradle** (app) :
 
-```
+
     dependencies {
 	     implementation 'com.github.natura-cosmeticos:natds-android:PR-000-XYZ-SNAPSHOT'
 	}
-
-```
 
 The name of the dependency is variable according to the number and name of the branch of origin, but is always followed by the suffix "-SNAPSHOT"
 
