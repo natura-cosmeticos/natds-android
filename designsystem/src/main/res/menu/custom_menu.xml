@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/ic_schedule"
+        android:icon="@drawable/icon_base_badge"
+        android:title="schedule"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/ic_notification"
+        android:icon="@drawable/icon_base_badge"
+        android:title="notification"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="Shortcut" >
+        <attr name="type" format="enum">
+            <enum name="outlined" value="0"/>
+            <enum name="contained" value="1"/>
+        </attr>
+        <attr name="colorBackground" format="color"/>
+        <attr name="colorIcon" format="color"/>
+        <attr name="labelAppearance" format="reference"/>
+        <attr name="textLabel" format="string"/>
+        <attr name="icon" format="reference"/>
+    </declare-styleable>
 
     <declare-styleable name="AppBar" >
-        <attr name="appBarType" format="enum">
-            <enum name="appBarDefault" value="0"/>
-            <enum name="appBarPrimary" value="1"/>
-            <enum name="appBarSecondary" value="2"/>
-            <enum name="appBarInherit" value="3"/>
-        </attr>
+        <attr name="showLogo" format="boolean"/>
     </declare-styleable>
 
     <declare-styleable name="ds_menu">

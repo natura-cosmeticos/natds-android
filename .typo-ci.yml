@@ -24,11 +24,14 @@ excluded_words:
   - androidx
   - appbar
   - appcompat
+  - committed
   - CoreMatchers
   - dimen
   - dimens
   - drawables
   - enum
+  - gradlew
+  - jimmyandrade
   - kotlinx
   - Matchers
   - mockup
@@ -49,5 +52,11 @@ excluded_words:
   - RootMatchers
   - typoci
   - ViewMatchers
+  - ldpi
+  - mdpi
+  - hdpi
+  - xhdpi
+  - xxhdpi
+  - xxxhdpi
 
 spellcheck_filenames: true

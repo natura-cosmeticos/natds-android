@@ -1,0 +1,15 @@
+name-template: 'Release Template 🌈'
+template: |
+  ## Release XXX - DS Android
+  Hi today we’re releasing the new version of Nat DS For Android!
+  ## What’s new:
+  ### 🎸 New Feature
+  Description New Feature
+  ### 🐛 Bug
+  Description Bug
+  ### ⚠️⚠️⚠️ Breaking Change ⚠️⚠️⚠️
+  Description Breaking Change
+
+  ---
+  If you have ideas or suggestions how to make our Design System even better please send us an issue:
+  https://github.com/natura-cosmeticos/natds-android/issues

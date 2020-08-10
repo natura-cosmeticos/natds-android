@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shortcutMainContainer"
+    android:layout_width="64dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="?spacingSmall"
+    android:layout_marginEnd="?spacingSmall"
+    tools:theme="@style/Theme.Natura">
+
+    <LinearLayout
+        android:id="@+id/shortcutRippleBackground"
+        android:layout_width="?sizeMediumX"
+        android:layout_height="?sizeMediumX"
+        android:background="@drawable/shortcut_ripple_background"
+        android:orientation="horizontal"
+        android:elevation="?elevation04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/shortcutBackground" />
+
+    <LinearLayout
+        android:id="@+id/shortcutBackground"
+        android:layout_width="?sizeMediumX"
+        android:layout_height="?sizeMediumX"
+        android:background="@drawable/shortcut_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:elevation="?elevation02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:backgroundTint="?colorPrimary">
+
+        <ImageView
+            android:id="@+id/shortCutIcon"
+            android:layout_width="?sizeSemi"
+            android:layout_height="?sizeSemi"
+            tools:srcCompat="@drawable/ds_ic_filled_brand_naturarosacea" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/shortCutLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingTiny"
+        android:textAlignment="center"
+        tools:text="Shortcut big label to check the behavior"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutBackground"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
