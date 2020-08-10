@@ -22,7 +22,7 @@ class ShortcutActivity : AppCompatActivity() {
         setClickListener()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }
