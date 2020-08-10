@@ -5,17 +5,39 @@ Are you feeling that you can help us with anything in the project? Just get clos
 There are many ways to contribute, check some of them:
 ## Do you want add something in the project? Just create a PR
 We will review your PR, checking some criteria and if everything is fine, a new version of the lib will be publish with your contribution ASAP!
+As the PR goes through our review process, you can test your product with a snapshot generated from your development! 
+For this to happen, it is necessary that the execution of the pull request pipeline is carried out successfully and the following code is added: 
 
-### Commits strcuture
+
+**build.gradle** (root) :
+
+    allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+
+**build.gradle** (app) :
+
+
+    dependencies {
+	     implementation 'com.github.natura-cosmeticos:natds-android:PR-000-XYZ-SNAPSHOT'
+	}
+
+The name of the dependency is variable according to the number and name of the branch of origin, but is always followed by the suffix "-SNAPSHOT"
+
+### Commits structure
 To commit your PR, we indicate the usage of [Conversional Commits] (https://www.conventionalcommits.org/en/v1.0.0/).
 
 The most common types the we use is:
 Are you adding a new feature, your commit should look like: feat: [Short Description] [long description if you need]
 Are you fixing a bug, your commit should look like: bug: [Short Description] [long description if you need]
-Are you adding tests, your commig should look like: test: [Short Description] [long description if you need]
+Are you adding tests, your commit should look like: test: [Short Description] [long description if you need]
 
 There are many other types that you can use to tag your commits: build:, chore:, ci:, docs:, style:, refactor:, perf:
-[here you can find more infos about it](https://www.conventionalcommits.org/en/v1.0.0/).
+[here you can find more info about it](https://www.conventionalcommits.org/en/v1.0.0/).
 
 #### Tool to help:
 You can add an CLI to help you writing your commits. [Commitizen](https://github.com/commitizen/cz-cli) is the tool we use :)
