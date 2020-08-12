@@ -211,12 +211,12 @@ Today all brands supported by Nat DS use the same typography token reference
     ```
 
  ### Bold Style
- All these variations allow the application of the bold style through the xml, as shown below:\
+ All these variations allow the application of the bold style through the xml, as shown below:
  ```android
  <TextView
    android:layout_width="match_parent"
    android:layout_height="wrap_content"
    android:text="Heading 4"
-   **android:textStyle="bold"**
+   android:textStyle="bold"
    android:textAppearance="?textAppearanceHeadline4"/>
 ```
