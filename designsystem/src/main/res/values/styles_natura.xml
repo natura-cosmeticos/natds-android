@@ -74,10 +74,25 @@
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
+    <style name="Widget.DS.ButtonSmall.Natura.Light" parent="Widget.DS.Button.Natura.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textColor">@color/button_contained_text_color_selector_natura_light</item>
         <item name="backgroundTint">@color/button_background_color_selector_natura_light</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Natura.Light" parent="Widget.DS.Button.Natura.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
     </style>
 
     <style name="Widget.DS.Button.Natura.Dark" parent="Widget.MaterialComponents.Button">
@@ -86,16 +101,41 @@
         <item name="backgroundTint">@color/button_background_color_selector_natura_dark</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined.Natura.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/button_text_color_selector_light</item>
         <item name="strokeColor">@color/stroke_color_selector_natura_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined.Natura.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/button_text_color_selector_dark</item>
         <item name="strokeColor">@color/stroke_color_selector_natura_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
     </style>
 
     <!--Navigation Drawer-->

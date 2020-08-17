@@ -201,18 +201,54 @@
     </style>
 
     <!-- BUTTON STYLES -->
+
+    <style name="Widget.DS.ButtonSmall.V23" parent="Widget.DS.Button.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>
         <item name="android:textColor">@color/button_contained_text_color_selector_v23</item>
         <item name="backgroundTint">@color/button_background_color_selector_v23</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.V23" parent="Widget.DS.Button.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Light" parent="Widget.DS.Button.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Light" parent="Widget.DS.Button.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Dark" parent="Widget.DS.Button.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Dark" parent="Widget.DS.Button.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.V23" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -221,9 +257,29 @@
         <item name="rippleColor">@color/button_ripple_color_v23</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.TextButton.V23" parent="Widget.DS.Button.TextButton.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.TextButton.V23" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/button_text_color_selector_v23</item>
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.TextButton.V23" parent="Widget.DS.Button.TextButton.V23">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.TextButton.Light" parent="Widget.DS.Button.TextButton.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
     </style>
 
     <style name="Widget.DS.Button.TextButton.Light" parent="Widget.MaterialComponents.Button.TextButton">
@@ -231,9 +287,24 @@
         <item name="rippleColor">@color/button_ripple_color_light</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.TextButton.Light" parent="Widget.DS.Button.TextButton.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.TextButton.Dark" parent="Widget.DS.Button.TextButton.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.TextButton.Dark" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/button_text_color_selector_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.TextButton.Dark" parent="Widget.DS.Button.TextButton.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
     </style>
 
     <!-- SHORTCUT STYLES -->

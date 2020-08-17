@@ -95,6 +95,21 @@
     <attr name="outlinedButton" format="reference"/>
     <attr name="textButton" format="reference"/>
 
+    <attr name="buttonStyleSmall" format="reference"/>
+    <attr name="materialButtonStyleSmall" format="reference"/>
+    <attr name="outlinedButtonSmall" format="reference"/>
+    <attr name="textButtonSmall" format="reference"/>
+
+    <attr name="buttonStyleMedium" format="reference"/>
+    <attr name="materialButtonStyleMedium" format="reference"/>
+    <attr name="outlinedButtonMedium" format="reference"/>
+    <attr name="textButtonMedium" format="reference"/>
+
+    <attr name="buttonStyleLarge" format="reference"/>
+    <attr name="materialButtonStyleLarge" format="reference"/>
+    <attr name="outlinedButtonLarge" format="reference"/>
+    <attr name="textButtonLarge" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>

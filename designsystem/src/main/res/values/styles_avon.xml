@@ -74,10 +74,25 @@
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
+    <style name="Widget.DS.ButtonSmall.Avon.Light" parent="Widget.DS.Button.Avon.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Avon.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textColor">@color/button_contained_text_color_selector_avon_light</item>
         <item name="backgroundTint">@color/button_background_color_selector_avon_light</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Avon.Light" parent="Widget.DS.Button.Avon.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Avon.Dark" parent="Widget.DS.Button.Avon.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
     </style>
 
     <style name="Widget.DS.Button.Avon.Dark" parent="Widget.MaterialComponents.Button">
@@ -86,15 +101,40 @@
         <item name="backgroundTint">@color/button_background_color_selector_avon_dark</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Avon.Dark" parent="Widget.DS.Button.Avon.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.Avon.Light" parent="Widget.DS.Button.Outlined.Avon.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined.Avon.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/button_text_color_selector_light</item>
         <item name="strokeColor">@color/stroke_color_selector_avon_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Outlined.Avon.Light" parent="Widget.DS.Button.Outlined.Avon.Light">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.Avon.Dark" parent="Widget.DS.Button.Outlined.Avon.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <style name="Widget.DS.Button.Outlined.Avon.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor">@color/button_text_color_selector_dark</item>
         <item name="strokeColor">@color/stroke_color_selector_avon_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Outlined.Avon.Dark" parent="Widget.DS.Button.Outlined.Avon.Dark">
+        <item name="android:insetTop">@dimen/ds_spacing_none</item>
+        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
     </style>
 </resources>
