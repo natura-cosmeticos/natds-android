@@ -16,6 +16,8 @@
         android:layout_height="wrap_content"
         style="@style/TextAppearence.Natura.Label"
         tools:text="text_field_input_label"
+        android:maxLines="2"
+        android:ellipsize="end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
