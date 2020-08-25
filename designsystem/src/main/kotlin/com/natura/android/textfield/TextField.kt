@@ -3,9 +3,13 @@ package com.natura.android.textfield
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.GradientDrawable
+import android.os.Parcel
+import android.os.Parcelable
 import android.text.InputFilter
 import android.util.AttributeSet
+import android.util.SparseArray
 import android.view.View
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -248,5 +252,68 @@ class TextField @JvmOverloads constructor(
 
     fun setOnIconClickListener(l: OnClickListener?) {
         inputIcon?.setOnClickListener(l)
+    }
+
+    override fun onSaveInstanceState(): Parcelable? {
+        return SavedState(super.onSaveInstanceState()).apply {
+            childrenStates = saveChildViewStates()
+        }
+    }
+
+    override fun onRestoreInstanceState(state: Parcelable) {
+        when (state) {
+            is SavedState -> {
+                super.onRestoreInstanceState(state.superState)
+                state.childrenStates?.let { restoreChildViewStates(it) }
+            }
+            else -> super.onRestoreInstanceState(state)
+        }
+    }
+
+    override fun dispatchSaveInstanceState(container: SparseArray<Parcelable>) {
+        dispatchFreezeSelfOnly(container)
+    }
+
+    override fun dispatchRestoreInstanceState(container: SparseArray<Parcelable>) {
+        dispatchThawSelfOnly(container)
+    }
+
+    internal class SavedState : BaseSavedState {
+
+        internal var childrenStates: SparseArray<Parcelable>? = null
+
+        constructor(superState: Parcelable?) : super(superState)
+
+        constructor(source: Parcel) : super(source) {
+            childrenStates = source.readSparseArray(javaClass.classLoader)
+        }
+
+        override fun writeToParcel(out: Parcel, flags: Int) {
+            super.writeToParcel(out, flags)
+            out.writeSparseArray(childrenStates)
+        }
+
+        companion object CREATOR : Parcelable.Creator<SavedState> {
+            override fun createFromParcel(source: Parcel) = SavedState(source)
+            override fun newArray(size: Int): Array<SavedState?> = arrayOfNulls(size)
+        }
+    }
+
+    private fun ViewGroup.saveChildViewStates(): SparseArray<Parcelable> {
+        val childViewStates = SparseArray<Parcelable>()
+        getChildren().forEach { child -> child.saveHierarchyState(childViewStates) }
+        return childViewStates
+    }
+
+    private fun ViewGroup.restoreChildViewStates(childViewStates: SparseArray<Parcelable>) {
+        getChildren().forEach { child -> child.restoreHierarchyState(childViewStates) }
+    }
+
+    private fun ViewGroup.getChildren(): List<View> {
+        val children = mutableListOf<View>()
+        (0 until childCount).forEach {
+            children.add(getChildAt(it))
+        }
+        return children
     }
 }
