@@ -77,4 +77,19 @@
         <attr name="title" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="ds_icon_button">
+        <attr name="icon_button_size" format="enum">
+            <enum name="small" value="0"/>
+            <enum name="medium" value="1"/>
+        </attr>
+        <attr name="icon_button_notify" format="boolean"/>
+        <attr name="icon_button_icon" format="reference"/>
+        <attr name="icon_button_padding" format="reference"/>
+        <attr name="icon_button_iconColor" format="reference"/>
+        <attr name="icon_button_color" format="enum">
+            <enum name="defaultColor" value="0"/>
+            <enum name="primary" value="1"/>
+        </attr>
+    </declare-styleable>
+
 </resources>

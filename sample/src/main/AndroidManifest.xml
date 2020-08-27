@@ -98,6 +98,8 @@
         <activity android:name=".tokens.ColorsActivity" />
         <activity
             android:name=".components.ShortcutActivity"/>
+        <activity
+            android:name=".components.IconButtonActivity"/>
     </application>
 
 </manifest>

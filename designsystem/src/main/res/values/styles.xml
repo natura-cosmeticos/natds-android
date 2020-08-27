@@ -307,6 +307,30 @@
         <item name="android:insetBottom">@dimen/ds_spacing_none</item>
     </style>
 
+
+    <!-- ICON BUTTON STYLES -->
+
+    <style name="Widget.DS.IconButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Primary" parent="Widget.DS.IconButton">
+        <item name="icon_button_iconColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Default" parent="Widget.DS.IconButton">
+        <item name="icon_button_iconColor">?colorHighEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Small" parent="Widget.DS.IconButton">
+        <item name="icon_button_padding">@dimen/ds_spacing_micro</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Medium" parent="Widget.DS.IconButton">
+        <item name="icon_button_padding">@dimen/ds_spacing_tiny</item>
+    </style>
+
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorPrimary</item>
