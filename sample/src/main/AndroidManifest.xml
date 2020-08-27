@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".BrandSelectorActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -52,16 +54,16 @@
         </activity>
         <activity
             android:name=".components.BadgeActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.DialogActivity"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".patterns.LogoActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.TextFieldActivity"
             android:theme="@style/Theme.Natura" />
@@ -96,8 +98,7 @@
             android:name=".components.ExpansionPanelActivity"
             android:theme="@style/Theme.Natura" />
         <activity android:name=".tokens.ColorsActivity" />
-        <activity
-            android:name=".components.ShortcutActivity"/>
+        <activity android:name=".components.ShortcutActivity" />
     </application>
 
 </manifest>
