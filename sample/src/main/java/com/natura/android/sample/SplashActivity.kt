@@ -5,14 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
+import android.view.animation.AlphaAnimation
+import android.view.animation.DecelerateInterpolator
+import kotlinx.android.synthetic.main.activity_logo.*
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
-    private var mDelayHandler: Handler? = null
-    private val SPLASH_DELAY: Long = 2000
+    lateinit var mDelayHandler: Handler
 
-    internal val mRunnable: Runnable = Runnable {
+    private  val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
-
             val intent = Intent(applicationContext, BrandSelectorActivity::class.java)
             startActivity(intent)
             finish()
@@ -20,9 +22,16 @@ class SplashActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-//        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+
+        val fadeIn = AlphaAnimation(0f, 1f)
+        fadeIn.interpolator = DecelerateInterpolator()
+        fadeIn.duration = 1500
+
+        splashContainer.apply {
+            animation = fadeIn
+        }
 
         mDelayHandler = Handler()
 
@@ -31,11 +40,12 @@ class SplashActivity : AppCompatActivity() {
     }
 
     public override fun onDestroy() {
-        if (mDelayHandler != null) {
-            mDelayHandler!!.removeCallbacks(mRunnable)
-        }
-
+        mDelayHandler?.removeCallbacks(mRunnable)
         super.onDestroy()
+    }
+
+    companion object {
+        private const val SPLASH_DELAY: Long = 2000
     }
 
 }
