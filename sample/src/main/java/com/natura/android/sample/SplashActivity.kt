@@ -1,19 +1,17 @@
 package com.natura.android.sample
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
+import android.view.animation.AccelerateInterpolator
 import android.view.animation.AlphaAnimation
-import android.view.animation.DecelerateInterpolator
-import kotlinx.android.synthetic.main.activity_logo.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
     lateinit var mDelayHandler: Handler
 
-    private  val mRunnable: Runnable = Runnable {
+    private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
             val intent = Intent(applicationContext, BrandSelectorActivity::class.java)
             startActivity(intent)
@@ -26,8 +24,8 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         val fadeIn = AlphaAnimation(0f, 1f)
-        fadeIn.interpolator = DecelerateInterpolator()
-        fadeIn.duration = 1500
+        fadeIn.interpolator = AccelerateInterpolator()
+        fadeIn.duration = 2000
 
         splashContainer.apply {
             animation = fadeIn
@@ -36,7 +34,6 @@ class SplashActivity : AppCompatActivity() {
         mDelayHandler = Handler()
 
         mDelayHandler?.postDelayed(mRunnable, SPLASH_DELAY)
-
     }
 
     public override fun onDestroy() {
@@ -45,7 +42,6 @@ class SplashActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val SPLASH_DELAY: Long = 2000
+        private const val SPLASH_DELAY: Long = 3000
     }
-
 }

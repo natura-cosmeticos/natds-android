@@ -12,7 +12,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class SplashScreenFunctionalTestsTests {
+class SplashScreenFunctionalTests {
     @Before
     fun setup() {
         ActivityScenario.launch(SplashActivity::class.java)
@@ -29,5 +29,4 @@ class SplashScreenFunctionalTestsTests {
         onView(withId(R.id.naturaCoLogo))
             .check(matches(isDisplayed()))
     }
-
 }
