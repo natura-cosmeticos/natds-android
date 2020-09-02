@@ -209,3 +209,23 @@ Today all brands supported by Nat DS use the same typography token reference
     android:text="Overline"
     android:textAppearance="?textAppearanceOverline"/>
     ```
+
+ ### Styles
+ All these variations allow the application of the bold and italic styles through the xml, as shown below:
+ ```android
+ <TextView
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:text="Heading 4"
+   android:textStyle="bold"
+   android:textAppearance="?textAppearanceHeadline4"/>
+```
+
+ ```android
+<TextView
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:text="Heading 1"
+   android:textStyle="italic"
+   android:textAppearance="?textAppearanceHeadline1"/>
+```

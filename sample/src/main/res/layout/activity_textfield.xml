@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Hint"
-        app:text_field_label="Text field"
+        app:text_field_label="This is the textfield label. It can take up to two lines, but if the content is longer, the ellipsis symbol will serve to show that the text is not over yet."
         app:text_field_text="Typed text"
         app:text_field_footer="this field accept any text"
         />

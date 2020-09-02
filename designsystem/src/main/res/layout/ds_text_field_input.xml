@@ -16,6 +16,8 @@
         android:layout_height="wrap_content"
         style="@style/TextAppearence.Natura.Label"
         tools:text="text_field_input_label"
+        android:maxLines="2"
+        android:ellipsize="end"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -74,7 +76,7 @@
             android:id="@+id/text_field_input_footer_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="top"
             android:paddingRight="@dimen/ds_spacing_micro"
             android:textColor="@color/text_color_secondary_selector"
             android:textSize="@dimen/ds_text_default_icon_small_size"
