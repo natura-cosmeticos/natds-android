@@ -315,20 +315,16 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Widget.DS.IconButton.Disabled" parent="Widget.DS.IconButton">
+        <item name="iconColor">?colorMediumEmphasis</item>
+    </style>
+
     <style name="Widget.DS.IconButton.Primary" parent="Widget.DS.IconButton">
-        <item name="icon_button_iconColor">?colorOnPrimary</item>
+        <item name="iconColor">?colorPrimary</item>
     </style>
 
     <style name="Widget.DS.IconButton.Default" parent="Widget.DS.IconButton">
-        <item name="icon_button_iconColor">?colorHighEmphasis</item>
-    </style>
-
-    <style name="Widget.DS.IconButton.Small" parent="Widget.DS.IconButton">
-        <item name="icon_button_padding">@dimen/ds_spacing_micro</item>
-    </style>
-
-    <style name="Widget.DS.IconButton.Medium" parent="Widget.DS.IconButton">
-        <item name="icon_button_padding">@dimen/ds_spacing_tiny</item>
+        <item name="iconColor">?colorHighEmphasis</item>
     </style>
 
     <!-- SHORTCUT STYLES -->
