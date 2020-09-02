@@ -26,7 +26,7 @@ class IconActivity : AppCompatActivity() {
         supportActionBar?.title = "Icons (fonts)"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

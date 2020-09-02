@@ -23,7 +23,7 @@ class ValueTextHighlightActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Value Text Highlight")
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

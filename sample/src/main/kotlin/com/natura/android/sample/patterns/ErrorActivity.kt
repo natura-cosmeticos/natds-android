@@ -27,7 +27,7 @@ class ErrorActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Error Pattern")
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

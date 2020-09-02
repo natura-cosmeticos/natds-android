@@ -25,7 +25,7 @@ class ExpansionPanelActivity : AppCompatActivity() {
         listOf(expansionPanel1, expansionPanel2).toggleVisibility()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

@@ -27,7 +27,7 @@ class BadgeActivity : AppCompatActivity() {
         BadgeDrawable(this, EXAMPLE_BADGE_COUNT_100, imageViewBig.drawable)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

@@ -64,8 +64,8 @@ class AppBarActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
             R.id.searchMenuBtn -> updateToolbarMode(false)
             R.id.ic_notification -> Toast.makeText(this, "notifications menu clicked", Toast.LENGTH_SHORT).show()
             else -> onBackPressed()

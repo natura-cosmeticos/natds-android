@@ -84,7 +84,7 @@ class TextFieldActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Text Field")
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

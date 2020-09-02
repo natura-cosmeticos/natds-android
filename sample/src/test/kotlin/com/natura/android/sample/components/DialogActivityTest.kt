@@ -2,7 +2,7 @@ package com.natura.android.sample.components
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import junit.framework.Assert.assertEquals
+import com.google.common.truth.Truth
 import kotlinx.android.synthetic.main.activity_dialog.*
 import org.junit.Before
 import org.junit.Test
@@ -27,7 +27,7 @@ class DialogActivityTest {
 
             val dialogDisplayed = ShadowAlertDialog.getLatestDialog()
 
-            assertEquals(dialogDisplayed.isShowing, true)
+            Truth.assertThat(dialogDisplayed.isShowing).isTrue()
         }
     }
 }

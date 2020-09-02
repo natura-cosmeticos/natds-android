@@ -17,7 +17,7 @@ class ElevationActivity : AppCompatActivity() {
         supportActionBar?.title = "Elevation"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }
