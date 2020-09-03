@@ -31,7 +31,7 @@ class ColorsActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item?.itemId == R.id.darkThemeButton) {
             setDarkModeButtonIcon(darkMode, item)
             darkMode = !darkMode

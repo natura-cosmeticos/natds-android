@@ -29,7 +29,7 @@ class DrawableActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Icons (drawables)")
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

@@ -17,7 +17,7 @@ class SpacingActivity : AppCompatActivity() {
         supportActionBar?.title = "Spacing"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

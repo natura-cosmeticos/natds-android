@@ -17,7 +17,7 @@ class MenuActivity : AppCompatActivity() {
         supportActionBar?.setTitle("Menu Pattern")
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }

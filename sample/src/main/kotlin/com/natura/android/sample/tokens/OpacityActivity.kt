@@ -18,7 +18,7 @@ class OpacityActivity : AppCompatActivity() {
         supportActionBar?.title = "Opacity"
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }
