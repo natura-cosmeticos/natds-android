@@ -2,14 +2,12 @@ package com.natura.android.iconButton
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
-import android.widget.ImageButton
+import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.getBooleanOrThrow
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import com.natura.android.R
@@ -27,7 +25,7 @@ class IconButton @JvmOverloads constructor(
     private var sizeAttribute: Int? = null
     private var colorAttribute: Int? = null
 
-    private val iconButton by lazy { findViewById<ImageButton>(R.id.iconButton) }
+    private val iconButton by lazy { findViewById<ImageView>(R.id.iconButton) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonMainContainer) }
 
     override fun setEnabled(enabled: Boolean) {
@@ -59,8 +57,16 @@ class IconButton @JvmOverloads constructor(
         }
     }
 
-    fun getIcon(): Drawable {
-        return iconButton.background
+    fun getIcon(): ImageView {
+        return iconButton
+    }
+
+    fun getSize(): Int? {
+        return sizeAttribute
+    }
+
+    fun getColor(): Int? {
+        return colorAttribute
     }
 
     private fun getIconButtonAttributes() {
@@ -95,11 +101,7 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun getEnabledAttribute() {
-        try {
-            isEnabled = iconButtonAttributesArray.getBooleanOrThrow(R.styleable.IconButton_android_enabled)
-        } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton enable.", e))
-        }
+        isEnabled = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
     }
 
     private fun getAttributesFromTheme() {

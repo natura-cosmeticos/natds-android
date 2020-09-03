@@ -31,14 +31,8 @@ class IconButtonActivity : AppCompatActivity() {
         for (i in 0 until iconButtonContainer.childCount) {
             if (iconButtonContainer.getChildAt(i) is IconButton) {
                 iconButtonContainer.getChildAt(i).setOnClickListener {
-                    increaseCount()
                 }
             }
         }
-    }
-
-    private fun increaseCount() {
-        count += 1
-        clickCounter.text = "Counter click $count"
     }
 }

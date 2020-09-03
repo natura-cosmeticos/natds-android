@@ -8,13 +8,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:theme="@style/Theme.Natura">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/iconButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="center"
-        android:focusable="false"
-        android:clickable="false"
         android:adjustViewBounds="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
