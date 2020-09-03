@@ -19,6 +19,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:src="@drawable/outlined_default_mockup"/>
-
-
+    
 </androidx.constraintlayout.widget.ConstraintLayout>
