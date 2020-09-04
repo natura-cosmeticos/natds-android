@@ -74,7 +74,7 @@ internal class IconButtonFixture private constructor(
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.buttonColor, buttonColor.toString())
-            .addAttribute(R.attr.icon, iconPath)
+            .addAttribute(R.attr.buttonIcon, iconPath)
             .addAttribute(R.attr.size, size.toString())
             .addAttribute(android.R.attr.enabled, enabled.toString())
             .build()

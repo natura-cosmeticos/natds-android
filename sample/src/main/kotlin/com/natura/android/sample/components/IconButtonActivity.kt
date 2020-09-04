@@ -8,6 +8,7 @@ import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
 import kotlinx.android.synthetic.main.activity_icon_button.*
 
+
 class IconButtonActivity : AppCompatActivity() {
     private var count = 0
 
@@ -22,7 +23,7 @@ class IconButtonActivity : AppCompatActivity() {
         setClickListener()
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         onBackPressed()
         return true
     }
