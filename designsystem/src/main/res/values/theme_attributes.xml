@@ -92,7 +92,6 @@
     <attr name="overlineFontSize" format="dimension" />
     <attr name="overlineFontWeight" format="dimension" />
     <attr name="overlineLetterSpacing" format="dimension" />
-    <attr name="opacityTransparent" format="dimension" />
     <attr name="opacityLower" format="dimension" />
     <attr name="opacityVeryLow" format="dimension" />
     <attr name="opacityLow" format="dimension" />
@@ -153,17 +152,18 @@
 
 
     <!-- {@deprecated opacity tokens attributes} -->
-    <attr name="opacity01" format="dimension"/>
-    <attr name="opacity02" format="dimension"/>
-    <attr name="opacity03" format="dimension"/>
-    <attr name="opacity04" format="dimension"/>
-    <attr name="opacity05" format="dimension"/>
-    <attr name="opacity06" format="dimension"/>
-    <attr name="opacity07" format="dimension"/>
-    <attr name="opacity08" format="dimension"/>
-    <attr name="opacity09" format="dimension"/>
-    <attr name="opacity10" format="dimension"/>
-    <attr name="opacityFull" format="dimension"/>
+    <attr name="opacityTransparent" format="float" />
+    <attr name="opacity01" format="float"/>
+    <attr name="opacity02" format="float"/>
+    <attr name="opacity03" format="float"/>
+    <attr name="opacity04" format="float"/>
+    <attr name="opacity05" format="float"/>
+    <attr name="opacity06" format="float"/>
+    <attr name="opacity07" format="float"/>
+    <attr name="opacity08" format="float"/>
+    <attr name="opacity09" format="float"/>
+    <attr name="opacity10" format="float"/>
+    <attr name="opacityFull" format="float"/>
 
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
