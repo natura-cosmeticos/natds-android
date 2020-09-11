@@ -27,8 +27,9 @@
     <style name="Heading1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h1</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading1FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading1LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -36,8 +37,9 @@
     <style name="Heading2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h2</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading2FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading2LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -45,8 +47,9 @@
     <style name="Heading3" parent="TextAppearance.MaterialComponents.Headline3">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h3</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading3FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading3LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -54,8 +57,9 @@
     <style name="Heading4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h4</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading4FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading4LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -63,8 +67,9 @@
     <style name="Heading5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h5</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading5FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading5LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -72,8 +77,9 @@
     <style name="Heading6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_h6</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?heading6FontSize</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
+        <item name="android:letterSpacing">?heading6LetterSpacing</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -81,8 +87,9 @@
     <style name="Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_subtitle1</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?subtitle1FontSize</item>
+        <item name="android:letterSpacing">?subtitle1LetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -90,8 +97,9 @@
     <style name="Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_subtitle2</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?subtitle2FontSize</item>
+        <item name="android:letterSpacing">?subtitle2LetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -99,8 +107,9 @@
     <style name="Body1" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_body1</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?body1FontSize</item>
+        <item name="android:letterSpacing">?body1LetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -108,8 +117,9 @@
     <style name="Body2" parent="TextAppearance.MaterialComponents.Body1">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_body2</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?body2FontSize</item>
+        <item name="android:letterSpacing">?body2LetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -117,8 +127,9 @@
     <style name="Button" parent="TextAppearance.MaterialComponents.Button">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_button</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?buttonDefaultFontSize</item>
+        <item name="android:letterSpacing">?buttonDefaultLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -126,8 +137,9 @@
     <style name="Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="fontFamily">@string/font_roboto_regular</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_caption</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?captionFontSize</item>
+        <item name="android:letterSpacing">?captionLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
@@ -135,8 +147,9 @@
     <style name="Overline" parent="TextAppearance.MaterialComponents.Overline">
         <item name="fontFamily">@string/font_roboto_medium</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">@dimen/ds_size_overline</item>
-        <item name="android:lineSpacingMultiplier">@dimen/ds_line_height_medium</item>
+        <item name="android:textSize">?overlineFontSize</item>
+        <item name="android:letterSpacing">?overlineLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?typographyLineHeightMedium</item>
         <item name="android:textColorPrimary">?colorHighEmphasis</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
