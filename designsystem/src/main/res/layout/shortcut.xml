@@ -4,11 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shortcutMainContainer"
-    android:layout_width="64dp"
+    android:minWidth="56dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="?spacingSmall"
-    android:layout_marginEnd="?spacingSmall"
-    tools:theme="@style/Theme.Natura">
+    android:layout_marginEnd="?spacingSmall">
 
     <LinearLayout
         android:id="@+id/shortcutRippleBackground"
@@ -50,8 +50,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingTiny"
         android:textAlignment="center"
-        tools:text="Shortcut big label to check the behavior"
+        tools:text="Contained big label to check the behavior"
+        android:autoSizeTextType="uniform"
         android:textAppearance="?textAppearanceCaption"
+        android:singleLine="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
