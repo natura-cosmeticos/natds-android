@@ -21,7 +21,7 @@ class IconsRepositoryTest {
     fun checksIfIconsListHasTheRightSize() {
         val iconsList = iconsRepository.getIconsNamesFromFile()
 
-        assertEquals(200, iconsList.size)
+        assertEquals(220, iconsList.size)
     }
 
     @Test
@@ -34,7 +34,8 @@ class IconsRepositoryTest {
 
     private fun getExpectedIconsList(): List<String> {
         return (
-            listOf("outlined_action_add",
+            listOf(
+                "outlined_action_add",
                 "outlined_action_addproduct",
                 "outlined_action_attachment",
                 "outlined_action_autofilter",
@@ -69,6 +70,7 @@ class IconsRepositoryTest {
                 "outlined_action_order",
                 "outlined_action_phone",
                 "outlined_action_print",
+                "outlined_action_qr",
                 "outlined_action_rating",
                 "outlined_action_recycle",
                 "outlined_action_request",
@@ -124,12 +126,14 @@ class IconsRepositoryTest {
                 "outlined_content_health",
                 "outlined_content_healthy",
                 "outlined_content_indicator",
+                "outlined_content_itemlist",
                 "outlined_content_lifebuoy",
                 "outlined_content_lock",
                 "outlined_content_magic",
                 "outlined_content_medal",
                 "outlined_content_menu",
                 "outlined_content_mirror",
+                "outlined_content_password",
                 "outlined_content_planb",
                 "outlined_content_produtivity",
                 "outlined_content_report",
@@ -149,6 +153,8 @@ class IconsRepositoryTest {
                 "outlined_finance_money",
                 "outlined_finance_moneypaper",
                 "outlined_finance_paid",
+                "outlined_finance_paymentlink",
+                "outlined_finance_payreference",
                 "outlined_finance_promotion",
                 "outlined_finance_shoppingcart",
                 "outlined_finance_shoppingcartproduct",
@@ -181,6 +187,7 @@ class IconsRepositoryTest {
                 "outlined_place_runningtruck",
                 "outlined_place_truck",
                 "outlined_place_waze",
+                "outlined_product_accessories",
                 "outlined_product_bagproduct",
                 "outlined_product_beard",
                 "outlined_product_brandsproduct",
@@ -188,11 +195,13 @@ class IconsRepositoryTest {
                 "outlined_product_dailycare",
                 "outlined_product_ekos",
                 "outlined_product_erlenmeyer",
+                "outlined_product_face",
                 "outlined_product_hair",
                 "outlined_product_makeup",
                 "outlined_product_outlet",
                 "outlined_product_perfumery",
                 "outlined_product_promotionproduct",
+                "outlined_product_scent",
                 "outlined_product_vegan",
                 "outlined_social_addcontact",
                 "outlined_social_birthday",
@@ -218,21 +227,34 @@ class IconsRepositoryTest {
                 "filled_brand_pinterest",
                 "filled_brand_spotify",
                 "filled_brand_twitter",
+                "filled_brand_whatsapp",
                 "filled_brand_youtube",
                 "filled_content_channel",
+                "filled_content_divulgation",
                 "filled_content_quote",
+                "filled_default_mockup",
                 "filled_finance_charging",
+                "filled_finance_paymentlink",
                 "filled_media_pause",
                 "filled_media_play",
                 "filled_media_stop",
+                "filled_navigation_arrowbottom",
+                "filled_navigation_arrowleft",
+                "filled_navigation_arrowright",
+                "filled_navigation_arrowtop",
                 "filled_navigation_directionleft",
                 "filled_navigation_directionright",
                 "filled_navigation_directiontbottom",
                 "filled_navigation_directiontop",
                 "filled_navigation_menu",
                 "filled_navigation_more",
+                "filled_navigation_setbottom",
+                "filled_navigation_setleft",
+                "filled_navigation_setright",
+                "filled_navigation_settop",
                 "filled_product_brandsproduct",
                 "filled_social_myprofile",
-                "filled_toggle_indeterminatecheckbox"))
+                "filled_toggle_indeterminatecheckbox"
+            ))
     }
 }
