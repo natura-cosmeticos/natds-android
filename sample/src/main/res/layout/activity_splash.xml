@@ -12,7 +12,7 @@
             android:id="@+id/naturaCoLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="65dp"
+            android:layout_marginBottom="?spacingXLarge"
             android:src="@drawable/logo_natura_co"
             app:layout_constraintBottom_toTopOf="@+id/title"
             app:layout_constraintEnd_toEndOf="parent"
