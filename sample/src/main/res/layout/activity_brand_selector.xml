@@ -39,15 +39,16 @@
             android:layout_marginTop="?spacingSemi"
             android:layout_marginBottom="?spacingSmall"
             android:textColor="#FAFAFA"
-            android:textAppearance="?textAppearanceSubtitle2" />
+            android:textAppearance="?textAppearanceBody1" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/themeAesopButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLarge"
-            android:background="@drawable/brand_selector_button_background"
+            android:background="@color/white"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
+            app:cardCornerRadius="?borderRadiusMedium"
             android:orientation="horizontal" >
 
             <ImageView
@@ -62,7 +63,8 @@
             android:id="@+id/avonThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLarge"
-            android:background="@drawable/brand_selector_button_background"
+            android:background="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
             android:orientation="horizontal" >
@@ -79,7 +81,8 @@
             android:id="@+id/naturaThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLarge"
-            android:background="@drawable/brand_selector_button_background"
+            android:background="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
             android:orientation="horizontal" >
@@ -96,7 +99,8 @@
                 android:id="@+id/themeNaturaCoButton"
                 android:layout_width="match_parent"
                 android:layout_height="?sizeLarge"
-                android:background="@drawable/brand_selector_button_background"
+                android:background="@color/white"
+                app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
                 android:gravity="center"
                 android:orientation="horizontal" >
@@ -115,7 +119,8 @@
                 android:id="@+id/tbsThemeButton"
                 android:layout_width="match_parent"
                 android:layout_height="?sizeLarge"
-                android:background="@drawable/brand_selector_button_background"
+                android:background="@color/white"
+                app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
                 android:gravity="center"
                 android:orientation="horizontal" >
