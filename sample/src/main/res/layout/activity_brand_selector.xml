@@ -44,7 +44,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/themeAesopButton"
             android:layout_width="match_parent"
-            android:layout_height="?sizeLarge"
+            android:layout_height="?sizeLargeX"
             android:background="@color/white"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
@@ -62,7 +62,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/avonThemeButton"
             android:layout_width="match_parent"
-            android:layout_height="?sizeLarge"
+            android:layout_height="?sizeLargeX"
             android:background="@color/white"
             app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
@@ -80,7 +80,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/naturaThemeButton"
             android:layout_width="match_parent"
-            android:layout_height="?sizeLarge"
+            android:layout_height="?sizeLargeX"
             android:background="@color/white"
             app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
@@ -98,7 +98,7 @@
         <androidx.cardview.widget.CardView
                 android:id="@+id/themeNaturaCoButton"
                 android:layout_width="match_parent"
-                android:layout_height="?sizeLarge"
+                android:layout_height="?sizeLargeX"
                 android:background="@color/white"
                 app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
@@ -118,7 +118,7 @@
         <androidx.cardview.widget.CardView
                 android:id="@+id/tbsThemeButton"
                 android:layout_width="match_parent"
-                android:layout_height="?sizeLarge"
+                android:layout_height="?sizeLargeX"
                 android:background="@color/white"
                 app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
