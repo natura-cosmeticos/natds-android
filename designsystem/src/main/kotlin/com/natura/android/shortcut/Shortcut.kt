@@ -4,19 +4,18 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
-import com.natura.android.extensions.setAppearance
 
 class Shortcut @JvmOverloads constructor(
     context: Context,
@@ -28,7 +27,6 @@ class Shortcut @JvmOverloads constructor(
     private var typeAttribute: Int? = null
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
-    private var labelTextAppearanceResourceAttribute = 0
     private var iconAttribute: Int? = null
     private var shortcutAttributesArray: TypedArray
 
@@ -54,7 +52,6 @@ class Shortcut @JvmOverloads constructor(
 
     fun setLabel(text: String?) {
         labelContainer.text = text
-        labelContainer.setAppearance(labelTextAppearanceResourceAttribute)
     }
 
     fun getLabel(): CharSequence? {
@@ -66,7 +63,7 @@ class Shortcut @JvmOverloads constructor(
     fun setIcon(icon: Int?) {
         icon?.apply {
             iconContainer.setImageResource(icon)
-            iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
+            iconContainer.setColorFilter(iconColorResourceAttribute, android.graphics.PorterDuff.Mode.SRC_IN)
         }
     }
 
@@ -87,30 +84,23 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun setContainedTypeAttributes() {
-        context
-            .theme
-            .obtainStyledAttributes(
-                attrs,
-                R.styleable.Shortcut,
-                R.attr.shortcutContained,
-                0
-            )
-            .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
-            }
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorPrimary, typedValue, true)
+        backgroundColorResourceAttribute = typedValue.data
+
+        val typedValue2 = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorOnPrimary, typedValue2, true)
+        iconColorResourceAttribute = typedValue2.data
     }
 
     private fun setOutlinedTypeAttributes() {
-        context
-            .theme
-            .obtainStyledAttributes(attrs, R.styleable.Shortcut, R.attr.shortcutOutlined, 0)
-            .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
-            }
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorSurface, typedValue, true)
+        backgroundColorResourceAttribute = typedValue.data
+
+        val typedValue2 = TypedValue()
+        context.theme.resolveAttribute(R.attr.colorPrimary, typedValue2, true)
+        iconColorResourceAttribute = typedValue2.data
     }
 
     private fun getShortcutAttributes() {
@@ -158,15 +148,15 @@ class Shortcut @JvmOverloads constructor(
     private fun setBackgroundContained() {
         val background = resources.getDrawable(R.drawable.shortcut_background, null)
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        DrawableCompat.setTint(backgroundWrap, backgroundColorResourceAttribute)
 
         backgroundContainer.background = background
     }
 
     private fun setBackgroundOutlined() {
         val background = resources.getDrawable(R.drawable.shortcut_background, null) as GradientDrawable
-        background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
-        background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
+        background.setColor(backgroundColorResourceAttribute)
+        background.setStroke(1, iconColorResourceAttribute)
 
         backgroundContainer.background = background
         backgroundContainer.elevation = 0F
