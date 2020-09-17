@@ -3,7 +3,7 @@
 Are you feeling that you can help us with anything in the project? Just get closer!!
 
 There are many ways to contribute, check some of them:
-## Do you want add something in the project? Just create a PR
+## Create an PR to contribute with the project
 We will review your PR, checking some criteria and if everything is fine, a new version of the lib will be publish with your contribution ASAP!
 As the PR goes through our review process, you can test your product with a snapshot generated from your development! 
 For this to happen, it is necessary that the execution of the pull request pipeline is carried out successfully and the following code is added: 
