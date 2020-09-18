@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.AvonDark" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/avonDarkPrimary</item>
+        <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondary">@color/avonSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondaryDark</item>
+        <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
+        <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/avonDarkOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
+        <item name="android:statusBarColor">?colorSurface</item>
+
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
+        <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+    </style>
+
+    <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

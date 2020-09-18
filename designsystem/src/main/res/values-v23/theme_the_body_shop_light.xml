@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BodyShop" parent="Theme.DsBaseLight">
+        <item name="colorPrimary">@color/tbsLightPrimary</item>
+        <item name="colorOnPrimary">@color/tbsLightOnColor</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondary">@color/tbsLightSecondary</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
+        <item name="colorSecondaryVariant">@color/tbsLightSecondaryDark</item>
+        <item name="colorPrimaryLight">@color/tbsLightPrimaryLight</item>
+        <item name="colorOnPrimaryLight">?colorOnPrimary</item>
+        <item name="colorOnPrimaryDark">?colorOnPrimary</item>
+        <item name="colorSecondaryLight">@color/tbsLightSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnPrimary</item>
+        <item name="colorOnSecondaryDark">?colorOnPrimary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">?colorSurface</item>
+
+        <item name="logoVertical">@drawable/tbs_vertical</item>
+        <item name="logoHorizontal">@drawable/tbs_horizontal</item>
+    </style>
+
+    <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

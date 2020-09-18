@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Aesop.Dark" parent="Theme.DsBaseDark">
+    <style name="Theme.Aesop.Light" parent="Theme.DsBaseDark">
     </style>
-
-    <style name="Theme.Aesop.Dark.NoActionBar" parent="Theme.AvonDark">
+    <style name="Theme.Aesop.Light.NoActionBar" parent="Theme.AvonDark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NaturaDark" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/natPrimary</item>
+        <item name="colorOnPrimary">@color/natOnPrimary</item>
+        <item name="colorPrimaryVariant">@color/natPrimaryDark</item>
+        <item name="colorSecondary">@color/natSecondary</item>
+        <item name="colorOnSecondary">@color/natOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+
+        <item name="colorPrimaryLight">@color/natPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/natSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
+        <item name="android:statusBarColor">?colorSurface</item>
+
+        <item name="logoVertical">@drawable/natura_vertical_dark</item>
+        <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
+    </style>
+
+    <style name="Theme.NaturaDark.NoActionBar" parent="Theme.NaturaDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
