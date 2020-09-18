@@ -20,7 +20,7 @@ class TagTest {
     }
 
     @Test
-    fun checksIfShortcutAlertLabelWasSet() {
+    fun checksIfTagAlertLabelWasSet() {
         tag = buildTagAlert()
 
         val label = tag.getLabel()
@@ -29,7 +29,7 @@ class TagTest {
     }
 
     @Test
-    fun checksIfShortcutPrimaryLabelWasSet() {
+    fun checksIfTagPrimaryLabelWasSet() {
         tag = buildTagPrimaryWithRequiredAttributes()
 
         val label = tag.getLabel()
@@ -38,7 +38,7 @@ class TagTest {
     }
 
     @Test
-    fun checksIfShortcutLabelChangeWhenSetLabel() {
+    fun checksIfTagLabelChangeWhenSetLabel() {
         tag = buildTagPrimaryWithRequiredAttributes()
 
         tag.setLabel("New label")
@@ -56,7 +56,7 @@ class TagTest {
     }
 
     @Test
-    fun checksIfShortcutContainedTypeWasSet() {
+    fun checksIfTagContainedTypeWasSet() {
         tag = buildTagPrimaryWithRequiredAttributes()
 
         val type = tag.getType()

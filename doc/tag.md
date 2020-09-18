@@ -1,4 +1,4 @@
-# Shortcut
+# Tag
 
 ## What is it?
 Tag is a component that represents a text tag that can be add as a marker.

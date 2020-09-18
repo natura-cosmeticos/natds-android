@@ -42,7 +42,7 @@ class Tag @JvmOverloads constructor(
 
         getTagAttributes()
         getAttributesFromTheme()
-        configureShortCutByType(typeAttribute)
+        configureTagByType(typeAttribute)
 
         tagAttributesArray.recycle()
     }
@@ -60,7 +60,7 @@ class Tag @JvmOverloads constructor(
 
     fun getType(): Int? = typeAttribute
 
-    private fun configureShortCutByType(type: Int?) {
+    private fun configureTagByType(type: Int?) {
         type?.apply {
             setLabel(labelAttribute)
             setTextColor()

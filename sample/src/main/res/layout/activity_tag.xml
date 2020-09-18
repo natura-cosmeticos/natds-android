@@ -15,44 +15,44 @@
         android:layout_marginTop="?spacingSmall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutContained2"
+        app:layout_constraintStart_toEndOf="@+id/tagPrimary2"
         app:layout_constraintTop_toTopOf="parent"
         app:textLabel="Primary"
         app:tag_type="primary" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutContained2"
+        android:id="@+id/tagPrimary2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
         app:layout_constraintBottom_toBottomOf="@+id/tagPrimary1"
         app:layout_constraintEnd_toStartOf="@+id/tagPrimary1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutContained3"
+        app:layout_constraintStart_toEndOf="@+id/tagPrimary3"
         app:layout_constraintTop_toTopOf="parent"
         app:textLabel="Primary"
         app:tag_type="primary" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutContained3"
+        android:id="@+id/tagPrimary3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/shortcutContained2"
-        app:layout_constraintEnd_toStartOf="@+id/shortcutContained2"
+        app:layout_constraintBottom_toBottomOf="@+id/tagPrimary2"
+        app:layout_constraintEnd_toStartOf="@+id/tagPrimary2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutContained4"
+        app:layout_constraintStart_toEndOf="@+id/tagPrimary4"
         app:layout_constraintTop_toTopOf="parent"
         app:textLabel="Primary"
         app:tag_type="primary" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutContained4"
+        android:id="@+id/tagPrimary4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/shortcutContained3"
-        app:layout_constraintEnd_toStartOf="@+id/shortcutContained3"
+        app:layout_constraintBottom_toBottomOf="@+id/tagPrimary3"
+        app:layout_constraintEnd_toStartOf="@+id/tagPrimary3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -60,53 +60,53 @@
         app:tag_type="primary" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutOutlined1"
+        android:id="@+id/tagAlert1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined2"
+        app:layout_constraintStart_toEndOf="@+id/tagAlert2"
         app:layout_constraintTop_toBottomOf="@+id/tagPrimary1"
         app:textLabel="Alert"
         app:tag_type="alert" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutOutlined2"
+        android:id="@+id/tagAlert2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined1"
-        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined1"
+        app:layout_constraintBottom_toBottomOf="@+id/tagAlert1"
+        app:layout_constraintEnd_toStartOf="@+id/tagAlert1"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined3"
-        app:layout_constraintTop_toBottomOf="@+id/shortcutContained2"
+        app:layout_constraintStart_toEndOf="@+id/tagAlert3"
+        app:layout_constraintTop_toBottomOf="@+id/tagPrimary2"
         app:textLabel="Alert"
         app:tag_type="alert" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutOutlined3"
+        android:id="@+id/tagAlert3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined2"
-        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined2"
+        app:layout_constraintBottom_toBottomOf="@+id/tagAlert2"
+        app:layout_constraintEnd_toStartOf="@+id/tagAlert2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/shortcutOutlined4"
-        app:layout_constraintTop_toBottomOf="@+id/shortcutContained3"
+        app:layout_constraintStart_toEndOf="@+id/tagAlert4"
+        app:layout_constraintTop_toBottomOf="@+id/tagPrimary3"
         app:textLabel="Alert"
         app:tag_type="alert" />
 
     <com.natura.android.tag.Tag
-        android:id="@+id/shortcutOutlined4"
+        android:id="@+id/tagAlert4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/shortcutOutlined3"
-        app:layout_constraintEnd_toStartOf="@+id/shortcutOutlined3"
+        app:layout_constraintBottom_toBottomOf="@+id/tagAlert3"
+        app:layout_constraintEnd_toStartOf="@+id/tagAlert3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shortcutContained4"
+        app:layout_constraintTop_toBottomOf="@+id/tagPrimary4"
         app:textLabel="Alert"
         app:tag_type="alert" />
 
