@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Natura" parent="Theme.DsBaseLight">
+        <item name="colorPrimary">@color/natPrimary</item>
+        <item name="colorOnPrimary">@color/natOnPrimary</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondary">@color/natSecondary</item>
+        <item name="colorOnSecondary">@color/natOnSecondary</item>
+        <item name="colorSecondaryVariant">@color/natSecondaryDark</item>
+        <item name="colorPrimaryLight">@color/natPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/natOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/natOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/natSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/natPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
+
+        <!--Component styles-->
+        <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
+        <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Light</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Light</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Natura.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Natura.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.Natura.Light</item>
+        <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.Natura.Light</item>
+        <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.Natura.Light</item>
+        <item name="textButtonSmall">@style/Widget.DS.ButtonSmall.TextButton.Light</item>
+
+        <item name="buttonStyleMedium">@style/Widget.DS.Button.Natura.Light</item>
+        <item name="materialButtonStyleMedium">@style/Widget.DS.Button.Natura.Light</item>
+        <item name="outlinedButtonMedium">@style/Widget.DS.Button.Outlined.Natura.Light</item>
+        <item name="textButtonMedium">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleLarge">@style/Widget.DS.ButtonLarge.Natura.Light</item>
+        <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.Natura.Light</item>
+        <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Natura.Light</item>
+        <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Light</item>
+
+        <item name="logoVertical">@drawable/natura_vertical</item>
+        <item name="logoHorizontal">@drawable/natura_horizontal</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Light</item>
+    </style>
+
+    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

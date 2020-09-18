@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Aesop.Light" parent="Theme.DsBaseDark">
+        <item name="colorPrimary">@color/avonDarkPrimary</item>
+        <item name="colorOnPrimary">@color/avonDarkOnPrimary</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondary">@color/avonSecondary</item>
+        <item name="colorOnSecondary">@color/avonOnSecondaryDark</item>
+        <item name="colorSecondaryVariant">@color/avonSecondaryDark</item>
+        <item name="colorPrimaryLight">@color/avonDarkPrimaryLight</item>
+        <item name="colorOnPrimaryLight">@color/avonDarkOnPrimaryLight</item>
+        <item name="colorOnPrimaryDark">@color/avonDarkOnPrimaryDark</item>
+        <item name="colorSecondaryLight">@color/avonSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
+        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/avonDarkPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon.Primary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon.Secondary.Dark</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon.Primary.Dark</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon.Secondary.Dark</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Avon.Dark</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Avon.Dark</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.Avon.Dark</item>
+        <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.Avon.Dark</item>
+        <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.Avon.Dark</item>
+        <item name="textButtonSmall">@style/Widget.DS.ButtonSmall.TextButton.Dark</item>
+
+        <item name="buttonStyleMedium">@style/Widget.DS.Button.Avon.Dark</item>
+        <item name="materialButtonStyleMedium">@style/Widget.DS.Button.Avon.Dark</item>
+        <item name="outlinedButtonMedium">@style/Widget.DS.Button.Outlined.Avon.Dark</item>
+        <item name="textButtonMedium">@style/Widget.DS.Button.TextButton.Dark</item>
+
+        <item name="buttonStyleLarge">@style/Widget.DS.ButtonLarge.Avon.Dark</item>
+        <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.Avon.Dark</item>
+        <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Avon.Dark</item>
+        <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Dark</item>
+
+        <item name="logoVertical">@drawable/outlined_action_cancel</item>
+        <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.AvonDark.NoActionBar" parent="Theme.AvonDark">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

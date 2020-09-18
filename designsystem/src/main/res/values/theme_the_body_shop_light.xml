@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BodyShop" parent="Theme.DsBaseLight">
+        <item name="colorPrimary">@color/tbsLightPrimary</item>
+        <item name="colorOnPrimary">@color/tbsLightOnColor</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondary">@color/tbsLightSecondary</item>
+        <item name="colorOnSecondary">?colorOnPrimary</item>
+        <item name="colorSecondaryVariant">@color/tbsLightSecondaryDark</item>
+        <item name="colorPrimaryLight">@color/tbsLightPrimaryLight</item>
+        <item name="colorOnPrimaryLight">?colorOnPrimary</item>
+        <item name="colorOnPrimaryDark">?colorOnPrimary</item>
+        <item name="colorSecondaryLight">@color/tbsLightSecondaryLight</item>
+        <item name="colorOnSecondaryLight">?colorOnPrimary</item>
+        <item name="colorOnSecondaryDark">?colorOnPrimary</item>
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryDark">@color/tbsLightPrimaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Light</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Light</item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.TBS.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.TBS.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.TBS.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.TBS.Light</item>
+        <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.TBS.Light</item>
+        <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.TBS.Light</item>
+        <item name="textButtonSmall">@style/Widget.DS.ButtonSmall.TextButton.Light</item>
+
+        <item name="buttonStyleMedium">@style/Widget.DS.Button.TBS.Light</item>
+        <item name="materialButtonStyleMedium">@style/Widget.DS.Button.TBS.Light</item>
+        <item name="outlinedButtonMedium">@style/Widget.DS.Button.Outlined.TBS.Light</item>
+        <item name="textButtonMedium">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleLarge">@style/Widget.DS.ButtonLarge.TBS.Light</item>
+        <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.TBS.Light</item>
+        <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.TBS.Light</item>
+        <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Light</item>
+
+        <item name="logoVertical">@drawable/tbs_vertical</item>
+        <item name="logoHorizontal">@drawable/tbs_horizontal</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Light</item>
+    </style>
+
+    <style name="Theme.BodyShop.NoActionBar" parent="Theme.BodyShop">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
