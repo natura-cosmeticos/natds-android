@@ -16,6 +16,8 @@
         <item name="colorSuccess">@color/success</item>
         <item name="colorWarning">@color/warning</item>
         <item name="colorError">@color/alert</item>
+        <item name="colorAlert">@color/alert</item>
+        <item name="colorOnAlert">@color/onAlert</item>
         <item name="colorOnSuccess">@color/onSuccess</item>
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
@@ -153,6 +155,8 @@
         <item name="colorSuccess">@color/success</item>
         <item name="colorWarning">@color/warning</item>
         <item name="colorError">@color/alert</item>
+        <item name="colorAlert">@color/alert</item>
+        <item name="colorOnAlert">@color/onAlert</item>
         <item name="colorOnSuccess">@color/onSuccess</item>
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>

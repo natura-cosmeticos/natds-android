@@ -18,6 +18,8 @@
     <attr name="colorMediumEmphasis" format="color"/>
     <attr name="colorLowEmphasis" format="color"/>
     <attr name="colorLink" format="color"/>
+    <attr name="colorAlert" format="color"/>
+    <attr name="colorOnAlert" format="color"/>
     <attr name="colorOnLink" format="color"/>
     <attr name="colorSuccess" format="color"/>
     <attr name="colorOnSuccess" format="color"/>
