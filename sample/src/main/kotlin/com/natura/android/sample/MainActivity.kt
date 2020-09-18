@@ -84,6 +84,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ShortcutActivity::class.java))
         }
 
+        tagButton.setOnClickListener {
+            startActivity(Intent(this, TagActivity::class.java))
+        }
+
         btnTextfield.setOnClickListener {
             startActivity(Intent(this, TextFieldActivity::class.java))
         }

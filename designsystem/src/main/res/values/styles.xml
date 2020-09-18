@@ -322,5 +322,20 @@
         <item name="labelAppearance">?textAppearanceCaption</item>
     </style>
 
+    <!-- TAG STYLES -->
+    <style name="Widget.DS.Tag.Primary" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Alert" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorAlert</item>
+        <item name="android:textColor">?colorOnAlert</item>
+    </style>
+
+    <style name="Widget.DS.Tag">
+        <item name="labelAppearance">?textAppearanceCaption</item>
+    </style>
+
     <style name="Widget.DS"/>
 </resources>

@@ -250,6 +250,17 @@ class MainActivityTest {
     }
 
     @Test
+    fun checksTagButtonClickStartsTagScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.tagButton)
+
+        button.performClick()
+        val startedIntent = shadowActivity.peekNextStartedActivity()
+        val shadowIntent = shadowOf(startedIntent)
+
+        assertEquals(TagActivity::class.java, shadowIntent.intentClass)
+    }
+
+    @Test
     fun checksDialogButtonClickStartsDialogScreen() {
         val button = mainActivity.findViewById<Button>(R.id.dialogButton)
 

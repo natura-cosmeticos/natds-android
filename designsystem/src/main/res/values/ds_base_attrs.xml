@@ -130,4 +130,8 @@
     <!-- Shortcut references -->
     <attr name="shortcutOutlined" format="reference"/>
     <attr name="shortcutContained" format="reference"/>
+
+    <!-- Tag references -->
+    <attr name="tagPrimary" format="reference"/>
+    <attr name="tagAlert" format="reference"/>
 </resources>
