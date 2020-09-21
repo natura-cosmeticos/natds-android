@@ -50,6 +50,7 @@ class Tag @JvmOverloads constructor(
     fun setLabel(text: String?) {
         labelContainer.text = text
         labelContainer.setAppearance(labelTextAppearanceResourceAttribute)
+        setTextColor()
         invalidate()
         requestLayout()
     }
