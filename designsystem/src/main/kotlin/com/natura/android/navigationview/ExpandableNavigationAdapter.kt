@@ -69,6 +69,8 @@ class ExpandableNavigationAdapter(
                 icon = item.iconText
                 showArrow(item.hasSubMenu)
                 configStateMenu(item.menuState)
+                showTag(item.showTag)
+                tagLabel = item.tagLabel
             }
         }
 
