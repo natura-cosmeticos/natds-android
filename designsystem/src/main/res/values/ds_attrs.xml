@@ -37,6 +37,8 @@
         <attr name="menu_is_selected" format="boolean" />
         <attr name="menu_is_enabled" format="boolean" />
         <attr name="menu_is_opened" format="boolean" />
+        <attr name="menu_has_tag" format="boolean" />
+        <attr name="menu_tag_label" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="ds_submenu">
