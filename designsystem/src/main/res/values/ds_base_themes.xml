@@ -137,6 +137,9 @@
 
         <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
         <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
+
+        <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
+        <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -275,5 +278,8 @@
 
         <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
         <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
+
+        <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
+        <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
     </style>
 </resources>

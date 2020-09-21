@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="Tag" >
+        <attr name="tag_type" format="enum">
+            <enum name="primary" value="0"/>
+            <enum name="alert" value="1"/>
+        </attr>
+        <attr name="colorBackground"/>
+        <attr name="labelAppearance"/>
+        <attr name="textLabel"/>
+        <attr name="android:textColor"/>
+    </declare-styleable>
+
     <declare-styleable name="Shortcut" >
         <attr name="type" format="enum">
             <enum name="outlined" value="0"/>
