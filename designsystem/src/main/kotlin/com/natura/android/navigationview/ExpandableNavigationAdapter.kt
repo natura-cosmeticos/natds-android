@@ -59,8 +59,7 @@ class ExpandableNavigationAdapter(
         convertView: View?,
         parent: ViewGroup?
     ): View {
-        val parentView = convertView
-            ?: LayoutInflater.from(context).inflate(R.layout.ds_menu_item, null)
+        val parentView = LayoutInflater.from(context).inflate(R.layout.ds_menu_item, null)
 
         val groupView = parentView.findViewById<MenuView>(R.id.menu_item)
         navigationItems[groupPosition].let { item ->
@@ -69,6 +68,8 @@ class ExpandableNavigationAdapter(
                 icon = item.iconText
                 showArrow(item.hasSubMenu)
                 configStateMenu(item.menuState)
+                showTag(item.showTag)
+                tagLabel = item.tagLabel
             }
         }
 

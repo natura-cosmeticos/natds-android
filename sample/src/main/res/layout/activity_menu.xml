@@ -14,4 +14,6 @@
 
     <include layout="@layout/component_menu_opened" />
 
+    <include layout="@layout/component_menu_alert_tag" />
+
 </LinearLayout>

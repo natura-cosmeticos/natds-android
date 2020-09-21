@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.ext.setVisibilityFromBoolean
+import com.natura.android.tag.Tag
 
 @SuppressLint("CustomViewStyleable")
 class MenuView @JvmOverloads constructor(
@@ -24,6 +25,7 @@ class MenuView @JvmOverloads constructor(
     private val labelContainer by lazy { findViewById<View>(R.id.ds_menu_view_background) }
     private val iconMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_icon) }
     private val iconArrowMenu by lazy { findViewById<AppCompatImageView>(R.id.ds_menu_arrow) }
+    private val menuTag by lazy { findViewById<Tag>(R.id.ds_menu_tag) }
 
     private var selectedDrawable: Int
     private var openedDrawable: Int
@@ -39,6 +41,12 @@ class MenuView @JvmOverloads constructor(
             field = value
             setMenuIconImage(value)
     }
+
+    var tagLabel: String? = ""
+        set(value) {
+            field = value
+            menuTag.setLabel(value)
+        }
 
     init {
         View.inflate(context, R.layout.ds_menu_view, this)
@@ -69,6 +77,12 @@ class MenuView @JvmOverloads constructor(
         val enabled = typedArray.getBoolean(R.styleable.ds_menu_menu_is_enabled, true)
         val isOpened = typedArray.getBoolean(R.styleable.ds_menu_menu_is_opened, false)
 
+        val hasTag = typedArray.getBoolean(R.styleable.ds_menu_menu_has_tag, false)
+        val tagText = typedArray.getString(R.styleable.ds_menu_menu_tag_label)
+
+        showTag(hasTag)
+        tagLabel = tagText
+
         typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
@@ -81,6 +95,10 @@ class MenuView @JvmOverloads constructor(
         }
 
         isEnabled = enabled
+    }
+
+    fun showTag(hasTag: Boolean) {
+        menuTag.setVisibilityFromBoolean(hasTag, View.GONE)
     }
 
     override fun setSelected(isSelected: Boolean) {
