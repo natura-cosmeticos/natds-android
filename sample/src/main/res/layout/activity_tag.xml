@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tagContainer"
@@ -9,115 +8,29 @@
     tools:context=".components.TagActivity">
 
     <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary1"
+        android:id="@+id/tagPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagPrimary2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Primary"
-        app:tag_type="primary" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagPrimary1"
-        app:layout_constraintEnd_toStartOf="@+id/tagPrimary1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagPrimary3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Primary"
-        app:tag_type="primary" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagPrimary2"
-        app:layout_constraintEnd_toStartOf="@+id/tagPrimary2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagPrimary4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Primary"
-        app:tag_type="primary" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagPrimary3"
-        app:layout_constraintEnd_toStartOf="@+id/tagPrimary3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Primary"
-        app:tag_type="primary" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagAlert2"
-        app:layout_constraintTop_toBottomOf="@+id/tagPrimary1"
-        app:textLabel="Alert"
-        app:tag_type="alert" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagAlert1"
-        app:layout_constraintEnd_toStartOf="@+id/tagAlert1"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagAlert3"
-        app:layout_constraintTop_toBottomOf="@+id/tagPrimary2"
-        app:textLabel="Alert"
-        app:tag_type="alert" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagAlert2"
-        app:layout_constraintEnd_toStartOf="@+id/tagAlert2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tagAlert4"
-        app:layout_constraintTop_toBottomOf="@+id/tagPrimary3"
-        app:textLabel="Alert"
-        app:tag_type="alert" />
-
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/tagAlert3"
-        app:layout_constraintEnd_toStartOf="@+id/tagAlert3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagPrimary4"
-        app:textLabel="Alert"
-        app:tag_type="alert" />
-
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Counter click 0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tag_type="primary"
+        app:textLabel="Primary" />
+
+    <com.natura.android.tag.Tag
+        android:id="@+id/tagAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingTiny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tagPrimary"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tagPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/tagPrimary"
+        app:layout_constraintVertical_bias="0.0"
+        app:tag_type="alert"
+        app:textLabel="Alert" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
