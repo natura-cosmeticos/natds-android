@@ -142,6 +142,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenTagScreenWhenTapOnItButton() {
+        onView(withId(R.id.tagButton)).perform(scrollTo())
+        onView(withId(R.id.tagButton)).perform(click())
+
+        onView(withText("Tag")).check(matches(isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenTextFieldScreenWhenTapOnItButton() {
         onView(withId(R.id.btnTextfield)).perform(scrollTo())
         onView(withId(R.id.btnTextfield)).perform(click())

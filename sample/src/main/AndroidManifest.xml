@@ -12,14 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-
-        <activity android:name=".BrandSelectorActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".BrandSelectorActivity"
+            android:theme="@style/SplashTheme"/>
         <activity android:name=".MainActivity" />
         <activity
             android:name=".tokens.ElevationActivity"
@@ -52,16 +55,16 @@
         </activity>
         <activity
             android:name=".components.BadgeActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.DialogActivity"
-            android:theme="@style/Theme.AppCompat"/>
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".patterns.ErrorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".patterns.LogoActivity"
-            android:theme="@style/Theme.Natura"/>
+            android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.TextFieldActivity"
             android:theme="@style/Theme.Natura" />
@@ -96,10 +99,9 @@
             android:name=".components.ExpansionPanelActivity"
             android:theme="@style/Theme.Natura" />
         <activity android:name=".tokens.ColorsActivity" />
-        <activity
-            android:name=".components.ShortcutActivity"/>
-        <activity
-            android:name=".components.IconButtonActivity"/>
+        <activity android:name=".components.ShortcutActivity" />
+        <activity android:name=".components.TagActivity" />
+        <activity android:name=".components.IconButtonActivity"/>
     </application>
 
 </manifest>

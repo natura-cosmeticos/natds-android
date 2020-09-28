@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shortcutContainer"
@@ -17,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutContained2"
         app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Contained/ Primary"
+        app:textLabel="Contained/ \nPrimary"
         app:type="contained" />
 
     <com.natura.android.shortcut.Shortcut
@@ -31,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutContained3"
         app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Contained/ Primary"
+        app:textLabel="Contained/ \nPrimary"
         app:type="contained" />
 
     <com.natura.android.shortcut.Shortcut
@@ -45,7 +46,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutContained4"
         app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Contained/ Primary"
+        app:textLabel="Contained/ \nPrimary"
         app:type="contained" />
 
     <com.natura.android.shortcut.Shortcut
@@ -59,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:textLabel="Contained/ Primary"
+        app:textLabel="Contained/ \nPrimary"
         app:type="contained" />
 
     <com.natura.android.shortcut.Shortcut
@@ -72,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutOutlined2"
         app:layout_constraintTop_toBottomOf="@+id/shortcutContained1"
-        app:textLabel="Outlined/ Primary"
+        app:textLabel="Outlined/ \nPrimary"
         app:type="outlined" />
 
     <com.natura.android.shortcut.Shortcut
@@ -86,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutOutlined3"
         app:layout_constraintTop_toBottomOf="@+id/shortcutContained2"
-        app:textLabel="Outlined/ Primary"
+        app:textLabel="Outlined/ \nPrimary"
         app:type="outlined" />
 
     <com.natura.android.shortcut.Shortcut
@@ -100,7 +101,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/shortcutOutlined4"
         app:layout_constraintTop_toBottomOf="@+id/shortcutContained3"
-        app:textLabel="Outlined/ Primary"
+        app:textLabel="Outlined/ \nPrimary"
         app:type="outlined" />
 
     <com.natura.android.shortcut.Shortcut
@@ -114,7 +115,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shortcutContained4"
-        app:textLabel="Outlined/ Primary"
+        app:textLabel="Outlined/ \nPrimary"
         app:type="outlined" />
 
     <TextView

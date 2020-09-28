@@ -16,6 +16,8 @@
         <item name="colorSuccess">@color/success</item>
         <item name="colorWarning">@color/warning</item>
         <item name="colorError">@color/alert</item>
+        <item name="colorAlert">@color/alert</item>
+        <item name="colorOnAlert">@color/onAlert</item>
         <item name="colorOnSuccess">@color/onSuccess</item>
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
@@ -139,6 +141,9 @@
 
         <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
         <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
+
+        <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
+        <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -157,6 +162,8 @@
         <item name="colorSuccess">@color/success</item>
         <item name="colorWarning">@color/warning</item>
         <item name="colorError">@color/alert</item>
+        <item name="colorAlert">@color/alert</item>
+        <item name="colorOnAlert">@color/onAlert</item>
         <item name="colorOnSuccess">@color/onSuccess</item>
         <item name="colorOnWarning">@color/onWarning</item>
         <item name="colorOnError">@color/onAlert</item>
@@ -279,5 +286,8 @@
 
         <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
         <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
+
+        <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
+        <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
     </style>
 </resources>
