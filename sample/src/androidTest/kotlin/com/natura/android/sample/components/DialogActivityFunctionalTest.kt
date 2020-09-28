@@ -11,9 +11,11 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.R
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
+@Ignore
 @RunWith(AndroidJUnit4::class)
 class DialogActivityFunctionalTest {
     private lateinit var dialogActivityScenario: ActivityScenario<DialogActivity>
