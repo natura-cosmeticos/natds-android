@@ -1,28 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- To be replaced with default attr from google:material lib -->
     <!-- Style to use for Material Outlined Buttons in this theme. -->
     <!-- Since it's not available in support:design lib -->
     <attr name="materialBorderlessButtonStyle" format="reference"/>
-
-    <!-- color tokens attributes not covered by material theme -->
-    <attr name="colorPrimaryLight" format="color"/>
-    <attr name="colorOnPrimaryLight" format="color"/>
-    <attr name="colorOnPrimaryDark" format="color"/>
-    <attr name="colorSecondaryLight" format="color"/>
-    <attr name="colorOnSecondaryLight" format="color"/>
-    <attr name="colorOnSecondaryDark" format="color"/>
-    <attr name="colorHighlight" format="color"/>
-    <attr name="colorHighEmphasis" format="color"/>
-    <attr name="colorMediumEmphasis" format="color"/>
-    <attr name="colorLowEmphasis" format="color"/>
-    <attr name="colorLink" format="color"/>
-    <attr name="colorOnLink" format="color"/>
-    <attr name="colorSuccess" format="color"/>
-    <attr name="colorOnSuccess" format="color"/>
-    <attr name="colorWarning" format="color"/>
-    <attr name="colorOnWarning" format="color"/>
 
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
