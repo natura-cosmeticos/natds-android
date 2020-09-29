@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.BodyShopDark" parent="Theme.DsBaseDark">
-        <item name="colorPrimary">@color/tbsDarkPrimary</item>
-        <item name="colorOnPrimary">@color/tbsDarkOnColor</item>
-        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
-        <item name="colorSecondary">@color/tbsDarkSecondary</item>
-        <item name="colorOnSecondary">?colorOnPrimary</item>
-        <item name="colorSecondaryVariant">@color/tbsDarkSecondaryDark</item>
-
-        <item name="colorPrimaryLight">@color/tbsDarkPrimaryLight</item>
-        <item name="colorOnPrimaryLight">?colorOnPrimary</item>
-        <item name="colorOnPrimaryDark">?colorOnPrimary</item>
-        <item name="colorSecondaryLight">@color/tbsDarkSecondaryLight</item>
-        <item name="colorOnSecondaryLight">?colorOnSecondary</item>
-        <item name="colorOnSecondaryDark">?colorOnSecondary</item>
+        <item name="colorPrimary">@color/ssot6caa1933ade48a2ec4d1565c8aa8b5e4</item>
+        <item name="colorOnPrimary">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorPrimaryLight">@color/ssotedc3cae5bc1a87718e047af81fa92b2a</item>
+        <item name="colorOnPrimaryLight">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorPrimaryDark">@color/ssot38458907283e0cf662c4a7af237cb53c</item>
+        <item name="colorOnPrimaryDark">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorSecondary">@color/ssot5a136e07cf48649406f6e1867f3bef5a</item>
+        <item name="colorOnSecondary">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorSecondaryLight">@color/ssotb411018486a85f56da3cef24df26b454</item>
+        <item name="colorOnSecondaryLight">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorSecondaryDark">@color/ssot8d0f9002ca6f28207c7f657dee4b751f</item>
+        <item name="colorOnSecondaryDark">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="colorBackground">@color/ssot44bab0ee542a7a891f00da953ef7edfe</item>
+        <item name="colorOnBackground">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorSurface">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
+        <item name="colorOnSurface">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorHighlight">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorHighEmphasis">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="colorMediumEmphasis">@color/ssotc9459f76001cfea305e1a5847babd674</item>
+        <item name="colorLowEmphasis">@color/ssot62a7b21d4ac2999957afb4aa3497cdc3</item>
+        <item name="colorLink">@color/ssotbf5c940a2659af01382672262b5244d4</item>
+        <item name="colorOnLink">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorSuccess">@color/ssot5f3b2baa1770dae9b24db5309ba5541c</item>
+        <item name="colorOnSuccess">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorWarning">@color/ssot2fda3fa2b772421a72146e438def3b50</item>
+        <item name="colorOnWarning">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
+        <item name="colorAlert">@color/ssote57d6ad7ffae602db2515d2f9f42a48f</item>
+        <item name="colorOnAlert">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
 
         <!-- Definitions based on appcompat colors -->
-        <item name="colorPrimaryDark">@color/tbsDarkPrimaryDark</item>
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondaryVariant">?colorSecondaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
-        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="colorControlNormal">?colorOnPrimary</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Dark</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Dark</item>
