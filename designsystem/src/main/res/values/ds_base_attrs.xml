@@ -9,38 +9,7 @@
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
     <attr name="colorHighlightOpacity05" format="color"/>
 
-    <!-- spacing tokens attributes -->
-    <attr name="spacingNone" format="dimension"/>
-    <attr name="spacingMicro" format="dimension"/>
-    <attr name="spacingTiny" format="dimension"/>
-    <attr name="spacingSmall" format="dimension"/>
-    <attr name="spacingStandard" format="dimension"/>
-    <attr name="spacingSemi" format="dimension"/>
-    <attr name="spacingLarge" format="dimension"/>
-    <attr name="spacingXLarge" format="dimension"/>
-
-    <!-- size tokens attributes -->
-    <attr name="sizeNone" format="dimension"/>
-    <attr name="sizeMicro" format="dimension"/>
-    <attr name="sizeTiny" format="dimension"/>
-    <attr name="sizeSmall" format="dimension"/>
-    <attr name="sizeStandard" format="dimension"/>
-    <attr name="sizeSemi" format="dimension"/>
-    <attr name="sizeSemiX" format="dimension"/>
-    <attr name="sizeMedium" format="dimension"/>
-    <attr name="sizeMediumX" format="dimension"/>
-    <attr name="sizeLarge" format="dimension"/>
-    <attr name="sizeLargeX" format="dimension"/>
-    <attr name="sizeLargeXX" format="dimension"/>
-    <attr name="sizeLargeXXX" format="dimension"/>
-    <attr name="sizeHuge" format="dimension"/>
-    <attr name="sizeHugeX" format="dimension"/>
-    <attr name="sizeHugeXX" format="dimension"/>
-    <attr name="sizeHugeXXX" format="dimension"/>
-    <attr name="sizeVeryHuge" format="dimension"/>
-
     <!-- opacity tokens attributes -->
-    <attr name="opacityTransparent" format="dimension"/>
     <attr name="opacity01" format="dimension"/>
     <attr name="opacity02" format="dimension"/>
     <attr name="opacity03" format="dimension"/>
@@ -52,12 +21,6 @@
     <attr name="opacity09" format="dimension"/>
     <attr name="opacity10" format="dimension"/>
     <attr name="opacityFull" format="dimension"/>
-
-    <!-- border radius tokens attributes -->
-    <attr name="borderRadiusNone" format="dimension"/>
-    <attr name="borderRadiusSmall" format="dimension"/>
-    <attr name="borderRadiusMedium" format="dimension"/>
-    <attr name="borderRadiusLarge" format="dimension"/>
 
     <!-- elevation tokens attributes -->
     <attr name="elevation00" format="dimension"/>

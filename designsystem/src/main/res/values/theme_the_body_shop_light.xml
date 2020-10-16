@@ -35,6 +35,7 @@
         <item name="colorSecondaryVariant">?colorSecondaryDark</item>
         <item name="colorAccent">?colorPrimary</item>
         <item name="colorControlHighlight">#1F000000</item>
+        <item name="android:statusBarColor">?colorControlHighlight</item>
         <item name="colorControlNormal">?colorOnBackground</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Light</item>
