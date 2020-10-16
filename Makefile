@@ -47,3 +47,7 @@ update-icons:
 
 kill-all-emulators:
 	sh ./tools/kill_emulators.sh
+
+distribute-sample:
+	fastlane build
+	fastlane distribute_sample
