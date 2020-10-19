@@ -6,14 +6,6 @@ apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    signingConfigs {
-        natds {
-        storeFile file('/Users/marcellasouza/Documents/Projects/0-Natura/natds-keystore')
-            storePassword 'natdsandroid'
-            keyAlias 'natds'
-            keyPassword 'natdsandroid'
-        }
-    }
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
@@ -25,7 +17,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "com.natura.android.sample.test.ScreenShotTestRunner"
         vectorDrawables.useSupportLibrary = true
-        signingConfig signingConfigs.natds
 
         javaCompileOptions {
             annotationProcessorOptions {
