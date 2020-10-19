@@ -49,5 +49,6 @@ kill-all-emulators:
 	sh ./tools/kill_emulators.sh
 
 distribute-sample:
+	sh  bundle exec fastlane build
 	fastlane build
 	fastlane distribute_sample

@@ -36,13 +36,19 @@ platform :android do
     upload_to_play_store
   end
 
-  desc "Distribute sample"
-  lane :distribute_sample do
-    firebase_app_distribution(
-        app: ENV['FIREBASE_NATDS_ID'],
-        groups: "android",
-        apk_path: "sample-debug.apk",
-        firebase_cli_token: ENV['FIREBASE_TOKEN']
-    )
-  end
+    desc "Run assemble"
+    lane :build do
+      gradle(task: "sample:assemble")
+      sh("mv ../sample/build/outputs/apk/release/sample-release.apk ../sample-release.apk")
+    end
+
+    desc "Distribute sample"
+      lane :distribute_sample do
+        firebase_app_distribution(
+          app: ENV['FIREBASE_NATDS_ID'],
+              groups: "natds-internal",
+              apk_path: "sample-debug.apk",
+              firebase_cli_token: ENV['FIREBASE_TOKEN']
+        )
+    end
 end

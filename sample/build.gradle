@@ -3,8 +3,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.facebook.testing.screenshot'
 apply from: "$rootDir/tools/ktlint.gradle"
+apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        natds {
+        storeFile file('/Users/marcellasouza/Documents/Projects/0-Natura/natds-keystore')
+            storePassword 'natdsandroid'
+            keyAlias 'natds'
+            keyPassword 'natdsandroid'
+        }
+    }
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
@@ -16,6 +25,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "com.natura.android.sample.test.ScreenShotTestRunner"
         vectorDrawables.useSupportLibrary = true
+        signingConfig signingConfigs.natds
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -48,6 +58,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':designsystem')
+
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"

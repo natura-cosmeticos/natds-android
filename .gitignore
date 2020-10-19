@@ -5,6 +5,9 @@
 .DS_Store
 /build
 /captures
+fastlane/report.xml
+fastlane/Pluginfile
+fastlane/README.md
 .externalNativeBuild
 .cxx
 github_credentials.properties
