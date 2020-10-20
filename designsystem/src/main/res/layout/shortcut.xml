@@ -41,7 +41,7 @@
             android:id="@+id/shortCutIcon"
             android:layout_width="?sizeSemi"
             android:layout_height="?sizeSemi"
-            tools:srcCompat="@drawable/ds_ic_filled_brand_naturarosacea" />
+            tools:srcCompat="@drawable/outlined_default_mockup" />
     </LinearLayout>
 
     <TextView

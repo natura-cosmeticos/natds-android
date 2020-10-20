@@ -80,7 +80,7 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            R.layout.standard_dialog_content).create()
+            R.layout.test_dialog_content).create()
     }
 
     private fun createDialogWithCustomContentFromView(): DialogStandard {
