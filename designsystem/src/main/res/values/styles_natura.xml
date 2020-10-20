@@ -159,7 +159,7 @@
         <item name="closeIcon">@drawable/outlined_navigation_close</item>
         <item name="searchIcon">@null</item>
         <item name="goIcon">@null</item>
-        <item name="voiceIcon">@drawable/outlined_action_mic</item>
+        <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
     </style>
 
     <style name="TextAppearence.Natura.Default" parent="TextAppearance.AppCompat">

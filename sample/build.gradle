@@ -49,6 +49,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':designsystem')
+    implementation project(':icons')
 
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
 
