@@ -156,7 +156,7 @@
         <item name="android:fontFamily">@string/font_roboto_regular</item>
         <item name="queryBackground">@null</item>
         <item name="submitBackground">@null</item>
-        <item name="closeIcon">@drawable/outlined_navigation_close</item>
+        <item name="closeIcon">@drawable/default_icon_outlined_navigation_close</item>
         <item name="searchIcon">@null</item>
         <item name="goIcon">@null</item>
         <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
