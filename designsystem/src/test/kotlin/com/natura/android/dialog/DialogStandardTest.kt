@@ -85,7 +85,7 @@ class DialogStandardTest {
 
     private fun createDialogWithCustomContentFromView(): DialogStandard {
         val view = ImageView(context)
-        view.setImageResource(R.drawable.filled_action_add)
+        view.setImageResource(R.drawable.outlined_default_mockup)
 
         return DialogStandard(
             context,
