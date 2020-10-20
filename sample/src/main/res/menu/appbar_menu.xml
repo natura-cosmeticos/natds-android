@@ -6,7 +6,7 @@
     <item
         android:id="@+id/searchMenuBtn"
         android:title="Search"
-        android:icon="@drawable/ds_ic_outlined_action_search"
+        android:icon="@drawable/outlined_action_search"
         app:showAsAction="always|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView" />
 
