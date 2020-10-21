@@ -17,11 +17,11 @@ class IconsRepository(private val context: Context) {
     fun getIconsNamesFromFile(): List<String> {
         val reader = BufferedReader(context.assets.open("icons_map.txt").bufferedReader())
         val iconsList = mutableListOf<String>()
-        reader.use { reader ->
-            var line = reader.readLine()
+        reader.use { fileReader ->
+            var line = fileReader.readLine()
             while (line != null) {
                 iconsList.add(line)
-                line = reader.readLine()
+                line = fileReader.readLine()
             }
         }
         return iconsList

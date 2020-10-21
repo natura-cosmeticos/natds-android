@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@drawable/outlined_default_mockup"
+        android:drawable="@drawable/default_icon_outlined_default_mockup"
         android:gravity="right" />
 
     <item
