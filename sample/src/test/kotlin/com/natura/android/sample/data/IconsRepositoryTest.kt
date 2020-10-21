@@ -21,7 +21,7 @@ class IconsRepositoryTest {
     fun checksIfIconsListHasTheRightSize() {
         val iconsList = iconsRepository.getIconsNamesFromFile()
 
-        assertEquals(220, iconsList.size)
+        assertEquals(225, iconsList.size)
     }
 
     @Test
@@ -74,6 +74,7 @@ class IconsRepositoryTest {
                 "outlined_action_rating",
                 "outlined_action_recycle",
                 "outlined_action_request",
+                "outlined_action_requestspecial",
                 "outlined_action_runningclock",
                 "outlined_action_save",
                 "outlined_action_schedule",
@@ -135,6 +136,7 @@ class IconsRepositoryTest {
                 "outlined_content_mirror",
                 "outlined_content_password",
                 "outlined_content_planb",
+                "outlined_content_productshowcase",
                 "outlined_content_produtivity",
                 "outlined_content_report",
                 "outlined_content_store",
@@ -200,6 +202,9 @@ class IconsRepositoryTest {
                 "outlined_product_makeup",
                 "outlined_product_outlet",
                 "outlined_product_perfumery",
+                "outlined_product_perfumeryfeminine",
+                "outlined_product_perfumerymasculine",
+                "outlined_product_perfumerytbs",
                 "outlined_product_promotionproduct",
                 "outlined_product_scent",
                 "outlined_product_vegan",
