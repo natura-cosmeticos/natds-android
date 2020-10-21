@@ -4,7 +4,7 @@
 ![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
 
 ## What for
-Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
+Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/28db352be/p/35bf2e-natds--natura-design-system).
 
 ## How to use
 
