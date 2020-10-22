@@ -13,6 +13,13 @@ Copy and paste the file **github_credentials.properties.sample** and rename it t
 In the file build.gradle, insert the informations:
 
     repositories {
+    
+        def githubProperties = new Properties()
+        def githubFile = rootProject.file("github_credentials.properties")
+        if (githubFile.exists()) {
+            githubProperties.load(new FileInputStream(githubFile))
+        }
+        
         maven {
             name = "natds-android"
             url = uri("https://maven.pkg.github.com/natura-cosmeticos/natds-android")
