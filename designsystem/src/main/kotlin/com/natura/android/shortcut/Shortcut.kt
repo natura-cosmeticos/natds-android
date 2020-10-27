@@ -29,7 +29,7 @@ class Shortcut @JvmOverloads constructor(
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
-    private var iconAttribute: Int? = null
+    private var iconAttribute: String? = null
     private var shortcutAttributesArray: TypedArray
 
     private val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
@@ -63,11 +63,22 @@ class Shortcut @JvmOverloads constructor(
 
     fun getType(): Int? = typeAttribute
 
-    fun setIcon(icon: Int?) {
+    fun setIcon(icon: String?) {
         icon?.apply {
-            iconContainer.setImageResource(icon)
+            val drawableId = context.resources.getIdentifier(icon?.replace("-", "_"), "drawable", context.packageName)
+
+            if (drawableId == ICON_NOT_FOUND) {
+                configDefaultIconIfEmpty()
+            } else {
+                iconContainer.setImageResource(drawableId)
+            }
+
             iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
         }
+    }
+
+    private fun configDefaultIconIfEmpty() {
+        iconContainer.setImageResource(R.drawable.filled_default_mockup)
     }
 
     fun getIcon(): ImageView {
@@ -129,7 +140,7 @@ class Shortcut @JvmOverloads constructor(
 
     private fun getIconAttribute() {
         try {
-            iconAttribute = shortcutAttributesArray.getResourceIdOrThrow(R.styleable.Shortcut_icon)
+            iconAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_iconName)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
         }
@@ -173,6 +184,7 @@ class Shortcut @JvmOverloads constructor(
     }
 
     companion object {
+        const val ICON_NOT_FOUND = 0
         const val OUTLINED = 0
         const val CONTAINED = 1
     }

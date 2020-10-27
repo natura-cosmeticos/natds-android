@@ -8,7 +8,7 @@ import org.robolectric.Robolectric
 internal class ShortcutFixture private constructor(
     private var type: Int? = null,
     private var label: String? = null,
-    private var iconPath: String? = null,
+    private var iconName: String? = null,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
 
@@ -18,7 +18,7 @@ internal class ShortcutFixture private constructor(
 
         private const val defaultType = OUTLINED
         private const val defaultLabel = "shortcut label"
-        private const val defaultIcon = "@drawable/outlined_default_mockup"
+        private const val defaultIcon = "outlined-default-mockup"
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aShortcut(): ShortcutFixture {
@@ -47,12 +47,7 @@ internal class ShortcutFixture private constructor(
     }
 
     fun withIcon(icon: String): ShortcutFixture {
-        this.iconPath = icon
-        return this
-    }
-
-    fun withContext(customContext: Context): ShortcutFixture {
-        this.context = customContext
+        this.iconName = icon
         return this
     }
 
@@ -60,7 +55,7 @@ internal class ShortcutFixture private constructor(
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.type, type.toString())
-            .addAttribute(R.attr.icon, iconPath)
+            .addAttribute(R.attr.iconName, iconName)
             .addAttribute(R.attr.textLabel, label)
             .build()
 

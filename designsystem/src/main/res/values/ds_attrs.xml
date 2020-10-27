@@ -20,7 +20,7 @@
         <attr name="colorIcon" format="color"/>
         <attr name="labelAppearance" format="reference"/>
         <attr name="textLabel" format="string"/>
-        <attr name="icon" format="reference"/>
+        <attr name="iconName" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="AppBar" >
