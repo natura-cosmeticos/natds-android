@@ -40,21 +40,4 @@ class ShortcutActivityTest {
             Truth.assertThat(counter.text).isEqualTo("Counter click 1")
         }
     }
-
-    @Test
-    fun shortcutLabelHasEllipsisWhenTextIsTooLong() {
-        shortcutActivityScenario.onActivity { shortcutActivity ->
-            val shortcutOutlined = shortcutActivity.shortcutOutlined1
-            val textContainer = shortcutOutlined.labelContainer.layout
-            var ellipsisCount = 0
-            textContainer?.apply {
-                val lines = this.lineCount
-                if(lines > 0) {
-                     ellipsisCount = this.getEllipsisCount(lines-1)
-                }
-            }
-
-            Truth.assertThat(ellipsisCount).isEqualTo(1)
-        }
-    }
 }
