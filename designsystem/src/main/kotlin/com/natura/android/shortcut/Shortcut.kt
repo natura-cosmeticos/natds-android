@@ -32,7 +32,7 @@ class Shortcut @JvmOverloads constructor(
     private var iconAttribute: String? = null
     private var shortcutAttributesArray: TypedArray
 
-    private val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
+    val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
 
