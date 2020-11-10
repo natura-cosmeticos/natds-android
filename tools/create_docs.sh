@@ -1,6 +1,8 @@
 #!/bin/sh
 mkdir ./doc/html
 
+npm install markdown-to-document -g --only=prod
+
 for file in $(
   find . -path ./fastlane -prune -o \
   -name 'README.md' -type f -print
