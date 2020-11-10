@@ -49,7 +49,7 @@ kill-all-emulators:
 	sh ./tools/kill_emulators.sh
 
 publish-docs:
-	sh ./tools/create_docs.sh
+	bash ./tools/create_docs.sh
 
 distribute-sample:
 	sh  bundle exec fastlane build
