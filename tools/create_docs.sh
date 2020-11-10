@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 mkdir ./doc/html
 
 npm install markdown-to-document -g --only=prod
