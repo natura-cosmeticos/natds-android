@@ -1,4 +1,6 @@
 #!/bin/sh
+mkdir ./doc/html
+
 for file in $(
   find . -path ./fastlane -prune -o \
   -name 'README.md' -type f -print
