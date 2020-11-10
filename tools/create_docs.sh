@@ -1,6 +1,10 @@
 #!/bin/sh
-for file in $(find . -type d \( -path ./node_modules -o -path ./android -o -path ./ios \) -prune -o -iname "*.md" -print)
+for file in $(
+  find . -path ./fastlane -prune -o \
+  -name 'README.md' -type f -print
+  find ./doc -iname "*.md" -type f -print
+)
 do
-  echo "Working on $file file name now"
-  mdtodoc $file --layout "page" --theme "github" --highlight-style "atom-one-light" --numbered-headings --code-copy --mermaid
+  echo "Working on $file file now"
+  mdtodoc $file --dest ./docs/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
 done
