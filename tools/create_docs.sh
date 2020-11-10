@@ -6,5 +6,5 @@ for file in $(
 )
 do
   echo "Working on $file file now"
-  mdtodoc $file --dest ./docs/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
+  mdtodoc $file --dest ./doc/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
 done
