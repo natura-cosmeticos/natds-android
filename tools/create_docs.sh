@@ -17,5 +17,5 @@ done
 
 for file in $(find ./doc/html -type f -print)
 do
-  sed "s/<a\(.*\)/<a target='_blank'\1/g" $file
+  sed -i "s/<a\(.*\)/<a target='_blank'\1/g" $file
 done
