@@ -12,6 +12,6 @@ do
 [[ $file = "./README.md" ]] && BASE_URL="https:\/\/github.com\/natura-cosmeticos\/natds-android\/blob\/master\/" || BASE_URL="https:\/\/github.com\/natura-cosmeticos\/natds-android\/blob\/master\/doc\/"
 
   echo "Working on $file file now"
-  sed -i -E "s/](\(.*\).md)/]($BASE_URL\1.md)/g" $file
+  sed -i "s/](\(.*\).md)/]($BASE_URL\1.md)/g" $file
   mdtodoc $file --dest ./doc/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
 done
