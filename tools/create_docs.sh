@@ -11,6 +11,6 @@ for file in $(
 do
   BASE_URL="https:\/\/natds-android-docs.netlify.app\/"
   echo "Working on $file file now"
-  sed -i "s/](\(.*\).md)/]($BASE_URL\1.md)/g" $file
+  sed -i "s/](\(.*\).md)/]($BASE_URL\1)/g" $file
   mdtodoc $file --dest ./doc/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
 done
