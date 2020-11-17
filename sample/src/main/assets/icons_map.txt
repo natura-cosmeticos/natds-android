@@ -62,6 +62,7 @@ outlined_action_download
 outlined_action_edit
 outlined_action_favorite
 outlined_action_filter
+outlined_action_frame
 outlined_action_gridsquare
 outlined_action_help
 outlined_action_history
@@ -129,6 +130,7 @@ outlined_content_exchangereports
 outlined_content_gallery
 outlined_content_gift
 outlined_content_global
+outlined_content_handcare
 outlined_content_handglobal
 outlined_content_hands
 outlined_content_health
