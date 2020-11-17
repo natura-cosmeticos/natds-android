@@ -21,7 +21,7 @@ class IconsRepositoryTest {
     fun checksIfIconsListHasTheRightSize() {
         val iconsList = iconsRepository.getIconsNamesFromFile()
 
-        assertEquals(227, iconsList.size)
+        assertEquals(229, iconsList.size)
     }
 
     @Test
@@ -35,7 +35,7 @@ class IconsRepositoryTest {
     private fun getExpectedIconsList(): List<String> {
         return (
             listOf(
-                "filled_action_add",
+                    "filled_action_add",
                     "filled_action_cancel",
                     "filled_action_check",
                     "filled_action_delete",
@@ -99,6 +99,7 @@ class IconsRepositoryTest {
                     "outlined_action_edit",
                     "outlined_action_favorite",
                     "outlined_action_filter",
+                    "outlined_action_frame",
                     "outlined_action_gridsquare",
                     "outlined_action_help",
                     "outlined_action_history",
@@ -166,6 +167,7 @@ class IconsRepositoryTest {
                     "outlined_content_gallery",
                     "outlined_content_gift",
                     "outlined_content_global",
+                    "outlined_content_handcare",
                     "outlined_content_handglobal",
                     "outlined_content_hands",
                     "outlined_content_health",
