@@ -18,7 +18,7 @@
                 android:id="@+id/containedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="?spacingSmall"
                 android:minWidth="?sizeHuge"
                 android:text="contained"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -31,8 +31,8 @@
                 android:id="@+id/textButton"
                 style="?textButton"
                 android:layout_width="wrap_content"
-                android:minWidth="?sizeHuge"
                 android:layout_height="wrap_content"
+                android:minWidth="?sizeHuge"
                 android:text="text"
                 app:layout_constraintBottom_toBottomOf="@+id/outlinedButton"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +109,7 @@
             android:id="@+id/hugeContainedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
             style="?buttonStyleLarge"
             android:text="contained" />
         <Button
@@ -116,32 +117,37 @@
             android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
             android:text="disable contained" />
         <Button
             android:id="@+id/hugeOutlinedButton"
-            style="?outlinedButtonSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            style="?outlinedButtonSmall"
             android:text="outlined" />
         <Button
             android:id="@+id/hugeOutlinedButtonDisable"
-            style="?outlinedButton"
             android:layout_width="match_parent"
-            android:enabled="false"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            style="?outlinedButton"
             android:text="disable outlined" />
         <Button
             android:id="@+id/hugeTextButton"
-            style="?textButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            style="?textButton"
             android:text="text" />
         <Button
             android:id="@+id/hugeTextButtonDisable"
-            style="?textButton"
             android:layout_width="match_parent"
-            android:enabled="false"
             android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            style="?textButton"
             android:text="disable text" />
 </LinearLayout>
 </ScrollView>
