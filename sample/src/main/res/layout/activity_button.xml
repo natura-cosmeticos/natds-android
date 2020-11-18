@@ -110,7 +110,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            style="?buttonStyleLarge"
             android:text="contained" />
         <Button
             android:id="@+id/hugeContainedButtonDisable"
@@ -124,7 +123,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            style="?outlinedButtonSmall"
+            style="?outlinedButton"
             android:text="outlined" />
         <Button
             android:id="@+id/hugeOutlinedButtonDisable"
