@@ -224,6 +224,9 @@
 
     <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Light" parent="Widget.DS.Button.Light">
@@ -240,6 +243,9 @@
 
     <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Dark" parent="Widget.DS.Button.Dark">
@@ -264,11 +270,15 @@
         <item name="android:textColor">@color/button_text_color_selector_v23</item>
         <item name="strokeColor">@color/stroke_color_selector_v23</item>
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.TextButton.V23" parent="Widget.DS.Button.TextButton.V23">
@@ -280,6 +290,9 @@
     <style name="Widget.DS.Button.TextButton.V23" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/button_text_color_selector_v23</item>
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.TextButton.V23" parent="Widget.DS.Button.TextButton.V23">
@@ -297,6 +310,9 @@
     <style name="Widget.DS.Button.TextButton.Light" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/button_text_color_selector_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.TextButton.Light" parent="Widget.DS.Button.TextButton.Light">
@@ -314,6 +330,9 @@
     <style name="Widget.DS.Button.TextButton.Dark" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/button_text_color_selector_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.TextButton.Dark" parent="Widget.DS.Button.TextButton.Dark">

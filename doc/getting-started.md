@@ -102,6 +102,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   ### How to Use Components
   - [App Bar Top](app-bar-top.md)
   - [Badge](badge.md)
+  - [Button](button.md)
   - [Dialog](dialog.md)
   - Error
   - [Expansion Panel](expansion-panel.md)
