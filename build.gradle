@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.4.10'
-    ext.android_tools_gradle = '3.5.1'
+    ext.android_tools_gradle = '4.1.1'
     ext.screen_shot_plugin = '0.11.0'
     repositories {
         google()
