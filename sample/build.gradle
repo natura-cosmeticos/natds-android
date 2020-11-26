@@ -49,23 +49,25 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':designsystem')
-    implementation project(':icons')
+
+    implementation "com.natura:icons:$rootProject.iconsVersion"
 
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "com.google.android.material:material:$rootProject.materialVersion"
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
 
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+
     androidTestImplementation "androidx.test.ext:junit:$rootProject.junitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
-    testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
     androidTestImplementation "androidx.test:rules:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:runner:$rootProject.androidXTestVersion"
     androidTestImplementation "androidx.test:core-ktx:$rootProject.testCoreKtxVersion"
     androidTestImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
+    
+    testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
     testImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoIntentsVersion"
     testImplementation "io.mockk:mockk:$rootProject.mockKVersion"
     testImplementation "androidx.test.ext:truth:$rootProject.truthVersion"
