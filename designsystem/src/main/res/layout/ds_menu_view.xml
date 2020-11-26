@@ -36,7 +36,7 @@
         android:id="@+id/ds_menu_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/outlined_default_mockup"
+        app:srcCompat="@drawable/default_icon_outlined_default_mockup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toTopOf="parent"

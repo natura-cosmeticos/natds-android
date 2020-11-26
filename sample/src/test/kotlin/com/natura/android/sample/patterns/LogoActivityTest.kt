@@ -104,7 +104,7 @@ class LogoActivityTest {
             val logo = logoActivity.logoVertical
             val logoShadow = shadowOf(logo.drawable)
 
-            assertEquals(R.drawable.outlined_action_cancel, logoShadow.createdFromResId)
+            assertEquals(R.drawable.default_icon_outlined_action_cancel, logoShadow.createdFromResId)
         }
     }
 
@@ -116,7 +116,7 @@ class LogoActivityTest {
             val logo = logoActivity.logoVertical
             val logoShadow = shadowOf(logo.drawable)
 
-            assertEquals(R.drawable.outlined_action_cancel, logoShadow.createdFromResId)
+            assertEquals(R.drawable.default_icon_outlined_action_cancel, logoShadow.createdFromResId)
         }
     }
 

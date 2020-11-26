@@ -32,7 +32,7 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item?.itemId == R.id.darkThemeButton) {
+        if (item.itemId == R.id.darkThemeButton) {
             setDarkModeButtonIcon(darkMode, item)
             darkMode = !darkMode
             restartScreenToApplyTheme(darkMode)
