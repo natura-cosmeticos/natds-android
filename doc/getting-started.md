@@ -100,17 +100,18 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   💡 **More info about [typography here](typography-token.md)**
 
   ### How to Use Components
-  - [App Bar Top](doc/app-bar-top.md)
-  - [Badge](doc/badge.md)
-  - [Dialog](doc/dialog.md)
+  - [App Bar Top](app-bar-top.md)
+  - [Badge](badge.md)
+  - [Button](button.md)
+  - [Dialog](dialog.md)
   - Error
-  - [Expansion Panel](doc/expansion-panel.md)
+  - [Expansion Panel](expansion-panel.md)
   - Ext
   - Icon
-  - [Logo](doc/logo.md)
+  - [Logo](logo.md)
   - Menu
   - Navigation View
-  - [Shortcut](doc/shortcut.md)
+  - [Shortcut](shortcut.md)
   - [Tag](tag.md)
   - Text Field
 
