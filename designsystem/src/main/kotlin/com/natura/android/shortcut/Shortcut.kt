@@ -65,7 +65,7 @@ class Shortcut @JvmOverloads constructor(
 
     fun setIcon(icon: String?) {
         icon?.apply {
-            val drawableId = context.resources.getIdentifier(icon?.replace("-", "_"), "drawable", context.packageName)
+            val drawableId = context.resources.getIdentifier(icon.replace("-", "_"), "drawable", context.packageName)
 
             if (drawableId == ICON_NOT_FOUND) {
                 configDefaultIconIfEmpty()
@@ -78,7 +78,7 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun configDefaultIconIfEmpty() {
-        iconContainer.setImageResource(R.drawable.filled_default_mockup)
+        iconContainer.setImageResource(R.drawable.default_icon_outlined_default_mockup)
     }
 
     fun getIcon(): ImageView {

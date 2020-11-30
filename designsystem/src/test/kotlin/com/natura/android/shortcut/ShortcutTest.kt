@@ -52,10 +52,10 @@ class ShortcutTest {
     fun checksIfShortcutIconChangesWhenSetIcon() {
         shortcut = buildShortcutOutlined()
 
-        shortcut.setIcon("outlined-action-add")
+        shortcut.setIcon("default-icon-outlined-action-mic")
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
-        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_navigation_arrowtop)
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_action_mic)
     }
 
     @Test
