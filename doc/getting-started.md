@@ -41,7 +41,7 @@ Currently android lib provide the following tokens:
 
 - Border radius​
 - [Color​](color.md)
-- Elevation​
+- [Elevation​](elevation.md)
 - [Icons (drawables)](icon-token.md)
 - Opacity​
 - [Size​](size.md)
