@@ -45,7 +45,7 @@ Currently android lib provide the following tokens:
 - [Icons (drawables)](icon-token.md)
 - Opacity​
 - [Size​](size.md)
-- Spacing​
+- [Spacing​](spacing.md)
 - [Typography](typography-token.md)
 
 And how can this be used by applications?
