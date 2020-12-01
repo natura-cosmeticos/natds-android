@@ -44,7 +44,7 @@ Currently android lib provide the following tokens:
 - Elevation​
 - [Icons (drawables)](icon-token.md)
 - Opacity​
-- Size​
+- [Size​](size.md)
 - Spacing​
 - [Typography](typography-token.md)
 
@@ -104,10 +104,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [Badge](badge.md)
   - [Button](button.md)
   - [Dialog](dialog.md)
-  - Error
   - [Expansion Panel](expansion-panel.md)
-  - Ext
-  - Icon
   - [Logo](logo.md)
   - Menu
   - Navigation View
