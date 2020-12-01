@@ -39,7 +39,7 @@ Now you get how to access DS themes, let's talk about the most basic portion of 
 We call design tokens all the basic attributes of design systems. For example: colors, ypography definitions, etc.
 Currently android lib provide the following tokens:
 
-- Border radius​
+- [Border radius​](border-radius.md)
 - [Color​](color.md)
 - [Elevation​](elevation.md)
 - [Icons (drawables)](icon-token.md)
