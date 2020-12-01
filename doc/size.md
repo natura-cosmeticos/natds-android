@@ -32,7 +32,7 @@ Nat DS Android supports the following size tokens:
    - `sizelarge_x` = 72dp
    - `sizelarge_xx` = 80dp
    - `sizelarge_xxx` = 88dp
-   - `sizehuge` = 6dp
+   - `sizehuge` = 96dp
    - `sizehuge_x` = 128dp
    - `sizehuge_xx` = 144dp
    - `sizehuge_xxx` = 192dp
