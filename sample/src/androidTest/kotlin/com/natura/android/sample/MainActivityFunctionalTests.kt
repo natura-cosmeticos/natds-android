@@ -190,7 +190,7 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenLoadingScreenWhenTapOnItButton() {
+    fun shouldOpenProgressIndicatorScreenWhenTapOnItButton() {
         onView(withId(R.id.progressIndicatorButton)).perform(scrollTo())
         onView(withId(R.id.progressIndicatorButton)).perform(click())
 
