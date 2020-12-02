@@ -87,7 +87,7 @@
             android:name=".tokens.icons.DrawableActivity"
             android:theme="@style/Theme.Natura" />
         <activity
-            android:name=".patterns.LoadingActivity"
+            android:name=".components.ProgressIndicatorActivity"
             android:theme="@style/Theme.Natura" />
         <activity
             android:name=".components.ValueTextHighlightActivity"
