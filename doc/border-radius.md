@@ -15,11 +15,10 @@ Nat DS Android provides two ways to use border radius:
 
 #### Border radius by background drawable
 Sometimes to set a border radius it necessary to change the background drawable of the component. To do that with Nat DS Android, its possible to use the following shapes:
-
-    - `ds_border_radius_none.xml`
-    - `ds_border_radius_small.xml`
-    - `ds_border_radius_medium.xml`
-    - `ds_border_radius_large.xml`
+- `ds_border_radius_none.xml`
+- `ds_border_radius_small.xml`
+- `ds_border_radius_medium.xml`
+- `ds_border_radius_large.xml`
 
 #### Border radius by component attribute
 However, some components can have it border radius set by an attribute. For example CardView has `app:cardCornerRadius` attribute
