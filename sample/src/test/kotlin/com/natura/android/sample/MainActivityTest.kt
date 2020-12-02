@@ -4,7 +4,7 @@ import android.widget.Button
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
-import com.natura.android.sample.patterns.LoadingActivity
+import com.natura.android.sample.components.ProgressIndicatorActivity
 import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
@@ -151,14 +151,14 @@ class MainActivityTest {
     }
 
     @Test
-    fun checksLoadingButtonClickStartsLoadingScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnLoader)
+    fun checksProgressIndicatorButtonClickStartsProgressIndicatorScreen() {
+        val button = mainActivity.findViewById<Button>(R.id.progressIndicatorButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(LoadingActivity::class.java, shadowIntent.intentClass)
+        assertEquals(ProgressIndicatorActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test

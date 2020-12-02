@@ -191,8 +191,8 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenLoadingScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnLoader)).perform(scrollTo())
-        onView(withId(R.id.btnLoader)).perform(click())
+        onView(withId(R.id.progressIndicatorButton)).perform(scrollTo())
+        onView(withId(R.id.progressIndicatorButton)).perform(click())
 
         onView(withText("Loading Pattern")).check(matches(isDisplayed()))
     }
