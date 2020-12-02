@@ -194,7 +194,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.progressIndicatorButton)).perform(scrollTo())
         onView(withId(R.id.progressIndicatorButton)).perform(click())
 
-        onView(withText("Loading Pattern")).check(matches(isDisplayed()))
+        onView(withText("Progress Indicator")).check(matches(isDisplayed()))
     }
 
     @Test
