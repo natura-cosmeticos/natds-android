@@ -7,9 +7,7 @@ Buttons allow users to take actions, and make choices, with a single tap.
 Using it is a good way to increase visual consistency in apps.
 
 ### When should I use it?
-You should use buttons according to its variantions: [check buttons variantions](https://zeroheight.com/28db352be/p/39708f-button/b/51a722)
-
-### How to use it?
+You should use buttons according to its variations: [check buttons variations](https://zeroheight.com/28db352be/p/39708f-button/b/51a722)
 
 ![Button Avon](buttonsAvon.png)
 ![Button Natura](buttonsNatura.png)
