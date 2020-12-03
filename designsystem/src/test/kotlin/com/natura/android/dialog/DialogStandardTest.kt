@@ -80,12 +80,12 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            R.layout.standard_dialog_content).create()
+            R.layout.test_dialog_content).create()
     }
 
     private fun createDialogWithCustomContentFromView(): DialogStandard {
         val view = ImageView(context)
-        view.setImageResource(R.drawable.filled_action_add)
+        view.setImageResource(R.drawable.default_icon_outlined_default_mockup)
 
         return DialogStandard(
             context,
