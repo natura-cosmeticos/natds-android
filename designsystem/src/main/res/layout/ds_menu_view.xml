@@ -36,7 +36,7 @@
         android:id="@+id/ds_menu_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/outlined_default_mockup"
+        app:srcCompat="@drawable/default_icon_outlined_default_mockup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/guide_start"
         app:layout_constraintTop_toTopOf="parent"
@@ -96,6 +96,6 @@
         app:layout_constraintBottom_toBottomOf="@id/ds_menu_label"
         app:layout_constraintEnd_toEndOf="@+id/ds_menu_view_background"
         app:layout_constraintTop_toTopOf="@id/ds_menu_label"
-        app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom"
+        app:srcCompat="@drawable/default_icon_outlined_navigation_arrowbottom"
         app:tint="@color/colorBrdNatGray" />
 </merge>

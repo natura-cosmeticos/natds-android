@@ -58,5 +58,6 @@ excluded_words:
   - xhdpi
   - xxhdpi
   - xxxhdpi
+  - natds-commons
 
 spellcheck_filenames: true
