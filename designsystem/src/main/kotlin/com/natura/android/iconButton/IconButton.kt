@@ -11,8 +11,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
+import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
+import com.natura.android.extensions.getIconResourceIdFromName
 
 class IconButton @JvmOverloads constructor(
     context: Context,
@@ -22,7 +24,7 @@ class IconButton @JvmOverloads constructor(
 
     private var iconButtonAttributesArray: TypedArray
     private var iconColorResourceAttribute = 0
-    private var iconAttribute: Int? = null
+    private var iconNameAttribute: String? = null
     private var sizeAttribute: Int? = null
     private var colorAttribute: Int? = null
 
@@ -52,9 +54,10 @@ class IconButton @JvmOverloads constructor(
         iconButtonAttributesArray.recycle()
     }
 
-    fun setIcon(icon: Int?) {
+    fun setIcon(icon: String?) {
         icon?.apply {
-            iconButton.setImageResource(icon)
+            val iconDrawableId = context.resources.getIconResourceIdFromName(context, icon)
+            iconButton.setImageResource(iconDrawableId)
         }
     }
 
@@ -79,9 +82,9 @@ class IconButton @JvmOverloads constructor(
 
     private fun getIconAttribute() {
         try {
-            iconAttribute = iconButtonAttributesArray.getResourceIdOrThrow(R.styleable.IconButton_iconName)
+            iconNameAttribute = iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton icon(drawable).", e))
+            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.", e))
         }
     }
 
@@ -145,7 +148,7 @@ class IconButton @JvmOverloads constructor(
 
     private fun configureColor(color: Int?) {
 
-        setIcon(iconAttribute)
+        setIcon(iconNameAttribute)
         iconButton.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
 
         color?.apply {
