@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExpansionPanelActivity::class.java))
         }
 
-        btnIconButton.setOnClickListener {
+        iconButtonButton.setOnClickListener {
             startActivity(Intent(this, IconButtonActivity::class.java))
         }
 
