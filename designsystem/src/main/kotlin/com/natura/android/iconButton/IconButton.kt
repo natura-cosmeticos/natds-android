@@ -5,6 +5,7 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -25,7 +26,7 @@ class IconButton @JvmOverloads constructor(
     private var sizeAttribute: Int? = null
     private var colorAttribute: Int? = null
 
-    private val iconButton by lazy { findViewById<ImageView>(R.id.iconButton) }
+    private val iconButton by lazy { findViewById<ImageButton>(R.id.iconButton) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonMainContainer) }
 
     override fun setEnabled(enabled: Boolean) {
