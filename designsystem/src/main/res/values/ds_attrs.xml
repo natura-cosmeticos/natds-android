@@ -96,7 +96,7 @@
             <enum name="medium" value="1"/>
         </attr>
         <attr name="android:enabled" />
-        <attr name="buttonIcon" format="reference"/>
+        <attr name="iconName" />
         <attr name="iconColor" format="reference"/>
         <attr name="buttonColor" format="enum">
             <enum name="defaultColor" value="0"/>

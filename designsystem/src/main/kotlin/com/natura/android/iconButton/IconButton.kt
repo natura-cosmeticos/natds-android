@@ -79,7 +79,7 @@ class IconButton @JvmOverloads constructor(
 
     private fun getIconAttribute() {
         try {
-            iconAttribute = iconButtonAttributesArray.getResourceIdOrThrow(R.styleable.IconButton_buttonIcon)
+            iconAttribute = iconButtonAttributesArray.getResourceIdOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton icon(drawable).", e))
         }
