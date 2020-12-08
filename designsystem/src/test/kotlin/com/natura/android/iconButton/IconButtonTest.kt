@@ -1,31 +1,20 @@
 package com.natura.android.iconButton
 
-import android.content.Context
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
 import com.natura.android.R
-import org.junit.Before
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows
+import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
-@Ignore
+@Config(sdk = [23, 28])
 class IconButtonTest {
-
-    private lateinit var iconButton: IconButton
-    private lateinit var context: Context
-
-    @Before
-    fun setUp() {
-        context = ApplicationProvider.getApplicationContext()
-    }
 
     @Test
     fun checksIfIconButtonPrimaryColorIconWasSet() {
-        iconButton = buildIconButtonPrimary()
+        val iconButton = buildIconButtonPrimary()
 
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
@@ -34,7 +23,7 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonDefaultColorIconWasSet() {
-        iconButton = buildIconButtonDefault()
+        val iconButton = buildIconButtonDefault()
 
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
@@ -43,7 +32,7 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonMediumSizeWasSet() {
-        iconButton = buildIconButtonMedium()
+       val iconButton = buildIconButtonMedium()
 
         val size = iconButton.getSize()
 
@@ -52,7 +41,7 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonSmallSizeWasSet() {
-        iconButton = buildIconButtonSmall()
+       val iconButton = buildIconButtonSmall()
 
         val size = iconButton.getSize()
 
@@ -61,9 +50,9 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonIconChangesWhenSetIcon() {
-        iconButton = buildIconButtonDefault()
+        val iconButton = buildIconButtonDefault()
 
-        iconButton.setIcon(R.drawable.outlined_action_add)
+        iconButton.setIcon("outlined_action_add")
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
         Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_action_add)
@@ -71,7 +60,7 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonPrimaryColorWasSet() {
-        iconButton = buildIconButtonPrimary()
+        val iconButton = buildIconButtonPrimary()
 
         val color = iconButton.getColor()
 
@@ -80,7 +69,7 @@ class IconButtonTest {
 
     @Test
     fun checksIfIconButtonDefaultColorWasSet() {
-        iconButton = buildIconButtonDefault()
+        val iconButton = buildIconButtonDefault()
 
         val color = iconButton.getColor()
 
@@ -88,17 +77,26 @@ class IconButtonTest {
     }
 
     @Test
-    fun checksIfIconButtonColorWasDisabled() {
-        iconButton = buildIconButtonDisabled()
+    fun `Given disabled flag is false, when IconButton is created, isEnabled attribute is false`() {
+        val iconButton = buildIconButtonDisabled()
 
         val enabled = iconButton.isEnabled
 
         Truth.assertThat(enabled).isEqualTo(false)
     }
 
+    @Test
+    fun `Given disabled flag is false, when IconButton is created, IconButton color has an alpha applied`() {
+        val iconButton = buildIconButtonDisabled()
+
+        val iconButtonAlpha = iconButton.getIcon().imageAlpha
+
+        Truth.assertThat(iconButtonAlpha).isEqualTo(OPACITY05_BASE255)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingIconButtonWithoutAnIcon() {
-        iconButton = IconButtonFixture
+       IconButtonFixture
             .aEmptyIconButton()
             .withSizeMedium()
             .withColorPrimary()
@@ -107,19 +105,19 @@ class IconButtonTest {
 
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingIconButtonWithoutASize() {
-        iconButton = IconButtonFixture
+       IconButtonFixture
             .aEmptyIconButton()
             .withColorPrimary()
-            .withIcon("@drawable/outlined_default_mockup")
+            .withIcon("outlined_default_mockup")
             .build()
     }
 
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingIconButtonCutWithoutAColor() {
-        iconButton = IconButtonFixture
+        IconButtonFixture
             .aEmptyIconButton()
             .withSizeSmall()
-            .withIcon("@drawable/outlined_default_mockup")
+            .withIcon("outlined_default_mockup")
             .build()
     }
 
@@ -163,5 +161,6 @@ class IconButtonTest {
         private const val MEDIUM = 1
         private const val DEFAULT = 0
         private const val PRIMARY = 1
+        private const val OPACITY05_BASE255 = 61
     }
 }

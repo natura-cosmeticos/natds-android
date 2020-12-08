@@ -14,6 +14,7 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
+import com.natura.android.extensions.getAlphaAsBase255
 import com.natura.android.extensions.getIconResourceIdFromName
 
 class IconButton @JvmOverloads constructor(
@@ -30,12 +31,6 @@ class IconButton @JvmOverloads constructor(
 
     private val iconButton by lazy { findViewById<ImageButton>(R.id.iconButton) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonMainContainer) }
-
-    override fun setEnabled(enabled: Boolean) {
-        iconButton.isEnabled = enabled
-
-        super.setEnabled(enabled)
-    }
 
     init {
         try {
@@ -54,6 +49,22 @@ class IconButton @JvmOverloads constructor(
         iconButtonAttributesArray.recycle()
     }
 
+    override fun setEnabled(enabled: Boolean) {
+        iconButton.isEnabled = enabled
+        if(!enabled) {
+            setDisabledColor()
+        }
+        super.setEnabled(enabled)
+    }
+
+    private fun setDisabledColor() {
+        val typedValue = TypedValue()
+        val theme = context.theme
+        theme.resolveAttribute(R.attr.opacity05, typedValue, true)
+
+        iconButton.imageAlpha = typedValue.getAlphaAsBase255()
+    }
+
     fun setIcon(icon: String?) {
         icon?.apply {
             val iconDrawableId = context.resources.getIconResourceIdFromName(context, icon)
@@ -61,7 +72,7 @@ class IconButton @JvmOverloads constructor(
         }
     }
 
-    fun getIcon(): ImageView {
+    fun getIcon(): ImageButton {
         return iconButton
     }
 
@@ -115,9 +126,6 @@ class IconButton @JvmOverloads constructor(
                 DEFAULT -> setColorAttribute(R.attr.iconButtonDefault)
             }
 
-            if (!isEnabled) {
-                setColorAttribute(R.attr.iconButtonDisabled)
-            }
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
