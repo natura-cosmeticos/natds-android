@@ -7,9 +7,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows
 import org.robolectric.annotation.Config
-
+@Config(sdk = [28])
 @RunWith(AndroidJUnit4::class)
-@Config(sdk = [23, 28])
 class IconButtonTest {
 
     @Test
@@ -28,24 +27,6 @@ class IconButtonTest {
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
         Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
-    }
-
-    @Test
-    fun checksIfIconButtonMediumSizeWasSet() {
-       val iconButton = buildIconButtonMedium()
-
-        val size = iconButton.getSize()
-
-        Truth.assertThat(size).isEqualTo(MEDIUM)
-    }
-
-    @Test
-    fun checksIfIconButtonSmallSizeWasSet() {
-       val iconButton = buildIconButtonSmall()
-
-        val size = iconButton.getSize()
-
-        Truth.assertThat(size).isEqualTo(SMALL)
     }
 
     @Test
@@ -98,17 +79,7 @@ class IconButtonTest {
     fun shouldThrowsExceptionWhenBuildingIconButtonWithoutAnIcon() {
        IconButtonFixture
             .aEmptyIconButton()
-            .withSizeMedium()
             .withColorPrimary()
-            .build()
-    }
-
-    @Test(expected = IllegalArgumentException::class)
-    fun shouldThrowsExceptionWhenBuildingIconButtonWithoutASize() {
-       IconButtonFixture
-            .aEmptyIconButton()
-            .withColorPrimary()
-            .withIcon("outlined_default_mockup")
             .build()
     }
 
@@ -116,7 +87,6 @@ class IconButtonTest {
     fun shouldThrowsExceptionWhenBuildingIconButtonCutWithoutAColor() {
         IconButtonFixture
             .aEmptyIconButton()
-            .withSizeSmall()
             .withIcon("outlined_default_mockup")
             .build()
     }
@@ -135,20 +105,6 @@ class IconButtonTest {
             .build()
     }
 
-    private fun buildIconButtonSmall(): IconButton {
-        return IconButtonFixture
-            .aIconButton()
-            .withSizeSmall()
-            .build()
-    }
-
-    private fun buildIconButtonMedium(): IconButton {
-        return IconButtonFixture
-            .aIconButton()
-            .withSizeMedium()
-            .build()
-    }
-
     private fun buildIconButtonDisabled(): IconButton {
         return IconButtonFixture
             .aIconButton()
@@ -157,8 +113,6 @@ class IconButtonTest {
     }
 
     companion object {
-        private const val SMALL = 0
-        private const val MEDIUM = 1
         private const val DEFAULT = 0
         private const val PRIMARY = 1
         private const val OPACITY05_BASE255 = 61

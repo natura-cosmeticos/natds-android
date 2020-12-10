@@ -2,22 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/iconButtonContainer"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/iconButtonMainContainer"
+    android:padding="?spacingMicro"
     xmlns:tools="http://schemas.android.com/tools"
     tools:theme="@style/Theme.Natura">
 
-    <ImageButton
-        android:id="@+id/iconButton"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="center"
+    <ImageView
+        android:id="@+id/iconButtonIcon"
+        android:layout_width="?sizeStandard"
+        android:layout_height="?sizeStandard"
+        android:scaleType="fitXY"
         android:adjustViewBounds="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:src="@drawable/outlined_default_mockup"/>
-    
 </androidx.constraintlayout.widget.ConstraintLayout>

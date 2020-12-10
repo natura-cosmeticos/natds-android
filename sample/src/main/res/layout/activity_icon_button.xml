@@ -1,131 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
     android:id="@+id/iconButtonContainer"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonDefaultSmall"
+        android:id="@+id/iconButtonDefault"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="70dp"
-        app:size="small"
+        app:buttonColor="defaultColor"
         app:iconName="outlined_action_calendar"
-        app:buttonColor="defaultColor" />
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/iconButtonDefaultSmallLabel"
+        android:id="@+id/iconButtonDefaultLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
-        android:text="Small / Default"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Default"
         android:textAlignment="center"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="@+id/iconButtonDefaultSmall"
-        app:layout_constraintStart_toStartOf="@+id/iconButtonDefaultSmall"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonDefaultSmall" />
+        android:layout_gravity="center_horizontal"/>
 
     <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonPrimarySmall"
+        android:id="@+id/iconButtonPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="70dp"
-        android:layout_marginTop="70dp"
-        app:size="small"
+        app:buttonColor="primaryColor"
         app:iconName="outlined_action_calendar"
-        app:buttonColor="primaryColor" />
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/iconButtonPrimarySmallLabel"
+        android:id="@+id/iconButtonPrimaryLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Primary"
         android:textAlignment="center"
-        android:text="Small / Primary"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="@+id/iconButtonPrimarySmall"
-        app:layout_constraintStart_toStartOf="@+id/iconButtonPrimarySmall"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonPrimarySmall" />
+        android:layout_gravity="center_horizontal"/>
 
     <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonDefaultMedium"
+        android:id="@+id/iconButtonDefaultDisabled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="70dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonDefaultSmallLabel"
-        app:size="medium"
-        app:iconName="outlined_action_calendar"
-        app:buttonColor="defaultColor" />
-
-    <TextView
-        android:id="@+id/iconButtonDefaultMediumLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
-        android:textAlignment="center"
-        android:text="Medium / Default"
-        android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="@+id/iconButtonDefaultMedium"
-        app:layout_constraintStart_toStartOf="@+id/iconButtonDefaultMedium"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonDefaultMedium"/>
-
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonPrimaryMedium"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:layout_marginTop="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iconButtonPrimarySmallLabel"
-        app:size="medium"
-        app:iconName="outlined_action_calendar"
-        app:buttonColor="primaryColor" />
-
-    <TextView
-        android:id="@+id/iconButtonPrimaryMediumLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
-        android:textAlignment="center"
-        android:text="Medium / Primary"
-        android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="@+id/iconButtonPrimaryMedium"
-        app:layout_constraintStart_toStartOf="@+id/iconButtonPrimaryMedium"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonPrimaryMedium" />
-
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonDisabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonPrimaryMediumLabel"
-        app:size="small"
+        app:buttonColor="defaultColor"
         android:enabled="false"
         app:iconName="outlined_action_calendar"
-        app:buttonColor="defaultColor" />
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
-        android:id="@+id/iconButtonDisabledLabel"
+        android:id="@+id/iconButtonDefaultLabelDisabled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Default disabled"
         android:textAlignment="center"
-        android:text="Disabled"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="@+id/iconButtonDisabled"
-        app:layout_constraintStart_toStartOf="@+id/iconButtonDisabled"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@+id/iconButtonDisabled" />
+        android:layout_gravity="center_horizontal"/>
 
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonPrimaryDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="primaryColor"
+        android:enabled="false"
+        app:iconName="outlined_action_calendar"
+        android:layout_gravity="center_horizontal"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/iconButtonPrimaryLabelDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Primary disabled"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceCaption"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

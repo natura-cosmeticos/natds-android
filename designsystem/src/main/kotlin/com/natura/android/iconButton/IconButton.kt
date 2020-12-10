@@ -5,8 +5,8 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.View
-import android.widget.ImageButton
 import android.widget.ImageView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
@@ -26,11 +26,10 @@ class IconButton @JvmOverloads constructor(
     private var iconButtonAttributesArray: TypedArray
     private var iconColorResourceAttribute = 0
     private var iconNameAttribute: String? = null
-    private var sizeAttribute: Int? = null
     private var colorAttribute: Int? = null
 
-    private val iconButton by lazy { findViewById<ImageButton>(R.id.iconButton) }
-    private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonMainContainer) }
+    private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
+    private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonContainer) }
 
     init {
         try {
@@ -43,7 +42,6 @@ class IconButton @JvmOverloads constructor(
 
         getIconButtonAttributes()
         getAttributesFromTheme()
-        configureSize(sizeAttribute)
         configureColor(colorAttribute)
 
         iconButtonAttributesArray.recycle()
@@ -72,12 +70,8 @@ class IconButton @JvmOverloads constructor(
         }
     }
 
-    fun getIcon(): ImageButton {
+    fun getIcon(): ImageView {
         return iconButton
-    }
-
-    fun getSize(): Int? {
-        return sizeAttribute
     }
 
     fun getColor(): Int? {
@@ -86,7 +80,6 @@ class IconButton @JvmOverloads constructor(
 
     private fun getIconButtonAttributes() {
         getIconAttribute()
-        getSizeAttribute()
         getColorAttribute()
         getEnabledAttribute()
     }
@@ -96,14 +89,6 @@ class IconButton @JvmOverloads constructor(
             iconNameAttribute = iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.", e))
-        }
-    }
-
-    private fun getSizeAttribute() {
-        try {
-            sizeAttribute = iconButtonAttributesArray.getIntOrThrow(R.styleable.IconButton_size)
-        } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton size.", e))
         }
     }
 
@@ -145,15 +130,6 @@ class IconButton @JvmOverloads constructor(
             }
     }
 
-    private fun configureSize(size: Int?) {
-        size?.apply {
-            when (this) {
-                SMALL -> setSmallSize()
-                MEDIUM -> setMediumSize()
-            }
-        }
-    }
-
     private fun configureColor(color: Int?) {
 
         setIcon(iconNameAttribute)
@@ -161,35 +137,13 @@ class IconButton @JvmOverloads constructor(
 
         color?.apply {
             when (this) {
-                PRIMARY -> iconButton.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_primary, context.theme)
-                DEFAULT -> iconButton.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_default, context.theme)
+                PRIMARY -> iconButtonContainer.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_primary, context.theme)
+                DEFAULT -> iconButtonContainer.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_default, context.theme)
             }
         }
     }
 
-    private fun setSmallSize() {
-        var containerParameter = iconButtonContainer.layoutParams as LayoutParams
-
-        containerParameter.width = getDimenFromTheme(R.attr.sizeSemi)
-        containerParameter.height = getDimenFromTheme(R.attr.sizeSemi)
-    }
-
-    private fun setMediumSize() {
-        var containerParameter = iconButtonContainer.layoutParams as LayoutParams
-
-        containerParameter.width = getDimenFromTheme(R.attr.sizeSemiX)
-        containerParameter.height = getDimenFromTheme(R.attr.sizeSemiX)
-    }
-
-    private fun getDimenFromTheme(attributeName: Int): Int {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(attributeName, typedValue, true)
-        return typedValue.getDimension(context.resources.displayMetrics).toInt()
-    }
-
     companion object {
-        const val SMALL = 0
-        const val MEDIUM = 1
         const val DEFAULT = 0
         const val PRIMARY = 1
     }

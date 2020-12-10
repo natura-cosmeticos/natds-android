@@ -91,10 +91,6 @@
     </declare-styleable>
 
     <declare-styleable name="IconButton">
-        <attr name="size" format="enum">
-            <enum name="small" value="0"/>
-            <enum name="medium" value="1"/>
-        </attr>
         <attr name="android:enabled" />
         <attr name="iconName" />
         <attr name="iconColor" format="reference"/>
