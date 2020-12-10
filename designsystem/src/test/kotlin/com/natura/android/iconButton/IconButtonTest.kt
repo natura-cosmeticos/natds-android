@@ -77,7 +77,7 @@ class IconButtonTest {
 
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingIconButtonWithoutAnIcon() {
-       IconButtonFixture
+        IconButtonFixture
             .aEmptyIconButton()
             .withColorPrimary()
             .build()

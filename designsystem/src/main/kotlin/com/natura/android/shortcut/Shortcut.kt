@@ -66,7 +66,7 @@ class Shortcut @JvmOverloads constructor(
 
     fun setIcon(icon: String?) {
         icon?.apply {
-            val drawableId = context.resources.getIconResourceIdFromName(context, icon)
+            val drawableId = getIconResourceIdFromName(context, icon)
 
             iconContainer.setImageResource(drawableId)
             iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)

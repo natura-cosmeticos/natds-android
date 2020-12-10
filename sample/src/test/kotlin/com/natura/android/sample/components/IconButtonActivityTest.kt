@@ -34,7 +34,4 @@ internal class IconButtonActivityTest {
             Assert.assertEquals(32, iconButtonWidth)
         }
     }
-
-
 }
-

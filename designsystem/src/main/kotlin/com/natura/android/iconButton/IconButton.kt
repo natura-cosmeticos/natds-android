@@ -52,7 +52,7 @@ class IconButton @JvmOverloads constructor(
 
     override fun setEnabled(enabled: Boolean) {
         iconButton.isEnabled = enabled
-        if(!enabled) {
+        if (!enabled) {
             setDisabledColor()
         }
         super.setEnabled(enabled)
@@ -68,7 +68,7 @@ class IconButton @JvmOverloads constructor(
 
     fun setIcon(icon: String?) {
         icon?.apply {
-            val iconDrawableId = context.resources.getIconResourceIdFromName(context, icon)
+            val iconDrawableId = getIconResourceIdFromName(context, icon)
             iconButton.setImageResource(iconDrawableId)
         }
     }
@@ -119,7 +119,6 @@ class IconButton @JvmOverloads constructor(
                     setDrawableRippleAttribute(R.attr.iconButtonDefault)
                 }
             }
-
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
