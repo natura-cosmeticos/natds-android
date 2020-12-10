@@ -355,10 +355,12 @@
 
     <style name="Widget.DS.IconButton.Primary" parent="Widget.DS.IconButton">
         <item name="iconColor">?colorPrimary</item>
+        <item name="rippleDrawable">@drawable/iconbutton_ripple_background_primary</item>
     </style>
 
     <style name="Widget.DS.IconButton.Default" parent="Widget.DS.IconButton">
         <item name="iconColor">?colorHighEmphasis</item>
+        <item name="rippleDrawable">@drawable/iconbutton_ripple_background_default</item>
     </style>
 
     <!-- SHORTCUT STYLES -->

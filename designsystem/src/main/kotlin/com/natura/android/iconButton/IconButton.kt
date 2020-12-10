@@ -3,10 +3,11 @@ package com.natura.android.iconButton
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.Log
+import android.util.Log.WARN
 import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
-import androidx.appcompat.widget.AppCompatImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
@@ -24,7 +25,10 @@ class IconButton @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var iconButtonAttributesArray: TypedArray
+
     private var iconColorResourceAttribute = 0
+    private var rippleDrawableResourceAttribute = 0
+
     private var iconNameAttribute: String? = null
     private var colorAttribute: Int? = null
 
@@ -40,9 +44,10 @@ class IconButton @JvmOverloads constructor(
 
         iconButtonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.IconButton)
 
-        getIconButtonAttributes()
-        getAttributesFromTheme()
-        configureColor(colorAttribute)
+        getAttributes()
+        getAppereanceAttributesFromTheme()
+
+        configureAppereance()
 
         iconButtonAttributesArray.recycle()
     }
@@ -78,13 +83,13 @@ class IconButton @JvmOverloads constructor(
         return colorAttribute
     }
 
-    private fun getIconButtonAttributes() {
-        getIconAttribute()
+    private fun getAttributes() {
+        getIconName()
         getColorAttribute()
         getEnabledAttribute()
     }
 
-    private fun getIconAttribute() {
+    private fun getIconName() {
         try {
             iconNameAttribute = iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
@@ -104,16 +109,36 @@ class IconButton @JvmOverloads constructor(
         isEnabled = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
     }
 
-    private fun getAttributesFromTheme() {
+    private fun getAppereanceAttributesFromTheme() {
         try {
             when (colorAttribute) {
-                PRIMARY -> setColorAttribute(R.attr.iconButtonPrimary)
-                DEFAULT -> setColorAttribute(R.attr.iconButtonDefault)
+                PRIMARY -> {
+                    setColorAttribute(R.attr.iconButtonPrimary)
+                    setDrawableRippleAttribute(R.attr.iconButtonPrimary)
+                }
+                DEFAULT -> {
+                    setColorAttribute(R.attr.iconButtonDefault)
+                    setDrawableRippleAttribute(R.attr.iconButtonDefault)
+                }
             }
 
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
+    }
+
+    private fun setDrawableRippleAttribute(iconButtonStyleFromTheme: Int) {
+        context
+            .theme
+            .obtainStyledAttributes(
+                attrs,
+                R.styleable.IconButton,
+                iconButtonStyleFromTheme,
+                0
+            )
+            .apply {
+                rippleDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_rippleDrawable)
+            }
     }
 
     private fun setColorAttribute(attribute: Int) {
@@ -130,20 +155,14 @@ class IconButton @JvmOverloads constructor(
             }
     }
 
-    private fun configureColor(color: Int?) {
-
+    private fun configureAppereance() {
         setIcon(iconNameAttribute)
         iconButton.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
-
-        color?.apply {
-            when (this) {
-                PRIMARY -> iconButtonContainer.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_primary, context.theme)
-                DEFAULT -> iconButtonContainer.background = resources.getDrawable(R.drawable.iconbutton_ripple_background_default, context.theme)
-            }
-        }
+        iconButtonContainer.background = resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
     }
 
     companion object {
+        const val DEFAULT_ICON = "outlined_default_mockup"
         const val DEFAULT = 0
         const val PRIMARY = 1
     }
