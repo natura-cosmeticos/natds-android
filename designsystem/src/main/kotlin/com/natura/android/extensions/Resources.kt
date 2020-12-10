@@ -10,7 +10,7 @@ fun Resources.getIconResourceIdFromName(context: Context, iconName: String): Int
     var drawableId = context.resources.getIdentifier(iconName.replace("-", "_"), "drawable", context.packageName)
 
     if (drawableId == DRAWABLE_NOT_FOUND) {
-        drawableId = R.drawable.filled_default_mockup
+        drawableId = R.drawable.default_icon_outlined_default_mockup
     }
     return drawableId
 }

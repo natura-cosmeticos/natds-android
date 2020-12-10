@@ -163,7 +163,7 @@ class MenuView @JvmOverloads constructor(
     }
 
     private fun configDefaultIconIfEmpty() {
-        iconMenu.setImageResource(R.drawable.outlined_default_mockup)
+        iconMenu.setImageResource(R.drawable.default_icon_outlined_default_mockup)
     }
 
     private fun setMenuIconImage(iconName: String?) {

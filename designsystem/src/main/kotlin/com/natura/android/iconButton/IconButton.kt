@@ -3,8 +3,6 @@ package com.natura.android.iconButton
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
-import android.util.Log
-import android.util.Log.WARN
 import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
@@ -47,7 +45,7 @@ class IconButton @JvmOverloads constructor(
         getAttributes()
         getAppereanceAttributesFromTheme()
 
-        configureAppereance()
+        configureAppearance()
 
         iconButtonAttributesArray.recycle()
     }
@@ -155,7 +153,7 @@ class IconButton @JvmOverloads constructor(
             }
     }
 
-    private fun configureAppereance() {
+    private fun configureAppearance() {
         setIcon(iconNameAttribute)
         iconButton.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
         iconButtonContainer.background = resources.getDrawable(rippleDrawableResourceAttribute, context.theme)

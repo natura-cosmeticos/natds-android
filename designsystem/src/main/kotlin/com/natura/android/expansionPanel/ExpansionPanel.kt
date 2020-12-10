@@ -79,7 +79,7 @@ class ExpansionPanel @JvmOverloads constructor(
 
     private fun showContentArea() {
         contentArea.visibility = View.VISIBLE
-        icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowtop)
+        icon.setImageResource(R.drawable.default_icon_outlined_navigation_arrowtop)
         container.setBackgroundResource(R.drawable.ds_expansion_panel_border_expanded)
 
         onStateChangeListener.invoke(true)
@@ -87,7 +87,7 @@ class ExpansionPanel @JvmOverloads constructor(
 
     private fun hideContentArea() {
         contentArea.visibility = View.GONE
-        icon.setImageResource(R.drawable.ds_ic_outlined_navigation_arrowbottom)
+        icon.setImageResource(R.drawable.default_icon_outlined_navigation_arrowbottom)
         container.setBackgroundResource(R.drawable.ds_expansion_panel_border_collapsed)
 
         onStateChangeListener.invoke(false)
