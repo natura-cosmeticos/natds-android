@@ -68,14 +68,14 @@ class BadgeDrawable(
 
     private fun definePositionToDrawBadge(canvas: Canvas) {
         val bounds = bounds
-        val badgeWith =  mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
+        val badgeWith = mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
 
         context.resources.getDrawable(R.drawable.badge_rounded_rectangle, context.theme).apply {
             setBounds(
                 bounds.right - badgeWith,
                 bounds.top,
                 bounds.right,
-                 mTxtRect.height() + getDimenFromTheme(R.attr.spacingMicro).toInt())
+                mTxtRect.height() + getDimenFromTheme(R.attr.spacingMicro).toInt())
             draw(canvas)
 
             drawText(

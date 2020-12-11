@@ -60,7 +60,7 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun configureNotification() {
-        if(notifyAttribute > 0) {
+        if (notifyAttribute > 0) {
             badgeContainer.visibility = View.VISIBLE
             BadgeDrawable(context, notifyAttribute, badgeContainer.drawable)
         }

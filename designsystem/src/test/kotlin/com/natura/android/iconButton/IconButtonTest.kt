@@ -110,7 +110,6 @@ class IconButtonTest {
             .build()
     }
 
-
     private fun buildIconButtonWithNotification(): IconButton {
         return IconButtonFixture
             .aIconButton()
