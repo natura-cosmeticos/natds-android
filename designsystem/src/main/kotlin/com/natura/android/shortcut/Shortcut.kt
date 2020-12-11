@@ -16,7 +16,7 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
-import com.natura.android.extensions.getIconResourceIdFromName
+import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.extensions.setAppearance
 
 class Shortcut @JvmOverloads constructor(
@@ -176,7 +176,6 @@ class Shortcut @JvmOverloads constructor(
     }
 
     companion object {
-        const val ICON_NOT_FOUND = 0
         const val OUTLINED = 0
         const val CONTAINED = 1
     }

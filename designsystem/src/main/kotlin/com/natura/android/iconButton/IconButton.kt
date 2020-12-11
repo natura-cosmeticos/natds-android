@@ -12,9 +12,10 @@ import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
+import com.natura.android.badge.BadgeDrawable
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.getAlphaAsBase255
-import com.natura.android.extensions.getIconResourceIdFromName
+import com.natura.android.resources.getIconResourceIdFromName
 
 class IconButton @JvmOverloads constructor(
     context: Context,
@@ -32,6 +33,7 @@ class IconButton @JvmOverloads constructor(
 
     private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonContainer) }
+    private val iconButtonBadgeContainer by lazy { findViewById<ImageView>(R.id.iconButtonBadgeContainer) }
 
     init {
         try {
@@ -159,7 +161,6 @@ class IconButton @JvmOverloads constructor(
     }
 
     companion object {
-        const val DEFAULT_ICON = "outlined_default_mockup"
         const val DEFAULT = 0
         const val PRIMARY = 1
     }

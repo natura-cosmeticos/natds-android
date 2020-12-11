@@ -1,8 +1,8 @@
-package com.natura.android.extensions
+package com.natura.android.resources
 
 import android.content.Context
 import com.natura.android.R
-import com.natura.android.extensions.ResourcesConstants.DRAWABLE_NOT_FOUND
+import com.natura.android.resources.ResourcesConstants.DRAWABLE_NOT_FOUND
 
 fun getIconResourceIdFromName(context: Context, iconName: String): Int {
     var drawableId = context.resources.getIdentifier(iconName.replace("-", "_"), "drawable", context.packageName)
