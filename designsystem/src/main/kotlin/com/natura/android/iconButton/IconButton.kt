@@ -3,7 +3,6 @@ package com.natura.android.iconButton
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +13,7 @@ import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
 import com.natura.android.badge.BadgeDrawable
 import com.natura.android.exceptions.MissingThemeException
-import com.natura.android.extensions.getAlphaAsBase255
+import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
 
 class IconButton @JvmOverloads constructor(
@@ -31,6 +30,7 @@ class IconButton @JvmOverloads constructor(
     private var iconNameAttribute: String? = null
     private var colorAttribute: Int? = null
     private var notifyAttribute: Int = 0
+    private var enabledAttribute: Boolean = false
 
     private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonContainer) }
@@ -50,8 +50,13 @@ class IconButton @JvmOverloads constructor(
 
         configureAppearance()
         configureNotification()
+        configureEnabled()
 
         iconButtonAttributesArray.recycle()
+    }
+
+    private fun configureEnabled() {
+        isEnabled = enabledAttribute
     }
 
     private fun configureNotification() {
@@ -70,11 +75,7 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun setDisabledColor() {
-        val typedValue = TypedValue()
-        val theme = context.theme
-        theme.resolveAttribute(R.attr.opacity05, typedValue, true)
-
-        iconButton.imageAlpha = typedValue.getAlphaAsBase255()
+        iconButton.setColorFilter(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
     }
 
     fun setIcon(icon: String?) {
@@ -124,7 +125,7 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun getEnabledAttribute() {
-        isEnabled = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
+        enabledAttribute = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
     }
 
     private fun getAppereanceAttributesFromTheme() {
