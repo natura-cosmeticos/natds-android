@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         app:buttonColor="defaultColor"
         app:iconName="outlined_action_calendar"
+        app:notify="999"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         app:buttonColor="primaryColor"
         app:iconName="outlined_action_calendar"
+        app:notify="4"
         android:layout_gravity="center_horizontal"/>
 
     <TextView

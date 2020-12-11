@@ -1,5 +1,6 @@
 package com.natura.android.iconButton
 
+import android.view.View
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
 import com.natura.android.R
@@ -75,6 +76,24 @@ class IconButtonTest {
         Truth.assertThat(iconButtonAlpha).isEqualTo(OPACITY05_BASE255)
     }
 
+    @Test
+    fun `Given notify attribute is bigger than 0, when IconButton is created, then badge should be visible`() {
+        val iconButton = buildIconButtonWithNotification()
+
+        val badge = iconButton.getBadge()
+
+        Truth.assertThat(badge.visibility).isEqualTo(View.VISIBLE)
+    }
+
+    @Test
+    fun `Given notify attribute is 0, when IconButton is created, then badge should NOT be visible`() {
+        val iconButton = buildIconButtonPrimary()
+
+        val badge = iconButton.getBadge()
+
+        Truth.assertThat(badge.visibility).isEqualTo(View.INVISIBLE)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingIconButtonWithoutAnIcon() {
         IconButtonFixture
@@ -88,6 +107,14 @@ class IconButtonTest {
         IconButtonFixture
             .aEmptyIconButton()
             .withIcon("default_icon_outlined_default_mockup")
+            .build()
+    }
+
+
+    private fun buildIconButtonWithNotification(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withNotification(4)
             .build()
     }
 

@@ -33,6 +33,7 @@
         android:id="@+id/iconButtonBadgeContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:visibility="invisible"
         android:src="@drawable/icon_button_base_badge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

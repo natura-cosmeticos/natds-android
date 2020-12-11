@@ -30,10 +30,11 @@ class IconButton @JvmOverloads constructor(
 
     private var iconNameAttribute: String? = null
     private var colorAttribute: Int? = null
+    private var notifyAttribute: Int = 0
 
     private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
     private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonContainer) }
-    private val iconButtonBadgeContainer by lazy { findViewById<ImageView>(R.id.iconButtonBadgeContainer) }
+    private val badgeContainer by lazy { findViewById<ImageView>(R.id.iconButtonBadgeContainer) }
 
     init {
         try {
@@ -48,8 +49,16 @@ class IconButton @JvmOverloads constructor(
         getAppereanceAttributesFromTheme()
 
         configureAppearance()
+        configureNotification()
 
         iconButtonAttributesArray.recycle()
+    }
+
+    private fun configureNotification() {
+        if(notifyAttribute > 0) {
+            badgeContainer.visibility = View.VISIBLE
+            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable)
+        }
     }
 
     override fun setEnabled(enabled: Boolean) {
@@ -79,6 +88,10 @@ class IconButton @JvmOverloads constructor(
         return iconButton
     }
 
+    fun getBadge(): ImageView {
+        return badgeContainer
+    }
+
     fun getColor(): Int? {
         return colorAttribute
     }
@@ -87,6 +100,11 @@ class IconButton @JvmOverloads constructor(
         getIconName()
         getColorAttribute()
         getEnabledAttribute()
+        getNotify()
+    }
+
+    private fun getNotify() {
+        notifyAttribute = iconButtonAttributesArray.getInteger(R.styleable.IconButton_notify, 0)
     }
 
     private fun getIconName() {

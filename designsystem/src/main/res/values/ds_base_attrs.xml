@@ -112,7 +112,6 @@
     <attr name="outlinedButtonLarge" format="reference"/>
     <attr name="textButtonLarge" format="reference"/>
 
-    <attr name="iconButtonDisabled" format="reference"/>
     <attr name="iconButtonDefault" format="reference"/>
     <attr name="iconButtonPrimary" format="reference"/>
 
