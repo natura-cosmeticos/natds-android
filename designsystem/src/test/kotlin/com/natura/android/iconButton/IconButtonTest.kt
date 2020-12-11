@@ -68,15 +68,6 @@ class IconButtonTest {
     }
 
     @Test
-    fun `Given disabled flag is false, when IconButton is created, IconButton color has an alpha applied`() {
-        val iconButton = buildIconButtonDisabled()
-
-        val iconButtonAlpha = iconButton.getIcon().imageAlpha
-
-        Truth.assertThat(iconButtonAlpha).isEqualTo(OPACITY05_BASE255)
-    }
-
-    @Test
     fun `Given notify attribute is bigger than 0, when IconButton is created, then badge should be visible`() {
         val iconButton = buildIconButtonWithNotification()
 
