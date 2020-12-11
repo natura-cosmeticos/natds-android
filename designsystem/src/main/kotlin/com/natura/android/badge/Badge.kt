@@ -39,14 +39,14 @@ class Badge @JvmOverloads constructor(
         badgeAttributeArray.recycle()
     }
 
-    private fun configureBadge() {
-        BadgeDrawable(context, tNumber, lImage.drawable)
-        lContainer.visibility = View.VISIBLE
-    }
-
     private fun getAttributes() {
         tNumber = badgeAttributeArray.getInteger(R.styleable.Badge_number, 0)
         tShow = badgeAttributeArray.getInteger(R.styleable.Badge_android_visibility, View.INVISIBLE)
 
+    }
+
+    private fun configureBadge() {
+        BadgeDrawable(context, tNumber, lImage.drawable)
+        lContainer.visibility = View.VISIBLE
     }
 }

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/ic_badge_placeholder"
-        android:drawable="@android:color/transparent" />
+        android:id="@+id/badge_placeholder"
+        android:drawable="@android:color/transparent"
+        android:width="24dp"
+        android:height="24dp"/>
 </layer-list>
