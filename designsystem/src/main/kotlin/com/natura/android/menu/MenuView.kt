@@ -11,7 +11,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
-import com.natura.android.ext.setVisibilityFromBoolean
+import com.natura.android.extensions.setVisibilityFromBoolean
 import com.natura.android.tag.Tag
 
 @SuppressLint("CustomViewStyleable")

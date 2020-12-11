@@ -1,4 +1,4 @@
-package com.natura.android.ext
+package com.natura.android.extensions
 
 import android.view.View
 

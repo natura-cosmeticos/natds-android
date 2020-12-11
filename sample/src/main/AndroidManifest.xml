@@ -101,6 +101,7 @@
         <activity android:name=".tokens.ColorsActivity" />
         <activity android:name=".components.ShortcutActivity" />
         <activity android:name=".components.TagActivity" />
+        <activity android:name=".components.IconButtonActivity"/>
     </application>
 
 </manifest>

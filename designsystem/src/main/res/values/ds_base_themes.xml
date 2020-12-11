@@ -129,6 +129,9 @@
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.V23</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.V23</item>
 
+        <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
+        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
@@ -269,6 +272,9 @@
         <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.V23</item>
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.V23</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.V23</item>
+
+        <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
+        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
 
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>

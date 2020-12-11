@@ -341,6 +341,28 @@
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
+
+    <!-- ICON BUTTON STYLES -->
+
+    <style name="Widget.DS.IconButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Disabled" parent="Widget.DS.IconButton">
+        <item name="iconColor">?colorMediumEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Primary" parent="Widget.DS.IconButton">
+        <item name="iconColor">?colorPrimary</item>
+        <item name="rippleDrawable">@drawable/iconbutton_ripple_background_primary</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Default" parent="Widget.DS.IconButton">
+        <item name="iconColor">?colorHighEmphasis</item>
+        <item name="rippleDrawable">@drawable/iconbutton_ripple_background_default</item>
+    </style>
+
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorPrimary</item>
