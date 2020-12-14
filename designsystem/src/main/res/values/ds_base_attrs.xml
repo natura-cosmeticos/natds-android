@@ -112,6 +112,9 @@
     <attr name="outlinedButtonLarge" format="reference"/>
     <attr name="textButtonLarge" format="reference"/>
 
+    <attr name="iconButtonDefault" format="reference"/>
+    <attr name="iconButtonPrimary" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>

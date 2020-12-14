@@ -16,6 +16,7 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
+import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.extensions.setAppearance
 
 class Shortcut @JvmOverloads constructor(
@@ -65,20 +66,11 @@ class Shortcut @JvmOverloads constructor(
 
     fun setIcon(icon: String?) {
         icon?.apply {
-            val drawableId = context.resources.getIdentifier(icon.replace("-", "_"), "drawable", context.packageName)
+            val drawableId = getIconResourceIdFromName(context, icon)
 
-            if (drawableId == ICON_NOT_FOUND) {
-                configDefaultIconIfEmpty()
-            } else {
-                iconContainer.setImageResource(drawableId)
-            }
-
+            iconContainer.setImageResource(drawableId)
             iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
         }
-    }
-
-    private fun configDefaultIconIfEmpty() {
-        iconContainer.setImageResource(R.drawable.default_icon_outlined_default_mockup)
     }
 
     fun getIcon(): ImageView {
@@ -184,7 +176,6 @@ class Shortcut @JvmOverloads constructor(
     }
 
     companion object {
-        const val ICON_NOT_FOUND = 0
         const val OUTLINED = 0
         const val CONTAINED = 1
     }
