@@ -5,24 +5,38 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.res.getIntOrThrow
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 
 class Badge @JvmOverloads constructor(
     context: Context,
-    private val attrs: AttributeSet? = null,
+    attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
     private var badgeAttributeArray: TypedArray
     private var tNumber: Int = 0
-    private var tShow: Int = View.INVISIBLE
+    private var tVisibility: Int = View.INVISIBLE
 
-    val lContainer by lazy { findViewById<ConstraintLayout>(R.id.badgeContainer) }
-    val lImage by lazy { findViewById<ImageView>(R.id.badgeImage) }
+    private val lContainer by lazy { findViewById<ConstraintLayout>(R.id.badgeContainer) }
+    private val lImage by lazy { findViewById<ImageView>(R.id.badgeImage) }
+
+    var number: Int = 0
+        get() = tNumber
+        set(value) {
+            field = value
+            tNumber = value
+        }
+    var isVisible: Boolean = true
+        get() = tVisibility == 0
+        set(value) {
+            tVisibility = if(value) {
+                View.VISIBLE
+            } else {
+                View.INVISIBLE
+            }
+            field = value
+        }
 
     init {
         try {
@@ -40,13 +54,13 @@ class Badge @JvmOverloads constructor(
     }
 
     private fun getAttributes() {
-        tNumber = badgeAttributeArray.getInteger(R.styleable.Badge_number, 0)
-        tShow = badgeAttributeArray.getInteger(R.styleable.Badge_android_visibility, View.INVISIBLE)
+        tNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
+        tVisibility = badgeAttributeArray.getInteger(R.styleable.Badge_badgeVisibility, View.INVISIBLE)
 
     }
 
     private fun configureBadge() {
         BadgeDrawable(context, tNumber, lImage.drawable)
-        lContainer.visibility = View.VISIBLE
+        lContainer.visibility = tVisibility
     }
 }

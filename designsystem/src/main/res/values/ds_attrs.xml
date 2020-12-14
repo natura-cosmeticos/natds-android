@@ -28,8 +28,8 @@
     </declare-styleable>
 
     <declare-styleable name="Badge" >
-        <attr name="number"/>
-        <attr name="android:visibility"/>
+        <attr name="badgeNumber" format="integer"/>
+        <attr name="badgeVisibility" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="ds_menu">
