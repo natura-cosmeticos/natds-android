@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:buttonColor="defaultColor"
-        app:iconName="outlined_action_calendar"
+        app:iconName="outlined-action-calendar"
         app:notify="999"
         android:layout_gravity="center_horizontal"/>
 
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:buttonColor="primaryColor"
-        app:iconName="outlined_action_calendar"
+        app:iconName="outlined-action-calendar"
         app:notify="4"
         android:layout_gravity="center_horizontal"/>
 
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         app:buttonColor="defaultColor"
         android:enabled="false"
-        app:iconName="outlined_action_calendar"
+        app:iconName="outlined-action-calendar"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         app:buttonColor="primaryColor"
         android:enabled="false"
-        app:iconName="outlined_action_calendar"
+        app:iconName="outlined-action-calendar"
         android:layout_gravity="center_horizontal"/>
 
     <TextView
