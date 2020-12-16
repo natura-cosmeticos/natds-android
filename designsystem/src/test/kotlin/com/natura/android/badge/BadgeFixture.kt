@@ -8,7 +8,8 @@ import org.robolectric.Robolectric
 internal class BadgeFixture private constructor(
     private var number: Int = 0,
     private var visible: Boolean = true,
-    private var context: Context = ApplicationProvider.getApplicationContext()) {
+    private var context: Context = ApplicationProvider.getApplicationContext()
+) {
         companion object {
             private const val number = 0
             private const val visible = true

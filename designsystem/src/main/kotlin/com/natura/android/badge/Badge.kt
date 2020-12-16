@@ -96,7 +96,6 @@ class Badge @JvmOverloads constructor(
     private fun getAttributes() {
         attrNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
         attrVisibility = badgeAttributeArray.getBoolean(R.styleable.Badge_badgeVisibility, true)
-
     }
 
     private fun createBadgeDrawable() {
@@ -104,7 +103,7 @@ class Badge @JvmOverloads constructor(
     }
 
     private fun configureVisibility() {
-        this.visibility = if(attrVisibility) {
+        this.visibility = if (attrVisibility) {
             View.VISIBLE
         } else {
             View.INVISIBLE

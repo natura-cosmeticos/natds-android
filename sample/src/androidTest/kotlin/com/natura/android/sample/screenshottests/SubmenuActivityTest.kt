@@ -1,4 +1,4 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.screenshottests
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +8,10 @@ import com.facebook.testing.screenshot.Screenshot
 import com.facebook.testing.screenshot.ViewHelpers
 import com.natura.android.sample.R
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
-
+@Ignore
 @RunWith(AndroidJUnit4::class)
 class SubmenuActivityTest {
     private lateinit var inflater: LayoutInflater

@@ -3,10 +3,8 @@ package com.natura.android.badge
 import android.view.View
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import com.natura.android.R
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.Shadows
 
 @RunWith(AndroidJUnit4::class)
 class BadgeTest {
