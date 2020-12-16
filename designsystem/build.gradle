@@ -3,6 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
+apply plugin: 'org.jetbrains.dokka'
 
 apply plugin: 'com.github.dcendents.android-maven'
 
@@ -22,6 +23,15 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 includeCompileClasspath false
+            }
+        }
+    }
+
+    dokkaHtml.configure {
+        dokkaSourceSets {
+            named("main") {
+                noAndroidSdkLink.set(false)
+                outputDirectory.set(buildDir.resolve("dokka"))
             }
         }
     }
