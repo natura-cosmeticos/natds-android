@@ -35,11 +35,11 @@ class Badge @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
     private var badgeAttributeArray: TypedArray
-    private var tNumber: Int = 0
-    private var tVisibility: Int = View.VISIBLE
+    private var attrNumber: Int = 0
+    private var attrVisibility: Boolean = true
 
-    private val lContainer by lazy { findViewById<ConstraintLayout>(R.id.badgeContainer) }
-    private val lImage by lazy { findViewById<ImageView>(R.id.badgeImage) }
+    private val imageContainer by lazy { findViewById<ImageView>(R.id.badgeImage) }
+    private lateinit var badgeDrawable: BadgeDrawable
 
     var number: Int = 0
         /**
@@ -48,7 +48,7 @@ class Badge @JvmOverloads constructor(
          * show 99+
          * @return a integer with current number
          * */
-        get() = tNumber
+        get() = attrNumber
         /**
          * Change the number showed by badge
          * When 0, badge is not visible, when bigger than 99, badge
@@ -57,8 +57,8 @@ class Badge @JvmOverloads constructor(
          * */
         set(value) {
             field = value
-            tNumber = value
-
+            attrNumber = value
+            badgeDrawable.updateBadgeDrawable(value)
         }
 
     var isVisible: Boolean = true
@@ -66,18 +66,15 @@ class Badge @JvmOverloads constructor(
          * Specifies badge visibility.
          * @return true if badge is visible, false if is not
          * */
-        get() = tVisibility == 0
+        get() = attrVisibility
         /**
          * Set badge visibility.
          * @param [isVisible] as true to set badge as visible, false to not
          * */
         set(value) {
-            tVisibility = if(value) {
-                View.VISIBLE
-            } else {
-                View.INVISIBLE
-            }
+            attrVisibility = value
             field = value
+            configureVisibility()
         }
 
     init {
@@ -90,19 +87,27 @@ class Badge @JvmOverloads constructor(
         badgeAttributeArray = context.obtainStyledAttributes(attrs, R.styleable.Badge)
 
         getAttributes()
-        configureBadge()
+        createBadgeDrawable()
+        configureVisibility()
 
         badgeAttributeArray.recycle()
     }
 
     private fun getAttributes() {
-        tNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
-        tVisibility = badgeAttributeArray.getInteger(R.styleable.Badge_badgeVisibility, View.VISIBLE)
+        attrNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
+        attrVisibility = badgeAttributeArray.getBoolean(R.styleable.Badge_badgeVisibility, true)
 
     }
 
-    private fun configureBadge() {
-        BadgeDrawable(context, tNumber, lImage.drawable)
-        lContainer.visibility = tVisibility
+    private fun createBadgeDrawable() {
+        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable)
+    }
+
+    private fun configureVisibility() {
+        this.visibility = if(attrVisibility) {
+            View.VISIBLE
+        } else {
+            View.INVISIBLE
+        }
     }
 }

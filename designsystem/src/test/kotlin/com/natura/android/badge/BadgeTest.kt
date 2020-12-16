@@ -30,8 +30,8 @@ class BadgeTest {
     }
 
     @Test
-    fun `GIVEN a badge, WHEN it is created with visibility INVISIBLE, THEN the property visibility should be INVISIBLE`() {
-        val badge = BadgeFixture.aBadge().withVisibility(View.INVISIBLE).build()
+    fun `GIVEN a badge, WHEN it is created with visibility false, THEN the property visibility should be false`() {
+        val badge = BadgeFixture.aBadge().withVisibility(false).build()
 
         val badgeVisibility = badge.isVisible
 
@@ -39,12 +39,50 @@ class BadgeTest {
     }
 
     @Test
-    fun `GIVEN a badge, WHEN it's visibility is set to VISIBLE, THEN the property visibility should be VISIBLE`() {
-        val badge = BadgeFixture.aBadge().withVisibility(View.INVISIBLE).build()
+    fun `GIVEN a badge with visibility false, WHEN isVisible property changes to true, THEN the view visibility should be VISIBLE`() {
+        val badge = BadgeFixture.aBadge().withVisibility(false).build()
+        badge.isVisible = true
+
+        val badgeVisibility = badge.visibility
+
+        Truth.assertThat(badgeVisibility).isEqualTo(View.VISIBLE)
+    }
+
+    @Test
+    fun `GIVEN a badge with visibility false, WHEN isVisible property changes to true, THEN isVisible property should be true`() {
+        val badge = BadgeFixture.aBadge().withVisibility(false).build()
         badge.isVisible = true
 
         val badgeVisibility = badge.isVisible
 
         Truth.assertThat(badgeVisibility).isEqualTo(true)
+    }
+
+    @Test
+    fun `GIVEN a badge, WHEN it is created with visibility false, THEN the view visibility should be INVISIBLE`() {
+        val badge = BadgeFixture.aBadge().withVisibility(false).build()
+
+        val badgeVisibility = badge.visibility
+
+        Truth.assertThat(badgeVisibility).isEqualTo(View.INVISIBLE)
+    }
+
+    @Test
+    fun `GIVEN a badge, WHEN it's visibility is set to true, THEN the property visibility should be true`() {
+        val badge = BadgeFixture.aBadge().withVisibility(true).build()
+        badge.isVisible = true
+
+        val badgeVisibility = badge.isVisible
+
+        Truth.assertThat(badgeVisibility).isEqualTo(true)
+    }
+
+    @Test
+    fun `GIVEN a badge, WHEN it is created with visibility true, THEN the view visibility should be VISIBLE`() {
+        val badge = BadgeFixture.aBadge().withVisibility(true).build()
+
+        val badgeVisibility = badge.visibility
+
+        Truth.assertThat(badgeVisibility).isEqualTo(View.VISIBLE)
     }
 }
