@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,93 +7,82 @@
     android:orientation="vertical"
     tools:context=".components.BadgeActivity">
 
-        <TextView
+        <com.natura.android.badge.Badge
+            android:id="@+id/regularBadge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BadgeDrawable"
-            app:layout_constraintBottom_toTopOf="@+id/imageViewNormal"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="?spacingMicro"
+            android:visibility="visible"
+            app:badgeNumber="50"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular badge"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-                android:id="@+id/imageViewSmall"
-                android:layout_width="?sizeMedium"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_base_badge"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageViewNormal"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-        <ImageView
-            android:id="@+id/imageViewNormal"
-            android:layout_width="?sizeMediumX"
+        <com.natura.android.badge.Badge
+            android:id="@+id/invisibleBadge"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_base_badge"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewBig"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageViewSmall"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
-
-        <ImageView
-                android:id="@+id/imageViewBig"
-                android:layout_width="?sizeLarge"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_base_badge"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageViewNormal"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.3"/>
+            android:layout_marginBottom="?spacingMicro"
+            app:badgeNumber="50"
+            app:badgeVisibility="false"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="108dp"
-            android:text="Badge Component"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.474"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewNormal" />
-
-        <com.natura.android.badge.Badge
-            android:id="@+id/badge2"
-            android:layout_width="?sizeSemi"
-            android:layout_height="?sizeSemi"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/badge"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:badgeNumber="50" />
-
-        <com.natura.android.badge.Badge
-            android:id="@+id/badge3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Invisible badge"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/badge"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:badgeNumber="50" />
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.natura.android.badge.Badge
-            android:id="@+id/badge"
+            android:id="@+id/badgeToIncrement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/badge3"
+            android:layout_marginBottom="?spacingMicro"
+            app:badgeNumber="1"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Badge to Increment"
+            android:textAppearance="?textAppearanceCaption"
+            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/badge2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:badgeNumber="3" />
+            app:layout_constraintStart_toEndOf="@+id/textView6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/incrementBadgeButton"
+            style="?textButtonSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="?spacingStandard"
+            android:text="Increment badge component"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

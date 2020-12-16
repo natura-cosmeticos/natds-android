@@ -1,4 +1,4 @@
-package com.natura.android.sample.test
+package com.natura.android.sample.screenshottests
 
 import android.os.Bundle
 import androidx.test.runner.AndroidJUnitRunner
