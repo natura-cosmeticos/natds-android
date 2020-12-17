@@ -21,7 +21,7 @@
         <item name="colorControlNormal">?colorOnPrimary</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
-        <item name="logoVertical">@drawable/outlined_action_cancel</item>
+        <item name="logoVertical">@drawable/default_icon_outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
     </style>
 

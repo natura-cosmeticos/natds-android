@@ -12,7 +12,6 @@ import com.natura.android.sample.setChosenDefaultTheme
 class ColorsActivity : AppCompatActivity() {
 
     private var darkMode = false
-    private var currentTab = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
