@@ -153,6 +153,13 @@
         <item name="typographyFontWeightRegular">sans-serif</item>
         <item name="typographyFontWeightMedium">sans-serif-medium</item>
 
+        <!--
+        /***
+        * LOCAL ATTRIBUTES (INFOS THAT ARE NOT IN NATDS COMMONS)
+        * YOU CAN EDIT THOSE FIELDS IF NECESSARY
+        */
+        -->
+
         <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
         <item name="colorSecondaryVariant">?colorSecondaryDark</item>

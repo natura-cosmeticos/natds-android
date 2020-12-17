@@ -23,7 +23,7 @@ internal class IconButtonFixture private constructor(
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aIconButton(): IconButtonFixture {
-            context.setTheme(R.style.Theme_Natura)
+            context.setTheme(R.style.Theme_Natura_Light)
             return IconButtonFixture(buttonColor, enabled, icon, notify, context)
         }
 

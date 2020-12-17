@@ -25,7 +25,7 @@ class MenuViewTest {
 
     @Before
     fun setUp() {
-        activityController.get().setTheme(R.style.Theme_Natura)
+        activityController.get().setTheme(R.style.Theme_Natura_Light)
         layout = LayoutInflater.from(activityController.get()).inflate(R.layout.ds_menu_view_in_layout, null) as LinearLayout
     }
 

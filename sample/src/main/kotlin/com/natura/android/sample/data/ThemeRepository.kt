@@ -36,7 +36,7 @@ class ThemeRepository(context: Context) {
         val chosenBrand = sharedPreferences.getString("theme", "natura")
 
         return when (chosenBrand) {
-            "natura" -> R.style.Theme_NaturaDark
+            "natura" -> R.style.Theme_Natura_Dark
             "avon" -> R.style.Theme_AvonDark
             else -> R.style.Theme_BodyShopDark
         }
@@ -56,7 +56,7 @@ class ThemeRepository(context: Context) {
         val chosenBrand = sharedPreferences.getString("theme", "natura")
 
         return when (chosenBrand) {
-            "natura" -> R.style.Theme_NaturaDark_NoActionBar
+            "natura" -> R.style.Theme_Natura_Dark_NoActionBar
             "avon" -> R.style.Theme_AvonDark_NoActionBar
             else -> R.style.Theme_BodyShopDark_NoActionBar
         }
