@@ -242,9 +242,6 @@
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Natura.Light</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Light</item>
 
-        <item name="logoVertical">@drawable/natura_vertical</item>
-        <item name="logoHorizontal">@drawable/natura_horizontal</item>
-
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Light</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
@@ -259,6 +256,9 @@
 
         <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
+
+        <item name="logoVertical">@drawable/natura_vertical</item>
+        <item name="logoHorizontal">@drawable/natura_horizontal</item>
     </style>
 
     <style name="Theme.Natura.Light.NoActionBar" parent="Theme.Natura.Light">
