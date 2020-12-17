@@ -61,7 +61,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_title"
                 app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_title"
-                app:srcCompat="@drawable/ds_ic_outlined_navigation_arrowbottom" />
+                app:srcCompat="@drawable/default_icon_outlined_navigation_arrowbottom" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

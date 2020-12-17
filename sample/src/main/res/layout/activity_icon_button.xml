@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:id="@+id/iconButtonContainer"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="defaultColor"
+        app:iconName="outlined_action_calendar"
+        app:notify="999"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/iconButtonDefaultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Default"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceCaption"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="primaryColor"
+        app:iconName="outlined_action_calendar"
+        app:notify="4"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/iconButtonPrimaryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Primary"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceCaption"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonDefaultDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="defaultColor"
+        android:enabled="false"
+        app:iconName="outlined_action_calendar"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/iconButtonDefaultLabelDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Default disabled"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceCaption"
+        android:layout_gravity="center_horizontal"/>
+
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonPrimaryDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="primaryColor"
+        android:enabled="false"
+        app:iconName="outlined_action_calendar"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/iconButtonPrimaryLabelDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingMicro"
+        android:layout_marginBottom="?spacingLarge"
+        android:text="Primary disabled"
+        android:textAlignment="center"
+        android:textAppearance="?textAppearanceCaption"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>

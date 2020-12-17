@@ -39,13 +39,13 @@ Now you get how to access DS themes, let's talk about the most basic portion of 
 We call design tokens all the basic attributes of design systems. For example: colors, ypography definitions, etc.
 Currently android lib provide the following tokens:
 
-- Border radius​
+- [Border radius​](border-radius.md)
 - [Color​](color.md)
-- Elevation​
+- [Elevation​](elevation.md)
 - [Icons (drawables)](icon-token.md)
 - Opacity​
-- Size​
-- Spacing​
+- [Size​](size.md)
+- [Spacing​](spacing.md)
 - [Typography](typography-token.md)
 
 And how can this be used by applications?
@@ -100,16 +100,15 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   💡 **More info about [typography here](typography-token.md)**
 
   ### How to Use Components
-  - [App Bar Top](doc/app-bar-top.md)
-  - [Badge](doc/badge.md)
-  - [Dialog](doc/dialog.md)
-  - Error
-  - [Expansion Panel](doc/expansion-panel.md)
-  - Ext
-  - Icon
-  - [Logo](doc/logo.md)
+  - [App Bar Top](app-bar-top.md)
+  - [Badge](badge.md)
+  - [Button](button.md)
+  - [Dialog](dialog.md)
+  - [Expansion Panel](expansion-panel.md)
+  - [Logo](logo.md)
   - Menu
   - Navigation View
-  - [Shortcut](doc/shortcut.md)
-  - Text Field
+  - [Shortcut](shortcut.md)
+  - [Tag](tag.md)
+  - [Text Field](textfield.md)
 

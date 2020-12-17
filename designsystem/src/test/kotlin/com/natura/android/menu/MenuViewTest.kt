@@ -47,7 +47,7 @@ class MenuViewTest {
     fun checksIfDefaultIconIsSetWhenIconAttributeIsEmpty() {
         val icon = shadowOf(layout.menuItemBase.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
 
-        assertEquals(R.drawable.outlined_default_mockup, icon.createdFromResId)
+        assertEquals(R.drawable.default_icon_outlined_default_mockup, icon.createdFromResId)
     }
 
     @Config(sdk = [28])
@@ -55,7 +55,7 @@ class MenuViewTest {
     fun checksIfIconDrawableWasSetWhenAttributeIsFilledWithIconName() {
         val icon = shadowOf(layout.menuItemWithIcon.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
 
-        assertEquals(R.drawable.outlined_action_change, icon.createdFromResId)
+        assertEquals(R.drawable.default_icon_outlined_action_cancel, icon.createdFromResId)
     }
 
     @Test

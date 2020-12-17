@@ -42,6 +42,12 @@ class MenuActivityTest {
         checkView(view)
     }
 
+    @Test
+    fun verifyMenuWhenHasTag() {
+        val view: View = inflater.inflate(R.layout.component_menu_alert_tag, null, false)
+        checkView(view)
+    }
+
     @UiThreadTest
     @Test
     fun verifyMenuWhenIsOpened() {

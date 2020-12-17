@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.natura.android.menu.MenuView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:menu_label="Menu item with alert"
+        app:menu_icon="outlined-action-add"
+        app:menu_label_color="?colorSurface"
+        app:menu_label_size="@dimen/ds_text_small"
+        app:menu_has_tag="true"
+        app:menu_tag_label="Novo"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -16,5 +16,5 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/ds_menu_item_height"
         app:menu_label="Menu item to test"
-        app:menu_icon="outlined-action-change"/>
+        app:menu_icon="default-icon-outlined-action-cancel"/>
 </LinearLayout>

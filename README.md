@@ -4,7 +4,7 @@
 ![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
 
 ## What for
-Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/08f80f4e1/p/335165-natds--natura-design-system).
+Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/28db352be/p/35bf2e-natds--natura-design-system).
 
 ## How to use
 
@@ -13,6 +13,13 @@ Copy and paste the file **github_credentials.properties.sample** and rename it t
 In the file build.gradle, insert the informations:
 
     repositories {
+    
+        def githubProperties = new Properties()
+        def githubFile = rootProject.file("github_credentials.properties")
+        if (githubFile.exists()) {
+            githubProperties.load(new FileInputStream(githubFile))
+        }
+        
         maven {
             name = "natds-android"
             url = uri("https://maven.pkg.github.com/natura-cosmeticos/natds-android")
@@ -29,6 +36,38 @@ And:
         implementation "com.natura.android:designsystem:<version>"
         implementation 'com.google.android.material:material:1.1.0'
     }
+
+
+#### Nat DS Icons
+Since 4.0.0 Nat DS Android has no longer Nat DS Icons. In order to use Nat DS Icons, you MUST add a new dependency:
+ repositories {
+    
+        def githubProperties = new Properties()
+        def githubFile = rootProject.file("github_credentials.properties")
+        if (githubFile.exists()) {
+            githubProperties.load(new FileInputStream(githubFile))
+        }
+
+        //To Access Nat DS Icons dependency at Github Packages
+        maven {
+            name = "natds-commons"
+            url = uri("https://maven.pkg.github.com/natura-cosmeticos/natds-commons")
+            credentials {
+                username = githubProperties['github.username'] ?: System.getenv("GITHUB_USERNAME")
+                password = githubProperties['github.password'] ?: System.getenv("GITHUB_API_KEY")
+            }
+        }
+        
+    }
+
+And:
+
+    dependencies {
+    implementation "com.natura:icons:$rootProject.<version>"
+
+    }
+    
+You can use Nat DS Icons without using Nat DS Android 
 
 ### Getting Started
 [Start using our lib](doc/getting-started.md).

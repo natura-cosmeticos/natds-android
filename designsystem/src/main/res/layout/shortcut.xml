@@ -41,7 +41,7 @@
             android:id="@+id/shortCutIcon"
             android:layout_width="?sizeSemi"
             android:layout_height="?sizeSemi"
-            tools:srcCompat="@drawable/ds_ic_filled_brand_naturarosacea" />
+            tools:srcCompat="@drawable/outlined_default_mockup" />
     </LinearLayout>
 
     <TextView
@@ -50,10 +50,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingTiny"
         android:textAlignment="center"
+        android:ellipsize="end"
+        android:maxLines="1"
         tools:text="Contained big label to check the behavior"
         android:autoSizeTextType="uniform"
         android:textAppearance="?textAppearanceCaption"
-        android:singleLine="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

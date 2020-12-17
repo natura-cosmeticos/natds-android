@@ -142,6 +142,14 @@ class MainActivityFunctionalTests {
     }
 
     @Test
+    fun shouldOpenTagScreenWhenTapOnItButton() {
+        onView(withId(R.id.tagButton)).perform(scrollTo())
+        onView(withId(R.id.tagButton)).perform(click())
+
+        onView(withText("Tag")).check(matches(isDisplayed()))
+    }
+
+    @Test
     fun shouldOpenTextFieldScreenWhenTapOnItButton() {
         onView(withId(R.id.btnTextfield)).perform(scrollTo())
         onView(withId(R.id.btnTextfield)).perform(click())
@@ -182,11 +190,11 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenLoadingScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnLoader)).perform(scrollTo())
-        onView(withId(R.id.btnLoader)).perform(click())
+    fun shouldOpenProgressIndicatorScreenWhenTapOnItButton() {
+        onView(withId(R.id.progressIndicatorButton)).perform(scrollTo())
+        onView(withId(R.id.progressIndicatorButton)).perform(click())
 
-        onView(withText("Loading Pattern")).check(matches(isDisplayed()))
+        onView(withText("Progress Indicator")).check(matches(isDisplayed()))
     }
 
     @Test

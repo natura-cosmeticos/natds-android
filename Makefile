@@ -43,10 +43,18 @@ enable-animations:
 publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
 
-run-all-sanitycheck-steps: lint unit-test instrumentation-test
+run-all-pipeline-steps: lint unit-test instrumentation-test
 
 update-icons:
 	sh ./tools/update_icons.sh
 
-kill-all-emulators:
-	sh ./tools/kill_emulators.sh
+finish-all-emulators:
+	sh ./tools/finish_emulators.sh
+
+publish-docs:
+	bash ./tools/create_docs.sh
+
+distribute-sample:
+	sh  bundle exec fastlane build
+	fastlane build
+	fastlane distribute_sample

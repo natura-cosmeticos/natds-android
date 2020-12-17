@@ -26,7 +26,7 @@ class BadgeDrawable(
     private fun setBadge() {
         val icon = parent as LayerDrawable
         icon.mutate()
-        icon.setDrawableByLayerId(R.id.ic_badge_placeholder, this)
+        icon.setDrawableByLayerId(R.id.badge_placeholder, this)
     }
 
     override fun draw(canvas: Canvas) {
@@ -57,9 +57,7 @@ class BadgeDrawable(
         }
     }
 
-    private fun drawBadgeWithText(
-        canvas: Canvas
-    ) {
+    private fun drawBadgeWithText(canvas: Canvas) {
         defineTextBounds(count.toString())
         definePositionToDrawBadge(canvas)
     }
@@ -68,24 +66,16 @@ class BadgeDrawable(
         mTextPaint.getTextBounds(text, 0, count.toString().length, mTxtRect)
     }
 
-    private fun definePositionToDrawBadge(
-        canvas: Canvas
-    ) {
+    private fun definePositionToDrawBadge(canvas: Canvas) {
         val bounds = bounds
-
-        val badgeWith = when {
-            count > 99 -> getDimenFromTheme(R.attr.sizeSemi)
-            count > 9 -> getDimenFromTheme(R.attr.sizeStandard)
-            else -> getDimenFromTheme(R.attr.sizeSmall)
-        }
+        val badgeWith = mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
 
         context.resources.getDrawable(R.drawable.badge_rounded_rectangle, context.theme).apply {
             setBounds(
-                bounds.right - badgeWith.toInt(),
+                bounds.right - badgeWith,
                 bounds.top,
                 bounds.right,
-                getDimenFromTheme(R.attr.sizeSmall).toInt()
-            )
+                mTxtRect.height() + getDimenFromTheme(R.attr.spacingMicro).toInt())
             draw(canvas)
 
             drawText(

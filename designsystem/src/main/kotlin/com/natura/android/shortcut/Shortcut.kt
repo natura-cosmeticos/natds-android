@@ -16,6 +16,7 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
+import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.extensions.setAppearance
 
 class Shortcut @JvmOverloads constructor(
@@ -29,10 +30,10 @@ class Shortcut @JvmOverloads constructor(
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
-    private var iconAttribute: Int? = null
+    private var iconAttribute: String? = null
     private var shortcutAttributesArray: TypedArray
 
-    private val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
+    val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
 
@@ -63,9 +64,11 @@ class Shortcut @JvmOverloads constructor(
 
     fun getType(): Int? = typeAttribute
 
-    fun setIcon(icon: Int?) {
+    fun setIcon(icon: String?) {
         icon?.apply {
-            iconContainer.setImageResource(icon)
+            val drawableId = getIconResourceIdFromName(context, icon)
+
+            iconContainer.setImageResource(drawableId)
             iconContainer.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
         }
     }
@@ -129,7 +132,7 @@ class Shortcut @JvmOverloads constructor(
 
     private fun getIconAttribute() {
         try {
-            iconAttribute = shortcutAttributesArray.getResourceIdOrThrow(R.styleable.Shortcut_icon)
+            iconAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_iconName)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
         }

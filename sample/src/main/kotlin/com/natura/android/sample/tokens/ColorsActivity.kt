@@ -32,7 +32,7 @@ class ColorsActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item?.itemId == R.id.darkThemeButton) {
+        if (item.itemId == R.id.darkThemeButton) {
             setDarkModeButtonIcon(darkMode, item)
             darkMode = !darkMode
             restartScreenToApplyTheme(darkMode)
@@ -44,9 +44,9 @@ class ColorsActivity : AppCompatActivity() {
 
     private fun setDarkModeButtonIcon(darkMode: Boolean, menuItem: MenuItem?) {
         if (darkMode) {
-            menuItem?.setIcon(R.drawable.ds_ic_outlined_action_lightoff)
+            menuItem?.setIcon(R.drawable.outlined_action_lightoff)
         } else {
-            menuItem?.setIcon(R.drawable.ds_ic_outlined_action_lighton)
+            menuItem?.setIcon(R.drawable.outlined_action_lighton)
         }
     }
 

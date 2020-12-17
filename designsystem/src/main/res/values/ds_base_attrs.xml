@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <!-- To be replaced with default attr from google:material lib -->
     <!-- Style to use for Material Outlined Buttons in this theme. -->
     <!-- Since it's not available in support:design lib -->
     <attr name="materialBorderlessButtonStyle" format="reference"/>
+
+    <!-- color tokens attributes not covered by material theme -->
+    <attr name="colorPrimaryLight" format="color"/>
+    <attr name="colorOnPrimaryLight" format="color"/>
+    <attr name="colorOnPrimaryDark" format="color"/>
+    <attr name="colorSecondaryLight" format="color"/>
+    <attr name="colorOnSecondaryLight" format="color"/>
+    <attr name="colorOnSecondaryDark" format="color"/>
+    <attr name="colorHighlight" format="color"/>
+    <attr name="colorHighEmphasis" format="color"/>
+    <attr name="colorMediumEmphasis" format="color"/>
+    <attr name="colorLowEmphasis" format="color"/>
+    <attr name="colorLink" format="color"/>
+    <attr name="colorAlert" format="color"/>
+    <attr name="colorOnAlert" format="color"/>
+    <attr name="colorOnLink" format="color"/>
+    <attr name="colorSuccess" format="color"/>
+    <attr name="colorOnSuccess" format="color"/>
+    <attr name="colorWarning" format="color"/>
+    <attr name="colorOnWarning" format="color"/>
 
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
@@ -54,6 +75,9 @@
     <attr name="outlinedButtonLarge" format="reference"/>
     <attr name="textButtonLarge" format="reference"/>
 
+    <attr name="iconButtonDefault" format="reference"/>
+    <attr name="iconButtonPrimary" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>
@@ -72,4 +96,8 @@
     <!-- Shortcut references -->
     <attr name="shortcutOutlined" format="reference"/>
     <attr name="shortcutContained" format="reference"/>
+
+    <!-- Tag references -->
+    <attr name="tagPrimary" format="reference"/>
+    <attr name="tagAlert" format="reference"/>
 </resources>

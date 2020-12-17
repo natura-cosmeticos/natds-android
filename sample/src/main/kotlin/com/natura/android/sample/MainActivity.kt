@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
-import com.natura.android.sample.patterns.LoadingActivity
+import com.natura.android.sample.components.ProgressIndicatorActivity
 import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
@@ -76,12 +76,20 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExpansionPanelActivity::class.java))
         }
 
+        iconButtonButton.setOnClickListener {
+            startActivity(Intent(this, IconButtonActivity::class.java))
+        }
+
         btnSelection.setOnClickListener {
             startActivity(Intent(this, SelectionControlActivity::class.java))
         }
 
         shortcutButton.setOnClickListener {
             startActivity(Intent(this, ShortcutActivity::class.java))
+        }
+
+        tagButton.setOnClickListener {
+            startActivity(Intent(this, TagActivity::class.java))
         }
 
         btnTextfield.setOnClickListener {
@@ -104,8 +112,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExpandableNavigationViewActivity::class.java))
         }
 
-        btnLoader.setOnClickListener {
-            startActivity(Intent(this, LoadingActivity::class.java))
+        progressIndicatorButton.setOnClickListener {
+            startActivity(Intent(this, ProgressIndicatorActivity::class.java))
         }
 
         btnErrorDefault.setOnClickListener {
