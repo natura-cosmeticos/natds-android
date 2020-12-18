@@ -38,7 +38,7 @@ class ThemeRepository(context: Context) {
         return when (chosenBrand) {
             "natura" -> R.style.Theme_Natura_Dark
             "avon" -> R.style.Theme_AvonDark
-            else -> R.style.Theme_BodyShopDark
+            else -> R.style.Theme_TheBodyShop_Dark
         }
     }
 
@@ -58,7 +58,7 @@ class ThemeRepository(context: Context) {
         return when (chosenBrand) {
             "natura" -> R.style.Theme_Natura_Dark_NoActionBar
             "avon" -> R.style.Theme_AvonDark_NoActionBar
-            else -> R.style.Theme_BodyShopDark_NoActionBar
+            else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
 }

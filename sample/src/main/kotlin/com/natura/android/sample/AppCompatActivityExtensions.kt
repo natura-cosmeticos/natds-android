@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.data.ThemeRepository
 
 fun AppCompatActivity.setContentViewWithBrand(layout: Int) {
-    setContentViewWithBrand(layout, R.style.Theme_Natura, R.style.Theme_Avon, R.style.Theme_BodyShop)
+    setContentViewWithBrand(layout, R.style.Theme_Natura_Light, R.style.Theme_Avon, R.style.Theme_TheBodyShop_Light)
 }
 
 fun AppCompatActivity.getChosenBrand(): String {
