@@ -41,7 +41,7 @@ class ThemeRepositoryTest {
 
         val savedTheme = themeRepository.getChosenTheme()
 
-        assertEquals(R.style.Theme_BodyShop, savedTheme)
+        assertEquals(R.style.Theme_TheBodyShop_Light, savedTheme)
     }
 
     @Test
@@ -68,6 +68,6 @@ class ThemeRepositoryTest {
 
         val savedTheme = themeRepository.getChosenDarkThemeWithNoActionBar()
 
-        assertEquals(R.style.Theme_NaturaDark_NoActionBar, savedTheme)
+        assertEquals(R.style.Theme_Natura_Dark_NoActionBar, savedTheme)
     }
 }
