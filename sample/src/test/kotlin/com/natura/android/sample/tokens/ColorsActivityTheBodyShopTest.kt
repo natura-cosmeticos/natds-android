@@ -134,7 +134,7 @@ class ColorsActivityTheBodyShopTest {
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
             assertEquals(Color.parseColor("#A29D12"), colorCode.color)
-            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 

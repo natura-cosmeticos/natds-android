@@ -33,11 +33,11 @@ class SplashActivity : AppCompatActivity() {
 
         mDelayHandler = Handler()
 
-        mDelayHandler?.postDelayed(mRunnable, SPLASH_DELAY)
+        mDelayHandler.postDelayed(mRunnable, SPLASH_DELAY)
     }
 
     public override fun onDestroy() {
-        mDelayHandler?.removeCallbacks(mRunnable)
+        mDelayHandler.removeCallbacks(mRunnable)
         super.onDestroy()
     }
 

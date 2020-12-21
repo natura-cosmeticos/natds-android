@@ -32,7 +32,7 @@
         <item name="colorSecondaryLight">@color/ssotb41e8fff62f6ba3bfde1a5cdaed8a354</item>
         <item name="colorOnSecondaryLight">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
         <item name="colorSecondaryDark">@color/ssot82088e247fcfdd71797b20fac0e3960d</item>
-        <item name="colorOnSecondaryDark">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="colorOnSecondaryDark">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
         <item name="colorBackground">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
         <item name="colorOnBackground">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
         <item name="colorSurface">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
