@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="@color/colorHighEmphasisLightOpacity06" android:state_enabled="false" />
-    <item android:color="@color/lightHighEmphasis"/>
+    <item android:color="@color/ssot09c72ac813bc7a0108f7f274f6197773"/>
 </selector>

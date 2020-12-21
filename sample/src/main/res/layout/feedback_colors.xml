@@ -81,7 +81,7 @@
         android:id="@+id/colorAlertContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorError">
+        android:background="?colorAlert">
         <TextView
             android:id="@+id/alertLabel"
             android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
             android:layout_marginBottom="16dp"
             android:text="Alert"
             android:textSize="16sp"
-            android:textColor="?attr/colorOnError"
+            android:textColor="?colorOnAlert"
             app:layout_constraintBottom_toTopOf="@+id/alertCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="Color On Alert"
-            android:textColor="?attr/colorOnError"
+            android:textColor="?colorOnAlert"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/alertLabel" />
