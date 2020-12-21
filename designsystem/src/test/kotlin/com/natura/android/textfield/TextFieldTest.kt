@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
@@ -32,7 +31,8 @@ class TextFieldTest {
 
     @Test
     fun basicLayout() {
-        val layout = LayoutInflater.from(activityController.get()).inflate(R.layout.ds_text_field_input, null) as ConstraintLayout
+        val layout = LayoutInflater.from(activityController.get())
+            .inflate(R.layout.ds_text_field_input, null) as ConstraintLayout
 
         assertThat(layout.findViewById(R.id.text_field_input_label) as View).isNotNull()
         assertThat(layout.findViewById(R.id.text_field_input_value) as View).isNotNull()
@@ -79,7 +79,11 @@ class TextFieldTest {
         test_setText(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, textField.stateLayout.FILLED)
     }
 
-    private fun test_setText(value: String?, expectedValue: String, expectedLayout: TextField.LayoutStates.LayoutState) {
+    private fun test_setText(
+        value: String?,
+        expectedValue: String,
+        expectedLayout: TextField.LayoutStates.LayoutState
+    ) {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
         textField.text = value
@@ -192,12 +196,22 @@ class TextFieldTest {
 
     @Test
     fun setState_Error() {
-        test_setState(TextField.State.ERROR, textField.stateLayout.ERROR, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+        test_setState(
+            TextField.State.ERROR,
+            textField.stateLayout.ERROR,
+            View.VISIBLE,
+            ERROR_ICON_CODE.toIcon()
+        )
     }
 
     @Test
     fun setState_Success() {
-        test_setState(TextField.State.SUCCESS, textField.stateLayout.SUCCESS, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
+        test_setState(
+            TextField.State.SUCCESS,
+            textField.stateLayout.SUCCESS,
+            View.VISIBLE,
+            SUCCESS_ICON_CODE.toIcon()
+        )
     }
 
     private fun test_setState(
@@ -375,5 +389,4 @@ class TextFieldTest {
 
         textField.isEnabled = true
     }
-
 }

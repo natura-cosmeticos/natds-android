@@ -15,7 +15,6 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 import com.natura.android.resources.getColorTokenFromTheme
@@ -37,20 +36,70 @@ open class TextField @JvmOverloads constructor(
         private val colorError = getColorTokenFromTheme(context, R.attr.colorError)
         private val colorSuccess = getColorTokenFromTheme(context, R.attr.colorSuccess)
         private val colorLowEmphasis = getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
-        private val colorMediumEmphasis = getColorTokenFromTheme(context, R.attr.colorMediumEmphasis)
+        private val colorMediumEmphasis =
+            getColorTokenFromTheme(context, R.attr.colorMediumEmphasis)
         private val colorHighEmphasis = getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
 
-        data class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int, val hintColor: Int)
+        data class LayoutState(
+            val borderWidth: Int,
+            val borderColor: Int,
+            val labelColor: Int,
+            val textColor: Int,
+            val footerColor: Int,
+            val hintColor: Int
+        )
 
-        val DEFAULT =  LayoutState(R.dimen.ds_border_tiny, colorLowEmphasis, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
-        val FILLED =  LayoutState(R.dimen.ds_border_tiny, colorHighEmphasis, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
-        val DISABLED =  LayoutState(R.dimen.ds_border_tiny, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis)
-        val FOCUSED =  LayoutState(R.dimen.ds_border_emphasis, colorPrimary, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
-        val ERROR =  LayoutState(R.dimen.ds_border_emphasis, colorError, colorError, colorHighEmphasis, colorError, colorMediumEmphasis)
-        val SUCCESS =  LayoutState(R.dimen.ds_border_tiny, colorSuccess, colorSuccess, colorHighEmphasis, colorSuccess, colorMediumEmphasis)
+        val DEFAULT = LayoutState(
+            R.dimen.ds_border_tiny,
+            colorLowEmphasis,
+            colorMediumEmphasis,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorMediumEmphasis
+        )
+        val FILLED = LayoutState(
+            R.dimen.ds_border_tiny,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorMediumEmphasis
+        )
+        val DISABLED = LayoutState(
+            R.dimen.ds_border_tiny,
+            colorLowEmphasis,
+            colorLowEmphasis,
+            colorLowEmphasis,
+            colorLowEmphasis,
+            colorLowEmphasis
+        )
+        val FOCUSED = LayoutState(
+            R.dimen.ds_border_emphasis,
+            colorPrimary,
+            colorMediumEmphasis,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorMediumEmphasis
+        )
+        val ERROR = LayoutState(
+            R.dimen.ds_border_emphasis,
+            colorError,
+            colorError,
+            colorHighEmphasis,
+            colorError,
+            colorMediumEmphasis
+        )
+        val SUCCESS = LayoutState(
+            R.dimen.ds_border_tiny,
+            colorSuccess,
+            colorSuccess,
+            colorHighEmphasis,
+            colorSuccess,
+            colorMediumEmphasis
+        )
     }
 
-     var stateLayout = LayoutStates(context)
+    var stateLayout = LayoutStates(context)
 
     private val SUCCESS_ICON = "EA15"
     private val ERROR_ICON = "EA13"
@@ -151,7 +200,8 @@ open class TextField @JvmOverloads constructor(
             inputLabel?.setTextColor(value.labelColor)
             (inputBox.background as GradientDrawable).setStroke(
                 resources.getDimension(value.borderWidth).toInt(),
-                value.borderColor)
+                value.borderColor
+            )
             footerValue?.setTextColor(value.footerColor)
             footerIcon?.setTextColor(value.footerColor)
             inputValue?.setHintTextColor(value.hintColor)
@@ -209,19 +259,25 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun intToState(vstate: Int) = when (vstate) {
-            1 -> State.SUCCESS
-            2 -> State.ERROR
-            else -> State.NONE
-        }
+        1 -> State.SUCCESS
+        2 -> State.ERROR
+        else -> State.NONE
+    }
 
     init {
         View.inflate(context, R.layout.ds_text_field_input, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
 
-        val vinputType = typedArray.getInteger(R.styleable.ds_text_field_input_android_inputType, EditorInfo.TYPE_CLASS_TEXT)
+        val vinputType = typedArray.getInteger(
+            R.styleable.ds_text_field_input_android_inputType,
+            EditorInfo.TYPE_CLASS_TEXT
+        )
         val vhint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
-        val vmaxLength = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLength, Integer.MAX_VALUE)
+        val vmaxLength = typedArray.getInteger(
+            R.styleable.ds_text_field_input_android_maxLength,
+            Integer.MAX_VALUE
+        )
         val vmaxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
         val vlines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
         val venabled = typedArray.getBoolean(R.styleable.ds_text_field_input_android_enabled, true)
