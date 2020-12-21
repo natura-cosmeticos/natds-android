@@ -3,7 +3,7 @@
     <style name="Theme.Aesop.Dark" parent="Theme.DsBaseDark">
     </style>
 
-    <style name="Theme.Aesop.Dark.NoActionBar" parent="Theme.AvonDark">
+    <style name="Theme.Aesop.Dark.NoActionBar" parent="Theme.Avon.Dark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

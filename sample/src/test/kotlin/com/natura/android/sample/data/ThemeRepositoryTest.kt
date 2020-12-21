@@ -59,7 +59,7 @@ class ThemeRepositoryTest {
 
         val savedTheme = themeRepository.getChosenDarkTheme()
 
-        assertEquals(R.style.Theme_AvonDark, savedTheme)
+        assertEquals(R.style.Theme_Avon_Dark, savedTheme)
     }
 
     @Test
