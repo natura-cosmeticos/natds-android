@@ -18,9 +18,10 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
+import com.natura.android.resources.getColorTokenFromTheme
 
 @SuppressLint("CustomViewStyleable")
-class TextField @JvmOverloads constructor(
+open class TextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -31,14 +32,25 @@ class TextField @JvmOverloads constructor(
         NONE, ERROR, SUCCESS
     }
 
-    enum class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int) {
-        DEFAULT(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis, R.color.colorMediumEmphasis),
-        FILLED(R.dimen.ds_border_tiny, R.color.colorHighEmphasis, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
-        DISABLED(R.dimen.ds_border_tiny, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis, R.color.colorLowEmphasis),
-        FOCUSED(R.dimen.ds_border_emphasis, R.color.colorBrdNatYellow, R.color.colorMediumEmphasis, R.color.colorHighEmphasis, R.color.colorMediumEmphasis),
-        ERROR(R.dimen.ds_border_emphasis, R.color.colorBrdNatRed, R.color.colorBrdNatRed, R.color.colorHighEmphasis, R.color.colorBrdNatRed),
-        SUCCESS(R.dimen.ds_border_tiny, R.color.colorBrdNatGreen, R.color.colorBrdNatGreen, R.color.colorHighEmphasis, R.color.colorBrdNatGreen)
+    class LayoutStates(val context: Context) {
+        private val colorPrimary = getColorTokenFromTheme(context, R.attr.colorPrimary)
+        private val colorError = getColorTokenFromTheme(context, R.attr.colorError)
+        private val colorSuccess = getColorTokenFromTheme(context, R.attr.colorSuccess)
+        private val colorLowEmphasis = getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
+        private val colorMediumEmphasis = getColorTokenFromTheme(context, R.attr.colorMediumEmphasis)
+        private val colorHighEmphasis = getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+
+        data class LayoutState(val borderWidth: Int, val borderColor: Int, val labelColor: Int, val textColor: Int, val footerColor: Int, val hintColor: Int)
+
+        val DEFAULT =  LayoutState(R.dimen.ds_border_tiny, colorLowEmphasis, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
+        val FILLED =  LayoutState(R.dimen.ds_border_tiny, colorHighEmphasis, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
+        val DISABLED =  LayoutState(R.dimen.ds_border_tiny, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis, colorLowEmphasis)
+        val FOCUSED =  LayoutState(R.dimen.ds_border_emphasis, colorPrimary, colorMediumEmphasis, colorHighEmphasis, colorMediumEmphasis, colorMediumEmphasis)
+        val ERROR =  LayoutState(R.dimen.ds_border_emphasis, colorError, colorError, colorHighEmphasis, colorError, colorMediumEmphasis)
+        val SUCCESS =  LayoutState(R.dimen.ds_border_tiny, colorSuccess, colorSuccess, colorHighEmphasis, colorSuccess, colorMediumEmphasis)
     }
+
+     var stateLayout = LayoutStates(context)
 
     private val SUCCESS_ICON = "EA15"
     private val ERROR_ICON = "EA13"
@@ -115,7 +127,7 @@ class TextField @JvmOverloads constructor(
     var icon: String? = null
         set(value) {
             field = value
-            inputIcon.setText(value)
+            inputIcon.text = value
             changeVisibilityByValue(inputIcon, value)
         }
 
@@ -133,15 +145,16 @@ class TextField @JvmOverloads constructor(
             changeVisibilityByValue(footerBox, value)
         }
 
-    var layoutState: LayoutState = LayoutState.DEFAULT
+    var layoutState = stateLayout.DEFAULT
         private set(value) {
             field = value
-            inputLabel?.setTextColor(ContextCompat.getColor(context, value.labelColor))
+            inputLabel?.setTextColor(value.labelColor)
             (inputBox.background as GradientDrawable).setStroke(
                 resources.getDimension(value.borderWidth).toInt(),
-                ContextCompat.getColor(context, value.borderColor))
-            footerValue?.setTextColor(ContextCompat.getColor(context, value.footerColor))
-            footerIcon?.setTextColor(ContextCompat.getColor(context, value.footerColor))
+                value.borderColor)
+            footerValue?.setTextColor(value.footerColor)
+            footerIcon?.setTextColor(value.footerColor)
+            inputValue?.setHintTextColor(value.hintColor)
         }
 
     var state: State = State.NONE
@@ -174,13 +187,13 @@ class TextField @JvmOverloads constructor(
 
     private fun resetLayoutState() {
         layoutState = when (state) {
-            State.ERROR -> LayoutState.ERROR
-            State.SUCCESS -> LayoutState.SUCCESS
+            State.ERROR -> stateLayout.ERROR
+            State.SUCCESS -> stateLayout.SUCCESS
             else -> {
-                if (!isEnabled) LayoutState.DISABLED
-                else if (inputValue.isFocused) LayoutState.FOCUSED
-                else if (inputValue.text.isNotEmpty()) LayoutState.FILLED
-                else LayoutState.DEFAULT
+                if (!isEnabled) stateLayout.DISABLED
+                else if (inputValue.isFocused) stateLayout.FOCUSED
+                else if (inputValue.text.isNotEmpty()) stateLayout.FILLED
+                else stateLayout.DEFAULT
             }
         }
     }
@@ -235,7 +248,7 @@ class TextField @JvmOverloads constructor(
         state = intToState(vstate)
 
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
-        inputIcon.setOnClickListener { _ -> onFocusChanged(true) }
+        inputIcon.setOnClickListener { onFocusChanged(true) }
 
         inputBox.setOnClickListener {
             inputValue.requestFocus()
@@ -244,7 +257,7 @@ class TextField @JvmOverloads constructor(
 
     private fun onFocusChanged(hasFocus: Boolean) {
         if (hasFocus) {
-            layoutState = LayoutState.FOCUSED
+            layoutState = stateLayout.FOCUSED
         } else {
             resetLayoutState()
         }

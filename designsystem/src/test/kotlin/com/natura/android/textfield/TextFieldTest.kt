@@ -49,7 +49,7 @@ class TextFieldTest {
         assertThat(textField.footer).isNull()
         assertThat(textField.icon).isNull()
         assertThat(textField.state).isEqualTo(TextField.State.NONE)
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DEFAULT)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
         assertThat(textField.inputType).isEqualTo(InputType.TYPE_CLASS_TEXT)
         assertThat(textField.hint).isNull()
         assertThat(textField.lines).isEqualTo(1)
@@ -66,20 +66,20 @@ class TextFieldTest {
 
     @Test
     fun setText_NullValue() {
-        test_setText(null, EMPTY_TEXT, TextField.LayoutState.DEFAULT)
+        test_setText(null, EMPTY_TEXT, textField.stateLayout.DEFAULT)
     }
 
     @Test
     fun setText_EmptyValue() {
-        test_setText(EMPTY_TEXT, EMPTY_TEXT, TextField.LayoutState.DEFAULT)
+        test_setText(EMPTY_TEXT, EMPTY_TEXT, textField.stateLayout.DEFAULT)
     }
 
     @Test
     fun setText_NoEmptyValue() {
-        test_setText(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, TextField.LayoutState.FILLED)
+        test_setText(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, textField.stateLayout.FILLED)
     }
 
-    private fun test_setText(value: String?, expectedValue: String, expectedLayout: TextField.LayoutState) {
+    private fun test_setText(value: String?, expectedValue: String, expectedLayout: TextField.LayoutStates.LayoutState) {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
         textField.text = value
@@ -187,25 +187,22 @@ class TextFieldTest {
 
     @Test
     fun setState_None() {
-        val expectedStatusColor = getColor(R.color.colorHighEmphasis)
-        test_setState(TextField.State.NONE, TextField.LayoutState.DEFAULT, View.GONE, "")
+        test_setState(TextField.State.NONE, textField.stateLayout.DEFAULT, View.GONE, "")
     }
 
     @Test
     fun setState_Error() {
-        val expectedStatusColor = getColor(R.color.colorBrdNatRed)
-        test_setState(TextField.State.ERROR, TextField.LayoutState.ERROR, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+        test_setState(TextField.State.ERROR, textField.stateLayout.ERROR, View.VISIBLE, ERROR_ICON_CODE.toIcon())
     }
 
     @Test
     fun setState_Success() {
-        val expectedStatusColor = getColor(R.color.colorBrdNatGreen)
-        test_setState(TextField.State.SUCCESS, TextField.LayoutState.SUCCESS, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
+        test_setState(TextField.State.SUCCESS, textField.stateLayout.SUCCESS, View.VISIBLE, SUCCESS_ICON_CODE.toIcon())
     }
 
     private fun test_setState(
         state: TextField.State,
-        expectedLayoutState: TextField.LayoutState,
+        expectedLayoutState: TextField.LayoutStates.LayoutState,
         expectedIconVisibility: Int,
         expectedIconValue: String
     ) {
@@ -216,9 +213,9 @@ class TextFieldTest {
         textField.state = state
 
         assertThat(textField.layoutState).isEqualTo(expectedLayoutState)
-        assertThat(labelView.currentTextColor).isEqualTo(getColor(expectedLayoutState.labelColor))
-        assertThat(footerView.currentTextColor).isEqualTo(getColor(expectedLayoutState.footerColor))
-        assertThat(footerIconView.currentTextColor).isEqualTo(getColor(expectedLayoutState.footerColor))
+        assertThat(labelView.currentTextColor).isEqualTo(expectedLayoutState.labelColor)
+        assertThat(footerView.currentTextColor).isEqualTo(expectedLayoutState.footerColor)
+        assertThat(footerIconView.currentTextColor).isEqualTo(expectedLayoutState.footerColor)
         assertThat(footerIconView.visibility).isEqualTo(expectedIconVisibility)
         assertThat(footerIconView.text).isEqualTo(expectedIconValue)
     }
@@ -274,7 +271,7 @@ class TextFieldTest {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
         textView.requestFocus()
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.FOCUSED)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.FOCUSED)
     }
 
     @Test
@@ -283,7 +280,7 @@ class TextFieldTest {
 
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DEFAULT)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
     }
 
     @Test
@@ -293,7 +290,7 @@ class TextFieldTest {
         textField.state = TextField.State.ERROR
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.ERROR)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.ERROR)
     }
 
     @Test
@@ -303,7 +300,7 @@ class TextFieldTest {
         textField.state = TextField.State.SUCCESS
         textView.requestFocus()
         textView.clearFocus()
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.SUCCESS)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.SUCCESS)
     }
 
     @Test
@@ -311,9 +308,9 @@ class TextFieldTest {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
         var clicked = false
 
-        textField.setOnIconClickListener(View.OnClickListener {
+        textField.setOnIconClickListener {
             clicked = true
-        })
+        }
         iconView.performClick()
         assertThat(clicked).isTrue()
     }
@@ -324,7 +321,7 @@ class TextFieldTest {
 
         textField.isEnabled = true
         iconView.performClick()
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.FOCUSED)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.FOCUSED)
     }
 
     @Test
@@ -332,7 +329,7 @@ class TextFieldTest {
         textField.isEnabled = false
 
         assertChildsEnabled(false)
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DISABLED)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
 
         textField.isEnabled = true
     }
@@ -341,7 +338,7 @@ class TextFieldTest {
     fun setIsEnabledTrue_ChangeToDefaultColor() {
         textField.isEnabled = true
         assertChildsEnabled(true)
-        assertThat(textField.layoutState).isEqualTo(TextField.LayoutState.DEFAULT)
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
     }
 
     private fun assertChildsEnabled(enabled: Boolean) {
@@ -379,5 +376,4 @@ class TextFieldTest {
         textField.isEnabled = true
     }
 
-    private fun getColor(id: Int) = ContextCompat.getColor(textField.context, id)
 }
