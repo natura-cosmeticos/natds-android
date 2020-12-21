@@ -163,7 +163,7 @@ class SelectionControlActivityTest {
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#A55F53"), colorSelected)
+            assertEquals(Color.parseColor("#D6CE4B"), colorSelected)
         }
     }
 
@@ -193,7 +193,7 @@ class SelectionControlActivityTest {
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#A55F53"), colorSelected)
+            assertEquals(Color.parseColor("#D6CE4B"), colorSelected)
         }
     }
 
