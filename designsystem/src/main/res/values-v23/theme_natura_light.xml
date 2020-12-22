@@ -269,7 +269,7 @@
         <item name="logoHorizontal">@drawable/natura_horizontal</item>
     </style>
 
-    <style name="Theme.Natura.NoActionBar" parent="Theme.Natura.Light">
+    <style name="Theme.Natura.Light.NoActionBar" parent="Theme.Natura.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
