@@ -40,7 +40,7 @@ class ThemeRepository(context: Context) {
 
     fun getChosenThemeWithNoActionBar(): Int {
         return when (sharedPreferences.getString("theme", "natura")) {
-            "natura" -> R.style.Theme_Natura_NoActionBar
+            "natura" -> R.style.Theme_Natura_Light_NoActionBar
             "avon" -> R.style.Theme_Avon_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }

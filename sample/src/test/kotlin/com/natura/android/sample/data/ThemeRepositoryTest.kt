@@ -50,7 +50,7 @@ class ThemeRepositoryTest {
 
         val savedTheme = themeRepository.getChosenThemeWithNoActionBar()
 
-        assertEquals(R.style.Theme_Natura_NoActionBar, savedTheme)
+        assertEquals(R.style.Theme_Natura_Light_NoActionBar, savedTheme)
     }
 
     @Test
