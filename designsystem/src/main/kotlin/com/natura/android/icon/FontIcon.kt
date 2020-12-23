@@ -18,7 +18,7 @@ class FontIcon @JvmOverloads constructor(
         try {
             typeface = Typeface.createFromAsset(context.assets, natDsFontPath)
         } catch (e: Exception) {
-            //Not able to find typeface. Happens on Layout Preview.
+            // Not able to find typeface. Happens on Layout Preview.
         }
     }
 

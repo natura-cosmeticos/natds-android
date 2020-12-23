@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.content.ContextCompat
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
@@ -375,5 +374,4 @@ class TextFieldTest {
 
         textField.isEnabled = true
     }
-
 }
