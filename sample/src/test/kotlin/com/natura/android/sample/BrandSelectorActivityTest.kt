@@ -5,6 +5,7 @@ import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.BrandSelectorActivity.Companion.AESOP
 import com.natura.android.sample.BrandSelectorActivity.Companion.AVON
 import com.natura.android.sample.BrandSelectorActivity.Companion.NATURA
 import com.natura.android.sample.BrandSelectorActivity.Companion.TBS
@@ -78,6 +79,18 @@ class BrandSelectorActivityTest {
     }
 
     @Test
+    fun setChosenThemeAsTheAesopWhenClickAtAesopBrandButton() {
+        brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
+            brandSelectorActivity.themeRepository = themeRepository
+            brandSelectorActivity.aesopThemeButton.performClick()
+
+            verify {
+                themeRepository.saveChosenTheme(AESOP)
+            }
+        }
+    }
+
+    @Test
     fun checksIfMainActivityIsOpenedWhenClickAtNaturaButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.naturaThemeButton.performClick()
@@ -99,6 +112,15 @@ class BrandSelectorActivityTest {
     fun checksIfMainActivityIsOpenedWhenClickAtTheBodyShopButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.tbsThemeButton.performClick()
+
+            intended(hasComponent(MainActivity::class.java.name))
+        }
+    }
+
+    @Test
+    fun checksIfMainActivityIsOpenedWhenClickAtAesopButton() {
+        brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
+            brandSelectorActivity.aesopThemeButton.performClick()
 
             intended(hasComponent(MainActivity::class.java.name))
         }
