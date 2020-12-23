@@ -26,6 +26,7 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Light
             "avon" -> R.style.Theme_Avon_Light
+            "aesop" -> R.style.Theme_Aesop_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -34,6 +35,7 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Dark
             "avon" -> R.style.Theme_Avon_Dark
+            "aesop" -> R.style.Theme_Aesop_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -42,6 +44,7 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Light_NoActionBar
             "avon" -> R.style.Theme_Avon_Light_NoActionBar
+            "aesop" -> R.style.Theme_Aesop_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -50,6 +53,7 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Dark_NoActionBar
             "avon" -> R.style.Theme_Avon_Dark_NoActionBar
+            "aesop" -> R.style.Theme_Aesop_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
