@@ -43,7 +43,7 @@
             app:cardBackgroundColor="@color/white"/>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/themeAesopButton"
+            android:id="@+id/aesopThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
             app:cardBackgroundColor="@color/white"
@@ -56,8 +56,7 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/logo_aesop"
-                android:alpha="?opacity03"/>
+                app:srcCompat="@drawable/logo_aesop" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
