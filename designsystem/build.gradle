@@ -51,6 +51,7 @@ android {
 }
 
 dependencies {
+    lintPublish project(path: ':lint')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"

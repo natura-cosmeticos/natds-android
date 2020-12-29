@@ -1,2 +1,3 @@
+include ':lint'
 include ':designsystem', ':sample'
 rootProject.name = 'natds-android'
