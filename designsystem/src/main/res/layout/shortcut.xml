@@ -15,8 +15,8 @@
         android:layout_width="?sizeMediumX"
         android:layout_height="?sizeMediumX"
         android:background="@drawable/shortcut_ripple_background"
-        android:orientation="horizontal"
         android:elevation="?elevation04"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/shortcutBackground" />
@@ -41,8 +41,17 @@
             android:id="@+id/shortCutIcon"
             android:layout_width="?sizeSemi"
             android:layout_height="?sizeSemi"
-            tools:srcCompat="@drawable/outlined_default_mockup" />
+            tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
     </LinearLayout>
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/notifyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="?elevation02"
+        tools:badgeNumber="100"
+        app:layout_constraintEnd_toEndOf="@+id/shortcutRippleBackground"
+        app:layout_constraintTop_toTopOf="@+id/shortcutRippleBackground" />
 
     <TextView
         android:id="@+id/shortCutLabel"
