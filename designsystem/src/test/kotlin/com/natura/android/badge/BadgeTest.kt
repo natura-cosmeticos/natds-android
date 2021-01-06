@@ -1,7 +1,14 @@
 package com.natura.android.badge
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import org.junit.runner.RunWith
+import android.content.Context
+import androidx.test.core.app.ApplicationProvider
 
-@RunWith(AndroidJUnit4::class)
-class BadgeTest
+class BadgeTest {
+
+    private lateinit var badge: Badge
+    private lateinit var context: Context
+
+    fun setUp() {
+        context = ApplicationProvider.getApplicationContext()
+    }
+}
