@@ -1,5 +1,10 @@
 #!/bin/bash
 set -e
 
-mkdir build
-echo "test deploy" > ./build/test.txt
+echo "Building docs for ${1}"
+
+if [[ $1 = "master" ]]; then
+  make publish-docs
+
+  echo "build docs success!"
+fi

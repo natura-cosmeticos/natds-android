@@ -39,6 +39,9 @@ And:
 
 
 #### Nat DS Icons
+
+![VERSION](https://img.shields.io/github/v/release/natura-cosmeticos/natds-commons?style=for-the-badge)
+
 Since 4.0.0 Nat DS Android has no longer Nat DS Icons. In order to use Nat DS Icons, you MUST add a new dependency:
  repositories {
     

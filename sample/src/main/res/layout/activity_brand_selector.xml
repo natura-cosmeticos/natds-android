@@ -40,12 +40,13 @@
             android:layout_marginBottom="?spacingSmall"
             android:textColor="#FAFAFA"
             android:textAppearance="?textAppearanceBody1" />
+            app:cardBackgroundColor="@color/white"/>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/themeAesopButton"
+            android:id="@+id/aesopThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            android:background="@color/white"
+            app:cardBackgroundColor="@color/white"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
             app:cardCornerRadius="?borderRadiusMedium"
@@ -55,15 +56,14 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/logo_aesop"
-                android:alpha="?opacity03"/>
+                app:srcCompat="@drawable/logo_aesop" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/avonThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            android:background="@color/white"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
@@ -81,7 +81,7 @@
             android:id="@+id/naturaThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            android:background="@color/white"
+            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
@@ -99,7 +99,7 @@
                 android:id="@+id/themeNaturaCoButton"
                 android:layout_width="match_parent"
                 android:layout_height="?sizeLargeX"
-                android:background="@color/white"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
                 android:gravity="center"
@@ -119,7 +119,7 @@
                 android:id="@+id/tbsThemeButton"
                 android:layout_width="match_parent"
                 android:layout_height="?sizeLargeX"
-                android:background="@color/white"
+                app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="?borderRadiusMedium"
                 android:layout_marginBottom="?spacingSmall"
                 android:gravity="center"

@@ -121,7 +121,7 @@ class ColorsActivityAvonTest {
             val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
 
             assertEquals(Color.parseColor("#E9E9E9"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
@@ -147,7 +147,7 @@ class ColorsActivityAvonTest {
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
             assertEquals(Color.parseColor("#B7B7B7"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
@@ -173,7 +173,7 @@ class ColorsActivityAvonTest {
             val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
 
             assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
 
