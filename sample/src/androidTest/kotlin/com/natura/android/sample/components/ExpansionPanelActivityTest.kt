@@ -2,7 +2,7 @@ package com.natura.android.sample.components
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDescendantOfA
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
@@ -84,7 +84,10 @@ class ExpansionPanelActivityTest {
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.first_expansion_panel))
-        )).perform(click()).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
+            .perform(closeSoftKeyboard())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),
