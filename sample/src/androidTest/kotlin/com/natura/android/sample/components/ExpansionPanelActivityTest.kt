@@ -100,12 +100,14 @@ class ExpansionPanelActivityTest {
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.first_expansion_panel))
-        )).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.second_expansion_panel))
-        )).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),
@@ -123,12 +125,14 @@ class ExpansionPanelActivityTest {
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.second_expansion_panel))
-        )).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.first_expansion_panel))
-        )).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),
@@ -146,7 +150,9 @@ class ExpansionPanelActivityTest {
         onView(allOf(
             withId(R.id.ds_expansion_panel_container),
             isDescendantOfA(withId(R.id.first_expansion_panel))
-        )).perform(click()).perform(click())
+        )).perform(scrollTo())
+            .perform(click())
+            .perform(click())
 
         onView(allOf(
             withId(R.id.ds_expansion_panel_content_area),
