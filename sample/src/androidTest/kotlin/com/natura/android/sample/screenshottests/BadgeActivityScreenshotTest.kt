@@ -14,14 +14,12 @@ class BadgeActivityScreenshotTest : ScreenShotActivityTestBase() {
     @get:Rule
     var activityTestRule = ActivityTestRule(BadgeActivity::class.java, false, false)
 
-    @Ignore
     @Test
     fun test_Snapshot_With_Notification_Badge() {
         val activity = activityTestRule.launchActivity(null)
         checkScreenshot(activity, "badge_count")
     }
 
-    @Ignore
     @Test
     fun test_Snapshot_After_Increment_Badge() {
         val activity = activityTestRule.launchActivity(null)
