@@ -21,7 +21,7 @@ class DialogStandardTest {
     @Before
     fun setUp() {
         context = ApplicationProvider.getApplicationContext()
-        context.setTheme(R.style.Theme_Natura)
+        context.setTheme(R.style.Theme_Natura_Light)
 
         dialog = createDialogWithCustomContentFromResourceId()
     }

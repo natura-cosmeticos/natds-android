@@ -20,7 +20,7 @@ internal class TagFixture private constructor(
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aTag(): TagFixture {
-            context.setTheme(R.style.Theme_Natura)
+            context.setTheme(R.style.Theme_Natura_Light)
             return TagFixture(defaultType, defaultLabel, context)
         }
 

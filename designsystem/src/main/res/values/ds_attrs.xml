@@ -18,7 +18,7 @@
             <enum name="outlined" value="0"/>
             <enum name="contained" value="1"/>
         </attr>
-        <attr name="colorBackground" format="color"/>
+        <attr name="colorBackground" />
         <attr name="colorIcon" format="color"/>
         <attr name="labelAppearance" format="reference"/>
         <attr name="textLabel" format="string"/>
