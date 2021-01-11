@@ -24,7 +24,7 @@ internal class ShortcutFixture private constructor(
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aShortcut(): ShortcutFixture {
-            context.setTheme(R.style.Theme_Natura)
+            context.setTheme(R.style.Theme_Natura_Light)
             return ShortcutFixture(defaultType, defaultLabel, defaultIcon, defaultNotify, context)
         }
 

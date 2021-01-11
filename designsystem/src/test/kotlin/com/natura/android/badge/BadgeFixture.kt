@@ -16,7 +16,7 @@ internal class BadgeFixture private constructor(
             private var context = ApplicationProvider.getApplicationContext<Context>()
 
             fun aBadge(): BadgeFixture {
-                context.setTheme(R.style.Theme_Natura)
+                context.setTheme(R.style.Theme_Natura_Light)
                 return BadgeFixture(number, visible, context)
             }
         }
