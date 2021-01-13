@@ -2,8 +2,7 @@ package com.natura.android.sample
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.action.ViewActions.scrollTo
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -136,6 +135,7 @@ class MainActivityFunctionalTests {
     @Test
     fun shouldOpenShortcutScreenWhenTapOnItButton() {
         onView(withId(R.id.shortcutButton)).perform(scrollTo())
+        onView(withId(R.id.shortcutButton)).perform(closeSoftKeyboard())
         onView(withId(R.id.shortcutButton)).perform(click())
 
         onView(withText("Shortcut")).check(matches(isDisplayed()))

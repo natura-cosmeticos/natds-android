@@ -63,7 +63,12 @@ class BadgeDrawable(
     }
 
     private fun defineTextBounds(text: String) {
-        mTextPaint.getTextBounds(text, 0, count.toString().length, mTxtRect)
+        if (count < 100) {
+            mTextPaint.getTextBounds(text, 0, count.toString().length, mTxtRect)
+            return
+        }
+
+        mTextPaint.getTextBounds(text, 0, DEFAULT_MAX_VALUE.length, mTxtRect)
     }
 
     private fun definePositionToDrawBadge(canvas: Canvas) {
@@ -75,7 +80,7 @@ class BadgeDrawable(
                 bounds.right - badgeWith,
                 bounds.top,
                 bounds.right,
-                mTxtRect.height() + getDimenFromTheme(R.attr.spacingMicro).toInt())
+                mTxtRect.height() + getDimenFromTheme(R.attr.spacingTiny).toInt())
             draw(canvas)
 
             drawText(
