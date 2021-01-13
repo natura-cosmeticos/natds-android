@@ -6,7 +6,7 @@ import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.natura.android.R
-import kotlinx.android.synthetic.main.dialog_standard_content.view.*
+import kotlinx.android.synthetic.main.dialog_standard_content.view.txtViewId
 
 class DialogStandard private constructor (
     private val context: Context,
