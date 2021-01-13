@@ -45,6 +45,6 @@ class DialogActivity : AppCompatActivity() {
             mainClickListener,
             "Close",
             secondaryClickListener,
-            R.layout.test_dialog_content).create()
+            R.layout.dialog_standard_content).create()
     }
 }
