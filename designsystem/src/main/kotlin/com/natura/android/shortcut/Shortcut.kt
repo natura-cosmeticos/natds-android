@@ -15,6 +15,7 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
+import com.natura.android.badge.Badge
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.extensions.setAppearance
@@ -27,6 +28,7 @@ class Shortcut @JvmOverloads constructor(
 
     private var labelAttribute: String? = null
     private var typeAttribute: Int? = null
+    private var notifyAttribute: Int = 0
     private var backgroundColorResourceAttribute = 0
     private var iconColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
@@ -36,6 +38,7 @@ class Shortcut @JvmOverloads constructor(
     val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
+    private val notifyContainer by lazy { findViewById<Badge>(R.id.notifyContainer) }
 
     init {
         try {
@@ -52,6 +55,26 @@ class Shortcut @JvmOverloads constructor(
 
         shortcutAttributesArray.recycle()
     }
+
+    var notify: Int = 0
+        /**
+         * Specifies the number showed as a notification at the corner of badge
+         * When 0, notification is not visible, when bigger than 99, notification
+         * shows 99+
+         * @return a integer with current number
+         * */
+        get() = notifyAttribute
+        /**
+         * Change the number showed by notification at shortcut
+         * When 0, notification is not visible, when bigger than 99, notification
+         * shows 99+
+         * @param [number] to be showed by notification
+         * */
+        set(value) {
+            field = value
+            notifyAttribute = value
+            configureNotify()
+        }
 
     fun setLabel(text: String?) {
         labelContainer.text = text
@@ -117,9 +140,14 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun getShortcutAttributes() {
+        getNotify()
         getLabelAttribute()
         getIconAttribute()
         getTypeAttribute()
+    }
+
+    private fun getNotify() {
+        notifyAttribute = shortcutAttributesArray.getInteger(R.styleable.Shortcut_notify, 0)
     }
 
     private fun getTypeAttribute() {
@@ -150,12 +178,17 @@ class Shortcut @JvmOverloads constructor(
         type?.apply {
             setLabel(labelAttribute)
             setIcon(iconAttribute)
+            configureNotify()
 
             when (this) {
                 CONTAINED -> setBackgroundContained()
                 OUTLINED -> setBackgroundOutlined()
             }
         }
+    }
+
+    private fun configureNotify() {
+        notifyContainer.number = notifyAttribute
     }
 
     private fun setBackgroundContained() {
