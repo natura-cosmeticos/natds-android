@@ -1,4 +1,4 @@
-package com.natura.android.sample.test
+package com.natura.android.sample.screenshottests
 
 import android.app.Activity
 import androidx.test.espresso.Espresso

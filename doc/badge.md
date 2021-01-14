@@ -60,4 +60,5 @@ For that to happen, it is necessary to instantiate the BadgeDrawable class, pass
 * If you need to update the number inside a Badge, call the method 'updateNotificationBadge'
 ```android
    badgeDrawable.updateBadgeDrawable(number)
+   
    ```

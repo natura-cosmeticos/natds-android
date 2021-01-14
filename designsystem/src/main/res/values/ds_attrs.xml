@@ -27,6 +27,11 @@
         <attr name="showLogo" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="Badge" >
+        <attr name="badgeNumber" format="integer"/>
+        <attr name="badgeVisibility" format="boolean"/>
+    </declare-styleable>
+
     <declare-styleable name="ds_menu">
         <attr name="menu_label" format="string" />
         <attr name="menu_label_color" format="reference" />
