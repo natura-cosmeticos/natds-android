@@ -9,6 +9,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
+import kotlinx.android.synthetic.main.dialog_standard_content.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -72,6 +73,16 @@ class DialogStandardTest {
         assertThat(dialogCustomContent?.childCount).isEqualTo(1)
     }
 
+    @Test
+    fun checksDialogCustomText() {
+        dialog = createDialogWithCustomText()
+        dialog.show()
+
+        val dialogCustomContent = dialog.dialog.txtViewId.text
+
+        assertThat(dialogCustomContent).isEqualTo("Text Example")
+    }
+
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
         return DialogStandard(
             context,
@@ -80,7 +91,7 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            R.layout.test_dialog_content).create()
+            R.layout.dialog_standard_content).create()
     }
 
     private fun createDialogWithCustomContentFromView(): DialogStandard {
@@ -95,5 +106,19 @@ class DialogStandardTest {
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
             view).create()
+    }
+
+    private fun createDialogWithCustomText(): DialogStandard {
+        val view = ImageView(context)
+        view.setImageResource(R.drawable.default_icon_outlined_default_mockup)
+
+        return DialogStandard(
+            context,
+            "Dialog Title",
+            "Main Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Secondary Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Text Example").create()
     }
 }
