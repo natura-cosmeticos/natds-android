@@ -14,7 +14,7 @@ You should use dialog according to its variantions: check dialog variantions [he
 ## Standard Dialog
 A dialog standard is a Nat DS component created over the native android AlertDialog, form AndroidX App Compat. The DS component MUST have:
 - Title
-- Content (can be anything you need, a text, an image et)
+- Content (can be anything you need, a text, an image, etc)
 - A main action button
 - A secondary action button
 
@@ -41,8 +41,8 @@ You can create this dialog provinding some attributes to DialogStandard construc
 ##### Dialog Secondary Action
 *DialogInterface.OnClickListener that will be call when user perform a click at secondary button*
 
-##### Content View or Content Layout
-*Content that will be show inside dialog. You can provide an View or a Layout reference to fill it.*
+##### Content View, Content Layout or Text Message
+*Content that will be show inside dialog. You can provide an View, a Layout reference to fill it, or simply insert the main text of your dialog.*
 
 ##### Cancelable
 *Flag that set if dialog can be closed by clicking out of it or not. You can omite this parameter and it will be assumed as true*
@@ -52,7 +52,7 @@ You can create this dialog provinding some attributes to DialogStandard construc
 
 
 
-Check bellow an code exemple of how you can create an Dialog Standard:
+Check bellow an code exemple of how you can create an Dialog Standard with Content Layout:
 
 ```android
 private fun createDialog() {
@@ -69,6 +69,26 @@ private fun createDialog() {
         R.layout.standard_dialog_content).create()
 }
 ```
+
+
+Check bellow an code exemple of how you can create an Dialog Standard with Text Message:
+
+```android
+private fun createDialog() {
+    val mainClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show() }
+    val secondaryClickListener = DialogInterface.OnClickListener { _, _ -> Toast.makeText(this, "Dialog Secondary Action", Toast.LENGTH_LONG).show() }
+
+    dialogStandard = DialogStandard(
+        this,
+        "Title",
+        "Confirm Button",
+        mainClickListener,
+        "Close",
+        secondaryClickListener,
+        "Dialog Text Message").create()
+}
+```
+
 ### Showing the dialog
 
 With the dialog created, you can show it whenever you want, calling *show()* method :)
