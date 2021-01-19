@@ -8,6 +8,12 @@
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>
 
+    <style name="Theme.DS.Dialog.Alert" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="android:windowBackground">@drawable/dialog_standard_background</item>
+    </style>
+
     <style name="Theme.DS.Dialog.Title" parent="@style/Heading6">
         <item name="android:layout_marginBottom">?spacingSmall</item>
     </style>
