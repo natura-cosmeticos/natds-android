@@ -250,7 +250,7 @@
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Dark</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.TBS.Dark</item>
-        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>
+        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.TBS.Dark</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>

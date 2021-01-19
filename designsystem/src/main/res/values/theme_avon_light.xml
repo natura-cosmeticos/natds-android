@@ -249,8 +249,8 @@
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Avon.Light</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Light</item>
 
-        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
-        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Light</item>
+        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Avon.Light</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>

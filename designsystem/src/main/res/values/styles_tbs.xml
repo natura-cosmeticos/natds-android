@@ -6,6 +6,11 @@
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
     </style>
 
+    <style name="Theme.DS.Dialog.Alert.TBS.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light</item>
+    </style>
+
     <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Light" parent="@style/Widget.DS.Button.TBS.Light">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginBottom">?spacingMicro</item>
@@ -21,6 +26,11 @@
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.TBS.Dark</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Alert.TBS.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Dark" parent="@style/Widget.DS.Button.TBS.Dark">
