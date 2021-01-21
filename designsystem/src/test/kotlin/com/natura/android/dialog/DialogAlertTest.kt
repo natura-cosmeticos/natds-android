@@ -2,10 +2,7 @@ package com.natura.android.dialog
 
 import android.content.Context
 import android.content.DialogInterface
-import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.DialogTitle
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
@@ -57,7 +54,6 @@ class DialogAlertTest {
 
         assertThat(textView?.text).isEqualTo(message)
     }
-
 
     private fun createDialog(): DialogAlert {
         return DialogAlert(
