@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.DialogInterface
 import android.util.TypedValue
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.natura.android.R
-import kotlinx.android.synthetic.main.dialog_standard_content.view.txtViewId
 
 class DialogStandard private constructor (
     private val context: Context,
@@ -108,7 +108,8 @@ class DialogStandard private constructor (
             text?.let {
                 layoutInflater.inflate(R.layout.dialog_standard_content, null).apply {
                     setView(this)
-                    this.txtViewId.text = text
+                    val textView = findViewById<TextView>(R.id.dialogAlertText)
+                    textView.text = text
                 }
             }
             contentView?.let { setView(contentView) }
