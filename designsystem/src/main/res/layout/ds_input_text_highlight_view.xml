@@ -16,26 +16,26 @@
     <TextView
         android:id="@+id/description_label"
         style="@style/TextAppearence.Natura.Default"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/ds_spacin_tiny"
         android:layout_marginLeft="@dimen/ds_spacin_tiny"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/highlight_label"
         app:layout_constraintTop_toBottomOf="@id/superior_divider"
         tools:text="AMOUNT TO TRANSFER" />
 
     <TextView
         android:id="@+id/highlight_label"
         style="@style/TextAppearence.Natura.Highlight"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/ds_spacin_tiny"
         android:layout_marginRight="@dimen/ds_spacin_tiny"
         android:gravity="end"
         app:layout_constraintBottom_toBottomOf="@id/description_label"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/description_label"
         app:layout_constraintTop_toTopOf="@id/description_label"
         tools:text="$ 120,75" />
 
