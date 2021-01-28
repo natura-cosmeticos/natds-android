@@ -248,7 +248,8 @@
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Aesop.Dark</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Dark</item>
 
-        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Aesop.Light</item>
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Aesop.Dark</item>
+        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Aesop.Dark</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>

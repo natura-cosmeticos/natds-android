@@ -30,4 +30,16 @@ class DialogActivityTest {
             Truth.assertThat(dialogDisplayed.isShowing).isTrue()
         }
     }
+
+    @Test
+    fun dialogAlertButtonStartsDialogAlert() {
+        dialogActivityScenario.onActivity { dialogActivity ->
+            val buttonDialogAlert = dialogActivity.alertDialogButton
+            buttonDialogAlert.performClick()
+
+            val dialogDisplayed = ShadowAlertDialog.getLatestDialog()
+
+            Truth.assertThat(dialogDisplayed.isShowing).isTrue()
+        }
+    }
 }

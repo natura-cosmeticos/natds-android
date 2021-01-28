@@ -78,7 +78,7 @@ class DialogStandardTest {
         dialog = createDialogWithCustomText()
         dialog.show()
 
-        val dialogCustomContent = dialog.dialog.txtViewId.text
+        val dialogCustomContent = dialog.dialog.dialogAlertText.text
 
         assertThat(dialogCustomContent).isEqualTo("Text Example")
     }

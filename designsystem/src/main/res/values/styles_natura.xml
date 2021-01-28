@@ -4,16 +4,24 @@
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Light</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Light" parent="@style/Widget.DS.Button.Natura.Light">
+    <style name="Theme.DS.Dialog.Alert.Natura.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_natura_light</item>
+        <item name="backgroundTint">@color/button_background_color_selector_natura_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light" parent="@style/Widget.DS.Button.TextButton.Light">
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
@@ -21,16 +29,24 @@
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Dark</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Dark" parent="@style/Widget.DS.Button.Natura.Dark">
+    <style name="Theme.DS.Dialog.Alert.Natura.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_natura_dark</item>
+        <item name="backgroundTint">@color/button_background_color_selector_natura_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
