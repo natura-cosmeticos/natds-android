@@ -13,9 +13,12 @@
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Light" parent="@style/Widget.DS.Button.TBS.Light">
+    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_light</item>
+        <item name="backgroundTint">@color/button_background_color_selector_tbs_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -35,9 +38,12 @@
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Dark" parent="@style/Widget.DS.Button.TBS.Dark">
+    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_dark</item>
+        <item name="backgroundTint">@color/button_background_color_selector_tbs_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">

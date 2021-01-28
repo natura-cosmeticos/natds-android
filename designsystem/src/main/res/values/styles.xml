@@ -23,9 +23,12 @@
         <item name="android:paddingTop">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.V23" parent="@style/Widget.DS.Button.V23">
+    <style name="Theme.DS.Dialog.Standard.MainButton.V23" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_v23</item>
+        <item name="backgroundTint">@color/button_background_color_selector_v23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.V23" parent="@style/Widget.DS.Button.TextButton.V23">

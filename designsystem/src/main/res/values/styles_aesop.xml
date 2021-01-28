@@ -13,9 +13,12 @@
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Light" parent="@style/Widget.DS.Button.Aesop.Light">
+    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_aesop_light</item>
+        <item name="backgroundTint">@color/button_background_color_selector_aesop_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -35,9 +38,12 @@
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Dark" parent="@style/Widget.DS.Button.Aesop.Dark">
+    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_text_color_selector_aesop_dark</item>
+        <item name="backgroundTint">@color/button_background_color_selector_aesop_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
