@@ -127,5 +127,9 @@ class MainActivity : AppCompatActivity() {
         btnBadge.setOnClickListener {
             startActivity(Intent(this, BadgeActivity::class.java))
         }
+
+        btnCard.setOnClickListener {
+            startActivity(Intent(this, CardActivity::class.java))
+        }
     }
 }

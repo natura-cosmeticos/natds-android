@@ -268,6 +268,8 @@
 
         <item name="logoVertical">@drawable/tbs_vertical_dark</item>
         <item name="logoHorizontal">@drawable/tbs_horizontal_dark</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
     </style>
 
     <style name="Theme.TheBodyShop.Dark.NoActionBar" parent="Theme.TheBodyShop.Dark">

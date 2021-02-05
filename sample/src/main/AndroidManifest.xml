@@ -110,6 +110,9 @@
         <activity
             android:name=".components.IconButtonActivity"
             android:theme="@style/Theme.Natura.Light"/>
+        <activity
+            android:name=".components.CardActivity"
+            android:theme="@style/Theme.Natura.Light" />
     </application>
 
 </manifest>

@@ -266,6 +266,8 @@
 
         <item name="logoVertical">@drawable/natura_vertical_dark</item>
         <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
     </style>
 
     <style name="Theme.Natura.Dark.NoActionBar" parent="Theme.Natura.Dark">
