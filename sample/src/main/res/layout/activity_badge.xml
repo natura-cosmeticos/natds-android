@@ -37,12 +37,12 @@
             android:layout_marginBottom="?spacingMicro"
             app:badgeNumber="50"
             app:badgeVisibility="false"
-            app:layout_constraintBottom_toTopOf="@+id/textViewBody"
-            app:layout_constraintEnd_toEndOf="@+id/textViewBody"
-            app:layout_constraintStart_toStartOf="@+id/textViewBody" />
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="@+id/textView4" />
 
         <TextView
-            android:id="@+id/textViewBody"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Invisible badge"
@@ -70,7 +70,7 @@
             android:text="Badge to Increment"
             android:textAppearance="?textAppearanceCaption"
             app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
-            app:layout_constraintEnd_toStartOf="@+id/textViewBody"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/textView6"
             app:layout_constraintTop_toTopOf="parent" />
