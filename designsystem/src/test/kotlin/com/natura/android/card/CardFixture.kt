@@ -18,7 +18,7 @@ internal class CardFixture private constructor(
 
         fun aCard(): CardFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return CardFixture(defaultEnabledRadius, defaultEnabledElevation)
+            return CardFixture(defaultEnabledRadius, defaultEnabledElevation, context)
         }
 
         fun aEmptyCard(): CardFixture {
