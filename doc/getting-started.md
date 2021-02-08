@@ -103,6 +103,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [App Bar Top](app-bar-top.md)
   - [Badge](badge.md)
   - [Button](button.md)
+  - [Card](card.md)
   - [Dialog](dialog.md)
   - [Expansion Panel](expansion-panel.md)
   - [Logo](logo.md)
