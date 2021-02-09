@@ -111,4 +111,13 @@
         <attr name="notify"/>
     </declare-styleable>
 
+    <declare-styleable name="Card">
+        <attr name="colorBackground"/>
+        <attr name="customRadius" format="reference" />
+        <attr name="customElevation" format="reference" />
+        <attr name="customPadding" format="reference" />
+        <attr name="enabledRadius" format="boolean" />
+        <attr name="enabledElevation" format="boolean" />
+    </declare-styleable>
+
 </resources>

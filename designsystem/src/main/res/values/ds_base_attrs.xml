@@ -81,4 +81,8 @@
     <!-- Tag references -->
     <attr name="tagPrimary" format="reference"/>
     <attr name="tagAlert" format="reference"/>
+
+    <!-- Card references -->
+    <attr name="card" format="reference"/>
+
 </resources>

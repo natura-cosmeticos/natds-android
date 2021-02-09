@@ -392,5 +392,15 @@
         <item name="labelAppearance">?textAppearanceCaption</item>
     </style>
 
+    <!-- CARD STYLE -->
+
+    <style name="Widget.DS.Card">
+        <item name="colorBackground">?colorSurface</item>
+        <item name="customPadding">?sizeSmall</item>
+        <item name="customElevation">?elevation01</item>
+        <item name="customRadius">?borderRadiusMedium</item>
+    </style>
+
     <style name="Widget.DS"/>
+
 </resources>

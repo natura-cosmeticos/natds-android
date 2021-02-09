@@ -266,6 +266,8 @@
 
         <item name="logoVertical">@drawable/default_icon_outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
     </style>
 
     <style name="Theme.Avon.Dark.NoActionBar" parent="Theme.Avon.Dark">

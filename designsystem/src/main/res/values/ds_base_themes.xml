@@ -144,6 +144,8 @@
 
         <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -288,5 +290,7 @@
 
         <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
     </style>
 </resources>
