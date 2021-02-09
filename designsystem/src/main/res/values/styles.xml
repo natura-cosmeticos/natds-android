@@ -401,6 +401,11 @@
         <item name="customRadius">?borderRadiusMedium</item>
     </style>
 
+    <style name="Widget.DS.Divider">
+        <item name="colorBackground">?colorLowEmphasis</item>
+        <item name="android:layout_height">?sizeSmall</item>
+    </style>
+
     <style name="Widget.DS"/>
 
 </resources>

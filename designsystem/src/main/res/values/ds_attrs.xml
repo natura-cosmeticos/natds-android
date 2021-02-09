@@ -120,4 +120,16 @@
         <attr name="enabledElevation" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="Divider">
+        <attr name="colorBackground"/>
+        <attr name="android:layout_marginLeft" />
+        <attr name="android:layout_marginRight" />
+        <attr name="android:layout_height" />
+        <attr name="type" format="enum">
+            <enum name="full-bleed" value="0"/>
+            <enum name="inset" value="1"/>
+            <enum name="middle" value="2"/>
+        </attr>
+    </declare-styleable>
+
 </resources>
