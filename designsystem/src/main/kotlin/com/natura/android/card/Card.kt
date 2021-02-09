@@ -33,16 +33,15 @@ class Card @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : MaterialCardView(context, attrs, defStyleAttr) {
 
+    private var cardAttributesArray: TypedArray
     private var elevationAttribute: Boolean = false
     private var radiusAttribute: Boolean = false
-    private var cardAttributesArray: TypedArray
-    private var backgroundColorResourceAttribute = 0
-    private var radiusResourceAttribute = 0
-    private var paddingResourceAttribute = 0
-    private var elevationResourceAttribute = 0
+    private var backgroundColorResourceAttribute: Int = 0
+    private var radiusResourceAttribute: Int = 0
+    private var paddingResourceAttribute: Int = 0
+    private var elevationResourceAttribute: Int = 0
 
     init {
-
         cardAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Card)
 
         getCardAttributes()
@@ -81,15 +80,14 @@ class Card @JvmOverloads constructor(
 
         if (!radiusAttribute) {
             this.radius = 0F
-            return
+        } else {
+            this.radius = resources.getDimension(radiusResourceAttribute)
         }
 
         if (!elevationAttribute) {
             this.elevation = 0F
-            return
+        } else {
+            this.elevation = resources.getDimension(elevationResourceAttribute)
         }
-
-        this.radius = resources.getDimension(radiusResourceAttribute)
-        this.elevation = resources.getDimension(elevationResourceAttribute)
     }
 }

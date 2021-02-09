@@ -10,8 +10,8 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginLeft="?spacingSmall"
+        android:layout_marginRight="?spacingSmall"
         app:enabledRadius="true"
         app:enabledElevation="true"
         app:layout_constraintTop_toTopOf="parent"
@@ -22,7 +22,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp">
+            android:padding="?spacingMicro">
 
         <TextView
             android:id="@+id/textViewOverline"
@@ -37,7 +37,7 @@
             android:id="@+id/textViewHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="?spacingSmall"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewOverline"
             android:text="Header 6"
@@ -47,7 +47,7 @@
             android:id="@+id/textViewCaption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="?spacingTiny"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewHeader"
             android:text="Caption"
@@ -57,7 +57,7 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="?spacingSmall"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCaption"
             android:text="This is an example of text using the body2 variant of Typography component"
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="?spacingTiny"
                 android:minWidth="?sizeHuge"
                 android:text="Default"
                 app:layout_constraintTop_toBottomOf="@+id/textView4"

@@ -2,7 +2,11 @@
 
 ## What is it?
 
-The card is a container component with rounded corners and shadow based on its elevation, used to group static and dynamic content.
+The card is a container with rounded corners and shadow based on its elevation, which is based on the CardView component.
+It involves a layout and can be used to group static content, or it can also be used for each item in a ListView or RecyclerView.
+The visibility of the radius and elevation attributes are configurable, so that when enabledRadius or enabledElevation are false values, the Card will not have these characteristics.
+
+Card is available at version 5.4.0 of NatDS Android.
 
 ### Why should I use it?
 
