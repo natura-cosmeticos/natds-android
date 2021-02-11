@@ -154,7 +154,7 @@
         <item name="android:textColor">?colorOnSurface</item>
         <item name="titleTextColor">?colorOnSurface</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
+        <item name="height">@dimen/ds_toolbar_height</item>
         <item name="navigationIcon">@drawable/default_icon_outlined_navigation_directionright</item>
         <item name="collapseIcon">@drawable/default_icon_outlined_navigation_directionright</item>
     </style>
@@ -401,9 +401,30 @@
         <item name="customRadius">?borderRadiusMedium</item>
     </style>
 
+    <!-- DIVIDER STYLE -->
+
     <style name="Widget.DS.Divider">
+    </style>
+
+    <style name="Widget.DS.Divider.Fullbleed" parent="Widget.DS.Divider">
         <item name="colorBackground">?colorLowEmphasis</item>
-        <item name="android:layout_height">?sizeSmall</item>
+        <item name="height">@dimen/ds_size_line</item>
+        <item name="marginLeft">?spacingNone</item>
+        <item name="android:layout_marginRight">?spacingNone</item>
+    </style>
+
+    <style name="Widget.DS.Divider.Inset" parent="Widget.DS.Divider">
+        <item name="colorBackground">?colorLowEmphasis</item>
+        <item name="height">@dimen/ds_size_line</item>
+        <item name="marginLeft">?spacingStandard</item>
+        <item name="android:layout_marginRight">?spacingNone</item>
+    </style>
+
+    <style name="Widget.DS.Divider.Middle" parent="Widget.DS.Divider">
+        <item name="colorBackground">?colorLowEmphasis</item>
+        <item name="height">@dimen/ds_size_line</item>
+        <item name="marginLeft">?spacingStandard</item>
+        <item name="android:layout_marginRight">?spacingStandard</item>
     </style>
 
     <style name="Widget.DS"/>

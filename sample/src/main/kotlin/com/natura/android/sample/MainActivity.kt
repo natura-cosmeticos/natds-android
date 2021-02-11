@@ -131,5 +131,9 @@ class MainActivity : AppCompatActivity() {
         btnCard.setOnClickListener {
             startActivity(Intent(this, CardActivity::class.java))
         }
+
+        dividerButton.setOnClickListener {
+            startActivity(Intent(this, DividerActivity::class.java))
+        }
     }
 }

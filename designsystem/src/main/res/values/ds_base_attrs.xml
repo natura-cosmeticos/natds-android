@@ -86,7 +86,7 @@
     <attr name="card" format="reference"/>
 
     <!-- Divider references -->
-    <attr name="dividerFullBleed" format="reference"/>
+    <attr name="dividerFullbleed" format="reference"/>
     <attr name="dividerInset" format="reference"/>
     <attr name="dividerMiddle" format="reference"/>
 

@@ -200,6 +200,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/dividerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Divider"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/iconButtonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

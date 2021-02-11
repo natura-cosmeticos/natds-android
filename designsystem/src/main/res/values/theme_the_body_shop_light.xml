@@ -269,6 +269,10 @@
         <item name="logoHorizontal">@drawable/tbs_horizontal</item>
 
         <item name="card">@style/Widget.DS.Card</item>
+
+        <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
+        <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
+        <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
     </style>
 
     <style name="Theme.TheBodyShop.Light.NoActionBar" parent="Theme.TheBodyShop.Light">

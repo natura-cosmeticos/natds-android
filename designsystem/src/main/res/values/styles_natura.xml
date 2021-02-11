@@ -163,7 +163,7 @@
 
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/ds_size_line</item>
+        <item name="height">@dimen/ds_size_line</item>
         <item name="android:background">?colorControlHighlight</item>
     </style>
 
@@ -217,7 +217,7 @@
     <!-- {@deprecated Use ?toolbarStyle from theme instead.} -->
     <style name="Widget.Natura.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
+        <item name="height">@dimen/ds_toolbar_height</item>
         <item name="android:background">?android:colorBackground</item>
         <item name="android:textSize">@dimen/ds_text_title_size</item>
         <item name="android:textColor">?android:textColorPrimary</item>
