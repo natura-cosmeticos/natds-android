@@ -404,26 +404,21 @@
     <!-- DIVIDER STYLE -->
 
     <style name="Widget.DS.Divider">
+        <item name="colorBackground">?colorLowEmphasis</item>
     </style>
 
     <style name="Widget.DS.Divider.Fullbleed" parent="Widget.DS.Divider">
-        <item name="colorBackground">?colorLowEmphasis</item>
-        <item name="height">@dimen/ds_size_line</item>
-        <item name="marginLeft">?spacingNone</item>
+        <item name="android:layout_marginLeft">?spacingNone</item>
         <item name="android:layout_marginRight">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.Divider.Inset" parent="Widget.DS.Divider">
-        <item name="colorBackground">?colorLowEmphasis</item>
-        <item name="height">@dimen/ds_size_line</item>
-        <item name="marginLeft">?spacingStandard</item>
+        <item name="android:layout_marginLeft">?spacingStandard</item>
         <item name="android:layout_marginRight">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.Divider.Middle" parent="Widget.DS.Divider">
-        <item name="colorBackground">?colorLowEmphasis</item>
-        <item name="height">@dimen/ds_size_line</item>
-        <item name="marginLeft">?spacingStandard</item>
+        <item name="android:layout_marginLeft">?spacingStandard</item>
         <item name="android:layout_marginRight">?spacingStandard</item>
     </style>
 

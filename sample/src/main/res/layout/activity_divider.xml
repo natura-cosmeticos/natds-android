@@ -12,7 +12,7 @@
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
-       android:layout_marginTop="156dp"
+       android:layout_marginTop="?spacingXLarge"
        android:gravity="center"
        app:layout_constraintTop_toTopOf="parent"
        android:text="Full-bleed" />
@@ -20,7 +20,7 @@
    <com.natura.android.divider.Divider
        android:id="@+id/dividerFullbleed"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="wrap_content"
        app:layout_constraintTop_toBottomOf="@id/textView1"
        app:layout_constraintLeft_toLeftOf="parent"
        app:dividerType="fullBleed" />
@@ -41,7 +41,7 @@
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
-       android:layout_marginTop="56dp"
+       android:layout_marginTop="?spacingXLarge"
        android:gravity="center"
        app:layout_constraintTop_toBottomOf="@id/textView2"
        android:text="Inset" />
@@ -71,7 +71,7 @@
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:gravity="center"
-       android:layout_marginTop="56dp"
+       android:layout_marginTop="?spacingXLarge"
        app:layout_constraintTop_toBottomOf="@id/textView4"
        android:text="Middle" />
 
@@ -81,7 +81,7 @@
        android:layout_height="wrap_content"
        app:layout_constraintTop_toBottomOf="@id/textView5"
        app:layout_constraintLeft_toLeftOf="parent"
-       app:dividerType="fullBleed" />
+       app:dividerType="middle" />
 
    <TextView
        android:id="@+id/textView6"

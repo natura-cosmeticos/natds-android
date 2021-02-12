@@ -121,9 +121,9 @@
     </declare-styleable>
 
     <declare-styleable name="DividerLine">
-        <attr name="marginLeft" format="reference" />
+        <attr name="android:layout_marginLeft" />
         <attr name="android:layout_marginRight" />
-        <attr name="height"/>
+        <attr name="android:layout_height"/>
         <attr name="colorBackground"/>
         <attr name="dividerType" format="enum">
             <enum name="fullBleed" value="0"/>
