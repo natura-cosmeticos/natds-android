@@ -163,6 +163,7 @@
 
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ds_size_line</item>
         <item name="android:background">?colorControlHighlight</item>
     </style>
 
