@@ -154,7 +154,7 @@
         <item name="android:textColor">?colorOnSurface</item>
         <item name="titleTextColor">?colorOnSurface</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="height">@dimen/ds_toolbar_height</item>
+        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
         <item name="navigationIcon">@drawable/default_icon_outlined_navigation_directionright</item>
         <item name="collapseIcon">@drawable/default_icon_outlined_navigation_directionright</item>
     </style>
