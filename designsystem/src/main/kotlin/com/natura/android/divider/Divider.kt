@@ -12,6 +12,24 @@ import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import kotlinx.android.synthetic.main.divider.view.*
 
+/**
+ * Divider is a thin line view with the purpose of separating content within a layout.
+ * Depending on the preference of the margins, it can be separated into three types:
+ * - Full-bleed: covers the entire width of the screen
+ * - Inset: margin only at the left end
+ * - Middle: centralized, with margins on both sides
+ *
+ * Divider is available at version 5.4.0 of NatDS Android.
+ *
+ * ```
+ * <com.natura.android.divider.Divider
+        android:id="@+id/dividerFullbleed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dividerType="fullBleed" />
+ *```
+ */
+
 class Divider @JvmOverloads constructor(
     context: Context,
     private val attrs: AttributeSet? = null,
@@ -20,7 +38,7 @@ class Divider @JvmOverloads constructor(
 
     private var dividerAttributesArray: TypedArray
     private var typeAttribute: Int? = null
-    private var backgroundColorResourceAttribute = 0
+    private var backgroundColorResourceAttribute: Int = 0
     private var marginLeftResourceAttribute: Int = 0
     private var marginRightResourceAttribute: Int = 0
 
