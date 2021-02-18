@@ -26,6 +26,9 @@ Add the Divider component in your xml layout file
         app:dividerType="fullBleed" />
 ```
 #### Divider component has the following attribute that can be set:
-- `type` : when fullBleed, divider covers the entire width of the screen
-           when inset, shows margin only on the left side
-           when middle, it is centralized with margins on both sides
+
+- `type`:  differs depending on the distance from the ends.
+           Remember that the margins are fixed and not customizable.
+           
+![Divider](divider.png)
+
