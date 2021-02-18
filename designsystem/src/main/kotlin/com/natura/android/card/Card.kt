@@ -45,7 +45,7 @@ class Card @JvmOverloads constructor(
         cardAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Card)
 
         getCardAttributes()
-        configureLayout()
+        configureAppearance()
     }
 
     fun getEnabledRadius(): Boolean = radiusAttribute
@@ -59,7 +59,7 @@ class Card @JvmOverloads constructor(
         cardAttributesArray.recycle()
     }
 
-    private fun configureLayout() {
+    private fun configureAppearance() {
         context
             .theme
             .obtainStyledAttributes(attrs, R.styleable.Card, R.attr.card, 0)

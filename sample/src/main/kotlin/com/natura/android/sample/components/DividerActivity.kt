@@ -6,15 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
 
-class CardActivity : AppCompatActivity() {
-
+class DividerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setChosenDefaultTheme()
-        setContentView(R.layout.activity_card)
+        setContentView(R.layout.activity_divider)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Card"
+        supportActionBar?.title = "Divider"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

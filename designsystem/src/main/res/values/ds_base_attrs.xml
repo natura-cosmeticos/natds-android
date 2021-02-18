@@ -82,7 +82,12 @@
     <attr name="tagPrimary" format="reference"/>
     <attr name="tagAlert" format="reference"/>
 
-    <!-- Card references -->
+    <!-- Card reference -->
     <attr name="card" format="reference"/>
+
+    <!-- Divider references -->
+    <attr name="dividerFullbleed" format="reference"/>
+    <attr name="dividerInset" format="reference"/>
+    <attr name="dividerMiddle" format="reference"/>
 
 </resources>

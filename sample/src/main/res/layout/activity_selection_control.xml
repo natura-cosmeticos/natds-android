@@ -70,7 +70,10 @@
                         android:layout_marginBottom="10dp"/>
             </RadioGroup>
 
-            <View style="@style/Widget.Natura.Divider" />
+           <com.natura.android.divider.Divider
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:dividerType="fullBleed"/>
 
             <TextView
                 android:layout_width="match_parent"

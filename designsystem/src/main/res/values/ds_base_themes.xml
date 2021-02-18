@@ -146,6 +146,10 @@
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
 
         <item name="card">@style/Widget.DS.Card</item>
+
+        <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
+        <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
+        <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -292,5 +296,9 @@
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
 
         <item name="card">@style/Widget.DS.Card</item>
+
+        <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
+        <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
+        <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
     </style>
 </resources>

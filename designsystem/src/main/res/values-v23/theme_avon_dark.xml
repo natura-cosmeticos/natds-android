@@ -270,6 +270,10 @@
         <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
 
         <item name="card">@style/Widget.DS.Card</item>
+
+        <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
+        <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
+        <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
     </style>
 
     <style name="Theme.Avon.Dark.NoActionBar" parent="Theme.Avon.Dark">
