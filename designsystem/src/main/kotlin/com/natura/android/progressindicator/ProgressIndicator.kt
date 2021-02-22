@@ -8,6 +8,26 @@ import androidx.core.content.res.getResourceIdOrThrow
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 
+/**
+ * The progress indicator is a component that informs users about the status
+ * of ongoing processes, such as loading an application, submitting a form, or saving updates.
+ * Depending on the preference of the sizes, it can be separated into three types:
+ * It is available in three sizes: standard, semi, medium and large.
+ * There is also the option of adding a layer behind, setting true or false for the layer attribute.
+ *
+ * Progress Indicator update is available at version 5.4.0 of NatDS Android.
+ *
+ * ```
+<com.natura.android.progressindicator.ProgressIndicator
+    android:id="@+id/ds_loading"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    app:size="large"
+    app:layer="true"/>
+ *```
+ */
+
 class ProgressIndicator @JvmOverloads constructor(
     context: Context,
     private val attrs: AttributeSet? = null
