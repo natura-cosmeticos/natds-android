@@ -115,7 +115,6 @@
         <attr name="colorBackground"/>
         <attr name="customRadius" format="reference" />
         <attr name="customElevation" format="reference" />
-        <attr name="customPadding" format="reference" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" format="boolean" />
     </declare-styleable>
@@ -123,12 +122,24 @@
     <declare-styleable name="DividerLine">
         <attr name="android:layout_marginLeft" />
         <attr name="android:layout_marginRight" />
-        <attr name="android:layout_height"/>
         <attr name="colorBackground"/>
         <attr name="dividerType" format="enum">
             <enum name="fullBleed" value="0"/>
             <enum name="inset" value="1"/>
             <enum name="middle" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressIndicator">
+        <attr name="customHeight" format="reference"/>
+        <attr name="customWidth" format="reference"/>
+        <attr name="colorBackground"/>
+        <attr name="layer" format="boolean" />
+        <attr name="size" format="enum">
+            <enum name="standard" value="0"/>
+            <enum name="semi" value="1"/>
+            <enum name="medium" value="2"/>
+            <enum name="large" value="3"/>
         </attr>
     </declare-styleable>
 

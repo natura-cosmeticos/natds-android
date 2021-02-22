@@ -396,7 +396,6 @@
 
     <style name="Widget.DS.Card">
         <item name="colorBackground">?colorSurface</item>
-        <item name="customPadding">?sizeSmall</item>
         <item name="customElevation">?elevation01</item>
         <item name="customRadius">?borderRadiusMedium</item>
     </style>
@@ -420,6 +419,30 @@
     <style name="Widget.DS.Divider.Middle" parent="Widget.DS.Divider">
         <item name="android:layout_marginLeft">?spacingStandard</item>
         <item name="android:layout_marginRight">?spacingStandard</item>
+    </style>
+
+    <style name="Widget.DS.ProgressIndicator">
+        <item name="colorBackground">?colorSurface</item>
+    </style>
+
+    <style name="Widget.DS.ProgressIndicator.Standard" parent="Widget.DS.ProgressIndicator">
+        <item name="customWidth">?sizeStandard</item>
+        <item name="customHeight">?sizeStandard</item>
+    </style>
+
+    <style name="Widget.DS.ProgressIndicator.Semi" parent="Widget.DS.ProgressIndicator">
+        <item name="customWidth">?sizeSemi</item>
+        <item name="customHeight">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.ProgressIndicator.Medium" parent="Widget.DS.ProgressIndicator">
+        <item name="customWidth">?sizeMedium</item>
+        <item name="customHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ProgressIndicator.Large" parent="Widget.DS.ProgressIndicator">
+        <item name="customWidth">?sizeLarge</item>
+        <item name="customHeight">?sizeLarge</item>
     </style>
 
     <style name="Widget.DS"/>
