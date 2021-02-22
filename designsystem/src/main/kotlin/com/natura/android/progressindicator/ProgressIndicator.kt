@@ -28,6 +28,10 @@ class ProgressIndicator @JvmOverloads constructor(
         configureAppearance()
     }
 
+    fun getSize(): Int? = sizeAttribute
+
+    fun getLayer(): Boolean? = layerAttribute
+
     private fun getProgressIndicatorAttributes() {
         sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_size, MEDIUM)
         layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_layer, false)
