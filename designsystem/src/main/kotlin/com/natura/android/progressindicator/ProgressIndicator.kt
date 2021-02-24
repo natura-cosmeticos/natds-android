@@ -53,7 +53,7 @@ class ProgressIndicator @JvmOverloads constructor(
     fun getLayer(): Boolean? = layerAttribute
 
     private fun getProgressIndicatorAttributes() {
-        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_size, MEDIUM)
+        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_size, Size.MEDIUM.ordinal)
         layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_layer, false)
 
         progressIndicatorAttributesArray.recycle()
@@ -73,13 +73,13 @@ class ProgressIndicator @JvmOverloads constructor(
     private fun getAttributesFromTheme() {
         try {
             when (sizeAttribute) {
-                STANDARD -> {
+                Size.STANDARD.ordinal -> {
                     setAttributes(R.attr.progressIndicatorStandard)
                 }
-                SEMI -> {
+                Size.SEMI.ordinal -> {
                     setAttributes(R.attr.progressIndicatorSemi)
                 }
-                MEDIUM -> {
+                Size.MEDIUM.ordinal -> {
                     setAttributes(R.attr.progressIndicatorMedium)
                 }
                 else -> {
@@ -102,11 +102,8 @@ class ProgressIndicator @JvmOverloads constructor(
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         setMeasuredDimension(resources.getDimension(widthResourceAttribute).toInt(), resources.getDimension(heightResourceAttribute).toInt())
     }
+}
 
-    companion object {
-        const val STANDARD = 0
-        const val SEMI = 1
-        const val MEDIUM = 2
-        const val LARGE = 3
-    }
+enum class Size {
+    STANDARD, SEMI, MEDIUM, LARGE
 }

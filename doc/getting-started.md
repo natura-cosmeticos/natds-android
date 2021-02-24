@@ -110,6 +110,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [Logo](logo.md)
   - Menu
   - Navigation View
+  - [Progress Indicator](progress-indicator.md)
   - [Shortcut](shortcut.md)
   - [Tag](tag.md)
   - [Text Field](textfield.md)

@@ -12,12 +12,12 @@ internal class ProgressIndicatorFixture private constructor(
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
     companion object {
-        private const val STANDARD = 0
-        private const val SEMI = 1
-        private const val MEDIUM = 2
-        private const val LARGE = 3
 
-        private const val defaultSize = MEDIUM
+        enum class Size {
+            STANDARD, SEMI, MEDIUM, LARGE
+        }
+
+        private val defaultSize = Size.MEDIUM.ordinal
         private const val defaultLayer = false
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
@@ -25,29 +25,25 @@ internal class ProgressIndicatorFixture private constructor(
             context.setTheme(R.style.Theme_Natura_Light)
             return ProgressIndicatorFixture(defaultSize, defaultLayer, context)
         }
-
-        fun aEmptyProgressIndicator(): ProgressIndicatorFixture {
-            return ProgressIndicatorFixture()
-        }
     }
 
     fun withSizeMedium(): ProgressIndicatorFixture {
-        this.size = MEDIUM
+        this.size = Size.MEDIUM.ordinal
         return this
     }
 
     fun withSizeStandard(): ProgressIndicatorFixture {
-        this.size = STANDARD
+        this.size = Size.STANDARD.ordinal
         return this
     }
 
     fun withSizeSemi(): ProgressIndicatorFixture {
-        this.size = SEMI
+        this.size = Size.SEMI.ordinal
         return this
     }
 
     fun withSizeLarge(): ProgressIndicatorFixture {
-        this.size = LARGE
+        this.size = Size.LARGE.ordinal
         return this
     }
 
