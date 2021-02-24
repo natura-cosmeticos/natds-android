@@ -273,6 +273,11 @@
         <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
         <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
         <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
+
+        <item name="progressIndicatorStandard">@style/Widget.DS.ProgressIndicator.Standard</item>
+        <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
+        <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
+        <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
     </style>
 
     <style name="Theme.TheBodyShop.Light.NoActionBar" parent="Theme.TheBodyShop.Light">

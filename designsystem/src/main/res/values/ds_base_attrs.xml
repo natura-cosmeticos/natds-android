@@ -89,5 +89,11 @@
     <attr name="dividerFullbleed" format="reference"/>
     <attr name="dividerInset" format="reference"/>
     <attr name="dividerMiddle" format="reference"/>
+    
+    <!-- Progress Indicator references -->
+    <attr name="progressIndicatorStandard" format="reference"/>
+    <attr name="progressIndicatorSemi" format="reference"/>
+    <attr name="progressIndicatorMedium" format="reference"/>
+    <attr name="progressIndicatorLarge" format="reference"/>
 
 </resources>
