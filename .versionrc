@@ -1,0 +1,12 @@
+{
+  "bumpFiles": [
+    {
+      "filename": "version.txt",
+      "type": "plain-text"
+    }
+  ],
+  "packageFiles": [
+  ],
+	"releaseCommitMessageFormat": "chore(release): {{currentTag}} [ci skip]",
+	"tag-prefix": "v."
+}
