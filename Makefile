@@ -48,6 +48,9 @@ run-all-pipeline-steps: lint unit-test instrumentation-test
 update-icons:
 	sh ./tools/update_icons.sh
 
+bump-version:
+	bash ./tools/bump_version.sh
+
 finish-all-emulators:
 	sh ./tools/finish_emulators.sh
 
