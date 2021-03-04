@@ -9,6 +9,7 @@ then
     NATDS_VERSION=$(cat ./version.txt)
     envman add --key NATDS_VERSION --value "$NATDS_VERSION"
     git add version.txt
+    git clean -f -d
     git commit -m "chore: Updates version"
     git push --follow-tags origin HEAD
 else
