@@ -45,9 +45,9 @@ platform :android do
     desc "Distribute sample"
       lane :distribute_sample do
         firebase_app_distribution(
-          app: ENV['FIREBASE_NATDS_ID'],
+          app: ENV['FIREBASE_APP_ID'],
               groups: "natds-internal",
-              apk_path: "sample-debug.apk",
+              apk_path: "sample-release.apk",
               firebase_cli_token: ENV['FIREBASE_TOKEN']
         )
     end

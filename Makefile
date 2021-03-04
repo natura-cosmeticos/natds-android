@@ -58,6 +58,6 @@ publish-docs:
 	bash ./tools/create_docs.sh
 
 distribute-sample:
-	sh  bundle exec fastlane build
+	sh bundle exec fastlane build
 	fastlane build
 	fastlane distribute_sample
