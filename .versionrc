@@ -11,6 +11,6 @@
         "type": "plain-text"
       }
     ],
-	"releaseCommitMessageFormat": "chore(release): {{currentTag}} [ci skip]",
+	"releaseCommitMessageFormat": "ci: Update release to {{currentTag}}",
 	"tag-prefix": "v."
 }
