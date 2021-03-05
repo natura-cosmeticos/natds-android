@@ -93,7 +93,6 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
         )
 
         expandableNavigationMenu.initMenuItems(list)
-
         expandableNavigationMenu.selectItemId("item_id_5")
     }
 
