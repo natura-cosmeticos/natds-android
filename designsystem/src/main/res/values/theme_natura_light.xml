@@ -279,7 +279,7 @@
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
 
-
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Natura.Light</item>
     </style>
 
     <style name="Theme.Natura.Light.NoActionBar" parent="Theme.Natura.Light">

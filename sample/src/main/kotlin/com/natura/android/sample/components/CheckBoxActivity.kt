@@ -6,16 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
 
-class SelectionControlActivity : AppCompatActivity() {
+class CheckBoxActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_control)
+        setContentView(R.layout.activity_checkbox)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Selection Control"
+        supportActionBar?.title = "CheckBox"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

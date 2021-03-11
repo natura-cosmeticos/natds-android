@@ -153,4 +153,14 @@
         <item name="android:insetTop"> @dimen/ds_spacing_none</item>
         <item name="android:insetBottom">@dimen/ds_spacing_none</item>
     </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.TBS.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_tbs_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.TBS.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_tbs_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
 </resources>

@@ -279,6 +279,8 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 
     <style name="Theme.Natura.Light.NoActionBar" parent="Theme.Natura.Light">

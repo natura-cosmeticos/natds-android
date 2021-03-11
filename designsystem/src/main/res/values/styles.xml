@@ -340,7 +340,6 @@
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-
     <!-- ICON BUTTON STYLES -->
 
     <style name="Widget.DS.IconButton" parent="Widget.MaterialComponents.Button">
@@ -443,6 +442,13 @@
     <style name="Widget.DS.ProgressIndicator.Large" parent="Widget.DS.ProgressIndicator">
         <item name="customWidth">?sizeLarge</item>
         <item name="customHeight">?sizeLarge</item>
+    </style>
+
+    <!-- CHECKBOX COMPONENT STYLE -->
+
+    <style name="Widget.DS.CheckBox.Primary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
     <style name="Widget.DS"/>

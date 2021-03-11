@@ -80,8 +80,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, IconButtonActivity::class.java))
         }
 
-        btnSelection.setOnClickListener {
-            startActivity(Intent(this, SelectionControlActivity::class.java))
+        checkboxButton.setOnClickListener {
+            startActivity(Intent(this, CheckBoxActivity::class.java))
         }
 
         shortcutButton.setOnClickListener {
@@ -134,6 +134,10 @@ class MainActivity : AppCompatActivity() {
 
         dividerButton.setOnClickListener {
             startActivity(Intent(this, DividerActivity::class.java))
+        }
+
+        radioButtonButton.setOnClickListener {
+            startActivity(Intent(this, RadioButtonActivity::class.java))
         }
     }
 }
