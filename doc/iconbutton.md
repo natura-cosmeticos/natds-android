@@ -7,7 +7,6 @@ Icons are also appropriate for toggle buttons that allow a single choice to be s
 Icon buttons are commonly found in app bars and toolbars.
 
 ### How to use it?
-
 Add the TextField component in your xml layout file
 
 ```android

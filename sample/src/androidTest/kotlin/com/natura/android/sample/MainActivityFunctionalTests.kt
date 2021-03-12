@@ -125,11 +125,19 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenSelectionControlScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnSelection)).perform(scrollTo())
-        onView(withId(R.id.btnSelection)).perform(click())
+    fun shouldOpenCheckBoxScreenWhenTapOnItButton() {
+        onView(withId(R.id.checkboxButton)).perform(scrollTo())
+        onView(withId(R.id.checkboxButton)).perform(click())
 
-        onView(withText("Selection Control")).check(matches(isDisplayed()))
+        onView(withText("CheckBox")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenRadioButtonScreenWhenTapOnItButton() {
+        onView(withId(R.id.radioButtonButton)).perform(scrollTo())
+        onView(withId(R.id.radioButtonButton)).perform(click())
+
+        onView(withText("RadioButton")).check(matches(isDisplayed()))
     }
 
     @Test

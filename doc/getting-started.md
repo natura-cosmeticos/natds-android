@@ -104,6 +104,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [Badge](badge.md)
   - [Button](button.md)
   - [Card](card.md)
+  - [Checkbox](checkbox.md)
   - [Dialog](dialog.md)
   - [Divider](divider.md)
   - [Expansion Panel](expansion-panel.md)
@@ -111,6 +112,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - Menu
   - Navigation View
   - [Progress Indicator](progress-indicator.md)
+  - [RadioButton](radiobutton.md)
   - [Shortcut](shortcut.md)
   - [Tag](tag.md)
   - [Text Field](textfield.md)

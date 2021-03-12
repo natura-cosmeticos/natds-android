@@ -96,4 +96,7 @@
     <attr name="progressIndicatorMedium" format="reference"/>
     <attr name="progressIndicatorLarge" format="reference"/>
 
+    <!-- Checkbox references -->
+    <attr name="checkboxPrimary" format="reference"/>
+
 </resources>

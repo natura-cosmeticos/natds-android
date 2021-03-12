@@ -155,6 +155,8 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 
     <style name="Theme.DsBaseDark" parent="Theme.MaterialComponents.DayNight">
@@ -270,7 +272,7 @@
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.V23</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.V23</item>
 
-       <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.V23</item>
+        <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.V23</item>
         <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.V23</item>
         <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.V23</item>
         <item name="textButtonSmall">@style/Widget.DS.Button.TextButton.V23</item>
@@ -310,5 +312,7 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 </resources>

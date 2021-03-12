@@ -225,8 +225,10 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:statusBarColor">?colorSurface</item>
 
+        <!-- { @deprecated Styles. Use checkbox component }-->
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.V23</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Secondary.V23</item>
+
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.V23</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Secondary.V23</item>
 
@@ -279,6 +281,8 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 
     <style name="Theme.Aesop.Light.NoActionBar" parent="Theme.Aesop.Light">

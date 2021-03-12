@@ -161,6 +161,7 @@
         <item name="itemIconTint">?android:textColorPrimary</item>
     </style>
 
+    <!--{@deprecated Use Divider component} -->
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
@@ -211,6 +212,16 @@
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
+    <style name="Widget.DS.CheckBoxPrimary.Natura.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_natura_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.Natura.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_natura_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
     <style name="Widget"/>
     <style name="Widget.Natura"/>
 
@@ -237,7 +248,7 @@
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.CheckBox.Natura.Light or  Widget.DS.RadioButton.Natura.Dark Style instead} -->
+    <!--{@deprecated Use Checkbox component} -->
     <style name="Widget.Natura.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>

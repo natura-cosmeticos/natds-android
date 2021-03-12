@@ -97,13 +97,13 @@ class MainActivityTest {
 
     @Test
     fun checksSelectionButtonClickStartsSelectionScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnSelection)
+        val button = mainActivity.findViewById<Button>(R.id.checkboxButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(SelectionControlActivity::class.java, shadowIntent.intentClass)
+        assertEquals(CheckBoxActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test

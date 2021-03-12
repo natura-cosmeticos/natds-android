@@ -278,6 +278,8 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.TBS.Dark</item>
     </style>
 
     <style name="Theme.TheBodyShop.Dark.NoActionBar" parent="Theme.TheBodyShop.Dark">

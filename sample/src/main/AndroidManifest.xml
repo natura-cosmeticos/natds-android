@@ -72,7 +72,7 @@
             android:name=".components.SubmenuActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.SelectionControlActivity"
+            android:name=".components.CheckBoxActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ExpandableNavigationViewActivity"
@@ -115,6 +115,9 @@
             android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.DividerActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.RadioButtonActivity"
             android:theme="@style/Theme.Natura.Light" />
     </application>
 </manifest>
