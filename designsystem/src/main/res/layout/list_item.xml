@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameContainerListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minHeight="?sizeMedium">
+
+    <com.natura.android.divider.Divider
+        android:id="@+id/dividerMiddle"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:dividerType="middle"/>
+
+    <com.natura.android.divider.Divider
+        android:id="@+id/dividerInset"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:dividerType="inset"/>
+
+    <com.natura.android.divider.Divider
+        android:id="@+id/dividerFullBleed"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        app:dividerType="fullBleed"/>
+</FrameLayout>
