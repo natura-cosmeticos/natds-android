@@ -4,9 +4,8 @@
     android:id="@+id/frameContainerListItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clickable="true"
-    android:focusable="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
     android:minHeight="?sizeMedium">
 
     <com.natura.android.divider.Divider

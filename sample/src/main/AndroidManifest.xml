@@ -119,5 +119,9 @@
         <activity
             android:name=".components.RadioButtonActivity"
             android:theme="@style/Theme.Natura.Light" />
+
+        <activity
+            android:name=".components.listitem.ListItemActivity"
+            android:theme="@style/Theme.Natura.Light" />
     </application>
 </manifest>

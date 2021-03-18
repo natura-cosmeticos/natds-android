@@ -4,23 +4,23 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.View
-import android.widget.Toast
-import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.FrameLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class ListItem @JvmOverloads constructor(
     context: Context,
-    private val attrs: AttributeSet? = null,
+    attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : ConstraintLayout(context, attrs, defStyleAttr) {
+) : FrameLayout(context, attrs, defStyleAttr) {
 
     private var listItemAttributesArray: TypedArray
     private var itemTouchedAttribute: Boolean = false
     private var selectedAttribute: Boolean = false
     private var dividerAttribute: Int? = null
-    private var backgroundColorResourceAttribute: Int = 0
+    private var isViewSelected: Boolean = false
+    var clickListener: () -> Unit = { }
 
     init {
         try {
@@ -33,6 +33,21 @@ class ListItem @JvmOverloads constructor(
 
         getListItemAttributes()
         configureAppearance()
+        configureListener()
+    }
+
+    fun setDivider(dividerType: Int) {
+        dividerAttribute = dividerType
+        showDivider()
+    }
+
+    fun setTouchState(enableTouch: Boolean) {
+        itemTouchedAttribute = enableTouch
+        enableTouchState()
+    }
+
+    fun enableSelectedState() {
+        this.background = resources.getDrawable(R.color.list_item_color_background_selected, context.theme)
     }
 
     private fun getListItemAttributes() {
@@ -43,33 +58,44 @@ class ListItem @JvmOverloads constructor(
         listItemAttributesArray.recycle()
     }
 
-    private fun configureAppearance() {
+    private fun enableTouchState() {
+        if (!itemTouchedAttribute) {
+            this.isEnabled = false
+            this.isFocusable = false
+            return
+        }
+
+        this.background = resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
+        this.isFocusable = true
+        this.isClickable = true
+        this.isEnabled = true
+    }
+
+    private fun showDivider() {
         when (dividerAttribute) {
             Divider.INSET.ordinal -> dividerInset.visibility = View.VISIBLE
             Divider.MIDDLE.ordinal -> dividerMiddle.visibility = View.VISIBLE
             Divider.FULLBLEED.ordinal -> dividerFullBleed.visibility = View.VISIBLE
         }
-
-        if (!itemTouchedAttribute) {
-            frameContainerListItem.isEnabled = false
-            frameContainerListItem.isFocusable = false
-        } else {
-            frameContainerListItem.background = resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
-        }
-
-        if (selectedAttribute) {
-            frameContainerListItem.isEnabled = false
-            frameContainerListItem.isFocusable = false
-            frameContainerListItem.background = resources.getDrawable(R.color.list_item_color_background_selected, context.theme)
-        }
-
-        frameContainerListItem.setOnClickListener {
-            Toast.makeText(context, "Dialog Main Action", Toast.LENGTH_SHORT).show()
-        }
     }
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    private fun configureAppearance() {
+        enableTouchState()
+        showDivider()
+    }
+
+    private fun configureListener() {
+
+        this.setOnClickListener {
+            if (!isViewSelected) {
+                enableSelectedState()
+                isViewSelected = true
+            } else {
+                enableTouchState()
+                isViewSelected = false
+            }
+            clickListener()
+        }
     }
 }
 

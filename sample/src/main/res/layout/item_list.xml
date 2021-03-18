@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.natura.android.listitem.ListItem
+        android:id="@+id/listItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/ds_spacing_small">
+
+        <TextView
+            android:id="@+id/itemListDescription"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:textSize="?heading6FontSize"
+            tools:text="teste" />
+
+    </com.natura.android.listitem.ListItem>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
