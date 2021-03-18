@@ -145,8 +145,7 @@
     </declare-styleable>
 
     <declare-styleable name="ListItem">
-        <attr name="itemTouched" format="boolean"/>
-        <attr name="itemSelected" format="boolean"/>
+        <attr name="touchState" format="boolean"/>
         <attr name="dividerBottom" format="enum">
             <enum name="none" value="0"/>
             <enum name="fullBleed" value="1"/>

@@ -108,6 +108,7 @@ Also, if you need to, for example apply a different color to your text. Okay! Yo
   - [Dialog](dialog.md)
   - [Divider](divider.md)
   - [Expansion Panel](expansion-panel.md)
+  - [List Item](list-item.md)
   - [Logo](logo.md)
   - Menu
   - Navigation View

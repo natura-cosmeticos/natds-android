@@ -3,6 +3,7 @@ package com.natura.android.listitem
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import com.natura.android.R
@@ -16,8 +17,7 @@ class ListItem @JvmOverloads constructor(
 ) : FrameLayout(context, attrs, defStyleAttr) {
 
     private var listItemAttributesArray: TypedArray
-    private var itemTouchedAttribute: Boolean = false
-    private var selectedAttribute: Boolean = false
+    private var touchStateAttribute: Boolean = false
     private var dividerAttribute: Int? = null
     private var isViewSelected: Boolean = false
     var clickListener: () -> Unit = { }
@@ -42,7 +42,7 @@ class ListItem @JvmOverloads constructor(
     }
 
     fun setTouchState(enableTouch: Boolean) {
-        itemTouchedAttribute = enableTouch
+        touchStateAttribute = enableTouch
         enableTouchState()
     }
 
@@ -50,16 +50,21 @@ class ListItem @JvmOverloads constructor(
         this.background = resources.getDrawable(R.color.list_item_color_background_selected, context.theme)
     }
 
+    fun getDivider(): Int? {
+        return dividerAttribute
+    }
+
+    fun getTouchState(): Boolean = touchStateAttribute
+
     private fun getListItemAttributes() {
-        selectedAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_itemSelected, false)
         dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, Divider.NONE.ordinal)
-        itemTouchedAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_itemTouched, false)
+        touchStateAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_touchState, true)
 
         listItemAttributesArray.recycle()
     }
 
     private fun enableTouchState() {
-        if (!itemTouchedAttribute) {
+        if (!touchStateAttribute) {
             this.isEnabled = false
             this.isFocusable = false
             return
@@ -72,11 +77,23 @@ class ListItem @JvmOverloads constructor(
     }
 
     private fun showDivider() {
+
         when (dividerAttribute) {
             Divider.INSET.ordinal -> dividerInset.visibility = View.VISIBLE
             Divider.MIDDLE.ordinal -> dividerMiddle.visibility = View.VISIBLE
             Divider.FULLBLEED.ordinal -> dividerFullBleed.visibility = View.VISIBLE
         }
+
+        val params = LayoutParams(
+            LayoutParams.WRAP_CONTENT,
+            LayoutParams.WRAP_CONTENT
+        ).apply {
+            gravity = Gravity.BOTTOM
+        }
+
+        dividerInset.layoutParams = params
+        dividerMiddle.layoutParams = params
+        dividerFullBleed.layoutParams = params
     }
 
     private fun configureAppearance() {

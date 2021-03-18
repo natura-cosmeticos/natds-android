@@ -37,7 +37,6 @@ class ListItemAdapter(
         fun bind(position: Int, name: String) {
 
             description.text = name
-            listItem.setTouchState(true)
 
             listItem.itemListDescription.setTextColor(Color.BLACK)
 
