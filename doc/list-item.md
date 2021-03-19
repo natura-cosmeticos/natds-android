@@ -45,7 +45,15 @@ Add the List Item component in your xml layout file
 - `touchState`:  defines whether the view is enabled to receive touch events. It can be true or false.
 
 ```kotlin
-    istItem.enableSelectedState()
+    listItem.setTouchStateTrue()
+    listItem.setTouchStateFalse()
+```
+
+- `selectableState`:  defines whether the display is enabled to remain selected after the touch. It can be true or false.
+
+```kotlin
+    listItem.setSelectableStateTrue()
+    listItem.setSelectableStateFalse()
 ```
 
 ⚠️ ⚠️ ⚠️ For better use of the component, it is important to define a height in dp, and the margins that need to be placed, apply them to the internal elements. ⚠️ ⚠️ ⚠️

@@ -63,6 +63,24 @@ class ListItemTest {
         Truth.assertThat(touchState).isFalse()
     }
 
+    @Test
+    fun checksIfSelectableIsTrue() {
+        listItem = buildListItemWithSelectableTrue()
+
+        val selectableState = listItem.getSelectableState()
+
+        Truth.assertThat(selectableState).isTrue()
+    }
+
+    @Test
+    fun checksIfSelectableIsFalse() {
+        listItem = buildListItemWithSelectableFalse()
+
+        val selectableState = listItem.getSelectableState()
+
+        Truth.assertThat(selectableState).isFalse()
+    }
+
     private fun buildListItemWithDividerFullbleed(): ListItem {
         return ListItemFixture
             .aListItem()
@@ -95,6 +113,20 @@ class ListItemTest {
         return ListItemFixture
             .aListItem()
             .withTouchState(false)
+            .build()
+    }
+
+    private fun buildListItemWithSelectableTrue(): ListItem {
+        return ListItemFixture
+            .aListItem()
+            .withSelectableState(true)
+            .build()
+    }
+
+    private fun buildListItemWithSelectableFalse(): ListItem {
+        return ListItemFixture
+            .aListItem()
+            .withSelectableState(false)
             .build()
     }
 }

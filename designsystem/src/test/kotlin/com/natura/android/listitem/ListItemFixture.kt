@@ -7,6 +7,7 @@ import org.robolectric.Robolectric
 
 internal class ListItemFixture private constructor(
     private var touchState: Boolean = false,
+    private var selectableState: Boolean = false,
     private var divider: Int? = null,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
@@ -17,14 +18,15 @@ internal class ListItemFixture private constructor(
         private const val INSET = 2
         private const val MIDDLE = 3
 
-        private const val defaultTouchState = true
+        private const val defaultTouchState = false
+        private const val defaultSelectableState = false
         private const val defaultDivider = NONE
 
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aListItem(): ListItemFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return ListItemFixture(defaultTouchState, defaultDivider, context)
+            return ListItemFixture(defaultTouchState, defaultSelectableState, defaultDivider, context)
         }
     }
 
@@ -33,18 +35,23 @@ internal class ListItemFixture private constructor(
         return this
     }
 
+    fun withSelectableState(selectableState: Boolean): ListItemFixture {
+        this.selectableState = selectableState
+        return this
+    }
+
     fun withDividerFullbleed(): ListItemFixture {
-        this.divider = ListItemFixture.FULLBLEED
+        this.divider = FULLBLEED
         return this
     }
 
     fun withDividerInset(): ListItemFixture {
-        this.divider = ListItemFixture.INSET
+        this.divider = INSET
         return this
     }
 
     fun withDividerMiddle(): ListItemFixture {
-        this.divider = ListItemFixture.MIDDLE
+        this.divider = MIDDLE
         return this
     }
 
@@ -52,6 +59,7 @@ internal class ListItemFixture private constructor(
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.touchState, touchState.toString())
+            .addAttribute(R.attr.selectableState, selectableState.toString())
             .addAttribute(R.attr.dividerBottom, divider.toString())
             .build()
 

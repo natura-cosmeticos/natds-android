@@ -3,21 +3,21 @@ package com.natura.android.listitem
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.View
-import android.widget.FrameLayout
+import android.widget.RelativeLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
-import kotlinx.android.synthetic.main.list_item.view.*
+import kotlinx.android.synthetic.main.list_item_dividers.view.*
 
 class ListItem @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : FrameLayout(context, attrs, defStyleAttr) {
+) : RelativeLayout(context, attrs, defStyleAttr) {
 
     private var listItemAttributesArray: TypedArray
     private var touchStateAttribute: Boolean = false
+    private var selectableAttribute: Boolean = false
     private var dividerAttribute: Int? = null
     private var isViewSelected: Boolean = false
     var clickListener: () -> Unit = { }
@@ -36,18 +36,44 @@ class ListItem @JvmOverloads constructor(
         configureListener()
     }
 
-    fun setDivider(dividerType: Int) {
-        dividerAttribute = dividerType
+    fun setDividerMiddle() {
+        dividerAttribute = Divider.MIDDLE.ordinal
         showDivider()
     }
 
-    fun setTouchState(enableTouch: Boolean) {
-        touchStateAttribute = enableTouch
+    fun setDividerInset() {
+        dividerAttribute = Divider.INSET.ordinal
+        showDivider()
+    }
+
+    fun setDividerFullbleed() {
+        dividerAttribute = Divider.FULLBLEED.ordinal
+        showDivider()
+    }
+
+    fun setTouchStateTrue() {
+        touchStateAttribute = true
         enableTouchState()
+    }
+
+    fun setTouchStateFalse() {
+        touchStateAttribute = false
+        enableTouchState()
+    }
+
+    fun setSelectableStateTrue() {
+        selectableAttribute = true
+        setTouchStateTrue()
+    }
+
+    fun setSelectableStateFalse() {
+        selectableAttribute = false
+        setTouchStateTrue()
     }
 
     fun enableSelectedState() {
         this.background = resources.getDrawable(R.color.list_item_color_background_selected, context.theme)
+        isViewSelected = true
     }
 
     fun getDivider(): Int? {
@@ -56,60 +82,68 @@ class ListItem @JvmOverloads constructor(
 
     fun getTouchState(): Boolean = touchStateAttribute
 
+    fun getSelectableState(): Boolean = selectableAttribute
+
     private fun getListItemAttributes() {
         dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, Divider.NONE.ordinal)
-        touchStateAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_touchState, true)
+        touchStateAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_touchState, false)
+        selectableAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_selectableState, false)
 
         listItemAttributesArray.recycle()
     }
 
     private fun enableTouchState() {
         if (!touchStateAttribute) {
-            this.isEnabled = false
             this.isFocusable = false
+            this.isClickable = false
+            this.isEnabled = false
             return
         }
 
-        this.background = resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
+        this.background =
+            resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
         this.isFocusable = true
         this.isClickable = true
         this.isEnabled = true
     }
 
+    private fun enableSelectableState() {
+        if (selectableAttribute) {
+            setSelectableStateTrue()
+        }
+    }
+
     private fun showDivider() {
+        View.inflate(context, R.layout.list_item_dividers, this)
 
         when (dividerAttribute) {
             Divider.INSET.ordinal -> dividerInset.visibility = View.VISIBLE
             Divider.MIDDLE.ordinal -> dividerMiddle.visibility = View.VISIBLE
             Divider.FULLBLEED.ordinal -> dividerFullBleed.visibility = View.VISIBLE
         }
-
-        val params = LayoutParams(
-            LayoutParams.WRAP_CONTENT,
-            LayoutParams.WRAP_CONTENT
-        ).apply {
-            gravity = Gravity.BOTTOM
-        }
-
-        dividerInset.layoutParams = params
-        dividerMiddle.layoutParams = params
-        dividerFullBleed.layoutParams = params
     }
 
     private fun configureAppearance() {
         enableTouchState()
+        enableSelectableState()
         showDivider()
+        requestLayout()
     }
 
     private fun configureListener() {
 
         this.setOnClickListener {
-            if (!isViewSelected) {
-                enableSelectedState()
-                isViewSelected = true
-            } else {
-                enableTouchState()
-                isViewSelected = false
+            if (selectableAttribute) {
+                isViewSelected = when (isViewSelected) {
+                    false -> {
+                        enableSelectedState()
+                        true
+                    }
+                    true -> {
+                        enableTouchState()
+                        false
+                    }
+                }
             }
             clickListener()
         }

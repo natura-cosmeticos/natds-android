@@ -37,7 +37,8 @@ class ListItemActivity : AppCompatActivity() {
     private fun getAttributesList(): List<String> {
         return listOf(
             "Onclick false",
-            "Onclick true",
+            "Onclick true selectable",
+            "Onclick true not selectable",
             "Selected cell",
             "Divider inset",
             "Divider middle",

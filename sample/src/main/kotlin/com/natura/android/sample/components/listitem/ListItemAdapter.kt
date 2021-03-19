@@ -42,13 +42,21 @@ class ListItemAdapter(
 
             when (position) {
                 0 -> {
-                    listItem.setTouchState(false)
+                    listItem.setTouchStateFalse()
                     listItem.itemListDescription.setTextColor(Color.GRAY)
                 }
-                2 -> listItem.enableSelectedState()
-                3 -> listItem.setDivider(2)
-                4 -> listItem.setDivider(3)
-                5 -> listItem.setDivider(1)
+                1 -> {
+                    listItem.setSelectableStateTrue()
+                }
+                2 -> {
+                    listItem.setSelectableStateFalse()
+                }
+                3 -> {
+                    listItem.enableSelectedState()
+                }
+                4 -> listItem.setDividerInset()
+                5 -> listItem.setDividerMiddle()
+                6 -> listItem.setDividerFullbleed()
             }
         }
     }

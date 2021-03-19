@@ -146,11 +146,11 @@
 
     <declare-styleable name="ListItem">
         <attr name="touchState" format="boolean"/>
+        <attr name="selectableState" format="boolean"/>
         <attr name="dividerBottom" format="enum">
-            <enum name="none" value="0"/>
-            <enum name="fullBleed" value="1"/>
-            <enum name="inset" value="2"/>
-            <enum name="middle" value="3"/>
+            <enum name="fullBleed" value="0"/>
+            <enum name="inset" value="1"/>
+            <enum name="middle" value="2"/>
         </attr>
         <attr name="rippleDrawable"/>
         <attr name="colorBackground"/>
