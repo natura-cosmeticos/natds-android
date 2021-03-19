@@ -63,12 +63,12 @@ class ListItem @JvmOverloads constructor(
 
     fun setSelectableStateTrue() {
         selectableAttribute = true
-        setTouchStateTrue()
+        allowTouch(true)
     }
 
     fun setSelectableStateFalse() {
         selectableAttribute = false
-        setTouchStateTrue()
+        allowTouch(true)
     }
 
     fun enableSelectedState() {
@@ -94,17 +94,12 @@ class ListItem @JvmOverloads constructor(
 
     private fun enableTouchState() {
         if (!touchStateAttribute) {
-            this.isFocusable = false
-            this.isClickable = false
-            this.isEnabled = false
+            allowTouch(false)
             return
         }
 
-        this.background =
-            resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
-        this.isFocusable = true
-        this.isClickable = true
-        this.isEnabled = true
+        this.background = resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
+        allowTouch(true)
     }
 
     private fun enableSelectableState() {
@@ -130,6 +125,12 @@ class ListItem @JvmOverloads constructor(
         requestLayout()
     }
 
+    private fun allowTouch(allowTouch: Boolean) {
+        this.isFocusable = allowTouch
+        this.isClickable = allowTouch
+        this.isEnabled = allowTouch
+    }
+
     private fun configureListener() {
 
         this.setOnClickListener {
@@ -140,7 +141,7 @@ class ListItem @JvmOverloads constructor(
                         true
                     }
                     true -> {
-                        enableTouchState()
+                        this.background = null
                         false
                     }
                 }

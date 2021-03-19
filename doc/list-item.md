@@ -39,7 +39,9 @@ Add the List Item component in your xml layout file
 - `dividerBottom`:  Defines the type of bottom separator that the view can contain. The options are: None (0), Fullbleed (1), Inset(2),  Middle(3)
 
 ```kotlin
-    listItem.setDivider(2)
+    listItem.setDividerInset()
+    listItem.setDividerMiddle()
+    listItem.setDividerFullbleed()
 ```
 
 - `touchState`:  defines whether the view is enabled to receive touch events. It can be true or false.
@@ -55,10 +57,6 @@ Add the List Item component in your xml layout file
     listItem.setSelectableStateTrue()
     listItem.setSelectableStateFalse()
 ```
-
-⚠️ ⚠️ ⚠️ For better use of the component, it is important to define a height in dp, and the margins that need to be placed, apply them to the internal elements. ⚠️ ⚠️ ⚠️
-
-
 
            
 ![List Item](list-item.png)

@@ -41,19 +41,10 @@ class ListItemAdapter(
             listItem.itemListDescription.setTextColor(Color.BLACK)
 
             when (position) {
-                0 -> {
-                    listItem.setTouchStateFalse()
-                    listItem.itemListDescription.setTextColor(Color.GRAY)
-                }
-                1 -> {
-                    listItem.setSelectableStateTrue()
-                }
-                2 -> {
-                    listItem.setSelectableStateFalse()
-                }
-                3 -> {
-                    listItem.enableSelectedState()
-                }
+                0 -> listItem.setTouchStateFalse()
+                1 -> listItem.setSelectableStateTrue()
+                2 -> listItem.setTouchStateTrue()
+                3 -> listItem.enableSelectedState()
                 4 -> listItem.setDividerInset()
                 5 -> listItem.setDividerMiddle()
                 6 -> listItem.setDividerFullbleed()
