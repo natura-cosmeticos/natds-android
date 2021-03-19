@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.ProgressIndicatorActivity
+import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
@@ -138,6 +139,10 @@ class MainActivity : AppCompatActivity() {
 
         radioButtonButton.setOnClickListener {
             startActivity(Intent(this, RadioButtonActivity::class.java))
+        }
+
+        btnListItem.setOnClickListener {
+            startActivity(Intent(this, ListItemActivity::class.java))
         }
     }
 }
