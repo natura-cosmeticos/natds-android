@@ -104,6 +104,10 @@ class IconButton @JvmOverloads constructor(
         return colorAttribute
     }
 
+    fun getSize(): Int? {
+        return sizeAttribute
+    }
+
     private fun getAttributes() {
         getIconName()
         getColorAttribute()

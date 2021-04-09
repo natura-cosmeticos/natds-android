@@ -4,6 +4,7 @@ import android.view.View
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
 import com.natura.android.R
+import kotlinx.android.synthetic.main.icon_button.view.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows
@@ -56,6 +57,66 @@ class IconButtonTest {
         val color = iconButton.getColor()
 
         Truth.assertThat(color).isEqualTo(DEFAULT)
+    }
+
+    @Test
+    fun checksIfIconButtonSizeSemiWasSet() {
+        val iconButton = buildIconButtonSizeSemi()
+
+        val size = iconButton.getSize()
+
+        Truth.assertThat(size).isEqualTo(SEMI)
+    }
+
+    @Test
+    fun checksIfIconButtonSizeSemiXWasSet() {
+        val iconButton = buildIconButtonSizeSemiX()
+
+        val size = iconButton.getSize()
+
+        Truth.assertThat(size).isEqualTo(SEMIX)
+    }
+
+    @Test
+    fun checksIfIconButtonSizeMediumWasSet() {
+        val iconButton = buildIconButtonSizeMedium()
+
+        val size = iconButton.getSize()
+
+        Truth.assertThat(size).isEqualTo(MEDIUM)
+    }
+
+    @Test
+    fun checksIfWidthAndHeightWereSetWhenSizeIsSemi() {
+        val iconButton = buildIconButtonSizeSemi()
+
+        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
+        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+
+        Truth.assertThat(sizeIcon).isEqualTo(24)
+        Truth.assertThat(sizeContainer).isEqualTo(32)
+    }
+
+    @Test
+    fun checksIfWidthAndHeightWereSetWhenSizeIsSemiX() {
+        val iconButton = buildIconButtonSizeSemiX()
+
+        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
+        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+
+        Truth.assertThat(sizeIcon).isEqualTo(32)
+        Truth.assertThat(sizeContainer).isEqualTo(40)
+    }
+
+    @Test
+    fun checksIfWidthAndHeightWereSetWhenSizeIsMedium() {
+        val iconButton = buildIconButtonSizeMedium()
+
+        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
+        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+
+        Truth.assertThat(sizeIcon).isEqualTo(40)
+        Truth.assertThat(sizeContainer).isEqualTo(48)
     }
 
     @Test
@@ -129,9 +190,34 @@ class IconButtonTest {
             .build()
     }
 
+    private fun buildIconButtonSizeSemi(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withSizeSemi()
+            .build()
+    }
+
+    private fun buildIconButtonSizeSemiX(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withSizeSemiX()
+            .build()
+    }
+
+    private fun buildIconButtonSizeMedium(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withSizeMedium()
+            .build()
+    }
+
     companion object {
         private const val DEFAULT = 0
         private const val PRIMARY = 1
         private const val OPACITY05_BASE255 = 61
+
+        private const val SEMI = 0
+        private const val SEMIX = 1
+        private const val MEDIUM = 2
     }
 }

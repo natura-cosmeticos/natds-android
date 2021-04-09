@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:buttonColor="defaultColor"
-        app:sizeButton="semix"
         app:iconName="outlined-action-calendar"
         app:notify="999"
         android:layout_gravity="center_horizontal"/>
