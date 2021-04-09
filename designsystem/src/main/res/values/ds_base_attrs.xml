@@ -58,6 +58,10 @@
     <attr name="iconButtonDefault" format="reference"/>
     <attr name="iconButtonPrimary" format="reference"/>
 
+    <attr name="iconButtonSizeSemi" format="reference"/>
+    <attr name="iconButtonSizeSemiX" format="reference"/>
+    <attr name="iconButtonSizeMedium" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>

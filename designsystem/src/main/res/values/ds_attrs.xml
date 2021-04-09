@@ -107,8 +107,21 @@
             <enum name="defaultColor" value="0"/>
             <enum name="primaryColor" value="1"/>
         </attr>
+        <attr name="sizeButton" format="enum">
+            <enum name="semi" value="0"/>
+            <enum name="semix" value="1"/>
+            <enum name="medium" value="2"/>
+        </attr>
+        <attr name="styleButton" format="enum">
+            <enum name="inherit" value="0"/>
+            <enum name="floating" value="1"/>
+            <enum name="overlay" value="2"/>
+        </attr>
         <attr name="iconColor" format="reference"/>
+        <attr name="surfaceSize" format="reference"/>
         <attr name="rippleDrawable"/>
+        <attr name="iconSize"/>
+        <attr name="backgroundSize" format="reference"/>
         <attr name="notify"/>
     </declare-styleable>
 

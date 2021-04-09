@@ -252,7 +252,11 @@
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Aesop.Light</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
-        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+
+        <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
+        <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
+        <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
 
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>

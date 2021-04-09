@@ -361,6 +361,22 @@
         <item name="rippleDrawable">@drawable/iconbutton_ripple_background_default</item>
     </style>
 
+    <style name="Widget.DS.IconButton.Semi" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeStandard</item>
+        <item name="backgroundSize">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.SemiX" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeSemi</item>
+        <item name="backgroundSize">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Medium" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeSemiX</item>
+        <item name="backgroundSize">?sizeMedium</item>
+    </style>
+
+
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorPrimary</item>

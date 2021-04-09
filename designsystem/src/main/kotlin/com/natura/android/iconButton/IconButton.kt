@@ -15,6 +15,7 @@ import com.natura.android.badge.BadgeDrawable
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
+import kotlinx.android.synthetic.main.icon_button.view.*
 
 class IconButton @JvmOverloads constructor(
     context: Context,
@@ -25,11 +26,15 @@ class IconButton @JvmOverloads constructor(
     private var iconButtonAttributesArray: TypedArray
 
     private var iconColorResourceAttribute = 0
+    private var iconSizeResourceAttribute = 0
+    private var backgroundSizeResourceAttribute = 0
+    private var widthResourceAttribute = 0
     private var rippleDrawableResourceAttribute = 0
 
     private var iconNameAttribute: String? = null
     private var colorAttribute: Int? = null
     private var notifyAttribute: Int = 0
+    private var sizeAttribute: Int = 0
     private var enabledAttribute: Boolean = false
 
     private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
@@ -47,10 +52,12 @@ class IconButton @JvmOverloads constructor(
 
         getAttributes()
         getAppereanceAttributesFromTheme()
+        getSizeAttributeFromTheme()
 
         configureAppearance()
         configureNotification()
         configureEnabled()
+        configureSize()
 
         iconButtonAttributesArray.recycle()
     }
@@ -102,6 +109,7 @@ class IconButton @JvmOverloads constructor(
         getColorAttribute()
         getEnabledAttribute()
         getNotify()
+        getSizeAttribute()
     }
 
     private fun getNotify() {
@@ -128,6 +136,10 @@ class IconButton @JvmOverloads constructor(
         enabledAttribute = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
     }
 
+    private fun getSizeAttribute() {
+        sizeAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_sizeButton, Size.SEMI.ordinal)
+    }
+
     private fun getAppereanceAttributesFromTheme() {
         try {
             when (colorAttribute) {
@@ -138,6 +150,24 @@ class IconButton @JvmOverloads constructor(
                 DEFAULT -> {
                     setColorAttribute(R.attr.iconButtonDefault)
                     setDrawableRippleAttribute(R.attr.iconButtonDefault)
+                }
+            }
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
+    }
+
+    private fun getSizeAttributeFromTheme() {
+        try {
+            when (sizeAttribute) {
+                Size.SEMI.ordinal -> {
+                    setSizeAttribute(R.attr.iconButtonSizeSemi)
+                }
+                Size.SEMIX.ordinal -> {
+                    setSizeAttribute(R.attr.iconButtonSizeSemiX)
+                }
+                Size.MEDIUM.ordinal -> {
+                    setSizeAttribute(R.attr.iconButtonSizeMedium)
                 }
             }
         } catch (e: Exception) {
@@ -173,14 +203,47 @@ class IconButton @JvmOverloads constructor(
             }
     }
 
+    private fun setSizeAttribute(attribute: Int) {
+        context
+            .theme
+            .obtainStyledAttributes(
+                attrs,
+                R.styleable.IconButton,
+                attribute,
+                0
+            )
+            .apply {
+                iconSizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_iconSize)
+                backgroundSizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_backgroundSize)
+            }
+    }
+
     private fun configureAppearance() {
         setIcon(iconNameAttribute)
         iconButton.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
         iconButtonContainer.background = resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
     }
 
+    private fun configureSize() {
+        layoutParams = iconButtonContainer.layoutParams
+        layoutParams.height = resources.getDimension(backgroundSizeResourceAttribute).toInt()
+        layoutParams.width = resources.getDimension(backgroundSizeResourceAttribute).toInt()
+
+        iconButtonContainer.layoutParams = layoutParams
+
+        layoutParams = iconButton.layoutParams
+        layoutParams.height = resources.getDimension(iconSizeResourceAttribute).toInt()
+        layoutParams.width = resources.getDimension(iconSizeResourceAttribute).toInt()
+
+        iconButton.layoutParams = layoutParams
+    }
+
     companion object {
         const val DEFAULT = 0
         const val PRIMARY = 1
     }
+}
+
+enum class Size {
+    SEMI, SEMIX, MEDIUM
 }
