@@ -62,6 +62,14 @@
     <attr name="iconButtonSizeSemiX" format="reference"/>
     <attr name="iconButtonSizeMedium" format="reference"/>
 
+    <attr name="iconButtonInheritEnabled" format="reference"/>
+    <attr name="iconButtonFloatingEnabled" format="reference"/>
+    <attr name="iconButtonOverlayEnabled" format="reference"/>
+
+    <attr name="iconButtonInheritDisabled" format="reference"/>
+    <attr name="iconButtonFloatingDisabled" format="reference"/>
+    <attr name="iconButtonOverlayDisabled" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>

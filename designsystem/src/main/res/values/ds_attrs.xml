@@ -119,9 +119,10 @@
         </attr>
         <attr name="iconColor" format="reference"/>
         <attr name="surfaceSize" format="reference"/>
+        <attr name="backgroundSize" format="reference"/>
+        <attr name="backgroundDrawable" format="reference"/>
         <attr name="rippleDrawable"/>
         <attr name="iconSize"/>
-        <attr name="backgroundSize" format="reference"/>
         <attr name="notify"/>
     </declare-styleable>
 

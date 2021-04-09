@@ -376,6 +376,33 @@
         <item name="backgroundSize">?sizeMedium</item>
     </style>
 
+    <style name="Widget.DS.IconButton.Inherit.Enabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Floating.Enabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Overlay.Enabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Inherit.Disabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+        <item name="iconColor">?colorMediumEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Floating.Disabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+        <item name="iconColor">?colorMediumEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Overlay.Disabled" parent="Widget.DS.IconButton">
+        <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+        <item name="iconColor">?colorLowEmphasis</item>
+    </style>
+
 
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
