@@ -153,14 +153,8 @@ class IconButton @JvmOverloads constructor(
     private fun getAppereanceAttributesFromTheme() {
         try {
             when (colorAttribute) {
-                PRIMARY -> {
-                    setColorAttribute(R.attr.iconButtonPrimary)
-                    setDrawableRippleAttribute(R.attr.iconButtonPrimary)
-                }
-                DEFAULT -> {
-                    setColorAttribute(R.attr.iconButtonDefault)
-                    setDrawableRippleAttribute(R.attr.iconButtonDefault)
-                }
+                PRIMARY -> setAppearanceAttributes(R.attr.iconButtonPrimary)
+                DEFAULT -> setAppearanceAttributes(R.attr.iconButtonDefault)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -191,21 +185,7 @@ class IconButton @JvmOverloads constructor(
         }
     }
 
-    private fun setDrawableRippleAttribute(iconButtonStyleFromTheme: Int) {
-        context
-            .theme
-            .obtainStyledAttributes(
-                attrs,
-                R.styleable.IconButton,
-                iconButtonStyleFromTheme,
-                0
-            )
-            .apply {
-                rippleDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_rippleDrawable)
-            }
-    }
-
-    private fun setColorAttribute(attribute: Int) {
+    private fun setAppearanceAttributes(attribute: Int) {
         context
             .theme
             .obtainStyledAttributes(
@@ -216,6 +196,7 @@ class IconButton @JvmOverloads constructor(
             )
             .apply {
                 iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_iconColor)
+                rippleDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_rippleDrawable)
             }
     }
 
