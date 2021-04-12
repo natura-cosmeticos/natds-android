@@ -143,11 +143,11 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun getSizeAttribute() {
-        sizeAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_sizeButton, Size.SEMI.ordinal)
+        sizeAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_sizeButton, Size.SEMI.value)
     }
 
     private fun getStyleAttribute() {
-        styleAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_styleButton, Style.INHERIT.ordinal)
+        styleAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_styleButton, Style.INHERIT.value)
     }
 
     private fun getAppereanceAttributesFromTheme() {
@@ -170,15 +170,9 @@ class IconButton @JvmOverloads constructor(
     private fun getSizeAttributeFromTheme() {
         try {
             when (sizeAttribute) {
-                Size.SEMI.ordinal -> {
-                    setSizeAttribute(R.attr.iconButtonSizeSemi)
-                }
-                Size.SEMIX.ordinal -> {
-                    setSizeAttribute(R.attr.iconButtonSizeSemiX)
-                }
-                Size.MEDIUM.ordinal -> {
-                    setSizeAttribute(R.attr.iconButtonSizeMedium)
-                }
+                Size.SEMI.value -> setSizeAttribute(R.attr.iconButtonSizeSemi)
+                Size.SEMIX.value -> setSizeAttribute(R.attr.iconButtonSizeSemiX)
+                Size.MEDIUM.value -> setSizeAttribute(R.attr.iconButtonSizeMedium)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -188,17 +182,9 @@ class IconButton @JvmOverloads constructor(
     private fun getStyleAttributeFromTheme() {
         try {
             when (styleAttribute) {
-                Style.INHERIT.ordinal -> {
-                    setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
-                }
-
-                Style.FLOATING.ordinal -> {
-                    setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
-                }
-
-                Style.OVERLAY.ordinal -> {
-                    setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
-                }
+                Style.INHERIT.value -> setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
+                Style.FLOATING.value -> setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
+                Style.OVERLAY.value -> setBackgroundAttribute(R.attr.iconButtonInheritEnabled)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -289,10 +275,14 @@ class IconButton @JvmOverloads constructor(
     }
 }
 
-enum class Size {
-    SEMI, SEMIX, MEDIUM
+enum class Size(val value: Int) {
+    SEMI(0),
+    SEMIX(1),
+    MEDIUM(2)
 }
 
-enum class Style {
-    INHERIT, FLOATING, OVERLAY
+enum class Style(val value: Int) {
+    INHERIT(0),
+    FLOATING(1),
+    OVERLAY(2)
 }
