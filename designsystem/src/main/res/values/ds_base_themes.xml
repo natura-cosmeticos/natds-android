@@ -31,6 +31,7 @@
         <item name="colorHighEmphasisOpacity06">#51333333</item>
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
         <item name="colorHighlightOpacity05">#3D000000</item>
+        <item name="colorHighlightOpacityMediumHigh">#8F000000</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -131,16 +132,15 @@
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
          <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+        <item name="iconButtonLight">@style/Widget.DS.IconButton.Light</item>
 
         <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
         <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
          <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
 
-        <item name="iconButtonInheritEnabled">@style/Widget.DS.IconButton.Inherit.Enabled</item>
         <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
         <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>
 
-        <item name="iconButtonInheritDisabled">@style/Widget.DS.IconButton.Inherit.Disabled</item>
         <item name="iconButtonFloatingDisabled">@style/Widget.DS.IconButton.Floating.Disabled</item>
         <item name="iconButtonOverlayDisabled">@style/Widget.DS.IconButton.Overlay.Disabled</item>
 
@@ -202,6 +202,7 @@
         <item name="colorHighEmphasisOpacity06">#51FAFAFA</item>
         <item name="colorMediumEmphasisOpacity06">#51BBBBBB</item>
         <item name="colorHighlightOpacity05">#3DFFFFFF</item>
+        <item name="colorHighlightOpacityMediumHigh">#8FFFFFFF</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -301,16 +302,15 @@
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
          <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+        <item name="iconButtonLight">@style/Widget.DS.IconButton.Light</item>
 
         <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
         <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
          <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
 
-        <item name="iconButtonInheritEnabled">@style/Widget.DS.IconButton.Inherit.Enabled</item>
         <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
         <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>
 
-        <item name="iconButtonInheritDisabled">@style/Widget.DS.IconButton.Inherit.Disabled</item>
         <item name="iconButtonFloatingDisabled">@style/Widget.DS.IconButton.Floating.Disabled</item>
         <item name="iconButtonOverlayDisabled">@style/Widget.DS.IconButton.Overlay.Disabled</item>
 

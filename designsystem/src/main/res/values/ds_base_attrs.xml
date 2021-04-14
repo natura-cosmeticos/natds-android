@@ -9,6 +9,7 @@
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
     <attr name="colorHighlightOpacity05" format="color"/>
+    <attr name="colorHighlightOpacityMediumHigh" format="color"/>
 
     <!-- opacity tokens attributes -->
     <attr name="opacity01" format="dimension"/>
@@ -57,16 +58,15 @@
 
     <attr name="iconButtonDefault" format="reference"/>
     <attr name="iconButtonPrimary" format="reference"/>
+    <attr name="iconButtonLight" format="reference"/>
 
     <attr name="iconButtonSizeSemi" format="reference"/>
     <attr name="iconButtonSizeSemiX" format="reference"/>
     <attr name="iconButtonSizeMedium" format="reference"/>
 
-    <attr name="iconButtonInheritEnabled" format="reference"/>
     <attr name="iconButtonFloatingEnabled" format="reference"/>
     <attr name="iconButtonOverlayEnabled" format="reference"/>
 
-    <attr name="iconButtonInheritDisabled" format="reference"/>
     <attr name="iconButtonFloatingDisabled" format="reference"/>
     <attr name="iconButtonOverlayDisabled" format="reference"/>
 
