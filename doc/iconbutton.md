@@ -7,7 +7,7 @@ Icons are also appropriate for toggle buttons that allow a single choice to be s
 Icon buttons are commonly found in app bars and toolbars.
 
 ### How to use it?
-Add the TextField component in your xml layout file
+Add the Icon Button component in your xml layout file
 
 ```android
     <com.natura.android.iconButton.IconButton
@@ -20,4 +20,9 @@ Add the TextField component in your xml layout file
 #### Icon Button component has the following attributes that can be set:
 - `android:enabled` : when true, the button is active, when false the button is inactive
 - `app:iconName` : receives a string with the drawable to be render at button
-- `app:buttonColor` : receives two values, `default` or `primary`
+- `app:buttonColor` : receives three values, `default`,`primary` or `light`
+- `app:styleButton` : receives three values, `inherit`, `overlay` or `floating`
+- `app:sizeButton` : receives three values, `semi`, `semix`, or `medium`
+
+
+![IconButton](icon-button.png)
