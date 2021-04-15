@@ -60,6 +60,42 @@ class IconButtonTest {
     }
 
     @Test
+    fun checksIfIconButtonLightColorWasSet() {
+        val iconButton = buildIconButtonLight()
+
+        val color = iconButton.getColor()
+
+        Truth.assertThat(color).isEqualTo(LIGHT)
+    }
+
+    @Test
+    fun checksIfIconButtonInheritStyleWasSet() {
+        val iconButton = buildIconButtonStyleInherit()
+
+        val style = iconButton.getStyle()
+
+        Truth.assertThat(style).isEqualTo(INHERIT)
+    }
+
+    @Test
+    fun checksIfIconButtonFloatingStyleWasSet() {
+        val iconButton = buildIconButtonStyleFloating()
+
+        val style = iconButton.getStyle()
+
+        Truth.assertThat(style).isEqualTo(FLOATING)
+    }
+
+    @Test
+    fun checksIfIconButtonOverlayStyleWasSet() {
+        val iconButton = buildIconButtonStyleOverlay()
+
+        val style = iconButton.getStyle()
+
+        Truth.assertThat(style).isEqualTo(OVERLAY)
+    }
+
+    @Test
     fun checksIfIconButtonSizeSemiWasSet() {
         val iconButton = buildIconButtonSizeSemi()
 
@@ -183,6 +219,13 @@ class IconButtonTest {
             .build()
     }
 
+    private fun buildIconButtonLight(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withColorLight()
+            .build()
+    }
+
     private fun buildIconButtonDisabled(): IconButton {
         return IconButtonFixture
             .aIconButton()
@@ -211,13 +254,39 @@ class IconButtonTest {
             .build()
     }
 
+    private fun buildIconButtonStyleInherit(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withStyleInherit()
+            .build()
+    }
+
+    private fun buildIconButtonStyleFloating(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withStyleFloating()
+            .build()
+    }
+
+    private fun buildIconButtonStyleOverlay(): IconButton {
+        return IconButtonFixture
+            .aIconButton()
+            .withStyleOverlay()
+            .build()
+    }
+
     companion object {
         private const val DEFAULT = 0
         private const val PRIMARY = 1
+        private const val LIGHT = 2
         private const val OPACITY05_BASE255 = 61
 
         private const val SEMI = 0
         private const val SEMIX = 1
         private const val MEDIUM = 2
+
+        private const val INHERIT = 0
+        private const val FLOATING = 1
+        private const val OVERLAY = 2
     }
 }
