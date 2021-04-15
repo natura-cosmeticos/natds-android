@@ -1,92 +1,158 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iconButtonActivityContainer"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical|center_horizontal"
-    android:id="@+id/iconButtonContainer"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonDefault"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollViewIconButtons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:buttonColor="defaultColor"
-        app:styleButton="floating"
-        android:enabled="false"
-        app:sizeButton="semix"
-        app:iconName="outlined-action-calendar"
-        android:layout_gravity="center_horizontal"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/iconButtonDefaultLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingMicro"
-        android:layout_marginBottom="?spacingLarge"
-        android:text="Default"
-        android:textAlignment="center"
-        android:textAppearance="?textAppearanceCaption"
-        android:layout_gravity="center_horizontal"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/iconButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="?spacingMicro">
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:buttonColor="primaryColor"
-        app:iconName="outlined-action-calendar"
-        app:notify="4"
-        android:layout_gravity="center_horizontal"/>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
-    <TextView
-        android:id="@+id/iconButtonPrimaryLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingMicro"
-        android:layout_marginBottom="?spacingLarge"
-        android:text="Primary"
-        android:textAlignment="center"
-        android:textAppearance="?textAppearanceCaption"
-        android:layout_gravity="center_horizontal"/>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorDefaultDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonDefaultDisabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:buttonColor="defaultColor"
-        android:enabled="false"
-        app:iconName="outlined-action-calendar"
-        android:layout_gravity="center_horizontal"/>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
-    <TextView
-        android:id="@+id/iconButtonDefaultLabelDisabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingMicro"
-        android:layout_marginBottom="?spacingLarge"
-        android:text="Default disabled"
-        android:textAlignment="center"
-        android:textAppearance="?textAppearanceCaption"
-        android:layout_gravity="center_horizontal"/>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorPrimaryDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/iconButtonPrimaryDisabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:buttonColor="primaryColor"
-        android:enabled="false"
-        app:iconName="outlined-action-calendar"
-        android:layout_gravity="center_horizontal"/>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="lightColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
-    <TextView
-        android:id="@+id/iconButtonPrimaryLabelDisabled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingMicro"
-        android:layout_marginBottom="?spacingLarge"
-        android:text="Primary disabled"
-        android:textAlignment="center"
-        android:textAppearance="?textAppearanceCaption"
-        android:layout_gravity="center_horizontal"/>
-</LinearLayout>
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorLightDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                app:buttonColor="lightColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleInherit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleFloating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="floating" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleFloatingDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="floating" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="overlay" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleOverlayDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="overlay" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeSemi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeSemix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semix"
+                app:styleButton="inherit" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="medium"
+                app:styleButton="inherit" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@
 <resources>
     <attr name="notify" format="integer"/>
     <attr name="rippleDrawable" format="reference" />
+    <attr name="customElevation" format="reference" />
 
     <declare-styleable name="Tag" >
         <attr name="tag_type" format="enum">
@@ -120,6 +121,7 @@
         </attr>
         <attr name="iconColor" format="reference"/>
         <attr name="surfaceSize" format="reference"/>
+        <attr name="customElevation"/>
         <attr name="backgroundSize" format="reference"/>
         <attr name="backgroundDrawable" format="reference"/>
         <attr name="rippleDrawable"/>
@@ -130,9 +132,9 @@
     <declare-styleable name="Card">
         <attr name="colorBackground"/>
         <attr name="customRadius" format="reference" />
-        <attr name="customElevation" format="reference" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" format="boolean" />
+        <attr name="customElevation"/>
     </declare-styleable>
 
     <declare-styleable name="DividerLine">

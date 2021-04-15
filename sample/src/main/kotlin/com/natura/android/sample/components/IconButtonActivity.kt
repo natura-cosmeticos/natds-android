@@ -9,7 +9,6 @@ import com.natura.android.sample.setChosenDefaultTheme
 import kotlinx.android.synthetic.main.activity_icon_button.*
 
 class IconButtonActivity : AppCompatActivity() {
-    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()

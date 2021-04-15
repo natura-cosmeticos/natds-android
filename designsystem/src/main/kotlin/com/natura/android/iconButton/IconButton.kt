@@ -28,6 +28,7 @@ class IconButton @JvmOverloads constructor(
     private var iconColorResourceAttribute = 0
     private var iconSizeResourceAttribute = 0
     private var backgroundSizeResourceAttribute = 0
+    private var elevationResourceAttribute = 0
     private var rippleDrawableResourceAttribute = 0
     private var backgroundDrawableResourceAttribute = 0
 
@@ -78,7 +79,11 @@ class IconButton @JvmOverloads constructor(
     override fun setEnabled(enabled: Boolean) {
         iconButton.isEnabled = enabled
         if (!enabled) {
-            setDisabledColor()
+            if (styleAttribute == Style.OVERLAY.value) {
+                setDisabledIconColorWithOverlayStyle()
+            } else {
+                setDisabledIconColor()
+            }
         }
         getStyleAttributeFromTheme()
         configureStyle()
@@ -86,8 +91,12 @@ class IconButton @JvmOverloads constructor(
         super.setEnabled(enabled)
     }
 
-    private fun setDisabledColor() {
+    private fun setDisabledIconColor() {
         iconButton.setColorFilter(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+    }
+
+    private fun setDisabledIconColorWithOverlayStyle() {
+        iconButton.setColorFilter(getColorTokenFromTheme(context, R.attr.colorLowEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
     }
 
     fun setIcon(icon: String?) {
@@ -181,8 +190,8 @@ class IconButton @JvmOverloads constructor(
     private fun getEnabledStyleAttributeFromTheme() {
         try {
             when (styleAttribute) {
-                Style.FLOATING.value -> setBackgroundAttribute(R.attr.iconButtonFloatingEnabled)
-                Style.OVERLAY.value -> setBackgroundAttribute(R.attr.iconButtonOverlayEnabled)
+                Style.FLOATING.value -> setBackgroundAttributes(R.attr.iconButtonFloatingEnabled)
+                Style.OVERLAY.value -> setBackgroundAttributes(R.attr.iconButtonOverlayEnabled)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -192,8 +201,8 @@ class IconButton @JvmOverloads constructor(
     private fun getDisabledStyleAttributeFromTheme() {
         try {
             when (styleAttribute) {
-                Style.FLOATING.value -> setBackgroundAttribute(R.attr.iconButtonFloatingDisabled)
-                Style.OVERLAY.value -> setBackgroundAttribute(R.attr.iconButtonOverlayDisabled)
+                Style.FLOATING.value -> setBackgroundAttributes(R.attr.iconButtonFloatingDisabled)
+                Style.OVERLAY.value -> setBackgroundAttributes(R.attr.iconButtonOverlayDisabled)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -230,7 +239,7 @@ class IconButton @JvmOverloads constructor(
             }
     }
 
-    private fun setBackgroundAttribute(attribute: Int) {
+    private fun setBackgroundAttributes(attribute: Int) {
         context
             .theme
             .obtainStyledAttributes(
@@ -241,6 +250,7 @@ class IconButton @JvmOverloads constructor(
             )
             .apply {
                 backgroundDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_backgroundDrawable)
+                elevationResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_customElevation)
             }
     }
 
@@ -267,6 +277,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureStyle() {
         if (styleAttribute != Style.INHERIT.value) {
             iconButtonContainer.background = resources.getDrawable(backgroundDrawableResourceAttribute, context.theme)
+            iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
         }
     }
 

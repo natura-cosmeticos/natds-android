@@ -380,20 +380,24 @@
 
     <style name="Widget.DS.IconButton.Floating.Enabled" parent="Widget.DS.IconButton.Enabled">
         <item name="backgroundDrawable">@drawable/iconbutton_enabled_background_floating</item>
+        <item name="customElevation">@dimen/ds_elevation04</item>
     </style>
 
     <style name="Widget.DS.IconButton.Overlay.Enabled" parent="Widget.DS.IconButton.Enabled">
         <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
+        <item name="customElevation">@dimen/ds_elevation00</item>
     </style>
 
     <style name="Widget.DS.IconButton.Floating.Disabled" parent="Widget.DS.IconButton">
         <item name="backgroundDrawable">@drawable/iconbutton_disabled_background_floating</item>
         <item name="iconColor">?colorMediumEmphasis</item>
+        <item name="customElevation">@dimen/ds_elevation00</item>
     </style>
 
     <style name="Widget.DS.IconButton.Overlay.Disabled" parent="Widget.DS.IconButton">
         <item name="backgroundDrawable">@drawable/iconbutton_background_overlay</item>
         <item name="iconColor">?colorLowEmphasis</item>
+        <item name="customElevation">@dimen/ds_elevation00</item>
     </style>
     
     <!-- SHORTCUT STYLES -->
