@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.natura.android.listitem.ListItem
 import com.natura.android.sample.R
-import kotlinx.android.synthetic.main.item_list.view.*
+import kotlinx.android.synthetic.main.item_listitem.view.*
 
 class ListItemAdapter(
     private val context: Context,
@@ -18,7 +18,7 @@ class ListItemAdapter(
 ) : RecyclerView.Adapter<ListItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list, parent, false))
+        ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_listitem, parent, false))
 
     override fun getItemCount() = list.size
 

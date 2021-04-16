@@ -4,12 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:padding="?spacingMicro"
+    android:clipToPadding="false"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/iconButtonContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="?sizeSemi"
+        android:layout_height="?sizeSemi"
+        android:elevation="?elevation04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,14 +31,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             tools:src="@drawable/default_icon_outlined_default_mockup"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <ImageView
-        android:id="@+id/iconButtonBadgeContainer"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iconButtonRippleBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:elevation="?elevation04"
+        android:background="@drawable/iconbutton_ripple_background_default"
+        app:layout_constraintEnd_toEndOf="@id/iconButtonContainer"
+        app:layout_constraintStart_toStartOf="@id/iconButtonContainer"
+        app:layout_constraintBottom_toBottomOf="@id/iconButtonContainer"
+        app:layout_constraintTop_toTopOf="@id/iconButtonContainer" />
+
+    <ImageView
+        android:id="@+id/iconButtonBadgeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:visibility="invisible"
+        android:elevation="?elevation04"
         android:src="@drawable/icon_button_base_badge"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/iconButtonContainer"
+        app:layout_constraintTop_toTopOf="@+id/iconButtonContainer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

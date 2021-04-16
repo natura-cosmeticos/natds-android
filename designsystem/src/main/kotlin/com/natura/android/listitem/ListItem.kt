@@ -37,17 +37,17 @@ class ListItem @JvmOverloads constructor(
     }
 
     fun setDividerMiddle() {
-        dividerAttribute = Divider.MIDDLE.ordinal
+        dividerAttribute = Divider.MIDDLE.value
         showDivider()
     }
 
     fun setDividerInset() {
-        dividerAttribute = Divider.INSET.ordinal
+        dividerAttribute = Divider.INSET.value
         showDivider()
     }
 
     fun setDividerFullbleed() {
-        dividerAttribute = Divider.FULLBLEED.ordinal
+        dividerAttribute = Divider.FULLBLEED.value
         showDivider()
     }
 
@@ -85,7 +85,7 @@ class ListItem @JvmOverloads constructor(
     fun getSelectableState(): Boolean = selectableAttribute
 
     private fun getListItemAttributes() {
-        dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, Divider.NONE.ordinal)
+        dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, Divider.NONE.value)
         touchStateAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_touchState, false)
         selectableAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_selectableState, false)
 
@@ -112,9 +112,9 @@ class ListItem @JvmOverloads constructor(
         View.inflate(context, R.layout.list_item_dividers, this)
 
         when (dividerAttribute) {
-            Divider.INSET.ordinal -> dividerInset.visibility = View.VISIBLE
-            Divider.MIDDLE.ordinal -> dividerMiddle.visibility = View.VISIBLE
-            Divider.FULLBLEED.ordinal -> dividerFullBleed.visibility = View.VISIBLE
+            Divider.INSET.value -> dividerInset.visibility = View.VISIBLE
+            Divider.MIDDLE.value -> dividerMiddle.visibility = View.VISIBLE
+            Divider.FULLBLEED.value -> dividerFullBleed.visibility = View.VISIBLE
         }
     }
 
@@ -151,6 +151,9 @@ class ListItem @JvmOverloads constructor(
     }
 }
 
-enum class Divider {
-    NONE, FULLBLEED, INSET, MIDDLE
+enum class Divider(val value: Int) {
+    NONE(0),
+    FULLBLEED(1),
+    INSET(2),
+    MIDDLE(3)
 }

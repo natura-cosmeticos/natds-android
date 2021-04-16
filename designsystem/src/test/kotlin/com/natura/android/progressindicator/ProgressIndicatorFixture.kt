@@ -13,8 +13,11 @@ internal class ProgressIndicatorFixture private constructor(
 ) {
     companion object {
 
-        enum class Size {
-            STANDARD, SEMI, MEDIUM, LARGE
+        enum class Size(val value: Int) {
+            STANDARD(0),
+            SEMI(1),
+            MEDIUM(2),
+            LARGE(3)
         }
 
         private val defaultSize = Size.MEDIUM.ordinal
@@ -28,22 +31,22 @@ internal class ProgressIndicatorFixture private constructor(
     }
 
     fun withSizeMedium(): ProgressIndicatorFixture {
-        this.size = Size.MEDIUM.ordinal
+        this.size = Size.MEDIUM.value
         return this
     }
 
     fun withSizeStandard(): ProgressIndicatorFixture {
-        this.size = Size.STANDARD.ordinal
+        this.size = Size.STANDARD.value
         return this
     }
 
     fun withSizeSemi(): ProgressIndicatorFixture {
-        this.size = Size.SEMI.ordinal
+        this.size = Size.SEMI.value
         return this
     }
 
     fun withSizeLarge(): ProgressIndicatorFixture {
-        this.size = Size.LARGE.ordinal
+        this.size = Size.LARGE.value
         return this
     }
 

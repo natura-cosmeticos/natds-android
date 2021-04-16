@@ -9,7 +9,6 @@ import com.natura.android.sample.setChosenDefaultTheme
 import kotlinx.android.synthetic.main.activity_icon_button.*
 
 class IconButtonActivity : AppCompatActivity() {
-    private var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
@@ -28,9 +27,9 @@ class IconButtonActivity : AppCompatActivity() {
     }
 
     private fun setClickListener() {
-        for (i in 0 until iconButtonContainer.childCount) {
-            if (iconButtonContainer.getChildAt(i) is IconButton) {
-                iconButtonContainer.getChildAt(i).setOnClickListener {
+        for (i in 0 until iconButtonActivityContainer.childCount) {
+            if (iconButtonActivityContainer.getChildAt(i) is IconButton) {
+                iconButtonActivityContainer.getChildAt(i).setOnClickListener {
                 }
             }
         }

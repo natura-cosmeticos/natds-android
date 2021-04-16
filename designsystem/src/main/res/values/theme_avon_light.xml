@@ -179,6 +179,7 @@
         <item name="colorHighEmphasisOpacity06">#51333333</item>
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
         <item name="colorHighlightOpacity05">#3D000000</item>
+        <item name="colorHighlightOpacityMediumHigh">#8F000000</item>
 
         <!-- { @deprecated Tokens }-->
         <item name="opacity01">@dimen/ds_opacity01</item>
@@ -253,7 +254,18 @@
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Avon.Light</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
-        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+        <item name="iconButtonLight">@style/Widget.DS.IconButton.Light</item>
+
+        <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
+        <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
+         <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
+
+        <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
+        <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>
+
+        <item name="iconButtonFloatingDisabled">@style/Widget.DS.IconButton.Floating.Disabled</item>
+        <item name="iconButtonOverlayDisabled">@style/Widget.DS.IconButton.Overlay.Disabled</item>
 
         <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
