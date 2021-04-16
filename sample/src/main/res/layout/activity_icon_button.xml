@@ -59,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                app:layout_constraintBottom_toBottomOf="@+id/iconButtonColorDefaultDisabled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorDefaultDisabled"
                 android:text="Color hight emphasis (disabled)" />
@@ -82,7 +81,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                app:layout_constraintBottom_toBottomOf="@+id/iconButtonColorPrimary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimary"
                 android:text="Color primary" />
