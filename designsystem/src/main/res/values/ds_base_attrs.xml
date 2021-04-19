@@ -93,6 +93,10 @@
     <!-- Tag references -->
     <attr name="tagPrimary" format="reference"/>
     <attr name="tagAlert" format="reference"/>
+    <attr name="tagSecondary" format="reference"/>
+    <attr name="tagSuccess" format="reference"/>
+    <attr name="tagWarning" format="reference"/>
+    <attr name="tagLink" format="reference"/>
 
     <!-- Card reference -->
     <attr name="card" format="reference"/>

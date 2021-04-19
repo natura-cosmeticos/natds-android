@@ -83,39 +83,26 @@ class Tag @JvmOverloads constructor(
 
     private fun getAttributesFromTheme() {
         try {
-            if (typeAttribute == PRIMARY) {
-                setPrimaryTypeAttributes()
-            } else {
-                setAlertTypeAttributes()
+            when (typeAttribute) {
+                PRIMARY -> setTypeAttributes(R.attr.tagPrimary)
+                SECONDARY -> setTypeAttributes(R.attr.tagSecondary)
+                ALERT -> setTypeAttributes(R.attr.tagAlert)
+                SUCCESS -> setTypeAttributes(R.attr.tagSuccess)
+                WARNING -> setTypeAttributes(R.attr.tagWarning)
+                LINK -> setTypeAttributes(R.attr.tagLink)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
     }
 
-    private fun setPrimaryTypeAttributes() {
+    private fun setTypeAttributes(styleAttr: Int) {
         context
             .theme
             .obtainStyledAttributes(
                 attrs,
                 R.styleable.Tag,
-                R.attr.tagPrimary,
-                0
-            )
-            .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_labelAppearance)
-                labelTextColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
-            }
-    }
-
-    private fun setAlertTypeAttributes() {
-        context
-            .theme
-            .obtainStyledAttributes(
-                attrs,
-                R.styleable.Tag,
-                R.attr.tagAlert,
+                styleAttr,
                 0
             )
             .apply {
@@ -149,5 +136,9 @@ class Tag @JvmOverloads constructor(
     companion object {
         const val PRIMARY = 0
         const val ALERT = 1
+        const val SECONDARY = 2
+        const val SUCCESS = 3
+        const val WARNING = 4
+        const val LINK = 5
     }
 }
