@@ -29,21 +29,21 @@ class TagTest {
     }
 
     @Test
-    fun checksIfTagPrimaryLabelWasSet() {
-        tag = buildTagPrimaryWithRequiredAttributes()
-
-        val label = tag.getLabel()
-
-        assertThat(label).isEqualTo("tag label")
-    }
-
-    @Test
     fun checksIfTagLabelChangeWhenSetLabel() {
-        tag = buildTagPrimaryWithRequiredAttributes()
+        tag = buildTagPrimary()
 
         tag.setLabel("New label")
 
         assertThat(tag.getLabel()).isEqualTo("New label")
+    }
+
+    @Test
+    fun checksIfTagPrimaryWasSet() {
+        tag = buildTagPrimary()
+
+        val type = tag.getType()
+
+        assertThat(type).isEqualTo(0)
     }
 
     @Test
@@ -56,12 +56,39 @@ class TagTest {
     }
 
     @Test
-    fun checksIfTagContainedTypeWasSet() {
-        tag = buildTagPrimaryWithRequiredAttributes()
+    fun checksIfTagSecondaryTypeWasSet() {
+        tag = buildTagSecondary()
 
         val type = tag.getType()
 
-        assertThat(type).isEqualTo(0)
+        assertThat(type).isEqualTo(2)
+    }
+
+    @Test
+    fun checksIfTagSuccessTypeWasSet() {
+        tag = buildTagSuccess()
+
+        val type = tag.getType()
+
+        assertThat(type).isEqualTo(3)
+    }
+
+    @Test
+    fun checksIfTagWarningTypeWasSet() {
+        tag = buildTagWarning()
+
+        val type = tag.getType()
+
+        assertThat(type).isEqualTo(4)
+    }
+
+    @Test
+    fun checksIfTagLinkTypeWasSet() {
+        tag = buildTagLink()
+
+        val type = tag.getType()
+
+        assertThat(type).isEqualTo(5)
     }
 
     @Test(expected = IllegalArgumentException::class)
@@ -87,10 +114,38 @@ class TagTest {
             .build()
     }
 
-    private fun buildTagPrimaryWithRequiredAttributes(): Tag {
+    private fun buildTagPrimary(): Tag {
         return TagFixture
             .aTag()
             .withTypePrimary()
+            .build()
+    }
+
+    private fun buildTagSecondary(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeSecondary()
+            .build()
+    }
+
+    private fun buildTagSuccess(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeSuccess()
+            .build()
+    }
+
+    private fun buildTagWarning(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeWarning()
+            .build()
+    }
+
+    private fun buildTagLink(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeLink()
             .build()
     }
 }

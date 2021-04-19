@@ -14,6 +14,11 @@ internal class TagFixture private constructor(
     companion object {
         private const val PRIMARY = 0
         private const val ALERT = 1
+        private const val SECONDARY = 2
+        private const val SUCCESS = 3
+        private const val WARNING = 4
+        private const val LINK = 5
+
 
         private const val defaultType = PRIMARY
         private const val defaultLabel = "tag label"
@@ -36,6 +41,26 @@ internal class TagFixture private constructor(
 
     fun withTypeAlert(): TagFixture {
         this.type = ALERT
+        return this
+    }
+
+    fun withTypeSecondary(): TagFixture {
+        this.type = SECONDARY
+        return this
+    }
+
+    fun withTypeSuccess(): TagFixture {
+        this.type = SUCCESS
+        return this
+    }
+
+    fun withTypeWarning(): TagFixture {
+        this.type = WARNING
+        return this
+    }
+
+    fun withTypeLink(): TagFixture {
+        this.type = LINK
         return this
     }
 
