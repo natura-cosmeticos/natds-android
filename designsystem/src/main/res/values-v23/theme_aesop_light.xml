@@ -283,6 +283,8 @@
         <item name="tagSuccess">@style/Widget.DS.Tag.Success</item>
         <item name="tagWarning">@style/Widget.DS.Tag.Warning</item>
         <item name="tagLink">@style/Widget.DS.Tag.Link</item>
+        <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
+        <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
 
         <item name="logoVertical">@drawable/default_icon_outlined_action_cancel</item>
         <item name="logoHorizontal">@drawable/aesop_horizontal</item>
