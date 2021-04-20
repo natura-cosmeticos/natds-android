@@ -52,7 +52,7 @@ dependencies {
 
     implementation "com.natura:icons:$rootProject.iconsVersion"
 
-    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation "com.google.android.material:material:$rootProject.materialVersion"
