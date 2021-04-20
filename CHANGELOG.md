@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.8.1](https://github.com/natura-cosmeticos/natds-android/compare/v.5.8.0...v.5.8.1) (2021-04-20)
+
+
+### Bug Fixes
+
+* fixes icon Button document format ([31d22d5](https://github.com/natura-cosmeticos/natds-android/commit/31d22d5eda4807dbff1f5151c50b5d66fad37f34))
+* fixes the icon button document format ([a1a41a4](https://github.com/natura-cosmeticos/natds-android/commit/a1a41a436ac1c9e53e8ba249ec49bd680e8faba8))
+
 ## [5.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.5.7.0...v.5.8.0) (2021-04-16)
 
 
