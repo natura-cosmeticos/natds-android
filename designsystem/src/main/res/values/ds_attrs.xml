@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="notify" format="integer"/>
+    <attr name="notify" format="integer" />
     <attr name="rippleDrawable" format="reference" />
     <attr name="customElevation" format="reference" />
+    <attr name="customHeight" format="reference" />
+    <attr name="customWidth" format="reference" />
 
-    <declare-styleable name="Tag" >
+    <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
-            <enum name="primary" value="0"/>
-            <enum name="alert" value="1"/>
-            <enum name="secondary" value="2"/>
-            <enum name="success" value="3"/>
-            <enum name="warning" value="4"/>
-            <enum name="link" value="5"/>
+            <enum name="primary" value="0" />
+            <enum name="alert" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="success" value="3" />
+            <enum name="warning" value="4" />
+            <enum name="link" value="5" />
         </attr>
-        <attr name="colorBackground"/>
-        <attr name="labelAppearance"/>
-        <attr name="textLabel"/>
-        <attr name="android:textColor"/>
-    </declare-styleable>
-
-    <declare-styleable name="Shortcut" >
-        <attr name="type" format="enum">
-            <enum name="outlined" value="0"/>
-            <enum name="contained" value="1"/>
+        <attr name="tag_size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="standard" value="1" />
         </attr>
         <attr name="colorBackground" />
-        <attr name="colorIcon" format="color"/>
-        <attr name="labelAppearance" format="reference"/>
-        <attr name="textLabel" format="string"/>
-        <attr name="iconName" format="string"/>
-        <attr name="notify"/>
+        <attr name="labelAppearance" />
+        <attr name="textLabel" />
+        <attr name="customHeight" />
+        <attr name="android:textColor" />
+    </declare-styleable>
+
+    <declare-styleable name="Shortcut">
+        <attr name="type" format="enum">
+            <enum name="outlined" value="0" />
+            <enum name="contained" value="1" />
+        </attr>
+        <attr name="colorBackground" />
+        <attr name="colorIcon" format="color" />
+        <attr name="labelAppearance" format="reference" />
+        <attr name="textLabel" format="string" />
+        <attr name="iconName" format="string" />
+        <attr name="notify" />
 
     </declare-styleable>
 
-    <declare-styleable name="AppBar" >
-        <attr name="showLogo" format="boolean"/>
+    <declare-styleable name="AppBar">
+        <attr name="showLogo" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="Badge" >
-        <attr name="badgeNumber" format="integer"/>
-        <attr name="badgeVisibility" format="boolean"/>
+    <declare-styleable name="Badge">
+        <attr name="badgeNumber" format="integer" />
+        <attr name="badgeVisibility" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="ds_menu">
@@ -53,7 +60,7 @@
         <attr name="menu_is_enabled" format="boolean" />
         <attr name="menu_is_opened" format="boolean" />
         <attr name="menu_has_tag" format="boolean" />
-        <attr name="menu_tag_label" format="string"/>
+        <attr name="menu_tag_label" format="string" />
     </declare-styleable>
 
     <declare-styleable name="ds_submenu">
@@ -95,9 +102,9 @@
         <attr name="text_field_label" format="string" />
         <attr name="text_field_footer" format="string" />
         <attr name="text_field_state" format="enum">
-            <enum name="none" value="0"/>
-            <enum name="success" value="1"/>
-            <enum name="error" value="2"/>
+            <enum name="none" value="0" />
+            <enum name="success" value="1" />
+            <enum name="error" value="2" />
         </attr>
     </declare-styleable>
 
@@ -109,73 +116,73 @@
         <attr name="android:enabled" />
         <attr name="iconName" />
         <attr name="buttonColor" format="enum">
-            <enum name="defaultColor" value="0"/>
-            <enum name="primaryColor" value="1"/>
-            <enum name="lightColor" value="2"/>
+            <enum name="defaultColor" value="0" />
+            <enum name="primaryColor" value="1" />
+            <enum name="lightColor" value="2" />
         </attr>
         <attr name="sizeButton" format="enum">
-            <enum name="semi" value="0"/>
-            <enum name="semix" value="1"/>
-            <enum name="medium" value="2"/>
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
         </attr>
         <attr name="styleButton" format="enum">
-            <enum name="inherit" value="0"/>
-            <enum name="floating" value="1"/>
-            <enum name="overlay" value="2"/>
+            <enum name="inherit" value="0" />
+            <enum name="floating" value="1" />
+            <enum name="overlay" value="2" />
         </attr>
-        <attr name="iconColor" format="reference"/>
-        <attr name="surfaceSize" format="reference"/>
-        <attr name="customElevation"/>
-        <attr name="backgroundSize" format="reference"/>
-        <attr name="backgroundDrawable" format="reference"/>
-        <attr name="rippleDrawable"/>
-        <attr name="iconSize"/>
-        <attr name="notify"/>
+        <attr name="iconColor" format="reference" />
+        <attr name="surfaceSize" format="reference" />
+        <attr name="customElevation" />
+        <attr name="backgroundSize" format="reference" />
+        <attr name="backgroundDrawable" format="reference" />
+        <attr name="rippleDrawable" />
+        <attr name="iconSize" />
+        <attr name="notify" />
     </declare-styleable>
 
     <declare-styleable name="Card">
-        <attr name="colorBackground"/>
+        <attr name="colorBackground" />
         <attr name="customRadius" format="reference" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" format="boolean" />
-        <attr name="customElevation"/>
+        <attr name="customElevation" />
     </declare-styleable>
 
     <declare-styleable name="DividerLine">
         <attr name="android:layout_marginLeft" />
         <attr name="android:layout_marginRight" />
-        <attr name="colorBackground"/>
+        <attr name="colorBackground" />
         <attr name="dividerType" format="enum">
-            <enum name="fullBleed" value="0"/>
-            <enum name="inset" value="1"/>
-            <enum name="middle" value="2"/>
+            <enum name="fullBleed" value="0" />
+            <enum name="inset" value="1" />
+            <enum name="middle" value="2" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="ProgressIndicator">
-        <attr name="customHeight" format="reference"/>
-        <attr name="customWidth" format="reference"/>
-        <attr name="colorBackground"/>
+        <attr name="customHeight" />
+        <attr name="customWidth" />
+        <attr name="colorBackground" />
         <attr name="layer" format="boolean" />
         <attr name="size" format="enum">
-            <enum name="standard" value="0"/>
-            <enum name="semi" value="1"/>
-            <enum name="medium" value="2"/>
-            <enum name="large" value="3"/>
+            <enum name="standard" value="0" />
+            <enum name="semi" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="large" value="3" />
         </attr>
     </declare-styleable>
 
     <declare-styleable name="ListItem">
-        <attr name="touchState" format="boolean"/>
-        <attr name="selectableState" format="boolean"/>
+        <attr name="touchState" format="boolean" />
+        <attr name="selectableState" format="boolean" />
         <attr name="dividerBottom" format="enum">
-            <enum name="none" value="0"/>
-            <enum name="fullBleed" value="1"/>
-            <enum name="inset" value="2"/>
-            <enum name="middle" value="3"/>
+            <enum name="none" value="0" />
+            <enum name="fullBleed" value="1" />
+            <enum name="inset" value="2" />
+            <enum name="middle" value="3" />
         </attr>
-        <attr name="rippleDrawable"/>
-        <attr name="colorBackground"/>
+        <attr name="rippleDrawable" />
+        <attr name="colorBackground" />
     </declare-styleable>
 
 </resources>

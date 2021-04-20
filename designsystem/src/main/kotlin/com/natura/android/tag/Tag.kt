@@ -14,6 +14,7 @@ import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setAppearance
+import kotlinx.android.synthetic.main.ds_tag.view.*
 
 class Tag @JvmOverloads constructor(
     context: Context,
@@ -22,7 +23,9 @@ class Tag @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var labelAttribute: String? = null
-    private var typeAttribute: Int? = null
+    private var typeAttribute: Int = 0
+    private var sizeAttribute: Int = 0
+    private var sizeResourceAttribute = 0
     private var backgroundColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
     private var labelTextColorResourceAttribute = 0
@@ -42,7 +45,9 @@ class Tag @JvmOverloads constructor(
 
         getTagAttributes()
         getAttributesFromTheme()
+        getSizeAttributeFromTheme()
         configureTagByType(typeAttribute)
+        configureTagBySize()
 
         tagAttributesArray.recycle()
     }
@@ -61,12 +66,18 @@ class Tag @JvmOverloads constructor(
 
     fun getType(): Int? = typeAttribute
 
-    private fun configureTagByType(type: Int?) {
-        type?.apply {
+    private fun configureTagByType(type: Int) {
+        type.apply {
             setLabel(labelAttribute)
             setTextColor()
             setBackground()
         }
+    }
+
+    private fun configureTagBySize() {
+        var params = tagBackground.layoutParams
+        params.height = resources.getDimension(sizeResourceAttribute).toInt()
+        tagBackground.layoutParams = params
     }
 
     private fun setTextColor() {
@@ -96,6 +107,17 @@ class Tag @JvmOverloads constructor(
         }
     }
 
+    private fun getSizeAttributeFromTheme() {
+        try {
+            when (sizeAttribute) {
+                Size.SMALL.value -> setSizeAttribute(R.attr.tagSizeSmall)
+                Size.STANDARD.value -> setSizeAttribute(R.attr.tagSizeStandard)
+            }
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
+    }
+
     private fun setTypeAttributes(styleAttr: Int) {
         context
             .theme
@@ -112,17 +134,28 @@ class Tag @JvmOverloads constructor(
             }
     }
 
+    private fun setSizeAttribute(sizeAttr: Int) {
+        context
+            .theme
+            .obtainStyledAttributes(
+                attrs,
+                R.styleable.Tag,
+                sizeAttr,
+                0
+            )
+            .apply {
+                sizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_customHeight)
+            }
+    }
+
     private fun getTagAttributes() {
         getLabelAttribute()
         getTypeAttribute()
+        getSizeAttribute()
     }
 
     private fun getTypeAttribute() {
-        try {
-            typeAttribute = tagAttributesArray.getIntOrThrow(R.styleable.Tag_tag_type)
-        } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing tag required argument. You MUST set the tag type(primary or alert).", e))
-        }
+        typeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_type, PRIMARY)
     }
 
     private fun getLabelAttribute() {
@@ -133,6 +166,10 @@ class Tag @JvmOverloads constructor(
         }
     }
 
+    private fun getSizeAttribute() {
+        sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, Size.SMALL.value)
+    }
+
     companion object {
         const val PRIMARY = 0
         const val ALERT = 1
@@ -141,4 +178,9 @@ class Tag @JvmOverloads constructor(
         const val WARNING = 4
         const val LINK = 5
     }
+}
+
+enum class Size(val value: Int) {
+    SMALL(0),
+    STANDARD(1)
 }
