@@ -1,31 +1,35 @@
 # Icon Button
 
-This component is available in the following variants:
-
 #### Note:
+
+This component is available in the following variants:
 
 * ✅ Standard
 
 With the following attribute status:
 
 * Size:
-    * ✅ Semi
-    * ✅ SemiX
-    * ✅ Medium
+    * ✅ `Semi`
+    * ✅ `SemiX`
+    * ✅ `Medium`
+    
 * Icon color:
-    * ✅ HighEmphasis
-    * ✅ Primary
-    * ✅ Light
+    * ✅ `HighEmphasis`
+    * ✅ `Primary`
+    * ✅ `Light`
+    
 * Background style:
-    * ✅ Inherit
-    * ✅ Float
-    * ✅ Overlay
-    * ✅ Disabled
-    * ✅ Onclick
-    * ✅ Icon
+    * ✅ `Inherit`
+    * ✅ `Float`
+    * ✅ `Overlay`
+    
+* ✅ Disabled
+* ✅ Onclick
+* ✅ Icon
+
 * Interaction state:
-    * ✅ Enabled
-    * ✅ Press
+    * ✅ `Enabled`
+    * ✅ `Press`
 
 
 Icons are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
