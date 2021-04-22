@@ -19,6 +19,11 @@
             <enum name="small" value="0" />
             <enum name="standard" value="1" />
         </attr>
+        <attr name="tag_position" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
         <attr name="colorBackground" />
         <attr name="labelAppearance" />
         <attr name="textLabel" />
