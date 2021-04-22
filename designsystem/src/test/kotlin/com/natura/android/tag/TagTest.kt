@@ -91,6 +91,24 @@ class TagTest {
         assertThat(type).isEqualTo(5)
     }
 
+    @Test
+    fun checksIfTagSizeSmallWasSet() {
+        tag = buildTagSmall()
+
+        var size = tag.getSize()
+
+        assertThat(size).isEqualTo(0)
+    }
+
+    @Test
+    fun checksIfTagSizeStandardWasSet() {
+        tag = buildTagStandard()
+
+        var size = tag.getSize()
+
+        assertThat(size).isEqualTo(1)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingPrimaryTagWithoutALabel() {
         tag = TagFixture
@@ -146,6 +164,20 @@ class TagTest {
         return TagFixture
             .aTag()
             .withTypeLink()
+            .build()
+    }
+
+    private fun buildTagSmall(): Tag {
+        return TagFixture
+            .aTag()
+            .withSizeSmall()
+            .build()
+    }
+
+    private fun buildTagStandard(): Tag {
+        return TagFixture
+            .aTag()
+            .withSizeStandard()
             .build()
     }
 }

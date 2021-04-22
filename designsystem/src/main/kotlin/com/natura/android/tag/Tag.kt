@@ -64,7 +64,9 @@ class Tag @JvmOverloads constructor(
         return labelContainer.text
     }
 
-    fun getType(): Int? = typeAttribute
+    fun getType(): Int = typeAttribute
+
+    fun getSize(): Int = sizeAttribute
 
     private fun configureTagByType(type: Int) {
         type.apply {

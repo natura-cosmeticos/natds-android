@@ -6,7 +6,8 @@ import com.natura.android.R
 import org.robolectric.Robolectric
 
 internal class TagFixture private constructor(
-    private var type: Int? = null,
+    private var type: Int = 0,
+    private var size: Int = 0,
     private var label: String? = null,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
@@ -19,19 +20,32 @@ internal class TagFixture private constructor(
         private const val WARNING = 4
         private const val LINK = 5
 
+        private const val SMALL = 0
+        private const val STANDARD = 1
 
         private const val defaultType = PRIMARY
+        private const val defaultSize = SMALL
         private const val defaultLabel = "tag label"
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aTag(): TagFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return TagFixture(defaultType, defaultLabel, context)
+            return TagFixture(defaultType, defaultSize, defaultLabel, context)
         }
 
         fun aEmptyTag(): TagFixture {
             return TagFixture()
         }
+    }
+
+    fun withSizeSmall(): TagFixture {
+        this.size = SMALL
+        return this
+    }
+
+    fun withSizeStandard(): TagFixture {
+        this.size = STANDARD
+        return this
     }
 
     fun withTypePrimary(): TagFixture {
@@ -79,6 +93,7 @@ internal class TagFixture private constructor(
             .buildAttributeSet()
             .addAttribute(R.attr.tag_type, type.toString())
             .addAttribute(R.attr.textLabel, label)
+            .addAttribute(R.attr.tag_size, size.toString())
             .build()
 
         return Tag(context, attributes)
