@@ -2,18 +2,19 @@ package com.natura.android.tag
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setAppearance
+import com.natura.android.resources.getDimenFromTheme
 import kotlinx.android.synthetic.main.ds_tag.view.*
 
 class Tag @JvmOverloads constructor(
@@ -25,6 +26,7 @@ class Tag @JvmOverloads constructor(
     private var labelAttribute: String? = null
     private var typeAttribute: Int = 0
     private var sizeAttribute: Int = 0
+    private var positionAttribute: Int = 0
     private var sizeResourceAttribute = 0
     private var backgroundColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
@@ -87,10 +89,17 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun setBackground() {
-        val background = resources.getDrawable(R.drawable.tag_background, null)
+        val background: GradientDrawable = resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
+        val cornerRadius: Float = 50F
+        when (positionAttribute) {
+            Position.CENTER.value -> background.cornerRadius = cornerRadius
+            Position.RIGHT.value -> background.cornerRadii = floatArrayOf(cornerRadius, cornerRadius, 0F, 0F, 0F, 0F, cornerRadius, cornerRadius)
+            Position.LEFT.value -> background.cornerRadii = floatArrayOf(0F, 0F, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0F, 0F)
+        }
+
+        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
         backgroundContainer.background = background
     }
 
@@ -154,6 +163,7 @@ class Tag @JvmOverloads constructor(
         getLabelAttribute()
         getTypeAttribute()
         getSizeAttribute()
+        getPositionAttribute()
     }
 
     private fun getTypeAttribute() {
@@ -172,6 +182,10 @@ class Tag @JvmOverloads constructor(
         sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, Size.SMALL.value)
     }
 
+    private fun getPositionAttribute() {
+        positionAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_position, Position.CENTER.value)
+    }
+
     companion object {
         const val PRIMARY = 0
         const val ALERT = 1
@@ -185,4 +199,10 @@ class Tag @JvmOverloads constructor(
 enum class Size(val value: Int) {
     SMALL(0),
     STANDARD(1)
+}
+
+enum class Position(val value: Int) {
+    CENTER(0),
+    LEFT(1),
+    RIGHT(2)
 }
