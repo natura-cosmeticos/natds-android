@@ -70,6 +70,8 @@ class Tag @JvmOverloads constructor(
 
     fun getSize(): Int = sizeAttribute
 
+    fun getPosition(): Int = positionAttribute
+
     private fun configureTagByType(type: Int) {
         type.apply {
             setLabel(labelAttribute)

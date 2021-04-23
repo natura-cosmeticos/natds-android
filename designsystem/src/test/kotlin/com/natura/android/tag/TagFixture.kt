@@ -8,6 +8,7 @@ import org.robolectric.Robolectric
 internal class TagFixture private constructor(
     private var type: Int = 0,
     private var size: Int = 0,
+    private var position: Int = 0,
     private var label: String? = null,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
@@ -23,14 +24,19 @@ internal class TagFixture private constructor(
         private const val SMALL = 0
         private const val STANDARD = 1
 
+        private const val CENTER = 0
+        private const val LEFT = 1
+        private const val RIGHT = 2
+
         private const val defaultType = PRIMARY
         private const val defaultSize = SMALL
+        private const val defaultPosition = CENTER
         private const val defaultLabel = "tag label"
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aTag(): TagFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return TagFixture(defaultType, defaultSize, defaultLabel, context)
+            return TagFixture(defaultType, defaultSize, defaultPosition, defaultLabel, context)
         }
 
         fun aEmptyTag(): TagFixture {
@@ -45,6 +51,21 @@ internal class TagFixture private constructor(
 
     fun withSizeStandard(): TagFixture {
         this.size = STANDARD
+        return this
+    }
+
+    fun withPositionCenter(): TagFixture {
+        this.position = CENTER
+        return this
+    }
+
+    fun withPositionLeft(): TagFixture {
+        this.position = LEFT
+        return this
+    }
+
+    fun withPositionRight(): TagFixture {
+        this.position = RIGHT
         return this
     }
 
@@ -94,6 +115,7 @@ internal class TagFixture private constructor(
             .addAttribute(R.attr.tag_type, type.toString())
             .addAttribute(R.attr.textLabel, label)
             .addAttribute(R.attr.tag_size, size.toString())
+            .addAttribute(R.attr.tag_position, position.toString())
             .build()
 
         return Tag(context, attributes)
