@@ -109,6 +109,33 @@ class TagTest {
         assertThat(size).isEqualTo(1)
     }
 
+    @Test
+    fun checksIfTagPositionCenterWasSet() {
+        tag = buildTagCenter()
+
+        var position = tag.getPosition()
+
+        assertThat(position).isEqualTo(0)
+    }
+
+    @Test
+    fun checksIfTagPositionLeftWasSet() {
+        tag = buildTagLeft()
+
+        var position = tag.getPosition()
+
+        assertThat(position).isEqualTo(1)
+    }
+
+    @Test
+    fun checksIfTagPositionRightWasSet() {
+        tag = buildTagRight()
+
+        var position = tag.getPosition()
+
+        assertThat(position).isEqualTo(2)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingPrimaryTagWithoutALabel() {
         tag = TagFixture
@@ -180,4 +207,27 @@ class TagTest {
             .withSizeStandard()
             .build()
     }
+
+    private fun buildTagCenter(): Tag {
+        return TagFixture
+            .aTag()
+            .withPositionCenter()
+            .build()
+    }
+
+    private fun buildTagLeft(): Tag {
+        return TagFixture
+            .aTag()
+            .withPositionLeft()
+            .build()
+    }
+
+    private fun buildTagRight(): Tag {
+        return TagFixture
+            .aTag()
+            .withPositionRight()
+            .build()
+    }
+
+
 }
