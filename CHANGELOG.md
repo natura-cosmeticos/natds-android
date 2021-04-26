@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.9.0](https://github.com/natura-cosmeticos/natds-android/compare/v.5.8.1...v.5.9.0) (2021-04-26)
+
+
+### Features
+
+* add position attribute for tag ([2409bae](https://github.com/natura-cosmeticos/natds-android/commit/2409bae57921681c0cb77658cfc14c37a85b4daf))
+* add size attribute to tag ([8866a5b](https://github.com/natura-cosmeticos/natds-android/commit/8866a5bdb091bf2437bab77498b65961c8393f00))
+* update tag with new colors ([8337861](https://github.com/natura-cosmeticos/natds-android/commit/833786198daa9e7fc13a5596134d547f8c90aae2))
+
 ### [5.8.1](https://github.com/natura-cosmeticos/natds-android/compare/v.5.8.0...v.5.8.1) (2021-04-20)
 
 
