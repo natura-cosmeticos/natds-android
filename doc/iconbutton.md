@@ -9,17 +9,17 @@ This component is available in the following variants:
 With the following attribute status:
 
 * Size:
-    * ✅ `Semi`
+    * ✅ `Semi` (default)
     * ✅ `SemiX`
     * ✅ `Medium`
     
 * Icon color:
-    * ✅ `HighEmphasis`
+    * ✅ `HighEmphasis` (default)
     * ✅ `Primary`
     * ✅ `Light`
     
 * Background style:
-    * ✅ `Inherit`
+    * ✅ `Inherit` (default)
     * ✅ `Float`
     * ✅ `Overlay`
     
@@ -31,14 +31,13 @@ With the following attribute status:
     * ✅ `Enabled`
     * ✅ `Press`
 
-
-Icons are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
-
-### When should I use it?
+## What is it?
 Icon buttons are commonly found in app bars and toolbars.
 
+They are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
+
 ### How to use it?
-Add the Icon Button component in your xml layout file
+Add the Icon Button component in your xml layout file:
 
 ```android
     <com.natura.android.iconButton.IconButton

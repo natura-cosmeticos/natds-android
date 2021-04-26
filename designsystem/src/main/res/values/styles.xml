@@ -426,6 +426,34 @@
         <item name="android:textColor">?colorOnAlert</item>
     </style>
 
+    <style name="Widget.DS.Tag.Secondary" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorSecondary</item>
+        <item name="android:textColor">?colorOnSecondary</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Success" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorSuccess</item>
+        <item name="android:textColor">?colorOnSuccess</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Warning" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorWarning</item>
+        <item name="android:textColor">?colorOnWarning</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Link" parent="Widget.DS.Tag">
+        <item name="colorBackground">?colorLink</item>
+        <item name="android:textColor">?colorOnLink</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Small" parent="Widget.DS.Tag">
+        <item name="customHeight">?sizeSmall</item>
+    </style>
+
+    <style name="Widget.DS.Tag.Standard" parent="Widget.DS.Tag">
+        <item name="customHeight">?sizeStandard</item>
+    </style>
+
     <style name="Widget.DS.Tag">
         <item name="labelAppearance">?textAppearanceCaption</item>
     </style>

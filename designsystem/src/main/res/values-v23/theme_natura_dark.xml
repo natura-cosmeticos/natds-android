@@ -277,6 +277,12 @@
 
         <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
+        <item name="tagSecondary">@style/Widget.DS.Tag.Secondary</item>
+        <item name="tagSuccess">@style/Widget.DS.Tag.Success</item>
+        <item name="tagWarning">@style/Widget.DS.Tag.Warning</item>
+        <item name="tagLink">@style/Widget.DS.Tag.Link</item>
+        <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
+        <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
 
         <item name="logoVertical">@drawable/natura_vertical_dark</item>
         <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
