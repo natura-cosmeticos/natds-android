@@ -26,6 +26,7 @@ class TextFieldTest {
 
     val EMPTY_TEXT = ""
     val NOT_EMPTY_TEXT = "test"
+    val NOT_EMPTY_TEXT_REQUIRED = "test*"
     val ERROR_ICON_CODE = "EA13"
     val SUCCESS_ICON_CODE = "EA15"
 
@@ -105,6 +106,24 @@ class TextFieldTest {
     @Test
     fun setLabel_NoEmptyValue() {
         test_setLabel(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE)
+    }
+
+    @Test
+    fun setLabel_FieldIsRequired() {
+        val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
+
+        textField.label = NOT_EMPTY_TEXT
+        textField.required = true
+        assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT_REQUIRED)
+    }
+
+    @Test
+    fun setLabel_FieldIsNotRequired() {
+        val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
+
+        textField.label = NOT_EMPTY_TEXT
+        textField.required = false
+        assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT)
     }
 
     private fun test_setLabel(value: String?, expectedValue: String, expectedVisibility: Int) {

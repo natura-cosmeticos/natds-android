@@ -111,6 +111,8 @@
             <enum name="success" value="1" />
             <enum name="error" value="2" />
         </attr>
+        <attr name="text_field_required" format="boolean" />
+
     </declare-styleable>
 
     <declare-styleable name="ds_expansion_panel">

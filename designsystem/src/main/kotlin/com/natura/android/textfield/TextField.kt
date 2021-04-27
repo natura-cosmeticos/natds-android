@@ -142,6 +142,12 @@ open class TextField @JvmOverloads constructor(
             inputValue.hint = value
         }
 
+    var required: Boolean = false
+        set(value) {
+            field = value
+            setLabel(label, value)
+        }
+
     var maxLength: Int = 0
         set(value) {
             field = value
@@ -289,6 +295,7 @@ open class TextField @JvmOverloads constructor(
         val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
         val vfooter = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
         val vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
+        val vrequired = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_required, false)
 
         typedArray.recycle()
 
@@ -298,9 +305,12 @@ open class TextField @JvmOverloads constructor(
         maxLength = vmaxLength
         lines = vlines
         isEnabled = venabled
+        required = vrequired
 
         text = vtext
-        label = vlabel
+
+        setLabel(vlabel, vrequired)
+
         footer = vfooter
         icon = vicon
         state = intToState(vstate)
@@ -319,6 +329,15 @@ open class TextField @JvmOverloads constructor(
         } else {
             resetLayoutState()
         }
+    }
+
+    private fun setLabel(label: String?, required: Boolean) {
+        if (required) {
+            this.label = "$label*"
+            return
+        }
+
+        this.label = label
     }
 
     fun setOnIconClickListener(l: OnClickListener?) {
