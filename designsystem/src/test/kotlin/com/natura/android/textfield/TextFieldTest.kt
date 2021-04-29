@@ -368,6 +368,19 @@ class TextFieldTest {
     }
 
     @Test
+    fun checkLabelColorWhenTextfieldIsDisabled() {
+        val footerView = textField.findViewById(R.id.text_field_input_footer) as TextView
+        val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+
+        textField.isEnabled = false
+        textField.state = TextField.State.SUCCESS
+
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
+        assertThat(footerView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS)
+        assertThat(footerIconView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS)
+    }
+
+    @Test
     fun setIsEnabledTrue_ChangeToDefaultColor() {
         textField.isEnabled = true
         assertChildsEnabled(true)
