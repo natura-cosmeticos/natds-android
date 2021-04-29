@@ -111,6 +111,10 @@
             <enum name="success" value="1" />
             <enum name="error" value="2" />
         </attr>
+        <attr  name="text_field_size" format="enum">
+            <enum name="medium" value="0" />
+            <enum name="mediumx" value="1" />
+        </attr>
         <attr name="text_field_required" format="boolean" />
 
     </declare-styleable>

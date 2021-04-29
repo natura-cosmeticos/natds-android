@@ -2,6 +2,7 @@ package com.natura.android.textfield
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.os.Parcel
 import android.os.Parcelable
@@ -18,6 +19,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 import com.natura.android.resources.getColorTokenFromTheme
+import com.natura.android.resources.getDimenFromTheme
 
 @SuppressLint("CustomViewStyleable")
 open class TextField @JvmOverloads constructor(
@@ -25,6 +27,8 @@ open class TextField @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
+
+    private var typedArray: TypedArray
 
     // TODO trocar FontIcon por AppCompatImageView
     enum class State {
@@ -145,7 +149,12 @@ open class TextField @JvmOverloads constructor(
     var required: Boolean = false
         set(value) {
             field = value
-            setLabel(label, value)
+        }
+
+    var size: Int = MEDIUMX
+        set(value) {
+            field = value
+            configureSize()
         }
 
     var maxLength: Int = 0
@@ -189,7 +198,7 @@ open class TextField @JvmOverloads constructor(
     var label: String? = null
         set(value) {
             field = value
-            inputLabel.text = value
+            setTextLabel(value)
             changeVisibilityByValue(inputLabel, value)
         }
 
@@ -241,6 +250,51 @@ open class TextField @JvmOverloads constructor(
             }
         }
 
+    fun setOnIconClickListener(l: OnClickListener?) {
+        inputIcon?.setOnClickListener(l)
+    }
+
+    init {
+        this.let {
+            View.inflate(context, R.layout.ds_text_field_input, it)
+        }
+
+        typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
+
+        getAtributes()
+
+        inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
+        inputIcon.setOnClickListener { onFocusChanged(true) }
+
+        inputBox.setOnClickListener {
+            inputValue.requestFocus()
+        }
+
+        typedArray.recycle()
+    }
+
+    private fun getAtributes() {
+        inputType = typedArray.getInteger(
+            R.styleable.ds_text_field_input_android_inputType,
+            EditorInfo.TYPE_CLASS_TEXT
+        )
+        hint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
+        maxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
+        maxLength = typedArray.getInteger(
+            R.styleable.ds_text_field_input_android_maxLength,
+            Integer.MAX_VALUE
+        )
+        lines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
+        isEnabled = typedArray.getBoolean(R.styleable.ds_text_field_input_android_enabled, true)
+        required = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_required, false)
+        size = typedArray.getInt(R.styleable.ds_text_field_input_text_field_size, MEDIUMX)
+        text = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
+        label = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
+        footer = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
+        icon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
+        state = intToState(typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0))
+    }
+
     private fun resetLayoutState() {
         layoutState = when (state) {
             State.ERROR -> stateLayout.ERROR
@@ -270,59 +324,6 @@ open class TextField @JvmOverloads constructor(
         else -> State.NONE
     }
 
-    init {
-        this.let {
-            View.inflate(context, R.layout.ds_text_field_input, it)
-        }
-
-        val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
-
-        val vinputType = typedArray.getInteger(
-            R.styleable.ds_text_field_input_android_inputType,
-            EditorInfo.TYPE_CLASS_TEXT
-        )
-        val vhint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
-        val vmaxLength = typedArray.getInteger(
-            R.styleable.ds_text_field_input_android_maxLength,
-            Integer.MAX_VALUE
-        )
-        val vmaxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
-        val vlines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
-        val venabled = typedArray.getBoolean(R.styleable.ds_text_field_input_android_enabled, true)
-
-        val vlabel = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
-        val vtext = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
-        val vicon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
-        val vfooter = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
-        val vstate = typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0)
-        val vrequired = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_required, false)
-
-        typedArray.recycle()
-
-        inputType = vinputType
-        hint = vhint
-        maxLines = vmaxLines
-        maxLength = vmaxLength
-        lines = vlines
-        isEnabled = venabled
-        required = vrequired
-
-        text = vtext
-
-        setLabel(vlabel, vrequired)
-
-        footer = vfooter
-        icon = vicon
-        state = intToState(vstate)
-
-        inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
-        inputIcon.setOnClickListener { onFocusChanged(true) }
-
-        inputBox.setOnClickListener {
-            inputValue.requestFocus()
-        }
-    }
-
     private fun onFocusChanged(hasFocus: Boolean) {
         if (hasFocus) {
             layoutState = stateLayout.FOCUSED
@@ -331,17 +332,40 @@ open class TextField @JvmOverloads constructor(
         }
     }
 
-    private fun setLabel(label: String?, required: Boolean) {
-        if (required) {
-            this.label = "$label*"
+    private fun setTextLabel(label: String?) {
+        if (required && !label.isNullOrEmpty()) {
+            inputLabel.text = "$label*"
             return
         }
-
-        this.label = label
+        inputLabel.text = label
     }
 
-    fun setOnIconClickListener(l: OnClickListener?) {
-        inputIcon?.setOnClickListener(l)
+    private fun configureSize() {
+        val textFieldBoxLayoutParams = inputBox.layoutParams
+        when (size) {
+            MEDIUM -> {
+                textFieldBoxLayoutParams.height =
+                    getDimenFromTheme(context, R.attr.sizeMedium).toInt()
+                inputBox.setPadding(
+                    inputBox.paddingLeft,
+                    MEDIUM_PADDING_TOP,
+                    inputBox.paddingRight,
+                    MEDIUM_PADDING_BOTTOM
+                )
+            }
+            else -> {
+                textFieldBoxLayoutParams.height =
+                    getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
+                inputBox.setPadding(
+                    inputBox.paddingLeft,
+                    MEDIUMX_PADDING_TOP,
+                    inputBox.paddingRight,
+                    MEDIUMX_PADDING_BOTTOM
+                )
+            }
+        }
+
+        inputBox.layoutParams = textFieldBoxLayoutParams
     }
 
     override fun onSaveInstanceState(): Parcelable? {
@@ -405,5 +429,14 @@ open class TextField @JvmOverloads constructor(
             children.add(getChildAt(it))
         }
         return children
+    }
+
+    companion object {
+        const val MEDIUM = 0
+        const val MEDIUMX = 1
+        const val MEDIUM_PADDING_TOP = 14
+        const val MEDIUM_PADDING_BOTTOM = 13
+        const val MEDIUMX_PADDING_TOP = 18
+        const val MEDIUMX_PADDING_BOTTOM = 17
     }
 }

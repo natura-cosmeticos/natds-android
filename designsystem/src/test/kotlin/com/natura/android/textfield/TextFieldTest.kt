@@ -112,8 +112,8 @@ class TextFieldTest {
     fun setLabel_FieldIsRequired() {
         val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
 
-        textField.label = NOT_EMPTY_TEXT
         textField.required = true
+        textField.label = NOT_EMPTY_TEXT
         assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT_REQUIRED)
     }
 
@@ -121,8 +121,8 @@ class TextFieldTest {
     fun setLabel_FieldIsNotRequired() {
         val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
 
-        textField.label = NOT_EMPTY_TEXT
         textField.required = false
+        textField.label = NOT_EMPTY_TEXT
         assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT)
     }
 

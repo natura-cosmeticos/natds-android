@@ -19,6 +19,7 @@
         android:id="@+id/text_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lines="5"
         android:hint="Hint"
         app:text_field_label="This is the textfield label. It can take up to two lines, but if the content is longer, the ellipsis symbol will serve to show that the text is not over yet."
         app:text_field_text="Typed text"
@@ -51,6 +52,7 @@
         android:inputType="number"
         android:paddingTop="15dp"
         app:text_field_label="Number field"
+        app:text_field_required="true"
         app:text_field_footer="this field accept only numbers"
         />
 
@@ -61,6 +63,7 @@
         android:inputType="textPassword"
         android:paddingTop="15dp"
         app:text_field_icon="EA37"
+        app:text_field_size="medium"
         app:text_field_label="Password field"
         app:text_field_footer="click on icon to change input type"
         />
