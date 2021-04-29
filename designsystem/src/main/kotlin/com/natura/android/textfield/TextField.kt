@@ -125,6 +125,12 @@ open class TextField @JvmOverloads constructor(
         inputIcon?.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
+
+        state = when (enabled) {
+            false -> State.NONE
+            true -> state
+        }
+
         resetLayoutState()
     }
 
@@ -228,27 +234,33 @@ open class TextField @JvmOverloads constructor(
         set(value) {
             field = value
             resetLayoutState()
-            when (value) {
-                State.ERROR -> {
-                    setFooterIcon(ERROR_ICON, View.VISIBLE)
+            if (isEnabled) {
+                when (value) {
+                    State.ERROR -> {
+                        setFooterIcon(ERROR_ICON, View.VISIBLE)
+                    }
+                    State.SUCCESS -> {
+                        setFooterIcon(SUCCESS_ICON, View.VISIBLE)
+                    }
+                    else -> {
+                        setFooterIcon("", View.GONE)
+                    }
                 }
-                State.SUCCESS -> {
-                    setFooterIcon(SUCCESS_ICON, View.VISIBLE)
-                }
-                else -> {
-                    setFooterIcon("", View.GONE)
-                }
+            } else {
+                setFooterIcon("", View.GONE)
             }
         }
 
     var error: String? = null
         set(value) {
             field = value
-            footer = value
-            state = if (value != null) {
-                State.ERROR
-            } else {
-                State.NONE
+            if (isEnabled) {
+                footer = value
+                state = if (value != null) {
+                    State.ERROR
+                } else {
+                    State.NONE
+                }
             }
         }
 
@@ -298,15 +310,20 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun resetLayoutState() {
-        layoutState = when (state) {
-            State.ERROR -> stateLayout.ERROR
-            State.SUCCESS -> stateLayout.SUCCESS
-            else -> {
-                if (!isEnabled) stateLayout.DISABLED
-                else if (inputValue.isFocused) stateLayout.FOCUSED
-                else if (inputValue.text.isNotEmpty()) stateLayout.FILLED
-                else stateLayout.DEFAULT
+        layoutState = if (isEnabled) {
+            when (state) {
+                State.ERROR -> stateLayout.ERROR
+                State.SUCCESS -> stateLayout.SUCCESS
+                else -> {
+                    when {
+                        inputValue.isFocused -> stateLayout.FOCUSED
+                        inputValue.text.isNotEmpty() -> stateLayout.FILLED
+                        else -> stateLayout.DEFAULT
+                    }
+                }
             }
+        } else {
+            stateLayout.DISABLED
         }
     }
 
