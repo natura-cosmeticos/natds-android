@@ -175,7 +175,9 @@ open class TextField @JvmOverloads constructor(
     var lines: Int = 0
         set(value) {
             field = value
-            inputValue.setLines(value)
+            if (isMultilineType()) {
+                inputValue.setLines(value)
+            }
         }
 
     var text: String? = null
@@ -340,32 +342,43 @@ open class TextField @JvmOverloads constructor(
         inputLabel.text = label
     }
 
-    private fun configureSize() {
-        val textFieldBoxLayoutParams = inputBox.layoutParams
-        when (size) {
-            MEDIUM -> {
-                textFieldBoxLayoutParams.height =
-                    getDimenFromTheme(context, R.attr.sizeMedium).toInt()
-                inputBox.setPadding(
-                    inputBox.paddingLeft,
-                    MEDIUM_PADDING_TOP,
-                    inputBox.paddingRight,
-                    MEDIUM_PADDING_BOTTOM
-                )
-            }
-            else -> {
-                textFieldBoxLayoutParams.height =
-                    getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
-                inputBox.setPadding(
-                    inputBox.paddingLeft,
-                    MEDIUMX_PADDING_TOP,
-                    inputBox.paddingRight,
-                    MEDIUMX_PADDING_BOTTOM
-                )
-            }
+    private fun isMultilineType(): Boolean {
+        if (inputType == MULTILINE_TYPE) {
+            return true
         }
 
-        inputBox.layoutParams = textFieldBoxLayoutParams
+        return false
+    }
+
+    private fun configureSize() {
+        val textFieldBoxLayoutParams = inputBox.layoutParams
+
+        if (!isMultilineType()) {
+            when (size) {
+                MEDIUM -> {
+                    textFieldBoxLayoutParams.height =
+                        getDimenFromTheme(context, R.attr.sizeMedium).toInt()
+                    inputBox.setPadding(
+                        inputBox.paddingLeft,
+                        MEDIUM_PADDING_TOP,
+                        inputBox.paddingRight,
+                        MEDIUM_PADDING_BOTTOM
+                    )
+                }
+                else -> {
+                    textFieldBoxLayoutParams.height =
+                        getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
+                    inputBox.setPadding(
+                        inputBox.paddingLeft,
+                        MEDIUMX_PADDING_TOP,
+                        inputBox.paddingRight,
+                        MEDIUMX_PADDING_BOTTOM
+                    )
+                }
+            }
+
+            inputBox.layoutParams = textFieldBoxLayoutParams
+        }
     }
 
     override fun onSaveInstanceState(): Parcelable? {
@@ -438,5 +451,6 @@ open class TextField @JvmOverloads constructor(
         const val MEDIUM_PADDING_BOTTOM = 13
         const val MEDIUMX_PADDING_TOP = 18
         const val MEDIUMX_PADDING_BOTTOM = 17
+        const val MULTILINE_TYPE = 131073
     }
 }
