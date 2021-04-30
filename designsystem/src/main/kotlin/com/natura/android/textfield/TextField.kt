@@ -43,6 +43,8 @@ open class TextField @JvmOverloads constructor(
         private val colorMediumEmphasis =
             getColorTokenFromTheme(context, R.attr.colorMediumEmphasis)
         private val colorHighEmphasis = getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+        private val colorLowEmphasisOpacityDisabledLow = getColorTokenFromTheme(context, R.attr.colorLowEmphasisOpacityDisabledLow)
+        private val colorHighLightOpacityFull = getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull)
 
         data class LayoutState(
             val borderWidth: Int,
@@ -50,7 +52,8 @@ open class TextField @JvmOverloads constructor(
             val labelColor: Int,
             val textColor: Int,
             val footerColor: Int,
-            val hintColor: Int
+            val hintColor: Int,
+            val backgroundColor: Int
         )
 
         val DEFAULT = LayoutState(
@@ -59,7 +62,8 @@ open class TextField @JvmOverloads constructor(
             colorMediumEmphasis,
             colorHighEmphasis,
             colorMediumEmphasis,
-            colorMediumEmphasis
+            colorMediumEmphasis,
+            colorHighLightOpacityFull
         )
         val FILLED = LayoutState(
             R.dimen.ds_border_tiny,
@@ -67,7 +71,8 @@ open class TextField @JvmOverloads constructor(
             colorMediumEmphasis,
             colorHighEmphasis,
             colorMediumEmphasis,
-            colorMediumEmphasis
+            colorMediumEmphasis,
+            colorHighLightOpacityFull
         )
         val DISABLED = LayoutState(
             R.dimen.ds_border_tiny,
@@ -75,7 +80,8 @@ open class TextField @JvmOverloads constructor(
             colorLowEmphasis,
             colorLowEmphasis,
             colorLowEmphasis,
-            colorLowEmphasis
+            colorLowEmphasis,
+            colorHighLightOpacityFull
         )
         val FOCUSED = LayoutState(
             R.dimen.ds_border_emphasis,
@@ -83,7 +89,8 @@ open class TextField @JvmOverloads constructor(
             colorMediumEmphasis,
             colorHighEmphasis,
             colorMediumEmphasis,
-            colorMediumEmphasis
+            colorMediumEmphasis,
+            colorHighLightOpacityFull
         )
         val ERROR = LayoutState(
             R.dimen.ds_border_emphasis,
@@ -91,7 +98,8 @@ open class TextField @JvmOverloads constructor(
             colorError,
             colorHighEmphasis,
             colorError,
-            colorMediumEmphasis
+            colorMediumEmphasis,
+            colorHighLightOpacityFull
         )
         val SUCCESS = LayoutState(
             R.dimen.ds_border_tiny,
@@ -99,7 +107,18 @@ open class TextField @JvmOverloads constructor(
             colorSuccess,
             colorHighEmphasis,
             colorSuccess,
-            colorMediumEmphasis
+            colorMediumEmphasis,
+            colorHighLightOpacityFull
+        )
+
+        val READ_ONLY = LayoutState(
+            R.dimen.ds_border_tiny,
+            colorLowEmphasis,
+            colorMediumEmphasis,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorMediumEmphasis,
+            colorLowEmphasisOpacityDisabledLow
         )
     }
 
@@ -226,6 +245,7 @@ open class TextField @JvmOverloads constructor(
                 value.borderColor
             )
             footerValue?.setTextColor(value.footerColor)
+            (inputBox.background as GradientDrawable).setColor(value.backgroundColor)
             footerIcon?.setTextColor(value.footerColor)
             inputValue?.setHintTextColor(value.hintColor)
         }
@@ -262,6 +282,13 @@ open class TextField @JvmOverloads constructor(
                     State.NONE
                 }
             }
+        }
+
+    var readOnly: Boolean = false
+        set(value) {
+            field = value
+            configureReadOnly(value)
+            resetLayoutState()
         }
 
     fun setOnIconClickListener(l: OnClickListener?) {
@@ -307,6 +334,7 @@ open class TextField @JvmOverloads constructor(
         footer = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
         icon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
         state = intToState(typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0))
+        readOnly = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_readonly, false)
     }
 
     private fun resetLayoutState() {
@@ -316,6 +344,7 @@ open class TextField @JvmOverloads constructor(
                 State.SUCCESS -> stateLayout.SUCCESS
                 else -> {
                     when {
+                        readOnly -> stateLayout.READ_ONLY
                         inputValue.isFocused -> stateLayout.FOCUSED
                         inputValue.text.isNotEmpty() -> stateLayout.FILLED
                         else -> stateLayout.DEFAULT
@@ -396,6 +425,14 @@ open class TextField @JvmOverloads constructor(
 
             inputBox.layoutParams = textFieldBoxLayoutParams
         }
+    }
+
+    private fun configureReadOnly(enabled: Boolean) {
+        if (enabled) {
+            editTextView.keyListener = null
+        }
+
+        editTextView.setTextIsSelectable(enabled)
     }
 
     override fun onSaveInstanceState(): Parcelable? {

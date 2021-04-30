@@ -32,6 +32,8 @@
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
         <item name="colorHighlightOpacity05">#3D000000</item>
         <item name="colorHighlightOpacityMediumHigh">#8F000000</item>
+        <item name="colorLowEmphasisOpacityDisabledLow">#3DBBBBBB</item>
+        <item name="colorHighLightOpacityFull">#FFFFFFFF</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>

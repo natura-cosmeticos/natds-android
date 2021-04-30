@@ -116,6 +116,7 @@
             <enum name="mediumx" value="1" />
         </attr>
         <attr name="text_field_required" format="boolean" />
+        <attr name="text_field_readonly" format="boolean" />
 
     </declare-styleable>
 
