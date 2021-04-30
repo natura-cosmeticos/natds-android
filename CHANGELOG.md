@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.5.9.0...v.6.0.0) (2021-04-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* Because of the color change in brand avon, there was a need to change apps.
+
+### Bug Fixes
+
+* updates color tokens from Avon theme ([c9f792f](https://github.com/natura-cosmeticos/natds-android/commit/c9f792f359a59226d9229e0fbbf81e993c22ba61))
+
 ## [5.9.0](https://github.com/natura-cosmeticos/natds-android/compare/v.5.8.1...v.5.9.0) (2021-04-26)
 
 
