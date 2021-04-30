@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.activity_radiobutton.*
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.lang.String
 
 @RunWith(AndroidJUnit4::class)
 class RadioButtonActivityTest {
@@ -57,8 +58,10 @@ class RadioButtonActivityTest {
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
+            val hexColor = String.format("#%06X", 0xFFFFFF and -2228091)
+
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#DE0085"), colorSelected)
+            assertEquals(Color.parseColor("#7F28C4"), colorSelected)
         }
     }
 
@@ -73,7 +76,7 @@ class RadioButtonActivityTest {
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#E9E9E9"), colorSelected)
+            assertEquals(Color.parseColor("#E2197C"), colorSelected)
         }
     }
 
