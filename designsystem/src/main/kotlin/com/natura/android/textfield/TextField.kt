@@ -120,6 +120,16 @@ open class TextField @JvmOverloads constructor(
             colorMediumEmphasis,
             colorLowEmphasisOpacityDisabledLow
         )
+
+        val READ_ONLY_FOCUSED = LayoutState(
+            R.dimen.ds_border_emphasis,
+            colorPrimary,
+            colorMediumEmphasis,
+            colorHighEmphasis,
+            colorMediumEmphasis,
+            colorMediumEmphasis,
+            colorLowEmphasisOpacityDisabledLow
+        )
     }
 
     var stateLayout = LayoutStates(context)
@@ -374,7 +384,10 @@ open class TextField @JvmOverloads constructor(
 
     private fun onFocusChanged(hasFocus: Boolean) {
         if (hasFocus) {
-            layoutState = stateLayout.FOCUSED
+            layoutState = when (readOnly) {
+                true -> stateLayout.READ_ONLY_FOCUSED
+                false -> stateLayout.FOCUSED
+            }
         } else {
             resetLayoutState()
         }

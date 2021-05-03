@@ -21,10 +21,12 @@ class TextFieldActivity : AppCompatActivity() {
         val inputProgrammatically = findViewById<View>(R.id.input_text_programmatically)
         inputProgrammatically.setOnClickListener {
             textItem.text = "text added programmatically"
+            textItem.clearFocus()
         }
         val clearProgrammatically = findViewById<View>(R.id.clear_text_programmatically)
         clearProgrammatically.setOnClickListener {
             textItem.text = ""
+            textItem.clearFocus()
         }
 
         val clickable = findViewById<TextField>(R.id.clickable_item)
