@@ -63,7 +63,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:paddingTop="15dp"
-        app:text_field_icon="EA37"
+        app:text_field_icon="outlined-action-visibility"
         app:text_field_size="medium"
         app:text_field_label="Password field"
         app:text_field_footer="click on icon to change input type"
@@ -94,7 +94,7 @@
         android:paddingTop="15dp"
         app:text_field_label="Text field with icon"
         app:text_field_text="Typed text"
-        app:text_field_icon="EA70"
+        app:text_field_icon="outlined_action_check"
         app:text_field_footer="Click on icon to clean the text"
         />
 
@@ -104,7 +104,7 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:paddingTop="15dp"
-        app:text_field_icon="EA06"
+        app:text_field_icon="outlined_action_check"
         app:text_field_label="Text field"
         app:text_field_text="Typed text"
         app:text_field_footer="this item is disabled"

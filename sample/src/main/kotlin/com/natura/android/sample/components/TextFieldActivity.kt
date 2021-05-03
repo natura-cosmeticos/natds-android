@@ -73,11 +73,11 @@ class TextFieldActivity : AppCompatActivity() {
             if (passwordMode) {
                 password.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                password.icon = "EA38"
+                password.icon = "outlined-action-visibility"
             } else {
                 password.inputType =
                     InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                password.icon = "EA37"
+                password.icon = "outlined-action-visibilityoff"
             }
             passwordMode = !passwordMode
         })

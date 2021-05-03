@@ -18,6 +18,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
+import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 
@@ -141,7 +142,7 @@ open class TextField @JvmOverloads constructor(
 
     private val inputBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_box) }
     private val inputValue by lazy { findViewById<EditText>(R.id.text_field_input_value) }
-    private val inputIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_icon) }
+    private val inputIconButton by lazy { findViewById<IconButton>(R.id.text_field_input_icon) }
 
     private val footerBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
@@ -151,7 +152,7 @@ open class TextField @JvmOverloads constructor(
         super.setEnabled(enabled)
         inputLabel?.isEnabled = enabled
         inputValue?.isEnabled = enabled
-        inputIcon?.isEnabled = enabled
+        inputIconButton?.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
 
@@ -228,8 +229,8 @@ open class TextField @JvmOverloads constructor(
     var icon: String? = null
         set(value) {
             field = value
-            inputIcon.text = value
-            changeVisibilityByValue(inputIcon, value)
+            inputIconButton.setIcon(icon)
+            changeVisibilityByValue(inputIconButton, value)
         }
 
     var label: String? = null
@@ -302,7 +303,7 @@ open class TextField @JvmOverloads constructor(
         }
 
     fun setOnIconClickListener(l: OnClickListener?) {
-        inputIcon?.setOnClickListener(l)
+        inputIconButton?.setOnClickListener(l)
     }
 
     init {
@@ -315,7 +316,7 @@ open class TextField @JvmOverloads constructor(
         getAtributes()
 
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
-        inputIcon.setOnClickListener { onFocusChanged(true) }
+        inputIconButton.setOnClickListener { onFocusChanged(true) }
 
         inputBox.setOnClickListener {
             inputValue.requestFocus()
