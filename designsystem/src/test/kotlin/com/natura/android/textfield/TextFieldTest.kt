@@ -48,7 +48,7 @@ class TextFieldTest {
         assertThat(textField.text).isEmpty()
         assertThat(textField.editTextView).isNotNull()
         assertThat(textField.footer).isNull()
-        assertThat(textField.icon).isNull()
+        assertThat(textField.iconButton).isNull()
         assertThat(textField.state).isEqualTo(TextField.State.NONE)
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
         assertThat(textField.inputType).isEqualTo(InputType.TYPE_CLASS_TEXT)
@@ -152,7 +152,7 @@ class TextFieldTest {
     private fun test_setIcon(value: String?, expectedValue: String, expectedVisibility: Int) {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
 
-        textField.icon = value
+        textField.iconButton = value
         assertThat(iconView.text.toString()).isEqualTo(expectedValue)
         assertThat(iconView.visibility).isEqualTo(expectedVisibility)
     }

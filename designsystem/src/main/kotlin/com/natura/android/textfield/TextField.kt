@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -31,7 +32,6 @@ open class TextField @JvmOverloads constructor(
 
     private var typedArray: TypedArray
 
-    // TODO trocar FontIcon por AppCompatImageView
     enum class State {
         NONE, ERROR, SUCCESS
     }
@@ -143,6 +143,7 @@ open class TextField @JvmOverloads constructor(
     private val inputBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_box) }
     private val inputValue by lazy { findViewById<EditText>(R.id.text_field_input_value) }
     private val inputIconButton by lazy { findViewById<IconButton>(R.id.text_field_input_icon) }
+    private val inputImage by lazy { findViewById<ImageView>(R.id.text_field_input_image) }
 
     private val footerBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
@@ -153,6 +154,7 @@ open class TextField @JvmOverloads constructor(
         inputLabel?.isEnabled = enabled
         inputValue?.isEnabled = enabled
         inputIconButton?.isEnabled = enabled
+        inputImage?.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
 
@@ -226,11 +228,22 @@ open class TextField @JvmOverloads constructor(
             return inputValue.text.toString()
         }
 
-    var icon: String? = null
+    var iconButton: String? = null
         set(value) {
             field = value
-            inputIconButton.setIcon(icon)
+            changeVisibility(inputImage, false)
+            inputIconButton.setIcon(iconButton)
             changeVisibilityByValue(inputIconButton, value)
+        }
+
+    var image: Int = 0
+        set(value) {
+            field = value
+            if (value != 0) {
+                changeVisibility(inputIconButton, false)
+                inputImage.setImageResource(value)
+                inputImage.visibility = View.VISIBLE
+            }
         }
 
     var label: String? = null
@@ -343,7 +356,8 @@ open class TextField @JvmOverloads constructor(
         text = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
         label = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
         footer = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
-        icon = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
+        iconButton = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
+        image = typedArray.getResourceId(R.styleable.ds_text_field_input_text_field_image, 0)
         state = intToState(typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0))
         readOnly = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_readonly, false)
     }
@@ -375,6 +389,10 @@ open class TextField @JvmOverloads constructor(
     private fun changeVisibilityByValue(view: View, value: String?) {
         if (value == null || value.isEmpty()) view.visibility = View.GONE
         else view.visibility = View.VISIBLE
+    }
+
+    private fun changeVisibility(view: View, visible: Boolean) {
+        view.visibility = when (visible) { true -> View.VISIBLE false -> View.GONE }
     }
 
     private fun intToState(vstate: Int) = when (vstate) {

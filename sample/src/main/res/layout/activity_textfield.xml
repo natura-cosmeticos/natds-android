@@ -95,6 +95,7 @@
         app:text_field_label="Text field with icon"
         app:text_field_text="Typed text"
         app:text_field_icon="outlined_action_check"
+        app:text_field_image="?logoVertical"
         app:text_field_footer="Click on icon to clean the text"
         />
 
