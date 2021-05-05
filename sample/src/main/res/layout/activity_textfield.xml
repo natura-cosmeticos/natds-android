@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".components.TextFieldActivity">
 
     <LinearLayout
@@ -15,131 +14,169 @@
         android:orientation="vertical"
         android:padding="15dp">
 
-    <com.natura.android.textfield.TextField
-        android:id="@+id/text_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="5"
-        android:hint="Hint"
-        app:text_field_readonly="true"
-        app:text_field_label="This is the textfield label. It can take up to two lines, but if the content is longer, the ellipsis symbol will serve to show that the text is not over yet."
-        app:text_field_text="Typed text"
-        app:text_field_footer="this field accept any text"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/text_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type some text"
+            app:text_field_label="Text" />
 
-    <TextView
-        android:paddingTop="5dp"
-        android:id="@+id/input_text_programmatically"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="click here to insert text programmatically in text field"
-        android:textColor="@color/colorBrdNatRed"
-        android:clickable="true"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/name_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your name"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Name" />
 
-    <TextView
-        android:paddingTop="5dp"
-        android:id="@+id/clear_text_programmatically"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="click here to clear text programmatically in text field"
-        android:textColor="@color/colorBrdNatRed"
-        android:clickable="true"
-        />
+        <com.natura.android.textfield.TextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type numbers"
+            android:inputType="number"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Number" />
 
-    <com.natura.android.textfield.TextField
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:paddingTop="15dp"
-        app:text_field_label="Number field"
-        app:text_field_required="true"
-        app:text_field_footer="this field accept only numbers"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/password_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your password"
+            android:inputType="textPassword"
+            android:paddingTop="?spacingSmall"
+            app:text_field_icon="outlined-action-visibility"
+            app:text_field_label="Password" />
 
-    <com.natura.android.textfield.TextField
-        android:id="@+id/password_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:paddingTop="15dp"
-        app:text_field_icon="outlined-action-visibility"
-        app:text_field_size="medium"
-        app:text_field_label="Password field"
-        app:text_field_footer="click on icon to change input type"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/password_number_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type your password (only numbers)"
+            android:inputType="numberPassword"
+            android:paddingTop="?spacingSmall"
+            app:text_field_icon="outlined-action-visibility"
+            app:text_field_label="Password" />
 
-    <com.natura.android.textfield.TextField
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:hint="this field has no label and no detail footer"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/error_short_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input with error"
+            android:paddingTop="?spacingSmall"
+            app:text_field_footer="Opss...This input has an error!"
+            app:text_field_label="Error"
+            app:text_field_state="error" />
 
-    <com.natura.android.textfield.TextField
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:lines="3"
-        android:paddingTop="15dp"
-        android:maxLength="10"
-        android:inputType="textMultiLine"
-        app:text_field_label="Text field with 3 lines"
-        app:text_field_footer="This field accepts only 10 characters, including line breaks"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/error_long_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input with error"
+            android:paddingTop="?spacingSmall"
+            app:text_field_footer="Opss...This input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
+            app:text_field_label="Error"
+            app:text_field_state="error" />
 
-    <com.natura.android.textfield.TextField
-        android:id="@+id/clickable_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        app:text_field_label="Text field with icon"
-        app:text_field_text="Typed text"
-        app:text_field_icon="outlined_action_check"
-        app:text_field_image="?logoVertical"
-        app:text_field_footer="Click on icon to clean the text"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/helper_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input with helper"
+            android:paddingTop="?spacingSmall"
+            app:text_field_footer="This input has a helper text."
+            app:text_field_label="Helper" />
 
-    <com.natura.android.textfield.TextField
-        android:id="@+id/mutable_item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:paddingTop="15dp"
-        app:text_field_icon="outlined_action_check"
-        app:text_field_label="Text field"
-        app:text_field_text="Typed text"
-        app:text_field_footer="this item is disabled"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/medium_size_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="A text field with height size medium"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Medium Size"
+            app:text_field_size="medium" />
 
-     <TextView
-         android:paddingTop="5dp"
-         android:id="@+id/switch_item_disabled"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="click here to enable/disable"
-         android:textColor="@color/colorBrdNatRed"
-         android:clickable="true"
-         />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/mediumx_size_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="A text field with height size mediumX"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="MediumX Size (Default)"
+            app:text_field_size="mediumx" />
 
-    <TextView
-        android:paddingTop="5dp"
-        android:id="@+id/switch_item_succeed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="click here to switch success"
-        android:textColor="@color/colorBrdNatRed"
-        android:clickable="true"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/success_short_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input with success"
+            android:paddingTop="?spacingSmall"
+            app:text_field_footer="Success message validating what's typed."
+            app:text_field_label="Success"
+            app:text_field_state="success" />
 
-    <TextView
-        android:paddingTop="5dp"
-        android:id="@+id/switch_item_errored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="click here to switch error"
-        android:textColor="@color/colorBrdNatRed"
-        android:clickable="true"
-        />
+        <com.natura.android.textfield.TextField
+            android:id="@+id/success_long_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input with success"
+            android:paddingTop="?spacingSmall"
+            app:text_field_footer="A very, very long success message validating what's typed and giving more info."
+            app:text_field_label="Success"
+            app:text_field_state="success" />
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/required_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="This text field is required"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Required"
+            app:text_field_required="true" />
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/disabled_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Disabled input"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Disabled" />
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/read_only_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input is read-only"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Read only"
+            app:text_field_readonly="true"/>
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/filled_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Filled text field"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Filled"
+            app:text_field_text="Filled text field" />
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/action_icon_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Icon has action on touch"
+            android:paddingTop="?spacingSmall"
+            app:text_field_icon="outlined_default_mockup"
+            app:text_field_label="Action with icon" />
+
+        <com.natura.android.textfield.TextField
+            android:id="@+id/action_image_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Icon has action on touch"
+            android:paddingTop="?spacingSmall"
+            app:text_field_image="@drawable/logo_placeholder"
+            app:text_field_label="Action with image" />
 
     </LinearLayout>
 
