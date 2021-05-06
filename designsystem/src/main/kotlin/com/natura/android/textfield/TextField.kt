@@ -143,6 +143,7 @@ open class TextField @JvmOverloads constructor(
     private val inputBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_box) }
     private val inputValue by lazy { findViewById<EditText>(R.id.text_field_input_value) }
     private val inputIconButton by lazy { findViewById<IconButton>(R.id.text_field_input_icon) }
+    private val inputContainerMain by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_main) }
     private val inputImage by lazy { findViewById<ImageView>(R.id.text_field_input_image) }
 
     private val footerBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_footer_box) }
@@ -331,7 +332,7 @@ open class TextField @JvmOverloads constructor(
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
         inputIconButton.setOnClickListener { onFocusChanged(true) }
 
-        inputBox.setOnClickListener {
+        inputContainerMain.setOnClickListener {
             inputValue.requestFocus()
         }
 
@@ -370,7 +371,7 @@ open class TextField @JvmOverloads constructor(
                 else -> {
                     when {
                         readOnly -> stateLayout.READ_ONLY
-                        inputValue.isFocused -> stateLayout.FOCUSED
+                        inputContainerMain.isFocused -> stateLayout.FOCUSED
                         inputValue.text.isNotEmpty() -> stateLayout.FILLED
                         else -> stateLayout.DEFAULT
                     }

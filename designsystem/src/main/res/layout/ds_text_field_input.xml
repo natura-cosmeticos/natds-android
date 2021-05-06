@@ -5,6 +5,7 @@
     android:id="@+id/text_field_input_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:clickable="true"
     android:focusable="true"
     android:orientation="vertical"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
@@ -26,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:background="@drawable/ds_shape_rounded_corners"
-        android:clickable="true"
         android:orientation="horizontal"
         android:paddingStart="@dimen/ds_spacing_border_left"
         android:paddingTop="@dimen/ds_spacing_border_top"
@@ -34,8 +34,7 @@
         android:paddingBottom="@dimen/ds_spacing_border_bottom"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_field_input_label"
-        android:focusable="true">
+        app:layout_constraintTop_toBottomOf="@id/text_field_input_label">
 
         <EditText
             android:id="@+id/text_field_input_value"
@@ -52,10 +51,10 @@
             android:id="@+id/text_field_input_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="gone"
             android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
             android:layout_marginEnd="?spacingSmall"
+            android:visibility="gone"
             app:buttonColor="defaultColor"
             app:iconName="outlined_default_mockup"
             app:sizeButton="semi"
@@ -64,11 +63,11 @@
         <ImageView
             android:id="@+id/text_field_input_image"
             android:layout_width="wrap_content"
-            android:adjustViewBounds="true"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center"
             android:layout_marginEnd="?spacingSmall"
+            android:adjustViewBounds="true"
             android:visibility="gone" />
     </LinearLayout>
 
