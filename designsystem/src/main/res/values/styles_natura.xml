@@ -187,13 +187,13 @@
 
     <style name="TextAppearence.Natura.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/text_color_secondary_selector</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_medium</item>
         <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
     </style>
 
     <style name="TextAppearence.Natura.EditText" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">@dimen/ds_text_default_size</item>
+        <item name="android:textSize">@dimen/ds_size_body1</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
         <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
@@ -201,8 +201,8 @@
     </style>
 
     <style name="TextAppearence.Natura.Footer" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/ds_text_footer_size</item>
-        <item name="android:textColor">@color/text_color_secondary_selector</item>
+        <item name="android:textSize">@dimen/ds_size_caption</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 

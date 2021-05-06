@@ -146,7 +146,7 @@ open class TextField @JvmOverloads constructor(
     private val inputContainerMain by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_main) }
     private val inputImage by lazy { findViewById<ImageView>(R.id.text_field_input_image) }
 
-    private val footerBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_footer_box) }
+    private val footerBox by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
     private val footerIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_footer_icon) }
 
