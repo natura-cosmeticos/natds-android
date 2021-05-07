@@ -13,22 +13,32 @@ import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
 import com.natura.android.icon.toIcon
+import com.natura.android.iconButton.IconButton
+import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
+import org.robolectric.Shadows
 import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
 class TextFieldTest {
 
     val activityController = Robolectric.buildActivity(Activity::class.java)
-    val textField = TextField(activityController.get())
+    lateinit var textField: TextField
 
     val EMPTY_TEXT = ""
     val NOT_EMPTY_TEXT = "test"
     val NOT_EMPTY_TEXT_REQUIRED = "test*"
     val ERROR_ICON_CODE = "EA13"
     val SUCCESS_ICON_CODE = "EA15"
+    val MULTILINE_TYPE = 131073
+
+    @Before
+    fun teste() {
+        activityController.get().setTheme(R.style.Theme_Natura_Light)
+        textField = TextField(activityController.get())
+    }
 
     @Test
     fun basicLayout() {
@@ -136,25 +146,32 @@ class TextFieldTest {
 
     @Test
     fun setIcon_NullValue() {
-        test_setIcon(null, EMPTY_TEXT, View.GONE)
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
+
+        textField.iconButton = null
+
+        assertThat(iconView.visibility).isEqualTo(View.GONE)
     }
 
     @Test
     fun setIcon_EmptyValue() {
-        test_setIcon(EMPTY_TEXT, EMPTY_TEXT, View.GONE)
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
+
+        textField.iconButton = ""
+
+        assertThat(iconView.visibility).isEqualTo(View.GONE)
     }
 
     @Test
     fun setIcon_NoEmptyValue() {
-        test_setIcon(ERROR_ICON_CODE, ERROR_ICON_CODE.toIcon(), View.VISIBLE)
-    }
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
-    private fun test_setIcon(value: String?, expectedValue: String, expectedVisibility: Int) {
-        val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
+        textField.iconButton = "outlined-default-mockup"
 
-        textField.iconButton = value
-        assertThat(iconView.text.toString()).isEqualTo(expectedValue)
-        assertThat(iconView.visibility).isEqualTo(expectedVisibility)
+        val iconShadow = Shadows.shadowOf(iconView.getIcon().drawable)
+
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        assertThat(iconView.visibility).isEqualTo(View.VISIBLE)
     }
 
     @Test
@@ -276,6 +293,7 @@ class TextFieldTest {
         val expectedValue = 5
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
+        textField.inputType = MULTILINE_TYPE
         textField.lines = expectedValue
         assertThat(textView.maxLines).isEqualTo(expectedValue)
         assertThat(textView.minLines).isEqualTo(expectedValue)
@@ -286,6 +304,7 @@ class TextFieldTest {
         val expectedValue = 5
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
+        textField.lines = expectedValue
         textField.maxLines = expectedValue
         assertThat(textView.maxLines).isEqualTo(expectedValue)
     }
@@ -338,7 +357,7 @@ class TextFieldTest {
 
     @Test
     fun onClickIcon_CallListener() {
-        val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
         var clicked = false
 
         textField.setOnIconClickListener {
@@ -350,7 +369,7 @@ class TextFieldTest {
 
     @Test
     fun onClickIcon_ChangeToFocusColor() {
-        val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
         textField.isEnabled = true
         iconView.performClick()
@@ -376,8 +395,8 @@ class TextFieldTest {
         textField.state = TextField.State.SUCCESS
 
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
-        assertThat(footerView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS)
-        assertThat(footerIconView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS)
+        assertThat(footerView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
+        assertThat(footerIconView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
     }
 
     @Test
@@ -387,23 +406,10 @@ class TextFieldTest {
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
     }
 
-    private fun assertChildsEnabled(enabled: Boolean) {
-        val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
-        val textView = textField.findViewById(R.id.text_field_input_value) as EditText
-        val iconView = textField.findViewById(R.id.text_field_input_icon) as FontIcon
-        val footerView = textField.findViewById(R.id.text_field_input_footer) as TextView
-        val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
-        assertThat(labelView.isEnabled).isEqualTo(enabled)
-        assertThat(textView.isEnabled).isEqualTo(enabled)
-        assertThat(iconView.isEnabled).isEqualTo(enabled)
-        assertThat(footerView.isEnabled).isEqualTo(enabled)
-        assertThat(footerIconView.isEnabled).isEqualTo(enabled)
-    }
-
     @Test
     fun testFocusWhenBoxIsClicked() {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
-        val textBoxView = textField.findViewById(R.id.text_field_input_box) as View
+        val textBoxView = textField.findViewById(R.id.text_field_input_main) as View
 
         textBoxView.callOnClick()
         assertThat(textView.isFocused).isTrue()
@@ -413,12 +419,25 @@ class TextFieldTest {
     @Test
     fun testNoFocusWhenBoxIsClickedButIsDisabled() {
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
-        val textBoxView = textField.findViewById(R.id.text_field_input_box) as View
+        val textBoxView = textField.findViewById(R.id.text_field_input_main) as View
         textField.isEnabled = false
 
         textBoxView.callOnClick()
         assertThat(textView.isFocused).isFalse()
 
         textField.isEnabled = true
+    }
+
+    private fun assertChildsEnabled(enabled: Boolean) {
+        val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
+        val textView = textField.findViewById(R.id.text_field_input_value) as EditText
+        val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
+        val footerView = textField.findViewById(R.id.text_field_input_footer) as TextView
+        val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+        assertThat(labelView.isEnabled).isEqualTo(enabled)
+        assertThat(textView.isEnabled).isEqualTo(enabled)
+        assertThat(iconView.isEnabled).isEqualTo(enabled)
+        assertThat(footerView.isEnabled).isEqualTo(enabled)
+        assertThat(footerIconView.isEnabled).isEqualTo(enabled)
     }
 }

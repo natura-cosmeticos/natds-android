@@ -12,6 +12,7 @@ import android.util.SparseArray
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -44,8 +45,10 @@ open class TextField @JvmOverloads constructor(
         private val colorMediumEmphasis =
             getColorTokenFromTheme(context, R.attr.colorMediumEmphasis)
         private val colorHighEmphasis = getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-        private val colorLowEmphasisOpacityDisabledLow = getColorTokenFromTheme(context, R.attr.colorLowEmphasisOpacityDisabledLow)
-        private val colorHighLightOpacityFull = getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull)
+        private val colorLowEmphasisOpacityDisabledLow =
+            getColorTokenFromTheme(context, R.attr.colorLowEmphasisOpacityDisabledLow)
+        private val colorHighLightOpacityFull =
+            getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull)
 
         data class LayoutState(
             val borderWidth: Int,
@@ -158,6 +161,7 @@ open class TextField @JvmOverloads constructor(
         inputImage?.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
+        inputContainerMain?.isEnabled = enabled
 
         state = when (enabled) {
             false -> State.NONE
@@ -334,6 +338,9 @@ open class TextField @JvmOverloads constructor(
 
         inputContainerMain.setOnClickListener {
             inputValue.requestFocus()
+            if (!readOnly) {
+                openKeyboard()
+            }
         }
 
         typedArray.recycle()
@@ -393,7 +400,10 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun changeVisibility(view: View, visible: Boolean) {
-        view.visibility = when (visible) { true -> View.VISIBLE false -> View.GONE }
+        view.visibility = when (visible) {
+            true -> View.VISIBLE
+            false -> View.GONE
+        }
     }
 
     private fun intToState(vstate: Int) = when (vstate) {
@@ -408,6 +418,7 @@ open class TextField @JvmOverloads constructor(
                 true -> stateLayout.READ_ONLY_FOCUSED
                 false -> stateLayout.FOCUSED
             }
+            hideKeyboard()
         } else {
             resetLayoutState()
         }
@@ -529,6 +540,16 @@ open class TextField @JvmOverloads constructor(
             children.add(getChildAt(it))
         }
         return children
+    }
+
+    private fun openKeyboard() {
+        (this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager)
+            .showSoftInput(inputValue, InputMethodManager.SHOW_IMPLICIT)
+    }
+
+    private fun hideKeyboard() {
+        val inputMethodManager = this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(inputValue.windowToken, 0)
     }
 
     companion object {
