@@ -324,6 +324,10 @@ open class TextField @JvmOverloads constructor(
         inputIconButton?.setOnClickListener(l)
     }
 
+    fun setOnImageClickListener(l: OnClickListener?) {
+        inputImage?.setOnClickListener(l)
+    }
+
     init {
         this.let {
             View.inflate(context, R.layout.ds_text_field_input, it)
@@ -335,6 +339,7 @@ open class TextField @JvmOverloads constructor(
 
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
         inputIconButton.setOnClickListener { onFocusChanged(true) }
+        inputImage.setOnClickListener { onFocusChanged(true) }
 
         inputContainerMain.setOnClickListener {
             inputValue.requestFocus()

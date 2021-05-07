@@ -6,6 +6,7 @@ import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -35,7 +36,7 @@ class TextFieldTest {
     val MULTILINE_TYPE = 131073
 
     @Before
-    fun teste() {
+    fun setup() {
         activityController.get().setTheme(R.style.Theme_Natura_Light)
         textField = TextField(activityController.get())
     }
@@ -59,6 +60,7 @@ class TextFieldTest {
         assertThat(textField.editTextView).isNotNull()
         assertThat(textField.footer).isNull()
         assertThat(textField.iconButton).isNull()
+        assertThat(textField.image).isNotNull()
         assertThat(textField.state).isEqualTo(TextField.State.NONE)
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
         assertThat(textField.inputType).isEqualTo(InputType.TYPE_CLASS_TEXT)
@@ -145,7 +147,7 @@ class TextFieldTest {
     }
 
     @Test
-    fun setIcon_NullValue() {
+    fun checkIconButtonVisibilityIfAttributeIsNull() {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
         textField.iconButton = null
@@ -154,7 +156,7 @@ class TextFieldTest {
     }
 
     @Test
-    fun setIcon_EmptyValue() {
+    fun checkIconButtonVisibilityIfAttributeIsEmpty() {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
         textField.iconButton = ""
@@ -163,7 +165,7 @@ class TextFieldTest {
     }
 
     @Test
-    fun setIcon_NoEmptyValue() {
+    fun checkIconButtonVisibilityIfAttributeIsSet() {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
         textField.iconButton = "outlined-default-mockup"
@@ -172,6 +174,27 @@ class TextFieldTest {
 
         assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
         assertThat(iconView.visibility).isEqualTo(View.VISIBLE)
+    }
+
+    @Test
+    fun checkImageVisibilityIfAttributeIsNull() {
+        val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
+
+        textField.image = 0
+
+        assertThat(imageView.visibility).isEqualTo(View.GONE)
+    }
+
+    @Test
+    fun checkImageVisibilityIfAttributeIsSet() {
+        val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
+
+        textField.image = R.drawable.logo_placeholder
+
+        val imageShadow = Shadows.shadowOf(imageView.drawable)
+
+        assertThat(imageShadow.createdFromResId).isEqualTo(R.drawable.logo_placeholder)
+        assertThat(imageView.visibility).isEqualTo(View.VISIBLE)
     }
 
     @Test
@@ -368,11 +391,32 @@ class TextFieldTest {
     }
 
     @Test
+    fun onClickImage_CallListener() {
+        val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
+        var clicked = false
+
+        textField.setOnImageClickListener() {
+            clicked = true
+        }
+        imageView.performClick()
+        assertThat(clicked).isTrue()
+    }
+
+    @Test
     fun onClickIcon_ChangeToFocusColor() {
         val iconView = textField.findViewById(R.id.text_field_input_icon) as IconButton
 
         textField.isEnabled = true
         iconView.performClick()
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.FOCUSED)
+    }
+
+    @Test
+    fun onClickImage_ChangeToFocusColor() {
+        val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
+
+        textField.isEnabled = true
+        imageView.performClick()
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.FOCUSED)
     }
 
@@ -384,6 +428,12 @@ class TextFieldTest {
         assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
 
         textField.isEnabled = true
+    }
+
+    @Test
+    fun checkLabelColorWhenTextfieldIsReadOnly() {
+        textField.readOnly = true
+        assertThat(textField.layoutState).isEqualTo(textField.stateLayout.READ_ONLY)
     }
 
     @Test

@@ -63,6 +63,8 @@
         <ImageView
             android:id="@+id/text_field_input_image"
             android:layout_width="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingTiny"
             android:layout_alignParentEnd="true"
