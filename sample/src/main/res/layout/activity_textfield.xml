@@ -32,6 +32,15 @@
         <com.natura.android.textfield.TextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:lines="3"
+            android:hint="Input some text (Multi line with 3 lines)"
+            android:inputType="textMultiLine"
+            android:paddingTop="?spacingSmall"
+            app:text_field_label="Multi-line" />
+
+        <com.natura.android.textfield.TextField
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Type numbers"
             android:inputType="number"
             android:paddingTop="?spacingSmall"
