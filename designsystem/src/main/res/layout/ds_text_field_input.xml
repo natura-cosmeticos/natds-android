@@ -30,7 +30,7 @@
         android:orientation="horizontal"
         android:paddingStart="@dimen/ds_spacing_border_left"
         android:paddingTop="@dimen/ds_spacing_border_top"
-        android:paddingEnd="@dimen/ds_spacing_none"
+        android:paddingEnd="@dimen/ds_spacing_border_right"
         android:paddingBottom="@dimen/ds_spacing_border_bottom"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"

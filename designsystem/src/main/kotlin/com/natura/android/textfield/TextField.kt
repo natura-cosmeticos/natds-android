@@ -236,18 +236,20 @@ open class TextField @JvmOverloads constructor(
     var iconButton: String? = null
         set(value) {
             field = value
-            changeVisibility(inputImage, false)
+            hideActionComponent(inputImage, value)
             inputIconButton.setIcon(iconButton)
             changeVisibilityByValue(inputIconButton, value)
+            removePaddingRight(value)
         }
 
     var image: Int = 0
         set(value) {
             field = value
             if (value != 0) {
-                changeVisibility(inputIconButton, false)
+                hideActionComponent(inputIconButton, value.toString())
                 inputImage.setImageResource(value)
                 inputImage.visibility = View.VISIBLE
+                removePaddingRight(value.toString())
             }
         }
 
@@ -400,14 +402,16 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun changeVisibilityByValue(view: View, value: String?) {
-        if (value == null || value.isEmpty()) view.visibility = View.GONE
-        else view.visibility = View.VISIBLE
+        if (value == null || value.isEmpty()) {
+            view.visibility = View.GONE
+        } else {
+            view.visibility = View.VISIBLE
+        }
     }
 
-    private fun changeVisibility(view: View, visible: Boolean) {
-        view.visibility = when (visible) {
-            true -> View.VISIBLE
-            false -> View.GONE
+    private fun hideActionComponent(view: View, value: String?) {
+        if (value != null && value.isNotEmpty()) {
+            view.visibility = View.GONE
         }
     }
 
@@ -553,8 +557,20 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun hideKeyboard() {
-        val inputMethodManager = this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val inputMethodManager =
+            this.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(inputValue.windowToken, 0)
+    }
+
+    private fun removePaddingRight(value: String?) {
+        if (value != null && value.isNotEmpty()) {
+            inputBox.setPadding(
+                inputBox.paddingLeft,
+                inputBox.paddingTop,
+                0,
+                inputBox.paddingBottom
+            )
+        }
     }
 
     companion object {
