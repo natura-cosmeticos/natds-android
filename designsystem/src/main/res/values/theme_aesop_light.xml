@@ -179,6 +179,8 @@
         <item name="colorMediumEmphasisOpacity06">#51777777</item>
         <item name="colorHighlightOpacity05">#3D000000</item>
         <item name="colorHighlightOpacityMediumHigh">#8F000000</item>
+        <item name="colorLowEmphasisOpacityDisabledLow">#3DBBBBBB</item>
+        <item name="colorHighLightOpacityFull">#FFFFFFFF</item>
 
         <!-- { @deprecated Tokens }-->
         <item name="opacity01">@dimen/ds_opacity01</item>

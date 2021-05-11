@@ -10,6 +10,8 @@
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
     <attr name="colorHighlightOpacity05" format="color"/>
     <attr name="colorHighlightOpacityMediumHigh" format="color"/>
+    <attr name="colorLowEmphasisOpacityDisabledLow" format="color"/>
+    <attr name="colorHighLightOpacityFull" format="color"/>
 
     <!-- opacity tokens attributes -->
     <attr name="opacity01" format="dimension"/>

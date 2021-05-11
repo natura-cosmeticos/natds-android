@@ -104,6 +104,7 @@
         <attr name="android:enabled" />
         <attr name="text_field_text" format="string" />
         <attr name="text_field_icon" format="string" />
+        <attr name="text_field_image" format="reference" />
         <attr name="text_field_label" format="string" />
         <attr name="text_field_footer" format="string" />
         <attr name="text_field_state" format="enum">
@@ -111,6 +112,13 @@
             <enum name="success" value="1" />
             <enum name="error" value="2" />
         </attr>
+        <attr  name="text_field_size" format="enum">
+            <enum name="medium" value="0" />
+            <enum name="mediumx" value="1" />
+        </attr>
+        <attr name="text_field_required" format="boolean" />
+        <attr name="text_field_readonly" format="boolean" />
+
     </declare-styleable>
 
     <declare-styleable name="ds_expansion_panel">

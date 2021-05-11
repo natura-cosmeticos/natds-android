@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/text_field_input_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:clickable="true"
     android:focusable="true"
+    android:orientation="vertical"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
     <TextView
         android:id="@+id/text_field_input_label"
+        style="@style/TextAppearence.Natura.Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearence.Natura.Label"
-        tools:text="text_field_input_label"
-        android:maxLines="2"
         android:ellipsize="end"
+        android:maxLines="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="text_field_input_label" />
 
     <LinearLayout
         android:id="@+id/text_field_input_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:orientation="horizontal"
-        android:visibility="visible"
-        android:paddingTop="@dimen/ds_spacing_border_top"
-        android:paddingLeft="@dimen/ds_spacing_border_left"
-        android:paddingBottom="@dimen/ds_spacing_border_bottom"
-        android:paddingRight="@dimen/ds_spacing_border_right"
         android:background="@drawable/ds_shape_rounded_corners"
-        android:clickable="true"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/ds_spacing_border_left"
+        android:paddingTop="@dimen/ds_spacing_border_top"
+        android:paddingEnd="@dimen/ds_spacing_border_right"
+        android:paddingBottom="@dimen/ds_spacing_border_bottom"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_label">
 
@@ -48,26 +47,38 @@
             android:scrollbars="vertical"
             tools:text="text_field_input_value" />
 
-        <com.natura.android.icon.FontIcon
+        <com.natura.android.iconButton.IconButton
             android:id="@+id/text_field_input_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/ds_spacing_micro"
-            android:layout_marginRight="@dimen/ds_spacing_micro"
-            android:textColor="@color/text_color_primary_selector"
-            android:textSize="@dimen/ds_text_default_icon_size"
+            android:layout_marginEnd="?spacingTiny"
+            android:visibility="gone"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
+
+        <ImageView
+            android:id="@+id/text_field_input_image"
+            android:layout_width="wrap_content"
             android:clickable="true"
-            android:layout_alignParentRight="true"
-            tools:text="EA70" />
+            android:focusable="true"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingTiny"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="?spacingTiny"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/text_field_input_footer_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:orientation="horizontal"
         android:paddingTop="@dimen/ds_spacing_micro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_box">
@@ -76,19 +87,22 @@
             android:id="@+id/text_field_input_footer_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:paddingRight="@dimen/ds_spacing_micro"
+            android:paddingEnd="@dimen/ds_spacing_micro"
             android:textColor="@color/text_color_secondary_selector"
             android:textSize="@dimen/ds_text_default_icon_small_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="EA13" />
 
         <TextView
             android:id="@+id/text_field_input_footer"
             style="@style/TextAppearence.Natura.Footer"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_field_input_footer_icon"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="text_field_input_footer" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
