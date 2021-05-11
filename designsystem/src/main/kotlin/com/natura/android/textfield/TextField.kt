@@ -124,16 +124,6 @@ open class TextField @JvmOverloads constructor(
             colorMediumEmphasis,
             colorLowEmphasisOpacityDisabledLow
         )
-
-        val READ_ONLY_FOCUSED = LayoutState(
-            R.dimen.ds_border_emphasis,
-            colorPrimary,
-            colorMediumEmphasis,
-            colorHighEmphasis,
-            colorMediumEmphasis,
-            colorMediumEmphasis,
-            colorLowEmphasisOpacityDisabledLow
-        )
     }
 
     var stateLayout = LayoutStates(context)
@@ -340,12 +330,19 @@ open class TextField @JvmOverloads constructor(
         getAtributes()
 
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
-        inputIconButton.setOnClickListener { onFocusChanged(true) }
-        inputImage.setOnClickListener { onFocusChanged(true) }
+        inputIconButton.setOnClickListener {
+            requestFocus()
+            onFocusChanged(true)
+        }
+
+        inputImage.setOnClickListener {
+            requestFocus()
+            onFocusChanged(true)
+        }
 
         inputContainerMain.setOnClickListener {
             inputValue.requestFocus()
-            if (!readOnly) {
+            if (!readOnly && isEnabled) {
                 openKeyboard()
             }
         }
@@ -422,13 +419,10 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun onFocusChanged(hasFocus: Boolean) {
-        if (hasFocus) {
-            layoutState = when (readOnly) {
-                true -> stateLayout.READ_ONLY_FOCUSED
-                false -> stateLayout.FOCUSED
-            }
-            hideKeyboard()
+        if (hasFocus && !readOnly && isEnabled) {
+            layoutState = stateLayout.FOCUSED
         } else {
+            hideKeyboard()
             resetLayoutState()
         }
     }
