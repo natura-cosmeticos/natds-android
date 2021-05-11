@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.6.0.0...v.7.0.0) (2021-05-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* The lines attribute can only be applied to multiline inputType
+
+### Features
+
+* adds image attribute at Textfield ([9006edd](https://github.com/natura-cosmeticos/natds-android/commit/9006eddfc13b4c33edf1e94b2dbab3905048b2ec))
+* adds required attribute at Textfield and its unit test ([d9acfca](https://github.com/natura-cosmeticos/natds-android/commit/d9acfca08acf86c259c8728dcffa0af7a8a51f2b))
+* adds size attribute and refactors required method call ([cef4f06](https://github.com/natura-cosmeticos/natds-android/commit/cef4f0662466458b9165dc1f2a6018383e2c1043))
+* includes readonly attribute at TextField ([46edc40](https://github.com/natura-cosmeticos/natds-android/commit/46edc4085187702850ac38b9295177f9dc878e06))
+
+
+### Bug Fixes
+
+* fixes background color when readonly attribute is true and focused state is active at TextField ([440051c](https://github.com/natura-cosmeticos/natds-android/commit/440051c850875774b8d80a2124891264efb043d2))
+* fixes padding right when there is no action component at textfield ([7bf9ca6](https://github.com/natura-cosmeticos/natds-android/commit/7bf9ca6a5510c7299101802ca2fb68f20eca5b2a))
+* fixes textfield behavior when inputType is multiline ([530592e](https://github.com/natura-cosmeticos/natds-android/commit/530592ec74656fd7e28d1f253c09118988d000fa))
+* fixes textfield layout when it's disabled ([02f15d6](https://github.com/natura-cosmeticos/natds-android/commit/02f15d63ff657a5c7291feb2f752d9538cd0287e))
+* includes label as touch area at Textfield ([f1cd100](https://github.com/natura-cosmeticos/natds-android/commit/f1cd100ce8f05553396a11f5de713bd1a232f2a8))
+* removes focus in TextField when read only is true ([49d7fbf](https://github.com/natura-cosmeticos/natds-android/commit/49d7fbf474dd9982c1c251f0f4a2c6dd47faa44c))
+* replaces LinearLayout footer container with ConstraintLayout to respect the two lines ([fecb3f5](https://github.com/natura-cosmeticos/natds-android/commit/fecb3f583ca9bcf52c04495312c12dcb1c01b5e7))
+
 ## [6.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.5.9.0...v.6.0.0) (2021-04-30)
 
 
