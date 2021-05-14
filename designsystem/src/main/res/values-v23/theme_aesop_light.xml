@@ -110,6 +110,10 @@
         <item name="sizeHugeXX">@dimen/ssot45ef8f89dbda63dd93d165d2082d926c</item>
         <item name="sizeHugeXXX">@dimen/ssote99326693476b72d4d27b4cbdeb79edc</item>
         <item name="sizeVeryHuge">@dimen/ssoteb49643ded2ddfa77eb3bbc3546a4429</item>
+        <item name="assetBrandNeutralA">@drawable/aesop_a_official</item>
+        <item name="assetBrandNeutralB">@drawable/aesop_a_official</item>
+        <item name="assetBrandCustomA">@drawable/aesop_a_custom</item>
+        <item name="assetBrandCustomB">@drawable/aesop_a_custom</item>
         <item name="typographyLineHeightReset">@dimen/ssotc4ca4238a0b923820dcc509a6f75849b</item>
         <item name="typographyLineHeightSmall">@dimen/ssot6c010c37f79973d02f1067604ef21513</item>
         <item name="typographyLineHeightMedium">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>

@@ -140,6 +140,10 @@
     <attr name="spacingSemi" format="dimension" />
     <attr name="spacingLarge" format="dimension" />
     <attr name="spacingXLarge" format="dimension" />
+    <attr name="assetBrandNeutralA" format="reference" />
+    <attr name="assetBrandNeutralB" format="reference" />
+    <attr name="assetBrandCustomA" format="reference" />
+    <attr name="assetBrandCustomB" format="reference" />
     <attr name="elevationNone" format="dimension" />
     <attr name="elevationMicro" format="dimension" />
     <attr name="elevationTiny" format="dimension" />
