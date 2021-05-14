@@ -44,7 +44,7 @@ class TextFieldTest {
     @Test
     fun basicLayout() {
         val layout = LayoutInflater.from(activityController.get())
-            .inflate(R.layout.ds_text_field_input, null) as ConstraintLayout
+            .inflate(R.layout.textfield, null) as ConstraintLayout
 
         assertThat(layout.findViewById(R.id.text_field_input_label) as View).isNotNull()
         assertThat(layout.findViewById(R.id.text_field_input_value) as View).isNotNull()

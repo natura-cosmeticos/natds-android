@@ -1,6 +1,5 @@
 package com.natura.android.textfield
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
@@ -24,7 +23,6 @@ import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 
-@SuppressLint("CustomViewStyleable")
 open class TextField @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -322,12 +320,12 @@ open class TextField @JvmOverloads constructor(
 
     init {
         this.let {
-            View.inflate(context, R.layout.ds_text_field_input, it)
+            View.inflate(context, R.layout.textfield, it)
         }
 
-        typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_text_field_input)
+        typedArray = context.obtainStyledAttributes(attrs, R.styleable.TextField)
 
-        getAtributes()
+        getAttributes()
 
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
         inputIconButton.setOnClickListener {
@@ -350,28 +348,28 @@ open class TextField @JvmOverloads constructor(
         typedArray.recycle()
     }
 
-    private fun getAtributes() {
+    private fun getAttributes() {
         inputType = typedArray.getInteger(
-            R.styleable.ds_text_field_input_android_inputType,
+            R.styleable.TextField_android_inputType,
             EditorInfo.TYPE_CLASS_TEXT
         )
-        hint = typedArray.getString(R.styleable.ds_text_field_input_android_hint)
-        maxLines = typedArray.getInteger(R.styleable.ds_text_field_input_android_maxLines, 1)
+        hint = typedArray.getString(R.styleable.TextField_android_hint)
+        maxLines = typedArray.getInteger(R.styleable.TextField_android_maxLines, 1)
         maxLength = typedArray.getInteger(
-            R.styleable.ds_text_field_input_android_maxLength,
+            R.styleable.TextField_android_maxLength,
             Integer.MAX_VALUE
         )
-        lines = typedArray.getInteger(R.styleable.ds_text_field_input_android_lines, 1)
-        isEnabled = typedArray.getBoolean(R.styleable.ds_text_field_input_android_enabled, true)
-        required = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_required, false)
-        size = typedArray.getInt(R.styleable.ds_text_field_input_text_field_size, MEDIUMX)
-        text = typedArray.getString(R.styleable.ds_text_field_input_text_field_text)
-        label = typedArray.getString(R.styleable.ds_text_field_input_text_field_label)
-        footer = typedArray.getString(R.styleable.ds_text_field_input_text_field_footer)
-        iconButton = typedArray.getString(R.styleable.ds_text_field_input_text_field_icon)
-        image = typedArray.getResourceId(R.styleable.ds_text_field_input_text_field_image, 0)
-        state = intToState(typedArray.getInt(R.styleable.ds_text_field_input_text_field_state, 0))
-        readOnly = typedArray.getBoolean(R.styleable.ds_text_field_input_text_field_readonly, false)
+        lines = typedArray.getInteger(R.styleable.TextField_android_lines, 1)
+        isEnabled = typedArray.getBoolean(R.styleable.TextField_android_enabled, true)
+        required = typedArray.getBoolean(R.styleable.TextField_text_field_required, false)
+        size = typedArray.getInt(R.styleable.TextField_text_field_size, MEDIUMX)
+        text = typedArray.getString(R.styleable.TextField_text_field_text)
+        label = typedArray.getString(R.styleable.TextField_text_field_label)
+        footer = typedArray.getString(R.styleable.TextField_text_field_footer)
+        iconButton = typedArray.getString(R.styleable.TextField_text_field_icon)
+        image = typedArray.getResourceId(R.styleable.TextField_text_field_image, 0)
+        state = intToState(typedArray.getInt(R.styleable.TextField_text_field_state, 0))
+        readOnly = typedArray.getBoolean(R.styleable.TextField_text_field_readonly, false)
     }
 
     private fun resetLayoutState() {
