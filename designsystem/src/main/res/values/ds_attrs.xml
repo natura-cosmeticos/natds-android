@@ -198,4 +198,30 @@
         <attr name="colorBackground" />
     </declare-styleable>
 
+    <declare-styleable name="Logo">
+        <attr name="model" format="enum">
+            <enum name="a" value="0" />
+            <enum name="b" value="1" />
+        </attr>
+        <attr name="customColor" format="enum">
+            <enum name="neutral" value="0" />
+            <enum name="primary" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="highlight" value="3" />
+            <enum name="surface" value="4" />
+        </attr>
+        <attr name="customSize" format="enum">
+            <enum name="medium" value="0"/>
+            <enum name="mediumx" value="1"/>
+            <enum name="large" value="2"/>
+            <enum name="largex" value="3"/>
+            <enum name="largexx" value="4"/>
+            <enum name="largexxx" value="5"/>
+            <enum name="huge" value="6"/>
+            <enum name="hugex" value="7"/>
+            <enum name="hugexx" value="8"/>
+            <enum name="hugexxx" value="9"/>
+            <enum name="veryhuge" value="10"/>
+        </attr>
+    </declare-styleable>
 </resources>
