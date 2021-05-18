@@ -3,19 +3,24 @@ package com.natura.android.logo
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.View
+import android.widget.ImageView
 import androidx.annotation.AttrRes
-import androidx.appcompat.widget.AppCompatImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
+import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getDrawableFromTheme
 
 class Logo @JvmOverloads constructor(
     context: Context,
-    private val attrs: AttributeSet? = null
-) : AppCompatImageView(context) {
+    private val attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var typedArray: TypedArray
+    private val imageView by lazy { findViewById<ImageView>(R.id.logoImageView) }
 
     enum class Model {
         A, B
@@ -44,24 +49,20 @@ class Logo @JvmOverloads constructor(
     }
 
     var model: Model = Model.A
-        set(value) {
-            field = value
-        }
-
     var color: Color = Color.NEUTRAL
-        set(value) {
-            field = value
-        }
-
     var size: Size = Size.VERYHUGE
-        set(value) {
-            field = value
-        }
 
     init {
+        try {
+            View.inflate(context, R.layout.logo, this)
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
+
         typedArray = context.obtainStyledAttributes(attrs, R.styleable.Logo)
 
         getAttributes()
+        setSize()
         setDrawableResource()
 
         if (color != Color.NEUTRAL) {
@@ -69,24 +70,7 @@ class Logo @JvmOverloads constructor(
         }
 
         typedArray.recycle()
-    }
-
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val drawable = drawable
-
-        val heightMode = MeasureSpec.getMode(heightMeasureSpec)
-        val widthMode = MeasureSpec.getMode(widthMeasureSpec)
-
-        val width = getDimenFromTheme(context, size.attribute).toInt()
-        val drawableWidth = drawable.intrinsicWidth
-        val drawableHeight = drawable.intrinsicHeight
-        val aspectRadio = drawableHeight.toFloat() / drawableWidth
-        var height = (width * aspectRadio).toInt()
-
-        if (height > width) {
-            height = width
-        }
-        setMeasuredDimension(width, height)
+        requestLayout()
     }
 
     private fun getAttributes() {
@@ -109,11 +93,20 @@ class Logo @JvmOverloads constructor(
             }
         }
 
-        this.setImageDrawable(getDrawableFromTheme(context, drawableAttr))
+        this.imageView.setImageDrawable(getDrawableFromTheme(context, drawableAttr))
     }
 
     private fun setColor() {
-        this.setColorFilter(getColorTokenFromTheme(context, color.attribute))
+        this.imageView.setColorFilter(getColorTokenFromTheme(context, color.attribute))
+    }
+
+    private fun setSize() {
+        this.imageView.adjustViewBounds = true
+
+        val layoutParams = imageView.layoutParams
+        layoutParams.width = getDimenFromTheme(context, size.attribute).toInt()
+        imageView.layoutParams = layoutParams
+        requestLayout()
     }
 
     private fun intToColor(color: Int) = when (color) {
