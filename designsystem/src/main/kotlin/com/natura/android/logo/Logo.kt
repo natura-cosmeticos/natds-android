@@ -2,6 +2,7 @@ package com.natura.android.logo
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.ImageView
@@ -20,7 +21,7 @@ class Logo @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var typedArray: TypedArray
-    private val imageView by lazy { findViewById<ImageView>(R.id.logoImageView) }
+    private val imageView: ImageView by lazy { findViewById(R.id.logoImageView) }
 
     enum class Model {
         A, B
@@ -115,6 +116,10 @@ class Logo @JvmOverloads constructor(
         2 -> Color.SECONDARY
         3 -> Color.HIGHLIGHT
         else -> Color.SURFACE
+    }
+
+    fun getImageView(): Drawable? {
+        return imageView.drawable
     }
 
     private fun intToModel(model: Int) = when (model) {
