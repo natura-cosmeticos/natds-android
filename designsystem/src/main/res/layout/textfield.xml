@@ -38,11 +38,11 @@
 
         <EditText
             android:id="@+id/text_field_input_value"
-            android:layout_weight="1"
+            style="@style/TextAppearence.Natura.EditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/TextAppearence.Natura.EditText"
             android:layout_gravity="center"
+            android:layout_weight="1"
             android:gravity="top|left"
             android:scrollbars="vertical"
             tools:text="text_field_input_value" />
@@ -63,14 +63,14 @@
         <ImageView
             android:id="@+id/text_field_input_image"
             android:layout_width="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
             android:layout_height="wrap_content"
-            android:layout_marginStart="?spacingTiny"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center"
+            android:layout_marginStart="?spacingTiny"
             android:layout_marginEnd="?spacingTiny"
             android:adjustViewBounds="true"
+            android:clickable="true"
+            android:focusable="true"
             android:visibility="gone" />
     </LinearLayout>
 

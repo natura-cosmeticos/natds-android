@@ -184,7 +184,7 @@
             android:layout_height="wrap_content"
             android:hint="Icon has action on touch"
             android:paddingTop="?spacingSmall"
-            app:text_field_image="@drawable/logo_placeholder"
+            app:text_field_image="@drawable/textfield_image_arealimit"
             app:text_field_label="Action with image" />
 
     </LinearLayout>
