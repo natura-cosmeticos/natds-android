@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="?spacingSmall"
-            android:paddingVertical="?spacingSemi">
+            android:paddingVertical="?spacingSmall">
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoModelA"
@@ -33,11 +33,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Model A"
-                app:layout_constraintBottom_toBottomOf="@id/logoModelA"
-                app:layout_constraintStart_toEndOf="@id/logoModelA"
-                app:layout_constraintTop_toTopOf="@id/logoModelA" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoModelA" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoModelB"
@@ -53,11 +52,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Model B"
-                app:layout_constraintBottom_toBottomOf="@id/logoModelB"
-                app:layout_constraintStart_toEndOf="@id/logoModelB"
-                app:layout_constraintTop_toTopOf="@id/logoModelB" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoModelB" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorPrimary"
@@ -73,11 +71,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Color Primary"
-                app:layout_constraintBottom_toBottomOf="@id/logoColorPrimary"
-                app:layout_constraintStart_toEndOf="@id/logoColorPrimary"
-                app:layout_constraintTop_toTopOf="@id/logoColorPrimary" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoColorPrimary" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorSecondary"
@@ -93,11 +90,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Color Secondary"
-                app:layout_constraintBottom_toBottomOf="@id/logoColorSecondary"
-                app:layout_constraintStart_toEndOf="@id/logoColorSecondary"
-                app:layout_constraintTop_toTopOf="@id/logoColorSecondary" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoColorSecondary" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorHighlight"
@@ -113,11 +109,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Color Highlight"
-                app:layout_constraintBottom_toBottomOf="@id/logoColorHighlight"
-                app:layout_constraintStart_toEndOf="@id/logoColorHighlight"
-                app:layout_constraintTop_toTopOf="@id/logoColorHighlight" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoColorHighlight" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorSurface"
@@ -133,11 +128,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Color Surface"
-                app:layout_constraintBottom_toBottomOf="@id/logoColorSurface"
-                app:layout_constraintStart_toEndOf="@id/logoColorSurface"
-                app:layout_constraintTop_toTopOf="@id/logoColorSurface" />
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/logoColorSurface" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorNeutral"
@@ -153,11 +148,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Color Neutral"
-                app:layout_constraintBottom_toBottomOf="@id/logoColorNeutral"
-                app:layout_constraintStart_toEndOf="@id/logoColorNeutral"
-                app:layout_constraintTop_toTopOf="@id/logoColorNeutral" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoColorNeutral" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeMedium"
@@ -173,11 +167,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size Medium"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeMedium"
-                app:layout_constraintStart_toEndOf="@id/logoSizeMedium"
-                app:layout_constraintTop_toTopOf="@id/logoSizeMedium" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeMedium" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeMediumX"
@@ -193,11 +186,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size MediumX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeMediumX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeMediumX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeMediumX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeMediumX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLarge"
@@ -213,11 +205,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size Large"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeLarge"
-                app:layout_constraintStart_toEndOf="@id/logoSizeLarge"
-                app:layout_constraintTop_toTopOf="@id/logoSizeLarge" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeLarge" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeX"
@@ -233,11 +224,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size LargeX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeLargeX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeLargeX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeLargeX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeXX"
@@ -253,11 +243,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size LargeXX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeLargeXX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeLargeXX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeLargeXX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeXXX"
@@ -273,11 +262,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size LargeXXX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeLargeXXX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeLargeXXX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeLargeXXX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXXX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHuge"
@@ -293,11 +281,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size Huge"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeHuge"
-                app:layout_constraintStart_toEndOf="@id/logoSizeHuge"
-                app:layout_constraintTop_toTopOf="@id/logoSizeHuge" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeHuge" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeX"
@@ -313,11 +300,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size HugeX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeHugeX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeHugeX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeHugeX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeXX"
@@ -333,11 +319,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size HugeXX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeHugeXX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeHugeXX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeHugeXX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeXXX"
@@ -353,11 +338,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
+                android:layout_marginStart="?spacingSmall"
                 android:text="Size HugeXXX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeHugeXXX"
-                app:layout_constraintStart_toEndOf="@id/logoSizeHugeXXX"
-                app:layout_constraintTop_toTopOf="@id/logoSizeHugeXXX" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXXX" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeVeryHuge"
@@ -373,11 +357,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="?spacingSemi"
-                android:text="Size HugeXXX"
-                app:layout_constraintBottom_toBottomOf="@id/logoSizeVeryHuge"
-                app:layout_constraintStart_toEndOf="@id/logoSizeVeryHuge"
-                app:layout_constraintTop_toTopOf="@id/logoSizeVeryHuge" />
+                android:layout_marginStart="?spacingSmall"
+                android:text="Size Very Huge"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logoSizeVeryHuge" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

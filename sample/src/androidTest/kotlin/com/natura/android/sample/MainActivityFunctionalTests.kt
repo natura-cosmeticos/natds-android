@@ -215,8 +215,8 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenLogoScreenWhenTapOnItButton() {
-        onView(withId(R.id.logoPatternButton)).perform(scrollTo())
-        onView(withId(R.id.logoPatternButton)).perform(click())
+        onView(withId(R.id.logoButton)).perform(scrollTo())
+        onView(withId(R.id.logoButton)).perform(click())
 
         onView(withText("Logo Pattern")).check(matches(isDisplayed()))
     }
