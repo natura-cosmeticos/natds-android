@@ -218,7 +218,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.logoButton)).perform(scrollTo())
         onView(withId(R.id.logoButton)).perform(click())
 
-        onView(withText("Logo Pattern")).check(matches(isDisplayed()))
+        onView(withText("Logo")).check(matches(isDisplayed()))
     }
 
     @Test
