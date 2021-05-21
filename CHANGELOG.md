@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.7.0.0...v.7.1.0) (2021-05-21)
+
+
+### Features
+
+* adds avon official drawables and inserts attributes at Logo component ([d5cb3f0](https://github.com/natura-cosmeticos/natds-android/commit/d5cb3f0952a0f7c808384f29a1f1cf0294eb26a3))
+* updates logo screen at sampleApp and refactor component to extend from ConstraintLayout ([89afd23](https://github.com/natura-cosmeticos/natds-android/commit/89afd2352a8eccc64a66029b445dd36c65f62833))
+
+
+### Bug Fixes
+
+* fixes item order of Textfield at sample menu and refactor textfield screen at sample ([6988168](https://github.com/natura-cosmeticos/natds-android/commit/698816855e16f660647bfd1255a6064975ce7595))
+* replace textfield title at instrumentation test ([496eb61](https://github.com/natura-cosmeticos/natds-android/commit/496eb61974cf1f6f5c991037ce4a4ca37da028b5))
+
 ## [7.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.6.0.0...v.7.0.0) (2021-05-11)
 
 
