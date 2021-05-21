@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [7.1.1](https://github.com/natura-cosmeticos/natds-android/compare/v.7.1.0...v.7.1.1) (2021-05-21)
+
+
+### Bug Fixes
+
+* fixes build script adding condition to try to upload docs in Jenkins Pipeline for Pull requests ([ba0dc38](https://github.com/natura-cosmeticos/natds-android/commit/ba0dc38a8ea81d4ff5fcccac7e394f9888d69467))
+
 ## [7.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.7.0.0...v.7.1.0) (2021-05-21)
 
 
