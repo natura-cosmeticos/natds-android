@@ -7,6 +7,7 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.R
 import com.natura.android.sample.data.ThemeRepository
+import kotlinx.android.synthetic.main.activity_brand_selector.view.*
 import kotlinx.android.synthetic.main.activity_logo.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -25,146 +26,146 @@ class LogoActivityTest {
     }
 
     @Test
-    fun checksNaturaLightLogoHorizontalResource() {
+    fun checksNaturaALogoResource() {
         launchActivityWithBrandTheme(NATURA, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.natura_horizontal, logoShadow.createdFromResId)
+            assertEquals(R.drawable.natura_a_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksNaturaDarkLogoHorizontalResource() {
+    fun checksNaturaADarkLogoResource() {
         launchActivityWithBrandTheme(NATURA, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.natura_horizontal_dark, logoShadow.createdFromResId)
+            assertEquals(R.drawable.natura_a_official_dark, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksNaturaLightLogoVerticalResource() {
+    fun checksNaturaBLogoResource() {
         launchActivityWithBrandTheme(NATURA, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelB.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.natura_vertical, logoShadow.createdFromResId)
+            assertEquals(R.drawable.natura_b_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksNaturaDarkLogoVerticalResource() {
+    fun checksNaturaBDarkLogoResource() {
         launchActivityWithBrandTheme(NATURA, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelB.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.natura_vertical_dark, logoShadow.createdFromResId)
+            assertEquals(R.drawable.natura_b_official_dark, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksAvonLightLogoHorizontalResource() {
+    fun checksAvonALogoResource() {
         launchActivityWithBrandTheme(AVON, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.avon_horizontal, logoShadow.createdFromResId)
+            assertEquals(R.drawable.avon_a_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksAvonDarkLogoHorizontalResource() {
+    fun checksAvonADarkLogoResource() {
         launchActivityWithBrandTheme(AVON, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.avon_horizontal_dark, logoShadow.createdFromResId)
+            assertEquals(R.drawable.avon_a_official_dark, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksAvonLightLogoVerticalResource() {
-        launchActivityWithBrandTheme(AVON, false)
+    fun checksAesopALogoResource() {
+        launchActivityWithBrandTheme(AESOP, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.default_icon_outlined_action_cancel, logoShadow.createdFromResId)
+            assertEquals(R.drawable.aesop_a_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksAvonDarkLogoVerticalResource() {
-        launchActivityWithBrandTheme(AVON, true)
+    fun checksAesopADarkLogoResource() {
+        launchActivityWithBrandTheme(AESOP, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.default_icon_outlined_action_cancel, logoShadow.createdFromResId)
+            assertEquals(R.drawable.aesop_a_official_dark, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksTbsLightLogoHorizontalResource() {
+    fun checksTbsALogoResource() {
         launchActivityWithBrandTheme(TBS, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.tbs_horizontal, logoShadow.createdFromResId)
+            assertEquals(R.drawable.thebodyshop_a_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksTbsDarkLogoHorizontalResource() {
+    fun checksTbsADarkLogoResource() {
         launchActivityWithBrandTheme(TBS, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoHorizontal
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelA.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.tbs_horizontal_dark, logoShadow.createdFromResId)
+            assertEquals(R.drawable.thebodyshop_a_official_dark, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksTbsLightLogoVerticalResource() {
+    fun checksTbsBLogoResource() {
         launchActivityWithBrandTheme(TBS, false)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelB.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.tbs_vertical, logoShadow.createdFromResId)
+            assertEquals(R.drawable.thebodyshop_b_official, logoShadow.createdFromResId)
         }
     }
 
     @Test
-    fun checksTbsDarkLogoVerticalResource() {
+    fun checksTbsBDarkLogoResource() {
         launchActivityWithBrandTheme(TBS, true)
 
         logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoVertical
-            val logoShadow = shadowOf(logo.drawable)
+            val logo = logoActivity.logoModelB.getImageView()
+            val logoShadow = shadowOf(logo)
 
-            assertEquals(R.drawable.tbs_vertical_dark, logoShadow.createdFromResId)
+            assertEquals(R.drawable.thebodyshop_b_official_dark, logoShadow.createdFromResId)
         }
     }
 
@@ -182,5 +183,6 @@ class LogoActivityTest {
         const val NATURA = "natura"
         const val AVON = "avon"
         const val TBS = "tbs"
+        const val AESOP = "aesop"
     }
 }

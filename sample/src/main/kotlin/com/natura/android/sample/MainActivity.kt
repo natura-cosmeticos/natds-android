@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ErrorActivity::class.java))
         }
 
-        logoPatternButton.setOnClickListener {
+        logoButton.setOnClickListener {
             startActivity(Intent(this, LogoActivity::class.java))
         }
 

@@ -273,7 +273,7 @@ class MainActivityTest {
 
     @Test
     fun checksLogoPatternButtonClickStartsLogoPatternScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.logoPatternButton)
+        val button = mainActivity.findViewById<Button>(R.id.logoButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()

@@ -133,6 +133,10 @@
         <item name="elevationHuge">@dimen/ssot5efa55b135027e50e8d8aa041e584a33</item>
         <item name="elevationHugeX">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
         <item name="elevationHugeXX">@dimen/ssota678d4b111a732673d83a948f471edbb</item>
+        <item name="assetBrandNeutralA">@drawable/thebodyshop_a_official_dark</item>
+        <item name="assetBrandNeutralB">@drawable/thebodyshop_b_official_dark</item>
+        <item name="assetBrandCustomA">@drawable/thebodyshop_a_custom</item>
+        <item name="assetBrandCustomB">@drawable/thebodyshop_b_custom</item>
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
         <item name="heading1FontWeight">sans-serif</item>
         <item name="heading2FontWeight">sans-serif</item>

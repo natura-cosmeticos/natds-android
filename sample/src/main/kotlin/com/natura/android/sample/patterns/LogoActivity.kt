@@ -14,7 +14,7 @@ class LogoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_logo)
 
-        supportActionBar?.title = "Logo Pattern"
+        supportActionBar?.title = "Logo"
         supportActionBar?.setHomeButtonEnabled(true)
     }
 
