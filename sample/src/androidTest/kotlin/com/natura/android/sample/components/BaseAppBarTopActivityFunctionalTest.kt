@@ -13,21 +13,13 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class AppBarActivityFunctionalTest {
+class BaseAppBarTopActivityFunctionalTest {
 
     private lateinit var appBarActivityTest: ActivityScenario<AppBarActivity>
 
     @Before
     fun setup() {
         appBarActivityTest = ActivityScenario.launch(AppBarActivity::class.java)
-    }
-
-    @Test
-    fun addAndIncrementBadge() {
-        onView(withId(R.id.btnIncrement)).perform(click())
-        onView(withId(R.id.btnIncrement)).perform(click())
-
-        onView(withId(R.id.appBar)).check(matches(isDisplayed()))
     }
 
     @Test

@@ -5,6 +5,7 @@
     <attr name="customElevation" format="reference" />
     <attr name="customHeight" format="reference" />
     <attr name="customWidth" format="reference" />
+    <attr name="enabledElevation" format="boolean" />
 
     <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
@@ -45,8 +46,16 @@
 
     </declare-styleable>
 
-    <declare-styleable name="AppBar">
-        <attr name="showLogo" format="boolean" />
+    <declare-styleable name="BaseAppBarTop">
+        <attr name="enabledElevation"/>
+        <attr name="appBarColor" format="enum">
+            <enum name="colorDefault" value="0" />
+            <enum name="colorPrimary" value="1" />
+            <enum name="none" value="2" />
+            <enum name="inverse" value="3" />
+        </attr>
+        <attr name="scrollable" format="boolean" />
+
     </declare-styleable>
 
     <declare-styleable name="Badge">
@@ -157,7 +166,7 @@
         <attr name="colorBackground" />
         <attr name="customRadius" format="reference" />
         <attr name="enabledRadius" format="boolean" />
-        <attr name="enabledElevation" format="boolean" />
+        <attr name="enabledElevation" />
         <attr name="customElevation" />
     </declare-styleable>
 

@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 @Ignore
-class AppBarActivityTest : ScreenShotActivityTestBase() {
+class BaseAppBarTopActivityTest : ScreenShotActivityTestBase() {
     @get:Rule
     var activityTestRule = ActivityTestRule(AppBarActivity::class.java, false, false)
 
@@ -22,14 +22,5 @@ class AppBarActivityTest : ScreenShotActivityTestBase() {
         checkScreenshot(activity, "default")
         performClick(R.id.searchMenuBtn)
         checkScreenshot(activity, "search_expanded")
-    }
-
-    @Test
-    fun test_Snapshot_With_Badge() {
-        val activity = activityTestRule.launchActivity(null)
-
-        checkScreenshot(activity, "app_bar_without_badge")
-        performClick(R.id.btnIncrement)
-        checkScreenshot(activity, "app_bar_with_badge")
     }
 }
