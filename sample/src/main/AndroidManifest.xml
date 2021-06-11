@@ -43,7 +43,7 @@
             android:name=".tokens.TypographyActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.AppBarActivity"
+            android:name=".components.BaseAppBarTopActivity"
             android:theme="@style/Theme.Natura.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />

@@ -64,13 +64,13 @@ class MainActivityTest {
 
     @Test
     fun checksAppBarButtonClickStartsAppBarScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnAppbar)
+        val button = mainActivity.findViewById<Button>(R.id.btnBaseAppBarTop)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(AppBarActivity::class.java, shadowIntent.intentClass)
+        assertEquals(BaseAppBarTopActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test

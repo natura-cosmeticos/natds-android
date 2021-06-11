@@ -7,7 +7,7 @@ import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.activity_appbar.*
 
-class AppBarActivity : AppCompatActivity() {
+class BaseAppBarTopActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
