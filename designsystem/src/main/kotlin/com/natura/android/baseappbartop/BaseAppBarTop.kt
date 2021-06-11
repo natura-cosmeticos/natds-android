@@ -1,4 +1,4 @@
-package com.natura.android.appbar
+package com.natura.android.baseappbartop
 
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
@@ -16,13 +16,13 @@ open class BaseAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(contex
 
     private var typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseAppBarTop)
 
-    private var barColor: Int = DEFAULT
+    var barColor: Int = DEFAULT
         set(value) {
             field = value
             setColor(value)
         }
 
-    private var enabledElevation: Boolean = true
+    var enabledElevation: Boolean = true
         set(value) {
             field = value
             setElevation()

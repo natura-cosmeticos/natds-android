@@ -13,7 +13,7 @@
       android:fitsSystemWindows="true"
       android:layout_height="wrap_content">
 
-    <com.natura.android.appbar.BaseAppBarTop
+    <com.natura.android.baseappbartop.BaseAppBarTop
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
           app:customColor="neutral"
           app:customSize="largexx"
           app:model="a" />
-    </com.natura.android.appbar.BaseAppBarTop>
+    </com.natura.android.baseappbartop.BaseAppBarTop>
 
   </com.google.android.material.appbar.AppBarLayout>
 
