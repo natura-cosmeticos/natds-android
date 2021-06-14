@@ -1,4 +1,4 @@
-package com.natura.android.baseappbartop
+package com.natura.android.appbartop
 
 import android.animation.ObjectAnimator
 import android.animation.StateListAnimator

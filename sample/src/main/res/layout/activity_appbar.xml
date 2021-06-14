@@ -13,56 +13,53 @@
       android:fitsSystemWindows="true"
       android:layout_height="wrap_content">
 
-    <com.natura.android.baseappbartop.BaseAppBarTop
+    <com.natura.android.appbartop.StandardAppBarTop
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="?toolbarDefaultTheme"
         app:layout_scrollFlags="scroll"
+        app:actionRight="false"
+        app:actionLeft="true"
+        app:contentType="media"
+        app:contentMedia="@drawable/avon_horizontal"
         app:appBarColor="colorDefault"
         app:enabledElevation="true">
-
-      <Button
-          android:id="@+id/containedButton"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:minWidth="?sizeHuge"
-          android:layout_margin="?spacingTiny"
-          android:layout_gravity="center_vertical"
-          android:text="Button"/>
 
       <com.natura.android.shortcut.Shortcut
           android:id="@+id/shortcutContained"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_margin="?spacingTiny"
-          android:layout_gravity="center_vertical"
+          android:layout_gravity="start"
           app:notify="1000"
           app:iconName="outlined-default-mockup"
           app:textLabel="Shortcut"
           app:type="contained" />
 
-      <com.natura.android.iconButton.IconButton
-          android:id="@+id/iconButtonColorDefault"
+      <com.natura.android.shortcut.Shortcut
+          android:id="@+id/shortcutContained2"
           android:layout_width="wrap_content"
+          android:layout_gravity="start"
           android:layout_height="wrap_content"
           android:layout_margin="?spacingTiny"
-          android:layout_gravity="center_vertical"
-          app:buttonColor="defaultColor"
-          app:iconName="outlined_default_mockup"
-          app:sizeButton="semi"
-          app:styleButton="inherit" />
+          app:notify="1000"
+          app:iconName="outlined-default-mockup"
+          app:textLabel="Shortcut"
+          app:type="contained" />
 
-      <com.natura.android.logo.Logo
-          android:id="@+id/logoSizeLargeX"
+      <com.natura.android.shortcut.Shortcut
+          android:id="@+id/shortcutContained3"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:layout_gravity="start"
           android:layout_margin="?spacingTiny"
-          android:layout_gravity="center_vertical"
-          app:customColor="neutral"
-          app:customSize="largexx"
-          app:model="a" />
-    </com.natura.android.baseappbartop.BaseAppBarTop>
+          app:notify="1000"
+          app:iconName="outlined-default-mockup"
+          app:textLabel="Shortcut"
+          app:type="contained" />
+
+    </com.natura.android.appbartop.StandardAppBarTop>
 
   </com.google.android.material.appbar.AppBarLayout>
 

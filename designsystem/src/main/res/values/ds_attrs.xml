@@ -7,6 +7,13 @@
     <attr name="customWidth" format="reference" />
     <attr name="enabledElevation" format="boolean" />
 
+    <attr name="appBarColor" format="enum">
+        <enum name="colorDefault" value="0" />
+        <enum name="colorPrimary" value="1" />
+        <enum name="none" value="2" />
+        <enum name="inverse" value="3" />
+    </attr>
+
     <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
             <enum name="primary" value="0" />
@@ -48,12 +55,21 @@
 
     <declare-styleable name="BaseAppBarTop">
         <attr name="enabledElevation"/>
-        <attr name="appBarColor" format="enum">
-            <enum name="colorDefault" value="0" />
-            <enum name="colorPrimary" value="1" />
-            <enum name="none" value="2" />
-            <enum name="inverse" value="3" />
+        <attr name="appBarColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="StandardAppBarTop">
+        <attr name="enabledElevation"/>
+        <attr name="appBarColor"/>
+        <attr name="contentType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="media" value="1" />
+            <enum name="search" value="2" />
         </attr>
+        <attr name="contentMedia" format="reference" />
+        <attr name="contentText" format="string" />
+        <attr name="actionRight" format="boolean" />
+        <attr name="actionLeft" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="Badge">

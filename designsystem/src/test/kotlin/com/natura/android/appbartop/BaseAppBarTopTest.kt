@@ -1,4 +1,4 @@
-package com.natura.android.baseappbartop
+package com.natura.android.appbartop
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider

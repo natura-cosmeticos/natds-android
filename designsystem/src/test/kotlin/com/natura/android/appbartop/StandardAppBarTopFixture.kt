@@ -1,11 +1,11 @@
-package com.natura.android.baseappbartop
+package com.natura.android.appbartop
 
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import com.natura.android.R
 import org.robolectric.Robolectric
 
-internal class BaseAppBarTopFixture private constructor(
+internal class StandardAppBarTopFixture private constructor(
     private var appBarColor: Int? = null,
     private var enabledElevation: Boolean = false,
     private var context: Context = ApplicationProvider.getApplicationContext()
@@ -21,44 +21,44 @@ internal class BaseAppBarTopFixture private constructor(
         private const val defaultEnabledElevation = true
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
-        fun aBaseAppBarTop(): BaseAppBarTopFixture {
+        fun aStandardAppBarTop(): StandardAppBarTopFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return BaseAppBarTopFixture(defaultAppBarColor, defaultEnabledElevation, context)
+            return StandardAppBarTopFixture(defaultAppBarColor, defaultEnabledElevation, context)
         }
     }
 
-    fun withDefaultAppBarColor(): BaseAppBarTopFixture {
+    fun withDefaultAppBarColor(): StandardAppBarTopFixture {
         this.appBarColor = DEFAULT
         return this
     }
 
-    fun withPrimaryAppBarColor(): BaseAppBarTopFixture {
+    fun withPrimaryAppBarColor(): StandardAppBarTopFixture {
         this.appBarColor = PRIMARY
         return this
     }
 
-    fun withNoneAppBarColor(): BaseAppBarTopFixture {
+    fun withNoneAppBarColor(): StandardAppBarTopFixture {
         this.appBarColor = NONE
         return this
     }
 
-    fun withInverseAppBarColor(): BaseAppBarTopFixture {
+    fun withInverseAppBarColor(): StandardAppBarTopFixture {
         this.appBarColor = INVERSE
         return this
     }
 
-    fun withEnabledElevation(enabledElevation: Boolean): BaseAppBarTopFixture {
+    fun withEnabledElevation(enabledElevation: Boolean): StandardAppBarTopFixture {
         this.enabledElevation = enabledElevation
         return this
     }
 
-    fun build(): BaseAppBarTop {
+    fun build(): StandardAppBarTop {
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.enabledElevation, enabledElevation.toString())
             .addAttribute(R.attr.appBarColor, appBarColor.toString())
             .build()
 
-        return BaseAppBarTop(context, attributes)
+        return StandardAppBarTop(context, attributes)
     }
 }
