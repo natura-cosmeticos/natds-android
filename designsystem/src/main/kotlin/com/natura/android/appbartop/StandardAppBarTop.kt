@@ -10,22 +10,24 @@ import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.WindowManager
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
+import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.textfield.TextField
 
-class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
+class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
 
-    private var typedArray: TypedArray =
-        context.obtainStyledAttributes(attrs, R.styleable.StandardAppBarTop)
+    private var typedArray: TypedArray
 
     var barColor: Int = DEFAULT
         set(value) {
@@ -44,96 +46,78 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
     private var contentText: String? = ""
     private var actionRight: Boolean = false
     private var actionLeft: Boolean = false
+    private var proeminentContent: Boolean = false
+    private var contentPosition: Int = LEFT
+
+    private val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
+    private val actionLeftContainer by lazy { findViewById<LinearLayout>(R.id.actionLeftContainer) }
+    private val actionRightContainer by lazy { findViewById<LinearLayout>(R.id.actionRightContainer) }
+    private val actionCenterContainer by lazy { findViewById<LinearLayout>(R.id.actionCenterContainer) }
 
     init {
+        try {
+            View.inflate(context, R.layout.standard_appbar_top, this)
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
 
-        contentInsetStartWithNavigation = 0
+        typedArray = context.obtainStyledAttributes(attrs, R.styleable.StandardAppBarTop)
 
+        inititalConfigurations(context)
         getAttributes()
-
         addContent()
 
         typedArray.recycle()
-    }
-
-    override fun addView(child: View?) {
-        if (childCount > 5) {
-            throw IllegalArgumentException("Standard App Bar Top can't have more than five elements (including the content)")
-        }
-        super.addView(child)
-    }
-
-    override fun addView(child: View?, params: ViewGroup.LayoutParams?) {
-        returnCountElementsException()
-        super.addView(child, params)
-    }
-
-    override fun addView(child: View?, width: Int, height: Int) {
-        returnCountElementsException()
-        super.addView(child, width, height)
-    }
-
-    override fun addView(child: View?, index: Int) {
-        returnCountElementsException()
-        super.addView(child, index)
-    }
-
-    override fun addView(child: View?, index: Int, params: ViewGroup.LayoutParams?) {
-        returnCountElementsException()
-        super.addView(child, index, params)
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
         resetProperties()
         positionActions()
+        throwsCountElementsException()
         changeActionsVisibility()
         removeParentsElevation()
     }
 
     private fun changeActionsVisibility() {
-        when {
-            childCount == 2 -> setActionLeftVisibility()
-            childCount > 2 -> {
-                setActionLeftVisibility()
-                setActionRightVisibility()
-            }
-        }
-    }
-
-    private fun setActionLeftVisibility() {
-        getChildAt(1).setVisibilityFromBoolean(actionLeft)
-    }
-
-    private fun setActionRightVisibility() {
-        for (i in SECOND_ELEMENT_INDEX_AFTER_CONTENT until childCount) {
-            getChildAt(i).setVisibilityFromBoolean(actionRight)
-        }
+        actionRightContainer.setVisibilityFromBoolean(actionRight)
+        actionLeftContainer.setVisibilityFromBoolean(actionLeft)
     }
 
     private fun positionActions() {
         when {
-            childCount == 2 -> positionActionLeft()
-            childCount > 2 -> {
+            childCount == 3 -> positionActionLeft()
+            childCount > 3 -> {
                 positionActionLeft()
                 positionActionRight()
             }
         }
+        positionActionCenter()
+    }
+
+    private fun positionActionCenter() {
+        val child = getChildAt(1)
+        this.removeView(child)
+
+        if (proeminentContent) {
+            actionLeftContainer.addView(child)
+            actionLeftContainer.orientation = LinearLayout.VERTICAL
+        } else {
+            actionCenterContainer.addView(child)
+        }
     }
 
     private fun positionActionLeft() {
-        getChildAt(FIRST_ELEMENT_INDEX_AFTER_CONTENT).layoutParams = LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT,
-            Gravity.CENTER_VERTICAL or Gravity.START
-        )
+        val child = getChildAt(ACTION_LEFT_ELEMENT_INDEX)
+        this.removeView(child)
+        actionLeftContainer.addView(child)
     }
 
     private fun positionActionRight() {
-        for (i in SECOND_ELEMENT_INDEX_AFTER_CONTENT until childCount) {
-            getChildAt(i).layoutParams = LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT,
-                Gravity.CENTER_VERTICAL or Gravity.END
-            )
+        while (haveChildrenToMove()) {
+            val child = getNextChild()
+            removeView(child)
+            actionRightContainer.addView(child)
         }
     }
 
@@ -146,8 +130,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
     }
 
     private fun resetProperties() {
-        title = ""
-        navigationIcon = null
+        toolbar.title = ""
+        toolbar.navigationIcon = null
     }
 
     private fun getAttributes() {
@@ -159,6 +143,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
         contentText = typedArray.getString(R.styleable.StandardAppBarTop_contentText)
         actionRight = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionRight, false)
         actionLeft = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionLeft, false)
+        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
+        proeminentContent = typedArray.getBoolean(R.styleable.StandardAppBarTop_proeminentContent, false)
     }
 
     private fun setColor(color: Int) {
@@ -174,9 +160,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
 
     private fun setElevation(value: Boolean) {
         if (value) {
-            elevation = getElevationFromTheme(context)
+            toolbar.elevation = getElevationFromTheme(context)
         } else {
-            this.elevation = 0F
+            toolbar.elevation = 0F
         }
     }
 
@@ -191,21 +177,25 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
     }
 
     private fun removeParentsElevation() {
-        if (parent is AppBarLayout) {
+        val stListAnimator = StateListAnimator()
+        stListAnimator.addState(
+            IntArray(0),
+            ObjectAnimator.ofFloat(this, "elevation", 0.1F)
+        )
+        stateListAnimator = stListAnimator
+    }
 
-            val stateListAnimator = StateListAnimator()
-            stateListAnimator.addState(
-                IntArray(0),
-                ObjectAnimator.ofFloat(this, "elevation", 0.1F)
-            )
-            (parent as AppBarLayout).stateListAnimator = stateListAnimator
+    private fun throwsCountElementsException() {
+        if (countElements() > MAX_NUMBER_ELEMENTS) {
+            throw IllegalArgumentException("Standard App Bar Top can't have more than five elements (including the content)")
         }
     }
 
-    private fun returnCountElementsException() {
-        if (childCount > LIMIT_ELEMENTS_APPBAR_CONTAINER) {
-            throw IllegalArgumentException("Standard App Bar Top can't have more than five elements (including the content)")
-        }
+    private fun inititalConfigurations(context: Context) {
+        toolbar.contentInsetStartWithNavigation = 0
+        toolbar.setPadding(0, 0, getDimenFromTheme(context, R.attr.spacingSmall).toInt(), 0)
+        clipToPadding = false
+        clipChildren = false
     }
 
     private fun addImage(context: Context, resourceImage: Int) {
@@ -214,18 +204,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
         imageView.setImageResource(resourceImage)
         imageView.layoutParams =
             LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                getLogoAlign(
-                    context
-                )
+                WRAP_CONTENT,
+                WRAP_CONTENT
             )
-        imageView.setPadding(
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0,
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0
-        )
+        setContentPadding(imageView)
         addView(imageView)
     }
 
@@ -233,21 +215,16 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-        textView.textSize = getDimenFromTheme(context, R.attr.heading6FontSize)
+        textView.setTextSize(
+            TypedValue.COMPLEX_UNIT_PX,
+            context.resources.getDimension(R.dimen.ds_size_h6)
+        )
         textView.layoutParams =
             LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                getLogoAlign(
-                    context
-                )
+                WRAP_CONTENT,
+                WRAP_CONTENT
             )
-        textView.setPadding(
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0,
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0
-        )
+        setContentPadding(textView)
 
         addView(textView)
     }
@@ -257,27 +234,36 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
         textField.id = R.id.contentSearch
         textField.layoutParams =
             LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                getLogoAlign(
-                    context
-                )
+                MATCH_PARENT,
+                WRAP_CONTENT
             )
-        textField.setPadding(
+        setContentPadding(textField)
+        addView(textField)
+    }
+
+    private fun setContentPadding(view: View) {
+        view.setPadding(
             getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
             0,
             getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
             0
         )
-        addView(textField)
     }
 
-    private fun getLogoAlign(context: Context): Int {
-        return if (getWindowWidthInPx(context) < MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO) {
+    private fun getContentAlign(context: Context): Int {
+        return if ((getWindowWidthInPx(context) < MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO) || (contentPosition == LEFT)) {
             Gravity.START
         } else {
             Gravity.CENTER
         }
+    }
+
+    private fun haveChildrenToMove(): Boolean = getChildAt(2) != null
+
+    private fun getNextChild(): View? = getChildAt(2)
+
+    private fun countElements(): Int {
+        return actionCenterContainer.childCount + actionRightContainer.childCount + actionLeftContainer.childCount
     }
 
     private fun getWindowWidthInPx(context: Context): Int {
@@ -309,9 +295,12 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context
         const val MEDIA = 1
         const val SEARCH = 2
 
+        const val LEFT = 0
+        const val CENTER = 1
+
         private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
-        private const val LIMIT_ELEMENTS_APPBAR_CONTAINER = 5
-        private const val FIRST_ELEMENT_INDEX_AFTER_CONTENT = 1
-        private const val SECOND_ELEMENT_INDEX_AFTER_CONTENT = 2
+        private const val MAX_NUMBER_ELEMENTS = 5
+        private const val ACTION_LEFT_ELEMENT_INDEX = 2
+        private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
     }
 }

@@ -7,22 +7,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <com.google.android.material.appbar.AppBarLayout
-      android:layout_width="match_parent"
-      android:layout_gravity="top"
-      android:fitsSystemWindows="true"
-      android:layout_height="wrap_content">
-
     <com.natura.android.appbartop.StandardAppBarTop
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="?toolbarDefaultTheme"
         app:layout_scrollFlags="scroll"
-        app:actionRight="false"
+        app:actionRight="true"
         app:actionLeft="true"
-        app:contentType="media"
-        app:contentMedia="@drawable/avon_horizontal"
+        app:contentType="text"
+        app:contentPosition="left"
+        app:proeminentContent="false"
+        app:contentText="Lorem"
         app:appBarColor="colorDefault"
         app:enabledElevation="true">
 
@@ -30,8 +26,6 @@
           android:id="@+id/shortcutContained"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_margin="?spacingTiny"
-          android:layout_gravity="start"
           app:notify="1000"
           app:iconName="outlined-default-mockup"
           app:textLabel="Shortcut"
@@ -40,28 +34,24 @@
       <com.natura.android.shortcut.Shortcut
           android:id="@+id/shortcutContained2"
           android:layout_width="wrap_content"
-          android:layout_gravity="start"
           android:layout_height="wrap_content"
-          android:layout_margin="?spacingTiny"
+          android:layout_marginHorizontal="5dp"
           app:notify="1000"
           app:iconName="outlined-default-mockup"
           app:textLabel="Shortcut"
           app:type="contained" />
 
-      <com.natura.android.shortcut.Shortcut
-          android:id="@+id/shortcutContained3"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="start"
-          android:layout_margin="?spacingTiny"
-          app:notify="1000"
-          app:iconName="outlined-default-mockup"
-          app:textLabel="Shortcut"
-          app:type="contained" />
+        <com.natura.android.shortcut.Shortcut
+            android:id="@+id/shortcutContained3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            app:notify="1000"
+            app:iconName="outlined-default-mockup"
+            app:textLabel="Shortcut"
+            app:type="contained" />
 
     </com.natura.android.appbartop.StandardAppBarTop>
-
-  </com.google.android.material.appbar.AppBarLayout>
 
   <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
@@ -79,7 +69,7 @@
           android:layout_height="wrap_content"
           android:layout_margin="?spacingTiny"
           android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          android:textSize="@dimen/ds_size_h4"
+          android:textSize="?heading6FontSize"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent"
           app:layout_constraintBottom_toBottomOf="parent"/>
