@@ -1,78 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:clipChildren="false"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.natura.android.appbartop.StandardAppBarTop
-        android:id="@+id/appBar"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="?toolbarDefaultTheme"
-        app:layout_scrollFlags="scroll"
-        app:actionRight="true"
-        app:actionLeft="true"
-        app:contentType="text"
-        app:contentPosition="left"
-        app:proeminentContent="false"
-        app:contentText="Lorem"
-        app:appBarColor="colorDefault"
-        app:enabledElevation="true">
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-      <com.natura.android.shortcut.Shortcut
-          android:id="@+id/shortcutContained"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          app:notify="1000"
-          app:iconName="outlined-default-mockup"
-          app:textLabel="Shortcut"
-          app:type="contained" />
-
-      <com.natura.android.shortcut.Shortcut
-          android:id="@+id/shortcutContained2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginHorizontal="5dp"
-          app:notify="1000"
-          app:iconName="outlined-default-mockup"
-          app:textLabel="Shortcut"
-          app:type="contained" />
-
-        <com.natura.android.shortcut.Shortcut
-            android:id="@+id/shortcutContained3"
-            android:layout_width="wrap_content"
+        <com.natura.android.appbartop.StandardAppBarTop
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            app:notify="1000"
-            app:iconName="outlined-default-mockup"
-            app:textLabel="Shortcut"
-            app:type="contained" />
+            android:theme="?toolbarDefaultTheme"
+            app:actionLeft="true"
+            app:actionRight="true"
+            app:appBarColor="colorDefault"
+            app:contentMedia="@drawable/natura_a_official"
+            app:contentPosition="center"
+            app:contentText="Lorem"
+            app:contentType="media"
+            app:enabledElevation="true"
+            app:proeminentContent="false"
+            app:scrollable="false">
 
-    </com.natura.android.appbartop.StandardAppBarTop>
+            <com.natura.android.shortcut.Shortcut
+                android:id="@+id/shortcutContained1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:iconName="outlined-default-mockup"
+                app:notify="1000"
+                app:textLabel="Contained/ \nPrimary"
+                app:type="contained" />
 
-  <androidx.core.widget.NestedScrollView
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:fillViewport="true"
-      android:layout_gravity="fill_vertical"
-      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </com.natura.android.appbartop.StandardAppBarTop>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_margin="?spacingTiny"
-          android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          android:textSize="?heading6FontSize"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintBottom_toBottomOf="parent"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-  </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="?spacingTiny"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    android:textSize="?heading4FontSize"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.animation.StateListAnimator
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.DisplayMetrics
 import android.util.TypedValue
@@ -22,7 +23,6 @@ import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
 import com.natura.android.resources.getColorTokenFromTheme
-import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.textfield.TextField
 
 class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
@@ -32,13 +32,19 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     var barColor: Int = DEFAULT
         set(value) {
             field = value
-            setColor(value)
+            setColor(value, context)
         }
 
     var enabledElevation: Boolean = true
         set(value) {
             field = value
             setElevation(value)
+        }
+
+    private var scrollable: Boolean = false
+        set(value) {
+            field = value
+            handleScroll(value)
         }
 
     private var contentType: Int = TEXT
@@ -63,7 +69,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         typedArray = context.obtainStyledAttributes(attrs, R.styleable.StandardAppBarTop)
 
-        inititalConfigurations(context)
+        initialConfigurations()
         getAttributes()
         addContent()
 
@@ -86,8 +92,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private fun positionActions() {
         when {
-            childCount == 3 -> positionActionLeft()
-            childCount > 3 -> {
+            childCount == COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
+                positionActionLeft()
+                actionRightContainer.setVisibilityFromBoolean(false)
+            }
+            childCount > COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
                 positionActionLeft()
                 positionActionRight()
             }
@@ -103,6 +112,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             actionLeftContainer.addView(child)
             actionLeftContainer.orientation = LinearLayout.VERTICAL
         } else {
+
+            actionCenterContainer.gravity = getContentAlign(context)
             actionCenterContainer.addView(child)
         }
     }
@@ -143,12 +154,18 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         contentText = typedArray.getString(R.styleable.StandardAppBarTop_contentText)
         actionRight = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionRight, false)
         actionLeft = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionLeft, false)
+        scrollable = typedArray.getBoolean(R.styleable.StandardAppBarTop_scrollable, false)
         contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
-        proeminentContent = typedArray.getBoolean(R.styleable.StandardAppBarTop_proeminentContent, false)
+        proeminentContent = typedArray.getBoolean(
+            R.styleable.StandardAppBarTop_proeminentContent,
+            false
+        )
     }
 
-    private fun setColor(color: Int) {
-        this.setBackgroundColor(
+    private fun setColor(color: Int, context: Context) {
+        setBackgroundColor(Color.TRANSPARENT)
+
+        toolbar.setBackgroundColor(
             when (color) {
                 DEFAULT -> getColorTokenFromTheme(context, R.attr.colorSurface)
                 PRIMARY -> getColorTokenFromTheme(context, R.attr.colorPrimary)
@@ -176,6 +193,14 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         return 0f
     }
 
+    private fun handleScroll(scrollable: Boolean) {
+        val params = toolbar.layoutParams as LayoutParams
+        params.scrollFlags = when (scrollable) {
+            true -> (LayoutParams.SCROLL_FLAG_SCROLL)
+            false -> (LayoutParams.SCROLL_FLAG_NO_SCROLL)
+        }
+    }
+
     private fun removeParentsElevation() {
         val stListAnimator = StateListAnimator()
         stListAnimator.addState(
@@ -186,14 +211,13 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     private fun throwsCountElementsException() {
-        if (countElements() > MAX_NUMBER_ELEMENTS) {
+        if (countElements() > MAX_COUNT_ELEMENTS) {
             throw IllegalArgumentException("Standard App Bar Top can't have more than five elements (including the content)")
         }
     }
 
-    private fun inititalConfigurations(context: Context) {
+    private fun initialConfigurations() {
         toolbar.contentInsetStartWithNavigation = 0
-        toolbar.setPadding(0, 0, getDimenFromTheme(context, R.attr.spacingSmall).toInt(), 0)
         clipToPadding = false
         clipChildren = false
     }
@@ -207,7 +231,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 WRAP_CONTENT,
                 WRAP_CONTENT
             )
-        setContentPadding(imageView)
         addView(imageView)
     }
 
@@ -224,7 +247,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 WRAP_CONTENT,
                 WRAP_CONTENT
             )
-        setContentPadding(textView)
+        textView.isSingleLine = false
+        textView.ellipsize = TextUtils.TruncateAt.END
+        textView.setLines(1)
 
         addView(textView)
     }
@@ -237,17 +262,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 MATCH_PARENT,
                 WRAP_CONTENT
             )
-        setContentPadding(textField)
         addView(textField)
-    }
-
-    private fun setContentPadding(view: View) {
-        view.setPadding(
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0,
-            getDimenFromTheme(context, R.attr.spacingTiny).toInt(),
-            0
-        )
     }
 
     private fun getContentAlign(context: Context): Int {
@@ -258,9 +273,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         }
     }
 
-    private fun haveChildrenToMove(): Boolean = getChildAt(2) != null
+    private fun haveChildrenToMove(): Boolean = getChildAt(ACTION_RIGHT_FIRST_ELEMENT_INDEX) != null
 
-    private fun getNextChild(): View? = getChildAt(2)
+    private fun getNextChild(): View? = getChildAt(ACTION_RIGHT_FIRST_ELEMENT_INDEX)
 
     private fun countElements(): Int {
         return actionCenterContainer.childCount + actionRightContainer.childCount + actionLeftContainer.childCount
@@ -299,7 +314,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         const val CENTER = 1
 
         private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
-        private const val MAX_NUMBER_ELEMENTS = 5
+        private const val MAX_COUNT_ELEMENTS = 5
+        private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 3
         private const val ACTION_LEFT_ELEMENT_INDEX = 2
         private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
     }
