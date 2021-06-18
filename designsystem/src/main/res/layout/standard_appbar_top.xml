@@ -8,6 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:paddingVertical="?spacingMicro"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
@@ -15,14 +16,14 @@
             android:id="@+id/actionLeftContainer"
             android:layout_width="wrap_content"
             android:paddingHorizontal="?spacingTiny"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="start"
             android:orientation="horizontal" />
 
         <LinearLayout
             android:id="@+id/actionCenterContainer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:paddingHorizontal="?spacingTiny"
             android:layout_weight="2.5"
             android:layout_gravity="center"
@@ -32,7 +33,7 @@
         <LinearLayout
             android:id="@+id/actionRightContainer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:paddingHorizontal="?spacingTiny"
             android:gravity="end"
             android:layout_gravity="end"

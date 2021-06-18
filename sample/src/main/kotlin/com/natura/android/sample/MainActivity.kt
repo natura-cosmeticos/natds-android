@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnStandardAppBarTop.setOnClickListener {
-            startActivity(Intent(this, StandardAppBarTopActivity::class.java))
+            startActivity(Intent(this, AppBarTopAttributesActivity::class.java))
         }
 
         btnStyleButtons.setOnClickListener {

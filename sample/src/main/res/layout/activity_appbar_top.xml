@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appBarContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbartop_button_action" android:visibility="gone"/>
+    <include layout="@layout/appbartop_search" android:visibility="gone"/>
+    <include layout="@layout/appbartop_shortcut_action" android:visibility="gone"/>
+    <include layout="@layout/appbartop_threeactions" android:visibility="gone"/>
+    <include layout="@layout/appbartop_title_center" android:visibility="gone"/>
+    <include layout="@layout/appbartop_title_long" android:visibility="gone"/>
+    <include layout="@layout/appbartop_twoactions" android:visibility="gone"/>
+
+</FrameLayout>

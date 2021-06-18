@@ -46,7 +46,7 @@
             android:name=".components.BaseAppBarTopActivity"
             android:theme="@style/Theme.Natura.Light.NoActionBar" />
         <activity
-            android:name=".components.StandardAppBarTopActivity"
+            android:name=".components.AppBarTopActivity"
             android:theme="@style/Theme.Natura.Light.NoActionBar" />
         <activity
             android:name=".components.BadgeActivity"
@@ -114,9 +114,10 @@
         <activity
             android:name=".components.RadioButtonActivity"
             android:theme="@style/Theme.Natura.Light" />
-
         <activity
             android:name=".components.listitem.ListItemActivity"
             android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".AppBarTopAttributesActivity"/>
     </application>
 </manifest>

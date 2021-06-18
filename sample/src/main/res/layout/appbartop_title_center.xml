@@ -2,6 +2,7 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBarTopWithTitleCenter"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -21,22 +22,32 @@
             app:actionLeft="true"
             app:actionRight="true"
             app:appBarColor="colorDefault"
-            app:contentMedia="@drawable/natura_a_official"
             app:contentPosition="center"
-            app:contentText="Lorem"
-            app:contentType="media"
+            app:contentText="Title Center"
+            app:contentType="text"
             app:enabledElevation="true"
             app:proeminentContent="false"
-            app:scrollable="false">
+            app:scrollable="true">
 
-            <com.natura.android.shortcut.Shortcut
-                android:id="@+id/shortcutContained1"
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonActionLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:iconName="outlined-default-mockup"
-                app:notify="1000"
-                app:textLabel="Contained/ \nPrimary"
-                app:type="contained" />
+                android:layout_gravity="center_vertical"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonActionRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
 
         </com.natura.android.appbartop.StandardAppBarTop>
 
@@ -54,7 +65,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="?spacingTiny"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    android:textSize="?heading4FontSize"
+                    android:textColor="?colorLowEmphasis"
+                    android:textSize="?heading5FontSize"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
