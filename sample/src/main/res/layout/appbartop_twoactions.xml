@@ -30,7 +30,7 @@
             app:scrollable="true">
 
             <com.natura.android.iconButton.IconButton
-                android:id="@+id/iconButtonActionLeft"
+                android:id="@+id/twoActionsViewIconButtonActionLeft"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
                 app:styleButton="inherit" />
 
             <com.natura.android.iconButton.IconButton
-                android:id="@+id/firstIconButtonActionRight"
+                android:id="@+id/twoActionsViewFirstIconButtonActionRight"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
                 app:styleButton="inherit" />
 
             <com.natura.android.iconButton.IconButton
-                android:id="@+id/secondIconButtonActionRight"
+                android:id="@+id/twoActionsViewSecondIconButtonActionRight"
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_height="wrap_content"

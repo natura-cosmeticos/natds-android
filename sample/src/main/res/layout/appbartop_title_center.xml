@@ -30,7 +30,7 @@
             app:scrollable="true">
 
             <com.natura.android.iconButton.IconButton
-                android:id="@+id/iconButtonActionLeft"
+                android:id="@+id/titleCenterViewIconButtonActionLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -40,7 +40,7 @@
                 app:styleButton="inherit" />
 
             <com.natura.android.iconButton.IconButton
-                android:id="@+id/iconButtonActionRight"
+                android:id="@+id/titleCenterViewIconButtonActionRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"

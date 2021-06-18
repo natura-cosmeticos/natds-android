@@ -24,7 +24,7 @@
             app:scrollable="true">
 
             <com.natura.android.shortcut.Shortcut
-                android:id="@+id/firstShorcut"
+                android:id="@+id/baseViewFirstShorcut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="?spacingSemi"
@@ -34,7 +34,7 @@
                 app:type="contained" />
 
             <com.natura.android.shortcut.Shortcut
-                android:id="@+id/secondShorcut"
+                android:id="@+id/baseViewSecondShorcut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -45,7 +45,7 @@
                 app:type="contained" />
 
             <com.natura.android.shortcut.Shortcut
-                android:id="@+id/thirdContained"
+                android:id="@+id/baseViewThirdContained"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
