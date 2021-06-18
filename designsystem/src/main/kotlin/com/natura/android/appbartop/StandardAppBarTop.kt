@@ -110,7 +110,13 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         if (proeminentContent) {
             actionLeftContainer.addView(child)
+            actionLeftContainer.layoutParams = LinearLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT,
+                2.5F
+            )
             actionLeftContainer.orientation = LinearLayout.VERTICAL
+            actionCenterContainer.setVisibilityFromBoolean(false)
         } else {
 
             actionCenterContainer.gravity = getContentAlign(context)

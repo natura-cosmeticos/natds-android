@@ -36,9 +36,9 @@
         <LinearLayout
             android:id="@+id/actionRightContainer"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:gravity="top"
             android:orientation="horizontal" />
 
     </LinearLayout>

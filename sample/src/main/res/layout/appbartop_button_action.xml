@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                app:buttonColor="primaryColor"
+                app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />

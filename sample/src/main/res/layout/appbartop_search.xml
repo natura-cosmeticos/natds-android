@@ -25,7 +25,7 @@
             app:contentPosition="center"
             app:contentType="search"
             app:enabledElevation="true"
-            app:proeminentContent="false"
+            app:proeminentContent="true"
             app:scrollable="true">
 
             <com.natura.android.iconButton.IconButton
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                app:buttonColor="primaryColor"
+                app:buttonColor="defaultColor"
                 app:iconName="filled_navigation_directionleft"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
@@ -43,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                app:buttonColor="primaryColor"
+                app:buttonColor="defaultColor"
                 app:iconName="outlined_action_mic"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />

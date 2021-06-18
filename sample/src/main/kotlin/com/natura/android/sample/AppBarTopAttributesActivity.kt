@@ -17,9 +17,6 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
     }
 
     private fun setButtonsActions() {
-        btnBase.setOnClickListener {
-            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_BASE))
-        }
 
         btnTwoActions.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_TWOACTIONS))
@@ -41,10 +38,6 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT))
         }
 
-        btnActionShortcut.setOnClickListener {
-            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_SHORTCUT))
-        }
-
         btnActionButton.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_BUTTON))
         }
@@ -56,8 +49,6 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
         private const val PATTERN_APPBARTOP_THREE_ACTIONS = 3
         private const val PATTERN_APPBARTOP_SEARCH = 4
         private const val PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT = 5
-        private const val PATTERN_APPBARTOP_SHORTCUT = 6
-        private const val PATTERN_APPBARTOP_BUTTON = 7
-        private const val PATTERN_APPBARTOP_BASE = 8
+        private const val PATTERN_APPBARTOP_BUTTON = 6
     }
 }

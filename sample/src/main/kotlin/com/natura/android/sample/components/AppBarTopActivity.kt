@@ -8,7 +8,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.iconButton.IconButton
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
-import com.natura.android.shortcut.Shortcut
 
 class AppBarTopActivity : AppCompatActivity() {
 
@@ -17,23 +16,13 @@ class AppBarTopActivity : AppCompatActivity() {
     private val appBarTopWithTitleLong by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithTitleLong) }
     private val appBarTopWithSearch by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithSearch) }
     private val appBarTopWithThreeActions by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithThreeActions) }
-    private val appBarTopWithShortcutAction by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithShortcutAction) }
     private val appBarTopWithButtonAction by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithButtonAction) }
-    private val appBarTopBase by lazy { findViewById<ConstraintLayout>(R.id.appBarTopBase) }
-
-    private val baseViewFirstShorcut by lazy { findViewById<Shortcut>(R.id.baseViewFirstShorcut) }
-    private val baseViewSecondShorcut by lazy { findViewById<Shortcut>(R.id.baseViewSecondShorcut) }
-    private val baseViewThirdContained by lazy { findViewById<Shortcut>(R.id.baseViewThirdContained) }
 
     private val buttonActionViewIconButtonActionRight by lazy { findViewById<IconButton>(R.id.buttonActionViewIconButtonActionRight) }
     private val buttonActionViewOutlinedButtonActionRight by lazy { findViewById<Button>(R.id.buttonActionViewOutlinedButtonActionRight) }
 
     private val searchViewIconButtonActionRight by lazy { findViewById<IconButton>(R.id.searchViewIconButtonActionRight) }
     private val searchViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.searchViewIconButtonActionLeft) }
-
-    private val shorcutViewFirstIconButtonActionRight by lazy { findViewById<IconButton>(R.id.shorcutViewFirstIconButtonActionRight) }
-    private val shortcutViewSecondIconButtonActionRight by lazy { findViewById<IconButton>(R.id.shortcutViewSecondIconButtonActionRight) }
-    private val shortcutViewShortcutActionLeft by lazy { findViewById<Shortcut>(R.id.shortcutViewShortcutActionLeft) }
 
     private val threeActionsViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.threeActionsViewIconButtonActionLeft) }
     private val threeActionsViewFirstIconButtonActionRight by lazy { findViewById<IconButton>(R.id.threeActionsViewFirstIconButtonActionRight) }
@@ -69,26 +58,17 @@ class AppBarTopActivity : AppCompatActivity() {
             PATTERN_APPBARTOP_THREE_ACTIONS -> appBarTopWithTitleLong.visibility = View.VISIBLE
             PATTERN_APPBARTOP_SEARCH -> appBarTopWithSearch.visibility = View.VISIBLE
             PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT -> appBarTopWithThreeActions.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_SHORTCUT -> appBarTopWithShortcutAction.visibility = View.VISIBLE
             PATTERN_APPBARTOP_BUTTON -> appBarTopWithButtonAction.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_BASE -> appBarTopBase.visibility = View.VISIBLE
         }
     }
 
     private fun createListeners() {
-        baseViewFirstShorcut.setOnClickListener {}
-        baseViewSecondShorcut.setOnClickListener {}
-        baseViewThirdContained.setOnClickListener {}
 
         buttonActionViewIconButtonActionRight.setOnClickListener {}
         buttonActionViewOutlinedButtonActionRight.setOnClickListener {}
 
         searchViewIconButtonActionRight.setOnClickListener {}
         searchViewIconButtonActionLeft.setOnClickListener {}
-
-        shorcutViewFirstIconButtonActionRight.setOnClickListener {}
-        shortcutViewSecondIconButtonActionRight.setOnClickListener {}
-        shortcutViewShortcutActionLeft.setOnClickListener {}
 
         threeActionsViewIconButtonActionLeft.setOnClickListener {}
         threeActionsViewFirstIconButtonActionRight.setOnClickListener {}
@@ -115,8 +95,6 @@ class AppBarTopActivity : AppCompatActivity() {
         private const val PATTERN_APPBARTOP_THREE_ACTIONS = 3
         private const val PATTERN_APPBARTOP_SEARCH = 4
         private const val PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT = 5
-        private const val PATTERN_APPBARTOP_SHORTCUT = 6
-        private const val PATTERN_APPBARTOP_BUTTON = 7
-        private const val PATTERN_APPBARTOP_BASE = 8
+        private const val PATTERN_APPBARTOP_BUTTON = 6
     }
 }

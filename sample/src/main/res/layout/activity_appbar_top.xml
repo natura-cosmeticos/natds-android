@@ -8,11 +8,9 @@
 
     <include layout="@layout/appbartop_button_action" android:visibility="gone"/>
     <include layout="@layout/appbartop_search" android:visibility="gone"/>
-    <include layout="@layout/appbartop_shortcut_action" android:visibility="gone"/>
     <include layout="@layout/appbartop_threeactions" android:visibility="gone"/>
     <include layout="@layout/appbartop_title_center" android:visibility="gone"/>
     <include layout="@layout/appbartop_title_long" android:visibility="gone"/>
     <include layout="@layout/appbartop_twoactions" android:visibility="gone"/>
-    <include layout="@layout/appbartop_base" android:visibility="gone"/>
 
 </FrameLayout>
