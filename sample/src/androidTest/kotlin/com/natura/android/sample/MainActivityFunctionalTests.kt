@@ -93,8 +93,8 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenAppBarTopScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnBaseAppBarTop)).perform(scrollTo())
-        onView(withId(R.id.btnBaseAppBarTop)).perform(click())
+        onView(withId(R.id.btnAppBarTop)).perform(scrollTo())
+        onView(withId(R.id.btnAppBarTop)).perform(click())
 
         onView(withId(R.id.appBar)).check(matches(isDisplayed()))
     }
