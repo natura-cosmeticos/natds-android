@@ -6,8 +6,12 @@ import com.natura.android.R
 import org.robolectric.Robolectric
 
 internal class StandardAppBarTopFixture private constructor(
-    private var appBarColor: Int? = null,
-    private var enabledElevation: Boolean = false,
+    private var appBarColor: Int = DEFAULT,
+    private var enabledElevation: Boolean = true,
+    private var actionRight: Boolean = false,
+    private var actionLeft: Boolean = false,
+    private var proeminentContent: Boolean = false,
+    private var scrollable: Boolean = false,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
 
@@ -19,11 +23,23 @@ internal class StandardAppBarTopFixture private constructor(
 
         private const val defaultAppBarColor = DEFAULT
         private const val defaultEnabledElevation = true
+        private const val defaultActionRight = false
+        private const val defaultActionLeft = true
+        private const val defaultScrollable = true
+        private const val defaultProeminentContent = true
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aStandardAppBarTop(): StandardAppBarTopFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return StandardAppBarTopFixture(defaultAppBarColor, defaultEnabledElevation, context)
+            return StandardAppBarTopFixture(
+                defaultAppBarColor,
+                defaultEnabledElevation,
+                defaultActionRight,
+                defaultActionLeft,
+                defaultScrollable,
+                defaultProeminentContent,
+                context
+            )
         }
     }
 
@@ -49,6 +65,26 @@ internal class StandardAppBarTopFixture private constructor(
 
     fun withEnabledElevation(enabledElevation: Boolean): StandardAppBarTopFixture {
         this.enabledElevation = enabledElevation
+        return this
+    }
+
+    fun withActionRight(actionRight: Boolean): StandardAppBarTopFixture {
+        this.actionRight = actionRight
+        return this
+    }
+
+    fun withActionLeft(actionLeft: Boolean): StandardAppBarTopFixture {
+        this.actionLeft = actionLeft
+        return this
+    }
+
+    fun withProeminentContent(proeminentContent: Boolean): StandardAppBarTopFixture {
+        this.proeminentContent = proeminentContent
+        return this
+    }
+
+    fun withScrollable(scrollable: Boolean): StandardAppBarTopFixture {
+        this.scrollable = scrollable
         return this
     }
 

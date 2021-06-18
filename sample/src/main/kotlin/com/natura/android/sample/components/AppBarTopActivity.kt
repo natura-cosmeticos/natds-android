@@ -5,6 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
+import kotlinx.android.synthetic.main.appbartop_base.*
 import kotlinx.android.synthetic.main.appbartop_button_action.*
 import kotlinx.android.synthetic.main.appbartop_search.*
 import kotlinx.android.synthetic.main.appbartop_shortcut_action.*
@@ -32,6 +33,7 @@ class AppBarTopActivity : AppCompatActivity() {
             PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT -> appBarTopWithThreeActions.visibility = View.VISIBLE
             PATTERN_APPBARTOP_SHORTCUT -> appBarTopWithShortcutAction.visibility = View.VISIBLE
             PATTERN_APPBARTOP_BUTTON -> appBarTopWithButtonAction.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_BASE -> appBarTopBase.visibility = View.VISIBLE
         }
     }
 
@@ -43,5 +45,6 @@ class AppBarTopActivity : AppCompatActivity() {
         private const val PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT = 5
         private const val PATTERN_APPBARTOP_SHORTCUT = 6
         private const val PATTERN_APPBARTOP_BUTTON = 7
+        private const val PATTERN_APPBARTOP_BASE = 8
     }
 }

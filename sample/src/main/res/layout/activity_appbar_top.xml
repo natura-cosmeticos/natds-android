@@ -13,5 +13,6 @@
     <include layout="@layout/appbartop_title_center" android:visibility="gone"/>
     <include layout="@layout/appbartop_title_long" android:visibility="gone"/>
     <include layout="@layout/appbartop_twoactions" android:visibility="gone"/>
+    <include layout="@layout/appbartop_base" android:visibility="gone"/>
 
 </FrameLayout>

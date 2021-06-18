@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,401 +15,388 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TOKEN (A-Z)"
-            android:textColor="@color/highEmphasis"
+            android:layout_gravity="start"
             android:padding="@dimen/ds_spacing_small"
+            android:text="TOKEN (A-Z)"
             android:textAlignment="textStart"
-            android:layout_gravity="start" />
+            android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/borderRadiusButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Border Radius"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Border Radius"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/colorTokensButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Color"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Color"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/elevationTokensButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Elevation"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Elevation"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnIconsDrawables"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Icons (drawables)"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Icons (drawables)"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnIconsFont"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Icons (fonts)"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Icons (fonts)"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/opacityTokensButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Opacity"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/sizeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Size"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnSpacing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Spacing"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Spacing"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/typographyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Typography"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Typography"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="16dp"
             android:text="COMPONENT (A-Z)"
-            android:textColor="@color/highEmphasis"
-            android:padding="16dp"
             android:textAlignment="textStart"
-            android:layout_gravity="start"
-            />
-
-        <Button
-            android:id="@+id/btnBaseAppBarTop"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="App Bar Top (Base)"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
-            android:layout_gravity="start"
-            android:padding="16dp"
-            android:background="@color/surface"
             android:textColor="@color/highEmphasis" />
 
         <Button
-            android:id="@+id/btnStandardAppBarTop"
+            android:id="@+id/btnAppBarTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="App Bar Top (Standard)"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="App Bar Top"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnBadge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Badge"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Badge"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnStyleButtons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Button"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Card"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Card"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/checkboxButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Checkbox"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Checkbox"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/dialogButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dialog"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Dialog"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/dividerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Divider"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Divider"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnExpansionPanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Expansion Panel"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Expansion Panel"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/iconButtonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Icon Button"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Icon Button"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/logoButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Logo"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Logo"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnListItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="List Item"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="List Item"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/progressIndicatorButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Progress Indicator"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Progress Indicator"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/radioButtonButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Radio Button"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Radio Button"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/shortcutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shortcut"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Shortcut"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/tagButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Tag"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Tag"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnTextfield"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Text Field"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Text Field"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnValueTextHighlight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Value Text Highlight"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Value Text Highlight"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PATTERN (A-Z)"
-            android:textColor="@color/highEmphasis"
+            android:layout_gravity="start"
             android:padding="16dp"
+            android:text="PATTERN (A-Z)"
             android:textAlignment="textStart"
-            android:layout_gravity="start" />
+            android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnErrorDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Error Default"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Error Default"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnNavigationDrawer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Navigation Drawer"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Navigation Drawer"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Menu Item"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Menu Item"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
         <Button
             android:id="@+id/btnSubmenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submenu Item"
-            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
-            android:textAlignment="textStart"
             android:layout_gravity="start"
-            android:padding="16dp"
             android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Submenu Item"
+            android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
     </LinearLayout>
 </ScrollView>

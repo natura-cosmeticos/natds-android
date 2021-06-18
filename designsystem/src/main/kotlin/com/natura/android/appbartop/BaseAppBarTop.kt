@@ -7,14 +7,16 @@ import android.content.res.TypedArray
 import android.graphics.Color
 import android.util.AttributeSet
 import android.util.TypedValue
+import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
+import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 
-open class BaseAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(context, attrs) {
+open class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
 
-    private var typedArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseAppBarTop)
+    private var typedArray: TypedArray
 
     var barColor: Int = DEFAULT
         set(value) {
@@ -25,32 +27,60 @@ open class BaseAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(contex
     var enabledElevation: Boolean = true
         set(value) {
             field = value
-            setElevation()
+            setElevation(value)
         }
 
+    var scrollable: Boolean = false
+        set(value) {
+            field = value
+            handleScroll(value)
+        }
+
+    private val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
+
     init {
-        resetProperties()
+
+        try {
+            View.inflate(context, R.layout.base_appbar_top, this)
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
+
+        typedArray = context.obtainStyledAttributes(attrs, R.styleable.BaseAppBarTop)
+
+        initialConfigurations()
         getAttributes()
         typedArray.recycle()
     }
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
+        resetProperties()
+        moveGivenChildrenToToolbarArea()
         removeParentsElevation()
     }
 
     private fun resetProperties() {
-        title = ""
-        contentInsetStartWithNavigation = 0
+        toolbar.title = ""
+        toolbar.navigationIcon = null
+    }
+
+    private fun initialConfigurations() {
+        toolbar.contentInsetStartWithNavigation = 0
+        clipToPadding = false
+        clipChildren = false
     }
 
     private fun getAttributes() {
         enabledElevation = typedArray.getBoolean(R.styleable.BaseAppBarTop_enabledElevation, true)
         barColor = typedArray.getInt(R.styleable.BaseAppBarTop_appBarColor, DEFAULT)
+        scrollable = typedArray.getBoolean(R.styleable.BaseAppBarTop_scrollable, false)
     }
 
     private fun setColor(color: Int) {
-        this.setBackgroundColor(
+        setBackgroundColor(Color.TRANSPARENT)
+
+        toolbar.setBackgroundColor(
             when (color) {
                 DEFAULT -> getColorTokenFromTheme(context, R.attr.colorSurface)
                 PRIMARY -> getColorTokenFromTheme(context, R.attr.colorPrimary)
@@ -60,11 +90,11 @@ open class BaseAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(contex
         )
     }
 
-    private fun setElevation() {
+    private fun setElevation(enabledElevation: Boolean) {
         if (enabledElevation) {
-            elevation = getElevationFromTheme(context)
+            toolbar.elevation = getElevationFromTheme(context)
         } else {
-            this.elevation = 0F
+            toolbar.elevation = 0F
         }
     }
 
@@ -79,16 +109,33 @@ open class BaseAppBarTop(context: Context, attrs: AttributeSet) : Toolbar(contex
     }
 
     private fun removeParentsElevation() {
-        if (parent is AppBarLayout) {
+        val stListAnimator = StateListAnimator()
+        stListAnimator.addState(
+            IntArray(0),
+            ObjectAnimator.ofFloat(this, "elevation", 0.1F)
+        )
+        stateListAnimator = stListAnimator
+    }
 
-            val stateListAnimator = StateListAnimator()
-            stateListAnimator.addState(
-                IntArray(0),
-                ObjectAnimator.ofFloat(this, "elevation", 0.1F)
-            )
-            (parent as AppBarLayout).stateListAnimator = stateListAnimator
+    private fun moveGivenChildrenToToolbarArea() {
+        while (haveChildrenToMove()) {
+            val child = getNextChild()
+            removeView(child)
+            toolbar.addView(child)
         }
     }
+
+    private fun handleScroll(scrollable: Boolean) {
+        val params = toolbar.layoutParams as LayoutParams
+        params.scrollFlags = when (scrollable) {
+            true -> (LayoutParams.SCROLL_FLAG_SCROLL)
+            false -> (LayoutParams.SCROLL_FLAG_NO_SCROLL)
+        }
+    }
+
+    private fun haveChildrenToMove(): Boolean = getChildAt(1) != null
+
+    private fun getNextChild(): View? = getChildAt(1)
 
     companion object {
         const val DEFAULT = 0

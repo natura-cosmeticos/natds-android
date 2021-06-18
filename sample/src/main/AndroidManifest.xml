@@ -43,9 +43,6 @@
             android:name=".tokens.TypographyActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.BaseAppBarTopActivity"
-            android:theme="@style/Theme.Natura.Light.NoActionBar" />
-        <activity
             android:name=".components.AppBarTopActivity"
             android:theme="@style/Theme.Natura.Light.NoActionBar" />
         <activity

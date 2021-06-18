@@ -6,6 +6,7 @@
     <attr name="customHeight" format="reference" />
     <attr name="customWidth" format="reference" />
     <attr name="enabledElevation" format="boolean" />
+    <attr name="scrollable" format="boolean" />
 
     <attr name="appBarColor" format="enum">
         <enum name="colorDefault" value="0" />
@@ -54,6 +55,7 @@
     </declare-styleable>
 
     <declare-styleable name="BaseAppBarTop">
+        <attr name="scrollable"/>
         <attr name="enabledElevation"/>
         <attr name="appBarColor"/>
     </declare-styleable>
@@ -71,7 +73,7 @@
         <attr name="proeminentContent" format="boolean" />
         <attr name="actionRight" format="boolean" />
         <attr name="actionLeft" format="boolean" />
-        <attr name="scrollable" format="boolean" />
+        <attr name="scrollable"/>
         <attr name="contentPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="center" value="1" />

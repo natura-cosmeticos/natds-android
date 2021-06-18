@@ -62,11 +62,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TypographyActivity::class.java))
         }
 
-        btnBaseAppBarTop.setOnClickListener {
-            startActivity(Intent(this, BaseAppBarTopActivity::class.java))
-        }
-
-        btnStandardAppBarTop.setOnClickListener {
+        btnAppBarTop.setOnClickListener {
             startActivity(Intent(this, AppBarTopAttributesActivity::class.java))
         }
 

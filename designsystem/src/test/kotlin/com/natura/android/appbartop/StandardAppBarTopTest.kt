@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
+import kotlinx.android.synthetic.main.standard_appbar_top.view.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -77,7 +78,7 @@ class StandardAppBarTopTest {
     fun checksIfElevationIsGreaterThanZero() {
         appBarTop = buildStandardAppBarTopWithElevationEnabled()
 
-        val elevation = appBarTop.elevation
+        val elevation = appBarTop.toolbar.elevation
 
         Truth.assertThat(elevation).isNotEqualTo(0F)
     }

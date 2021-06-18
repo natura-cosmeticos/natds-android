@@ -22,6 +22,19 @@
             android:layout_gravity="start" />
 
         <Button
+            android:id="@+id/btnBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Base"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:padding="16dp"
+            android:background="@color/surface"
+            android:textColor="@color/highEmphasis" />
+
+
+        <Button
             android:id="@+id/btnTwoActions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -41,7 +41,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             setElevation(value)
         }
 
-    private var scrollable: Boolean = false
+    var scrollable: Boolean = false
         set(value) {
             field = value
             handleScroll(value)
@@ -175,8 +175,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         )
     }
 
-    private fun setElevation(value: Boolean) {
-        if (value) {
+    private fun setElevation(enabledElevation: Boolean) {
+        if (enabledElevation) {
             toolbar.elevation = getElevationFromTheme(context)
         } else {
             toolbar.elevation = 0F
@@ -282,7 +282,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     private fun getWindowWidthInPx(context: Context): Int {
-
         return try {
 
             val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
