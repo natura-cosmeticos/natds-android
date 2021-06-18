@@ -36,7 +36,7 @@ open class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(c
             handleScroll(value)
         }
 
-    private val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
+    private val toolbar: Toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
 
     init {
 

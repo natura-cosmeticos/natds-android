@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
+import kotlinx.android.synthetic.main.base_appbar_top.view.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -74,10 +75,28 @@ class BaseAppBarTopTest {
     }
 
     @Test
+    fun checksIsScrollableIsTrue() {
+        appBarTop = buildBaseAppBarTopWithScrollableTrue()
+
+        val scrollable = appBarTop.scrollable
+
+        Truth.assertThat(scrollable).isEqualTo(true)
+    }
+
+    @Test
+    fun checksIsScrollableIsFalse() {
+        appBarTop = buildBaseAppBarTopWithScrollableFalse()
+
+        val scrollable = appBarTop.scrollable
+
+        Truth.assertThat(scrollable).isEqualTo(false)
+    }
+
+    @Test
     fun checksIfElevationIsGreaterThanZero() {
         appBarTop = buildBaseAppBarTopWithElevationEnabled()
 
-        val elevation = appBarTop.elevation
+        val elevation = appBarTop.toolbar.elevation
 
         Truth.assertThat(elevation).isNotEqualTo(0F)
     }
@@ -86,7 +105,7 @@ class BaseAppBarTopTest {
     fun checksIfElevationIsZero() {
         appBarTop = buildBaseAppBarTopWithElevationDisabled()
 
-        val elevation = appBarTop.elevation
+        val elevation = appBarTop.toolbar.elevation
 
         Truth.assertThat(elevation).isEqualTo(0F)
     }
@@ -130,6 +149,20 @@ class BaseAppBarTopTest {
         return BaseAppBarTopFixture
             .aBaseAppBarTop()
             .withEnabledElevation(false)
+            .build()
+    }
+
+    private fun buildBaseAppBarTopWithScrollableTrue(): BaseAppBarTop {
+        return BaseAppBarTopFixture
+            .aBaseAppBarTop()
+            .withScrollable(true)
+            .build()
+    }
+
+    private fun buildBaseAppBarTopWithScrollableFalse(): BaseAppBarTop {
+        return BaseAppBarTopFixture
+            .aBaseAppBarTop()
+            .withScrollable(false)
             .build()
     }
 

@@ -8,6 +8,7 @@ import org.robolectric.Robolectric
 internal class BaseAppBarTopFixture private constructor(
     private var appBarColor: Int? = null,
     private var enabledElevation: Boolean = false,
+    private var scrollable: Boolean = false,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
 
@@ -19,11 +20,12 @@ internal class BaseAppBarTopFixture private constructor(
 
         private const val defaultAppBarColor = DEFAULT
         private const val defaultEnabledElevation = true
+        private const val defaultScrollable = false
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aBaseAppBarTop(): BaseAppBarTopFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return BaseAppBarTopFixture(defaultAppBarColor, defaultEnabledElevation, context)
+            return BaseAppBarTopFixture(defaultAppBarColor, defaultEnabledElevation, defaultScrollable, context)
         }
     }
 
@@ -52,10 +54,16 @@ internal class BaseAppBarTopFixture private constructor(
         return this
     }
 
+    fun withScrollable(scrollable: Boolean): BaseAppBarTopFixture {
+        this.scrollable = scrollable
+        return this
+    }
+
     fun build(): BaseAppBarTop {
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.enabledElevation, enabledElevation.toString())
+            .addAttribute(R.attr.scrollable, scrollable.toString())
             .addAttribute(R.attr.appBarColor, appBarColor.toString())
             .build()
 

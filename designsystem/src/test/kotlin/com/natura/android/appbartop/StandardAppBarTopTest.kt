@@ -87,7 +87,7 @@ class StandardAppBarTopTest {
     fun checksIfElevationIsZero() {
         appBarTop = buildStandardAppBarTopWithElevationDisabled()
 
-        val elevation = appBarTop.elevation
+        val elevation = appBarTop.toolbar.elevation
 
         Truth.assertThat(elevation).isEqualTo(0F)
     }
