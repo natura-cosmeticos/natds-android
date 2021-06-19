@@ -24,7 +24,7 @@ class StandardAppBarTopTest {
     fun checksIfPrimaryColorWasSet() {
         appBarTop = buildStandardAppBarTopPrimaryColor()
 
-        val color = appBarTop.barColor
+        val color = appBarTop.getColor()
 
         Truth.assertThat(color).isEqualTo(PRIMARY)
     }
@@ -33,7 +33,7 @@ class StandardAppBarTopTest {
     fun checksIfDefaultColorWasSet() {
         appBarTop = buildStandardAppBarTopDefaultColor()
 
-        val color = appBarTop.barColor
+        val color = appBarTop.getColor()
 
         Truth.assertThat(color).isEqualTo(DEFAULT)
     }
@@ -42,7 +42,7 @@ class StandardAppBarTopTest {
     fun checksIfInverseColorWasSet() {
         appBarTop = buildStandardAppBarTopInverseColor()
 
-        val color = appBarTop.barColor
+        val color = appBarTop.getColor()
 
         Truth.assertThat(color).isEqualTo(INVERSE)
     }
@@ -51,7 +51,7 @@ class StandardAppBarTopTest {
     fun checksIfNoneColorWasSet() {
         appBarTop = buildStandardAppBarTopNoneColor()
 
-        val color = appBarTop.barColor
+        val color = appBarTop.getColor()
 
         Truth.assertThat(color).isEqualTo(NONE)
     }
@@ -60,7 +60,7 @@ class StandardAppBarTopTest {
     fun checksIfElevationEnabledIsFalse() {
         appBarTop = buildStandardAppBarTopWithElevationDisabled()
 
-        val elevationEnabled = appBarTop.enabledElevation
+        val elevationEnabled = appBarTop.getElevationEnabled()
 
         Truth.assertThat(elevationEnabled).isEqualTo(false)
     }
@@ -69,9 +69,117 @@ class StandardAppBarTopTest {
     fun checksIfElevationEnabledIsTrue() {
         appBarTop = buildStandardAppBarTopWithElevationEnabled()
 
-        val elevationEnabled = appBarTop.enabledElevation
+        val elevationEnabled = appBarTop.getElevationEnabled()
 
         Truth.assertThat(elevationEnabled).isEqualTo(true)
+    }
+
+    @Test
+    fun checksIfScrollableIsTrue() {
+        appBarTop = buildStandardAppBarTopWithScrollabletEnabled()
+
+        val scrollable = appBarTop.getScrollable()
+
+        Truth.assertThat(scrollable).isEqualTo(true)
+    }
+
+    @Test
+    fun checksIfScrollableIsFalse() {
+        appBarTop = buildStandardAppBarTopWithScrollabletDisabled()
+
+        val scrollable = appBarTop.getScrollable()
+
+        Truth.assertThat(scrollable).isEqualTo(false)
+    }
+
+    @Test
+    fun checksIfActionLeftIsInvisible() {
+        appBarTop = buildStandardAppBarTopWithActionLeftInVisible()
+
+        val actionLeft = appBarTop.getActionLeft()
+
+        Truth.assertThat(actionLeft).isEqualTo(false)
+    }
+
+    @Test
+    fun checksIfActionRightIsInvisible() {
+        appBarTop = buildStandardAppBarTopWithActionRightInVisible()
+
+        val actionRight = appBarTop.getActionRight()
+
+        Truth.assertThat(actionRight).isEqualTo(false)
+    }
+
+    @Test
+    fun checksIfProeminentContentIsTrue() {
+        appBarTop = buildStandardAppBarTopWithContentProeminentEnabled()
+
+        val proeminentContent = appBarTop.getProeminentContent()
+
+        Truth.assertThat(proeminentContent).isEqualTo(true)
+    }
+
+    @Test
+    fun checksIfProeminentContentIsFalse() {
+        appBarTop = buildStandardAppBarTopWithContentProeminentDisabled()
+
+        val proeminentContent = appBarTop.getProeminentContent()
+
+        Truth.assertThat(proeminentContent).isEqualTo(false)
+    }
+
+    @Test
+    fun checksIfContentTypeIsText() {
+        appBarTop = buildStandardAppBarTopWithTextContentType()
+
+        val contentType = appBarTop.getContentType()
+
+        Truth.assertThat(contentType).isEqualTo(TEXT)
+    }
+
+    @Test
+    fun checksIfContentTypeIsMedia() {
+        appBarTop = buildStandardAppBarTopWithMediaContentType()
+
+        val contentType = appBarTop.getContentType()
+
+        Truth.assertThat(contentType).isEqualTo(MEDIA)
+    }
+
+    @Test
+    fun checksIfContentTypeIsSearch() {
+        appBarTop = buildStandardAppBarTopWithSearchContentType()
+
+        val contentType = appBarTop.getContentType()
+
+        Truth.assertThat(contentType).isEqualTo(SEARCH)
+    }
+
+    @Test
+    fun checksIfContentPositionIsLeft() {
+        appBarTop = buildStandardAppBarTopWithLeftContentPosition()
+
+        val contentPosition = appBarTop.getContentPosition()
+
+        Truth.assertThat(contentPosition).isEqualTo(LEFT)
+    }
+
+    @Test
+    fun checksIfContentPositionIsCenter() {
+        appBarTop = buildStandardAppBarTopWithCenterContentPosition()
+
+        val contentPosition = appBarTop.getContentPosition()
+
+        Truth.assertThat(contentPosition).isEqualTo(CENTER)
+    }
+
+    @Test
+    fun checksContentText() {
+        appBarTop = buildStandardAppBarTopWithContentText()
+
+        val contentText = appBarTop.getContentText()
+
+        Truth.assertThat(contentText).isEqualTo("Title Center")
     }
 
     @Test
@@ -134,10 +242,101 @@ class StandardAppBarTopTest {
             .build()
     }
 
+    private fun buildStandardAppBarTopWithMediaContentType(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withMediaContentType()
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithTextContentType(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withTextContentType()
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithSearchContentType(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withSearchContentType()
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithLeftContentPosition(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withLeftContentPosition()
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithCenterContentPosition(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withCenterContentPosition()
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithActionLeftInVisible(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withActionLeft(false)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithActionRightInVisible(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withActionRight(false)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithContentProeminentEnabled(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withProeminentContent(true)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithContentProeminentDisabled(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withProeminentContent(false)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithScrollabletDisabled(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withScrollable(false)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithScrollabletEnabled(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withScrollable(true)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithContentText(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withContentText("Title Center")
+            .build()
+    }
+
     companion object {
         const val DEFAULT = 0
         const val PRIMARY = 1
         const val NONE = 2
         const val INVERSE = 3
+
+        const val TEXT = 0
+        const val MEDIA = 1
+        const val SEARCH = 2
+
+        const val LEFT = 0
+        const val CENTER = 1
     }
 }

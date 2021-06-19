@@ -29,19 +29,19 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private var typedArray: TypedArray
 
-    var barColor: Int = DEFAULT
+    private var barColor: Int = DEFAULT
         set(value) {
             field = value
             setColor(value, context)
         }
 
-    var enabledElevation: Boolean = true
+    private var enabledElevation: Boolean = true
         set(value) {
             field = value
             setElevation(value)
         }
 
-    var scrollable: Boolean = false
+    private var scrollable: Boolean = false
         set(value) {
             field = value
             handleScroll(value)
@@ -83,6 +83,46 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         throwsCountElementsException()
         changeActionsVisibility()
         removeParentsElevation()
+    }
+
+    fun getColor(): Int {
+        return barColor
+    }
+
+    fun getElevationEnabled(): Boolean {
+        return enabledElevation
+    }
+
+    fun getScrollable(): Boolean {
+        return scrollable
+    }
+
+    fun getActionRight(): Boolean {
+        return actionRight
+    }
+
+    fun getActionLeft(): Boolean {
+        return actionLeft
+    }
+
+    fun getProeminentContent(): Boolean {
+        return proeminentContent
+    }
+
+    fun getContentPosition(): Int {
+        return contentPosition
+    }
+
+    fun getContentText(): String? {
+        return contentText
+    }
+
+    fun getContentImage(): Int? {
+        return contentImage
+    }
+
+    fun getContentType(): Int {
+        return contentType
     }
 
     private fun changeActionsVisibility() {

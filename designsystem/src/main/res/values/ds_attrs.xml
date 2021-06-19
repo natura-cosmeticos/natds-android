@@ -61,6 +61,7 @@
     </declare-styleable>
 
     <declare-styleable name="StandardAppBarTop">
+        <attr name="scrollable"/>
         <attr name="enabledElevation"/>
         <attr name="appBarColor"/>
         <attr name="contentType" format="enum">
@@ -73,7 +74,6 @@
         <attr name="proeminentContent" format="boolean" />
         <attr name="actionRight" format="boolean" />
         <attr name="actionLeft" format="boolean" />
-        <attr name="scrollable"/>
         <attr name="contentPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="center" value="1" />

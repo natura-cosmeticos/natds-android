@@ -12,6 +12,9 @@ internal class StandardAppBarTopFixture private constructor(
     private var actionLeft: Boolean = false,
     private var proeminentContent: Boolean = false,
     private var scrollable: Boolean = false,
+    private var contentType: Int = TEXT,
+    private var contentPosition: Int = CENTER,
+    private var contentText: String = "",
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
 
@@ -21,12 +24,22 @@ internal class StandardAppBarTopFixture private constructor(
         private const val NONE = 2
         private const val INVERSE = 3
 
+        private const val TEXT = 0
+        private const val MEDIA = 1
+        private const val SEARCH = 2
+
+        private const val LEFT = 0
+        private const val CENTER = 1
+
         private const val defaultAppBarColor = DEFAULT
         private const val defaultEnabledElevation = true
         private const val defaultActionRight = false
         private const val defaultActionLeft = true
         private const val defaultScrollable = true
         private const val defaultProeminentContent = true
+        private const val defaultContentPosition = CENTER
+        private const val defaultContentType = TEXT
+        private const val defaultContentText = ""
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aStandardAppBarTop(): StandardAppBarTopFixture {
@@ -38,6 +51,9 @@ internal class StandardAppBarTopFixture private constructor(
                 defaultActionLeft,
                 defaultScrollable,
                 defaultProeminentContent,
+                defaultContentPosition,
+                defaultContentType,
+                defaultContentText,
                 context
             )
         }
@@ -60,6 +76,31 @@ internal class StandardAppBarTopFixture private constructor(
 
     fun withInverseAppBarColor(): StandardAppBarTopFixture {
         this.appBarColor = INVERSE
+        return this
+    }
+
+    fun withTextContentType(): StandardAppBarTopFixture {
+        this.contentType = TEXT
+        return this
+    }
+
+    fun withMediaContentType(): StandardAppBarTopFixture {
+        this.contentType = MEDIA
+        return this
+    }
+
+    fun withSearchContentType(): StandardAppBarTopFixture {
+        this.contentType = SEARCH
+        return this
+    }
+
+    fun withLeftContentPosition(): StandardAppBarTopFixture {
+        this.contentPosition = LEFT
+        return this
+    }
+
+    fun withCenterContentPosition(): StandardAppBarTopFixture {
+        this.contentPosition = CENTER
         return this
     }
 
@@ -88,11 +129,23 @@ internal class StandardAppBarTopFixture private constructor(
         return this
     }
 
+    fun withContentText(text: String): StandardAppBarTopFixture {
+        this.contentText = text
+        return this
+    }
+
     fun build(): StandardAppBarTop {
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.enabledElevation, enabledElevation.toString())
             .addAttribute(R.attr.appBarColor, appBarColor.toString())
+            .addAttribute(R.attr.contentType, contentType.toString())
+            .addAttribute(R.attr.contentPosition, contentPosition.toString())
+            .addAttribute(R.attr.contentText, contentText)
+            .addAttribute(R.attr.scrollable, scrollable.toString())
+            .addAttribute(R.attr.proeminentContent, proeminentContent.toString())
+            .addAttribute(R.attr.actionRight, actionRight.toString())
+            .addAttribute(R.attr.actionLeft, actionLeft.toString())
             .build()
 
         return StandardAppBarTop(context, attributes)
