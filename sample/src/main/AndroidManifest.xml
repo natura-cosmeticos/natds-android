@@ -22,7 +22,7 @@
         </activity>
         <activity
             android:name=".BrandSelectorActivity"
-            android:theme="@style/SplashTheme"/>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".tokens.ElevationActivity"
@@ -43,16 +43,8 @@
             android:name=".tokens.TypographyActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.AppBarActivity"
-            android:theme="@style/Theme.Natura.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
+            android:name=".components.AppBarTopActivity"
+            android:theme="@style/Theme.Natura.Light.NoActionBar" />
         <activity
             android:name=".components.BadgeActivity"
             android:theme="@style/Theme.Natura.Light" />
@@ -100,16 +92,16 @@
             android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.ColorsActivity"
-            android:theme="@style/Theme.Natura.Light"/>
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ShortcutActivity"
-            android:theme="@style/Theme.Natura.Light"/>
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.TagActivity"
-            android:theme="@style/Theme.Natura.Light"/>
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.IconButtonActivity"
-            android:theme="@style/Theme.Natura.Light"/>
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.CardActivity"
             android:theme="@style/Theme.Natura.Light" />
@@ -119,9 +111,10 @@
         <activity
             android:name=".components.RadioButtonActivity"
             android:theme="@style/Theme.Natura.Light" />
-
         <activity
             android:name=".components.listitem.ListItemActivity"
             android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".AppBarTopAttributesActivity"/>
     </application>
 </manifest>

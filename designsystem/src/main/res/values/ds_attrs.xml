@@ -5,6 +5,15 @@
     <attr name="customElevation" format="reference" />
     <attr name="customHeight" format="reference" />
     <attr name="customWidth" format="reference" />
+    <attr name="enabledElevation" format="boolean" />
+    <attr name="scrollable" format="boolean" />
+
+    <attr name="appBarColor" format="enum">
+        <enum name="colorDefault" value="0" />
+        <enum name="colorPrimary" value="1" />
+        <enum name="none" value="2" />
+        <enum name="inverse" value="3" />
+    </attr>
 
     <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
@@ -45,8 +54,30 @@
 
     </declare-styleable>
 
-    <declare-styleable name="AppBar">
-        <attr name="showLogo" format="boolean" />
+    <declare-styleable name="BaseAppBarTop">
+        <attr name="scrollable"/>
+        <attr name="enabledElevation"/>
+        <attr name="appBarColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="StandardAppBarTop">
+        <attr name="scrollable"/>
+        <attr name="enabledElevation"/>
+        <attr name="appBarColor"/>
+        <attr name="contentType" format="enum">
+            <enum name="text" value="0" />
+            <enum name="media" value="1" />
+            <enum name="search" value="2" />
+        </attr>
+        <attr name="contentMedia" format="reference" />
+        <attr name="contentText" format="string" />
+        <attr name="proeminentContent" format="boolean" />
+        <attr name="actionRight" format="boolean" />
+        <attr name="actionLeft" format="boolean" />
+        <attr name="contentPosition" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="Badge">
@@ -157,7 +188,7 @@
         <attr name="colorBackground" />
         <attr name="customRadius" format="reference" />
         <attr name="enabledRadius" format="boolean" />
-        <attr name="enabledElevation" format="boolean" />
+        <attr name="enabledElevation" />
         <attr name="customElevation" />
     </declare-styleable>
 

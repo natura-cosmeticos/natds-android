@@ -62,8 +62,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TypographyActivity::class.java))
         }
 
-        btnAppbar.setOnClickListener {
-            startActivity(Intent(this, AppBarActivity::class.java))
+        btnAppBarTop.setOnClickListener {
+            startActivity(Intent(this, AppBarTopAttributesActivity::class.java))
         }
 
         btnStyleButtons.setOnClickListener {

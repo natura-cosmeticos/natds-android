@@ -93,10 +93,14 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenAppBarTopScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnAppbar)).perform(scrollTo())
-        onView(withId(R.id.btnAppbar)).perform(click())
+        onView(withId(R.id.btnAppBarTop)).perform(scrollTo())
+        onView(withId(R.id.btnAppBarTop)).perform(click())
 
-        onView(withId(R.id.appBar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnActionButton)).check(matches(isDisplayed()))
+
+        onView(withId(R.id.btnActionButton)).perform(click())
+
+        onView(withId(R.id.buttonActionViewIconButtonActionRight)).check(matches(isDisplayed()))
     }
 
     @Test
@@ -109,16 +113,16 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenDialogScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.dialogButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.dialogButton)).perform(click())
+        onView(withId(R.id.dialogButton)).perform(scrollTo())
+        onView(withId(R.id.dialogButton)).perform(click())
 
         onView(ViewMatchers.withText("Dialog")).check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test
     fun shouldOpenExpansionPanelScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnExpansionPanel)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnExpansionPanel)).perform(click())
+        onView(withId(R.id.btnExpansionPanel)).perform(scrollTo())
+        onView(withId(R.id.btnExpansionPanel)).perform(click())
 
         onView(allOf(ViewMatchers.withText("Expansion Panel"), withParent(withResourceName("action_bar"))))
             .check(matches(ViewMatchers.isDisplayed()))
