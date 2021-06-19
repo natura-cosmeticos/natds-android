@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.7.1.1...v.8.0.0) (2021-06-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Refactor AppBar Top, removing and updating old attributes
+
+### Features
+
+* adds new screens to show AppBar top attributes at SampleApp ([dd80d37](https://github.com/natura-cosmeticos/natds-android/commit/dd80d3714abd71f7b426fe193b6143badc4546bc))
+* adds news attributes and configurations at Standard AppBar Top ([99f229f](https://github.com/natura-cosmeticos/natds-android/commit/99f229f1463d8a02b36c8e4e10dea6bea1f9201e))
+* creates Standard AppBar top component ([308d295](https://github.com/natura-cosmeticos/natds-android/commit/308d2952061b9d33d2bc2913bf0fa51db657b585))
+* recreates appbar top component to allow two variations ([41513a8](https://github.com/natura-cosmeticos/natds-android/commit/41513a8873aa5aa63369c3c5fa30a795c6ae7f9a))
+
+
+### Bug Fixes
+
+* become action clickable and fixes spacing at AppBar Top component ([d7d1d65](https://github.com/natura-cosmeticos/natds-android/commit/d7d1d659c4d6a741f8f8cc818b00faa04d8131a8))
+* removes unnecessary appbar top's patterns and fixes bug with proeminent attribute ([e269ce5](https://github.com/natura-cosmeticos/natds-android/commit/e269ce51568d6e7511258cf4dc1f9cfb41b7ff50))
+* update main appbartop button referens at Unit Tests ([6a90716](https://github.com/natura-cosmeticos/natds-android/commit/6a907166d69d2716237b2bdcb6ad303b685dc3f2))
+
+
+* refactors AppBarTop doc ([4937827](https://github.com/natura-cosmeticos/natds-android/commit/4937827b63eb630e4e06da2fd6703e8a6e02bd0f))
+
 ### [7.1.1](https://github.com/natura-cosmeticos/natds-android/compare/v.7.1.0...v.7.1.1) (2021-05-21)
 
 
