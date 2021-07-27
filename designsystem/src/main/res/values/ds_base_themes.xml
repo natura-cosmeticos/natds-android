@@ -152,6 +152,8 @@
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>
+        <item name="dialogWithContainedButtons">@style/Theme.DS.Dialog.ContainedButtons</item>
+        <item name="dialogWithTextButtons">@style/Theme.DS.Dialog.TextButtons</item>
 
         <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
         <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>

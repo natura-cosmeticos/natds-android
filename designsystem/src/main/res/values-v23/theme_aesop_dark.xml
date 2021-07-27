@@ -257,6 +257,8 @@
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>
+        <item name="dialogWithContainedButtons">@style/Theme.DS.Dialog.ContainedButtons</item>
+        <item name="dialogWithTextButtons">@style/Theme.DS.Dialog.TextButtons</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>

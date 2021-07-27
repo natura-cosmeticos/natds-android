@@ -13,8 +13,15 @@ import com.natura.android.sample.setChosenDefaultTheme
 import kotlinx.android.synthetic.main.activity_dialog.*
 
 class DialogActivity : AppCompatActivity() {
-    lateinit var dialogStandard: DialogStandard
-    lateinit var dialogAlert: DialogAlert
+    lateinit var standardDialog: DialogStandard
+    lateinit var standardDialogVerticalButtons: DialogStandard
+    lateinit var standardDialogHeaderIconButtons: DialogStandard
+    lateinit var standardDialogMaxHeight: DialogStandard
+    lateinit var standardDialogCustomView: DialogStandard
+    lateinit var standardDialogWithDivider: DialogStandard
+    lateinit var dialogNoDismissable: DialogStandard
+
+    lateinit var alertDialog: DialogAlert
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
@@ -27,13 +34,43 @@ class DialogActivity : AppCompatActivity() {
 
         createStandardDialog()
         createAlertDialog()
+        createStandardDialogWithLongTitleButton()
+        createStandardDialogWithMaxHeight()
+        createStandardDialogWithHeaderIconButtons()
+        createStandardDialogWithCustomView()
+        createStandardDialogWithDivider()
+        createNoDismissableStandardDialog()
 
         standardDialogButton.setOnClickListener {
-            dialogStandard.show()
+            standardDialog.show()
         }
 
         alertDialogButton.setOnClickListener {
-            dialogAlert.show()
+            alertDialog.show()
+        }
+
+        standardDialogVerticalButtonsButton.setOnClickListener {
+            standardDialogVerticalButtons.show()
+        }
+
+        standardDialogMaxHeightButton.setOnClickListener {
+            standardDialogMaxHeight.show()
+        }
+
+        standardDialogCustomViewButton.setOnClickListener {
+            standardDialogCustomView.show()
+        }
+
+        standardDialogWithDividerButton.setOnClickListener {
+            standardDialogWithDivider.show()
+        }
+
+        standardDialogHeaderIconButtonsButton.setOnClickListener {
+            standardDialogHeaderIconButtons.show()
+        }
+
+        dialogNoDismissableButton.setOnClickListener {
+            dialogNoDismissable.show()
         }
     }
 
@@ -58,13 +95,60 @@ class DialogActivity : AppCompatActivity() {
             ).show()
         }
 
-        dialogAlert = DialogAlert(
+        alertDialog = DialogAlert(
             this,
             "Confirm Button",
             mainClickListener,
             "Close",
             secondaryClickListener,
             "Long text that should be substitied for some alert text. This might actually take two lines or more"
+        ).create()
+    }
+
+    private fun createStandardDialogWithHeaderIconButtons() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        val firstHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+        val secondHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+        val thirdHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+
+        standardDialogHeaderIconButtons = DialogStandard(
+            this,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            false,
+            0,
+            "outlined-action-mic",
+            firstHeaderAction,
+            "outlined-action-add",
+            secondHeaderAction,
+            "outlined-action-cancel",
+            thirdHeaderAction
         ).create()
     }
 
@@ -84,31 +168,174 @@ class DialogActivity : AppCompatActivity() {
             ).show()
         }
 
-        val firstHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show()
-        }
-        val secondHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show()
-        }
-        val thirdHeaderAction = View.OnClickListener {
-            Toast.makeText(this, "Dialog Main Action", Toast.LENGTH_LONG).show()
-        }
-
-        dialogStandard = DialogStandard(
+        standardDialog = DialogStandard(
             this,
             "Title",
             "Confirm Button",
             mainClickListener,
             "Close",
             secondaryClickListener,
-            R.layout.dialog_standard_content,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true
+        ).create()
+    }
+
+    private fun createStandardDialogWithLongTitleButton() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        standardDialogVerticalButtons = DialogStandard(
+            this,
+            "Title",
+            "This button is a long title",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true
+        ).create()
+    }
+
+    private fun createStandardDialogWithMaxHeight() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        standardDialogMaxHeight = DialogStandard(
+            this,
+            "Title",
+            "Confirm",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Imperdiet nulla malesuada pellentesque elit eget gravida. Convallis tellus id interdum velit laoreet id donec. Id interdum velit laoreet id. Eget gravida cum sociis natoque penatibus et. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Sodales ut etiam sit amet nisl purus in. Egestas dui id ornare arcu odio ut. Pellentesque id nibh tortor id aliquet lectus proin. Egestas dui id ornare arcu odio ut sem nulla pharetra. Pulvinar proin gravida hendrerit lectus a. Sapien pellentesque habitant morbi tristique senectus et. Facilisis leo vel fringilla est ullamcorper eget nulla. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. ",
+            true
+        ).create()
+    }
+
+    private fun createStandardDialogWithCustomView() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        standardDialogCustomView = DialogStandard(
+            this,
+            "Title",
+            "Confirm",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            R.layout.dialog_standard_custom_view,
+            true
+        ).create()
+    }
+
+    private fun createStandardDialogWithDivider() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        val firstHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+        val secondHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+        val thirdHeaderAction = View.OnClickListener {
+            Toast.makeText(this, "Dialog Header Icon Action", Toast.LENGTH_LONG).show()
+        }
+
+        standardDialogWithDivider = DialogStandard(
+            this,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            true,
+            0,
             "outlined-action-mic",
             firstHeaderAction,
-            "outlined-action-mic",
+            "outlined-action-add",
             secondHeaderAction,
-            "outlined-action-mic",
-            thirdHeaderAction,
-            true
+            "outlined-action-cancel",
+            thirdHeaderAction
+        ).create()
+    }
+
+    private fun createNoDismissableStandardDialog() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        val secondaryClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Secondary Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+
+        dialogNoDismissable = DialogStandard(
+            this,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            secondaryClickListener,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            false
         ).create()
     }
 }

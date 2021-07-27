@@ -1,94 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dialogCustomContent"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:paddingTop="?spacingSmall">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/dialogAlertTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="?spacingSmall"
-        android:text="Title"
-        android:textAppearance="?textAppearanceHeadline6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="?spacingSmall"
+        android:paddingHorizontal="?spacingSmall"
+        android:layout_height="wrap_content">
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/firstIconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="?spacingSmall"
-        android:enabled="true"
-        android:visibility="gone"
-        app:buttonColor="defaultColor"
-        app:iconName="outlined_default_mockup"
-        app:layout_constraintEnd_toStartOf="@+id/secondIconButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:sizeButton="semi"
-        app:styleButton="inherit" />
+        <TextView
+            android:id="@+id/dialogStandardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textAppearance="?textAppearanceHeadline6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/secondIconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="?spacingSmall"
-        android:enabled="true"
-        android:visibility="gone"
-        app:buttonColor="defaultColor"
-        app:iconName="outlined_default_mockup"
-        app:layout_constraintEnd_toStartOf="@+id/thirdIconButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:sizeButton="semi"
-        app:styleButton="inherit" />
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/firstIconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingTiny"
+            android:visibility="gone"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:layout_constraintEnd_toStartOf="@+id/secondIconButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
 
-    <com.natura.android.iconButton.IconButton
-        android:id="@+id/thirdIconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="?spacingSmall"
-        android:enabled="true"
-        android:visibility="gone"
-        app:buttonColor="defaultColor"
-        app:iconName="outlined_default_mockup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:sizeButton="semi"
-        app:styleButton="inherit" />
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/secondIconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingTiny"
+            android:visibility="gone"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:layout_constraintEnd_toStartOf="@+id/thirdIconButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
+
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/thirdIconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?spacingTiny"
+            android:visibility="gone"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.natura.android.divider.Divider
         android:id="@+id/topDivider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:dividerType="fullBleed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialogAlertTitle" />
+        app:dividerType="fullBleed" />
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <LinearLayout
+        android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/bottomDivider"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topDivider">
-
-    </ScrollView>
+        android:paddingHorizontal="?spacingSmall"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    </LinearLayout>
 
     <com.natura.android.divider.Divider
         android:id="@+id/bottomDivider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:dividerType="fullBleed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:dividerType="fullBleed" />
+</LinearLayout>

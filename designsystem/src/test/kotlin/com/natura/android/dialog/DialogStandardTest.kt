@@ -2,14 +2,16 @@ package com.natura.android.dialog
 
 import android.content.Context
 import android.content.DialogInterface
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
-import androidx.appcompat.widget.DialogTitle
+import android.widget.TextView
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
 import kotlinx.android.synthetic.main.dialog_standard_content.*
+import kotlinx.android.synthetic.main.dialog_standard_view.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -31,7 +33,7 @@ class DialogStandardTest {
     fun checksDialogTitle() {
         dialog.show()
 
-        val alertTitle = dialog.dialog.findViewById<DialogTitle>(R.id.alertTitle)
+        val alertTitle = dialog.dialog.findViewById<TextView>(R.id.dialogStandardTitle)
 
         assertThat(alertTitle?.text).isEqualTo("Dialog Title")
     }
@@ -83,6 +85,32 @@ class DialogStandardTest {
         assertThat(dialogCustomContent).isEqualTo("Text Example")
     }
 
+    @Test
+    fun checksDialogHeaderIcons() {
+        dialog = createDialogWithHeaderIcons()
+        dialog.show()
+
+        val firstIconButton = dialog.dialog.firstIconButton.getIcon()
+        val secondIconButton = dialog.dialog.secondIconButton.getIcon()
+        val thirdIconButton = dialog.dialog.thirdIconButton.getIcon()
+
+        assertThat(firstIconButton).isNotNull()
+        assertThat(secondIconButton).isNotNull()
+        assertThat(thirdIconButton).isNotNull()
+    }
+
+    @Test
+    fun checksDialogDividers() {
+        dialog = createDialogDividers()
+        dialog.show()
+
+        val topDivider = dialog.dialog.topDivider
+        val bottomDivider = dialog.dialog.bottomDivider
+
+        assertThat(topDivider.visibility).isEqualTo(View.VISIBLE)
+        assertThat(bottomDivider.visibility).isEqualTo(View.VISIBLE)
+    }
+
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
         return DialogStandard(
             context,
@@ -120,5 +148,55 @@ class DialogStandardTest {
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
             "Text Example").create()
+    }
+
+    private fun createDialogWithHeaderIcons(): DialogStandard {
+        val view = ImageView(context)
+        view.setImageResource(R.drawable.default_icon_outlined_default_mockup)
+
+        return DialogStandard(
+            context,
+            "Title",
+            "Confirm Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Close",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            false,
+            0,
+            "outlined-action-mic",
+            null,
+            "outlined-action-add",
+            null,
+            "outlined-action-cancel",
+            null
+        ).create()
+    }
+
+    private fun createDialogDividers(): DialogStandard {
+        val view = ImageView(context)
+        view.setImageResource(R.drawable.default_icon_outlined_default_mockup)
+
+        return DialogStandard(
+            context,
+            "Title",
+            "Confirm Button",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Close",
+            DialogInterface.OnClickListener { _, _ -> },
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            true,
+            0,
+            "outlined-action-mic",
+            null,
+            "outlined-action-add",
+            null,
+            "outlined-action-cancel",
+            null
+        ).create()
     }
 }

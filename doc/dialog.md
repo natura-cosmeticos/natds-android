@@ -1,5 +1,20 @@
 # Dialog
 
+#### Note:
+
+This component is available in the following variants:
+
+* ✅ Alert
+* ✅ Standard
+
+With the following attribute status:
+
+* Divider(Standard):
+    * ✅ `False` (default)
+    * ✅ `True`
+    
+* ✅ HeaderIconButtons(Standard)
+
 ### What is it?
 Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
 

@@ -16,11 +16,24 @@
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>
 
+    <style name="Theme.DS.Dialog.ContainedButtons" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+        <item name="android:windowBackground">@drawable/dialog_standard_background</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+        <item name="android:windowBackground">@drawable/dialog_standard_background</item>
+    </style>
+
     <style name="Theme.DS.Dialog.Title" parent="@style/Heading6">
     </style>
 
     <style name="Theme.DS.Dialog.ButtonBarStyle" parent="@style/Base.Widget.AppCompat.ButtonBar">
-        <item name="android:paddingTop">?spacingMicro</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.MainButton.V23" parent="@style/Widget.MaterialComponents.Button">
