@@ -4,20 +4,19 @@
     android:id="@+id/dialogCustomContent"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="100dp">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/dialogAlertText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+        android:layout_weight="1"
+        android:maxLines="23"
+        android:verticalScrollbarPosition="right"
         android:paddingTop="@dimen/ds_spacing_small"
         android:ellipsize="end"
         android:paddingBottom="@dimen/ds_spacing_small"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        android:textAppearance="?textAppearanceBody1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAppearance="?textAppearanceBody1" />
 </LinearLayout>
