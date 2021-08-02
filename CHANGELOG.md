@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.0.0...v.8.1.0) (2021-08-02)
+
+
+### Features
+
+* adds log and new constructors to show Dialog with icon Buttons at header and dividers ([a66e962](https://github.com/natura-cosmeticos/natds-android/commit/a66e962026c515116f1cba6cc8b9a71d3fbec8ef))
+
 ## [8.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.7.1.1...v.8.0.0) (2021-06-19)
 
 
