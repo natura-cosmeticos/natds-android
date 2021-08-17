@@ -25,6 +25,10 @@ android {
         }
     }
 
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
