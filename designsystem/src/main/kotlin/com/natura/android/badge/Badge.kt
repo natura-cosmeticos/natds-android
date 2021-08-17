@@ -1,5 +1,7 @@
 package com.natura.android.badge
 
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
@@ -8,6 +10,7 @@ import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
+import com.natura.android.resources.getColorTokenFromTheme
 
 /**
  * The Badge is a screen element used to signal the user’s points of attention.
@@ -29,6 +32,8 @@ import com.natura.android.exceptions.MissingThemeException
  *```
  */
 
+private const val TIME_LOOP_PULSE = 400L
+
 class Badge @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -37,8 +42,13 @@ class Badge @JvmOverloads constructor(
     private var badgeAttributeArray: TypedArray
     private var attrNumber: Int = 0
     private var attrVisibility: Boolean = true
+    private var limit: Int = UNLIMITED
+    private var color: Int = ALERT
+    private var variant: Int = STANDARD
 
     private val imageContainer by lazy { findViewById<ImageView>(R.id.badgeImage) }
+    private val badgeRipple by lazy { findViewById<ImageView>(R.id.badgeRipple) }
+    private val badgeDot by lazy { findViewById<ImageView>(R.id.badgeDot) }
     private lateinit var badgeDrawable: BadgeDrawable
 
     var number: Int = 0
@@ -57,8 +67,11 @@ class Badge @JvmOverloads constructor(
          * */
         set(value) {
             field = value
-            attrNumber = value
-            badgeDrawable.updateBadgeDrawable(value)
+
+            if (variant == STANDARD) {
+                attrNumber = value
+                badgeDrawable.updateBadgeDrawable(value)
+            }
         }
 
     var isVisible: Boolean = true
@@ -87,7 +100,8 @@ class Badge @JvmOverloads constructor(
         badgeAttributeArray = context.obtainStyledAttributes(attrs, R.styleable.Badge)
 
         getAttributes()
-        createBadgeDrawable()
+        handlerVariant()
+
         configureVisibility()
 
         badgeAttributeArray.recycle()
@@ -96,10 +110,32 @@ class Badge @JvmOverloads constructor(
     private fun getAttributes() {
         attrNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
         attrVisibility = badgeAttributeArray.getBoolean(R.styleable.Badge_badgeVisibility, true)
+        variant = badgeAttributeArray.getInt(R.styleable.Badge_badgeVariant, STANDARD)
+        color = badgeAttributeArray.getInt(R.styleable.Badge_badgeColor, ALERT)
+        limit = badgeAttributeArray.getInt(R.styleable.Badge_badgeLimitNumber, UNLIMITED)
     }
 
     private fun createBadgeDrawable() {
-        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable)
+        imageContainer.visibility = View.VISIBLE
+        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable, variant, color, limit)
+    }
+
+    private fun handlerVariant() {
+        if (variant == PULSE) {
+            createBadgePulse()
+        } else {
+            createBadgeDrawable()
+        }
+    }
+
+    private fun createBadgePulse() {
+        badgeRipple.visibility = View.VISIBLE
+        badgeDot.visibility = View.VISIBLE
+
+        badgeDot.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
+        badgeRipple.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
+
+        initializeAnimators()
     }
 
     private fun configureVisibility() {
@@ -108,5 +144,43 @@ class Badge @JvmOverloads constructor(
         } else {
             View.INVISIBLE
         }
+    }
+
+    private fun initializeAnimators() {
+        val pulseAnimation: ObjectAnimator = ObjectAnimator.ofPropertyValuesHolder(
+            badgeRipple,
+            PropertyValuesHolder.ofFloat("scaleX", 0.5f),
+            PropertyValuesHolder.ofFloat("scaleY", 0.5f),
+            PropertyValuesHolder.ofFloat("alpha", 0.48f, 0.24f, 0.12f)
+        )
+        pulseAnimation.duration = TIME_LOOP_PULSE
+
+        pulseAnimation.repeatCount = ObjectAnimator.INFINITE
+        pulseAnimation.repeatMode = ObjectAnimator.REVERSE
+        pulseAnimation.start()
+    }
+
+    private fun getBackgroundColorByAttr(): Int {
+        return when (color) {
+            PRIMARY -> R.attr.colorPrimary
+            SECONDARY -> R.attr.colorSecondary
+            SUCCESS -> R.attr.colorSuccess
+            else -> R.attr.colorAlert
+        }
+    }
+
+    companion object {
+        const val STANDARD = 0
+        const val DOT = 1
+        const val PULSE = 2
+
+        const val ALERT = 0
+        const val PRIMARY = 1
+        const val SECONDARY = 2
+        const val SUCCESS = 3
+
+        const val NINE = 0
+        const val NINETY_NINE = 1
+        const val UNLIMITED = 2
     }
 }

@@ -10,10 +10,32 @@
         android:id="@+id/badgeImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         android:src="@drawable/layer_drawable_base_badge"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/badgeRipple"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:visibility="invisible"
+        android:src="@drawable/badge_ripple"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/badgeDot"
+        android:layout_width="?sizeTiny"
+        android:layout_height="?sizeTiny"
+        android:visibility="invisible"
+        android:src="@drawable/badge_ripple"
+        android:tint="@color/colorBrdNatRed"
+        app:layout_constraintEnd_toEndOf="@id/badgeRipple"
+        app:layout_constraintStart_toStartOf="@id/badgeRipple"
+        app:layout_constraintBottom_toBottomOf="@id/badgeRipple"
+        app:layout_constraintTop_toTopOf="@id/badgeRipple" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
