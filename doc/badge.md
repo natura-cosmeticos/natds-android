@@ -1,4 +1,4 @@
-# Badge Component - Default variant
+# Badge Component
 
 #### Note:
 
