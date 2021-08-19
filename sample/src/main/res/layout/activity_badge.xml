@@ -248,8 +248,8 @@
         android:lines="2"
         android:text="Limit 9 "
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toStartOf="@+id/textViewStandardSecondary"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulsePrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulsePrimary"
         app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorPrimary" />
 
     <com.natura.android.badge.Badge
@@ -274,8 +274,8 @@
         android:lines="2"
         android:text="Limit 99"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toStartOf="@+id/textViewStandardAlert"
-        app:layout_constraintStart_toEndOf="@+id/textViewStandardPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSecondary"
         app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorSecondary" />
 
     <com.natura.android.badge.Badge
@@ -300,8 +300,8 @@
         android:lines="2"
         android:text="Unlimited"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toStartOf="@+id/textViewStandardSuccess"
-        app:layout_constraintStart_toEndOf="@+id/textViewStandardSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseAlert"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseAlert"
         app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorAlert" />
 
     <com.natura.android.badge.Badge
@@ -325,8 +325,8 @@
         android:layout_height="wrap_content"
         android:text="Unlimited"
         android:textAppearance="?textAppearanceCaption"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewStandardAlert"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSuccess"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSuccess"
         app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorSuccess" />
 
 

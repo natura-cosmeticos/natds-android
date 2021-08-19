@@ -1,5 +1,27 @@
 # Badge Component - Default variant
 
+#### Note:
+
+This component is available in the following variants:
+
+* ✅ Dot
+* ✅ Pulse
+* ✅ Standard
+
+With the following attribute status:
+
+* Color(All Variants):
+    * ✅ `Alert` (default)
+    * ✅ `Primary`
+    * ✅ `Secondary`
+    * ✅ `Success`
+    
+* Limit(Standard):
+    * ✅ `9`
+    * ✅ `99`
+    * ✅ `Unlimited` (default)
+   
+
 ## What is it?
 
 The Badge is a screen element used to signal the user's points of attention.
@@ -15,12 +37,16 @@ Every time you want to display an component with a badge
 
 ### How to use it?
 
+#### Badge Drawable
+
 We use BadgeDrawable class to draw this component on screen. 
 For that to happen, it is necessary to instantiate the BadgeDrawable class, passing three parameters: 
 
 1. context application
-2. number that will be drawn
+2. number that will be drawn, when the variant is standard
 3. the drawable that will receive the badge
+4. background color 
+3. numerical limit, when the variant is standard
         
 #### Examples
 
@@ -62,3 +88,28 @@ For that to happen, it is necessary to instantiate the BadgeDrawable class, pass
    badgeDrawable.updateBadgeDrawable(number)
    
    ```
+
+#### Badge
+
+We use Badge class to draw this component on screen, as a pre-defined visual component, ready to be inserted into a layout. 
+For that to happen, it is necessary add the Badge component in your xml layout file. It has some parameters: 
+
+ 1. badgeColor
+ 2. badgeLimitNumber
+ 3. badgeNumber
+ 4. badgeVariant
+        
+#### Example
+
+```android
+<com.natura.android.badge.Badge
+        android:id="@+id/badgeDotColorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:badgeColor="colorPrimary"
+        app:badgeVariant="dot" />
+</com.natura.android.card.Card>
+```
+
+![Badge](badgeScreen.png)
+
