@@ -60,8 +60,6 @@
             android:layout_height="wrap_content"
             android:elevation="?elevation02"
             tools:badgeNumber="100"
-            app:badgeVariant="pulse"
-            app:badgeColor="colorSuccess"
             app:layout_constraintEnd_toEndOf="@id/shortcutContainer"
             app:layout_constraintTop_toTopOf="@id/shortcutContainer" />
 
