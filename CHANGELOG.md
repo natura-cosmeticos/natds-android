@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.2.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.1.0...v.8.2.0) (2021-08-20)
+
+
+### Features
+
+* adds new attributes to badge ([85a5064](https://github.com/natura-cosmeticos/natds-android/commit/85a5064d3fa26f93e70b3f58a4e179fffd7209fd))
+
 ## [8.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.0.0...v.8.1.0) (2021-08-02)
 
 
