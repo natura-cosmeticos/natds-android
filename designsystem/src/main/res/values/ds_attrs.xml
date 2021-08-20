@@ -55,15 +55,15 @@
     </declare-styleable>
 
     <declare-styleable name="BaseAppBarTop">
-        <attr name="scrollable"/>
-        <attr name="enabledElevation"/>
-        <attr name="appBarColor"/>
+        <attr name="scrollable" />
+        <attr name="enabledElevation" />
+        <attr name="appBarColor" />
     </declare-styleable>
 
     <declare-styleable name="StandardAppBarTop">
-        <attr name="scrollable"/>
-        <attr name="enabledElevation"/>
-        <attr name="appBarColor"/>
+        <attr name="scrollable" />
+        <attr name="enabledElevation" />
+        <attr name="appBarColor" />
         <attr name="contentType" format="enum">
             <enum name="text" value="0" />
             <enum name="media" value="1" />
@@ -83,6 +83,22 @@
     <declare-styleable name="Badge">
         <attr name="badgeNumber" format="integer" />
         <attr name="badgeVisibility" format="boolean" />
+        <attr name="badgeVariant" format="enum">
+            <enum name="standard" value="0" />
+            <enum name="dot" value="1" />
+            <enum name="pulse" value="2" />
+        </attr>
+        <attr name="badgeLimitNumber" format="enum">
+            <enum name="until_9" value="0" />
+            <enum name="until_99" value="1" />
+            <enum name="unlimited" value="2" />
+        </attr>
+        <attr name="badgeColor" format="enum">
+            <enum name="colorAlert" value="0" />
+            <enum name="colorPrimary" value="1" />
+            <enum name="colorSecondary" value="2" />
+            <enum name="colorSuccess" value="3" />
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="ds_menu">
@@ -143,7 +159,7 @@
             <enum name="success" value="1" />
             <enum name="error" value="2" />
         </attr>
-        <attr  name="text_field_size" format="enum">
+        <attr name="text_field_size" format="enum">
             <enum name="medium" value="0" />
             <enum name="mediumx" value="1" />
         </attr>
@@ -242,17 +258,17 @@
             <enum name="surface" value="4" />
         </attr>
         <attr name="customSize" format="enum">
-            <enum name="medium" value="0"/>
-            <enum name="mediumx" value="1"/>
-            <enum name="large" value="2"/>
-            <enum name="largex" value="3"/>
-            <enum name="largexx" value="4"/>
-            <enum name="largexxx" value="5"/>
-            <enum name="huge" value="6"/>
-            <enum name="hugex" value="7"/>
-            <enum name="hugexx" value="8"/>
-            <enum name="hugexxx" value="9"/>
-            <enum name="veryhuge" value="10"/>
+            <enum name="medium" value="0" />
+            <enum name="mediumx" value="1" />
+            <enum name="large" value="2" />
+            <enum name="largex" value="3" />
+            <enum name="largexx" value="4" />
+            <enum name="largexxx" value="5" />
+            <enum name="huge" value="6" />
+            <enum name="hugex" value="7" />
+            <enum name="hugexx" value="8" />
+            <enum name="hugexxx" value="9" />
+            <enum name="veryhuge" value="10" />
         </attr>
     </declare-styleable>
 </resources>

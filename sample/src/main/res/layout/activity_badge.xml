@@ -5,84 +5,329 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingStart="?spacingStandard"
+    android:paddingTop="?spacingStandard"
+    android:paddingEnd="?spacingStandard"
     tools:context=".components.BadgeActivity">
 
-        <com.natura.android.badge.Badge
-            android:id="@+id/regularBadge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingMicro"
-            android:visibility="visible"
-            app:badgeNumber="50"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintEnd_toEndOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="@+id/textView6" />
+    <TextView
+        android:id="@+id/textViewDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?spacingSemi"
+        android:text="Variant Dot"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Regular badge"
-            android:textAppearance="?textAppearanceCaption"
-            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
-            app:layout_constraintEnd_toStartOf="@+id/textView5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeDotColorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorPrimary"
+        app:badgeVariant="dot"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDotPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDotPrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewDotPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDot" />
 
-        <com.natura.android.badge.Badge
-            android:id="@+id/invisibleBadge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingMicro"
-            app:badgeNumber="50"
-            app:badgeVisibility="false"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="@+id/textView4"
-            app:layout_constraintStart_toStartOf="@+id/textView4" />
+    <TextView
+        android:id="@+id/textViewDotPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Primary"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDotSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badgeDotColorPrimary" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Invisible badge"
-            android:textAppearance="?textAppearanceCaption"
-            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView5"
-            app:layout_constraintTop_toTopOf="parent" />
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeDotColorSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSecondary"
+        app:badgeVariant="dot"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDotSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDotSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewDotSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDot" />
 
-        <com.natura.android.badge.Badge
-            android:id="@+id/badgeToIncrement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingMicro"
-            app:badgeNumber="1"
-            app:layout_constraintBottom_toTopOf="@+id/textView5"
-            app:layout_constraintEnd_toEndOf="@+id/textView5"
-            app:layout_constraintStart_toStartOf="@+id/textView5" />
+    <TextView
+        android:id="@+id/textViewDotSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Secondary"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDotAlert"
+        app:layout_constraintStart_toEndOf="@+id/textViewDotPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/badgeDotColorSecondary" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Badge to Increment"
-            android:textAppearance="?textAppearanceCaption"
-            app:layout_constraintBottom_toTopOf="@+id/incrementBadgeButton"
-            app:layout_constraintEnd_toStartOf="@+id/textView4"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="parent" />
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeDotColorAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorAlert"
+        app:badgeVariant="dot"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDotAlert"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDotAlert"
+        app:layout_constraintStart_toStartOf="@+id/textViewDotAlert"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDot" />
 
-        <Button
-            android:id="@+id/incrementBadgeButton"
-            style="?textButtonSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingStandard"
-            android:text="Increment badge component"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/textViewDotAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Alert"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDotSuccess"
+        app:layout_constraintStart_toEndOf="@+id/textViewDotSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/badgeDotColorAlert" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeDotColorSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSuccess"
+        app:badgeVariant="dot"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDotSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDotSuccess"
+        app:layout_constraintStart_toStartOf="@+id/textViewDotSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDot" />
+
+    <TextView
+        android:id="@+id/textViewDotSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Success"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDotAlert"
+        app:layout_constraintTop_toBottomOf="@+id/badgeDotColorSuccess" />
+
+
+    <TextView
+        android:id="@+id/textViewPulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingStandard"
+        android:layout_marginBottom="?spacingSemi"
+        android:text="Variant Pulse"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDotPrimary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgePulseColorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorPrimary"
+        app:badgeVariant="pulse"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPulsePrimary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulsePrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulsePrimary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPulse" />
+
+    <TextView
+        android:id="@+id/textViewPulsePrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Primary"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPulseSecondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badgePulseColorPrimary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgePulseColorSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSecondary"
+        app:badgeVariant="pulse"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPulseSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPulse" />
+
+    <TextView
+        android:id="@+id/textViewPulseSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Secondary"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPulseAlert"
+        app:layout_constraintStart_toEndOf="@+id/textViewPulsePrimary"
+        app:layout_constraintTop_toBottomOf="@+id/badgePulseColorSecondary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgePulseColorAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorAlert"
+        app:badgeVariant="pulse"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPulseAlert"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseAlert"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseAlert"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPulse" />
+
+    <TextView
+        android:id="@+id/textViewPulseAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Alert"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPulseSuccess"
+        app:layout_constraintStart_toEndOf="@+id/textViewPulseSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/badgePulseColorAlert" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgePulseColorSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSuccess"
+        app:badgeVariant="pulse"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPulseSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSuccess"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPulse" />
+
+    <TextView
+        android:id="@+id/textViewPulseSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Success"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewPulseAlert"
+        app:layout_constraintTop_toBottomOf="@+id/badgePulseColorSuccess" />
+
+    <TextView
+        android:id="@+id/textViewStandard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingStandard"
+        android:text="Variant Standard"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPulsePrimary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeStandardColorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorPrimary"
+        app:badgeLimitNumber="until_9"
+        app:badgeNumber="10"
+        app:badgeVariant="standard"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStandardPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStandardPrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewStandardPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStandard" />
+
+    <TextView
+        android:id="@+id/textViewStandardPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="Limit 9 "
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulsePrimary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulsePrimary"
+        app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorPrimary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeStandardColorSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSecondary"
+        app:badgeLimitNumber="until_99"
+        app:badgeNumber="100"
+        app:badgeVariant="standard"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStandardSecondary"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStandardSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewStandardSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStandard" />
+
+    <TextView
+        android:id="@+id/textViewStandardSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="Limit 99"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSecondary"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSecondary"
+        app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorSecondary" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeStandardColorAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorAlert"
+        app:badgeLimitNumber="unlimited"
+        app:badgeNumber="1000"
+        app:badgeVariant="standard"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStandardAlert"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStandardAlert"
+        app:layout_constraintStart_toStartOf="@+id/textViewStandardAlert"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStandard" />
+
+    <TextView
+        android:id="@+id/textViewStandardAlert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="Unlimited"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseAlert"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseAlert"
+        app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorAlert" />
+
+    <com.natura.android.badge.Badge
+        android:id="@+id/badgeStandardColorSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:badgeColor="colorSuccess"
+        app:badgeLimitNumber="unlimited"
+        app:badgeNumber="2000"
+        app:badgeVariant="standard"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStandardSuccess"
+        app:layout_constraintEnd_toEndOf="@+id/textViewStandardSuccess"
+        app:layout_constraintStart_toStartOf="@+id/textViewStandardSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStandard" />
+
+    <TextView
+        android:id="@+id/textViewStandardSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlimited"
+        android:textAppearance="?textAppearanceCaption"
+        app:layout_constraintEnd_toEndOf="@+id/textViewPulseSuccess"
+        app:layout_constraintStart_toStartOf="@+id/textViewPulseSuccess"
+        app:layout_constraintTop_toBottomOf="@+id/badgeStandardColorSuccess" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
