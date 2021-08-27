@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tokens.SpacingActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/textViewHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="?heading4FontSize"
+                android:fontFamily="?assetFontFileHeadline"
+                android:ellipsize="end"
+                android:text="Headline"/>
+
+            <TextView
+                android:id="@+id/textViewHeadlineExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="?heading6FontSize"
+                android:fontFamily="?assetFontFileHeadline"
+                android:ellipsize="end"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."/>
+
+            <ImageView
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/mediumGrey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/textViewDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="?heading4FontSize"
+                android:fontFamily="?assetFontFileDisplay"
+                android:ellipsize="end"
+                android:text="Display"/>
+
+            <TextView
+                android:id="@+id/textViewDisplayExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="?heading6FontSize"
+                android:fontFamily="?assetFontFileDisplay"
+                android:ellipsize="end"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."/>
+
+            <ImageView
+                android:layout_height="0.5dp"
+                android:layout_width="match_parent"
+                android:background="@color/mediumGrey"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <TextView
+                android:id="@+id/textViewBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="?heading4FontSize"
+                android:fontFamily="?assetFontFileBody"
+                android:ellipsize="end"
+                android:text="Body"/>
+
+            <TextView
+                android:id="@+id/textViewBodyExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="?heading6FontSize"
+                android:fontFamily="?assetFontFileBody"
+                android:ellipsize="end"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

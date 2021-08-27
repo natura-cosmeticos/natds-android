@@ -56,6 +56,9 @@
     <attr name="buttonDefaultFontWeight" formastring="string" />
     <attr name="buttonDefaultLetterSpacing" format="dimension" />
     <attr name="buttonDefaultLineHeight" format="dimension" />
+    <attr name="assetFontFileDisplay" format="reference" />
+    <attr name="assetFontFileHeadline" format="reference" />
+    <attr name="assetFontFileBody" format="reference" />
     <attr name="heading1FontSize" format="dimension" />
     <attr name="heading1FontWeight" format="string" />
     <attr name="heading1LetterSpacing" format="dimension" />

@@ -145,5 +145,9 @@ class MainActivity : AppCompatActivity() {
         btnListItem.setOnClickListener {
             startActivity(Intent(this, ListItemActivity::class.java))
         }
+
+        customTypographyButton.setOnClickListener {
+            startActivity(Intent(this, CustomTypographyActivity::class.java))
+        }
     }
 }
