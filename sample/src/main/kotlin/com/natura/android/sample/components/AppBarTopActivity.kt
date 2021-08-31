@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.iconButton.IconButton
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
+import kotlinx.android.synthetic.main.appbartop_button_action.view.*
 
 class AppBarTopActivity : AppCompatActivity() {
 
@@ -51,6 +52,8 @@ class AppBarTopActivity : AppCompatActivity() {
         setContentView(R.layout.activity_appbar_top)
 
         createListeners()
+
+        appBarTopWithTwoActions.appBar.setContentText("Title Left")
 
         when (pattern) {
             PATTERN_APPBARTOP_TWOACTIONS -> appBarTopWithTwoActions.visibility = View.VISIBLE

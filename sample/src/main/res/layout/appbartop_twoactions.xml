@@ -22,7 +22,7 @@
             app:actionLeft="true"
             app:actionRight="true"
             app:appBarColor="colorDefault"
-            app:contentPosition="center"
+            app:contentPosition="left"
             app:contentText="Title Page Center"
             app:contentType="text"
             app:enabledElevation="true"

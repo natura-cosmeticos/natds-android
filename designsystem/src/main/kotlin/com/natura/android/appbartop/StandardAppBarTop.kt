@@ -117,6 +117,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         return contentText
     }
 
+    fun setContentText(text: String) {
+        this.contentText = text
+        findViewById<TextView>(R.id.contentText).text = text
+    }
+
     fun getContentImage(): Int? {
         return contentImage
     }
@@ -141,7 +146,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 positionActionRight()
             }
         }
-        positionActionCenter()
+
+        if (childCount > MIN_COUNT_ELEMENTS) {
+            positionActionCenter()
+        }
     }
 
     private fun positionActionCenter() {
@@ -313,7 +321,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private fun getContentAlign(context: Context): Int {
         return if ((getWindowWidthInPx(context) < MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO) || (contentPosition == LEFT)) {
-            Gravity.START
+            Gravity.START or Gravity.CENTER
         } else {
             Gravity.CENTER
         }
@@ -363,5 +371,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 3
         private const val ACTION_LEFT_ELEMENT_INDEX = 2
         private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
+        private const val MIN_COUNT_ELEMENTS = 1
     }
 }
