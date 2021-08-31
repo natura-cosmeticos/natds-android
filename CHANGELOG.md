@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.2.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.1...v.8.2.2) (2021-08-31)
+
+
+### Bug Fixes
+
+* makes public toolbar at StandardAppBarTop ([07b05f5](https://github.com/natura-cosmeticos/natds-android/commit/07b05f569220b164d4a55ee19b33d1b9307feb01))
+
 ### [8.2.1](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.0...v.8.2.1) (2021-08-31)
 
 
