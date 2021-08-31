@@ -55,7 +55,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private var proeminentContent: Boolean = false
     private var contentPosition: Int = LEFT
 
-    private val toolbar by lazy { findViewById<Toolbar>(R.id.toolbar) }
+    val toolbar: Toolbar by lazy { findViewById(R.id.toolbar) }
     private val actionLeftContainer by lazy { findViewById<LinearLayout>(R.id.actionLeftContainer) }
     private val actionRightContainer by lazy { findViewById<LinearLayout>(R.id.actionRightContainer) }
     private val actionCenterContainer by lazy { findViewById<LinearLayout>(R.id.actionCenterContainer) }
