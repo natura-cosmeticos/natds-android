@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.2.3](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.2...v.8.2.3) (2021-08-31)
+
+
+### Bug Fixes
+
+* fixes the content position at center and creates setter to modify title dynamically ([827d9cc](https://github.com/natura-cosmeticos/natds-android/commit/827d9cc3eb7e9171e95f74483f7b8cf54792118f))
+
 ### [8.2.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.1...v.8.2.2) (2021-08-31)
 
 
