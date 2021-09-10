@@ -45,6 +45,7 @@ class ExpandableNavigationAdapter(
         navigationItems[groupPosition].childItems[childPosition].let { item ->
             childView.apply {
                 label = item.label
+                isLowEmphasis = item.isLowEmphasis
                 isEnabled = item.enabled
                 isSelected = item.selected
             }
@@ -66,6 +67,7 @@ class ExpandableNavigationAdapter(
             groupView.apply {
                 label = item.label
                 icon = item.iconText
+                isLowEmphasis = item.isLowEmphasis
                 showArrow(item.hasSubMenu)
                 configStateMenu(item.menuState)
                 showTag(item.showTag)
