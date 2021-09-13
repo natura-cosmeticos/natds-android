@@ -3,6 +3,7 @@ package com.natura.android.sample.components
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -94,7 +95,15 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
         )
 
         expandableNavigationMenu.initMenuItems(list)
-        // expandableNavigationMenu.selectItemId("item_id_5")
+        expandableNavigationMenu.selectItemId("item_id_5")
+
+        expandableNavigationMenu.setOnItemSelected {
+            Toast.makeText(
+                this,
+                "Item Clicked",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

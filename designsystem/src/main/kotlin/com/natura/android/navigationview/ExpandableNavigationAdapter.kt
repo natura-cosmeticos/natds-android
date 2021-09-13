@@ -65,6 +65,7 @@ class ExpandableNavigationAdapter(
         val groupView = parentView.findViewById<MenuView>(R.id.menu_item)
         navigationItems[groupPosition].let { item ->
             groupView.apply {
+
                 label = item.label
                 icon = item.iconText
                 isLowEmphasis = item.isLowEmphasis
@@ -72,6 +73,12 @@ class ExpandableNavigationAdapter(
                 configStateMenu(item.menuState)
                 showTag(item.showTag)
                 tagLabel = item.tagLabel
+
+                if (isLowEmphasis) {
+                    parentView.setBackgroundResource(0)
+                    parentView.setBackgroundResource(R.drawable.navigation_item_lowemphasis_background)
+                    isSelected = false
+                }
             }
         }
 
