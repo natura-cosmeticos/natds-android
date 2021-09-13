@@ -91,8 +91,6 @@ class MenuView @JvmOverloads constructor(
         showTag(hasTag)
         tagLabel = tagText
 
-        typedArray.recycle()
-
         if (isLowEmphasis) {
             labelColor = typedArray.getResourceId(
                 R.styleable.ds_menu_menu_label_color,
@@ -101,6 +99,8 @@ class MenuView @JvmOverloads constructor(
 
             iconMenu.setColorFilter(ContextCompat.getColor(context, R.color.colorLowEmphasis), PorterDuff.Mode.SRC_IN)
         }
+
+        typedArray.recycle()
 
         configLabel(labelText, labelColor, labelSize)
 
@@ -127,11 +127,7 @@ class MenuView @JvmOverloads constructor(
         super.setEnabled(isEnabled)
         isClickable = !isEnabled
         textLabel.isEnabled = isEnabled
-        if (isEnabled) {
-            textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
-            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray)
-            setColorFilter(iconMenu, R.color.colorBrdNatGray)
-        } else {
+        if (!isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray_48))
             setColorFilter(iconArrowMenu, R.color.colorBrdNatGray_48)
             setColorFilter(iconMenu, R.color.colorBrdNatGray_48)
