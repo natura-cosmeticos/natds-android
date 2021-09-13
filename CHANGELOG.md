@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.2.3](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.2...v.8.2.3) (2021-08-31)
+
+
+### Bug Fixes
+
+* fixes the content position at center and creates setter to modify title dynamically ([827d9cc](https://github.com/natura-cosmeticos/natds-android/commit/827d9cc3eb7e9171e95f74483f7b8cf54792118f))
+
+### [8.2.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.1...v.8.2.2) (2021-08-31)
+
+
+### Bug Fixes
+
+* makes public toolbar at StandardAppBarTop ([07b05f5](https://github.com/natura-cosmeticos/natds-android/commit/07b05f569220b164d4a55ee19b33d1b9307feb01))
+
+### [8.2.1](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.0...v.8.2.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* makes public the toolbar property  at AppBarTop component ([2527d40](https://github.com/natura-cosmeticos/natds-android/commit/2527d409a378455235e91db4bb7ecd035aa0fa00))
+
 ## [8.2.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.1.0...v.8.2.0) (2021-08-20)
 
 
