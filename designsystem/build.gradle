@@ -55,7 +55,6 @@ android {
 
     lintOptions {
         baseline file("lint-baseline.xml")
-        abortOnError false
     }
 
     testOptions {
@@ -65,7 +64,9 @@ android {
 }
 
 dependencies {
+    lintPublish project(":lint")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lint')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
