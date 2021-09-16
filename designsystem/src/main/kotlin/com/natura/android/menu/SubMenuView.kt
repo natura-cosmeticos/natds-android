@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
+import com.natura.android.resources.getColorTokenFromTheme
 
 @SuppressLint("CustomViewStyleable")
 class SubMenuView @JvmOverloads constructor(
@@ -28,12 +29,18 @@ class SubMenuView @JvmOverloads constructor(
             textLabel.text = value
         }
 
+    var isLowEmphasis: Boolean = false
+        set(value) {
+            field = value
+            setLabelColorLowEmphasis(value)
+        }
+
     init {
         View.inflate(context, R.layout.ds_submenu_view, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_submenu)
         val labelText = typedArray.getString(R.styleable.ds_submenu_submenu_label)
-        val labelColor = typedArray.getResourceId(
+        var labelColor = typedArray.getResourceId(
             R.styleable.ds_submenu_submenu_label_color,
             R.color.colorBrdNatGray
         )
@@ -47,8 +54,16 @@ class SubMenuView @JvmOverloads constructor(
         )
         val isSelected = typedArray.getBoolean(R.styleable.ds_submenu_submenu_is_selected, false)
         val isEnabled = typedArray.getBoolean(R.styleable.ds_submenu_submenu_is_enabled, true)
+        val isLowEmphasis = typedArray.getBoolean(R.styleable.ds_menu_menu_color_lowemphasis, false)
 
         typedArray.recycle()
+
+        if (isLowEmphasis) {
+            labelColor = typedArray.getResourceId(
+                R.styleable.ds_menu_menu_label_color,
+                R.color.colorLowEmphasis
+            )
+        }
 
         configLabel(labelText, labelColor, labelSize)
         setSelected(isSelected)
@@ -59,6 +74,12 @@ class SubMenuView @JvmOverloads constructor(
         label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
+    }
+
+    private fun setLabelColorLowEmphasis(isLowEmphasis: Boolean) {
+        if (isLowEmphasis) {
+            textLabel.setTextColor(getColorTokenFromTheme(context, R.attr.colorLowEmphasis))
+        }
     }
 
     override fun setSelected(selected: Boolean) {

@@ -113,6 +113,7 @@
         <attr name="menu_is_opened" format="boolean" />
         <attr name="menu_has_tag" format="boolean" />
         <attr name="menu_tag_label" format="string" />
+        <attr name="menu_color_lowemphasis" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="ds_submenu">
@@ -122,6 +123,7 @@
         <attr name="submenu_selected_drawable" format="reference" />
         <attr name="submenu_is_selected" format="boolean" />
         <attr name="submenu_is_enabled" format="boolean" />
+        <attr name="submenu_color_lowemphasis" format="boolean" />
     </declare-styleable>
 
     <declare-styleable name="ds_primary_button">

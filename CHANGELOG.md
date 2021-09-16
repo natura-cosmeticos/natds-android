@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.3.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.3...v.8.3.0) (2021-09-14)
+
+
+### Features
+
+* adds isLowEmphasis attribute at MenuView/SubMenuView/ExpandableNavigation to set label color ([ca8dbdb](https://github.com/natura-cosmeticos/natds-android/commit/ca8dbdba406f3f0038e0ce7e2f94a9736cf63080))
+* changes ripple color effect and label color  when menu item is lowemphasis ([7aaece0](https://github.com/natura-cosmeticos/natds-android/commit/7aaece01e82564f9d03daf10b47cb53490f0f54e))
+
 ### [8.2.3](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.2...v.8.2.3) (2021-08-31)
 
 
