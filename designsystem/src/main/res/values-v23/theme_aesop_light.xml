@@ -138,6 +138,10 @@
         <item name="elevationHugeX">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
         <item name="elevationHugeXX">@dimen/ssota678d4b111a732673d83a948f471edbb</item>
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
+        <item name="assetFontFileDisplay">@font/zapfhumanist601bt_roman</item>
+        <item name="assetFontFileHeadline">@font/suisseintl_regular</item>
+        <item name="assetFontFileBodyRegular">@font/suisseintl_regular</item>
+        <item name="assetFontFileBodyBold">@font/suisseintl_regular</item>
         <item name="heading1FontWeight">sans-serif</item>
         <item name="heading2FontWeight">sans-serif</item>
         <item name="heading3FontWeight">sans-serif</item>

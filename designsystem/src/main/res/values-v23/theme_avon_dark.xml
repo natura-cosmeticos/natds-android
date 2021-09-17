@@ -138,6 +138,10 @@
         <item name="assetBrandCustomA">@drawable/avon_a_custom</item>
         <item name="assetBrandCustomB">@drawable/avon_a_custom</item>
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
+        <item name="assetFontFileDisplay">@font/montserrat_bold</item>
+        <item name="assetFontFileHeadline">@font/montserrat_semibold</item>
+        <item name="assetFontFileBodyRegular">@font/montserrat_regular</item>
+        <item name="assetFontFileBodyBold">@font/montserrat_bold</item>
         <item name="heading1FontWeight">sans-serif</item>
         <item name="heading2FontWeight">sans-serif</item>
         <item name="heading3FontWeight">sans-serif</item>
