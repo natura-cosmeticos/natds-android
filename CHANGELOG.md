@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.4.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.3.0...v.8.4.0) (2021-09-17)
+
+
+### Features
+
+* adds new fonts and customizes theme typografy ([86914e2](https://github.com/natura-cosmeticos/natds-android/commit/86914e241d28230a6e446ae24bc2d6f06761c7f6))
+* adds news fonts by brand and shows examples at sampleApp ([e565add](https://github.com/natura-cosmeticos/natds-android/commit/e565add5665c5600bc9e84ac6b7f6c02bbb7e63b))
+
 ## [8.3.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.2.3...v.8.3.0) (2021-09-14)
 
 
