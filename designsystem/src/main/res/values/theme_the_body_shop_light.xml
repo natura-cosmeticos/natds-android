@@ -139,8 +139,9 @@
         <item name="assetBrandCustomB">@drawable/thebodyshop_b_custom</item>
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
         <item name="assetFontFileDisplay">@font/drukcy_bold</item>
-        <item name="assetFontFileHeadline">@font/recoleta_regular</item>
-        <item name="assetFontFileBody">@font/worksans_regular</item>
+        <item name="assetFontFileHeadline">@font/recoleta_semibold</item>
+        <item name="assetFontFileBodyRegular">@font/worksans_regular</item>
+        <item name="assetFontFileBodyBold">@font/worksans_bold</item>
         <item name="heading1FontWeight">sans-serif</item>
         <item name="heading2FontWeight">sans-serif</item>
         <item name="heading3FontWeight">sans-serif</item>
