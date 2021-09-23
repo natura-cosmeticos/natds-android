@@ -179,9 +179,9 @@
         <item name="assetFontFileBodyRegular">@font/helveticanowdisplay_regular</item>
         <item name="assetFontFileBodyBold">@font/helveticanowdisplay_bd</item>
         <item name="buttonLabelPrimaryFontFamily">Roboto</item>
-        <item name="buttonLabelPrimaryFontWeight">sans-serif</item>
+        <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
-        <item name="buttonLabelFallbackFontWeight">sans-serif</item>
+        <item name="buttonLabelFallbackFontWeight">sans-serif-medium</item>
         <item name="heading1FontWeight">sans-serif</item>
         <item name="heading2FontWeight">sans-serif</item>
         <item name="heading3FontWeight">sans-serif</item>
