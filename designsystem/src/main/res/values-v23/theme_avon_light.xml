@@ -175,9 +175,9 @@
         <item name="assetBrandCustomAFile">@drawable/avon_a_custom</item>
         <item name="assetBrandCustomBFile">@drawable/avon_a_custom</item>
         <item name="buttonLabelPrimaryFontFamily">Roboto</item>
-        <item name="buttonLabelPrimaryFontWeight">sans-serif</item>
+        <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
-        <item name="buttonLabelFallbackFontWeight">sans-serif</item>
+        <item name="buttonLabelFallbackFontWeight">sans-serif-medium</item>
         <item name="assetFontFileDisplay">@font/montserrat_bold</item>
         <item name="assetFontFileHeadline">@font/montserrat_semibold</item>
         <item name="assetFontFileBodyRegular">@font/montserrat_regular</item>

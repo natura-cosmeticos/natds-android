@@ -175,9 +175,9 @@
         <item name="assetBrandCustomAFile">@drawable/natura_a_custom</item>
         <item name="assetBrandCustomBFile">@drawable/natura_b_custom</item>
         <item name="buttonLabelPrimaryFontFamily">Roboto</item>
-        <item name="buttonLabelPrimaryFontWeight">sans-serif</item>
+        <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
-        <item name="buttonLabelFallbackFontWeight">sans-serif</item>
+        <item name="buttonLabelFallbackFontWeight">sans-serif-medium</item>
         <item name="assetFontFileDisplay">@font/helveticanowdisplay_bd</item>
         <item name="assetFontFileHeadline">@font/helveticanowdisplay_md</item>
         <item name="assetFontFileBodyRegular">@font/helveticanowdisplay_regular</item>
