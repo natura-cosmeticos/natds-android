@@ -98,7 +98,7 @@
     <color name="ssot5a4f28fbfaa05701728c866ebb0a3815">#EEEEEE</color>
     <color name="ssot369c2751c17acf790cc57b0404083795">#F7F7F7</color>
     <color name="ssot638b3d558895638b66e063992afdb6c7">#232323</color>
-    <color name="ssot80ecbb2bf909dedd4251680e217975b8">#FFFFFF00</color>
+    <color name="ssot80ecbb2bf909dedd4251680e217975b8">#00FFFFFF</color>
 
     <!--{@deprecated GRAY SCALE}} -->
     <color name="black">@android:color/black</color>
