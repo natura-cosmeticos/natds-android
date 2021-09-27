@@ -1,7 +1,0 @@
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item  android:color="?buttonTextColorFocusBackground" android:state_pressed="true"/>
-    <item  android:color="?buttonTextColorFocusBackground" android:state_focused="true" android:state_hovered="true"/>
-    <item  android:color="?buttonTextColorFocusBackground" android:state_focused="true"/>
-    <item  android:color="?buttonTextColorFocusBackground" android:state_hovered="true"/>
-    <item  android:color="?buttonTextColorFocusBackground"/>
-</selector>
