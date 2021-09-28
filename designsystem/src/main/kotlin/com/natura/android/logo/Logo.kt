@@ -84,13 +84,13 @@ class Logo @JvmOverloads constructor(
 
         val drawableAttr = if (color == Color.NEUTRAL) {
             when (model) {
-                Model.A -> R.attr.assetBrandNeutralAFile
-                else -> R.attr.assetBrandNeutralBFile
+                Model.A -> R.attr.assetBrandNeutralA
+                else -> R.attr.assetBrandNeutralB
             }
         } else {
             when (model) {
-                Model.A -> R.attr.assetBrandCustomAFile
-                else -> R.attr.assetBrandCustomBFile
+                Model.A -> R.attr.assetBrandCustomA
+                else -> R.attr.assetBrandCustomB
             }
         }
 
