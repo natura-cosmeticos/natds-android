@@ -170,10 +170,10 @@
         <item name="elevationHuge">@dimen/ssot5efa55b135027e50e8d8aa041e584a33</item>
         <item name="elevationHugeX">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
         <item name="elevationHugeXX">@dimen/ssota678d4b111a732673d83a948f471edbb</item>
-        <item name="assetBrandNeutralAFile">@drawable/natura_a_official</item>
-        <item name="assetBrandNeutralBFile">@drawable/natura_b_official</item>
-        <item name="assetBrandCustomAFile">@drawable/natura_a_custom</item>
-        <item name="assetBrandCustomBFile">@drawable/natura_b_custom</item>
+        <item name="assetBrandNeutralA">@drawable/natura_a_official</item>
+        <item name="assetBrandNeutralB">@drawable/natura_b_official</item>
+        <item name="assetBrandCustomA">@drawable/natura_a_custom</item>
+        <item name="assetBrandCustomB">@drawable/natura_b_custom</item>
         <item name="assetFontFileDisplay">@font/helveticanowdisplay_bd</item>
         <item name="assetFontFileHeadline">@font/helveticanowdisplay_md</item>
         <item name="assetFontFileBodyRegular">@font/helveticanowdisplay_regular</item>
