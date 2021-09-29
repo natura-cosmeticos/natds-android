@@ -15,7 +15,7 @@
 
     <!-- {@deprecated Use style=?outlinedButton from Use Theme.{brand} instead} -->
     <style name="Widget.Natura.Button.Outlined.StrokeColored" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeColor">@color/button_text_stroke_color_v23</item>
+        <item name="strokeColor">@color/stroke_color_selector_v23</item>
     </style>
 
     <!-- {@deprecated Use style=?textButton from Use Theme.{brand} instead} -->
