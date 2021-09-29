@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.5.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.4.0...v.8.5.0) (2021-09-29)
+
+
+### Features
+
+* adds new colors and dimensions relates a custom styles for brands ([b54be07](https://github.com/natura-cosmeticos/natds-android/commit/b54be070e2d7881194cee0b4aabb6b5c3a4150b7))
+* adds theme button attributes to custom component ([8109921](https://github.com/natura-cosmeticos/natds-android/commit/8109921351e4787070776a69c2df62a417d8fcc5))
+
+
+### Bug Fixes
+
+* replace custom ripple to default ([35bc43f](https://github.com/natura-cosmeticos/natds-android/commit/35bc43fbae3da7f2003f4223bd196590141dc95e))
+
 ## [8.4.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.3.0...v.8.4.0) (2021-09-17)
 
 
