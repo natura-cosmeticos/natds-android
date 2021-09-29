@@ -162,10 +162,10 @@ class Badge @JvmOverloads constructor(
 
     private fun getBackgroundColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.colorPrimary
-            SECONDARY -> R.attr.colorSecondary
-            SUCCESS -> R.attr.colorSuccess
-            else -> R.attr.colorAlert
+            PRIMARY -> R.attr.badgeColorPrimaryBackground
+            SECONDARY -> R.attr.badgeColorSecondaryBackground
+            SUCCESS -> R.attr.badgeColorSuccessBackground
+            else -> R.attr.badgeColorAlertBackground
         }
     }
 

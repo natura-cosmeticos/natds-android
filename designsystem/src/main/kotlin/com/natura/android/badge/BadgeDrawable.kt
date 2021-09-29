@@ -5,6 +5,7 @@ import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.util.TypedValue
+
 import com.natura.android.R
 
 const val NINE_MAX_VALUE = 9
@@ -39,13 +40,13 @@ class BadgeDrawable(
 
     override fun draw(canvas: Canvas) {
         when (variant) {
-            STANDARD -> createStandardVariant(canvas)
-            PULSE -> createPulseVariant(canvas)
-            DOT -> createDotVariant(canvas)
+            STANDARD -> createStandardCircle(canvas)
+            PULSE -> createPulseCircle(canvas)
+            DOT -> createDotCircle(canvas)
         }
     }
 
-    private fun createStandardVariant(canvas: Canvas) {
+    private fun createStandardCircle(canvas: Canvas) {
         if (this.count > 0) {
             drawBadgeWithText(canvas)
         } else {
@@ -53,7 +54,7 @@ class BadgeDrawable(
         }
     }
 
-    private fun createDotVariant(canvas: Canvas) {
+    private fun createDotCircle(canvas: Canvas) {
         initializePaint()
 
         canvas.drawCircle(
@@ -64,7 +65,7 @@ class BadgeDrawable(
         )
     }
 
-    private fun createPulseVariant(canvas: Canvas) {
+    private fun createPulseCircle(canvas: Canvas) {
         initializePaint()
 
         canvas.drawCircle(
@@ -165,19 +166,19 @@ class BadgeDrawable(
 
     private fun getBackgroundColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.colorPrimary
-            SECONDARY -> R.attr.colorSecondary
-            SUCCESS -> R.attr.colorSuccess
-            else -> R.attr.colorAlert
+            PRIMARY -> R.attr.badgeColorPrimaryBackground
+            SECONDARY -> R.attr.badgeColorSecondaryBackground
+            SUCCESS -> R.attr.badgeColorSuccessBackground
+            else -> R.attr.badgeColorAlertBackground
         }
     }
 
     private fun getFontColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.colorOnPrimary
-            SECONDARY -> R.attr.colorOnSecondary
-            SUCCESS -> R.attr.colorOnSuccess
-            else -> R.attr.colorOnAlert
+            PRIMARY -> R.attr.badgeColorPrimaryLabel
+            SECONDARY -> R.attr.badgeColorSecondaryLabel
+            SUCCESS -> R.attr.badgeColorSuccessLabel
+            else -> R.attr.badgeColorAlertLabel
         }
     }
 
