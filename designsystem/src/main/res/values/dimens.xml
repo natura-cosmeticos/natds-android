@@ -78,6 +78,8 @@
     <dimen name="ssotc20ced05ef7b5856ec3a02b846ef882e">6dp</dimen>
     <dimen name="ssot6a1ba413dd397360d66c72d3bedaf888">9dp</dimen>
     <dimen name="ssot5efa55b135027e50e8d8aa041e584a33">12dp</dimen>
+    <dimen name="ssotc9f0f895fb98ab9159f51fd0297e236d">8</dimen>
+    <dimen name="ssota87ff679a2f3e71d9181a67b7542122c">4</dimen>
 
 
     <dimen name="ds_spacing_none">0dp</dimen>
