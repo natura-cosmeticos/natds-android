@@ -170,10 +170,10 @@
         <item name="elevationHuge">@dimen/ssot5efa55b135027e50e8d8aa041e584a33</item>
         <item name="elevationHugeX">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
         <item name="elevationHugeXX">@dimen/ssota678d4b111a732673d83a948f471edbb</item>
-        <item name="assetBrandNeutralAFile">@drawable/avon_a_official</item>
-        <item name="assetBrandNeutralBFile">@drawable/avon_a_official</item>
-        <item name="assetBrandCustomAFile">@drawable/avon_a_custom</item>
-        <item name="assetBrandCustomBFile">@drawable/avon_a_custom</item>
+        <item name="assetBrandNeutralA">@drawable/avon_a_official</item>
+        <item name="assetBrandNeutralB">@drawable/avon_a_official</item>
+        <item name="assetBrandCustomA">@drawable/avon_a_custom</item>
+        <item name="assetBrandCustomB">@drawable/avon_a_custom</item>
         <item name="buttonLabelPrimaryFontFamily">Roboto</item>
         <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
