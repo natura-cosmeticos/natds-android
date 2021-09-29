@@ -21,6 +21,42 @@
 -->
 <resources>
     <style name="Theme.Natura.Dark" parent="Theme.MaterialComponents.DayNight">
+        <item name="buttonContainedColorEnableBackground">@color/ssot380a6ec94e4949e054bb47042b084108</item>
+        <item name="buttonContainedColorEnableBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonContainedColorEnableLabel">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
+        <item name="buttonContainedColorDisableBackground">@color/ssot62a7b21d4ac2999957afb4aa3497cdc3</item>
+        <item name="buttonContainedColorDisableBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonContainedColorDisableLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonContainedColorHoverBackground">@color/ssot559a9a8c45a88adb479019dbf840b7b0</item>
+        <item name="buttonContainedColorHoverBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonContainedColorHoverLabel">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
+        <item name="buttonContainedColorFocusBackground">@color/ssotb2c4225b9873610ca97f41c18651b441</item>
+        <item name="buttonContainedColorFocusBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonContainedColorFocusLabel">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
+        <item name="buttonOutlinedColorEnableBackground">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonOutlinedColorEnableBorder">@color/ssot380a6ec94e4949e054bb47042b084108</item>
+        <item name="buttonOutlinedColorEnableLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonOutlinedColorDisableBackground">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonOutlinedColorDisableBorder">@color/ssot62a7b21d4ac2999957afb4aa3497cdc3</item>
+        <item name="buttonOutlinedColorDisableLabel">@color/ssotc9459f76001cfea305e1a5847babd674</item>
+        <item name="buttonOutlinedColorHoverBackground">@color/ssotcfa4c0d5c13bbafed483adecb0b3a9c6</item>
+        <item name="buttonOutlinedColorHoverBorder">@color/ssot380a6ec94e4949e054bb47042b084108</item>
+        <item name="buttonOutlinedColorHoverLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonOutlinedColorFocusBackground">@color/ssot8737baf1486301178cc536536322fc2a</item>
+        <item name="buttonOutlinedColorFocusBorder">@color/ssot380a6ec94e4949e054bb47042b084108</item>
+        <item name="buttonOutlinedColorFocusLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonTextColorEnableBackground">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorEnableBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorEnableLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonTextColorDisableBackground">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorDisableBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorDisableLabel">@color/ssotc9459f76001cfea305e1a5847babd674</item>
+        <item name="buttonTextColorHoverBackground">@color/ssotcfa4c0d5c13bbafed483adecb0b3a9c6</item>
+        <item name="buttonTextColorHoverBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorHoverLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
+        <item name="buttonTextColorFocusBackground">@color/ssot8737baf1486301178cc536536322fc2a</item>
+        <item name="buttonTextColorFocusBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
+        <item name="buttonTextColorFocusLabel">@color/ssotf167fa4e8eeb4595e45ebbacf38c49b3</item>
         <item name="colorPrimary">@color/ssot380a6ec94e4949e054bb47042b084108</item>
         <item name="colorOnPrimary">@color/ssot09c72ac813bc7a0108f7f274f6197773</item>
         <item name="colorPrimaryLight">@color/ssot4d4c3431a4b6333408ad9207399fef9e</item>
@@ -53,9 +89,10 @@
         <item name="borderRadiusSmall">@dimen/ssote01661eca1c156941ef9b3d972d887ac</item>
         <item name="borderRadiusMedium">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
         <item name="borderRadiusLarge">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
-        <item name="buttonDefaultFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
-        <item name="buttonDefaultLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
-        <item name="buttonDefaultLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
+        <item name="buttonLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
+        <item name="buttonLabelLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
+        <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
+        <item name="buttonBorderRadius">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
         <item name="heading1FontSize">@dimen/ssotf2046c63a9b28031d75d8188b83abee7</item>
         <item name="heading1LetterSpacing">@dimen/ssot4d14337480bb336de0920801c674fab1</item>
         <item name="heading2FontSize">@dimen/ssot60977ec4a159daafe46990041221ada9</item>
@@ -137,7 +174,10 @@
         <item name="assetBrandNeutralB">@drawable/natura_b_official_dark</item>
         <item name="assetBrandCustomA">@drawable/natura_a_custom</item>
         <item name="assetBrandCustomB">@drawable/natura_b_custom</item>
-        <item name="buttonDefaultFontWeight">sans-serif-medium</item>
+        <item name="buttonLabelPrimaryFontFamily">Roboto</item>
+        <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
+        <item name="buttonLabelFallbackFontFamily">Roboto</item>
+        <item name="buttonLabelFallbackFontWeight">sans-serif-medium</item>
         <item name="assetFontFileDisplay">@font/helveticanowdisplay_bd</item>
         <item name="assetFontFileHeadline">@font/helveticanowdisplay_md</item>
         <item name="assetFontFileBodyRegular">@font/helveticanowdisplay_regular</item>
@@ -160,6 +200,12 @@
         <item name="typographyFontFamilyCode">Roboto Mono</item>
         <item name="typographyFontWeightRegular">sans-serif</item>
         <item name="typographyFontWeightMedium">sans-serif-medium</item>
+
+        <!-- { @deprecated Attributes }-->
+        <item name="buttonDefaultFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
+        <item name="buttonDefaultLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
+        <item name="buttonDefaultLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
+        <item name="buttonDefaultFontWeight">sans-serif-medium</item>
 
         <!--
         /***
@@ -270,7 +316,7 @@
 
         <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
         <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
-         <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
+        <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
 
         <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
         <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>

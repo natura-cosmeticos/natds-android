@@ -71,6 +71,34 @@
     <color name="ssot2fbbceb6696a9a09c30b6625cbff41c0">#D6CE4B</color>
     <color name="ssotb41e8fff62f6ba3bfde1a5cdaed8a354">#FFFF7C</color>
     <color name="ssot82088e247fcfdd71797b20fac0e3960d">#A29D12</color>
+    <color name="ssotf5180834bdeffdd2089fc51a863b12c9">#566D69</color>
+    <color name="ssot0cdd2d2312ae75b30d6259fa2703885d">#041C18</color>
+    <color name="ssotb2c4225b9873610ca97f41c18651b441">#F8C675</color>
+    <color name="ssot84a9794ec049b19acf7af140fbc2b63f">#A67423</color>
+    <color name="ssot09ac4d80eb8d538c780c34366fefa1c4">#9672D6</color>
+    <color name="ssotcfa4c0d5c13bbafed483adecb0b3a9c6">#343a40</color>
+    <color name="ssot8737baf1486301178cc536536322fc2a">#495057</color>
+    <color name="ssot4c09b1acb733991f7276403e8f52d0a3">#212529</color>
+    <color name="ssot753d1fb7ec9fbc50b517a07dfc27bf52">#868e96</color>
+    <color name="ssot84a0fced91032916fdcf2e9164958ea6">#adb5bd</color>
+    <color name="ssota0ee271fcb649827f94947f566306893">#ced4da</color>
+    <color name="ssot96b841bf5110dcdfd0f8331a99bca0a8">#dee2e6</color>
+    <color name="ssotaff87cf6b2fa08da8176ecbaa35c0a5c">#e9ecef</color>
+    <color name="ssot4666a0c44d05186a172d140a877b40b2">#f1f3f5</color>
+    <color name="ssote032ee609509358f77163979819b263d">#f8f9fa</color>
+    <color name="ssotf068efad0b2a86d6b4048c9b3949e1b7">#442184</color>
+    <color name="ssot9e8eab2b2193d9c98685a5d7af41d30f">#747474</color>
+    <color name="ssot5569e951203d1ad446563b134b472801">#515151</color>
+    <color name="ssotec94cee11e4b10f052c61e06039eabc9">#131313</color>
+    <color name="ssot08fcd64a5d8051cf093d45e61c83757f">#646464</color>
+    <color name="ssot9010bbed0aff666efca1e7aed463ad85">#8B8B8B</color>
+    <color name="ssot1b043fe22cba53270eeec2fb20199184">#ACACAC</color>
+    <color name="ssota77f25dc4218a10320c4a942942bad4c">#D1D1D1</color>
+    <color name="ssotbe28038f4eee739a87c23006cef2c3c8">#E3E3E3</color>
+    <color name="ssot5a4f28fbfaa05701728c866ebb0a3815">#EEEEEE</color>
+    <color name="ssot369c2751c17acf790cc57b0404083795">#F7F7F7</color>
+    <color name="ssot638b3d558895638b66e063992afdb6c7">#232323</color>
+    <color name="ssot80ecbb2bf909dedd4251680e217975b8">#00FFFFFF</color>
 
     <!--{@deprecated GRAY SCALE}} -->
     <color name="black">@android:color/black</color>
