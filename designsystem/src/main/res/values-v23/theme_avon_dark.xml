@@ -21,6 +21,14 @@
 -->
 <resources>
     <style name="Theme.Avon.Dark" parent="Theme.MaterialComponents.DayNight">
+        <item name="badgeColorPrimaryLabel">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="badgeColorPrimaryBackground">@color/ssot9e8170cadc381593571ff129e51fbfea</item>
+        <item name="badgeColorSecondaryLabel">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+        <item name="badgeColorSecondaryBackground">@color/ssot2c9894652eb329c5fe1f7652a938440a</item>
+        <item name="badgeColorSuccessLabel">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="badgeColorSuccessBackground">@color/ssot5f3b2baa1770dae9b24db5309ba5541c</item>
+        <item name="badgeColorAlertLabel">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
+        <item name="badgeColorAlertBackground">@color/ssote57d6ad7ffae602db2515d2f9f42a48f</item>
         <item name="buttonContainedColorEnableBackground">@color/ssot9e8170cadc381593571ff129e51fbfea</item>
         <item name="buttonContainedColorEnableBorder">@color/ssot80ecbb2bf909dedd4251680e217975b8</item>
         <item name="buttonContainedColorEnableLabel">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
@@ -89,6 +97,13 @@
         <item name="borderRadiusSmall">@dimen/ssote01661eca1c156941ef9b3d972d887ac</item>
         <item name="borderRadiusMedium">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
         <item name="borderRadiusLarge">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
+        <item name="badgeLabelFontSize">@dimen/ssotc44d0948764dbf2c5666b7e8309c73cb</item>
+        <item name="badgeLabelLetterSpacing">@dimen/ssot40f3f3640647251fc4da2ce46193df95</item>
+        <item name="badgeLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
+        <item name="badgeStandardHeight">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
+        <item name="badgeStandardBorderRadius">@dimen/ssotc9f0f895fb98ab9159f51fd0297e236d</item>
+        <item name="badgeDotHeight">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
+        <item name="badgeDotBorderRadius">@dimen/ssota87ff679a2f3e71d9181a67b7542122c</item>
         <item name="buttonLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
         <item name="buttonLabelLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
         <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
@@ -174,6 +189,10 @@
         <item name="assetBrandNeutralB">@drawable/avon_a_official_dark</item>
         <item name="assetBrandCustomA">@drawable/avon_a_custom</item>
         <item name="assetBrandCustomB">@drawable/avon_a_custom</item>
+        <item name="badgeLabelPrimaryFontFamily">Roboto</item>
+        <item name="badgeLabelPrimaryFontWeight">sans-serif</item>
+        <item name="badgeLabelFallbackFontFamily">Roboto</item>
+        <item name="badgeLabelFallbackFontWeight">sans-serif</item>
         <item name="buttonLabelPrimaryFontFamily">Roboto</item>
         <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
