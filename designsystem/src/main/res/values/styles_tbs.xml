@@ -16,9 +16,9 @@
     <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
-        <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_light</item>
-        <item name="backgroundTint">@color/button_background_color_selector_tbs_light</item>
+        <item name="rippleColor">@color/button_contained_ripple_color_tbs_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_tbs_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_tbs_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -41,9 +41,9 @@
     <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_dark</item>
-        <item name="backgroundTint">@color/button_background_color_selector_tbs_dark</item>
+        <item name="rippleColor">@color/button_contained_ripple_color_tbs_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_tbs_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_tbs_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
@@ -96,9 +96,14 @@
     </style>
 
     <style name="Widget.DS.Button.TBS.Light" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_light</item>
-        <item name="backgroundTint">@color/button_background_color_selector_tbs_light</item>
+        <item name="rippleColor">@color/button_contained_ripple_color_tbs_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_tbs_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_tbs_light</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_tbs_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.TBS.Light" parent="Widget.DS.Button.TBS.Light">
@@ -112,9 +117,14 @@
     </style>
 
     <style name="Widget.DS.Button.TBS.Dark" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_tbs_dark</item>
-        <item name="backgroundTint">@color/button_background_color_selector_tbs_dark</item>
+        <item name="rippleColor">@color/button_contained_ripple_color_tbs_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_tbs_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_tbs_dark</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_tbs_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.TBS.Dark" parent="Widget.DS.Button.TBS.Dark">
@@ -128,9 +138,14 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.TBS.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_text_color_selector_light</item>
-        <item name="strokeColor">@color/stroke_color_selector_tbs_light</item>
-        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_outlined_label_color_tbs_light</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_tbs_light</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_tbs_light</item>
+        <item name="rippleColor">@color/button_outlined_ripple_color_tbs_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.TBS.Light" parent="Widget.DS.Button.Outlined.TBS.Light">
@@ -144,9 +159,14 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.TBS.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_text_color_selector_dark</item>
-        <item name="strokeColor">@color/stroke_color_selector_tbs_dark</item>
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_outlined_label_color_tbs_dark</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_tbs_dark</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_tbs_dark</item>
+        <item name="rippleColor">@color/button_outlined_ripple_color_tbs_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.TBS.Dark" parent="Widget.DS.Button.Outlined.TBS.Dark">
