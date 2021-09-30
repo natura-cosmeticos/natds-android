@@ -83,6 +83,7 @@
     <declare-styleable name="Badge">
         <attr name="badgeNumber" format="integer" />
         <attr name="badgeVisibility" format="boolean" />
+        <attr name="isFontWeight" format="boolean" />
         <attr name="badgeVariant" format="enum">
             <enum name="standard" value="0" />
             <enum name="dot" value="1" />

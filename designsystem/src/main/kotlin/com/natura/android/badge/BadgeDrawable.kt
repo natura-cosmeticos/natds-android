@@ -20,7 +20,8 @@ class BadgeDrawable(
     private var parent: Drawable,
     private var variant: Int?,
     private var color: Int?,
-    private var limit: Int?
+    private var limit: Int?,
+    private var isFontWeight: Boolean?
 ) : Drawable() {
 
     private var mTextPaint = Paint()
@@ -92,7 +93,7 @@ class BadgeDrawable(
     private fun setBadgeFontStyle() {
         mTextPaint.apply {
             color = getColorFromTheme(getFontColorByAttr())
-            typeface = getFontFromTheme(R.attr.badgeLabelPrimaryFontFamily)
+            typeface = getFontFromTheme()
             textSize = getDimenFromTheme(R.attr.badgeLabelFontSize)
             textAlign = Paint.Align.CENTER
             letterSpacing = getDimenFromTheme(R.attr.badgeLabelLetterSpacing)
@@ -184,15 +185,21 @@ class BadgeDrawable(
         return value.data
     }
 
-    private fun getFontFromTheme(attrFont: Int): Typeface? {
+    private fun getFontFromTheme(): Typeface? {
+
+        val attrFont = when (isFontWeight) {
+            true -> R.attr.badgeLabelPrimaryFontWeight
+            else -> R.attr.badgeLabelPrimaryFontFamily
+        }
+
         val value = TypedValue()
         context.theme.resolveAttribute(attrFont, value, true)
 
-        if (value.data.toString().isEmpty()) {
+        if (value.string.isEmpty()) {
             context.theme.resolveAttribute(R.attr.badgeLabelFallbackFontFamily, value, true)
-            return Typeface.create(value.data.toString(), Typeface.NORMAL)
+            return Typeface.create(value.string.toString(), Typeface.NORMAL)
         }
-        return Typeface.create(value.data.toString(), Typeface.NORMAL)
+        return Typeface.create(value.string.toString(), Typeface.NORMAL)
     }
 
     private fun getDimenFromTheme(attributeName: Int): Float {
