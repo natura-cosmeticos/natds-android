@@ -41,7 +41,6 @@ class BadgeDrawable(
     override fun draw(canvas: Canvas) {
         when (variant) {
             STANDARD -> createStandardCircle(canvas)
-            PULSE -> createPulseCircle(canvas)
             DOT -> createDotCircle(canvas)
         }
     }
@@ -57,23 +56,19 @@ class BadgeDrawable(
     private fun createDotCircle(canvas: Canvas) {
         initializePaint()
 
-        canvas.drawCircle(
-            bounds.right - (getDimenFromTheme(R.attr.sizeTiny) / 2),
-            getDimenFromTheme(R.attr.sizeTiny) / 2,
-            getDimenFromTheme(R.attr.sizeTiny) / 2,
-            circlePaint
-        )
-    }
+        val bounds = bounds
+        val badgeWith = getDimenFromTheme(R.attr.sizeTiny).toInt()
 
-    private fun createPulseCircle(canvas: Canvas) {
-        initializePaint()
-
-        canvas.drawCircle(
-            bounds.right - (getDimenFromTheme(R.attr.sizeTiny) / 2),
-            getDimenFromTheme(R.attr.sizeTiny) / 2,
-            getDimenFromTheme(R.attr.sizeTiny) / 2,
-            circlePaint
-        )
+        context.resources.getDrawable(R.drawable.badge_dot, context.theme).apply {
+            setTint(getColorFromTheme(getBackgroundColorByAttr()))
+            setBounds(
+                bounds.right - badgeWith,
+                bounds.top,
+                bounds.right,
+                getDimenFromTheme(R.attr.badgeDotHeight).toInt()
+            )
+            draw(canvas)
+        }
     }
 
     override fun setAlpha(alpha: Int) {}
@@ -88,7 +83,7 @@ class BadgeDrawable(
     }
 
     private fun initializePaint() {
-        circlePaint.color = getColorFromTheme(context, getBackgroundColorByAttr())
+        circlePaint.color = getColorFromTheme(getBackgroundColorByAttr())
         circlePaint.isAntiAlias = true
         circlePaint.style = Paint.Style.FILL
         circlePaint.strokeWidth = 0f
@@ -96,10 +91,11 @@ class BadgeDrawable(
 
     private fun setBadgeFontStyle() {
         mTextPaint.apply {
-            color = getColorFromTheme(context, getFontColorByAttr())
-            typeface = Typeface.DEFAULT
-            textSize = context.resources.getDimension(R.dimen.badge_text_size)
+            color = getColorFromTheme(getFontColorByAttr())
+            typeface = getFontFromTheme(R.attr.badgeLabelPrimaryFontFamily)
+            textSize = getDimenFromTheme(R.attr.badgeLabelFontSize)
             textAlign = Paint.Align.CENTER
+            letterSpacing = getDimenFromTheme(R.attr.badgeLabelLetterSpacing)
             style = Paint.Style.FILL
         }
     }
@@ -123,13 +119,13 @@ class BadgeDrawable(
         val bounds = bounds
         val badgeWith = mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
 
-        context.resources.getDrawable(R.drawable.badge_rounded_rectangle, context.theme).apply {
-            setTint(getColorFromTheme(context, getBackgroundColorByAttr()))
+        context.resources.getDrawable(R.drawable.badge_standard, context.theme).apply {
+            setTint(getColorFromTheme(getBackgroundColorByAttr()))
             setBounds(
                 bounds.right - badgeWith,
                 bounds.top,
                 bounds.right,
-                mTxtRect.height() + getDimenFromTheme(R.attr.spacingTiny).toInt()
+                getDimenFromTheme(R.attr.badgeStandardHeight).toInt()
             )
             draw(canvas)
 
@@ -182,10 +178,21 @@ class BadgeDrawable(
         }
     }
 
-    private fun getColorFromTheme(context: Context, attrColorId: Int): Int {
+    private fun getColorFromTheme(attrColorId: Int): Int {
         val value = TypedValue()
         context.theme.resolveAttribute(attrColorId, value, true)
         return value.data
+    }
+
+    private fun getFontFromTheme(attrFont: Int): Typeface? {
+        val value = TypedValue()
+        context.theme.resolveAttribute(attrFont, value, true)
+
+        if (value.data.toString().isEmpty()) {
+            context.theme.resolveAttribute(R.attr.badgeLabelFallbackFontFamily, value, true)
+            return Typeface.create(value.data.toString(), Typeface.NORMAL)
+        }
+        return Typeface.create(value.data.toString(), Typeface.NORMAL)
     }
 
     private fun getDimenFromTheme(attributeName: Int): Float {
