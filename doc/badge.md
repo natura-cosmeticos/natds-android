@@ -20,8 +20,11 @@ With the following attribute status:
     * ✅ `9`
     * ✅ `99`
     * ✅ `Unlimited` (default)
-   
-
+    
+* isFontWeight(Standard):
+    * ✅ `true`
+    * ✅ `false` (default)
+      
 ## What is it?
 
 The Badge is a screen element used to signal the user's points of attention.
