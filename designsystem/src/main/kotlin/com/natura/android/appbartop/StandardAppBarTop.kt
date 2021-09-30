@@ -11,6 +11,7 @@ import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.WindowManager
@@ -48,7 +49,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         }
 
     private var contentType: Int = TEXT
-    private var contentImage: Int? = null
+    private var contentMedia: Int = 0
+    private var mediaHeight: Int = WRAP_CONTENT
+    private var mediaWidth: Int = WRAP_CONTENT
     private var contentText: String? = ""
     private var actionRight: Boolean = false
     private var actionLeft: Boolean = false
@@ -118,12 +121,14 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     fun setContentText(text: String) {
-        this.contentText = text
-        findViewById<TextView>(R.id.contentText).text = text
+        if (contentType == TEXT) {
+            this.contentText = text
+            findViewById<TextView>(R.id.contentText).text = text
+        }
     }
 
     fun getContentImage(): Int? {
-        return contentImage
+        return contentMedia
     }
 
     fun getContentType(): Int {
@@ -189,7 +194,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private fun addContent() {
         when (contentType) {
             TEXT -> contentText?.let { addTextView(context, it) }
-            MEDIA -> contentImage?.let { addImage(context, it) }
+            MEDIA -> {
+                if (contentMedia != NOT_RESOURCE_FOUND_CODE) {
+                    addImage(context, contentMedia)
+                }
+            }
             SEARCH -> addTextField(context)
         }
     }
@@ -204,10 +213,12 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             typedArray.getBoolean(R.styleable.StandardAppBarTop_enabledElevation, true)
         barColor = typedArray.getInt(R.styleable.StandardAppBarTop_appBarColor, DEFAULT)
         contentType = typedArray.getInt(R.styleable.StandardAppBarTop_contentType, TEXT)
-        contentImage = typedArray.getResourceId(R.styleable.StandardAppBarTop_contentMedia, 0)
+        contentMedia = typedArray.getResourceId(R.styleable.StandardAppBarTop_contentMedia, NOT_RESOURCE_FOUND_CODE)
         contentText = typedArray.getString(R.styleable.StandardAppBarTop_contentText)
         actionRight = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionRight, false)
         actionLeft = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionLeft, false)
+        mediaHeight = typedArray.getDimensionPixelSize(R.styleable.StandardAppBarTop_mediaHeight, LayoutParams.WRAP_CONTENT)
+        mediaWidth = typedArray.getDimensionPixelSize(R.styleable.StandardAppBarTop_mediaWidth, LayoutParams.WRAP_CONTENT)
         scrollable = typedArray.getBoolean(R.styleable.StandardAppBarTop_scrollable, false)
         contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
         proeminentContent = typedArray.getBoolean(
@@ -282,8 +293,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         imageView.setImageResource(resourceImage)
         imageView.layoutParams =
             LayoutParams(
-                WRAP_CONTENT,
-                WRAP_CONTENT
+                mediaWidth,
+                mediaHeight
             )
         addView(imageView)
     }
@@ -372,5 +383,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         private const val ACTION_LEFT_ELEMENT_INDEX = 2
         private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
         private const val MIN_COUNT_ELEMENTS = 1
+
+        private const val NOT_RESOURCE_FOUND_CODE = 0
     }
 }
