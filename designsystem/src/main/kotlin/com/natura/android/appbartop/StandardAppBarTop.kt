@@ -374,7 +374,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     private fun handleContent() {
-        menu?.let{
+        menu?.let {
             if (it == NOT_RESOURCE_FOUND_CODE) {
                 addContent()
             } else {
