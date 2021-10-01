@@ -11,7 +11,6 @@ import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.view.WindowManager
@@ -133,6 +132,14 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     fun getContentType(): Int {
         return contentType
+    }
+
+    fun getMediaHeight(): Any {
+        return mediaHeight
+    }
+
+    fun getMediaWidth(): Any {
+        return mediaWidth
     }
 
     private fun changeActionsVisibility() {

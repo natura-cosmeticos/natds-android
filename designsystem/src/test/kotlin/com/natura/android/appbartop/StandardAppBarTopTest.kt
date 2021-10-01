@@ -1,10 +1,10 @@
 package com.natura.android.appbartop
 
 import android.content.Context
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.standard_appbar_top.view.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -174,7 +174,7 @@ class StandardAppBarTopTest {
     }
 
     @Test
-    fun checksContentText() {
+    fun checksContentTextWasSet() {
         appBarTop = buildStandardAppBarTopWithContentText()
 
         val contentText = appBarTop.getContentText()
@@ -198,6 +198,24 @@ class StandardAppBarTopTest {
         val elevation = appBarTop.toolbar.elevation
 
         Truth.assertThat(elevation).isEqualTo(0F)
+    }
+
+    @Test
+    fun checkIfMediaHeightWasSet() {
+        appBarTop = buildStandardAppBarTopWithMediaHeight()
+
+        val mediaHeight = appBarTop.getMediaHeight()
+
+        Truth.assertThat(mediaHeight).isEqualTo(10)
+    }
+
+    @Test
+    fun checkIfMediaWidthWasSet() {
+        appBarTop = buildStandardAppBarTopWithMediaWidth()
+
+        val mediaWidth = appBarTop.getMediaWidth()
+
+        Truth.assertThat(mediaWidth).isEqualTo(10)
     }
 
     private fun buildStandardAppBarTopDefaultColor(): StandardAppBarTop {
@@ -323,6 +341,20 @@ class StandardAppBarTopTest {
         return StandardAppBarTopFixture
             .aStandardAppBarTop()
             .withContentText("Title Center")
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithMediaHeight(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withMediaHeight(10)
+            .build()
+    }
+
+    private fun buildStandardAppBarTopWithMediaWidth(): StandardAppBarTop {
+        return StandardAppBarTopFixture
+            .aStandardAppBarTop()
+            .withMediaWidth(10)
             .build()
     }
 
