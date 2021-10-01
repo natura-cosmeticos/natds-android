@@ -1,7 +1,6 @@
 package com.natura.android.appbartop
 
 import android.content.Context
-import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
