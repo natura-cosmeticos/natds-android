@@ -47,6 +47,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             handleScroll(value)
         }
 
+    private var menu: Int? = null
     private var contentType: Int = TEXT
     private var contentMedia: Int = 0
     private var mediaHeight: Int = WRAP_CONTENT
@@ -73,8 +74,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         initialConfigurations()
         getAttributes()
-        addContent()
 
+        handleContent()
         typedArray.recycle()
     }
 
@@ -216,6 +217,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     private fun getAttributes() {
+        menu = typedArray.getResourceId(R.styleable.StandardAppBarTop_menu, NOT_RESOURCE_FOUND_CODE)
         enabledElevation =
             typedArray.getBoolean(R.styleable.StandardAppBarTop_enabledElevation, true)
         barColor = typedArray.getInt(R.styleable.StandardAppBarTop_appBarColor, DEFAULT)
@@ -368,6 +370,16 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             metrics.widthPixels
         } catch (ex: Exception) {
             MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO
+        }
+    }
+
+    private fun handleContent() {
+        menu?.let{
+            if (it == NOT_RESOURCE_FOUND_CODE) {
+                addContent()
+            } else {
+                toolbar.inflateMenu(it)
+            }
         }
     }
 

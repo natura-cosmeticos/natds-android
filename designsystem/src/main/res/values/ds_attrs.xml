@@ -76,6 +76,7 @@
         <attr name="proeminentContent" format="boolean" />
         <attr name="actionRight" format="boolean" />
         <attr name="actionLeft" format="boolean" />
+        <attr name="menu" format="reference" />
         <attr name="contentPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="center" value="1" />
