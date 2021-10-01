@@ -101,9 +101,9 @@
         <item name="badgeLabelLetterSpacing">@dimen/ssot40f3f3640647251fc4da2ce46193df95</item>
         <item name="badgeLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
         <item name="badgeStandardHeight">@dimen/ssot6062b73dd0475d674cc3152dfe654910</item>
-        <item name="badgeStandardBorderRadius">@dimen/ssotc9f0f895fb98ab9159f51fd0297e236d</item>
+        <item name="badgeStandardBorderRadius">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
         <item name="badgeDotHeight">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
-        <item name="badgeDotBorderRadius">@dimen/ssota87ff679a2f3e71d9181a67b7542122c</item>
+        <item name="badgeDotBorderRadius">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
         <item name="buttonLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
         <item name="buttonLabelLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
         <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
