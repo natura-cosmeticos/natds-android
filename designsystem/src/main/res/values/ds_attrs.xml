@@ -70,6 +70,8 @@
             <enum name="search" value="2" />
         </attr>
         <attr name="contentMedia" format="reference" />
+        <attr name="mediaWidth" format="dimension" />
+        <attr name="mediaHeight" format="dimension" />
         <attr name="contentText" format="string" />
         <attr name="proeminentContent" format="boolean" />
         <attr name="actionRight" format="boolean" />

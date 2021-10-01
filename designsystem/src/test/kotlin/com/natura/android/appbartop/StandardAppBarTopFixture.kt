@@ -1,6 +1,7 @@
 package com.natura.android.appbartop
 
 import android.content.Context
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import androidx.test.core.app.ApplicationProvider
 import com.natura.android.R
 import org.robolectric.Robolectric
@@ -10,6 +11,8 @@ internal class StandardAppBarTopFixture private constructor(
     private var enabledElevation: Boolean = true,
     private var actionRight: Boolean = false,
     private var actionLeft: Boolean = false,
+    private var mediaHeight: Int = WRAP_CONTENT,
+    private var mediaWidth: Int = WRAP_CONTENT,
     private var proeminentContent: Boolean = false,
     private var scrollable: Boolean = false,
     private var contentType: Int = TEXT,
@@ -35,6 +38,8 @@ internal class StandardAppBarTopFixture private constructor(
         private const val defaultEnabledElevation = true
         private const val defaultActionRight = false
         private const val defaultActionLeft = true
+        private const val defaultMediaHeight = WRAP_CONTENT
+        private const val defaultMediaWidth = WRAP_CONTENT
         private const val defaultScrollable = true
         private const val defaultProeminentContent = true
         private const val defaultContentPosition = CENTER
@@ -49,6 +54,8 @@ internal class StandardAppBarTopFixture private constructor(
                 defaultEnabledElevation,
                 defaultActionRight,
                 defaultActionLeft,
+                defaultMediaHeight,
+                defaultMediaWidth,
                 defaultScrollable,
                 defaultProeminentContent,
                 defaultContentPosition,
@@ -134,6 +141,16 @@ internal class StandardAppBarTopFixture private constructor(
         return this
     }
 
+    fun withMediaHeight(height: Int): StandardAppBarTopFixture {
+        this.mediaHeight = height
+        return this
+    }
+
+    fun withMediaWidth(width: Int): StandardAppBarTopFixture {
+        this.mediaWidth = width
+        return this
+    }
+
     fun build(): StandardAppBarTop {
         val attributes = Robolectric
             .buildAttributeSet()
@@ -146,6 +163,8 @@ internal class StandardAppBarTopFixture private constructor(
             .addAttribute(R.attr.proeminentContent, proeminentContent.toString())
             .addAttribute(R.attr.actionRight, actionRight.toString())
             .addAttribute(R.attr.actionLeft, actionLeft.toString())
+            .addAttribute(R.attr.mediaHeight, mediaHeight.toString())
+            .addAttribute(R.attr.mediaWidth, mediaWidth.toString())
             .build()
 
         return StandardAppBarTop(context, attributes)
