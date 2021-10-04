@@ -40,6 +40,24 @@ class BadgeTest {
     }
 
     @Test
+    fun `GIVEN a badge, WHEN fontWeight is set to true, THEN the property fontWeight should be true`() {
+        badge = BadgeFixture.aBadge().withFontWeight(true).build()
+
+        val isFontWeight = badge.getFontWeightOption()
+
+        Truth.assertThat(isFontWeight).isEqualTo(true)
+    }
+
+    @Test
+    fun `GIVEN a badge, WHEN fontWeight is set to false, THEN the property fontWeight should be false`() {
+        badge = BadgeFixture.aBadge().withFontWeight(false).build()
+
+        val isFontWeight = badge.getFontWeightOption()
+
+        Truth.assertThat(isFontWeight).isEqualTo(false)
+    }
+
+    @Test
     fun `GIVEN a badge, WHEN it is created with visibility false, THEN the property visibility should be false`() {
         badge = BadgeFixture.aBadge().withVisibility(false).build()
 

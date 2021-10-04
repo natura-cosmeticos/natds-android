@@ -42,6 +42,7 @@ class Badge @JvmOverloads constructor(
     private var badgeAttributeArray: TypedArray
     private var attrNumber: Int = 0
     private var attrVisibility: Boolean = true
+    private var isFontWeight: Boolean = false
     private var limit: Int = UNLIMITED
     private var color: Int = ALERT
     private var variant: Int = STANDARD
@@ -113,11 +114,12 @@ class Badge @JvmOverloads constructor(
         variant = badgeAttributeArray.getInt(R.styleable.Badge_badgeVariant, STANDARD)
         color = badgeAttributeArray.getInt(R.styleable.Badge_badgeColor, ALERT)
         limit = badgeAttributeArray.getInt(R.styleable.Badge_badgeLimitNumber, UNLIMITED)
+        isFontWeight = badgeAttributeArray.getBoolean(R.styleable.Badge_isFontWeight, false)
     }
 
     private fun createBadgeDrawable() {
         imageContainer.visibility = View.VISIBLE
-        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable, variant, color, limit)
+        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable, variant, color, limit, isFontWeight)
     }
 
     private fun handlerVariant() {
@@ -132,8 +134,8 @@ class Badge @JvmOverloads constructor(
         badgeRipple.visibility = View.VISIBLE
         badgeDot.visibility = View.VISIBLE
 
-        badgeDot.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
-        badgeRipple.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
+        badgeDot.drawable.setTint(getColorTokenFromTheme(context, getPulseColorByAttr()))
+        badgeRipple.drawable.setTint(getColorTokenFromTheme(context, getPulseColorByAttr()))
 
         initializeAnimators()
     }
@@ -160,13 +162,17 @@ class Badge @JvmOverloads constructor(
         pulseAnimation.start()
     }
 
-    private fun getBackgroundColorByAttr(): Int {
+    private fun getPulseColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.colorPrimary
-            SECONDARY -> R.attr.colorSecondary
-            SUCCESS -> R.attr.colorSuccess
-            else -> R.attr.colorAlert
+            PRIMARY -> R.attr.badgeColorPrimaryBackground
+            SECONDARY -> R.attr.badgeColorSecondaryBackground
+            SUCCESS -> R.attr.badgeColorSuccessBackground
+            else -> R.attr.badgeColorAlertBackground
         }
+    }
+
+    fun getFontWeightOption(): Boolean {
+        return isFontWeight
     }
 
     companion object {

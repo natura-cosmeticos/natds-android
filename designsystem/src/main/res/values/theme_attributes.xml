@@ -52,6 +52,25 @@
     <attr name="borderRadiusSmall" format="dimension" />
     <attr name="borderRadiusMedium" format="dimension" />
     <attr name="borderRadiusLarge" format="dimension" />
+    <attr name="badgeLabelFontSize" format="dimension" />
+    <attr name="badgeLabelLetterSpacing" format="dimension" />
+    <attr name="badgeLabelLineHeight" format="dimension" />
+    <attr name="badgeLabelPrimaryFontFamily" format="string" />
+    <attr name="badgeLabelPrimaryFontWeight" format="string" />
+    <attr name="badgeLabelFallbackFontFamily" format="string" />
+    <attr name="badgeLabelFallbackFontWeight" format="string" />
+    <attr name="badgeStandardHeight" format="dimension" />
+    <attr name="badgeStandardBorderRadius" format="dimension" />
+    <attr name="badgeDotHeight" format="dimension" />
+    <attr name="badgeDotBorderRadius" format="dimension" />
+    <attr name="badgeColorPrimaryLabel" format="color" />
+    <attr name="badgeColorPrimaryBackground" format="color" />
+    <attr name="badgeColorSecondaryLabel" format="color" />
+    <attr name="badgeColorSecondaryBackground" format="color" />
+    <attr name="badgeColorSuccessLabel" format="color" />
+    <attr name="badgeColorSuccessBackground" format="color" />
+    <attr name="badgeColorAlertLabel" format="color" />
+    <attr name="badgeColorAlertBackground" format="color" />
     <attr name="buttonDefaultFontSize" format="dimension" />
     <attr name="buttonDefaultFontWeight" formastring="string" />
     <attr name="buttonDefaultLetterSpacing" format="dimension" />

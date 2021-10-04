@@ -70,10 +70,13 @@
             <enum name="search" value="2" />
         </attr>
         <attr name="contentMedia" format="reference" />
+        <attr name="mediaWidth" format="dimension" />
+        <attr name="mediaHeight" format="dimension" />
         <attr name="contentText" format="string" />
         <attr name="proeminentContent" format="boolean" />
         <attr name="actionRight" format="boolean" />
         <attr name="actionLeft" format="boolean" />
+        <attr name="menu" format="reference" />
         <attr name="contentPosition" format="enum">
             <enum name="left" value="0" />
             <enum name="center" value="1" />
@@ -83,6 +86,7 @@
     <declare-styleable name="Badge">
         <attr name="badgeNumber" format="integer" />
         <attr name="badgeVisibility" format="boolean" />
+        <attr name="isFontWeight" format="boolean" />
         <attr name="badgeVariant" format="enum">
             <enum name="standard" value="0" />
             <enum name="dot" value="1" />
