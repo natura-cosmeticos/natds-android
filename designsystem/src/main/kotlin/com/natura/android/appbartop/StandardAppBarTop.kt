@@ -48,11 +48,28 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         }
 
     private var menu: Int? = null
+        set(value) {
+            field = value
+            value?.let {
+                if (it != NOT_RESOURCE_FOUND_CODE) {
+                    toolbar.inflateMenu(it)
+                }
+            }
+        }
+    private var contentText: String? = ""
+        set(value) {
+            field = value
+            if (contentType == TEXT) {
+                value?.let {
+                    addTextView(context, it)
+                }
+            }
+        }
+
     private var contentType: Int = TEXT
     private var contentMedia: Int = 0
     private var mediaHeight: Int = WRAP_CONTENT
     private var mediaWidth: Int = WRAP_CONTENT
-    private var contentText: String? = ""
     private var actionRight: Boolean = false
     private var actionLeft: Boolean = false
     private var proeminentContent: Boolean = false
@@ -74,8 +91,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         initialConfigurations()
         getAttributes()
-
-        handleContent()
+        addContent()
         typedArray.recycle()
     }
 
@@ -120,13 +136,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         return contentText
     }
 
-    fun setContentText(text: String) {
-        if (contentType == TEXT) {
-            this.contentText = text
-            findViewById<TextView>(R.id.contentText).text = text
-        }
-    }
-
     fun getContentImage(): Int? {
         return contentMedia
     }
@@ -141,6 +150,15 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     fun getMediaWidth(): Any {
         return mediaWidth
+    }
+
+    fun setMenu(menuFile: Int) {
+        menu = menuFile
+    }
+
+    fun setText(text: String) {
+        contentType = TEXT
+        contentText = text
     }
 
     private fun changeActionsVisibility() {
@@ -201,7 +219,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private fun addContent() {
         when (contentType) {
-            TEXT -> contentText?.let { addTextView(context, it) }
             MEDIA -> {
                 if (contentMedia != NOT_RESOURCE_FOUND_CODE) {
                     addImage(context, contentMedia)
@@ -222,12 +239,21 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             typedArray.getBoolean(R.styleable.StandardAppBarTop_enabledElevation, true)
         barColor = typedArray.getInt(R.styleable.StandardAppBarTop_appBarColor, DEFAULT)
         contentType = typedArray.getInt(R.styleable.StandardAppBarTop_contentType, TEXT)
-        contentMedia = typedArray.getResourceId(R.styleable.StandardAppBarTop_contentMedia, NOT_RESOURCE_FOUND_CODE)
+        contentMedia = typedArray.getResourceId(
+            R.styleable.StandardAppBarTop_contentMedia,
+            NOT_RESOURCE_FOUND_CODE
+        )
         contentText = typedArray.getString(R.styleable.StandardAppBarTop_contentText)
         actionRight = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionRight, false)
         actionLeft = typedArray.getBoolean(R.styleable.StandardAppBarTop_actionLeft, false)
-        mediaHeight = typedArray.getDimensionPixelSize(R.styleable.StandardAppBarTop_mediaHeight, LayoutParams.WRAP_CONTENT)
-        mediaWidth = typedArray.getDimensionPixelSize(R.styleable.StandardAppBarTop_mediaWidth, LayoutParams.WRAP_CONTENT)
+        mediaHeight = typedArray.getDimensionPixelSize(
+            R.styleable.StandardAppBarTop_mediaHeight,
+            LayoutParams.WRAP_CONTENT
+        )
+        mediaWidth = typedArray.getDimensionPixelSize(
+            R.styleable.StandardAppBarTop_mediaWidth,
+            LayoutParams.WRAP_CONTENT
+        )
         scrollable = typedArray.getBoolean(R.styleable.StandardAppBarTop_scrollable, false)
         contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
         proeminentContent = typedArray.getBoolean(
@@ -370,16 +396,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             metrics.widthPixels
         } catch (ex: Exception) {
             MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO
-        }
-    }
-
-    private fun handleContent() {
-        menu?.let {
-            if (it == NOT_RESOURCE_FOUND_CODE) {
-                addContent()
-            } else {
-                toolbar.inflateMenu(it)
-            }
         }
     }
 

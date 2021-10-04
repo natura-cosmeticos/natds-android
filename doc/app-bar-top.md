@@ -19,6 +19,9 @@ With the following attribute status:
 * ✅ Scrollable(Base/Standard)
 * ✅ Action Right(Standard)
 * ✅ Action Left(Standard)
+* ✅ Menu(Standard)
+* ✅ Media Height(Standard)
+* ✅ Media Width(Standard)
 * ✅ Content Proeminent(Standard)
 
 * Content Position (Standard):
@@ -29,7 +32,7 @@ With the following attribute status:
     * ✅ `Text` (default)
     * ✅ `Media`
     * ✅ `Search`
-
+  
     
 ### What is it?
 The app bar top displays information and actions relating to the current screen
