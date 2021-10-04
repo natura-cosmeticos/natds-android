@@ -53,8 +53,6 @@ class AppBarTopActivity : AppCompatActivity() {
 
         createListeners()
 
-        appBarTopWithTwoActions.appBar.setContentText("Title Left")
-
         when (pattern) {
             PATTERN_APPBARTOP_TWOACTIONS -> appBarTopWithTwoActions.visibility = View.VISIBLE
             PATTERN_APPBARTOP_TITLE_CENTER -> appBarTopWithTitleCenter.visibility = View.VISIBLE
