@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.6.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.5.0...v.8.6.0) (2021-10-04)
+
+
+### Features
+
+* adds badge theme attributes ([d88d18a](https://github.com/natura-cosmeticos/natds-android/commit/d88d18ac989e84e5e52b9496843879ad967b9871))
+* adds isFontWeight attribute to change font style ([daf0786](https://github.com/natura-cosmeticos/natds-android/commit/daf0786bfec94da31ef2ae5d4ac6701ac6602b74))
+* includes mediaHeight and mediaWidth attributes to resize image at AppBarTop ([8903c31](https://github.com/natura-cosmeticos/natds-android/commit/8903c31029e8a93e38ccecf6c29c6820bbd26b93))
+* includes menu attribute at StandardAppBarTop to inflate xml file ([2a145f0](https://github.com/natura-cosmeticos/natds-android/commit/2a145f0ea060483c40e3127f6dad69c04f852f4a))
+* refactors BadgeDrawable class to adds color and fonts theme attributes ([28e537c](https://github.com/natura-cosmeticos/natds-android/commit/28e537cc374c07894c8b34e315c0bed4ed803591))
+* replaces color atributes by custom at Badge class ([4d522f6](https://github.com/natura-cosmeticos/natds-android/commit/4d522f609b16f4ccb2869e34f20e339b69f01cbf))
+
+
+### Bug Fixes
+
+* fixes behavor of inflates menu at StandardAppBarTop ([fdb8744](https://github.com/natura-cosmeticos/natds-android/commit/fdb87443cfdcdeb966f1ebabcde004c13b8908af))
+* fixes call method of StandardAppBarTop ([76ad8cb](https://github.com/natura-cosmeticos/natds-android/commit/76ad8cbbcd05cd777d0eb750eb1c5cacd3726069))
+* fixes code review appointments ([c428334](https://github.com/natura-cosmeticos/natds-android/commit/c4283348884ccefa4da2ba04284d3be4e5b9440a))
+* replaces badge borderradius because the old one didn't have dp unity ([4a758d0](https://github.com/natura-cosmeticos/natds-android/commit/4a758d01ee688e3bc435b82509c31d2d70970ec9))
+
 ## [8.5.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.4.0...v.8.5.0) (2021-09-29)
 
 
