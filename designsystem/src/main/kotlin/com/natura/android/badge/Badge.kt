@@ -134,8 +134,8 @@ class Badge @JvmOverloads constructor(
         badgeRipple.visibility = View.VISIBLE
         badgeDot.visibility = View.VISIBLE
 
-        badgeDot.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
-        badgeRipple.drawable.setTint(getColorTokenFromTheme(context, getBackgroundColorByAttr()))
+        badgeDot.drawable.setTint(getColorTokenFromTheme(context, getPulseColorByAttr()))
+        badgeRipple.drawable.setTint(getColorTokenFromTheme(context, getPulseColorByAttr()))
 
         initializeAnimators()
     }
@@ -162,7 +162,7 @@ class Badge @JvmOverloads constructor(
         pulseAnimation.start()
     }
 
-    private fun getBackgroundColorByAttr(): Int {
+    private fun getPulseColorByAttr(): Int {
         return when (color) {
             PRIMARY -> R.attr.badgeColorPrimaryBackground
             SECONDARY -> R.attr.badgeColorSecondaryBackground
