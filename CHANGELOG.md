@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.6.1](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.0...v.8.6.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* change navigationIcon to assignable at StandardAppBarTop ([5fa8f3a](https://github.com/natura-cosmeticos/natds-android/commit/5fa8f3a495667bd29c2fa0fda4b704b7ad1fab9a))
+
 ## [8.6.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.5.0...v.8.6.0) (2021-10-04)
 
 
