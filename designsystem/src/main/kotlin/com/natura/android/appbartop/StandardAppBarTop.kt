@@ -97,7 +97,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        resetProperties()
+        resetProperty()
         positionActions()
         throwsCountElementsException()
         changeActionsVisibility()
@@ -228,9 +228,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         }
     }
 
-    private fun resetProperties() {
+    private fun resetProperty() {
         toolbar.title = ""
-        toolbar.navigationIcon = null
     }
 
     private fun getAttributes() {
