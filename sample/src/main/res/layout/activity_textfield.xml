@@ -32,9 +32,9 @@
         <com.natura.android.textfield.TextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="3"
             android:hint="Input some text (Multi line with 3 lines)"
             android:inputType="textMultiLine"
+            android:lines="3"
             android:paddingTop="?spacingSmall"
             app:text_field_label="Multi-line" />
 
@@ -85,6 +85,38 @@
             app:text_field_footer="Opss...This input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
             app:text_field_label="Error"
             app:text_field_state="error" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?spacingSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.natura.android.textfield.TextField
+                android:id="@+id/errorTextFieldSmallLeft"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:text_field_footer="Opss...This input has an error"
+                app:text_field_label="Error"
+                app:text_field_state="error" />
+
+            <com.natura.android.textfield.TextField
+                android:id="@+id/errorTextFieldSmallRight"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                android:inputType="number"
+                app:layout_constraintStart_toEndOf="@id/errorTextFieldSmallLeft"
+                app:layout_constraintTop_toTopOf="parent"
+                app:text_field_footer="Opss...This input has an error"
+                app:text_field_label="Error"
+                app:text_field_state="error" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.natura.android.textfield.TextField
             android:id="@+id/helper_item"
@@ -158,7 +190,7 @@
             android:hint="Input is read-only"
             android:paddingTop="?spacingSmall"
             app:text_field_label="Read only"
-            app:text_field_readonly="true"/>
+            app:text_field_readonly="true" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/filled_item"
