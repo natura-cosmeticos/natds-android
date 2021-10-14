@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.6.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.1...v.8.6.2) (2021-10-14)
+
+
+### Bug Fixes
+
+* fixes textfield behavior when helpertext exceeds component limit ([e619f4e](https://github.com/natura-cosmeticos/natds-android/commit/e619f4ee64fe7c1d65f6e2a4e8cd2d0972f05078))
+* fixes UI test scenario at TextFieldActivityTest ([fefff3a](https://github.com/natura-cosmeticos/natds-android/commit/fefff3a900e2db5d9fb8c6878f91d03a3e759706))
+
 ### [8.6.1](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.0...v.8.6.1) (2021-10-07)
 
 
