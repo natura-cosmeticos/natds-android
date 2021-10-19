@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogCustomView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingVertical="?spacingLarge"
+    android:orientation="vertical">
+
+    <com.natura.android.logo.Logo
+        android:id="@+id/logoColorNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:customColor="neutral"
+        app:customSize="veryhuge"
+        app:model="a" />
+</LinearLayout>

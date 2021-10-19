@@ -64,13 +64,13 @@ class MainActivityTest {
 
     @Test
     fun checksAppBarButtonClickStartsAppBarScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnAppbar)
+        val button = mainActivity.findViewById<Button>(R.id.btnAppBarTop)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(AppBarActivity::class.java, shadowIntent.intentClass)
+        assertEquals(AppBarTopAttributesActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
@@ -97,13 +97,13 @@ class MainActivityTest {
 
     @Test
     fun checksSelectionButtonClickStartsSelectionScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnSelection)
+        val button = mainActivity.findViewById<Button>(R.id.checkboxButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()
         val shadowIntent = shadowOf(startedIntent)
 
-        assertEquals(SelectionControlActivity::class.java, shadowIntent.intentClass)
+        assertEquals(CheckBoxActivity::class.java, shadowIntent.intentClass)
     }
 
     @Test
@@ -273,7 +273,7 @@ class MainActivityTest {
 
     @Test
     fun checksLogoPatternButtonClickStartsLogoPatternScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.logoPatternButton)
+        val button = mainActivity.findViewById<Button>(R.id.logoButton)
 
         button.performClick()
         val startedIntent = shadowActivity.peekNextStartedActivity()

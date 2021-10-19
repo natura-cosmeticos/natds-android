@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:theme="@style/Theme.Natura">
+    android:theme="@style/Theme.Natura.Light">
 
     <include layout="@layout/component_menu_enable" />
 
@@ -15,5 +15,7 @@
     <include layout="@layout/component_menu_opened" />
 
     <include layout="@layout/component_menu_alert_tag" />
+
+    <include layout="@layout/component_menu_lowemphasis" />
 
 </LinearLayout>

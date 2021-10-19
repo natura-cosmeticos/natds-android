@@ -2,18 +2,19 @@ package com.natura.android.tag
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setAppearance
+import kotlinx.android.synthetic.main.ds_tag.view.*
 
 class Tag @JvmOverloads constructor(
     context: Context,
@@ -22,7 +23,10 @@ class Tag @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var labelAttribute: String? = null
-    private var typeAttribute: Int? = null
+    private var typeAttribute: Int = 0
+    private var sizeAttribute: Int = 0
+    private var positionAttribute: Int = 0
+    private var sizeResourceAttribute = 0
     private var backgroundColorResourceAttribute = 0
     private var labelTextAppearanceResourceAttribute = 0
     private var labelTextColorResourceAttribute = 0
@@ -42,7 +46,9 @@ class Tag @JvmOverloads constructor(
 
         getTagAttributes()
         getAttributesFromTheme()
+        getSizeAttributeFromTheme()
         configureTagByType(typeAttribute)
+        configureTagBySize()
 
         tagAttributesArray.recycle()
     }
@@ -59,14 +65,24 @@ class Tag @JvmOverloads constructor(
         return labelContainer.text
     }
 
-    fun getType(): Int? = typeAttribute
+    fun getType(): Int = typeAttribute
 
-    private fun configureTagByType(type: Int?) {
-        type?.apply {
+    fun getSize(): Int = sizeAttribute
+
+    fun getPosition(): Int = positionAttribute
+
+    private fun configureTagByType(type: Int) {
+        type.apply {
             setLabel(labelAttribute)
             setTextColor()
             setBackground()
         }
+    }
+
+    private fun configureTagBySize() {
+        var params = tagBackground.layoutParams
+        params.height = resources.getDimension(sizeResourceAttribute).toInt()
+        tagBackground.layoutParams = params
     }
 
     private fun setTextColor() {
@@ -74,32 +90,53 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun setBackground() {
-        val background = resources.getDrawable(R.drawable.tag_background, null)
+        val background: GradientDrawable = resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
+        val cornerRadius: Float = 50F
+        when (positionAttribute) {
+            Position.CENTER.value -> background.cornerRadius = cornerRadius
+            Position.RIGHT.value -> background.cornerRadii = floatArrayOf(cornerRadius, cornerRadius, 0F, 0F, 0F, 0F, cornerRadius, cornerRadius)
+            Position.LEFT.value -> background.cornerRadii = floatArrayOf(0F, 0F, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0F, 0F)
+        }
+
+        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
         backgroundContainer.background = background
     }
 
     private fun getAttributesFromTheme() {
         try {
-            if (typeAttribute == PRIMARY) {
-                setPrimaryTypeAttributes()
-            } else {
-                setAlertTypeAttributes()
+            when (typeAttribute) {
+                PRIMARY -> setTypeAttributes(R.attr.tagPrimary)
+                SECONDARY -> setTypeAttributes(R.attr.tagSecondary)
+                ALERT -> setTypeAttributes(R.attr.tagAlert)
+                SUCCESS -> setTypeAttributes(R.attr.tagSuccess)
+                WARNING -> setTypeAttributes(R.attr.tagWarning)
+                LINK -> setTypeAttributes(R.attr.tagLink)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
     }
 
-    private fun setPrimaryTypeAttributes() {
+    private fun getSizeAttributeFromTheme() {
+        try {
+            when (sizeAttribute) {
+                Size.SMALL.value -> setSizeAttribute(R.attr.tagSizeSmall)
+                Size.STANDARD.value -> setSizeAttribute(R.attr.tagSizeStandard)
+            }
+        } catch (e: Exception) {
+            throw (MissingThemeException())
+        }
+    }
+
+    private fun setTypeAttributes(styleAttr: Int) {
         context
             .theme
             .obtainStyledAttributes(
                 attrs,
                 R.styleable.Tag,
-                R.attr.tagPrimary,
+                styleAttr,
                 0
             )
             .apply {
@@ -109,33 +146,29 @@ class Tag @JvmOverloads constructor(
             }
     }
 
-    private fun setAlertTypeAttributes() {
+    private fun setSizeAttribute(sizeAttr: Int) {
         context
             .theme
             .obtainStyledAttributes(
                 attrs,
                 R.styleable.Tag,
-                R.attr.tagAlert,
+                sizeAttr,
                 0
             )
             .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_labelAppearance)
-                labelTextColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
+                sizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_customHeight)
             }
     }
 
     private fun getTagAttributes() {
         getLabelAttribute()
         getTypeAttribute()
+        getSizeAttribute()
+        getPositionAttribute()
     }
 
     private fun getTypeAttribute() {
-        try {
-            typeAttribute = tagAttributesArray.getIntOrThrow(R.styleable.Tag_tag_type)
-        } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing tag required argument. You MUST set the tag type(primary or alert).", e))
-        }
+        typeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_type, PRIMARY)
     }
 
     private fun getLabelAttribute() {
@@ -146,8 +179,31 @@ class Tag @JvmOverloads constructor(
         }
     }
 
+    private fun getSizeAttribute() {
+        sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, Size.SMALL.value)
+    }
+
+    private fun getPositionAttribute() {
+        positionAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_position, Position.CENTER.value)
+    }
+
     companion object {
         const val PRIMARY = 0
         const val ALERT = 1
+        const val SECONDARY = 2
+        const val SUCCESS = 3
+        const val WARNING = 4
+        const val LINK = 5
     }
+}
+
+enum class Size(val value: Int) {
+    SMALL(0),
+    STANDARD(1)
+}
+
+enum class Position(val value: Int) {
+    CENTER(0),
+    LEFT(1),
+    RIGHT(2)
 }

@@ -6,62 +6,14 @@
     <!-- Since it's not available in support:design lib -->
     <attr name="materialBorderlessButtonStyle" format="reference"/>
 
-    <!-- color tokens attributes not covered by material theme -->
-    <attr name="colorPrimaryLight" format="color"/>
-    <attr name="colorOnPrimaryLight" format="color"/>
-    <attr name="colorOnPrimaryDark" format="color"/>
-    <attr name="colorSecondaryLight" format="color"/>
-    <attr name="colorOnSecondaryLight" format="color"/>
-    <attr name="colorOnSecondaryDark" format="color"/>
-    <attr name="colorHighlight" format="color"/>
-    <attr name="colorHighEmphasis" format="color"/>
-    <attr name="colorMediumEmphasis" format="color"/>
-    <attr name="colorLowEmphasis" format="color"/>
-    <attr name="colorLink" format="color"/>
-    <attr name="colorAlert" format="color"/>
-    <attr name="colorOnAlert" format="color"/>
-    <attr name="colorOnLink" format="color"/>
-    <attr name="colorSuccess" format="color"/>
-    <attr name="colorOnSuccess" format="color"/>
-    <attr name="colorWarning" format="color"/>
-    <attr name="colorOnWarning" format="color"/>
-
     <attr name="colorHighEmphasisOpacity06" format="color"/>
     <attr name="colorMediumEmphasisOpacity06" format="color"/>
     <attr name="colorHighlightOpacity05" format="color"/>
-
-    <!-- spacing tokens attributes -->
-    <attr name="spacingNone" format="dimension"/>
-    <attr name="spacingMicro" format="dimension"/>
-    <attr name="spacingTiny" format="dimension"/>
-    <attr name="spacingSmall" format="dimension"/>
-    <attr name="spacingStandard" format="dimension"/>
-    <attr name="spacingSemi" format="dimension"/>
-    <attr name="spacingLarge" format="dimension"/>
-    <attr name="spacingXLarge" format="dimension"/>
-
-    <!-- size tokens attributes -->
-    <attr name="sizeNone" format="dimension"/>
-    <attr name="sizeMicro" format="dimension"/>
-    <attr name="sizeTiny" format="dimension"/>
-    <attr name="sizeSmall" format="dimension"/>
-    <attr name="sizeStandard" format="dimension"/>
-    <attr name="sizeSemi" format="dimension"/>
-    <attr name="sizeSemiX" format="dimension"/>
-    <attr name="sizeMedium" format="dimension"/>
-    <attr name="sizeMediumX" format="dimension"/>
-    <attr name="sizeLarge" format="dimension"/>
-    <attr name="sizeLargeX" format="dimension"/>
-    <attr name="sizeLargeXX" format="dimension"/>
-    <attr name="sizeLargeXXX" format="dimension"/>
-    <attr name="sizeHuge" format="dimension"/>
-    <attr name="sizeHugeX" format="dimension"/>
-    <attr name="sizeHugeXX" format="dimension"/>
-    <attr name="sizeHugeXXX" format="dimension"/>
-    <attr name="sizeVeryHuge" format="dimension"/>
+    <attr name="colorHighlightOpacityMediumHigh" format="color"/>
+    <attr name="colorLowEmphasisOpacityDisabledLow" format="color"/>
+    <attr name="colorHighLightOpacityFull" format="color"/>
 
     <!-- opacity tokens attributes -->
-    <attr name="opacityTransparent" format="dimension"/>
     <attr name="opacity01" format="dimension"/>
     <attr name="opacity02" format="dimension"/>
     <attr name="opacity03" format="dimension"/>
@@ -73,12 +25,6 @@
     <attr name="opacity09" format="dimension"/>
     <attr name="opacity10" format="dimension"/>
     <attr name="opacityFull" format="dimension"/>
-
-    <!-- border radius tokens attributes -->
-    <attr name="borderRadiusNone" format="dimension"/>
-    <attr name="borderRadiusSmall" format="dimension"/>
-    <attr name="borderRadiusMedium" format="dimension"/>
-    <attr name="borderRadiusLarge" format="dimension"/>
 
     <!-- elevation tokens attributes -->
     <attr name="elevation00" format="dimension"/>
@@ -112,6 +58,20 @@
     <attr name="outlinedButtonLarge" format="reference"/>
     <attr name="textButtonLarge" format="reference"/>
 
+    <attr name="iconButtonDefault" format="reference"/>
+    <attr name="iconButtonPrimary" format="reference"/>
+    <attr name="iconButtonLight" format="reference"/>
+
+    <attr name="iconButtonSizeSemi" format="reference"/>
+    <attr name="iconButtonSizeSemiX" format="reference"/>
+    <attr name="iconButtonSizeMedium" format="reference"/>
+
+    <attr name="iconButtonFloatingEnabled" format="reference"/>
+    <attr name="iconButtonOverlayEnabled" format="reference"/>
+
+    <attr name="iconButtonFloatingDisabled" format="reference"/>
+    <attr name="iconButtonOverlayDisabled" format="reference"/>
+
     <!-- App Bar Style references -->
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>
@@ -126,6 +86,9 @@
 
     <!-- Dialog references -->
     <attr name="dialogStandardTheme" format="reference"/>
+    <attr name="dialogAlertTheme" format="reference"/>
+    <attr name="dialogWithContainedButtons" format="reference"/>
+    <attr name="dialogWithTextButtons" format="reference"/>
 
     <!-- Shortcut references -->
     <attr name="shortcutOutlined" format="reference"/>
@@ -134,4 +97,28 @@
     <!-- Tag references -->
     <attr name="tagPrimary" format="reference"/>
     <attr name="tagAlert" format="reference"/>
+    <attr name="tagSecondary" format="reference"/>
+    <attr name="tagSuccess" format="reference"/>
+    <attr name="tagWarning" format="reference"/>
+    <attr name="tagLink" format="reference"/>
+    <attr name="tagSizeSmall" format="reference"/>
+    <attr name="tagSizeStandard" format="reference"/>
+
+    <!-- Card reference -->
+    <attr name="card" format="reference"/>
+
+    <!-- Divider references -->
+    <attr name="dividerFullbleed" format="reference"/>
+    <attr name="dividerInset" format="reference"/>
+    <attr name="dividerMiddle" format="reference"/>
+    
+    <!-- Progress Indicator references -->
+    <attr name="progressIndicatorStandard" format="reference"/>
+    <attr name="progressIndicatorSemi" format="reference"/>
+    <attr name="progressIndicatorMedium" format="reference"/>
+    <attr name="progressIndicatorLarge" format="reference"/>
+
+    <!-- Checkbox references -->
+    <attr name="checkboxPrimary" format="reference"/>
+
 </resources>

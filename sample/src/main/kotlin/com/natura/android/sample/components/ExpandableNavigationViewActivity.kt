@@ -3,6 +3,7 @@ package com.natura.android.sample.components
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -49,7 +50,7 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
             ),
             NavigationItem(
                 id = "item_id_2",
-                label = "Item 2",
+                label = "Item 2 (Disabled)",
                 menuState = MenuView.MenuState.DISABLE,
                 iconText = getString(R.string.icon_filled_brand_naturarosacea),
                 childItems = mutableListOf(
@@ -86,15 +87,23 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
             ),
             NavigationItem(
                 id = "item_id_6",
-                label = "Item 6",
+                label = "Item 6 (Low Emphasis)",
+                isLowEmphasis = true,
                 iconText = getString(R.string.icon_filled_brand_naturarosacea),
                 hasSubMenu = false
             )
         )
 
         expandableNavigationMenu.initMenuItems(list)
-
         expandableNavigationMenu.selectItemId("item_id_5")
+
+        expandableNavigationMenu.setOnItemSelected {
+            Toast.makeText(
+                this,
+                "Item Clicked",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -1,3 +1,6 @@
+build: clean
+	./gradlew build
+
 clean:
 	./gradlew clean
 
@@ -21,7 +24,7 @@ instrumentation-test: clean disable-animations
 screenshot-test: clean install-tools-screenshot-test
 	./gradlew verifyDebugAndroidTestScreenshotTest
 
-update-screenshots: clean install-tools-screenshot-test
+update-screenshots:
 	./gradlew recordDebugAndroidTestScreenshotTest
 
 install-tools-screenshot-test:
@@ -45,6 +48,9 @@ run-all-pipeline-steps: lint unit-test instrumentation-test
 update-icons:
 	sh ./tools/update_icons.sh
 
+bump-version:
+	bash ./tools/bump_version.sh
+
 finish-all-emulators:
 	sh ./tools/finish_emulators.sh
 
@@ -52,6 +58,6 @@ publish-docs:
 	bash ./tools/create_docs.sh
 
 distribute-sample:
-	sh  bundle exec fastlane build
+	sh bundle exec fastlane build
 	fastlane build
 	fastlane distribute_sample

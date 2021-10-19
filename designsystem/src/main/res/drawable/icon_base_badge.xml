@@ -6,7 +6,6 @@
         android:gravity="right" />
 
     <item
-        android:id="@+id/ic_badge_placeholder"
+        android:id="@+id/badge_placeholder"
         android:drawable="@android:color/transparent" />
-
 </layer-list>

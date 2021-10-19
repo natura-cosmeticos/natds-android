@@ -29,7 +29,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#DE0085"), colorCode.color)
+            assertEquals(Color.parseColor("#7F28C4"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -42,7 +42,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#F091C9"), colorCode.color)
+            assertEquals(Color.parseColor("#BE9AE2"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -55,8 +55,8 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#A70058"), colorCode.color)
-            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
+            assertEquals(Color.parseColor("#4B0092"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
@@ -68,7 +68,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#BC6198"), colorCode.color)
+            assertEquals(Color.parseColor("#8D6BB0"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -81,7 +81,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FF56B5"), colorCode.color)
+            assertEquals(Color.parseColor("#B35BF8"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -94,7 +94,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFC3FC"), colorCode.color)
+            assertEquals(Color.parseColor("#F1CBFF"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -107,8 +107,8 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#E9E9E9"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#E2197C"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
@@ -120,7 +120,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#E9E9E9"), colorCode.color)
+            assertEquals(Color.parseColor("#F593C4"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -133,8 +133,8 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#B7B7B7"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#AA0050"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
@@ -146,7 +146,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#B7B7B7"), colorCode.color)
+            assertEquals(Color.parseColor("#C16394"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -159,8 +159,8 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#FF5EAB"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
@@ -172,7 +172,7 @@ class ColorsActivityAvonTest {
             val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
             val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
+            assertEquals(Color.parseColor("#FFC5F7"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }

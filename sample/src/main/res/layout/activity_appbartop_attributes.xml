@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="@dimen/ds_spacing_small"
+            android:text="Patterns"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnActionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Action Button"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnTwoActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="2 actions right"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnThreeActionsRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="3 actions right"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Search"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnTitleCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Title Center"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnTItleAndThreeActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="Title long + 3 actions right"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+    </LinearLayout>
+</ScrollView>

@@ -4,16 +4,24 @@
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Light</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Light" parent="@style/Widget.DS.Button.Natura.Light">
+    <style name="Theme.DS.Dialog.Alert.Natura.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_natura_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_natura_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light" parent="@style/Widget.DS.Button.TextButton.Light">
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
@@ -21,16 +29,24 @@
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Dark</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
         <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Dark" parent="@style/Widget.DS.Button.Natura.Dark">
+    <style name="Theme.DS.Dialog.Alert.Natura.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_natura_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_natura_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
-        <item name="android:layout_marginBottom">?spacingMicro</item>
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
@@ -81,8 +97,13 @@
 
     <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_natura_light</item>
-        <item name="backgroundTint">@color/button_background_color_selector_natura_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_natura_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_natura_light</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_natura_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Light" parent="Widget.DS.Button.Natura.Light">
@@ -97,8 +118,13 @@
 
     <style name="Widget.DS.Button.Natura.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_text_color_selector_natura_dark</item>
-        <item name="backgroundTint">@color/button_background_color_selector_natura_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_natura_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_natura_dark</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_natura_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
@@ -112,9 +138,14 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_text_color_selector_light</item>
-        <item name="strokeColor">@color/stroke_color_selector_natura_light</item>
+        <item name="android:textColor">@color/button_outlined_label_color_natura_light</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_natura_light</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_natura_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
@@ -128,9 +159,14 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_text_color_selector_dark</item>
-        <item name="strokeColor">@color/stroke_color_selector_natura_dark</item>
+        <item name="android:textColor">@color/button_outlined_label_color_natura_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_natura_dark</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_natura_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
@@ -145,6 +181,7 @@
         <item name="itemIconTint">?android:textColorPrimary</item>
     </style>
 
+    <!--{@deprecated Use Divider component} -->
     <style name="Widget.Natura.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
@@ -170,13 +207,13 @@
 
     <style name="TextAppearence.Natura.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">@dimen/ds_text_small</item>
-        <item name="android:textColor">@color/text_color_secondary_selector</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_medium</item>
         <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
     </style>
 
     <style name="TextAppearence.Natura.EditText" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">@dimen/ds_text_default_size</item>
+        <item name="android:textSize">@dimen/ds_size_body1</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
         <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
@@ -184,8 +221,8 @@
     </style>
 
     <style name="TextAppearence.Natura.Footer" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">@dimen/ds_text_footer_size</item>
-        <item name="android:textColor">@color/text_color_secondary_selector</item>
+        <item name="android:textSize">@dimen/ds_size_caption</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
@@ -193,6 +230,16 @@
         <item name="android:textSize">@dimen/ds_text_big</item>
         <item name="android:textColor">@color/colorHighEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.Natura.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_natura_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.Natura.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_natura_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget"/>
@@ -221,7 +268,7 @@
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.CheckBox.Natura.Light or  Widget.DS.RadioButton.Natura.Dark Style instead} -->
+    <!--{@deprecated Use Checkbox component} -->
     <style name="Widget.Natura.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>

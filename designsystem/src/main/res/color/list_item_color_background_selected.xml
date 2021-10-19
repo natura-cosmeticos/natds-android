@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:alpha="?opacity04" android:color="?colorPrimary" android:state_enabled="true"/>
+    <stroke
+        android:width="10dp"
+        android:color="@android:color/black">
+    </stroke>
+</selector>
+

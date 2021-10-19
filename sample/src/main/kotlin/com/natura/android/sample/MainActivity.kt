@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.ProgressIndicatorActivity
+import com.natura.android.sample.components.IconButtonActivity
+import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.patterns.LogoActivity
 import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
@@ -60,8 +62,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, TypographyActivity::class.java))
         }
 
-        btnAppbar.setOnClickListener {
-            startActivity(Intent(this, AppBarActivity::class.java))
+        btnAppBarTop.setOnClickListener {
+            startActivity(Intent(this, AppBarTopAttributesActivity::class.java))
         }
 
         btnStyleButtons.setOnClickListener {
@@ -76,8 +78,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ExpansionPanelActivity::class.java))
         }
 
-        btnSelection.setOnClickListener {
-            startActivity(Intent(this, SelectionControlActivity::class.java))
+        iconButtonButton.setOnClickListener {
+            startActivity(Intent(this, IconButtonActivity::class.java))
+        }
+
+        checkboxButton.setOnClickListener {
+            startActivity(Intent(this, CheckBoxActivity::class.java))
         }
 
         shortcutButton.setOnClickListener {
@@ -116,12 +122,32 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ErrorActivity::class.java))
         }
 
-        logoPatternButton.setOnClickListener {
+        logoButton.setOnClickListener {
             startActivity(Intent(this, LogoActivity::class.java))
         }
 
         btnBadge.setOnClickListener {
             startActivity(Intent(this, BadgeActivity::class.java))
+        }
+
+        btnCard.setOnClickListener {
+            startActivity(Intent(this, CardActivity::class.java))
+        }
+
+        dividerButton.setOnClickListener {
+            startActivity(Intent(this, DividerActivity::class.java))
+        }
+
+        radioButtonButton.setOnClickListener {
+            startActivity(Intent(this, RadioButtonActivity::class.java))
+        }
+
+        btnListItem.setOnClickListener {
+            startActivity(Intent(this, ListItemActivity::class.java))
+        }
+
+        customTypographyButton.setOnClickListener {
+            startActivity(Intent(this, CustomTypographyActivity::class.java))
         }
     }
 }

@@ -117,7 +117,7 @@ class ShortcutTest {
         shortcut = ShortcutFixture
             .aEmptyShortcut()
             .withTypeContained()
-            .withIcon("@drawable/outlined_default_mockup")
+            .withIcon("@drawable/default_icon_outlined_default_mockup")
             .build()
     }
 
@@ -126,8 +126,15 @@ class ShortcutTest {
         shortcut = ShortcutFixture
             .aEmptyShortcut()
             .withTypeOutlined()
-            .withIcon("@drawable/outlined_default_mockup")
+            .withIcon("@drawable/default_icon_outlined_default_mockup")
             .build()
+    }
+
+    @Test
+    fun `notification is set when notify attribute is bigger than 0`() {
+        shortcut = buildShortcutContainedWithRequiredAttributes()
+
+        assertThat(shortcut.notify).isGreaterThan(0)
     }
 
     private fun buildShortcutOutlined(): Shortcut {

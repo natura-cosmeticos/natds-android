@@ -64,6 +64,8 @@ Fine, now you should be asking your self, which critearia will be checked? Here 
 - The component works fine with dark mode
 - Your code uses DS design tokens
 
+[If you want read more about our CI process](ci-process.md).
+
 #### Do you find something that could be diferent in the lib and you want to let us know?
 you can open an Issue and explain to us yout point. We're always checking new issues an working to keep your lib updated
 

@@ -21,7 +21,7 @@ class ExpansionPanelTest {
 
     @Before
     fun setUp() {
-        activityController.get().setTheme(R.style.Theme_Natura)
+        activityController.get().setTheme(R.style.Theme_Natura_Light)
         expansionPanel = ExpansionPanel(activityController.get())
     }
 

@@ -4,7 +4,7 @@
 Shortcut is a component that represents a shortcut to some action.
 
 ## How to use it?
-Shortcut receives an icon, a label and its type. The shortcut type represents
+Shortcut receives an icon, a notify, a label and its type. The shortcut type represents
 it's visual style: contained or outlined.
 
 ![Shortcut](shortcut_type.png)
@@ -32,6 +32,28 @@ Following there's an example of an shortcut contained:
         app:textLabel="Shortcut contained sample"
         app:type="contained" />
 ```
+
+To insert a notification badge, simply add the notify property to the xml. Its value can be modified programmatically.
+
+```android
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutContained"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:notify="10"
+        app:iconName="outlined-default-mockup"
+        app:textLabel="Contained/ \nPrimary"
+        app:type="contained" />
+```
+
+```kotlin
+    shortcutContained.notify = 10
+```
+
+When value is 0, notification is not visible, when bigger than 99, notification shows 99+.
+
+![Shortcut](shortcut_notify.png)
+
 
 ⚠️ ⚠️ ⚠️ Before the 3.0.0 version, the parameter to set the shortcut icon is different ⚠️ ⚠️ ⚠️
 

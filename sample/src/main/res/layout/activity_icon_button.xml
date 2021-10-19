@@ -1,0 +1,338 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/scrollViewIconButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/iconButtonActivityContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="?spacingMicro">
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                app:buttonColor="defaultColor"
+                android:layout_marginTop="?spacingSmall"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewColorDefault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iconButtonColorDefault"
+                android:text="Color hight emphasis (default)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorDefaultDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorDefault"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefaultDisabled"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewColorDefaultDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorDefaultDisabled"
+                android:text="Color hight emphasis (disabled)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorDefaultDisabled"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimary"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewColorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimary"
+                android:text="Color primary" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorPrimaryDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimary"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                android:enabled="false"
+                app:buttonColor="primaryColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewColorPrimaryDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimaryDisabled"
+                android:text="Color primary (disabled)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimaryDisabled"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimaryDisabled"
+                app:buttonColor="lightColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewColorLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorLight"
+                android:text="Color light" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonColorLightDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLight"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorLight"
+                android:enabled="false"
+                app:buttonColor="lightColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewButtonColorLightDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorLightDisabled"
+                android:text="Color light (disabled)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleInherit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLightDisabled"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewButtonStyleInherit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleInherit"
+                android:text="Inherit background (default)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleFloating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleInherit"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloating"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="floating" />
+
+            <TextView
+                android:id="@+id/textViewButtonStyleFloating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloating"
+                android:text="Float background" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleFloatingDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleFloating"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloatingDisabled"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="floating" />
+
+            <TextView
+                android:id="@+id/textViewButtonStyleFloatingDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloatingDisabled"
+                android:text="Float background (disabled)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleOverlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleFloatingDisabled"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlay"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="overlay" />
+
+            <TextView
+                android:id="@+id/textViewButtonStyleOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlay"
+                android:text="Overlay background" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonStyleOverlayDisabled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleOverlay"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlayDisabled"
+                app:buttonColor="defaultColor"
+                android:enabled="false"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="overlay" />
+
+            <TextView
+                android:id="@+id/textViewButtonStyleOverlayDisabled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlayDisabled"
+                android:text="Overlay background (disabled)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeSemi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleOverlayDisabled"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemi"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semi"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewButtonSizeSemi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemi"
+                android:text="Size semi (default)" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeSemix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemi"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemix"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="semix"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewButtonSizeSemix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemix"
+                android:text="Size semiX" />
+
+            <com.natura.android.iconButton.IconButton
+                android:id="@+id/iconButtonSizeMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemix"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeMedium"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:sizeButton="medium"
+                app:styleButton="inherit" />
+
+            <TextView
+                android:id="@+id/textViewButtonSizeMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="?spacingTiny"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeMedium"
+                android:text="Size Medium" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

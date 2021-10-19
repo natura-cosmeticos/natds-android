@@ -11,26 +11,75 @@
         android:id="@+id/tagPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="?spacingXLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tag_type="primary"
-        app:textLabel="Primary" />
+        app:textLabel="Center Primary Small" />
+
+    <com.natura.android.tag.Tag
+        android:id="@+id/tagSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingXLarge"
+        app:layout_constraintTop_toBottomOf="@id/tagPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tag_type="secondary"
+        app:tag_size="standard"
+        app:textLabel="Center Secondary Standard" />
+
+    <com.natura.android.tag.Tag
+        android:id="@+id/tagSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingXLarge"
+        app:layout_constraintTop_toBottomOf="@+id/tagSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tag_size="small"
+        app:tag_type="success"
+        app:tag_position="left"
+        app:textLabel="Left Success Small" />
 
     <com.natura.android.tag.Tag
         android:id="@+id/tagAlert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingTiny"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tagPrimary"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/tagPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/tagPrimary"
-        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="?spacingXLarge"
+        app:layout_constraintTop_toBottomOf="@+id/tagSuccess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tag_size="standard"
         app:tag_type="alert"
-        app:textLabel="Alert" />
+        app:tag_position="left"
+        app:textLabel="Left Alert Standard" />
 
+    <com.natura.android.tag.Tag
+        android:id="@+id/tagWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingXLarge"
+        app:layout_constraintTop_toBottomOf="@+id/tagAlert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tag_size="small"
+        app:tag_type="warning"
+        app:tag_position="right"
+        app:textLabel="Right Warning Small" />
+
+    <com.natura.android.tag.Tag
+        android:id="@+id/tagLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingXLarge"
+        app:layout_constraintTop_toBottomOf="@id/tagWarning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tag_size="standard"
+        app:tag_type="link"
+        app:tag_position="right"
+        app:textLabel="Right Link Standard" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

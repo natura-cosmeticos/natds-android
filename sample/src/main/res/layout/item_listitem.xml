@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.natura.android.listitem.ListItem
+        android:id="@+id/listItem"
+        app:selectableState="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/itemListDescription"
+            android:layout_marginStart="?spacingSmall"
+            android:layout_marginTop="?spacingSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="teste" />
+
+            <com.natura.android.checkbox.CheckBox
+                android:text=""
+                android:layout_width="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="?spacingSemi"
+                android:layout_marginTop="?spacingTiny"
+                android:enabled="true"
+                android:checked="false"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.natura.android.listitem.ListItem>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

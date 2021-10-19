@@ -11,7 +11,8 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.natura.android.R
-import com.natura.android.ext.setVisibilityFromBoolean
+import com.natura.android.extensions.setVisibilityFromBoolean
+import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.tag.Tag
 
 @SuppressLint("CustomViewStyleable")
@@ -48,12 +49,18 @@ class MenuView @JvmOverloads constructor(
             menuTag.setLabel(value)
         }
 
+    var isLowEmphasis: Boolean = false
+        set(value) {
+            field = value
+            setLabelColorLowEmphasis(value)
+        }
+
     init {
         View.inflate(context, R.layout.ds_menu_view, this)
 
         val typedArray = context.obtainStyledAttributes(attrs, R.styleable.ds_menu)
         val labelText = typedArray.getString(R.styleable.ds_menu_menu_label)
-        val labelColor = typedArray.getResourceId(
+        var labelColor = typedArray.getResourceId(
             R.styleable.ds_menu_menu_label_color,
             R.color.colorBrdNatGray
         )
@@ -76,12 +83,22 @@ class MenuView @JvmOverloads constructor(
         val selected = typedArray.getBoolean(R.styleable.ds_menu_menu_is_selected, false)
         val enabled = typedArray.getBoolean(R.styleable.ds_menu_menu_is_enabled, true)
         val isOpened = typedArray.getBoolean(R.styleable.ds_menu_menu_is_opened, false)
+        val isLowEmphasis = typedArray.getBoolean(R.styleable.ds_menu_menu_color_lowemphasis, false)
 
         val hasTag = typedArray.getBoolean(R.styleable.ds_menu_menu_has_tag, false)
         val tagText = typedArray.getString(R.styleable.ds_menu_menu_tag_label)
 
         showTag(hasTag)
         tagLabel = tagText
+
+        if (isLowEmphasis) {
+            labelColor = typedArray.getResourceId(
+                R.styleable.ds_menu_menu_label_color,
+                R.color.colorLowEmphasis
+            )
+
+            iconMenu.setColorFilter(ContextCompat.getColor(context, R.color.colorLowEmphasis), PorterDuff.Mode.SRC_IN)
+        }
 
         typedArray.recycle()
 
@@ -110,11 +127,7 @@ class MenuView @JvmOverloads constructor(
         super.setEnabled(isEnabled)
         isClickable = !isEnabled
         textLabel.isEnabled = isEnabled
-        if (isEnabled) {
-            textLabel.setTextColor(getColor(R.color.colorBrdNatGray))
-            setColorFilter(iconArrowMenu, R.color.colorBrdNatGray)
-            setColorFilter(iconMenu, R.color.colorBrdNatGray)
-        } else {
+        if (!isEnabled) {
             textLabel.setTextColor(getColor(R.color.colorBrdNatGray_48))
             setColorFilter(iconArrowMenu, R.color.colorBrdNatGray_48)
             setColorFilter(iconMenu, R.color.colorBrdNatGray_48)
@@ -136,10 +149,21 @@ class MenuView @JvmOverloads constructor(
         iconArrowMenu.setVisibilityFromBoolean(hasSubMenu, View.INVISIBLE)
     }
 
+    fun getLabelColor(): Int {
+        return textLabel.currentTextColor
+    }
+
     private fun configLabel(labelText: String?, labelColor: Int, labelSize: Int) {
         label = labelText
         textLabel.setTextColor(ContextCompat.getColor(context, labelColor))
         textLabel.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(labelSize))
+    }
+
+    private fun setLabelColorLowEmphasis(isLowEmphasis: Boolean) {
+        if (isLowEmphasis) {
+            textLabel.setTextColor(getColorTokenFromTheme(context, R.attr.colorLowEmphasis))
+            iconMenu.setColorFilter(ContextCompat.getColor(context, R.color.colorLowEmphasis), PorterDuff.Mode.SRC_IN)
+        }
     }
 
     private fun configOpened(isOpened: Boolean) {

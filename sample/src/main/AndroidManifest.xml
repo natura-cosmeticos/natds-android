@@ -22,85 +22,102 @@
         </activity>
         <activity
             android:name=".BrandSelectorActivity"
-            android:theme="@style/SplashTheme"/>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".tokens.ElevationActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.BorderRadiusActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.SizeActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.OpacityActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.SpacingActivity"
-            android:theme="@style/Theme.Natura.NoActionBar" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.TypographyActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.AppBarActivity"
-            android:theme="@style/Theme.Natura.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
-        </activity>
+            android:name=".components.AppBarTopActivity"
+            android:theme="@style/Theme.Natura.Light.NoActionBar" />
         <activity
             android:name=".components.BadgeActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.DialogActivity"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".patterns.ErrorActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".patterns.LogoActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.TextFieldActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.SubmenuActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.SelectionControlActivity"
-            android:theme="@style/Theme.Natura" />
+            android:name=".components.CheckBoxActivity"
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ExpandableNavigationViewActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.MenuActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.icons.IconActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".tokens.icons.DrawableActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ProgressIndicatorActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ValueTextHighlightActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ButtonActivity"
-            android:theme="@style/Theme.Natura" />
+            android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.ExpansionPanelActivity"
-            android:theme="@style/Theme.Natura" />
-        <activity android:name=".tokens.ColorsActivity" />
-        <activity android:name=".components.ShortcutActivity" />
-        <activity android:name=".components.TagActivity" />
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".tokens.ColorsActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.ShortcutActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.TagActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.IconButtonActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.CardActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.DividerActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.RadioButtonActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.listitem.ListItemActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".tokens.CustomTypographyActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".AppBarTopAttributesActivity"/>
     </application>
-
 </manifest>

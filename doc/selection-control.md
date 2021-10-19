@@ -21,7 +21,7 @@ To use it, a Nat DS Theme must be provided to the view or its parents. After tha
 ### RadioButton
 Radio buttons allow the user to select one option from a set. Use radio buttons when the user needs to see all available options.
 Nat DS Android RadioButton is based on a android [RadioButton](https://developer.android.com/reference/android/widget/RadioButton) with styles provided by Nat DS Theme.
-To use it, a Nat DS Theme must be provided to the view or its parents. After that, its possible to add a CheckBox component on xml layout:
+To use it, a Nat DS Theme must be provided to the view or its parents. After that, its possible to add a RadioButton component on xml layout:
 
 ```android
     <RadioButton

@@ -10,6 +10,7 @@ data class NavigationItem(
     val iconText: String = "",
     val selected: Boolean = false,
     val enabled: Boolean = true,
+    val isLowEmphasis: Boolean = false,
     var hasSubMenu: Boolean = true,
     var tagAnalytics: String = "",
     var menuState: MenuView.MenuState = MenuView.MenuState.NONE,
@@ -24,6 +25,7 @@ data class NavigationItemChild(
     override val id: String,
     var label: String,
     var selected: Boolean = false,
+    val isLowEmphasis: Boolean = false,
     val enabled: Boolean = true,
     var tagAnalytics: String = ""
 ) : Navigation(id)

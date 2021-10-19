@@ -1,5 +1,44 @@
 # TextField
 
+#### Note:
+
+This component is available in the following variants:
+
+* ✅ Standard
+
+With the following attribute status:
+
+* Size:
+    * ✅ `MediumX` (default)
+    * ✅ `Medium`
+    
+* Feedback:
+    * ✅ `Error`
+    * ✅ `Success`
+    
+* Action:
+    * ✅ `None` (default)
+    * ✅ `Icon Button`
+    * ✅ `Image`
+    
+* ✅ Required
+* ✅ Disabled
+* ✅ Read Only
+* ✅ Helper Text
+
+* Type:
+    * ✅ `Text`
+    * ✅ `Password`
+    * ✅ `Multi-line`
+    * ✅ `Number`
+
+* Interaction state:
+    * ✅ `Enabled`
+    * ✅ `Focus`
+    * ✅ `Filled`
+    
+    
+
 ### What is it?
 A component that let users enter and edit text.
 
@@ -23,34 +62,11 @@ Add the TextField component in your xml layout file
 ```
 #### TextField component has the following attributes that can be set:
 - `android:inputType`: Nat DS TextField component is defined on Android EditText component. This attribute is inherited from EditText and set the type of content supported by Text Field:
-    - none: There is no content type. The text is not editable.
     - text: Plain old text.
-    - textCapCharacters: Can be combined with <var>text</var> and its variations to request capitalization of all characters.
-    - textCapWords: Can be combined with <var>text</var> and its variations to request capitalization of the first character of every word.
-    - textCapSentences: Can be combined with <var>text</var> and its variations to request capitalization of the first character of every sentence.
-    - textAutoCorrect: an be combined with <var>text</var> and its variations to request auto-correction of text being input.
-    - textAutoComplete: an be combined with <var>text</var> and its variations to specify that this field will be doing its own auto-completion and talking with the input method appropriately. The text field will be constrained to a single line.
-    - textImeMultiLine: Can be combined with <var>text</var> and its variations to indicate that though the regular text view should not be multiple lines, the IME should provide multiple lines if it can.
-    - textNoSuggestions: Can be combined with <var>text</var> and its variations to indicate that the IME should not show any dictionary-based word suggestions.
-    - textUri: Text that will be used as a URI.
-    - textEmailAddress: ext that will be used as an e-mail address.
-    - textEmailSubject: text that is being supplied as the subject of an e-mail.
-    - textShortMessage: Text that is the content of a short message.
-    - textLongMessage: Text that is the content of a long message.
-    - textPersonName: Text that is the name of a person.
-    - textPostalAddress: Text that is being supplied as a postal mailing address.
+    - textMultiLine: Can be combined with <var>text</var> and its variations to indicate that though the regular text view should be multiple lines
     - textPassword: Text that is a password.
-    - textVisiblePassword: Text that is a password that should be visible.
-    - textFilter: Text that is filtering some other data.
-    - textPhonetic: Text that is for phonetic pronunciation, such as a phonetic name field in a contact entry.
     - number: A numeric only field.
-    - numberSigned: Can be combined with <var>number</var> and its other options to allow a signed number.
-    - numberDecimal: Can be combined with <var>number</var> and its other options to allow a decimal (fractional) number.
     - numberPassword: A numeric password field.
-    - phone: For entering a phone number.
-    - datetime: For entering a date and time.
-    - date: For entering a date.
-    - time: For entering a time.
 
 - `android:maxLines`: Makes the TextView be at most this many lines tall. When used on an editable text, the <code>inputType</code> attribute's value must be combined with the <code>textMultiLine</code> flag for the maxLines attribute to apply.
 - `android:maxLength`: set an input filter to constrain the text length to the specified number
@@ -62,8 +78,10 @@ Add the TextField component in your xml layout file
 - `app:text_field_label`: Label showed above the input. Can be used to describe the field
 - `app:text_field_footer`: Label showed below the input. Can be used to give feedback about the field state
 - `app:text_field_state`: Describe the state of the field. Can receive the values: none, success or error
-
-![Text Field Sample](textfieldsample.png)
+- `app:text_field_size`: Describe the size (height) of the field. Can receive the values: mediumx or medium
+- `app:text_field_required`: specifies if the widget is required, with an asterisk in label.
+- `app:text_field_readonly`: specifies whether the widget is read only.
+- `app:text_field_image`: image visible on right side of TextField. Receives an image resource
 
 
 #### Set Text Field text content programmatically

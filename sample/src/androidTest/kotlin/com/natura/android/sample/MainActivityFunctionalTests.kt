@@ -2,8 +2,7 @@ package com.natura.android.sample
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.action.ViewActions.scrollTo
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -94,10 +93,14 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenAppBarTopScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnAppbar)).perform(scrollTo())
-        onView(withId(R.id.btnAppbar)).perform(click())
+        onView(withId(R.id.btnAppBarTop)).perform(scrollTo())
+        onView(withId(R.id.btnAppBarTop)).perform(click())
 
-        onView(withId(R.id.appBar)).check(matches(isDisplayed()))
+        onView(withId(R.id.btnActionButton)).check(matches(isDisplayed()))
+
+        onView(withId(R.id.btnActionButton)).perform(click())
+
+        onView(withId(R.id.buttonActionViewIconButtonActionRight)).check(matches(isDisplayed()))
     }
 
     @Test
@@ -110,32 +113,41 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenDialogScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.dialogButton)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.dialogButton)).perform(click())
+        onView(withId(R.id.dialogButton)).perform(scrollTo())
+        onView(withId(R.id.dialogButton)).perform(click())
 
         onView(ViewMatchers.withText("Dialog")).check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test
     fun shouldOpenExpansionPanelScreenWhenTapOnItButton() {
-        onView(ViewMatchers.withId(R.id.btnExpansionPanel)).perform(scrollTo())
-        onView(ViewMatchers.withId(R.id.btnExpansionPanel)).perform(click())
+        onView(withId(R.id.btnExpansionPanel)).perform(scrollTo())
+        onView(withId(R.id.btnExpansionPanel)).perform(click())
 
         onView(allOf(ViewMatchers.withText("Expansion Panel"), withParent(withResourceName("action_bar"))))
             .check(matches(ViewMatchers.isDisplayed()))
     }
 
     @Test
-    fun shouldOpenSelectionControlScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnSelection)).perform(scrollTo())
-        onView(withId(R.id.btnSelection)).perform(click())
+    fun shouldOpenCheckBoxScreenWhenTapOnItButton() {
+        onView(withId(R.id.checkboxButton)).perform(scrollTo())
+        onView(withId(R.id.checkboxButton)).perform(click())
 
-        onView(withText("Selection Control")).check(matches(isDisplayed()))
+        onView(withText("CheckBox")).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun shouldOpenRadioButtonScreenWhenTapOnItButton() {
+        onView(withId(R.id.radioButtonButton)).perform(scrollTo())
+        onView(withId(R.id.radioButtonButton)).perform(click())
+
+        onView(withText("RadioButton")).check(matches(isDisplayed()))
     }
 
     @Test
     fun shouldOpenShortcutScreenWhenTapOnItButton() {
         onView(withId(R.id.shortcutButton)).perform(scrollTo())
+        onView(withId(R.id.shortcutButton)).perform(closeSoftKeyboard())
         onView(withId(R.id.shortcutButton)).perform(click())
 
         onView(withText("Shortcut")).check(matches(isDisplayed()))
@@ -207,10 +219,10 @@ class MainActivityFunctionalTests {
 
     @Test
     fun shouldOpenLogoScreenWhenTapOnItButton() {
-        onView(withId(R.id.logoPatternButton)).perform(scrollTo())
-        onView(withId(R.id.logoPatternButton)).perform(click())
+        onView(withId(R.id.logoButton)).perform(scrollTo())
+        onView(withId(R.id.logoButton)).perform(click())
 
-        onView(withText("Logo Pattern")).check(matches(isDisplayed()))
+        onView(withText("Logo")).check(matches(isDisplayed()))
     }
 
     @Test
