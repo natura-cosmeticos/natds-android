@@ -72,7 +72,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureNotification() {
         if (notifyAttribute > 0) {
             badgeContainer.visibility = View.VISIBLE
-            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable)
+            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable, 0, 0, 0, false)
         }
     }
 
@@ -92,11 +92,17 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun setDisabledIconColor() {
-        iconButton.setColorFilter(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+        iconButton.setColorFilter(
+            getColorTokenFromTheme(context, R.attr.colorMediumEmphasis),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
     }
 
     private fun setDisabledIconColorWithOverlayStyle() {
-        iconButton.setColorFilter(getColorTokenFromTheme(context, R.attr.colorLowEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+        iconButton.setColorFilter(
+            getColorTokenFromTheme(context, R.attr.colorLowEmphasis),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
     }
 
     fun setIcon(icon: String?) {
@@ -141,30 +147,43 @@ class IconButton @JvmOverloads constructor(
 
     private fun getIconName() {
         try {
-            iconNameAttribute = iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
+            iconNameAttribute =
+                iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.", e))
+            throw (IllegalArgumentException(
+                "⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.",
+                e
+            ))
         }
     }
 
     private fun getColorAttribute() {
         try {
-            colorAttribute = iconButtonAttributesArray.getIntOrThrow(R.styleable.IconButton_buttonColor)
+            colorAttribute =
+                iconButtonAttributesArray.getIntOrThrow(R.styleable.IconButton_buttonColor)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton color.", e))
+            throw (IllegalArgumentException(
+                "⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton color.",
+                e
+            ))
         }
     }
 
     private fun getEnabledAttribute() {
-        enabledAttribute = iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
+        enabledAttribute =
+            iconButtonAttributesArray.getBoolean(R.styleable.IconButton_android_enabled, true)
     }
 
     private fun getSizeAttribute() {
-        sizeAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_sizeButton, Size.SEMI.value)
+        sizeAttribute =
+            iconButtonAttributesArray.getInt(R.styleable.IconButton_sizeButton, Size.SEMI.value)
     }
 
     private fun getStyleAttribute() {
-        styleAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_styleButton, Style.INHERIT.value)
+        styleAttribute = iconButtonAttributesArray.getInt(
+            R.styleable.IconButton_styleButton,
+            Style.INHERIT.value
+        )
     }
 
     private fun getAppearanceAttributesFromTheme() {
@@ -223,8 +242,10 @@ class IconButton @JvmOverloads constructor(
                 0
             )
             .apply {
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_iconColor)
-                rippleDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_rippleDrawable)
+                iconColorResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_iconColor)
+                rippleDrawableResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_rippleDrawable)
             }
     }
 
@@ -238,8 +259,10 @@ class IconButton @JvmOverloads constructor(
                 0
             )
             .apply {
-                iconSizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_iconSize)
-                backgroundSizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_backgroundSize)
+                iconSizeResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_iconSize)
+                backgroundSizeResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_backgroundSize)
             }
     }
 
@@ -253,21 +276,29 @@ class IconButton @JvmOverloads constructor(
                 0
             )
             .apply {
-                backgroundDrawableResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_backgroundDrawable)
-                elevationResourceAttribute = this.getResourceIdOrThrow(R.styleable.IconButton_customElevation)
+                backgroundDrawableResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_backgroundDrawable)
+                elevationResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.IconButton_customElevation)
             }
     }
 
     private fun configureAppearance() {
         setIcon(iconNameAttribute)
-        iconButton.setColorFilter(ContextCompat.getColor(context, iconColorResourceAttribute), android.graphics.PorterDuff.Mode.SRC_IN)
-        iconButtonRippleBackground.background = resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
+        iconButton.setColorFilter(
+            ContextCompat.getColor(context, iconColorResourceAttribute),
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
+        iconButtonRippleBackground.background =
+            resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
     }
 
     private fun configureSize() {
         val containerlayoutParams = iconButtonContainer.layoutParams
-        containerlayoutParams.height = resources.getDimension(backgroundSizeResourceAttribute).toInt()
-        containerlayoutParams.width = resources.getDimension(backgroundSizeResourceAttribute).toInt()
+        containerlayoutParams.height =
+            resources.getDimension(backgroundSizeResourceAttribute).toInt()
+        containerlayoutParams.width =
+            resources.getDimension(backgroundSizeResourceAttribute).toInt()
 
         iconButtonContainer.layoutParams = containerlayoutParams
 
@@ -280,7 +311,8 @@ class IconButton @JvmOverloads constructor(
 
     private fun configureStyle() {
         if (styleAttribute != Style.INHERIT.value) {
-            iconButtonContainer.background = resources.getDrawable(backgroundDrawableResourceAttribute, context.theme)
+            iconButtonContainer.background =
+                resources.getDrawable(backgroundDrawableResourceAttribute, context.theme)
             iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
         }
     }
