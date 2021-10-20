@@ -119,6 +119,20 @@
     <attr name="buttonTextColorFocusBackground" format="color" />
     <attr name="buttonTextColorFocusBorder" format="color" />
     <attr name="buttonTextColorFocusLabel" format="color" />
+    <attr name="dialogTitleFontSize" format="dimension" />
+    <attr name="dialogTitleLetterSpacing" format="dimension" />
+    <attr name="dialogTitleLineHeight" format="dimension" />
+    <attr name="dialogTitlePrimaryFontFamily" format="string" />
+    <attr name="dialogTitlePrimaryFontWeight" format="string" />
+    <attr name="dialogTitleFallbackFontFamily" format="string" />
+    <attr name="dialogTitleFallbackFontWeight" format="string" />
+    <attr name="dialogBodyFontSize" format="dimension" />
+    <attr name="dialogBodyLetterSpacing" format="dimension" />
+    <attr name="dialogBodyLineHeight" format="dimension" />
+    <attr name="dialogBodyPrimaryFontFamily" format="string" />
+    <attr name="dialogBodyPrimaryFontWeight" format="string" />
+    <attr name="dialogBodyFallbackFontFamily" format="string" />
+    <attr name="dialogBodyFallbackFontWeight" format="string" />
     <attr name="heading1FontSize" format="dimension" />
     <attr name="heading1FontWeight" format="string" />
     <attr name="heading1LetterSpacing" format="dimension" />

@@ -89,6 +89,8 @@
     <attr name="dialogAlertTheme" format="reference"/>
     <attr name="dialogWithContainedButtons" format="reference"/>
     <attr name="dialogWithTextButtons" format="reference"/>
+    <attr name="dialogTitleAppearance" format="reference"/>
+    <attr name="dialogBodyAppearance" format="reference"/>
 
     <!-- Shortcut references -->
     <attr name="shortcutOutlined" format="reference"/>
