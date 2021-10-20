@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.6.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.1...v.8.6.2) (2021-10-14)
+
+
+### Bug Fixes
+
+* fixes textfield behavior when helpertext exceeds component limit ([e619f4e](https://github.com/natura-cosmeticos/natds-android/commit/e619f4ee64fe7c1d65f6e2a4e8cd2d0972f05078))
+* fixes UI test scenario at TextFieldActivityTest ([fefff3a](https://github.com/natura-cosmeticos/natds-android/commit/fefff3a900e2db5d9fb8c6878f91d03a3e759706))
+
+### [8.6.1](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.0...v.8.6.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* change navigationIcon to assignable at StandardAppBarTop ([5fa8f3a](https://github.com/natura-cosmeticos/natds-android/commit/5fa8f3a495667bd29c2fa0fda4b704b7ad1fab9a))
+
+## [8.6.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.5.0...v.8.6.0) (2021-10-04)
+
+
+### Features
+
+* adds badge theme attributes ([d88d18a](https://github.com/natura-cosmeticos/natds-android/commit/d88d18ac989e84e5e52b9496843879ad967b9871))
+* adds isFontWeight attribute to change font style ([daf0786](https://github.com/natura-cosmeticos/natds-android/commit/daf0786bfec94da31ef2ae5d4ac6701ac6602b74))
+* includes mediaHeight and mediaWidth attributes to resize image at AppBarTop ([8903c31](https://github.com/natura-cosmeticos/natds-android/commit/8903c31029e8a93e38ccecf6c29c6820bbd26b93))
+* includes menu attribute at StandardAppBarTop to inflate xml file ([2a145f0](https://github.com/natura-cosmeticos/natds-android/commit/2a145f0ea060483c40e3127f6dad69c04f852f4a))
+* refactors BadgeDrawable class to adds color and fonts theme attributes ([28e537c](https://github.com/natura-cosmeticos/natds-android/commit/28e537cc374c07894c8b34e315c0bed4ed803591))
+* replaces color atributes by custom at Badge class ([4d522f6](https://github.com/natura-cosmeticos/natds-android/commit/4d522f609b16f4ccb2869e34f20e339b69f01cbf))
+
+
+### Bug Fixes
+
+* fixes behavor of inflates menu at StandardAppBarTop ([fdb8744](https://github.com/natura-cosmeticos/natds-android/commit/fdb87443cfdcdeb966f1ebabcde004c13b8908af))
+* fixes call method of StandardAppBarTop ([76ad8cb](https://github.com/natura-cosmeticos/natds-android/commit/76ad8cbbcd05cd777d0eb750eb1c5cacd3726069))
+* fixes code review appointments ([c428334](https://github.com/natura-cosmeticos/natds-android/commit/c4283348884ccefa4da2ba04284d3be4e5b9440a))
+* replaces badge borderradius because the old one didn't have dp unity ([4a758d0](https://github.com/natura-cosmeticos/natds-android/commit/4a758d01ee688e3bc435b82509c31d2d70970ec9))
+
+## [8.5.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.4.0...v.8.5.0) (2021-09-29)
+
+
+### Features
+
+* adds new colors and dimensions relates a custom styles for brands ([b54be07](https://github.com/natura-cosmeticos/natds-android/commit/b54be070e2d7881194cee0b4aabb6b5c3a4150b7))
+* adds theme button attributes to custom component ([8109921](https://github.com/natura-cosmeticos/natds-android/commit/8109921351e4787070776a69c2df62a417d8fcc5))
+
+
+### Bug Fixes
+
+* replace custom ripple to default ([35bc43f](https://github.com/natura-cosmeticos/natds-android/commit/35bc43fbae3da7f2003f4223bd196590141dc95e))
+
 ## [8.4.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.3.0...v.8.4.0) (2021-09-17)
 
 

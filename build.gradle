@@ -4,7 +4,7 @@ buildscript {
     ext.kotlin_version = '1.5.31'
     ext.android_tools_gradle = '3.5.1'
     ext.screen_shot_plugin = '0.11.0'
-    ext.dokka_version_plugin = '1.4.20'
+    ext.dokka_version_plugin = '1.5.31'
     repositories {
         google()
         jcenter()
@@ -16,7 +16,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.google.gms:google-services:4.3.4'
+        classpath 'com.google.gms:google-services:4.3.10'
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version_plugin"
 
     }

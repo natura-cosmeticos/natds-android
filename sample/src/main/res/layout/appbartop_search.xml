@@ -25,7 +25,7 @@
             app:contentPosition="center"
             app:contentType="search"
             app:enabledElevation="true"
-            app:proeminentContent="true"
+            app:proeminentContent="false"
             app:scrollable="true">
 
             <com.natura.android.iconButton.IconButton

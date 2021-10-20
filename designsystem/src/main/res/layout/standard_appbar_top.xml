@@ -20,7 +20,7 @@
             android:id="@+id/actionLeftContainer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
+            android:layout_gravity="top|start"
             android:orientation="horizontal" />
 
         <LinearLayout
@@ -36,7 +36,7 @@
         <LinearLayout
             android:id="@+id/actionRightContainer"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="top|end"
             android:gravity="top"
             android:orientation="horizontal" />

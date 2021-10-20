@@ -33,7 +33,7 @@
         android:layout_width="?sizeTiny"
         android:layout_height="?sizeTiny"
         android:visibility="invisible"
-        android:src="@drawable/badge_ripple"
+        android:src="@drawable/badge_dot"
         android:tint="@color/colorBrdNatRed"
         app:layout_constraintEnd_toEndOf="@id/badgeRipple"
         app:layout_constraintStart_toStartOf="@id/badgeRipple"
