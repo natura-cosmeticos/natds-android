@@ -9,6 +9,7 @@ import com.natura.android.iconButton.IconButton
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 import kotlinx.android.synthetic.main.appbartop_button_action.view.*
+import kotlinx.android.synthetic.main.appbartop_threeactions.view.appBar
 
 class AppBarTopActivity : AppCompatActivity() {
 
@@ -51,9 +52,11 @@ class AppBarTopActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_appbar_top)
 
-        createListeners()
+        setSupportActionBar(appBarTopWithThreeActions.appBar.toolbar)
 
-        appBarTopWithTwoActions.appBar.setContentText("Title Left")
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
+        createListeners()
 
         when (pattern) {
             PATTERN_APPBARTOP_TWOACTIONS -> appBarTopWithTwoActions.visibility = View.VISIBLE

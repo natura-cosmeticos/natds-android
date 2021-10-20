@@ -81,6 +81,7 @@
         android:layout_gravity="center_vertical"
         android:paddingTop="@dimen/ds_spacing_micro"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_box">
 
         <com.natura.android.icon.FontIcon
