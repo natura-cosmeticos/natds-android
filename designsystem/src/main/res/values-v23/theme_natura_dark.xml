@@ -342,9 +342,11 @@
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>
         <item name="dialogWithContainedButtons">@style/Theme.DS.Dialog.ContainedButtons</item>
         <item name="dialogWithTextButtons">@style/Theme.DS.Dialog.TextButtons</item>
+        <item name="dialogTitleAppearance">@style/Theme.DS.Dialog.Title</item>
+        <item name="dialogBodyAppearance">@style/Theme.DS.Dialog.Body</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
-         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
         <item name="iconButtonLight">@style/Widget.DS.IconButton.Light</item>
 
         <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
