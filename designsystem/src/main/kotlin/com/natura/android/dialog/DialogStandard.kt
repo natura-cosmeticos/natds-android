@@ -2,6 +2,7 @@ package com.natura.android.dialog
 
 import android.content.Context
 import android.content.DialogInterface
+import android.graphics.Typeface
 import android.util.TypedValue
 import android.view.View
 import android.view.Window
@@ -170,6 +171,7 @@ class DialogStandard private constructor(
                 val title = findViewById<TextView>(R.id.dialogStandardTitle)
                 val contentContainer = findViewById<LinearLayout>(R.id.contentContainer)
 
+                title.typeface = getFontFromTheme(R.attr.dialogTitlePrimaryFontWeight, R.attr.dialogTitleFallbackFontWeight)
                 title.text = dialogTitle
 
                 firstHeaderIconButton?.let {
@@ -191,6 +193,7 @@ class DialogStandard private constructor(
                     val contentText =
                         layoutInflater.inflate(R.layout.dialog_standard_content, null).apply {
                             val textView = findViewById<TextView>(R.id.dialogAlertText)
+                            textView.typeface = getFontFromTheme(R.attr.dialogBodyPrimaryFontWeight, R.attr.dialogBodyFallbackFontWeight)
                             textView.text = text
                         }
                     contentContainer?.addView(contentText)
@@ -231,6 +234,17 @@ class DialogStandard private constructor(
 
     fun show() {
         dialog.show()
+    }
+
+    private fun getFontFromTheme(fontPrimary: Int, fontFallback: Int): Typeface {
+        val output = TypedValue()
+        context.theme.resolveAttribute(fontPrimary, output, true)
+
+        if (output.type == TypedValue.TYPE_NULL) {
+            context.theme.resolveAttribute(fontFallback, output, true)
+        }
+
+        return Typeface.create(output.string.toString(), Typeface.NORMAL)
     }
 
     private fun setIconButton(iconButton: IconButton, icon: String, action: View.OnClickListener?) {
