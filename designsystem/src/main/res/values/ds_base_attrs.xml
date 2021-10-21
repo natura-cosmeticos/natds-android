@@ -123,4 +123,15 @@
     <!-- Checkbox references -->
     <attr name="checkboxPrimary" format="reference"/>
 
+
+    <!-- { @deprecated Attributes }-->
+    <attr name="buttonDefaultFontSize" format="dimension" />
+    <attr name="buttonDefaultFontWeight" formastring="string" />
+    <attr name="buttonDefaultLetterSpacing" format="dimension" />
+    <attr name="buttonDefaultLineHeight" format="dimension" />
+
+    <attr name="assetBrandNeutralA" format="reference" />
+    <attr name="assetBrandCustomB" format="reference" />
+    <attr name="assetBrandNeutralB" format="reference" />
+    <attr name="assetBrandCustomA" format="reference" />
 </resources>
