@@ -3,7 +3,6 @@
     <style name="Theme.DS.Dialog.Standard.Avon.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Avon.Light</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Light</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
@@ -28,7 +27,6 @@
     <style name="Theme.DS.Dialog.Standard.Avon.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Avon.Dark</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Dark</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 

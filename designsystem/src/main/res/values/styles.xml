@@ -4,7 +4,6 @@
     <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>

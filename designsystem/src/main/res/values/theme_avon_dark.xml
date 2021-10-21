@@ -116,7 +116,7 @@
 
         <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
         <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
-         <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
+        <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
 
         <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
         <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>
