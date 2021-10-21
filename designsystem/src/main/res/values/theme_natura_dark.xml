@@ -109,6 +109,8 @@
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura.Dark</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Natura.Dark</item>
+        <item name="dialogTitleAppearance">@style/Theme.DS.Dialog.Title</item>
+        <item name="dialogBodyAppearance">@style/Theme.DS.Dialog.Body</item>
 
         <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
         <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>

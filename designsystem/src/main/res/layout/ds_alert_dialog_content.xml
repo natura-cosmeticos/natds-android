@@ -16,7 +16,7 @@
         android:paddingStart="@dimen/ds_spacing_small"
         android:paddingEnd="@dimen/ds_spacing_small"
         android:paddingBottom="@dimen/ds_spacing_small"
-        android:textAppearance="?textAppearanceBody1"
+        android:textAppearance="?dialogBodyAppearance"
         tools:text="Long text to test if two lines are possible and look well. This might be more than one phrase."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -34,7 +34,22 @@
         <item name="android:layout_marginTop">?spacingTiny</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Title" parent="@style/Heading6">
+    <style name="Theme.DS.Dialog.Title" parent="">
+        <item name="fontFamily">?dialogTitlePrimaryFontWeight</item>
+        <item name="android:textSize">?dialogTitleFontSize</item>
+        <item name="android:letterSpacing">?dialogTitleLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?dialogTitleLineHeight</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Body" parent="">
+        <item name="fontFamily">?dialogBodyPrimaryFontWeight</item>
+        <item name="android:textSize">?dialogBodyFontSize</item>
+        <item name="android:letterSpacing">?dialogBodyLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?dialogBodyLineHeight</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
     <style name="Theme.DS.Dialog.ButtonBarStyle" parent="@style/Base.Widget.AppCompat.ButtonBar">
