@@ -176,11 +176,19 @@
 
     <style name="Widget.DS.CheckBoxPrimary.Aesop.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_aesop_light</item>
-        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Aesop.Light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Aesop.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_aesop_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Aesop.Dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Aesop.Dark" parent="Theme.DS.CheckBox.LabelAppearance">
         <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Aesop.Light" parent="Theme.DS.CheckBox.LabelAppearance">
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 </resources>

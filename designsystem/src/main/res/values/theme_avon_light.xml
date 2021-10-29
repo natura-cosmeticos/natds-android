@@ -108,6 +108,9 @@
         <item name="buttonLabelLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
         <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
         <item name="buttonBorderRadius">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
+        <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
+        <item name="checkboxLabelLetterSpacing">@dimen/ssot2428a4883e5dc1b29352d505666ccadf</item>
+        <item name="checkboxLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
         <item name="dialogTitleFontSize">@dimen/ssot8298654a55f82a1143ca80c02f6ff0c5</item>
         <item name="dialogTitleLetterSpacing">@dimen/ssoteca51910c1e79a9c75faab952a52ee38</item>
         <item name="dialogTitleLineHeight">@dimen/ssot6c010c37f79973d02f1067604ef21513</item>
@@ -203,6 +206,8 @@
         <item name="buttonLabelPrimaryFontWeight">sans-serif-medium</item>
         <item name="buttonLabelFallbackFontFamily">Roboto</item>
         <item name="buttonLabelFallbackFontWeight">sans-serif-medium</item>
+        <item name="checkboxLabelPrimaryFontWeight">sans-serif</item>
+        <item name="checkboxLabelFallbackFontWeight">sans-serif</item>
         <item name="assetFontFileDisplay">@font/montserrat_bold</item>
         <item name="assetFontFileHeadline">@font/montserrat_semibold</item>
         <item name="assetFontFileBodyRegular">@font/montserrat_regular</item>

@@ -234,12 +234,20 @@
 
     <style name="Widget.DS.CheckBoxPrimary.Natura.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_natura_light</item>
-        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Natura.Light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Natura.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_natura_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Natura.Dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Natura.Dark" parent="Theme.DS.CheckBox.LabelAppearance">
         <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Natura.Light" parent="Theme.DS.CheckBox.LabelAppearance">
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget"/>

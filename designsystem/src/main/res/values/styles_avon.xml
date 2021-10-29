@@ -176,11 +176,19 @@
 
     <style name="Widget.DS.CheckBoxPrimary.Avon.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_avon_light</item>
-        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Avon.Light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Avon.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_avon_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Avon.Dark" parent="Theme.DS.CheckBox.LabelAppearance">
         <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Theme.DS.CheckBox.LabelAppearance.Avon.Light" parent="Theme.DS.CheckBox.LabelAppearance">
+        <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 </resources>
