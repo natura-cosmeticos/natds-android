@@ -2,20 +2,18 @@
 
 buildscript {
     ext.kotlin_version = '1.4.20'
-    ext.android_tools_gradle = '3.5.1'
-    ext.screen_shot_plugin = '0.11.0'
+    ext.android_tools_gradle = '7.0.0'
+    ext.screen_shot_plugin = '0.14.0'
     ext.dokka_version_plugin = '1.5.31'
     repositories {
         google()
-        jcenter()
+        mavenCentral()
 
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$android_tools_gradle"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.google.gms:google-services:4.3.10'
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version_plugin"
 
@@ -25,8 +23,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
-        maven { url "https://www.jitpack.io" }
+        mavenCentral()
         def githubProperties = new Properties()
         def githubFile = rootProject.file("github_credentials.properties")
         if (githubFile.exists()) {
@@ -56,19 +53,19 @@ ext {
     buildToolsVersion = '29.0.2'
 
     // App dependencies
-    constraintLayout = '1.1.3'
-    junitVersion = '4.12'
+    constraintLayout = '2.1.1'
+    junitVersion = '4.13.1'
     junitExtVersion = '1.1.0'
-    espressoVersion = '3.1.1'
+    espressoVersion = '3.4.0'
     ktlintVersion = '0.35.0'
-    androidXTestVersion = '1.2.0'
-    testCoreKtxVersion = "1.2.0"
-    androidxJunitVersion = "1.1.1"
-    truthVersion = '1.2.0'
-    robolectricVersion = '4.3.1'
+    androidXTestVersion = '1.4.0'
+    testCoreKtxVersion = "1.4.0"
+    androidxJunitVersion = "1.1.3"
+    truthVersion = '1.4.0'
+    robolectricVersion = '4.6.1'
     materialVersion = '1.1.0'
-    espressoIntentsVersion = '3.1.0'
+    espressoIntentsVersion = '3.4.0'
     mockKVersion = '1.10.0'
-    coreKTXVersion = '1.3.0'
+    coreKTXVersion = '1.6.0'
     iconsVersion = '1.5.1'
 }
