@@ -12,18 +12,17 @@ class CheckBoxActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
 
-        val checkboxPrimaryChecked: CheckBox by lazy { findViewById<CheckBox>(R.id.checkboxPrimaryChecked) }
-        val checkboxPrimaryDisabled: CheckBox by lazy { findViewById<CheckBox>(R.id.checkboxPrimaryDisabled) }
-        val checkboxPrimaryIndeterminate: CheckBox by lazy { findViewById<CheckBox>(R.id.checkboxPrimaryIndeterminate) }
+        val checkboxPrimaryChecked: CheckBox by lazy { findViewById(R.id.checkboxPrimaryChecked) }
+        val checkboxPrimaryIndeterminate: CheckBox by lazy { findViewById(R.id.checkboxPrimaryIndeterminate) }
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_checkbox)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "CheckBox"
+        supportActionBar?.title = "Checkbox"
 
-        checkboxPrimaryIndeterminate.setState(CheckBox.INDETERMINATE)
-        checkboxPrimaryChecked.setState(CheckBox.CHECKED)
+        checkboxPrimaryIndeterminate.state = CheckBox.INDETERMINATE
+        checkboxPrimaryChecked.state = CheckBox.CHECKED
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

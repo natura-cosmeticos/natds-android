@@ -7,24 +7,26 @@ import com.natura.android.R
 
 class CheckBox : AppCompatCheckBox {
     constructor(context: Context) :
-        super(context, null, R.attr.checkboxPrimary)
+        super(context, null, R.attr.checkboxPrimary) {
+            init()
+        }
     constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs, R.attr.checkboxPrimary)
+        super(context, attrs, R.attr.checkboxPrimary) {
+            init()
+        }
 
-    private var state = 0
-    private lateinit var STATE_INDETERMINATE: IntArray
-
-    init {
-        state = UNCHECKED
-        updateDrawable()
-        setOnCheckedChangeListener { _, _ ->
-            state = when (state) {
-                UNCHECKED -> CHECKED
-                CHECKED -> UNCHECKED
-                else -> CHECKED
-            }
+    var state = UNCHECKED
+        get() = field
+        set(value) {
+            field = value
+            refreshDrawableState()
             updateDrawable()
         }
+
+    private lateinit var STATE_INDETERMINATE: IntArray
+
+    private fun init() {
+        updateDrawable()
     }
 
     private fun updateDrawable() {
@@ -45,9 +47,12 @@ class CheckBox : AppCompatCheckBox {
         return drawableState
     }
 
-    fun setState(state: Int) {
-        this.state = state
-        updateDrawable()
+    override fun setChecked(checked: Boolean) {
+        this.state = when (checked) {
+            true -> CHECKED
+            else -> UNCHECKED
+        }
+        super.setChecked(checked)
     }
 
     companion object {
