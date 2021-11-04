@@ -19,7 +19,7 @@ class CheckBoxActivityTest : ScreenShotActivityTestBase() {
 
         checkScreenshot(activity, "no_selection")
 
-        performClick(R.id.checkboxPrimary)
+        performClick(R.id.checkboxPrimaryChecked)
         checkScreenshot(activity, "checkbox_primary_on")
     }
 }

@@ -597,6 +597,7 @@
     <style name="Widget.DS.CheckBox.Primary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:paddingStart">?spacingMicro</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
 
