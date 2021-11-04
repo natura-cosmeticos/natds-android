@@ -5,11 +5,11 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatCheckBox
 import com.natura.android.R
 
-class CheckBox @JvmOverloads constructor(
-    context: Context,
-    private val attrs: AttributeSet? = null,
-    defStyleAttr: Int = R.attr.checkboxPrimary
-) : AppCompatCheckBox(context, attrs, defStyleAttr) {
+class CheckBox : AppCompatCheckBox {
+    constructor(context: Context) :
+        super(context, null, R.attr.checkboxPrimary)
+    constructor(context: Context, attrs: AttributeSet?) :
+        super(context, attrs, R.attr.checkboxPrimary)
 
     private var state = 0
     private lateinit var STATE_INDETERMINATE: IntArray
