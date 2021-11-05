@@ -22,14 +22,14 @@
             android:layout_width="wrap_content"
             android:checked="true"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="?spacingSmall"/>
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryIndeterminate"
             android:text="CheckBox Primary Indeterminate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="?spacingSmall"/>
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryUnchecked"
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:checked="false"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="?spacingSmall"/>
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryCheckedDisabled"
@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:enabled="false"
             android:checked="true"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="?spacingSmall"/>
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryUncheckedDisabled"
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="?spacingSmall"/>
 
 
     </LinearLayout>
