@@ -133,7 +133,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.checkboxButton)).perform(scrollTo())
         onView(withId(R.id.checkboxButton)).perform(click())
 
-        onView(withText("CheckBox")).check(matches(isDisplayed()))
+        onView(withText("Checkbox")).check(matches(isDisplayed()))
     }
 
     @Test
