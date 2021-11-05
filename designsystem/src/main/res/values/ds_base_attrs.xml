@@ -122,5 +122,5 @@
 
     <!-- Checkbox references -->
     <attr name="checkboxPrimary" format="reference"/>
-
+    <attr name="state_indeterminate" format="boolean"/>
 </resources>

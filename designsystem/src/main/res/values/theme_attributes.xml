@@ -119,6 +119,11 @@
     <attr name="buttonTextColorFocusBackground" format="color" />
     <attr name="buttonTextColorFocusBorder" format="color" />
     <attr name="buttonTextColorFocusLabel" format="color" />
+    <attr name="checkboxLabelFontSize" format="dimension" />
+    <attr name="checkboxLabelLetterSpacing" format="dimension" />
+    <attr name="checkboxLabelLineHeight" format="dimension" />
+    <attr name="checkboxLabelPrimaryFontWeight" format="string" />
+    <attr name="checkboxLabelFallbackFontWeight" format="string" />
     <attr name="dialogTitleFontSize" format="dimension" />
     <attr name="dialogTitleLetterSpacing" format="dimension" />
     <attr name="dialogTitleLineHeight" format="dimension" />
