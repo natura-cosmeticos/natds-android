@@ -133,6 +133,21 @@
     <attr name="dialogBodyPrimaryFontWeight" format="string" />
     <attr name="dialogBodyFallbackFontFamily" format="string" />
     <attr name="dialogBodyFallbackFontWeight" format="string" />
+    <attr name="textFieldLabelPrimaryFontWeight" format="string" />
+    <attr name="textFieldLabelFallbackFontWeight" format="string" />
+    <attr name="textFieldLabelFontSize" format="dimension" />
+    <attr name="textFieldLabelLetterSpacing" format="dimension" />
+    <attr name="textFieldLabelLineHeight" format="dimension" />
+    <attr name="textFieldContentPrimaryFontWeight" format="string" />
+    <attr name="textFieldContentFallbackFontWeight" format="string" />
+    <attr name="textFieldContentFontSize" format="dimension" />
+    <attr name="textFieldContentLetterSpacing" format="dimension" />
+    <attr name="textFieldContentLineHeight" format="dimension" />
+    <attr name="textFieldHelperTextPrimaryFontWeight" format="string" />
+    <attr name="textFieldHelperTextFallbackFontWeight" format="string" />
+    <attr name="textFieldHelperTextFontSize" format="dimension" />
+    <attr name="textFieldHelperTextLetterSpacing" format="dimension" />
+    <attr name="textFieldHelperTextLineHeight" format="dimension" />
     <attr name="heading1FontSize" format="dimension" />
     <attr name="heading1FontWeight" format="string" />
     <attr name="heading1LetterSpacing" format="dimension" />
