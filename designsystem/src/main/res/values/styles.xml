@@ -608,6 +608,32 @@
         <item name="android:lineSpacingMultiplier">?checkboxLabelLineHeight</item>
     </style>
 
+    <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?textFieldLabelFontSize</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:fontFamily">?textFieldLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?textFieldContentLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldLabelLineHeight</item>
+        <item name="android:paddingBottom">?spacingMicro</item>
+    </style>
+
+    <style name="TextAppearance.DS.EditText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">?textFieldContentFontSize</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">?textFieldContentPrimaryFontWeight</item>
+        <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
+        <item name="android:letterSpacing">?textFieldContentLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldContentLineHeight</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.DS.Footer" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?textFieldHelperTextFontSize</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:fontFamily">?textFieldHelperTextPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?textFieldHelperTextLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldHelperTextLineHeight</item>
+    </style>
     <style name="Widget.DS"/>
 
 </resources>
