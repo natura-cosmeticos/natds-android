@@ -1,9 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,41 +16,42 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NATDS - ANDROID"
             android:layout_marginTop="?spacingXLarge"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
+            android:text="NATDS - ANDROID"
+            android:textAlignment="center"
             android:textAppearance="?textAppearanceHeadline6"
-            android:textColor="#FAFAFA"
-            android:textAlignment="center" />
+            android:textColor="#FAFAFA" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="version 2.4.1"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            android:textColor="#FAFAFA"
+            android:text="version 2.4.1"
+            android:textAlignment="center"
             android:textAppearance="?textAppearanceCaption"
-            android:textAlignment="center" />
+            android:textColor="#FAFAFA" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Select a brand:"
             android:layout_marginTop="?spacingSemi"
             android:layout_marginBottom="?spacingSmall"
-            android:textColor="#FAFAFA"
-            android:textAppearance="?textAppearanceBody1" />
-            app:cardBackgroundColor="@color/white"/>
+            android:text="Select a brand:"
+            android:textAppearance="?textAppearanceBody1"
+            android:textColor="#FAFAFA" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/aesopThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            app:cardBackgroundColor="@color/white"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            app:cardCornerRadius="?borderRadiusMedium"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
 
             <ImageView
                 android:layout_width="?sizeHugeX"
@@ -63,11 +64,11 @@
             android:id="@+id/avonThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -81,56 +82,56 @@
             android:id="@+id/naturaThemeButton"
             android:layout_width="match_parent"
             android:layout_height="?sizeLargeX"
-            app:cardBackgroundColor="@color/white"
-            app:cardCornerRadius="?borderRadiusMedium"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
 
             <ImageView
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/natura_horizontal"
-                android:tint="@color/black"/>
+                app:tint="@color/black" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-                android:id="@+id/themeNaturaCoButton"
-                android:layout_width="match_parent"
-                android:layout_height="?sizeLargeX"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="?borderRadiusMedium"
-                android:layout_marginBottom="?spacingSmall"
-                android:gravity="center"
-                android:orientation="horizontal" >
+            android:id="@+id/themeNaturaCoButton"
+            android:layout_width="match_parent"
+            android:layout_height="?sizeLargeX"
+            android:layout_marginBottom="?spacingSmall"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
 
             <ImageView
                 android:id="@+id/naturaCoLogoTheme"
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:alpha="?opacity03"
                 app:srcCompat="@drawable/logo_natura_co"
-                android:tint="@color/black"
-                android:alpha="?opacity03"/>
-            </androidx.cardview.widget.CardView>
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-                android:id="@+id/tbsThemeButton"
-                android:layout_width="match_parent"
-                android:layout_height="?sizeLargeX"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="?borderRadiusMedium"
-                android:layout_marginBottom="?spacingSmall"
-                android:gravity="center"
-                android:orientation="horizontal" >
+            android:id="@+id/tbsThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="?sizeLargeX"
+            android:layout_marginBottom="?spacingSmall"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
 
             <ImageView
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/tbs_horizontal"
-                android:tint="@color/black"/>
-            </androidx.cardview.widget.CardView>
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
