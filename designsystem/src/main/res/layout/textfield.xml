@@ -12,7 +12,7 @@
 
     <TextView
         android:id="@+id/text_field_input_label"
-        style="@style/TextAppearence.DS.Label"
+        style="@style/TextAppearance.DS.Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -38,7 +38,7 @@
 
         <EditText
             android:id="@+id/text_field_input_value"
-            style="@style/TextAppearence.DS.EditText"
+            style="@style/TextAppearance.DS.EditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -97,7 +97,7 @@
 
         <TextView
             android:id="@+id/text_field_input_footer"
-            style="@style/TextAppearence.DS.Footer"
+            style="@style/TextAppearance.DS.Footer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
