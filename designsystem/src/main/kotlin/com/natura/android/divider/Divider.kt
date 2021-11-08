@@ -23,10 +23,10 @@ import kotlinx.android.synthetic.main.divider.view.*
  *
  * ```
  * <com.natura.android.divider.Divider
-        android:id="@+id/dividerFullbleed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerType="fullBleed" />
+ android:id="@+id/dividerFullbleed"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ app:dividerType="fullBleed" />
  *```
  */
 
@@ -105,7 +105,8 @@ class Divider @JvmOverloads constructor(
             resources.getDimension(marginLeftResourceAttribute).toInt(),
             0,
             resources.getDimension(marginRightResourceAttribute).toInt(),
-            0)
+            0
+        )
         this.dividerLine.layoutParams = marginLayoutParams
     }
 

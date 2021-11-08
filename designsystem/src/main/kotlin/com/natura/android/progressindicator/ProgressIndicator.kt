@@ -19,12 +19,12 @@ import com.natura.android.exceptions.MissingThemeException
  *
  * ```
 <com.natura.android.progressindicator.ProgressIndicator
-    android:id="@+id/ds_loading"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="visible"
-    app:size="large"
-    app:layer="true"/>
+ android:id="@+id/ds_loading"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:visibility="visible"
+ app:size="large"
+ app:layer="true"/>
  *```
  */
 

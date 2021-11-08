@@ -41,7 +41,7 @@ class MenuView @JvmOverloads constructor(
         set(value) {
             field = value
             setMenuIconImage(value)
-    }
+        }
 
     var tagLabel: String? = ""
         set(value) {
