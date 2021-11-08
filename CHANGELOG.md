@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.7.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.2...v.8.7.0) (2021-11-08)
+
+
+### Features
+
+* adds custom style attributes for Dialog component ([be0c366](https://github.com/natura-cosmeticos/natds-android/commit/be0c36670963e5fc51ab88fb89d37b720a778a3b))
+* adds dialog typography attributes to dialog component ([1e8ef02](https://github.com/natura-cosmeticos/natds-android/commit/1e8ef02bbdee75b8ad77a188757a1aa1a2f38718))
+* adds indeterminate variant to checkbox component ([fbcedee](https://github.com/natura-cosmeticos/natds-android/commit/fbcedee7a19ea4cd61473a80bc9a325966a03b4c))
+* adds logic to get fallback fonts in fails at Dialog component ([451993d](https://github.com/natura-cosmeticos/natds-android/commit/451993d99924eba043784a43fdf220d1b06d1030))
+* recreates the 8.7.0 tag generation due to an artifact publishing conflict ([477fc22](https://github.com/natura-cosmeticos/natds-android/commit/477fc22e8c5a65070641b731f996f66dc2632b31))
+
+
+### Bug Fixes
+
+* fixes checkbox label color at api 21 ([5efcc38](https://github.com/natura-cosmeticos/natds-android/commit/5efcc38f67e349d0b1ecad00e32fceab9151a752))
+* fixes checkbox screen instrumentation test ([6e41906](https://github.com/natura-cosmeticos/natds-android/commit/6e419061e6c448aace003ddca2b1dfa4eb6848c3))
+
 ### [8.6.2](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.1...v.8.6.2) (2021-10-14)
 
 
