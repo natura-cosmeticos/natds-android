@@ -4,8 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
-
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'kotlin-kapt'
 
 group='com.github.systemteamopensource'
 
@@ -23,12 +22,6 @@ android {
         vectorDrawables.useSupportLibrary = true
         consumerProguardFiles 'consumer-rules.pro'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                includeCompileClasspath false
-            }
-        }
     }
 
     dokkaHtml.configure {
@@ -61,6 +54,8 @@ android {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
     }
+
+    kapt.includeCompileClasspath = false
 }
 
 dependencies {

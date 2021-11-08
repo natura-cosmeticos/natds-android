@@ -115,6 +115,9 @@
             android:name=".components.listitem.ListItemActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
+            android:name=".tokens.CustomTypographyActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
             android:name=".AppBarTopAttributesActivity"/>
     </application>
 </manifest>

@@ -28,6 +28,7 @@
         android:layout_marginBottom="?spacingMicro"
         app:badgeColor="colorPrimary"
         app:badgeVariant="dot"
+        app:isFontWeight="false"
         app:layout_constraintBottom_toTopOf="@+id/textViewDotPrimary"
         app:layout_constraintEnd_toEndOf="@+id/textViewDotPrimary"
         app:layout_constraintStart_toStartOf="@+id/textViewDotPrimary"

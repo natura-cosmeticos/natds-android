@@ -72,7 +72,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureNotification() {
         if (notifyAttribute > 0) {
             badgeContainer.visibility = View.VISIBLE
-            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable, 0, 0, 0)
+            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable, 0, 0, 0, false)
         }
     }
 
@@ -150,10 +150,12 @@ class IconButton @JvmOverloads constructor(
             iconNameAttribute =
                 iconButtonAttributesArray.getStringOrThrow(R.styleable.IconButton_iconName)
         } catch (e: Exception) {
-            throw (IllegalArgumentException(
-                "⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.",
-                e
-            ))
+            throw (
+                IllegalArgumentException(
+                    "⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.",
+                    e
+                )
+                )
         }
     }
 
@@ -162,10 +164,12 @@ class IconButton @JvmOverloads constructor(
             colorAttribute =
                 iconButtonAttributesArray.getIntOrThrow(R.styleable.IconButton_buttonColor)
         } catch (e: Exception) {
-            throw (IllegalArgumentException(
-                "⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton color.",
-                e
-            ))
+            throw (
+                IllegalArgumentException(
+                    "⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton color.",
+                    e
+                )
+                )
         }
     }
 
