@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.7.0...v.8.8.0) (2021-11-08)
+
+
+### Features
+
+* adds custom typography to Textfield component ([972278b](https://github.com/natura-cosmeticos/natds-android/commit/972278bf661f2372162436d78e43c6012af77de5))
+* recreates the 8.7.0 tag generation due to an artifact publishing conflict ([092d8ed](https://github.com/natura-cosmeticos/natds-android/commit/092d8ed588f254b1d6e96521b7dcdf2a41bd1aa2))
+
 ## [8.7.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.6.2...v.8.7.0) (2021-11-08)
 
 
