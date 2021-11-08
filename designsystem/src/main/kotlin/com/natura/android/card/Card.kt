@@ -17,11 +17,11 @@ import com.natura.android.R
  *
  * ```
  * <com.natura.android.card.Card
-        android:id="@+id/card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:enabledRadius="true"
-        app:enabledElevation="true">
+ android:id="@+id/card"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ app:enabledRadius="true"
+ app:enabledElevation="true">
 
 </com.natura.android.card.Card>
  *```

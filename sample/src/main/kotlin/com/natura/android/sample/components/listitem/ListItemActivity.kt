@@ -42,6 +42,7 @@ class ListItemActivity : AppCompatActivity() {
             "Selected cell",
             "Divider inset",
             "Divider middle",
-            "Divider fullbleed")
+            "Divider fullbleed"
+        )
     }
 }

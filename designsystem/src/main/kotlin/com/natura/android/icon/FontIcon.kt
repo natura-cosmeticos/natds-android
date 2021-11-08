@@ -22,17 +22,17 @@ class FontIcon @JvmOverloads constructor(
         }
     }
 
-        override fun setText(text: CharSequence?, type: BufferType?) {
-            if (text.isNullOrBlank()) {
-                super.setText(text, type)
-            } else {
-                try {
-                    super.setText(text.toString().toIcon(), type)
-                } catch (e: Exception) {
-                    super.setText("", type)
-                }
+    override fun setText(text: CharSequence?, type: BufferType?) {
+        if (text.isNullOrBlank()) {
+            super.setText(text, type)
+        } else {
+            try {
+                super.setText(text.toString().toIcon(), type)
+            } catch (e: Exception) {
+                super.setText("", type)
             }
         }
     }
+}
 
-    fun String.toIcon() = String(Character.toChars(Integer.parseInt(this, 16)))
+fun String.toIcon() = String(Character.toChars(Integer.parseInt(this, 16)))

@@ -45,9 +45,9 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun openSampleBy(brandTheme: String) {
-            themeRepository.saveChosenTheme(brandTheme)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        themeRepository.saveChosenTheme(brandTheme)
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {

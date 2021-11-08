@@ -2,11 +2,9 @@ package com.natura.android.sample
 
 import android.widget.Button
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.ProgressIndicatorActivity
 import com.natura.android.sample.patterns.LogoActivity
-import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
 import com.natura.android.sample.tokens.icons.IconActivity
 import org.junit.Assert.assertEquals

@@ -25,27 +25,35 @@ class ValueTextHighlightActivityTest {
 
     @Test
     fun shouldDisplayInitialViewValues() {
-        onView(matchHighlightChild(
-            childId = R.id.description_label,
-            parentId = R.id.highlightInitOnXml)
+        onView(
+            matchHighlightChild(
+                childId = R.id.description_label,
+                parentId = R.id.highlightInitOnXml
+            )
         )
             .check(matches(withText("Description on Xml")))
 
-        onView(matchHighlightChild(
-            childId = R.id.highlight_label,
-            parentId = R.id.highlightInitOnXml)
+        onView(
+            matchHighlightChild(
+                childId = R.id.highlight_label,
+                parentId = R.id.highlightInitOnXml
+            )
         )
             .check(matches(withText("R\$ 11,02")))
 
-        onView(matchHighlightChild(
-            childId = R.id.highlight_label,
-            parentId = R.id.highlightInitViaCode)
+        onView(
+            matchHighlightChild(
+                childId = R.id.highlight_label,
+                parentId = R.id.highlightInitViaCode
+            )
         )
             .check(matches(withText("\$ 00.00")))
 
-        onView(matchHighlightChild(
-            childId = R.id.description_label,
-            parentId = R.id.highlightInitViaCode)
+        onView(
+            matchHighlightChild(
+                childId = R.id.description_label,
+                parentId = R.id.highlightInitViaCode
+            )
         )
             .check(matches(withText("Add description via code")))
     }
