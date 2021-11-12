@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.facebook.testing.screenshot'
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
@@ -17,12 +18,6 @@ android {
         versionName "1.0"
         testInstrumentationRunner "com.natura.android.sample.screenshottests.ScreenShotTestRunner"
         vectorDrawables.useSupportLibrary = true
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                includeCompileClasspath false
-            }
-        }
     }
 
     aaptOptions {
@@ -48,6 +43,8 @@ android {
             unitTests.returnDefaultValues = true
         }
     }
+
+    kapt.includeCompileClasspath = false
 }
 
 dependencies {
@@ -56,7 +53,7 @@ dependencies {
 
     implementation "com.natura:icons:$rootProject.iconsVersion"
 
-    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation "com.google.android.material:material:$rootProject.materialVersion"

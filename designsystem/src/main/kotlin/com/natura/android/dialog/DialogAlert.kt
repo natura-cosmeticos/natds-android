@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import com.natura.android.R
 
-class DialogAlert constructor (
+class DialogAlert constructor(
     private val context: Context,
     private val mainButtonTitle: String,
     private val mainButtonAction: DialogInterface.OnClickListener,
