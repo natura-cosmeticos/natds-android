@@ -52,7 +52,7 @@ ext {
     minSdkVersion = 21
     targetSdkVersion = 30
     compileSdkVersion = 30
-    buildToolsVersion = '30.0.2'
+    buildToolsVersion = '29.0.2'
 
     // App dependencies
     constraintLayout = '1.1.3'

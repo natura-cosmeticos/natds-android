@@ -7,8 +7,6 @@
     <attr name="customWidth" format="reference" />
     <attr name="enabledElevation" format="boolean" />
     <attr name="scrollable" format="boolean" />
-    <attr name="customSize" format="enum" />
-
 
     <attr name="appBarColor" format="enum">
         <enum name="colorDefault" value="0" />
@@ -36,23 +34,23 @@
             <enum name="right" value="2" />
         </attr>
         <attr name="colorBackground" />
-        <attr name="labelAppearance" />
-        <attr name="textLabel" />
+        <attr name="labelAppearance" format="reference" />
+        <attr name="textLabel" format="string" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
     </declare-styleable>
 
     <declare-styleable name="Shortcut">
-        <attr name="type" format="enum">
+        <attr name="colorBackground" />
+        <attr name="shct_type" format="enum">
             <enum name="outlined" value="0" />
             <enum name="contained" value="1" />
         </attr>
-        <attr name="colorBackground" />
-        <attr name="colorIcon" format="color" />
-        <attr name="labelAppearance" format="reference" />
-        <attr name="textLabel" format="string" />
-        <attr name="iconName" format="string" />
-        <attr name="notify" />
+        <attr name="shct_icon_color" format="color" />
+        <attr name="shct_label_appearance" format="reference" />
+        <attr name="shct_text_label" format="string" />
+        <attr name="shct_icon_name" format="string" />
+        <attr name="shct_notify" format="integer" />
 
     </declare-styleable>
 
@@ -182,7 +180,7 @@
 
     <declare-styleable name="IconButton">
         <attr name="android:enabled" />
-        <attr name="iconName" />
+        <attr name="iconName" format="string" />
         <attr name="buttonColor" format="enum">
             <enum name="defaultColor" value="0" />
             <enum name="primaryColor" value="1" />
@@ -228,11 +226,11 @@
     </declare-styleable>
 
     <declare-styleable name="ProgressIndicator">
-        <attr name="customHeight" />
-        <attr name="customWidth" />
         <attr name="colorBackground" />
-        <attr name="layer" format="boolean" />
-        <attr name="customSize" format="enum">
+        <attr name="pgid_height" format="reference" />
+        <attr name="pgid_width" format="reference" />
+        <attr name="pgid_layer" format="boolean" />
+        <attr name="pgid_size" format="enum">
             <enum name="standard" value="0" />
             <enum name="semi" value="1" />
             <enum name="medium" value="2" />
@@ -265,7 +263,7 @@
             <enum name="highlight" value="3" />
             <enum name="surface" value="4" />
         </attr>
-        <attr name="customSize">
+        <attr name="customSize" format="enum">
             <enum name="medium" value="0" />
             <enum name="mediumx" value="1" />
             <enum name="large" value="2" />

@@ -53,8 +53,8 @@ class ProgressIndicator @JvmOverloads constructor(
     fun getLayer(): Boolean? = layerAttribute
 
     private fun getProgressIndicatorAttributes() {
-        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_size, Size.MEDIUM.value)
-        layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_layer, false)
+        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_pgid_size, Size.MEDIUM.value)
+        layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_pgid_layer, false)
 
         progressIndicatorAttributesArray.recycle()
     }
@@ -65,8 +65,8 @@ class ProgressIndicator @JvmOverloads constructor(
             .obtainStyledAttributes(attrs, R.styleable.ProgressIndicator, styleFromTheme, 0)
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_colorBackground)
-                widthResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_customWidth)
-                heightResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_customHeight)
+                widthResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_width)
+                heightResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_height)
             }
     }
 
