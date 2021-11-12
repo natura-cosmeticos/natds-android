@@ -7,6 +7,8 @@
     <attr name="customWidth" format="reference" />
     <attr name="enabledElevation" format="boolean" />
     <attr name="scrollable" format="boolean" />
+    <attr name="customSize" format="enum" />
+
 
     <attr name="appBarColor" format="enum">
         <enum name="colorDefault" value="0" />
@@ -230,7 +232,7 @@
         <attr name="customWidth" />
         <attr name="colorBackground" />
         <attr name="layer" format="boolean" />
-        <attr name="size" format="enum">
+        <attr name="customSize" format="enum">
             <enum name="standard" value="0" />
             <enum name="semi" value="1" />
             <enum name="medium" value="2" />
@@ -263,7 +265,7 @@
             <enum name="highlight" value="3" />
             <enum name="surface" value="4" />
         </attr>
-        <attr name="customSize" format="enum">
+        <attr name="customSize">
             <enum name="medium" value="0" />
             <enum name="mediumx" value="1" />
             <enum name="large" value="2" />
