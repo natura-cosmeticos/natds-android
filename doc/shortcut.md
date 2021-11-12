@@ -16,9 +16,9 @@ Following there's an example of an shortcut outlined:
         android:id="@+id/shortcutOutlined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:iconName="outlined-default-mockup"
-        app:textLabel="Shortcut outlined sample"
-        app:type="outlined" />
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Shortcut outlined sample"
+        app:shct_type="outlined" />
 ```
 
 Following there's an example of an shortcut contained:
@@ -28,9 +28,9 @@ Following there's an example of an shortcut contained:
         android:id="@+id/shortcutOutlined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:iconName="outlined-default-mockup"
-        app:textLabel="Shortcut contained sample"
-        app:type="contained" />
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Shortcut contained sample"
+        app:shct_type="contained" />
 ```
 
 To insert a notification badge, simply add the notify property to the xml. Its value can be modified programmatically.
@@ -40,10 +40,10 @@ To insert a notification badge, simply add the notify property to the xml. Its v
         android:id="@+id/shortcutContained"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:notify="10"
-        app:iconName="outlined-default-mockup"
-        app:textLabel="Contained/ \nPrimary"
-        app:type="contained" />
+        app:shct_notify="10"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Contained/ \nPrimary"
+        app:shct_type="contained" />
 ```
 
 ```kotlin
@@ -67,9 +67,9 @@ Ex: app:icon="@drawable/outlined_default_mockup"
         android:id="@+id/shortcutOutlined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:icon="@drawable/outlined_default_mockup"
-        app:textLabel="Shortcut contained sample"
-        app:type="contained" />
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Shortcut contained sample"
+        app:shct_type="contained" />
 ```
 
 **A shortcut is a DS component based on DS multibrand themes. It means
@@ -82,9 +82,9 @@ more info about how to set DS themes in your app](getting-started.md).**
         android:id="@+id/shortcutOutlined"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:iconName="outlined-default-mockup"
-        app:textLabel="Shortcut sample"
-        app:type="outlined"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Shortcut sample"
+        app:shct_type="outlined"
         android:theme="@style/Theme.Natura"/>
 ```
 

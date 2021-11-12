@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
+
 apply plugin: 'kotlin-kapt'
 
 group='com.github.systemteamopensource'
