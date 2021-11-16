@@ -34,7 +34,22 @@
         <item name="android:layout_marginTop">?spacingTiny</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Title" parent="@style/Heading6">
+    <style name="Theme.DS.Dialog.Title" parent="">
+        <item name="fontFamily">?dialogTitlePrimaryFontWeight</item>
+        <item name="android:textSize">?dialogTitleFontSize</item>
+        <item name="android:letterSpacing">?dialogTitleLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?dialogTitleLineHeight</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Body" parent="">
+        <item name="fontFamily">?dialogBodyPrimaryFontWeight</item>
+        <item name="android:textSize">?dialogBodyFontSize</item>
+        <item name="android:letterSpacing">?dialogBodyLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?dialogBodyLineHeight</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
     <style name="Theme.DS.Dialog.ButtonBarStyle" parent="@style/Base.Widget.AppCompat.ButtonBar">
@@ -469,16 +484,16 @@
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorPrimary</item>
-        <item name="colorIcon">?colorOnPrimary</item>
+        <item name="shct_icon_color">?colorOnPrimary</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Outlined" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorSurface</item>
-        <item name="colorIcon">?colorPrimary</item>
+        <item name="shct_icon_color">?colorPrimary</item>
     </style>
 
     <style name="Widget.DS.Shortcut">
-        <item name="labelAppearance">?textAppearanceCaption</item>
+        <item name="shct_label_appearance">?textAppearanceCaption</item>
     </style>
 
     <!-- TAG STYLES -->
@@ -558,23 +573,23 @@
     </style>
 
     <style name="Widget.DS.ProgressIndicator.Standard" parent="Widget.DS.ProgressIndicator">
-        <item name="customWidth">?sizeStandard</item>
-        <item name="customHeight">?sizeStandard</item>
+        <item name="pgid_width">?sizeStandard</item>
+        <item name="pgid_height">?sizeStandard</item>
     </style>
 
     <style name="Widget.DS.ProgressIndicator.Semi" parent="Widget.DS.ProgressIndicator">
-        <item name="customWidth">?sizeSemi</item>
-        <item name="customHeight">?sizeSemi</item>
+        <item name="pgid_width">?sizeSemi</item>
+        <item name="pgid_height">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.ProgressIndicator.Medium" parent="Widget.DS.ProgressIndicator">
-        <item name="customWidth">?sizeMedium</item>
-        <item name="customHeight">?sizeMedium</item>
+        <item name="pgid_width">?sizeMedium</item>
+        <item name="pgid_height">?sizeMedium</item>
     </style>
 
     <style name="Widget.DS.ProgressIndicator.Large" parent="Widget.DS.ProgressIndicator">
-        <item name="customWidth">?sizeLarge</item>
-        <item name="customHeight">?sizeLarge</item>
+        <item name="pgid_width">?sizeLarge</item>
+        <item name="pgid_height">?sizeLarge</item>
     </style>
 
     <!-- CHECKBOX COMPONENT STYLE -->
@@ -582,8 +597,43 @@
     <style name="Widget.DS.CheckBox.Primary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:paddingStart">?spacingMicro</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
 
+    <style name="Theme.DS.CheckBox.LabelAppearance" parent="">
+        <item name="fontFamily">?checkboxLabelPrimaryFontWeight</item>
+        <item name="android:textSize">?checkboxLabelFontSize</item>
+        <item name="android:letterSpacing">?checkboxLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?checkboxLabelLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?textFieldLabelFontSize</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:fontFamily">?textFieldLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?textFieldContentLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldLabelLineHeight</item>
+        <item name="android:paddingBottom">?spacingMicro</item>
+    </style>
+
+    <style name="TextAppearance.DS.EditText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">?textFieldContentFontSize</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">?textFieldContentPrimaryFontWeight</item>
+        <item name="android:paddingBottom">@dimen/ds_spacing_micro</item>
+        <item name="android:letterSpacing">?textFieldContentLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldContentLineHeight</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.DS.Footer" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?textFieldHelperTextFontSize</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:fontFamily">?textFieldHelperTextPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?textFieldHelperTextLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?textFieldHelperTextLineHeight</item>
+    </style>
     <style name="Widget.DS"/>
 
 </resources>

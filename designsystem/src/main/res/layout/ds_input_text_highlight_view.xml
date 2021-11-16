@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/description_label"
-        style="@style/TextAppearence.Natura.Default"
+        style="@style/TextAppearance.Natura.Default"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/ds_spacin_tiny"
@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/highlight_label"
-        style="@style/TextAppearence.Natura.Highlight"
+        style="@style/TextAppearance.Natura.Highlight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/ds_spacin_tiny"

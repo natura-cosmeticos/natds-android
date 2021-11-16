@@ -19,12 +19,12 @@ import com.natura.android.exceptions.MissingThemeException
  *
  * ```
 <com.natura.android.progressindicator.ProgressIndicator
-    android:id="@+id/ds_loading"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="visible"
-    app:size="large"
-    app:layer="true"/>
+ android:id="@+id/ds_loading"
+ android:layout_width="wrap_content"
+ android:layout_height="wrap_content"
+ android:visibility="visible"
+ app:size="large"
+ app:layer="true"/>
  *```
  */
 
@@ -53,8 +53,8 @@ class ProgressIndicator @JvmOverloads constructor(
     fun getLayer(): Boolean? = layerAttribute
 
     private fun getProgressIndicatorAttributes() {
-        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_size, Size.MEDIUM.value)
-        layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_layer, false)
+        sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_pgid_size, Size.MEDIUM.value)
+        layerAttribute = progressIndicatorAttributesArray.getBoolean(R.styleable.ProgressIndicator_pgid_layer, false)
 
         progressIndicatorAttributesArray.recycle()
     }
@@ -65,8 +65,8 @@ class ProgressIndicator @JvmOverloads constructor(
             .obtainStyledAttributes(attrs, R.styleable.ProgressIndicator, styleFromTheme, 0)
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_colorBackground)
-                widthResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_customWidth)
-                heightResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_customHeight)
+                widthResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_width)
+                heightResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_height)
             }
     }
 

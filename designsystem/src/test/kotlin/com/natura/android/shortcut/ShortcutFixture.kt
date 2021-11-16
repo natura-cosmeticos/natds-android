@@ -61,10 +61,10 @@ internal class ShortcutFixture private constructor(
     fun build(): Shortcut {
         val attributes = Robolectric
             .buildAttributeSet()
-            .addAttribute(R.attr.type, type.toString())
-            .addAttribute(R.attr.iconName, iconName)
-            .addAttribute(R.attr.textLabel, label)
-            .addAttribute(R.attr.notify, notify.toString())
+            .addAttribute(R.attr.shct_type, type.toString())
+            .addAttribute(R.attr.shct_icon_name, iconName)
+            .addAttribute(R.attr.shct_text_label, label)
+            .addAttribute(R.attr.shct_notify, notify.toString())
             .build()
 
         return Shortcut(context, attributes)

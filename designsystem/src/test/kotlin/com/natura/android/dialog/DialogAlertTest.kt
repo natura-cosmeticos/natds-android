@@ -62,6 +62,7 @@ class DialogAlertTest {
             { _, _ -> },
             secondaryButtonTitle,
             { _, _ -> },
-            message).create()
+            message
+        ).create()
     }
 }

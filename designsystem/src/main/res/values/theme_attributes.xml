@@ -119,6 +119,40 @@
     <attr name="buttonTextColorFocusBackground" format="color" />
     <attr name="buttonTextColorFocusBorder" format="color" />
     <attr name="buttonTextColorFocusLabel" format="color" />
+    <attr name="checkboxLabelFontSize" format="dimension" />
+    <attr name="checkboxLabelLetterSpacing" format="dimension" />
+    <attr name="checkboxLabelLineHeight" format="dimension" />
+    <attr name="checkboxLabelPrimaryFontWeight" format="string" />
+    <attr name="checkboxLabelFallbackFontWeight" format="string" />
+    <attr name="dialogTitleFontSize" format="dimension" />
+    <attr name="dialogTitleLetterSpacing" format="dimension" />
+    <attr name="dialogTitleLineHeight" format="dimension" />
+    <attr name="dialogTitlePrimaryFontFamily" format="string" />
+    <attr name="dialogTitlePrimaryFontWeight" format="string" />
+    <attr name="dialogTitleFallbackFontFamily" format="string" />
+    <attr name="dialogTitleFallbackFontWeight" format="string" />
+    <attr name="dialogBodyFontSize" format="dimension" />
+    <attr name="dialogBodyLetterSpacing" format="dimension" />
+    <attr name="dialogBodyLineHeight" format="dimension" />
+    <attr name="dialogBodyPrimaryFontFamily" format="string" />
+    <attr name="dialogBodyPrimaryFontWeight" format="string" />
+    <attr name="dialogBodyFallbackFontFamily" format="string" />
+    <attr name="dialogBodyFallbackFontWeight" format="string" />
+    <attr name="textFieldLabelPrimaryFontWeight" format="string" />
+    <attr name="textFieldLabelFallbackFontWeight" format="string" />
+    <attr name="textFieldLabelFontSize" format="dimension" />
+    <attr name="textFieldLabelLetterSpacing" format="dimension" />
+    <attr name="textFieldLabelLineHeight" format="dimension" />
+    <attr name="textFieldContentPrimaryFontWeight" format="string" />
+    <attr name="textFieldContentFallbackFontWeight" format="string" />
+    <attr name="textFieldContentFontSize" format="dimension" />
+    <attr name="textFieldContentLetterSpacing" format="dimension" />
+    <attr name="textFieldContentLineHeight" format="dimension" />
+    <attr name="textFieldHelperTextPrimaryFontWeight" format="string" />
+    <attr name="textFieldHelperTextFallbackFontWeight" format="string" />
+    <attr name="textFieldHelperTextFontSize" format="dimension" />
+    <attr name="textFieldHelperTextLetterSpacing" format="dimension" />
+    <attr name="textFieldHelperTextLineHeight" format="dimension" />
     <attr name="heading1FontSize" format="dimension" />
     <attr name="heading1FontWeight" format="string" />
     <attr name="heading1LetterSpacing" format="dimension" />
