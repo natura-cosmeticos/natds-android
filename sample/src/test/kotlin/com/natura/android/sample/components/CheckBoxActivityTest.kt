@@ -21,8 +21,8 @@ class CheckBoxActivityTest {
     fun checkCheckBoxButtonPrimaryColorsWhenThemeIsNatura() {
         launchActivityWithNaturaTheme()
         checkBoxActivityScenario.onActivity { checkBoxActivity ->
-            val colorText = checkBoxActivity.checkboxPrimary.textColors.defaultColor
-            val colorByState = checkBoxActivity.checkboxPrimary.buttonTintList
+            val colorText = checkBoxActivity.checkboxPrimaryChecked.textColors.defaultColor
+            val colorByState = checkBoxActivity.checkboxPrimaryChecked.buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -36,8 +36,8 @@ class CheckBoxActivityTest {
     fun checkCheckBoxButtonPrimaryColorsWhenThemeIsAvon() {
         launchActivityWithAvonTheme()
         checkBoxActivityScenario.onActivity { checkBoxActivity ->
-            val colorText = checkBoxActivity.checkboxPrimary.textColors.defaultColor
-            val colorByState = checkBoxActivity.checkboxPrimary.buttonTintList
+            val colorText = checkBoxActivity.checkboxPrimaryChecked.textColors.defaultColor
+            val colorByState = checkBoxActivity.checkboxPrimaryChecked.buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -51,8 +51,8 @@ class CheckBoxActivityTest {
     fun checkCheckBoxButtonPrimaryColorsWhenThemeIsTheBodyShop() {
         launchActivityWithBodyShopTheme()
         checkBoxActivityScenario.onActivity { checkBoxActivity ->
-            val colorText = checkBoxActivity.checkboxPrimary.textColors.defaultColor
-            val colorByState = checkBoxActivity.checkboxPrimary.buttonTintList
+            val colorText = checkBoxActivity.checkboxPrimaryChecked.textColors.defaultColor
+            val colorByState = checkBoxActivity.checkboxPrimaryChecked.buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -66,8 +66,8 @@ class CheckBoxActivityTest {
     fun checkCheckBoxButtonPrimaryColorsWhenThemeIsAesop() {
         launchActivityWithAesopTheme()
         checkBoxActivityScenario.onActivity { checkBoxActivity ->
-            val colorText = checkBoxActivity.checkboxPrimary.textColors.defaultColor
-            val colorByState = checkBoxActivity.checkboxPrimary.buttonTintList
+            val colorText = checkBoxActivity.checkboxPrimaryChecked.textColors.defaultColor
+            val colorByState = checkBoxActivity.checkboxPrimaryChecked.buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)

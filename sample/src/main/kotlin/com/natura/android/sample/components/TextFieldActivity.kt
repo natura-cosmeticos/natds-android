@@ -27,35 +27,39 @@ class TextFieldActivity : AppCompatActivity() {
     private fun configurePasswordNumberButtonAction() {
         var passwordMode = true
         val password = findViewById<TextField>(R.id.password_number_item)
-        password.setOnIconClickListener(View.OnClickListener {
-            if (passwordMode) {
-                password.inputType =
-                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                password.iconButton = "outlined-action-visibility"
-            } else {
-                password.inputType =
-                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                password.iconButton = "outlined-action-visibilityoff"
+        password.setOnIconClickListener(
+            View.OnClickListener {
+                if (passwordMode) {
+                    password.inputType =
+                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    password.iconButton = "outlined-action-visibility"
+                } else {
+                    password.inputType =
+                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    password.iconButton = "outlined-action-visibilityoff"
+                }
+                passwordMode = !passwordMode
             }
-            passwordMode = !passwordMode
-        })
+        )
     }
 
     private fun configurePasswordButtonAction() {
         var passwordMode = true
         val password = findViewById<TextField>(R.id.password_item)
-        password.setOnIconClickListener(View.OnClickListener {
-            if (passwordMode) {
-                password.inputType =
-                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                password.iconButton = "outlined-action-visibility"
-            } else {
-                password.inputType =
-                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                password.iconButton = "outlined-action-visibilityoff"
+        password.setOnIconClickListener(
+            View.OnClickListener {
+                if (passwordMode) {
+                    password.inputType =
+                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    password.iconButton = "outlined-action-visibility"
+                } else {
+                    password.inputType =
+                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    password.iconButton = "outlined-action-visibilityoff"
+                }
+                passwordMode = !passwordMode
             }
-            passwordMode = !passwordMode
-        })
+        )
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

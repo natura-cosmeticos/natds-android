@@ -122,7 +122,7 @@
 
     <!-- Checkbox references -->
     <attr name="checkboxPrimary" format="reference"/>
-
+    <attr name="state_indeterminate" format="boolean"/>
 
     <!-- { @deprecated Attributes }-->
     <attr name="buttonDefaultFontSize" format="dimension" />
@@ -134,4 +134,6 @@
     <attr name="assetBrandCustomB" format="reference" />
     <attr name="assetBrandNeutralB" format="reference" />
     <attr name="assetBrandCustomA" format="reference" />
+
+
 </resources>

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:state_enabled="false" android:state_checked="true"
         android:color="?colorMediumEmphasis"
         android:alpha="?opacity06"/>
+
+    <item
+        android:state_enabled="false" app:state_indeterminate="true"
+        android:color="?colorMediumEmphasis"
+        android:alpha="?opacity06"/>
     <item
         android:state_checked="true"
+        android:color="@color/ssotab5f4078553b4e7aa97fb938a24dea8b"/>
+    <item
+        app:state_indeterminate="true"
         android:color="@color/ssotab5f4078553b4e7aa97fb938a24dea8b"/>
     <item
         android:state_selected="true"

@@ -119,7 +119,8 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            R.layout.dialog_standard_content).create()
+            R.layout.dialog_standard_content
+        ).create()
     }
 
     private fun createDialogWithCustomContentFromView(): DialogStandard {
@@ -133,7 +134,8 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            view).create()
+            view
+        ).create()
     }
 
     private fun createDialogWithCustomText(): DialogStandard {
@@ -147,7 +149,8 @@ class DialogStandardTest {
             DialogInterface.OnClickListener { _, _ -> },
             "Secondary Button",
             DialogInterface.OnClickListener { _, _ -> },
-            "Text Example").create()
+            "Text Example"
+        ).create()
     }
 
     private fun createDialogWithHeaderIcons(): DialogStandard {
