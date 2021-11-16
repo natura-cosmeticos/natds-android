@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.0.0...v.9.1.0) (2021-11-16)
+
+
+### Features
+
+* update Tag component to receive custom typography attributes ([48bd67c](https://github.com/natura-cosmeticos/natds-android/commit/48bd67c780adb638d3d8d5208f1a8c9aa9185437))
+
 ## [9.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.8.0...v.9.0.0) (2021-11-16)
 
 
