@@ -129,6 +129,8 @@
     <attr name="buttonDefaultFontWeight" formastring="string" />
     <attr name="buttonDefaultLetterSpacing" format="dimension" />
     <attr name="buttonDefaultLineHeight" format="dimension" />
+    <attr name="badgeLabelPrimaryFontFamily" format="string"/>
+    <attr name="badgeLabelFallbackFontFamily" format="string"/>
 
     <attr name="assetBrandNeutralA" format="reference" />
     <attr name="assetBrandCustomB" format="reference" />
