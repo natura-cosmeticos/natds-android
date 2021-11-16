@@ -2,7 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.4.20'
-    ext.android_tools_gradle = '7.0.3'
+    ext.android_tools_gradle = '4.1.2'
     ext.screen_shot_plugin = '0.14.0'
     ext.dokka_version_plugin = '1.5.31'
     repositories {
@@ -14,6 +14,7 @@ buildscript {
         classpath "com.android.tools.build:gradle:$android_tools_gradle"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.google.gms:google-services:4.3.10'
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version_plugin"
 
@@ -53,8 +54,8 @@ ext {
     buildToolsVersion = '29.0.2'
 
     // App dependencies
-    constraintLayout = '2.1.1'
-    junitVersion = '4.13.1'
+    constraintLayout = '1.1.3'
+    junitVersion = '4.12'
     junitExtVersion = '1.1.0'
     espressoVersion = '3.4.0'
     ktlintVersion = '0.43.0'
@@ -66,6 +67,6 @@ ext {
     materialVersion = '1.4.0'
     espressoIntentsVersion = '3.4.0'
     mockKVersion = '1.10.0'
-    coreKTXVersion = '1.6.0'
+    coreKTXVersion = '1.3.0'
     iconsVersion = '1.5.1'
 }

@@ -123,8 +123,8 @@ class Shortcut @JvmOverloads constructor(
             )
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_icon_color)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_label_appearance)
             }
     }
 
@@ -134,8 +134,8 @@ class Shortcut @JvmOverloads constructor(
             .obtainStyledAttributes(attrs, R.styleable.Shortcut, R.attr.shortcutOutlined, 0)
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorIcon)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_labelAppearance)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_icon_color)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_label_appearance)
             }
     }
 
@@ -147,12 +147,12 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun getNotify() {
-        notifyAttribute = shortcutAttributesArray.getInteger(R.styleable.Shortcut_notify, 0)
+        notifyAttribute = shortcutAttributesArray.getInteger(R.styleable.Shortcut_shct_notify, 0)
     }
 
     private fun getTypeAttribute() {
         try {
-            typeAttribute = shortcutAttributesArray.getIntOrThrow(R.styleable.Shortcut_type)
+            typeAttribute = shortcutAttributesArray.getIntOrThrow(R.styleable.Shortcut_shct_type)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut type(contained or outlined).", e))
         }
@@ -160,7 +160,7 @@ class Shortcut @JvmOverloads constructor(
 
     private fun getIconAttribute() {
         try {
-            iconAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_iconName)
+            iconAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_shct_icon_name)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).", e))
         }
@@ -168,7 +168,7 @@ class Shortcut @JvmOverloads constructor(
 
     private fun getLabelAttribute() {
         try {
-            labelAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_textLabel)
+            labelAttribute = shortcutAttributesArray.getStringOrThrow(R.styleable.Shortcut_shct_text_label)
         } catch (e: Exception) {
             throw (IllegalArgumentException("⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut label(string).", e))
         }

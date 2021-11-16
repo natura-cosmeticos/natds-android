@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:fillViewport="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".components.TextFieldActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="15dp"
-        android:animateLayoutChanges="true">
+        android:padding="15dp">
 
         <com.natura.android.expansionPanel.ExpansionPanel
             android:id="@+id/first_expansion_panel"
@@ -26,26 +25,26 @@
                 android:id="@+id/circle_example"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:background="@drawable/ds_border_circle"
                 android:orientation="vertical"
-                android:layout_gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"/>
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/text_example"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Details\n\nThis expanded area is a Constraint Layout.\nAny group of components can be used here."
-                android:layout_marginTop="0dp"
                 android:layout_marginLeft="?spacingSmall"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toRightOf="@id/circle_example"
+                android:layout_marginTop="0dp"
+                android:text="Details\n\nThis expanded area is a Constraint Layout.\nAny group of components can be used here."
                 android:textAppearance="?textAppearanceBody1"
-                android:textColor="?colorOnSurface"/>
+                android:textColor="?colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/circle_example"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 
@@ -59,15 +58,15 @@
                 android:id="@+id/listener_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Details\n\nThere's a state change listener in this sample collapsing one ExpansionPanel when the other one expands."
-                android:layout_marginTop="0dp"
                 android:layout_marginLeft="?spacingSmall"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="0dp"
+                android:text="Details\n\nThere's a state change listener in this sample collapsing one ExpansionPanel when the other one expands."
                 android:textAppearance="?textAppearanceBody1"
-                android:textColor="?colorOnSurface"/>
+                android:textColor="?colorOnSurface"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </com.natura.android.expansionPanel.ExpansionPanel>
 

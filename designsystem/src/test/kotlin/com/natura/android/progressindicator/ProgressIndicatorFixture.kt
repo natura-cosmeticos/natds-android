@@ -63,8 +63,8 @@ internal class ProgressIndicatorFixture private constructor(
     fun build(): ProgressIndicator {
         val attributes = Robolectric
             .buildAttributeSet()
-            .addAttribute(R.attr.layer, layer.toString())
-            .addAttribute(R.attr.size, size.toString())
+            .addAttribute(R.attr.pgid_layer, layer.toString())
+            .addAttribute(R.attr.pgid_size, size.toString())
             .build()
 
         return ProgressIndicator(context, attributes)
