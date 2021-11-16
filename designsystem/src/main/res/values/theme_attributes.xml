@@ -219,6 +219,11 @@
     <attr name="sizeHugeXX" format="dimension" />
     <attr name="sizeHugeXXX" format="dimension" />
     <attr name="sizeVeryHuge" format="dimension" />
+    <attr name="tagLabelFontSize" format="dimension" />
+    <attr name="tagLabelLetterSpacing" format="dimension" />
+    <attr name="tagLabelLineHeight" format="dimension" />
+    <attr name="tagLabelPrimaryFontWeight" format="string" />
+    <attr name="tagLabelFallbackFontWeight" format="string" />
     <attr name="typographyFontFamilyPrimary" format="string" />
     <attr name="typographyFontFamilySecondary" format="string" />
     <attr name="typographyFontFamilyBranding" format="string" />
