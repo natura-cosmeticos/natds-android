@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:colorBackground"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="?android:colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
+        android:orientation="vertical"
         android:padding="@dimen/ds_spacing_large"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical">
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <RadioButton
                 android:id="@+id/radioPrimary"
-                android:text="Radio Primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="Radio Primary" />
 
             <RadioButton
                 android:id="@+id/radioSecondary"
                 style="?radioButtonStyleSecondary"
-                android:text="Radio Secondary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:text="Radio Secondary" />
 
             <RadioButton
-                android:text="Radio Primary Disabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:enabled="false"
-                android:layout_marginBottom="10dp"/>
+                android:text="Radio Primary Disabled" />
 
             <RadioButton
-                android:text="Radio Primary Disabled Checked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:enabled="false"
+                android:layout_marginBottom="10dp"
                 android:checked="true"
-                android:layout_marginBottom="10dp"/>
+                android:enabled="false"
+                android:text="Radio Primary Disabled Checked" />
 
             <RadioButton
                 style="?radioButtonStyleSecondary"
-                android:text="Radio Secondary Disable Checked"
-                android:enabled="false"
-                android:checked="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:enabled="false"
+                android:text="Radio Secondary Disable Checked" />
         </RadioGroup>
 
     </LinearLayout>
