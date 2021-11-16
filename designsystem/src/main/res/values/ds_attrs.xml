@@ -34,7 +34,6 @@
             <enum name="right" value="2" />
         </attr>
         <attr name="colorBackground" />
-        <attr name="labelAppearance" format="reference" />
         <attr name="textLabel" format="string" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
