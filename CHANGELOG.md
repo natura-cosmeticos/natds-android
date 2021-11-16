@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.8.0...v.9.0.0) (2021-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* refactor shortcut and progress indicator attributes
+
+### Bug Fixes
+
+* adds prefixes in shorctut and progress indicator attributes to avoid conflicts with other libs ([b8681d3](https://github.com/natura-cosmeticos/natds-android/commit/b8681d334a4015d0e2323a4ac2881fbd178ffc2c))
+
 ## [8.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.7.0...v.8.8.0) (2021-11-08)
 
 
