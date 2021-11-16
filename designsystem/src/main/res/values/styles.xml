@@ -536,11 +536,16 @@
     </style>
 
     <style name="Widget.DS.Tag">
-        <item name="labelAppearance">?textAppearanceCaption</item>
+    </style>
+
+    <style name="TextAppearance.DS.Tag" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">?tagLabelFontSize</item>
+        <item name="android:fontFamily">?tagLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?tagLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?tagLabelLineHeight</item>
     </style>
 
     <!-- CARD STYLE -->
-
     <style name="Widget.DS.Card">
         <item name="colorBackground">?colorSurface</item>
         <item name="customElevation">?elevation01</item>
