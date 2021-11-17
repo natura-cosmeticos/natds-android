@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.2.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.1.0...v.9.2.0) (2021-11-17)
+
+
+### Features
+
+* refactor themes files adding dialog attributes to ssot classes ([5ea5934](https://github.com/natura-cosmeticos/natds-android/commit/5ea59340615ac7ece42a3386d0cec04fea87b9b5))
+* restructures theme files to allow automatic update from natds-commons ([5d0c5c4](https://github.com/natura-cosmeticos/natds-android/commit/5d0c5c48e0dea454dae3ea4e648769c83d8e65a0))
+
 ## [9.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.0.0...v.9.1.0) (2021-11-16)
 
 
