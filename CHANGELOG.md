@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.3.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.2.0...v.9.3.0) (2021-11-18)
+
+
+### Features
+
+* adds RadioButton Component from its style and applies typography ([1d3dc6c](https://github.com/natura-cosmeticos/natds-android/commit/1d3dc6c27dc364d1ebf953c16e706eeea9f637a9))
+
 ## [9.2.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.1.0...v.9.2.0) (2021-11-17)
 
 
