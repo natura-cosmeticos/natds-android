@@ -216,27 +216,6 @@
         <item name="titleTextColor">?colorOnSecondary</item>
     </style>
 
-    <!-- SELECTION CONTROL STYLES -->
-    <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/selectors_secondary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/selectors_secondary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
     <!-- BUTTON STYLES -->
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>
@@ -598,6 +577,11 @@
 
     <!-- CHECKBOX COMPONENT STYLE -->
 
+    <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+    </style>
+
     <style name="Widget.DS.CheckBox.Primary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
@@ -605,11 +589,36 @@
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
 
+    <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+    </style>
+
     <style name="Theme.DS.CheckBox.LabelAppearance" parent="">
         <item name="fontFamily">?checkboxLabelPrimaryFontWeight</item>
         <item name="android:textSize">?checkboxLabelFontSize</item>
         <item name="android:letterSpacing">?checkboxLabelLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?checkboxLabelLineHeight</item>
+    </style>
+
+    <!-- RADIO BUTTON STYLES -->
+    <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Theme.DS.RadioButton.LabelAppearance" parent="">
+        <item name="fontFamily">?radioButtonLabelPrimaryFontWeight</item>
+        <item name="android:textSize">?radioButtonLabelFontSize</item>
+        <item name="android:letterSpacing">?radioButtonLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?radioButtonLabelLineHeight</item>
     </style>
 
     <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">

@@ -51,21 +51,25 @@
     <style name="Widget.DS.RadioButton.Aesop.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_aesop_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Aesop.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_aesop_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Aesop.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_aesop_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Aesop.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_aesop_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Aesop.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -183,4 +187,6 @@
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
+
+
 </resources>
