@@ -3,7 +3,6 @@
     <style name="Theme.DS.Dialog.Standard.Natura.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Light</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
@@ -28,7 +27,6 @@
     <style name="Theme.DS.Dialog.Standard.Natura.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Dark</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
@@ -53,21 +51,25 @@
     <style name="Widget.DS.RadioButton.Natura.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_natura_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_natura_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_natura_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_natura_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">

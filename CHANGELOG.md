@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.3.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.2.0...v.9.3.0) (2021-11-18)
+
+
+### Features
+
+* adds RadioButton Component from its style and applies typography ([1d3dc6c](https://github.com/natura-cosmeticos/natds-android/commit/1d3dc6c27dc364d1ebf953c16e706eeea9f637a9))
+
+## [9.2.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.1.0...v.9.2.0) (2021-11-17)
+
+
+### Features
+
+* refactor themes files adding dialog attributes to ssot classes ([5ea5934](https://github.com/natura-cosmeticos/natds-android/commit/5ea59340615ac7ece42a3386d0cec04fea87b9b5))
+* restructures theme files to allow automatic update from natds-commons ([5d0c5c4](https://github.com/natura-cosmeticos/natds-android/commit/5d0c5c48e0dea454dae3ea4e648769c83d8e65a0))
+
+## [9.1.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.0.0...v.9.1.0) (2021-11-16)
+
+
+### Features
+
+* update Tag component to receive custom typography attributes ([48bd67c](https://github.com/natura-cosmeticos/natds-android/commit/48bd67c780adb638d3d8d5208f1a8c9aa9185437))
+
+## [9.0.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.8.0...v.9.0.0) (2021-11-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* refactor shortcut and progress indicator attributes
+
+### Bug Fixes
+
+* adds prefixes in shorctut and progress indicator attributes to avoid conflicts with other libs ([b8681d3](https://github.com/natura-cosmeticos/natds-android/commit/b8681d334a4015d0e2323a4ac2881fbd178ffc2c))
+
 ## [8.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.8.7.0...v.8.8.0) (2021-11-08)
 
 

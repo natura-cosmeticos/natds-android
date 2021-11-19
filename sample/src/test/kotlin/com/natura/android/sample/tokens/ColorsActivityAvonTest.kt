@@ -56,7 +56,7 @@ class ColorsActivityAvonTest {
             val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
 
             assertEquals(Color.parseColor("#4B0092"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 

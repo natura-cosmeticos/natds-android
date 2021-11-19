@@ -1,5 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -21,12 +20,12 @@
                 android:id="@+id/iconButtonColorDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
-                app:buttonColor="defaultColor"
                 android:layout_marginTop="?spacingSmall"
+                app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -36,20 +35,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color hight emphasis (default)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/iconButtonColorDefault"
-                android:text="Color hight emphasis (default)" />
+                app:layout_constraintTop_toTopOf="@+id/iconButtonColorDefault" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonColorDefaultDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:enabled="false"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefaultDisabled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iconButtonColorDefault"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorDefaultDisabled"
-                app:buttonColor="defaultColor"
-                android:enabled="false"
-                app:iconName="outlined_default_mockup"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -59,19 +58,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color hight emphasis (disabled)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonColorDefaultDisabled"
-                android:text="Color hight emphasis (disabled)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorDefaultDisabled" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonColorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonColorDefaultDisabled"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimary"
                 app:buttonColor="primaryColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorDefaultDisabled"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -81,20 +80,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color primary"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimary"
-                android:text="Color primary" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimary" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonColorPrimaryDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimary"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
                 android:enabled="false"
                 app:buttonColor="primaryColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimary"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -104,19 +103,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color primary (disabled)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimaryDisabled"
-                android:text="Color primary (disabled)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimaryDisabled" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonColorLight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimaryDisabled"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimaryDisabled"
                 app:buttonColor="lightColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorPrimaryDisabled"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorPrimaryDisabled"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -126,20 +125,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color light"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonColorLight"
-                android:text="Color light" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorLight" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonColorLightDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLight"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorLight"
                 android:enabled="false"
                 app:buttonColor="lightColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorLight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLight"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -149,19 +148,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Color light (disabled)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonColorLightDisabled"
-                android:text="Color light (disabled)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonColorLightDisabled" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonStyleInherit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLightDisabled"
-                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonColorLightDisabled"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -171,19 +170,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Inherit background (default)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonStyleInherit"
-                android:text="Inherit background (default)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleInherit" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonStyleFloating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleInherit"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloating"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloating"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleInherit"
                 app:sizeButton="semi"
                 app:styleButton="floating" />
 
@@ -193,20 +192,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Float background"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloating"
-                android:text="Float background" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloating" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonStyleFloatingDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:enabled="false"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloatingDisabled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iconButtonStyleFloating"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleFloatingDisabled"
-                app:buttonColor="defaultColor"
-                android:enabled="false"
-                app:iconName="outlined_default_mockup"
                 app:sizeButton="semi"
                 app:styleButton="floating" />
 
@@ -216,19 +215,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Float background (disabled)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloatingDisabled"
-                android:text="Float background (disabled)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloatingDisabled" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonStyleOverlay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleFloatingDisabled"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlay"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlay"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleFloatingDisabled"
                 app:sizeButton="semi"
                 app:styleButton="overlay" />
 
@@ -238,20 +237,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Overlay background"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlay"
-                android:text="Overlay background" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlay" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonStyleOverlayDisabled"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:enabled="false"
+                app:buttonColor="defaultColor"
+                app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlayDisabled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iconButtonStyleOverlay"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonStyleOverlayDisabled"
-                app:buttonColor="defaultColor"
-                android:enabled="false"
-                app:iconName="outlined_default_mockup"
                 app:sizeButton="semi"
                 app:styleButton="overlay" />
 
@@ -261,19 +260,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Overlay background (disabled)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlayDisabled"
-                android:text="Overlay background (disabled)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlayDisabled" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonSizeSemi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleOverlayDisabled"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemi"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonStyleOverlayDisabled"
                 app:sizeButton="semi"
                 app:styleButton="inherit" />
 
@@ -283,19 +282,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Size semi (default)"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemi"
-                android:text="Size semi (default)" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemi" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonSizeSemix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemi"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemix"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeSemix"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemi"
                 app:sizeButton="semix"
                 app:styleButton="inherit" />
 
@@ -305,19 +304,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Size semiX"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemix"
-                android:text="Size semiX" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemix" />
 
             <com.natura.android.iconButton.IconButton
                 android:id="@+id/iconButtonSizeMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemix"
-                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeMedium"
                 app:buttonColor="defaultColor"
                 app:iconName="outlined_default_mockup"
+                app:layout_constraintEnd_toStartOf="@id/textViewButtonSizeMedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iconButtonSizeSemix"
                 app:sizeButton="medium"
                 app:styleButton="inherit" />
 
@@ -327,9 +326,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
+                android:text="Size Medium"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/iconButtonSizeMedium"
-                android:text="Size Medium" />
+                app:layout_constraintTop_toTopOf="@id/iconButtonSizeMedium" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

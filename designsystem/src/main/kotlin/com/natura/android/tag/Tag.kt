@@ -13,7 +13,6 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
-import com.natura.android.extensions.setAppearance
 import kotlinx.android.synthetic.main.ds_tag.view.*
 
 class Tag @JvmOverloads constructor(
@@ -28,7 +27,6 @@ class Tag @JvmOverloads constructor(
     private var positionAttribute: Int = 0
     private var sizeResourceAttribute = 0
     private var backgroundColorResourceAttribute = 0
-    private var labelTextAppearanceResourceAttribute = 0
     private var labelTextColorResourceAttribute = 0
     private var tagAttributesArray: TypedArray
 
@@ -55,7 +53,6 @@ class Tag @JvmOverloads constructor(
 
     fun setLabel(text: String?) {
         labelContainer.text = text
-        labelContainer.setAppearance(labelTextAppearanceResourceAttribute)
         setTextColor()
         invalidate()
         requestLayout()
@@ -141,7 +138,6 @@ class Tag @JvmOverloads constructor(
             )
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_labelAppearance)
                 labelTextColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
             }
     }

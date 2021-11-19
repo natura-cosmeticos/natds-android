@@ -76,10 +76,6 @@
     <attr name="toolbarHeight" format="dimension"/>
     <attr name="toolbarDefaultTheme" format="reference"/>
 
-    <!-- Selection control Style references -->
-    <attr name="checkboxStyleSecondary" format="reference"/>
-    <attr name="radioButtonStyleSecondary" format="reference"/>
-
     <!-- Logo references -->
     <attr name="logoVertical" format="reference"/>
     <attr name="logoHorizontal" format="reference"/>
@@ -122,5 +118,25 @@
 
     <!-- Checkbox references -->
     <attr name="checkboxPrimary" format="reference"/>
+    <attr name="checkboxStyleSecondary" format="reference"/>
     <attr name="state_indeterminate" format="boolean"/>
+
+    <!-- Radio Button references -->
+    <attr name="radioButtonStyle" format="reference"/>
+    <attr name="radioButtonStyleSecondary" format="reference"/>
+
+    <!-- { @deprecated Attributes }-->
+    <attr name="buttonDefaultFontSize" format="dimension" />
+    <attr name="buttonDefaultFontWeight" formastring="string" />
+    <attr name="buttonDefaultLetterSpacing" format="dimension" />
+    <attr name="buttonDefaultLineHeight" format="dimension" />
+    <attr name="badgeLabelPrimaryFontFamily" format="string"/>
+    <attr name="badgeLabelFallbackFontFamily" format="string"/>
+
+    <attr name="assetBrandNeutralA" format="reference" />
+    <attr name="assetBrandCustomB" format="reference" />
+    <attr name="assetBrandNeutralB" format="reference" />
+    <attr name="assetBrandCustomA" format="reference" />
+
+
 </resources>
