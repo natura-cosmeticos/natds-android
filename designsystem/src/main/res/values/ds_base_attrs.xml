@@ -137,6 +137,4 @@
     <attr name="assetBrandCustomB" format="reference" />
     <attr name="assetBrandNeutralB" format="reference" />
     <attr name="assetBrandCustomA" format="reference" />
-
-
 </resources>
