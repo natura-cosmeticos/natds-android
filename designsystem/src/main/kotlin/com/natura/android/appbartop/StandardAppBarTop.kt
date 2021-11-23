@@ -5,6 +5,7 @@ import android.animation.StateListAnimator
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.os.Build
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.DisplayMetrics
@@ -337,10 +338,13 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-        textView.setTextSize(
-            TypedValue.COMPLEX_UNIT_PX,
-            context.resources.getDimension(R.dimen.ds_size_h6)
-        )
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            textView.setTextAppearance(R.style.TextAppearance_DS_AppBarTop)
+        } else {
+            textView.setTextAppearance(context, R.style.TextAppearance_DS_AppBarTop)
+        }
+
         textView.layoutParams =
             LayoutParams(
                 WRAP_CONTENT,
@@ -386,7 +390,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
             val metrics = DisplayMetrics()
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 context.display?.getRealMetrics(metrics)
             } else {
                 windowManager.defaultDisplay.getMetrics(metrics)
