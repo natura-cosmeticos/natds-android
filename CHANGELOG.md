@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.5.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.4.0...v.9.5.0) (2021-11-23)
+
+
+### Features
+
+* adds style to the custom typography of the AppBarTop component ([c46d239](https://github.com/natura-cosmeticos/natds-android/commit/c46d2399f0fa061d09eb97c37c577a6f8cb3fa72))
+
 ## [9.4.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.3.0...v.9.4.0) (2021-11-19)
 
 
