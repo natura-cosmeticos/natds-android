@@ -197,6 +197,14 @@
         <item name="collapseIcon">@drawable/default_icon_outlined_navigation_directionright</item>
     </style>
 
+    <style name="TextAppearance.DS.AppBarTop" parent="">
+        <item name="android:textSize">?appBarTopTitleFontSize</item>
+        <item name="android:fontFamily">?appBarTopTitlePrimaryFontWeight</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:letterSpacing">?appBarTopTitleLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?appBarTopTitleLineHeight</item>
+    </style>
+
     <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="colorOnPrimary">?colorOnSurface</item>
         <item name="colorControlNormal">?colorOnSurface</item>
