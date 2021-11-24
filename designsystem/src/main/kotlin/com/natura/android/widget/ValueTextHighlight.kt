@@ -7,6 +7,9 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 
+/** @deprecated */
+
+@Deprecated(message = "This component is deprecated and does not receive new updates and maintenance.", level = DeprecationLevel.WARNING)
 class ValueTextHighlight @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
