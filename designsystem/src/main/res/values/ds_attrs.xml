@@ -50,7 +50,6 @@
         <attr name="shct_text_label" format="string" />
         <attr name="shct_icon_name" format="string" />
         <attr name="shct_notify" format="integer" />
-
     </declare-styleable>
 
     <declare-styleable name="BaseAppBarTop">

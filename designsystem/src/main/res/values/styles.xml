@@ -197,6 +197,14 @@
         <item name="collapseIcon">@drawable/default_icon_outlined_navigation_directionright</item>
     </style>
 
+    <style name="TextAppearance.DS.AppBarTop" parent="">
+        <item name="android:textSize">?appBarTopTitleFontSize</item>
+        <item name="android:fontFamily">?appBarTopTitlePrimaryFontWeight</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:letterSpacing">?appBarTopTitleLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?appBarTopTitleLineHeight</item>
+    </style>
+
     <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="colorOnPrimary">?colorOnSurface</item>
         <item name="colorControlNormal">?colorOnSurface</item>
@@ -471,7 +479,15 @@
     </style>
 
     <style name="Widget.DS.Shortcut">
-        <item name="shct_label_appearance">?textAppearanceCaption</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut" parent="">
+        <item name="android:textSize">?shortcutLabelFontSize</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:fontFamily">?shortcutLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?shortcutLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?shortcutLabelLineHeight</item>
     </style>
 
     <!-- TAG STYLES -->
