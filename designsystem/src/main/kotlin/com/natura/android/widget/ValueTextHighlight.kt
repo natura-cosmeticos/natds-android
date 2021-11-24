@@ -9,7 +9,7 @@ import com.natura.android.R
 
 /** @deprecated */
 
-@Deprecated(message = "This component is deprecated and does not receive new updates and maintenance.", level = DeprecationLevel.WARNING)
+@Deprecated(message = "This component is deprecated and will not receive new updates and maintenance from 9.6.0 version.", level = DeprecationLevel.WARNING)
 class ValueTextHighlight @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
