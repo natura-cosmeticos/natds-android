@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.6.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.5.0...v.9.6.0) (2021-11-24)
+
+
+### Features
+
+* deprecates ValueTextHighLight component ([1868b63](https://github.com/natura-cosmeticos/natds-android/commit/1868b637f70b2d632cce5d557c02b4e65c764e12))
+
+
+### Bug Fixes
+
+* refactor deprecation message of ValueTextHighLight component ([7d1fd92](https://github.com/natura-cosmeticos/natds-android/commit/7d1fd927cc94769f49531f5230b5b8fc93b41c99))
+
 ## [9.5.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.4.0...v.9.5.0) (2021-11-23)
 
 
