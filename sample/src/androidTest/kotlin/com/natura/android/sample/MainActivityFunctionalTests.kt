@@ -10,6 +10,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.CoreMatchers.allOf
 import org.hamcrest.CoreMatchers.containsString
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
@@ -169,7 +170,7 @@ class MainActivityFunctionalTests {
         onView(withText("Text Field")).check(matches(isDisplayed()))
     }
 
-    @Test
+    @Test @Ignore
     fun shouldOpenValueTextHighlightScreenWhenTapOnItButton() {
         onView(withId(R.id.btnValueTextHighlight)).perform(scrollTo())
         onView(withId(R.id.btnValueTextHighlight)).perform(click())

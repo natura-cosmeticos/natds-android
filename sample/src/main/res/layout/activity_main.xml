@@ -352,7 +352,8 @@
             android:padding="16dp"
             android:text="Value Text Highlight"
             android:textAlignment="textStart"
-            android:textColor="@color/highEmphasis" />
+            android:textColor="@color/highEmphasis"
+            android:visibility="gone" />
 
         <TextView
             android:layout_width="match_parent"
