@@ -178,18 +178,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 positionActionRight()
             }
         }
-
-        if (childCount > MIN_COUNT_ELEMENTS) {
-            positionActionCenter()
-        }
     }
 
-    private fun positionActionCenter() {
-        val child = getChildAt(1)
-        this.removeView(child)
-
+    private fun addContentView(view: View) {
         if (proeminentContent) {
-            actionLeftContainer.addView(child)
+            actionLeftContainer.addView(view)
             actionLeftContainer.layoutParams = LinearLayout.LayoutParams(
                 LayoutParams.WRAP_CONTENT,
                 LayoutParams.WRAP_CONTENT,
@@ -198,9 +191,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             actionLeftContainer.orientation = LinearLayout.VERTICAL
             actionCenterContainer.setVisibilityFromBoolean(false)
         } else {
-
-            actionCenterContainer.gravity = getContentAlign(context)
-            actionCenterContainer.addView(child)
+            actionCenterContainer.gravity = Gravity.CENTER
+            actionCenterContainer.addView(view)
         }
     }
 
@@ -331,7 +323,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 mediaWidth,
                 mediaHeight
             )
-        addView(imageView)
+        addContentView(imageView)
     }
 
     private fun addTextView(context: Context, text: String) {
@@ -354,7 +346,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
 
-        addView(textView)
+        addContentView(textView)
     }
 
     private fun addTextField(context: Context) {
@@ -365,7 +357,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 MATCH_PARENT,
                 WRAP_CONTENT
             )
-        addView(textField)
+        addContentView(textField)
     }
 
     private fun getContentAlign(context: Context): Int {
@@ -417,9 +409,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
         private const val MAX_COUNT_ELEMENTS = 5
-        private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 3
-        private const val ACTION_LEFT_ELEMENT_INDEX = 2
-        private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
+        private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 2
+        private const val ACTION_LEFT_ELEMENT_INDEX = 1
+        private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 1
         private const val MIN_COUNT_ELEMENTS = 1
 
         private const val NOT_RESOURCE_FOUND_CODE = 0
