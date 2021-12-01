@@ -191,6 +191,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             actionLeftContainer.orientation = LinearLayout.VERTICAL
             actionCenterContainer.setVisibilityFromBoolean(false)
         } else {
+            actionCenterContainer.removeAllViews()
             actionCenterContainer.gravity = Gravity.CENTER
             actionCenterContainer.addView(view)
         }
