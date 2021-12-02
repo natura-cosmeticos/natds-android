@@ -8,8 +8,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.iconButton.IconButton
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
-import kotlinx.android.synthetic.main.appbartop_button_action.view.*
 import kotlinx.android.synthetic.main.appbartop_threeactions.view.appBar
+import kotlinx.android.synthetic.main.appbartop_title_center.view.appBarTitleCenter
 
 class AppBarTopActivity : AppCompatActivity() {
 
@@ -53,6 +53,8 @@ class AppBarTopActivity : AppCompatActivity() {
         setContentView(R.layout.activity_appbar_top)
 
         setSupportActionBar(appBarTopWithThreeActions.appBar.toolbar)
+
+        appBarTopWithTitleCenter.appBarTitleCenter.setText("Title Center")
 
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
