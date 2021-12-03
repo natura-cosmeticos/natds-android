@@ -5,7 +5,7 @@ if \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -E '\!$' ; } || \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^BREAKING CHANGE:' ; }
 then
-    sudo npx standard-version
+    npm_config_yes=true npx standard-version
     NATDS_VERSION=$(cat ./version.txt)
     envman add --key NATDS_VERSION --value "$NATDS_VERSION"
     git clean -f -d
