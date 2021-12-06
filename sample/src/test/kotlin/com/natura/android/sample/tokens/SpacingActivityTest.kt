@@ -4,7 +4,6 @@ import android.view.ViewGroup
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.tokens.SpacingActivity
-import kotlinx.android.synthetic.main.activity_spacing.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

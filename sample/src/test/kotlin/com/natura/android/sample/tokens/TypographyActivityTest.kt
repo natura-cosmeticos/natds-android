@@ -3,7 +3,6 @@ package com.natura.android.sample.tokens
 import android.graphics.Color
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import kotlinx.android.synthetic.main.activity_typography.*
 import org.junit.Before
 
 import org.junit.Assert.*

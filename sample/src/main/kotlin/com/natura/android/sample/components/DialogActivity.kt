@@ -9,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.dialog.DialogAlert
 import com.natura.android.dialog.DialogStandard
 import com.natura.android.sample.R
+import com.natura.android.sample.databinding.ActivityDialogBinding
 import com.natura.android.sample.setChosenDefaultTheme
-import kotlinx.android.synthetic.main.activity_dialog.*
 
 class DialogActivity : AppCompatActivity() {
     lateinit var standardDialog: DialogStandard
@@ -22,12 +22,15 @@ class DialogActivity : AppCompatActivity() {
     lateinit var dialogNoDismissable: DialogStandard
 
     lateinit var alertDialog: DialogAlert
+    private lateinit var binding: ActivityDialogBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dialog)
+
+        binding = ActivityDialogBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         supportActionBar?.title = "Dialog"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -41,35 +44,35 @@ class DialogActivity : AppCompatActivity() {
         createStandardDialogWithDivider()
         createNoDismissableStandardDialog()
 
-        standardDialogButton.setOnClickListener {
+        binding.standardDialogButton.setOnClickListener {
             standardDialog.show()
         }
 
-        alertDialogButton.setOnClickListener {
+        binding.alertDialogButton.setOnClickListener {
             alertDialog.show()
         }
 
-        standardDialogVerticalButtonsButton.setOnClickListener {
+        binding.standardDialogVerticalButtonsButton.setOnClickListener {
             standardDialogVerticalButtons.show()
         }
 
-        standardDialogMaxHeightButton.setOnClickListener {
+        binding.standardDialogMaxHeightButton.setOnClickListener {
             standardDialogMaxHeight.show()
         }
 
-        standardDialogCustomViewButton.setOnClickListener {
+        binding.standardDialogCustomViewButton.setOnClickListener {
             standardDialogCustomView.show()
         }
 
-        standardDialogWithDividerButton.setOnClickListener {
+        binding.standardDialogWithDividerButton.setOnClickListener {
             standardDialogWithDivider.show()
         }
 
-        standardDialogHeaderIconButtonsButton.setOnClickListener {
+        binding.standardDialogHeaderIconButtonsButton.setOnClickListener {
             standardDialogHeaderIconButtons.show()
         }
 
-        dialogNoDismissableButton.setOnClickListener {
+        binding.dialogNoDismissableButton.setOnClickListener {
             dialogNoDismissable.show()
         }
     }

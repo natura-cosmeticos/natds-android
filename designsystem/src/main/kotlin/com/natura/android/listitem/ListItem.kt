@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.RelativeLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
-import kotlinx.android.synthetic.main.list_item_dividers.view.*
 
 class ListItem @JvmOverloads constructor(
     context: Context,
@@ -110,12 +109,12 @@ class ListItem @JvmOverloads constructor(
 
     private fun showDivider() {
         View.inflate(context, R.layout.list_item_dividers, this)
-
-        when (dividerAttribute) {
-            Divider.INSET.value -> dividerInset.visibility = View.VISIBLE
-            Divider.MIDDLE.value -> dividerMiddle.visibility = View.VISIBLE
-            Divider.FULLBLEED.value -> dividerFullBleed.visibility = View.VISIBLE
-        }
+//
+//        when (dividerAttribute) {
+//            Divider.INSET.value -> dividerInset.visibility = View.VISIBLE
+//            Divider.MIDDLE.value -> dividerMiddle.visibility = View.VISIBLE
+//            Divider.FULLBLEED.value -> dividerFullBleed.visibility = View.VISIBLE
+//        }
     }
 
     private fun configureAppearance() {

@@ -7,8 +7,6 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.R
 import com.natura.android.sample.data.ThemeRepository
-import kotlinx.android.synthetic.main.activity_brand_selector.view.*
-import kotlinx.android.synthetic.main.activity_logo.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

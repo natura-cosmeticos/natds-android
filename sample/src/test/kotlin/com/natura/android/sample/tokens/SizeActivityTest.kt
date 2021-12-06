@@ -2,7 +2,6 @@ package com.natura.android.sample.tokens
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import kotlinx.android.synthetic.main.activity_size.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

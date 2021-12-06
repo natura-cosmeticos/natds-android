@@ -14,7 +14,6 @@ import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.verify
-import kotlinx.android.synthetic.main.activity_brand_selector.*
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

@@ -3,7 +3,8 @@ package com.natura.android.sample.components
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.activity_shortcut.*
+import com.natura.android.sample.R
+import com.natura.android.shortcut.Shortcut
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,7 +22,7 @@ class ShortcutActivityFunctionalTest {
     @Test
     fun checksEllipsisAtShortcutContainedLabel() {
         scenario.onActivity {
-            val shortcut = it.shortcutContained1
+            val shortcut = it.findViewById<Shortcut>(R.id.firstShortcutContained)
             val ellipsis = shortcut.labelContainer.layout.getEllipsisCount(0)
 
             Truth.assertThat(ellipsis > 0).isTrue()
@@ -31,7 +32,7 @@ class ShortcutActivityFunctionalTest {
     @Test
     fun checksEllipsisAtShortcutOutlinedLabel() {
         scenario.onActivity {
-            val shortcut = it.shortcutOutlined1
+            val shortcut = it.findViewById<Shortcut>(R.id.firstShorcutOutlined)
             val ellipsis = shortcut.labelContainer.layout.getEllipsisCount(0)
 
             Truth.assertThat(ellipsis > 0).isTrue()

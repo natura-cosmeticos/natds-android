@@ -7,7 +7,6 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
-import kotlinx.android.synthetic.main.dialog_standard_content.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

@@ -3,19 +3,21 @@ package com.natura.android.sample.components
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.natura.android.sample.R
+import com.natura.android.sample.databinding.ActivityShortcutBinding
 import com.natura.android.sample.setChosenDefaultTheme
 import com.natura.android.shortcut.Shortcut
-import kotlinx.android.synthetic.main.activity_shortcut.*
 
 class ShortcutActivity : AppCompatActivity() {
     private var count = 0
+    private lateinit var binding: ActivityShortcutBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_shortcut)
+        binding = ActivityShortcutBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         supportActionBar?.title = "Shortcut"
         supportActionBar?.setHomeButtonEnabled(true)
@@ -28,9 +30,9 @@ class ShortcutActivity : AppCompatActivity() {
     }
 
     private fun setClickListener() {
-        for (i in 0 until shortcutContainer.childCount) {
-            if (shortcutContainer.getChildAt(i) is Shortcut) {
-                shortcutContainer.getChildAt(i).setOnClickListener {
+        for (i in 0 until binding.shortcutContainer.childCount) {
+            if (binding.shortcutContainer.getChildAt(i) is Shortcut) {
+                binding.shortcutContainer.getChildAt(i).setOnClickListener {
                     increaseCount()
                 }
             }
@@ -39,6 +41,6 @@ class ShortcutActivity : AppCompatActivity() {
 
     private fun increaseCount() {
         count += 1
-        counter.text = "Counter click $count"
+        binding.counter.text = "Counter click $count"
     }
 }

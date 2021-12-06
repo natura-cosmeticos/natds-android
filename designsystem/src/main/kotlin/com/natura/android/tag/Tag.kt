@@ -4,16 +4,15 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.View
-import android.widget.TextView
+import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
+import com.natura.android.databinding.TagBinding
 import com.natura.android.exceptions.MissingThemeException
-import kotlinx.android.synthetic.main.ds_tag.view.*
 
 class Tag @JvmOverloads constructor(
     context: Context,
@@ -30,12 +29,11 @@ class Tag @JvmOverloads constructor(
     private var labelTextColorResourceAttribute = 0
     private var tagAttributesArray: TypedArray
 
-    private val labelContainer by lazy { findViewById<TextView>(R.id.tagLabel) }
-    private val backgroundContainer by lazy { findViewById<View>(R.id.tagBackground) }
+    private var binding: TagBinding
 
     init {
         try {
-            View.inflate(context, R.layout.ds_tag, this)
+            binding = TagBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
@@ -52,14 +50,14 @@ class Tag @JvmOverloads constructor(
     }
 
     fun setLabel(text: String?) {
-        labelContainer.text = text
+        binding.tgLabel.text = text
         setTextColor()
         invalidate()
         requestLayout()
     }
 
     fun getLabel(): CharSequence? {
-        return labelContainer.text
+        return binding.tgLabel.text
     }
 
     fun getType(): Int = typeAttribute
@@ -77,28 +75,41 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun configureTagBySize() {
-        var params = tagBackground.layoutParams
+        var params = binding.tgBackground.layoutParams
         params.height = resources.getDimension(sizeResourceAttribute).toInt()
-        tagBackground.layoutParams = params
+        binding.tgBackground.layoutParams = params
     }
 
     private fun setTextColor() {
-        labelContainer.setTextColor(ContextCompat.getColor(context, labelTextColorResourceAttribute))
+        binding.tgLabel.setTextColor(
+            ContextCompat.getColor(
+                context,
+                labelTextColorResourceAttribute
+            )
+        )
     }
 
     private fun setBackground() {
-        val background: GradientDrawable = resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
+        val background: GradientDrawable =
+            resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
 
         val cornerRadius: Float = 50F
         when (positionAttribute) {
             Position.CENTER.value -> background.cornerRadius = cornerRadius
-            Position.RIGHT.value -> background.cornerRadii = floatArrayOf(cornerRadius, cornerRadius, 0F, 0F, 0F, 0F, cornerRadius, cornerRadius)
-            Position.LEFT.value -> background.cornerRadii = floatArrayOf(0F, 0F, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0F, 0F)
+            Position.RIGHT.value ->
+                background.cornerRadii =
+                    floatArrayOf(cornerRadius, cornerRadius, 0F, 0F, 0F, 0F, cornerRadius, cornerRadius)
+            Position.LEFT.value ->
+                background.cornerRadii =
+                    floatArrayOf(0F, 0F, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0F, 0F)
         }
 
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
-        backgroundContainer.background = background
+        DrawableCompat.setTint(
+            backgroundWrap,
+            ContextCompat.getColor(context, backgroundColorResourceAttribute)
+        )
+        binding.tgBackground.background = background
     }
 
     private fun getAttributesFromTheme() {
@@ -137,8 +148,10 @@ class Tag @JvmOverloads constructor(
                 0
             )
             .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
-                labelTextColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
+                backgroundColorResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
+                labelTextColorResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
             }
     }
 
@@ -171,7 +184,12 @@ class Tag @JvmOverloads constructor(
         try {
             labelAttribute = tagAttributesArray.getStringOrThrow(R.styleable.Tag_textLabel)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing tag required argument. You MUST set the tag label(string).", e))
+            throw (
+                IllegalArgumentException(
+                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label(string).",
+                    e
+                )
+                )
         }
     }
 
@@ -180,7 +198,8 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun getPositionAttribute() {
-        positionAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_position, Position.CENTER.value)
+        positionAttribute =
+            tagAttributesArray.getInt(R.styleable.Tag_tag_position, Position.CENTER.value)
     }
 
     companion object {

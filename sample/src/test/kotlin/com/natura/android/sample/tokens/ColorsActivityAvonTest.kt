@@ -8,10 +8,6 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.data.ThemeRepository
-import kotlinx.android.synthetic.main.background_surface_colors.*
-import kotlinx.android.synthetic.main.content_colors.*
-import kotlinx.android.synthetic.main.feedback_colors.*
-import kotlinx.android.synthetic.main.primary_secondary_colors.*
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith

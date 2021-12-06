@@ -10,15 +10,15 @@ import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
-import kotlinx.android.synthetic.main.dialog_standard_content.*
-import kotlinx.android.synthetic.main.dialog_standard_view.*
+import com.natura.android.divider.Divider
+import com.natura.android.iconButton.IconButton
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class DialogStandardTest {
-    private lateinit var dialog: DialogStandard
+    private lateinit var dialogStandard: DialogStandard
     private lateinit var context: Context
 
     @Before
@@ -26,73 +26,74 @@ class DialogStandardTest {
         context = ApplicationProvider.getApplicationContext()
         context.setTheme(R.style.Theme_Natura_Light)
 
-        dialog = createDialogWithCustomContentFromResourceId()
+        dialogStandard = createDialogWithCustomContentFromResourceId()
     }
 
     @Test
     fun checksDialogTitle() {
-        dialog.show()
+        dialogStandard.show()
 
-        val alertTitle = dialog.dialog.findViewById<TextView>(R.id.dialogStandardTitle)
+        val alertTitle = dialogStandard.dialog.findViewById<TextView>(R.id.dialogStandardTitle)
 
         assertThat(alertTitle?.text).isEqualTo("Dialog Title")
     }
 
     @Test
     fun checksMainButtonTitle() {
-        dialog.show()
+        dialogStandard.show()
 
-        val mainButton = dialog.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
+        val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
 
         assertThat(mainButton?.text).isEqualTo("Main Button")
     }
 
     @Test
     fun checksSecondaryButtonTitle() {
-        dialog.show()
+        dialogStandard.show()
 
-        val mainButton = dialog.dialog.getButton(DialogInterface.BUTTON_NEGATIVE)
+        val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_NEGATIVE)
 
         assertThat(mainButton?.text).isEqualTo("Secondary Button")
     }
 
     @Test
     fun checksDialogCustomContentSetByLayoutResource() {
-        dialog.show()
+        dialogStandard.show()
 
-        val dialogCustomContent = dialog.dialog.findViewById<FrameLayout>(R.id.custom)
+        val dialogCustomContent = dialogStandard.dialog.findViewById<FrameLayout>(R.id.custom)
 
         assertThat(dialogCustomContent?.childCount).isEqualTo(1)
     }
 
     @Test
     fun checksDialogCustomContentSetByView() {
-        dialog = createDialogWithCustomContentFromView()
-        dialog.show()
+        dialogStandard = createDialogWithCustomContentFromView()
+        dialogStandard.show()
 
-        val dialogCustomContent = dialog.dialog.findViewById<FrameLayout>(R.id.custom)
+        val dialogCustomContent = dialogStandard.dialog.findViewById<FrameLayout>(R.id.custom)
 
         assertThat(dialogCustomContent?.childCount).isEqualTo(1)
     }
 
     @Test
     fun checksDialogCustomText() {
-        dialog = createDialogWithCustomText()
-        dialog.show()
+        dialogStandard = createDialogWithCustomText()
+        dialogStandard.show()
 
-        val dialogCustomContent = dialog.dialog.dialogAlertText.text
+        val dialogCustomContent = dialogStandard.dialog
+            .findViewById<TextView>(R.id.dialogAlertText)?.let { it.text }
 
         assertThat(dialogCustomContent).isEqualTo("Text Example")
     }
 
     @Test
     fun checksDialogHeaderIcons() {
-        dialog = createDialogWithHeaderIcons()
-        dialog.show()
+        dialogStandard = createDialogWithHeaderIcons()
+        dialogStandard.show()
 
-        val firstIconButton = dialog.dialog.firstIconButton.getIcon()
-        val secondIconButton = dialog.dialog.secondIconButton.getIcon()
-        val thirdIconButton = dialog.dialog.thirdIconButton.getIcon()
+        val firstIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.firstIconButton)?.let { it.getIcon() }
+        val secondIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.secondIconButton)?.let { it.getIcon() }
+        val thirdIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.thirdIconButton)?.let { it.getIcon() }
 
         assertThat(firstIconButton).isNotNull()
         assertThat(secondIconButton).isNotNull()
@@ -101,14 +102,14 @@ class DialogStandardTest {
 
     @Test
     fun checksDialogDividers() {
-        dialog = createDialogDividers()
-        dialog.show()
+        dialogStandard = createDialogDividers()
+        dialogStandard.show()
 
-        val topDivider = dialog.dialog.topDivider
-        val bottomDivider = dialog.dialog.bottomDivider
+        val topDivider = dialogStandard.dialog.findViewById<Divider>(R.id.topDivider)
+        val bottomDivider = dialogStandard.dialog.findViewById<Divider>(R.id.bottomDivider)
 
-        assertThat(topDivider.visibility).isEqualTo(View.VISIBLE)
-        assertThat(bottomDivider.visibility).isEqualTo(View.VISIBLE)
+        assertThat(topDivider?.visibility).isEqualTo(View.VISIBLE)
+        assertThat(bottomDivider?.visibility).isEqualTo(View.VISIBLE)
     }
 
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
@@ -116,9 +117,9 @@ class DialogStandardTest {
             context,
             "Dialog Title",
             "Main Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Secondary Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             R.layout.dialog_standard_content
         ).create()
     }
@@ -131,9 +132,9 @@ class DialogStandardTest {
             context,
             "Dialog Title",
             "Main Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Secondary Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             view
         ).create()
     }
@@ -146,9 +147,9 @@ class DialogStandardTest {
             context,
             "Dialog Title",
             "Main Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Secondary Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Text Example"
         ).create()
     }
@@ -161,9 +162,9 @@ class DialogStandardTest {
             context,
             "Title",
             "Confirm Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Close",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Long text that should be substitied for some dialog text. This might actually take two lines or more",
             true,
             null,
@@ -186,9 +187,9 @@ class DialogStandardTest {
             context,
             "Title",
             "Confirm Button",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Close",
-            DialogInterface.OnClickListener { _, _ -> },
+            { _, _ -> },
             "Long text that should be substitied for some dialog text. This might actually take two lines or more",
             true,
             null,

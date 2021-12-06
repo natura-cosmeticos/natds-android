@@ -3,7 +3,6 @@ package com.natura.android.sample.components
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.activity_dialog.*
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith

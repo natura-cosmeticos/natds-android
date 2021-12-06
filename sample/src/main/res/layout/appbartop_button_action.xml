@@ -1,72 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/appBarTopWithButtonAction"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <com.natura.android.appbartop.StandardAppBarTop
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipChildren="false"
-        android:fitsSystemWindows="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:theme="?toolbarDefaultTheme"
+        app:actionLeft="true"
+        app:actionRight="true"
+        app:appBarColor="colorDefault"
+        app:contentPosition="center"
+        app:contentText="Title Page Center"
+        app:contentType="text"
+        app:enabledElevation="true"
+        app:proeminentContent="false"
+        app:scrollable="true">
 
-        <com.natura.android.appbartop.StandardAppBarTop
-            android:id="@+id/appBar"
-            android:layout_width="match_parent"
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/buttonActionViewIconButtonActionRight"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="?toolbarDefaultTheme"
-            app:actionLeft="true"
-            app:actionRight="true"
-            app:appBarColor="colorDefault"
-            app:contentPosition="center"
-            app:contentText="Title Page Center"
-            app:contentType="text"
-            app:enabledElevation="true"
-            app:proeminentContent="false"
-            app:scrollable="true">
+            android:layout_gravity="center_vertical"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
 
-            <com.natura.android.iconButton.IconButton
-                android:id="@+id/buttonActionViewIconButtonActionRight"
+        <Button
+            android:id="@+id/buttonActionViewOutlinedButtonActionRight"
+            style="?textButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="?sizeHuge"
+            android:text="DEFAULT" />
+    </com.natura.android.appbartop.StandardAppBarTop>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="?spacingMicro">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                app:buttonColor="defaultColor"
-                app:iconName="outlined_default_mockup"
-                app:sizeButton="semi"
-                app:styleButton="inherit" />
+                android:layout_margin="?spacingTiny"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                android:textColor="?colorLowEmphasis"
+                android:textSize="?heading5FontSize" />
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
 
-            <Button
-                android:id="@+id/buttonActionViewOutlinedButtonActionRight"
-                style="?textButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="?sizeHuge"
-                android:text="DEFAULT" />
-        </com.natura.android.appbartop.StandardAppBarTop>
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingHorizontal="?spacingMicro">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="?spacingTiny"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    android:textColor="?colorLowEmphasis"
-                    android:textSize="?heading5FontSize" />
-            </FrameLayout>
-        </androidx.core.widget.NestedScrollView>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

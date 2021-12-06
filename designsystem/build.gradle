@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
@@ -57,6 +56,10 @@ android {
         unitTests.returnDefaultValues = true
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     kapt.includeCompileClasspath = false
 }
 
@@ -73,8 +76,4 @@ dependencies {
     testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
     testImplementation "io.mockk:mockk:$rootProject.mockKVersion"
-}
-
-androidExtensions {
-    experimental = true
 }

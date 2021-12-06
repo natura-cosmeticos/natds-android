@@ -6,16 +6,19 @@ import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.data.ThemeRepository
-import kotlinx.android.synthetic.main.activity_brand_selector.*
+import com.natura.android.sample.databinding.ActivityBrandSelectorBinding
 
 class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var themeRepository: ThemeRepository
+    private lateinit var binding: ActivityBrandSelectorBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         themeRepository = ThemeRepository(this)
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_brand_selector)
+        binding = ActivityBrandSelectorBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         supportActionBar?.title = "Choose a brand"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -30,18 +33,18 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            naturaThemeButton.id -> openSampleBy(NATURA)
-            avonThemeButton.id -> openSampleBy(AVON)
-            aesopThemeButton.id -> openSampleBy(AESOP)
+            binding.naturaThemeButton.id -> openSampleBy(NATURA)
+            binding.avonThemeButton.id -> openSampleBy(AVON)
+            binding.aesopThemeButton.id -> openSampleBy(AESOP)
             else -> openSampleBy(TBS)
         }
     }
 
     private fun setBrandButtonsActions() {
-        naturaThemeButton.setOnClickListener(this)
-        avonThemeButton.setOnClickListener(this)
-        tbsThemeButton.setOnClickListener(this)
-        aesopThemeButton.setOnClickListener(this)
+        binding.naturaThemeButton.setOnClickListener(this)
+        binding.avonThemeButton.setOnClickListener(this)
+        binding.tbsThemeButton.setOnClickListener(this)
+        binding.aesopThemeButton.setOnClickListener(this)
     }
 
     private fun openSampleBy(brandTheme: String) {

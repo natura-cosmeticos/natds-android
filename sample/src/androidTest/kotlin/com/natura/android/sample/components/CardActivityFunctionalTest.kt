@@ -3,7 +3,8 @@ package com.natura.android.sample.components
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.activity_card.*
+import com.natura.android.card.Card
+import com.natura.android.sample.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,7 +22,7 @@ class CardActivityFunctionalTest {
     @Test
     fun checksIfEnabledElevationIsTrueAtCard() {
         scenario.onActivity {
-            val card = it.card
+            val card = it.findViewById<Card>(R.id.card)
             val enabledElevation = card.getEnabledElevation()
 
             Truth.assertThat(enabledElevation).isTrue()
@@ -31,7 +32,7 @@ class CardActivityFunctionalTest {
     @Test
     fun checksIfEnabledRadiusIsTrueAtCard() {
         scenario.onActivity {
-            val card = it.card
+            val card = it.findViewById<Card>(R.id.card)
             val enabledRadius = card.getEnabledRadius()
 
             Truth.assertThat(enabledRadius).isTrue()
@@ -41,7 +42,7 @@ class CardActivityFunctionalTest {
     @Test
     fun checksIfElevationGreaterThen0AtCard() {
         scenario.onActivity {
-            val card = it.card
+            val card = it.findViewById<Card>(R.id.card)
             val elevation = card.elevation
 
             Truth.assertThat(elevation > 0).isTrue()
@@ -51,7 +52,7 @@ class CardActivityFunctionalTest {
     @Test
     fun checksIfRadiusGreaterThen0AtCard() {
         scenario.onActivity {
-            val card = it.card
+            val card = it.findViewById<Card>(R.id.card)
             val radius = card.radius
 
             Truth.assertThat(radius > 0).isTrue()

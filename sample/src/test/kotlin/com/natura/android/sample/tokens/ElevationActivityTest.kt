@@ -2,7 +2,6 @@ package com.natura.android.sample.tokens
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import kotlinx.android.synthetic.main.activity_elevation.*
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
