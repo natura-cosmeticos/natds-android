@@ -6,7 +6,7 @@ if (file("github_credentials.properties").file) {
 }
 
 def getVersionName = { ->
-    return "9.6.1"
+    return System.getenv("NATDS_VERSION")
 }
 
 def getGroupId = { ->
