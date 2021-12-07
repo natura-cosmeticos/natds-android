@@ -33,6 +33,24 @@ android {
         }
     }
 
+    buildFeatures {
+        compose = true
+    }
+
+    // Set both the Java and Kotlin compilers to target Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerVersion kotlin_version
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -64,6 +82,26 @@ android {
 }
 
 dependencies {
+    implementation "androidx.compose.animation:animation-core:$compose_version"
+    implementation "androidx.compose.animation:animation:$compose_version"
+    implementation("androidx.compose.ui:ui:$compose_version")
+    implementation "androidx.compose.foundation:foundation:$compose_version"
+    implementation "androidx.compose.ui:ui-geometry:$compose_version"
+    implementation "androidx.compose.ui:ui-graphics:$compose_version"
+    implementation "androidx.compose.foundation:foundation-layout:$compose_version"
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.material:material-icons-core:$compose_version"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation "androidx.compose.runtime:runtime-rxjava2:$compose_version"
+    implementation("androidx.compose.ui:ui-text:$compose_version")
+    implementation("androidx.compose.ui:ui-util:$compose_version")
+    implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.activity:activity-compose:1.3.1"
+
+    //Compose Constraintlayout
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
