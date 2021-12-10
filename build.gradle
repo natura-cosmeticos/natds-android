@@ -25,6 +25,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://www.jitpack.io" }
         def githubProperties = new Properties()
         def githubFile = rootProject.file("github_credentials.properties")
         if (githubFile.exists()) {
