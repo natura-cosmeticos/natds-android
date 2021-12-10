@@ -6,7 +6,7 @@ apply plugin: 'org.jetbrains.dokka'
 
 apply plugin: 'kotlin-kapt'
 
-group='com.github.systemteamopensource'
+group = 'com.github.systemteamopensource'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion

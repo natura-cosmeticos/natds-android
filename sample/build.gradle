@@ -51,10 +51,8 @@ android {
 }
 
 dependencies {
-    lintChecks project(":lint")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':designsystem')
-    implementation project(':dsLintLib')
 
     implementation "com.natura:icons:$rootProject.iconsVersion"
 
