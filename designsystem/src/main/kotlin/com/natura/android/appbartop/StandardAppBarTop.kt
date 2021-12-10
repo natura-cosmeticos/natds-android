@@ -5,6 +5,7 @@ import android.animation.StateListAnimator
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
+import android.os.Build
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.DisplayMetrics
@@ -177,18 +178,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 positionActionRight()
             }
         }
-
-        if (childCount > MIN_COUNT_ELEMENTS) {
-            positionActionCenter()
-        }
     }
 
-    private fun positionActionCenter() {
-        val child = getChildAt(1)
-        this.removeView(child)
-
+    private fun addContentView(view: View) {
         if (proeminentContent) {
-            actionLeftContainer.addView(child)
+            actionLeftContainer.addView(view)
             actionLeftContainer.layoutParams = LinearLayout.LayoutParams(
                 LayoutParams.WRAP_CONTENT,
                 LayoutParams.WRAP_CONTENT,
@@ -197,9 +191,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             actionLeftContainer.orientation = LinearLayout.VERTICAL
             actionCenterContainer.setVisibilityFromBoolean(false)
         } else {
-
-            actionCenterContainer.gravity = getContentAlign(context)
-            actionCenterContainer.addView(child)
+            actionCenterContainer.removeAllViews()
+            actionCenterContainer.gravity = Gravity.CENTER
+            actionCenterContainer.addView(view)
         }
     }
 
@@ -330,17 +324,20 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 mediaWidth,
                 mediaHeight
             )
-        addView(imageView)
+        addContentView(imageView)
     }
 
     private fun addTextView(context: Context, text: String) {
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-        textView.setTextSize(
-            TypedValue.COMPLEX_UNIT_PX,
-            context.resources.getDimension(R.dimen.ds_size_h6)
-        )
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            textView.setTextAppearance(R.style.TextAppearance_DS_AppBarTop)
+        } else {
+            textView.setTextAppearance(context, R.style.TextAppearance_DS_AppBarTop)
+        }
+
         textView.layoutParams =
             LayoutParams(
                 WRAP_CONTENT,
@@ -350,7 +347,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
 
-        addView(textView)
+        addContentView(textView)
     }
 
     private fun addTextField(context: Context) {
@@ -361,7 +358,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 MATCH_PARENT,
                 WRAP_CONTENT
             )
-        addView(textField)
+        addContentView(textField)
     }
 
     private fun getContentAlign(context: Context): Int {
@@ -386,7 +383,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
             val metrics = DisplayMetrics()
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                 context.display?.getRealMetrics(metrics)
             } else {
                 windowManager.defaultDisplay.getMetrics(metrics)
@@ -413,9 +410,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
         private const val MAX_COUNT_ELEMENTS = 5
-        private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 3
-        private const val ACTION_LEFT_ELEMENT_INDEX = 2
-        private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 2
+        private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 2
+        private const val ACTION_LEFT_ELEMENT_INDEX = 1
+        private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 1
         private const val MIN_COUNT_ELEMENTS = 1
 
         private const val NOT_RESOURCE_FOUND_CODE = 0

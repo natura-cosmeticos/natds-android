@@ -4,7 +4,6 @@
     <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
         <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
-        <item name="android:windowTitleStyle">@style/Theme.DS.Dialog.Title</item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>
@@ -198,6 +197,14 @@
         <item name="collapseIcon">@drawable/default_icon_outlined_navigation_directionright</item>
     </style>
 
+    <style name="TextAppearance.DS.AppBarTop" parent="">
+        <item name="android:textSize">?appBarTopTitleFontSize</item>
+        <item name="android:fontFamily">?appBarTopTitlePrimaryFontWeight</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:letterSpacing">?appBarTopTitleLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?appBarTopTitleLineHeight</item>
+    </style>
+
     <style name="Theme.DS.Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
         <item name="colorOnPrimary">?colorOnSurface</item>
         <item name="colorControlNormal">?colorOnSurface</item>
@@ -215,27 +222,6 @@
         <item name="android:background">?colorSecondary</item>
         <item name="android:textColor">?colorOnSecondary</item>
         <item name="titleTextColor">?colorOnSecondary</item>
-    </style>
-
-    <!-- SELECTION CONTROL STYLES -->
-    <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/selectors_secondary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/selectors_secondary_v23</item>
-        <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
     <!-- BUTTON STYLES -->
@@ -493,7 +479,15 @@
     </style>
 
     <style name="Widget.DS.Shortcut">
-        <item name="shct_label_appearance">?textAppearanceCaption</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut" parent="">
+        <item name="android:textSize">?shortcutLabelFontSize</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:fontFamily">?shortcutLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?shortcutLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?shortcutLabelLineHeight</item>
     </style>
 
     <!-- TAG STYLES -->
@@ -536,11 +530,16 @@
     </style>
 
     <style name="Widget.DS.Tag">
-        <item name="labelAppearance">?textAppearanceCaption</item>
+    </style>
+
+    <style name="TextAppearance.DS.Tag" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">?tagLabelFontSize</item>
+        <item name="android:fontFamily">?tagLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?tagLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?tagLabelLineHeight</item>
     </style>
 
     <!-- CARD STYLE -->
-
     <style name="Widget.DS.Card">
         <item name="colorBackground">?colorSurface</item>
         <item name="customElevation">?elevation01</item>
@@ -594,6 +593,11 @@
 
     <!-- CHECKBOX COMPONENT STYLE -->
 
+    <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+    </style>
+
     <style name="Widget.DS.CheckBox.Primary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
@@ -601,11 +605,36 @@
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
 
+    <style name="Widget.DS.CheckBox.Secondary.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+    </style>
+
     <style name="Theme.DS.CheckBox.LabelAppearance" parent="">
         <item name="fontFamily">?checkboxLabelPrimaryFontWeight</item>
         <item name="android:textSize">?checkboxLabelFontSize</item>
         <item name="android:letterSpacing">?checkboxLabelLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?checkboxLabelLineHeight</item>
+    </style>
+
+    <!-- RADIO BUTTON STYLES -->
+    <style name="Widget.DS.RadioButton.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.Secondary.V23" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/selectors_secondary_v23</item>
+        <item name="android:textColor">@color/text_selectors_v23</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Theme.DS.RadioButton.LabelAppearance" parent="">
+        <item name="fontFamily">?radioButtonLabelPrimaryFontWeight</item>
+        <item name="android:textSize">?radioButtonLabelFontSize</item>
+        <item name="android:letterSpacing">?radioButtonLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?radioButtonLabelLineHeight</item>
     </style>
 
     <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
