@@ -1,16 +1,14 @@
 package com.natura.android.lint
 
-import com.android.tools.lint.detector.api.Scope.JAVA_FILE
-import com.android.tools.lint.detector.api.Category.Companion.CORRECTNESS
+import com.android.tools.lint.client.api.UElementHandler
+import com.android.tools.lint.detector.api.Detector
+import com.android.tools.lint.detector.api.JavaContext
+import com.android.tools.lint.detector.api.TextFormat
+import com.intellij.psi.PsiType
+import com.natura.android.lint.IssueRegistry.Companion.ISSUE_NON_DIALOG_STANDARD_VIEW
 import org.jetbrains.uast.UClass
 import org.jetbrains.uast.UElement
 import org.jetbrains.uast.UVariable
-import com.android.tools.lint.client.api.UElementHandler
-import com.android.tools.lint.detector.api.*
-import com.android.tools.lint.detector.api.LintFix.*
-import com.intellij.psi.PsiType
-import com.natura.android.lint.IssueRegistry.Companion.ISSUE_NON_DIALOG_STANDARD_VIEW
-import com.natura.android.lint.IssueRegistry.Companion.ISSUE_NON_DS_VIEW
 
 class DesignSystemUastDetector : Detector(), Detector.UastScanner {
 
