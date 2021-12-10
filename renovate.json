@@ -1,10 +1,9 @@
 {
-  "additionalReviewers": ["mlcsouza"],
-  "assignees": ["mlcsouza"],
   "extends": ["config:base"],
   "labels": ["dependencies", "renovate"],
   "lockFileMaintenance": { "enabled": true },
   "semanticCommits": true,
+  "prConcurrentLimit": 3,
   "vulnerabilityAlerts": {
     "enabled": true
   }
