@@ -1,0 +1,43 @@
+plugins {
+    id 'java-library'
+    id 'com.android.lint'
+    id 'kotlin'
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+lintOptions {
+    htmlReport true
+    htmlOutput file("lint-report.html")
+    textReport true
+    absolutePaths false
+    ignoreTestSources true
+}
+
+def kotlinVersion = "1.4.21"
+def lintVersion = "27.2.1"
+
+dependencies {
+    compileOnly("com.android.tools.lint:lint-api:$lintVersion")
+    compileOnly("com.android.tools.lint:lint-checks:$lintVersion")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+    compileOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+
+    // Lint testing
+    testImplementation("com.android.tools.lint:lint:$lintVersion")
+    testImplementation("com.android.tools.lint:lint-tests:$lintVersion")
+    testImplementation("junit:junit:4.13.1")
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+jar {
+    manifest {
+        attributes('Lint-Registry-v2': 'com.natura.android.lint.IssueRegistry')
+    }
+}
