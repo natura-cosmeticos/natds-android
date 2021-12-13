@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.7.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.6.2...v.9.7.0) (2021-12-13)
+
+
+### Features
+
+* branch STEM-2147-add-lint-checks add lint rules to DS ([18189c5](https://github.com/natura-cosmeticos/natds-android/commit/18189c5b3f7cc5beb32b821108d406d194f754d6))
+
 ### [9.6.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.6.1...v.9.6.2) (2021-12-06)
 
 ## [9.6.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.6.0...v.9.6.1) (2021-12-03)
