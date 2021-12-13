@@ -275,4 +275,37 @@
             <enum name="veryhuge" value="10" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="Avatar">
+        <attr name="avt_type" format="enum">
+            <enum name="icon" value="0" />
+            <enum name="label" value="1" />
+            <enum name="image" value="2" />
+        </attr>
+        <attr name="avt_size" format="enum">
+            <enum name="standard" value="0" />
+            <enum name="semi" value="1" />
+            <enum name="semix" value="2" />
+            <enum name="medium" value="3" />
+            <enum name="largexxx" value="4" />
+        </attr>
+        <attr name="avt_icon" format="reference"/>
+        <attr name="avt_image" format="reference"/>
+        <attr name="avt_label" format="string"/>
+        <attr name="avt_fallback_icon" format="reference"/>
+        <attr name="avt_fallback_label" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="AvatarStyle">
+        <attr name="colorBackground" />
+        <attr name="android:layout_marginLeft" />
+        <attr name="android:layout_marginRight" />
+        <attr name="android:padding" />
+        <attr name="android:fontFamily" />
+        <attr name="android:letterSpacing" />
+        <attr name="android:textColor" />
+        <attr name="avt_color_icon" format="reference" />
+        <attr name="avt_drawable_size" format="reference" />
+    </declare-styleable>
+
 </resources>

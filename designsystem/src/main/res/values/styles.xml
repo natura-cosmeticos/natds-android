@@ -637,6 +637,40 @@
         <item name="android:lineSpacingMultiplier">?radioButtonLabelLineHeight</item>
     </style>
 
+    <!-- AVATAR STYLES -->
+
+    <style name="Widget.DS.AvatarStyle">
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="android:padding">?spacingMicro</item>
+    </style>
+
+    <style name="Widget.DS.AvatarStyle.IconType" parent="Widget.DS.AvatarStyle">
+        <item name="android:textColor">?colorHighEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.AvatarStyle.LabelType" parent="Widget.DS.AvatarStyle">
+        <item name="android:textColor">?colorHighEmphasis</item>
+        <item name="android:fontFamily">?colorHighEmphasis</item>
+    </style>
+
+    <style name="Widget.DS.AvatarStyle.Medium" parent="Widget.DS.AvatarStyle">
+        <item name="pgid_width">?sizeMedium</item>
+        <item name="pgid_height">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.AvatarStyle.Large" parent="Widget.DS.AvatarStyle">
+        <item name="pgid_width">?sizeLarge</item>
+        <item name="pgid_height">?sizeLarge</item>
+    </style>
+
+
+
+
+
+
+
+
+
     <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">?textFieldLabelFontSize</item>
         <item name="android:textColor">@color/colorMediumEmphasis</item>
