@@ -158,6 +158,15 @@
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
 
+        <item name="avatarWithIcon">@style/Widget.DS.Avatar.Icon</item>
+        <item name="avatarWithImage">@style/Widget.DS.Avatar.Image</item>
+        <item name="avatarWithLabel">@style/Widget.DS.Avatar.Label</item>
+        <item name="avatarStandard">@style/Widget.DS.Avatar.Standard</item>
+        <item name="avatarSemi">@style/Widget.DS.Avatar.Semi</item>
+        <item name="avatarSemix">@style/Widget.DS.Avatar.Semix</item>
+        <item name="avatarMedium">@style/Widget.DS.Avatar.Medium</item>
+        <item name="avatarLargexxx">@style/Widget.DS.Avatar.Largexxx</item>
+
         <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Aesop.Dark</item>
     </style>
 

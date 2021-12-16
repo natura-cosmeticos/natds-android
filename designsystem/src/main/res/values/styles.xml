@@ -639,37 +639,72 @@
 
     <!-- AVATAR STYLES -->
 
-    <style name="Widget.DS.AvatarStyle">
+    <style name="Widget.DS.Avatar">
         <item name="colorBackground">?colorPrimary</item>
         <item name="android:padding">?spacingMicro</item>
-    </style>
-
-    <style name="Widget.DS.AvatarStyle.IconType" parent="Widget.DS.AvatarStyle">
+        <item name="android:fontFamily">?avatarPrimaryFontWeight</item>
         <item name="android:textColor">?colorHighEmphasis</item>
     </style>
 
-    <style name="Widget.DS.AvatarStyle.LabelType" parent="Widget.DS.AvatarStyle">
-        <item name="android:textColor">?colorHighEmphasis</item>
-        <item name="android:fontFamily">?colorHighEmphasis</item>
+    <style name="Widget.DS.Avatar.Icon" parent="Widget.DS.Avatar">
     </style>
 
-    <style name="Widget.DS.AvatarStyle.Medium" parent="Widget.DS.AvatarStyle">
-        <item name="pgid_width">?sizeMedium</item>
-        <item name="pgid_height">?sizeMedium</item>
+    <style name="Widget.DS.Avatar.Label" parent="Widget.DS.Avatar">
     </style>
 
-    <style name="Widget.DS.AvatarStyle.Large" parent="Widget.DS.AvatarStyle">
-        <item name="pgid_width">?sizeLarge</item>
-        <item name="pgid_height">?sizeLarge</item>
+    <style name="Widget.DS.Avatar.Image" parent="Widget.DS.Avatar">
     </style>
 
+    <style name="Widget.DS.Avatar.Standard" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeStandard</item>
+        <item name="avt_icon_size">?sizeSmall</item>
+        <item name="avt_image_size">?sizeStandard</item>
+        <item name="android:textSize">?avatarStandardFontSize</item>
+        <item name="android:letterSpacing">?avatarStandardLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarStandardLineHeight</item>
+        <item name="android:radius">?avatarStandardBorderRadius</item>
 
+    </style>
 
+    <style name="Widget.DS.Avatar.Semi" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeSemi</item>
+        <item name="avt_icon_size">?sizeStandard</item>
+        <item name="avt_image_size">?sizeSemi</item>
+        <item name="android:textSize">?avatarSemiFontSize</item>
+        <item name="android:letterSpacing">?avatarSemiLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarSemiLineHeight</item>
+        <item name="android:radius">?avatarSemiBorderRadius</item>
+    </style>
 
+    <style name="Widget.DS.Avatar.Semix" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeSemiX</item>
+        <item name="avt_icon_size">?sizeSemi</item>
+        <item name="avt_image_size">?sizeSemiX</item>
+        <item name="android:textSize">?avatarSemiXFontSize</item>
+        <item name="android:letterSpacing">?avatarSemiXLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarSemiXLineHeight</item>
+        <item name="android:radius">?avatarSemiXBorderRadius</item>
+    </style>
 
+    <style name="Widget.DS.Avatar.Medium" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeMedium</item>
+        <item name="avt_icon_size">?sizeSemiX</item>
+        <item name="avt_image_size">?sizeMedium</item>
+        <item name="android:textSize">?avatarMediumFontSize</item>
+        <item name="android:letterSpacing">?avatarMediumLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarMediumLineHeight</item>
+        <item name="android:radius">?avatarMediumBorderRadius</item>
+    </style>
 
-
-
+    <style name="Widget.DS.Avatar.Largexxx" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeLargeXXX</item>
+        <item name="avt_icon_size">?sizeLargeXX</item>
+        <item name="avt_image_size">?sizeLargeXXX</item>
+        <item name="android:textSize">?avatarLargeXXXFontSize</item>
+        <item name="android:letterSpacing">?avatarLargeXXXLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarLargeXXXLineHeight</item>
+        <item name="android:radius">?avatarLargeXXXBorderRadius</item>
+    </style>
 
     <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">?textFieldLabelFontSize</item>

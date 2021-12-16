@@ -3,6 +3,7 @@ package com.natura.android.sample
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.BadgeActivity
 import com.natura.android.sample.components.ButtonActivity
 import com.natura.android.sample.components.CardActivity
@@ -173,6 +174,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.customTypographyButton.setOnClickListener {
             startActivity(Intent(this, CustomTypographyActivity::class.java))
+        }
+
+        binding.btnAvatar.setOnClickListener {
+            startActivity(Intent(this, AvatarActivity::class.java))
         }
     }
 }
