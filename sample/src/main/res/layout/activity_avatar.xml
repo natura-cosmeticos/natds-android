@@ -104,25 +104,12 @@
         app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithIcon" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     <com.natura.android.avatar.Avatar
         android:id="@+id/standardAvatarWithLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
-        android:layout_marginTop="?spacingXLarge"
+        android:layout_marginTop="?spacingLarge"
         app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="standard"
@@ -143,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
-        android:layout_marginTop="?spacingXLarge"
+        android:layout_marginTop="?spacingLarge"
         app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="semi"
@@ -164,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
-        android:layout_marginTop="?spacingXLarge"
+        android:layout_marginTop="?spacingLarge"
         app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="semix"
@@ -185,7 +172,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
-        android:layout_marginTop="?spacingXLarge"
+        android:layout_marginTop="?spacingLarge"
         app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:layout_constraintStart_toEndOf="@id/semixAvatarWithLabel"
@@ -205,7 +192,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
-        android:layout_marginTop="?spacingXLarge"
+        android:layout_marginTop="?spacingSemi"
         app:avt_type="label"
         app:avt_label="GL"
         app:avt_size="largexxx"
@@ -220,5 +207,111 @@
         app:layout_constraintEnd_toEndOf="@+id/largexxxAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithLabel" />
+
+
+    <com.natura.android.avatar.Avatar
+        android:id="@+id/standardAvatarWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacingSemi"
+        android:layout_marginTop="?spacingLarge"
+        app:avt_type="image"
+        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_size="standard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithLabelDescription" />
+
+    <TextView
+        android:id="@+id/standardAvatarWithImageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Standard"
+        app:layout_constraintEnd_toEndOf="@+id/standardAvatarWithImage"
+        app:layout_constraintStart_toStartOf="@+id/standardAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithImage" />
+
+    <com.natura.android.avatar.Avatar
+        android:id="@+id/semiAvatarWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacingSemi"
+        android:layout_marginTop="?spacingLarge"
+        app:avt_type="image"
+        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_size="semi"
+        app:layout_constraintStart_toEndOf="@id/standardAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithLabelDescription" />
+
+    <TextView
+        android:id="@+id/semiAvatarWithImageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Semi"
+        app:layout_constraintEnd_toEndOf="@+id/semiAvatarWithImage"
+        app:layout_constraintStart_toStartOf="@+id/semiAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithImage" />
+
+    <com.natura.android.avatar.Avatar
+        android:id="@+id/semixAvatarWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacingSemi"
+        android:layout_marginTop="?spacingLarge"
+        app:avt_type="image"
+        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_size="semix"
+        app:layout_constraintStart_toEndOf="@id/semiAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithLabelDescription" />
+
+    <TextView
+        android:id="@+id/semixAvatarWithImageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SemiX"
+        app:layout_constraintEnd_toEndOf="@+id/semixAvatarWithImage"
+        app:layout_constraintStart_toStartOf="@+id/semixAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithImage" />
+
+    <com.natura.android.avatar.Avatar
+        android:id="@+id/mediumAvatarWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacingSemi"
+        android:layout_marginTop="?spacingLarge"
+        app:avt_type="image"
+        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_size="medium"
+        app:layout_constraintStart_toEndOf="@id/semixAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithLabelDescription" />
+
+    <TextView
+        android:id="@+id/mediumAvatarWithImageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        app:layout_constraintEnd_toEndOf="@+id/mediumAvatarWithImage"
+        app:layout_constraintStart_toStartOf="@+id/mediumAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithImage" />
+
+    <com.natura.android.avatar.Avatar
+        android:id="@+id/largexxxAvatarWithImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="?spacingSemi"
+        android:layout_marginTop="?spacingSemi"
+        app:avt_type="image"
+        app:avt_size="largexxx"
+        app:avt_image="@drawable/natura_b_official"
+        app:layout_constraintStart_toEndOf="@id/mediumAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithLabelDescription" />
+
+    <TextView
+        android:id="@+id/largexxxAvatarWithImageDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LargeXXX"
+        app:layout_constraintEnd_toEndOf="@+id/largexxxAvatarWithImage"
+        app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithImage"
+        app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

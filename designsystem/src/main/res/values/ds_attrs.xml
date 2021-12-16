@@ -294,6 +294,7 @@
         <attr name="avt_label" format="string"/>
         <attr name="avt_fallback_icon" format="reference"/>
         <attr name="avt_fallback_label" format="string"/>
+        <attr name="avt_image_url" format="string"/>
         <attr name="avt_content_description" format="string"/>
     </declare-styleable>
 

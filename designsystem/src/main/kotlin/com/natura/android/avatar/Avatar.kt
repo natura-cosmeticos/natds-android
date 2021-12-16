@@ -21,6 +21,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import coil.compose.ImagePainter
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.AbstractComposeView
@@ -31,13 +32,14 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.core.content.res.getFloatOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
+import androidx.core.view.get
 import com.natura.android.R
+import coil.compose.rememberImagePainter
 import com.natura.android.extensions.printInitials
 
 class Avatar : AbstractComposeView {
@@ -70,20 +72,20 @@ class Avatar : AbstractComposeView {
             init(attrs)
         }
 
-    var size by mutableStateOf(MEDIUM_SIZE)
-    var type by mutableStateOf(ICON_TYPE)
-    var icon by mutableStateOf(RESOURCE_NOT_DEFINED)
-    var image by mutableStateOf(RESOURCE_NOT_DEFINED)
-    var label by mutableStateOf("")
-    var accessibilityDescription by mutableStateOf("")
-
-    var labelFallback by mutableStateOf("")
-    var iconFallback by mutableStateOf(RESOURCE_NOT_DEFINED)
+    var size: Int = RESOURCE_NOT_DEFINED
+    var type: Int = RESOURCE_NOT_DEFINED
+    var icon: Int = RESOURCE_NOT_DEFINED
+    var image: Int = RESOURCE_NOT_DEFINED
+    var label: String = LABEL_FALLBACK_DEFAULT
+    var url: String = ""
+    var accessibilityDescription: String = ""
+    var labelFallback: String = LABEL_FALLBACK_DEFAULT
+    var iconFallback: Int = RESOURCE_NOT_DEFINED
 
     @Composable
     fun Label(
         isVisible: Boolean,
-        value: String,
+        value: String = "",
         textSize: TextUnit,
         fontColor: Color,
         fontFamily: FontFamily,
@@ -112,13 +114,64 @@ class Avatar : AbstractComposeView {
         @DrawableRes drawable: Int
     ) {
         if (isVisible) {
+
+            val painter = if (url == "") {
+                painterResource(drawable)
+            } else {
+                rememberImagePainter(
+                    data = url
+                )
+            }
+
             Image(
-                painter = painterResource(drawable),
+                painter = painter,
                 contentDescription = contentDescription,
                 modifier = Modifier
                     .clip(shape = RoundedCornerShape(borderRadius))
                     .size(size)
             )
+
+            if (painter is ImagePainter) {
+
+                when (painter.state) {
+                    is ImagePainter.State.Error -> {
+
+                        if (iconFallback != RESOURCE_NOT_DEFINED) {
+
+                            IconDrawable(
+                                true,
+                                contentDescription = accessibilityDescription,
+                                convertFloatToDp(
+                                    resources.getDimension(
+                                        iconSizeResourceAttribute
+                                    )
+                                ),
+                                colorResource(textColorResourceAttribute),
+                                iconFallback
+                            )
+                        } else {
+                            Label(
+                                true,
+                                labelFallback,
+                                convertFloatToSp(
+                                    resources.getDimension(
+                                        textSizeResourceAttribute
+                                    )
+                                ),
+                                colorResource(textColorResourceAttribute),
+                                FontFamily(
+                                    Typeface.create(
+                                        fontFamilyResourceAttribute,
+                                        Typeface.NORMAL
+                                    )
+                                ),
+                                convertFloatToSp(letterSpacingResourceAttribute),
+                                convertFloatToSp(lineHeightResourceAttribute)
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -138,11 +191,6 @@ class Avatar : AbstractComposeView {
                 tint = color
             )
         }
-    }
-
-    @Composable
-    @Preview
-    fun teste() {
     }
 
     @Composable
@@ -227,11 +275,11 @@ class Avatar : AbstractComposeView {
                 type = getInt(R.styleable.Avatar_avt_type, ICON_TYPE)
                 icon = getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
                 image = getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
-                label = getString(R.styleable.Avatar_avt_label).toString()
-                contentDescription =
-                    getString(R.styleable.Avatar_avt_content_description).toString()
-
-                labelFallback = getString(R.styleable.Avatar_avt_label).toString()
+                label = getString(R.styleable.Avatar_avt_label) ?: LABEL_FALLBACK_DEFAULT
+                contentDescription = getString(R.styleable.Avatar_avt_content_description)
+                labelFallback =
+                    getString(R.styleable.Avatar_avt_fallback_label) ?: LABEL_FALLBACK_DEFAULT
+                url = getString(R.styleable.Avatar_avt_image_url) ?: ""
                 iconFallback =
                     getResourceId(R.styleable.Avatar_avt_fallback_icon, RESOURCE_NOT_DEFINED)
             } finally {
@@ -426,8 +474,6 @@ class Avatar : AbstractComposeView {
         const val IMAGE_TYPE = 2
 
         const val RESOURCE_NOT_DEFINED = 0
-
-        val typeMap = HashMap<String, Int>()
-
+        const val LABEL_FALLBACK_DEFAULT = "NA"
     }
 }
