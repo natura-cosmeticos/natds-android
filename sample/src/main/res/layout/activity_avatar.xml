@@ -301,7 +301,7 @@
         android:layout_marginTop="?spacingSemi"
         app:avt_type="image"
         app:avt_size="largexxx"
-        app:avt_image="@drawable/natura_b_official"
+        app:avt_image="@drawable/textfield_image_arealimit"
         app:layout_constraintStart_toEndOf="@id/mediumAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithLabelDescription" />
 

@@ -47,7 +47,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
+        kotlinCompilerExtensionVersion rootProject.composeVersion
         kotlinCompilerVersion kotlin_version
     }
 
@@ -82,31 +82,25 @@ android {
 }
 
 dependencies {
-    implementation "androidx.compose.animation:animation-core:$compose_version"
-    implementation "androidx.compose.animation:animation:$compose_version"
-    implementation("androidx.compose.ui:ui:$compose_version")
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    //Compose dependencies
-    implementation "androidx.compose.foundation:foundation:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.runtime:runtime:$compose_version"
-    implementation "androidx.compose.material:material-icons-core:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling:$compose_version"
-    implementation "androidx.compose.material:material-icons-extended:$compose_version"
-    implementation "androidx.compose.runtime:runtime-rxjava2:$compose_version"
-    implementation("androidx.compose.ui:ui-text:$compose_version")
-    implementation("androidx.compose.ui:ui-util:$compose_version")
-    implementation ("androidx.compose.ui:ui-viewbinding:$compose_version")
-    implementation "androidx.compose.ui:ui-tooling:$compose_version"
-    implementation "androidx.activity:activity-compose:1.3.1"
-
-    //Compose Constraintlayout
-    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02'
     lintPublish project(":lint")
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':lint')
+
+    //Compose dependencies
+    implementation "androidx.compose.foundation:foundation:$rootProject.composeVersion"
+    implementation "androidx.compose.material:material:$rootProject.composeVersion"
+    implementation "androidx.compose.runtime:runtime:$rootProject.composeVersion"
+    implementation "androidx.compose.material:material-icons-core:$rootProject.composeVersion"
+    implementation "androidx.compose.ui:ui-tooling:$rootProject.composeVersion"
+    implementation "androidx.compose.material:material-icons-extended:$rootProject.composeVersion"
+    implementation "androidx.compose.ui:ui-viewbinding:$rootProject.composeVersion"
+    implementation "androidx.activity:activity-compose:1.3.1"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "io.coil-kt:coil-compose:$rootProject.coilVersion"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02"
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
@@ -118,8 +112,4 @@ dependencies {
     testImplementation "androidx.test.ext:junit:$rootProject.androidxJunitVersion"
     testImplementation "org.robolectric:robolectric:$rootProject.robolectricVersion"
     testImplementation "io.mockk:mockk:$rootProject.mockKVersion"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> feat: adds Avatar Component createy through Jetpack Compose

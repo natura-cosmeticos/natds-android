@@ -37,11 +37,12 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.core.content.res.getFloatOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
-import androidx.core.view.get
+import coil.annotation.ExperimentalCoilApi
 import com.natura.android.R
 import coil.compose.rememberImagePainter
 import com.natura.android.extensions.printInitials
 
+@ExperimentalCoilApi
 class Avatar : AbstractComposeView {
 
     private var sizeResourceAttribute by mutableStateOf(0)
@@ -357,110 +358,19 @@ class Avatar : AbstractComposeView {
     }
 
     @Composable
-    fun Label(isVisible: Boolean, value: String) {
-        if (isVisible) {
-            Text(value, fontFamily =)
+    private fun convertFloatToSp(value: Float): TextUnit {
+        return with(LocalDensity.current) {
+            value.toSp()
         }
-
     }
 
     @Composable
-    fun Image(isVisible: Boolean) {
-        if (isVisible) {
+    private fun getFontFromTheme(resource: Int): Typeface {
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(resource, typedValue, true)
 
-        }
-
+        return Typeface.create(typedValue.string.toString(), Typeface.NORMAL)
     }
-
-    @Composable
-    fun Icon(isVisible: Boolean) {
-        if (isVisible) {
-
-        }
-
-    }
-
-    @Composable
-    override fun Content() {
-        TODO("Not yet implemented")
-    }
-
-    private fun getAttributesValues(attrs: AttributeSet?) {
-
-        context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.Avatar,
-            0, 0
-        ).apply {
-
-            try {
-                size = getInt(R.styleable.Avatar_avt_size, MEDIUM_SIZE)
-                type = getInt(R.styleable.Avatar_avt_size, ICON_TYPE)
-                icon = getInt(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
-                image = getInt(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
-                label = getString(R.styleable.Avatar_avt_label).toString()
-
-                labelFallback = getString(R.styleable.Avatar_avt_label).toString()
-                iconFallback = getInt(R.styleable.Avatar_avt_fallback_icon, RESOURCE_NOT_DEFINED)
-            } finally {
-                recycle()
-            }
-        }
-    }
-
-    private fun getAttributesFromTheme() {
-        handleTypeAttr()
-        handleSizeAttr()
-    }
-
-    private fun handleTypeAttr() {
-        try {
-            when (type) {
-                ICON_TYPE -> {
-                    setAttributes(R.attr.avatar)
-                }
-                LABEL_TYPE -> {
-                    setAttributes(R.attr.dividerInset)
-                }
-                else -> {
-                    setAttributes(R.attr.dividerMiddle)
-                }
-            }
-        } catch (e: Exception) {
-            throw (MissingThemeException())
-        }
-    }
-
-    private fun handleSizeAttr() {
-        try {
-            when (size) {
-                ICON_TYPE -> {
-                    setAttributes(R.attr.avatar)
-                }
-                LABEL_TYPE -> {
-                    setAttributes(R.attr.dividerInset)
-                }
-                else -> {
-                    setAttributes(R.attr.dividerMiddle)
-                }
-            }
-        } catch (e: Exception) {
-            throw (MissingThemeException())
-        }
-    }
-
-    private fun setAttributes(styleFromTheme: Int) {
-        context
-            .theme
-            .obtainStyledAttributes(attrs, R.styleable.Avatar, styleFromTheme, 0)
-            .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_colorBackground)
-                widthResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_width)
-                heightResourceAttribute = this.getResourceIdOrThrow(R.styleable.ProgressIndicator_pgid_height)
-            }
-    }
-
-
 
     companion object {
         const val STANDARD_SIZE = 0
