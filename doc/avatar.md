@@ -30,7 +30,6 @@ With the following attribute status:
 
 \
 \
-\
 
 ![Avatar](avatar.png)
 
