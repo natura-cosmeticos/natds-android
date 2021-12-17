@@ -28,6 +28,9 @@ With the following attribute status:
 * ✅ `avt_fallback_label` (available only in Image type)
 * ✅ `avt_content_description`
 
+
+
+
 ![Avatar](avatar.png)
 
 ## What is it?
