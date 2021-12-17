@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.natura.android.listitem.ListItem
 import com.natura.android.sample.R
@@ -22,9 +23,9 @@ class ListItemAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(position, list[position])
 
-//        holder.itemView.listItem.clickListener = {
-//            Toast.makeText(context, "Item Clicked", Toast.LENGTH_SHORT).show()
-//        }
+        holder.itemView.findViewById<ListItem>(R.id.listItem).clickListener = {
+            Toast.makeText(context, "Item Clicked", Toast.LENGTH_SHORT).show()
+        }
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
