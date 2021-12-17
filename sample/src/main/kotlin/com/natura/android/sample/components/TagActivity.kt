@@ -14,6 +14,8 @@ class TagActivity : AppCompatActivity() {
         setChosenDefaultTheme()
         super.onCreate(savedInstanceState)
 
+        binding = ActivityTagBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         supportActionBar?.title = "Tag"
