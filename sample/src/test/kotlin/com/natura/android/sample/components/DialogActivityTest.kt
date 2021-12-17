@@ -1,8 +1,10 @@
 package com.natura.android.sample.components
 
+import android.widget.Button
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
+import com.natura.android.sample.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,8 +22,8 @@ class DialogActivityTest {
 
     @Test
     fun dialogStandardButtonStartsDialogStandard() {
-        dialogActivityScenario.onActivity { dialogActivity ->
-            val buttonDialogStandard = dialogActivity.standardDialogButton
+        dialogActivityScenario.onActivity {
+            val buttonDialogStandard = it.findViewById<Button>(R.id.standardDialogButton)
             buttonDialogStandard.performClick()
 
             val dialogDisplayed = ShadowAlertDialog.getLatestDialog()
@@ -32,8 +34,8 @@ class DialogActivityTest {
 
     @Test
     fun dialogAlertButtonStartsDialogAlert() {
-        dialogActivityScenario.onActivity { dialogActivity ->
-            val buttonDialogAlert = dialogActivity.alertDialogButton
+        dialogActivityScenario.onActivity {
+            val buttonDialogAlert = it.findViewById<Button>(R.id.alertDialogButton)
             buttonDialogAlert.performClick()
 
             val dialogDisplayed = ShadowAlertDialog.getLatestDialog()

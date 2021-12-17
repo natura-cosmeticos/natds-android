@@ -1,5 +1,6 @@
 package com.natura.android.sample
 
+import androidx.cardview.widget.CardView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.Intents.intended
@@ -45,7 +46,7 @@ class BrandSelectorActivityTest {
     fun setChosenThemeAsNaturaWhenClickAtNaturaBrandButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.themeRepository = themeRepository
-            brandSelectorActivity.naturaThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.naturaThemeButton).performClick()
 
             verify {
                 themeRepository.saveChosenTheme(NATURA)
@@ -57,7 +58,7 @@ class BrandSelectorActivityTest {
     fun setChosenThemeAsAvonWhenClickAtAvonBrandButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.themeRepository = themeRepository
-            brandSelectorActivity.avonThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.avonThemeButton).performClick()
 
             verify {
                 themeRepository.saveChosenTheme(AVON)
@@ -69,7 +70,7 @@ class BrandSelectorActivityTest {
     fun setChosenThemeAsTheBodyShopWhenClickAtTheBodyShopBrandButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.themeRepository = themeRepository
-            brandSelectorActivity.tbsThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.tbsThemeButton).performClick()
 
             verify {
                 themeRepository.saveChosenTheme(TBS)
@@ -81,7 +82,7 @@ class BrandSelectorActivityTest {
     fun setChosenThemeAsTheAesopWhenClickAtAesopBrandButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
             brandSelectorActivity.themeRepository = themeRepository
-            brandSelectorActivity.aesopThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.aesopThemeButton).performClick()
 
             verify {
                 themeRepository.saveChosenTheme(AESOP)
@@ -92,7 +93,7 @@ class BrandSelectorActivityTest {
     @Test
     fun checksIfMainActivityIsOpenedWhenClickAtNaturaButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
-            brandSelectorActivity.naturaThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.naturaThemeButton).performClick()
 
             intended(hasComponent(MainActivity::class.java.name))
         }
@@ -101,7 +102,7 @@ class BrandSelectorActivityTest {
     @Test
     fun checksIfMainActivityIsOpenedWhenClickAtAvonButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
-            brandSelectorActivity.avonThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.avonThemeButton).performClick()
 
             intended(hasComponent(MainActivity::class.java.name))
         }
@@ -110,7 +111,7 @@ class BrandSelectorActivityTest {
     @Test
     fun checksIfMainActivityIsOpenedWhenClickAtTheBodyShopButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
-            brandSelectorActivity.tbsThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.tbsThemeButton).performClick()
 
             intended(hasComponent(MainActivity::class.java.name))
         }
@@ -119,7 +120,7 @@ class BrandSelectorActivityTest {
     @Test
     fun checksIfMainActivityIsOpenedWhenClickAtAesopButton() {
         brandSelectorActivityScenario.onActivity { brandSelectorActivity ->
-            brandSelectorActivity.aesopThemeButton.performClick()
+            brandSelectorActivity.findViewById<CardView>(R.id.aesopThemeButton).performClick()
 
             intended(hasComponent(MainActivity::class.java.name))
         }

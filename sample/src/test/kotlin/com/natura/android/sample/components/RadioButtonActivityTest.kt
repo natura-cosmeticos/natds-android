@@ -6,6 +6,8 @@ import android.graphics.Color
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.radiobutton.RadioButton
+import com.natura.android.sample.R
 import com.natura.android.sample.data.ThemeRepository
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -20,9 +22,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsNatura() {
         launchActivityWithNaturaTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioPrimary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioPrimary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioPrimary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioPrimary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -35,9 +37,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonSecondaryColorsWhenThemeIsNatura() {
         launchActivityWithNaturaTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioSecondary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioSecondary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioSecondary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioSecondary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -50,9 +52,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsAvon() {
         launchActivityWithAvonTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioPrimary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioPrimary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioPrimary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioPrimary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -67,9 +69,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonSecondaryColorsWhenThemeIsAvon() {
         launchActivityWithAvonTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioSecondary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioSecondary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioSecondary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioSecondary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -82,9 +84,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsTheBodyShop() {
         launchActivityWithBodyShopTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioPrimary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioPrimary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioPrimary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioPrimary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -97,9 +99,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonSecondaryColorsWhenThemeIsTheBodyShop() {
         launchActivityWithBodyShopTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioSecondary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioSecondary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioSecondary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioSecondary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -112,9 +114,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsAesop() {
         launchActivityWithAesopTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioPrimary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioPrimary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioPrimary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioPrimary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
@@ -127,9 +129,9 @@ class RadioButtonActivityTest {
     @Test
     fun checkRadioButtonSecondaryColorsWhenThemeIsAesop() {
         launchActivityWithAesopTheme()
-        selectionControlActivityScenario.onActivity { radioButtonActivity ->
-            val colorText = radioButtonActivity.radioSecondary.textColors.defaultColor
-            val colorByState = radioButtonActivity.radioSecondary.buttonTintList
+        selectionControlActivityScenario.onActivity {
+            val colorText = it.findViewById<RadioButton>(R.id.radioSecondary).textColors.defaultColor
+            val colorByState = it.findViewById<RadioButton>(R.id.radioSecondary).buttonTintList
             val state = listOf(android.R.attr.state_selected).toIntArray()
 
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)

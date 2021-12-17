@@ -1,7 +1,9 @@
 package com.natura.android.sample.tokens
 
+import androidx.cardview.widget.CardView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.R
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -19,8 +21,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeNoneValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeNone.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeNone).width
 
             assertEquals(0, cardWith)
         }
@@ -28,8 +30,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeMicroValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeMicro.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeMicro).width
 
             assertEquals(4, cardWith)
         }
@@ -37,8 +39,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeTinyValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeTiny.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeTiny).width
 
             assertEquals(8, cardWith)
         }
@@ -46,8 +48,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeSmallValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeSmall.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeSmall).width
 
             assertEquals(16, cardWith)
         }
@@ -55,8 +57,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeStandardValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeStandard.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeStandard).width
 
             assertEquals(24, cardWith)
         }
@@ -64,8 +66,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeSemiValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeSemi.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeSemi).width
 
             assertEquals(32, cardWith)
         }
@@ -73,8 +75,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeSemiXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeSemiX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeSemiX).width
 
             assertEquals(40, cardWith)
         }
@@ -82,8 +84,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeMediumValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeMedium.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeMedium).width
 
             assertEquals(48, cardWith)
         }
@@ -91,8 +93,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeMediumXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeMediumX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeMediumX).width
 
             assertEquals(56, cardWith)
         }
@@ -100,8 +102,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeLargeValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeLarge.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeLarge).width
 
             assertEquals(64, cardWith)
         }
@@ -109,8 +111,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeLargeXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeLargeX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeLargeX).width
 
             assertEquals(72, cardWith)
         }
@@ -118,8 +120,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeLargeXXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeLargeXX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeLargeXX).width
 
             assertEquals(80, cardWith)
         }
@@ -127,8 +129,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeLargeXXXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeLargeXXX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeLargeXXX).width
 
             assertEquals(88, cardWith)
         }
@@ -136,8 +138,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeHugeValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeHuge.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeHuge).width
 
             assertEquals(96, cardWith)
         }
@@ -145,8 +147,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeHugeXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeHugeX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeHugeX).width
 
             assertEquals(128, cardWith)
         }
@@ -154,8 +156,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeHugeXXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeHugeXX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeHugeXX).width
 
             assertEquals(144, cardWith)
         }
@@ -163,8 +165,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeHugeXXXValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeHugeXXX.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeHugeXXX).width
 
             assertEquals(192, cardWith)
         }
@@ -172,8 +174,8 @@ class SizeActivityTest {
 
     @Test
     fun checksSizeVeryHugeValue() {
-        sizeActivityScenario.onActivity { sizeActivity ->
-            val cardWith = sizeActivity.cardSizeVeryHuge.width
+        sizeActivityScenario.onActivity {
+            val cardWith = it.findViewById<CardView>(R.id.cardSizeVeryHuge).width
 
             assertEquals(256, cardWith)
         }
