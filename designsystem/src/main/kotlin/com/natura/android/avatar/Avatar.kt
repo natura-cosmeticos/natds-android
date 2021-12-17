@@ -37,12 +37,10 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.core.content.res.getFloatOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
-import coil.annotation.ExperimentalCoilApi
 import com.natura.android.R
 import coil.compose.rememberImagePainter
 import com.natura.android.extensions.printInitials
 
-@ExperimentalCoilApi
 class Avatar : AbstractComposeView {
 
     private var sizeResourceAttribute by mutableStateOf(0)
@@ -77,6 +75,9 @@ class Avatar : AbstractComposeView {
     var type: Int = RESOURCE_NOT_DEFINED
     var icon: Int = RESOURCE_NOT_DEFINED
     var image: Int = RESOURCE_NOT_DEFINED
+        set(value) {
+            field = value
+        }
     var label: String = LABEL_FALLBACK_DEFAULT
     var url: String = ""
     var accessibilityDescription: String = ""
@@ -277,7 +278,7 @@ class Avatar : AbstractComposeView {
                 icon = getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
                 image = getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
                 label = getString(R.styleable.Avatar_avt_label) ?: LABEL_FALLBACK_DEFAULT
-                contentDescription = getString(R.styleable.Avatar_avt_content_description)
+                accessibilityDescription = getString(R.styleable.Avatar_avt_content_description) ?: ""
                 labelFallback =
                     getString(R.styleable.Avatar_avt_fallback_label) ?: LABEL_FALLBACK_DEFAULT
                 url = getString(R.styleable.Avatar_avt_image_url) ?: ""
