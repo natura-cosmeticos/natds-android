@@ -110,9 +110,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="standard"
+        app:avt_type="label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithIconDescription" />
 
@@ -131,9 +131,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="semi"
+        app:avt_type="label"
         app:layout_constraintStart_toEndOf="@id/standardAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithIconDescription" />
 
@@ -152,9 +152,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="label"
         app:avt_label="Guilherme Leonel"
         app:avt_size="semix"
+        app:avt_type="label"
         app:layout_constraintStart_toEndOf="@id/semiAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithIconDescription" />
 
@@ -173,8 +173,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="label"
         app:avt_label="Guilherme Leonel"
+        app:avt_type="label"
         app:layout_constraintStart_toEndOf="@id/semixAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithIconDescription" />
 
@@ -193,9 +193,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingSemi"
-        app:avt_type="label"
         app:avt_label="GL"
         app:avt_size="largexxx"
+        app:avt_type="label"
         app:layout_constraintStart_toEndOf="@id/mediumAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithIconDescription" />
 
@@ -215,9 +215,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="image"
-        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_image="@mipmap/nat_avatar"
         app:avt_size="standard"
+        app:avt_type="image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithLabelDescription" />
 
@@ -236,9 +236,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="image"
-        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_image="@mipmap/nat_avatar"
         app:avt_size="semi"
+        app:avt_type="image"
         app:layout_constraintStart_toEndOf="@id/standardAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithLabelDescription" />
 
@@ -257,9 +257,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="image"
-        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_image="@mipmap/nat_avatar"
         app:avt_size="semix"
+        app:avt_type="image"
         app:layout_constraintStart_toEndOf="@id/semiAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithLabelDescription" />
 
@@ -278,9 +278,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingLarge"
-        app:avt_type="image"
-        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_image="@mipmap/nat_avatar"
         app:avt_size="medium"
+        app:avt_type="image"
         app:layout_constraintStart_toEndOf="@id/semixAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithLabelDescription" />
 
@@ -299,9 +299,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="?spacingSemi"
         android:layout_marginTop="?spacingSemi"
-        app:avt_type="image"
+        app:avt_image="@mipmap/nat_avatar"
         app:avt_size="largexxx"
-        app:avt_image="@drawable/textfield_image_arealimit"
+        app:avt_type="image"
         app:layout_constraintStart_toEndOf="@id/mediumAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithLabelDescription" />
 

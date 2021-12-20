@@ -291,16 +291,7 @@ class Avatar : AbstractComposeView {
     }
 
     private fun getAttributesFromTheme() {
-        handleTypeAttr()
         handleSizeAttr()
-    }
-
-    private fun handleTypeAttr() {
-        when (type) {
-            ICON_TYPE -> setTypeAttributes(R.attr.avatarWithIcon)
-            LABEL_TYPE -> setTypeAttributes(R.attr.avatarWithLabel)
-            else -> setTypeAttributes(R.attr.avatarWithImage)
-        }
     }
 
     private fun handleSizeAttr() {
@@ -313,27 +304,19 @@ class Avatar : AbstractComposeView {
         }
     }
 
-    private fun setTypeAttributes(styleFromTheme: Int) {
-        context
-            .theme
-            .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
-            .apply {
-                backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_colorBackground)
-                fontFamilyResourceAttribute =
-                    this.getStringOrThrow(R.styleable.AvatarStyle_android_fontFamily)
-                textColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textColor)
-                paddingResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_padding)
-            }
-    }
-
     private fun setSizeAttributes(styleFromTheme: Int) {
         context
             .theme
             .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
             .apply {
+                backgroundColorResourceAttribute =
+                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_colorBackground)
+                fontFamilyResourceAttribute =
+                    this.getStringOrThrow(com.natura.android.R.styleable.AvatarStyle_android_fontFamily)
+                textColorResourceAttribute =
+                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_textColor)
+                paddingResourceAttribute =
+                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_padding)
                 sizeResourceAttribute =
                     this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_view_size)
                 iconSizeResourceAttribute =

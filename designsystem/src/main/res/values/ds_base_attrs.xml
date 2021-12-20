@@ -126,10 +126,6 @@
     <attr name="radioButtonStyleSecondary" format="reference"/>
 
     <!-- Avatar references -->
-    <attr name="avatarWithImage" format="reference"/>
-    <attr name="avatarWithIcon" format="reference"/>
-    <attr name="avatarWithLabel" format="reference"/>
-
     <attr name="avatarStandard" format="reference"/>
     <attr name="avatarSemi" format="reference"/>
     <attr name="avatarSemix" format="reference"/>
