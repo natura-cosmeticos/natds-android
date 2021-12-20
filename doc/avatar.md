@@ -60,7 +60,7 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_size="standard"` //standard, semi, semix, medium, largexxx
+    app:avt_size="standard" //standard, semi, semix, medium, largexxx
     
     avatarInActivity.size = Avatar.STANDARD_SIZE  //STANDARD_SIZE, SEMI_SIZE, SEMIX_SIZE, MEDIUM_SIZE, LARGE_SIZE
 
@@ -70,17 +70,18 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_size="icon"` //icon, label, image
+    app:avt_size="icon" //icon, label, image
     
     avatarInActivity.type = Avatar.ICON_TYPE  //ICON_TYPE, LABEL_TYPE, IMAGE_TYPE
 
-````
+```
 
 `Icon:`
 
 ```android
     
-    app:avt_icon="@drawable/yourIcon"`
+    app:avt_icon="@drawable/yourIcon"
+    
     avatarInActivity.icon = R.drawable.yourIcon
 
 ```
@@ -89,7 +90,8 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_image="@drawable/yourImage"`
+    app:avt_image="@drawable/yourImage"
+    
     avatarInActivity.icon = R.drawable.yourImage
 
 ```
@@ -98,7 +100,8 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_url_image="http://www.natura.com.br/yourimage.jpg"`
+    app:avt_url_image="http://www.natura.com.br/yourimage.jpg"
+    
     avatarInActivity.icon = "http://www.natura.com.br/yourimage.jpg"
 
 ```
@@ -107,7 +110,8 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_label="Design System"`
+    app:avt_label="Design System"
+    
     avatarInActivity.icon = "Design System"
 
 ```
@@ -117,6 +121,7 @@ Add the Avatar component in your xml layout file
 ```android
     
     app:avt_fallback_icon="@drawable/yourIcon"`
+    
     avatarInActivity.labelfallback = R.drawable.yourIcon
 
 ```
@@ -125,7 +130,8 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_fallback_label="Design System"`
+    app:avt_fallback_label="Design System"
+    
     avatarInActivity.labelFallback = "Design System"
 
 ```
@@ -134,7 +140,8 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_content_description="Perfil de Design System"`
+    app:avt_content_description="Perfil de Design System"
+    
     avatarInActivity.labelFallback = "Perfil de Design System"
 
 ```
