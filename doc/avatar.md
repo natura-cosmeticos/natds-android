@@ -1,35 +1,5 @@
 # Avatar Component
 
-#### Note:
-
-This component is available in the following variants:
-
-* ✅ Standard
-
-With the following attribute status:
-
-* Size:
-    * ✅ `Standard`
-    * ✅ `Semi`
-    * ✅ `SemiX`
-    * ✅ `Medium` (default)
-    * ✅ `LargeXXX`
-
-* Type:
-    * ✅ `Icon` (default)
-    * ✅ `Label`
-    * ✅ `Image`
-
-* ✅ `avt_icon` (available only in Icon type)
-* ✅ `avt_image` (available only in Image type)
-* ✅ `avt_image_url` (available only in Image type)
-* ✅ `avt_label` (available only in Label type)
-* ✅ `avt_fallback_icon` (available only in Image type)
-* ✅ `avt_fallback_label` (available only in Image type)
-* ✅ `avt_content_description`
-
-
-
 ![Avatar](avatar.png)
 
 ## What is it?
@@ -106,7 +76,7 @@ Add the Avatar component in your xml layout file
 
 ```
 
-`Label:`
+`Label: (only 3 three letters)` 
 
 ```android
     
@@ -120,7 +90,7 @@ Add the Avatar component in your xml layout file
 
 ```android
     
-    app:avt_fallback_icon="@drawable/yourIcon"`
+    app:avt_fallback_icon="@drawable/yourIcon"
     
     avatarInActivity.labelfallback = R.drawable.yourIcon
 

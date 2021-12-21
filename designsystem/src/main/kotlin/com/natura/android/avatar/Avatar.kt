@@ -39,7 +39,7 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
 import coil.compose.rememberImagePainter
-import com.natura.android.extensions.printInitials
+import com.natura.android.extensions.getInitials
 
 class Avatar : AbstractComposeView {
 
@@ -96,7 +96,7 @@ class Avatar : AbstractComposeView {
     ) {
         if (isVisible) {
             Text(
-                value.printInitials(),
+                value.getInitials(),
                 color = fontColor,
                 fontSize = textSize,
                 fontFamily = fontFamily,

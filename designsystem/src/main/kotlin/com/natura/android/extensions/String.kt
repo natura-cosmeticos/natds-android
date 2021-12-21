@@ -1,15 +1,14 @@
 package com.natura.android.extensions
 
-fun String.printInitials(): String {
-    val textParts = this.split(" ").toTypedArray()
-    val firstPart = textParts[0]
-    val firstPartChar = firstPart[0]
-    var lastPartChar = ""
-    if (textParts.size > 1) {
-        val lastPart = textParts[textParts.size - 1]
-        lastPartChar = lastPart[0].toString()
-    } else if (firstPart.length > 1) {
-        lastPartChar = firstPart[1].toString()
+fun String.getInitials(): String {
+
+    if (this.isEmpty()) {
+        return "NA"
     }
-    return firstPartChar + lastPartChar.uppercase()
+
+    if (this.length > 3) {
+        return this.substring(0, 3)
+    }
+
+    return this.substring(0, this.length)
 }
