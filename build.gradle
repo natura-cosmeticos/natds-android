@@ -5,6 +5,8 @@ buildscript {
     ext.android_tools_gradle = '4.2.0'
     ext.screen_shot_plugin = '0.14.0'
     ext.dokka_version_plugin = '1.5.31'
+    ext.lintVersion = '27.2.1'
+
     repositories {
         google()
         mavenCentral()
