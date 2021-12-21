@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/natura_horizontal"
-                app:tint="@color/black" />
+                app:tint="@color/black"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -111,10 +111,10 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:alpha="?opacity03"
                 app:srcCompat="@drawable/logo_natura_co"
-                app:tint="@color/black" />
-        </androidx.cardview.widget.CardView>
+                app:tint="@color/black"
+                android:alpha="?opacity03"/>
+            </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/tbsThemeButton"
@@ -131,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/tbs_horizontal"
-                app:tint="@color/black" />
-        </androidx.cardview.widget.CardView>
+                app:tint="@color/black"/>
+            </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

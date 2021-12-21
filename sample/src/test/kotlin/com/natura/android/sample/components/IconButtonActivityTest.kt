@@ -2,7 +2,8 @@ package com.natura.android.sample.components
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import kotlinx.android.synthetic.main.activity_icon_button.*
+import com.natura.android.iconButton.IconButton
+import com.natura.android.sample.R
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
@@ -19,8 +20,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Semi is render, it SHOULD have 40dp of width including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonWidth = activity.iconButtonSizeSemi.width
+        activity.onActivity {
+            val iconButtonWidth = it.findViewById<IconButton>(R.id.iconButtonSizeSemi).width
 
             Assert.assertEquals(40, iconButtonWidth)
         }
@@ -28,8 +29,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Semi is render, it SHOULD have 40dp of height including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonHeight = activity.iconButtonSizeSemi.height
+        activity.onActivity {
+            val iconButtonHeight = it.findViewById<IconButton>(R.id.iconButtonSizeSemi).height
 
             Assert.assertEquals(40, iconButtonHeight)
         }
@@ -37,8 +38,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Semix is render, it SHOULD have 48dp of width including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonWidth = activity.iconButtonSizeSemix.width
+        activity.onActivity {
+            val iconButtonWidth = it.findViewById<IconButton>(R.id.iconButtonSizeSemix).width
 
             Assert.assertEquals(48, iconButtonWidth)
         }
@@ -46,8 +47,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Semix is render, it SHOULD have 48dp of height including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonHeight = activity.iconButtonSizeSemix.height
+        activity.onActivity {
+            val iconButtonHeight = it.findViewById<IconButton>(R.id.iconButtonSizeSemix).height
 
             Assert.assertEquals(48, iconButtonHeight)
         }
@@ -55,8 +56,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Medium is render, it SHOULD have 56dp of width including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonWidth = activity.iconButtonSizeMedium.width
+        activity.onActivity {
+            val iconButtonWidth = it.findViewById<IconButton>(R.id.iconButtonSizeMedium).width
 
             Assert.assertEquals(56, iconButtonWidth)
         }
@@ -64,8 +65,8 @@ internal class IconButtonActivityTest {
 
     @Test
     fun `WHEN IconButton with Size Medium is render, it SHOULD have 56dp of height including padding`() {
-        activity.onActivity { activity ->
-            val iconButtonHeight = activity.iconButtonSizeMedium.height
+        activity.onActivity {
+            val iconButtonHeight = it.findViewById<IconButton>(R.id.iconButtonSizeMedium).height
 
             Assert.assertEquals(56, iconButtonHeight)
         }

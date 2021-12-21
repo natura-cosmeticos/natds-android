@@ -3,7 +3,8 @@ package com.natura.android.sample.components
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.activity_tag.*
+import com.natura.android.sample.R
+import com.natura.android.tag.Tag
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,8 +20,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagPrimaryLabelContent() {
-        tagScenario.onActivity { activity ->
-            val primary = activity.tagPrimary
+        tagScenario.onActivity {
+            val primary = it.findViewById<Tag>(R.id.tagPrimary)
 
             Truth.assertThat(primary.getLabel()).isEqualTo("Center Primary Small")
         }
@@ -28,8 +29,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagPrimaryType() {
-        tagScenario.onActivity { activity ->
-            val primary = activity.tagPrimary
+        tagScenario.onActivity {
+            val primary = it.findViewById<Tag>(R.id.tagPrimary)
 
             Truth.assertThat(primary.getType()).isEqualTo(TYPE_PRIMARY)
         }
@@ -37,8 +38,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagPrimaryPosition() {
-        tagScenario.onActivity { activity ->
-            val primary = activity.tagPrimary
+        tagScenario.onActivity {
+            val primary = it.findViewById<Tag>(R.id.tagPrimary)
 
             Truth.assertThat(primary.getPosition()).isEqualTo(POSITION_CENTER)
         }
@@ -46,8 +47,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagAlertLabelContent() {
-        tagScenario.onActivity { activity ->
-            val alert = activity.tagAlert
+        tagScenario.onActivity {
+            val alert = it.findViewById<Tag>(R.id.tagAlert)
 
             Truth.assertThat(alert.getLabel()).isEqualTo("Left Alert Standard")
         }
@@ -55,8 +56,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagAlertType() {
-        tagScenario.onActivity { activity ->
-            val alert = activity.tagAlert
+        tagScenario.onActivity {
+            val alert = it.findViewById<Tag>(R.id.tagAlert)
 
             Truth.assertThat(alert.getType()).isEqualTo(TYPE_ALERT)
         }
@@ -64,8 +65,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagAlertPosition() {
-        tagScenario.onActivity { activity ->
-            val alert = activity.tagAlert
+        tagScenario.onActivity {
+            val alert = it.findViewById<Tag>(R.id.tagAlert)
 
             Truth.assertThat(alert.getPosition()).isEqualTo(POSITION_LEFT)
         }
@@ -73,8 +74,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSecondaryLabelContent() {
-        tagScenario.onActivity { activity ->
-            val secondary = activity.tagSecondary
+        tagScenario.onActivity {
+            val secondary = it.findViewById<Tag>(R.id.tagSecondary)
 
             Truth.assertThat(secondary.getLabel()).isEqualTo("Center Secondary Standard")
         }
@@ -82,8 +83,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSecondaryType() {
-        tagScenario.onActivity { activity ->
-            val secondary = activity.tagSecondary
+        tagScenario.onActivity {
+            val secondary = it.findViewById<Tag>(R.id.tagSecondary)
 
             Truth.assertThat(secondary.getType()).isEqualTo(TYPE_SECONDARY)
         }
@@ -91,8 +92,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSecondaryPosition() {
-        tagScenario.onActivity { activity ->
-            val secondary = activity.tagSecondary
+        tagScenario.onActivity {
+            val secondary = it.findViewById<Tag>(R.id.tagSecondary)
 
             Truth.assertThat(secondary.getPosition()).isEqualTo(POSITION_CENTER)
         }
@@ -100,8 +101,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSuccessLabelContent() {
-        tagScenario.onActivity { activity ->
-            val success = activity.tagSuccess
+        tagScenario.onActivity {
+            val success = it.findViewById<Tag>(R.id.tagSuccess)
 
             Truth.assertThat(success.getLabel()).isEqualTo("Left Success Small")
         }
@@ -109,8 +110,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSuccessType() {
-        tagScenario.onActivity { activity ->
-            val success = activity.tagSuccess
+        tagScenario.onActivity {
+            val success = it.findViewById<Tag>(R.id.tagSuccess)
 
             Truth.assertThat(success.getType()).isEqualTo(TYPE_SUCCESS)
         }
@@ -118,8 +119,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagSuccessPosition() {
-        tagScenario.onActivity { activity ->
-            val success = activity.tagSuccess
+        tagScenario.onActivity {
+            val success = it.findViewById<Tag>(R.id.tagSuccess)
 
             Truth.assertThat(success.getPosition()).isEqualTo(POSITION_LEFT)
         }
@@ -127,8 +128,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagWarningLabelContent() {
-        tagScenario.onActivity { activity ->
-            val warning = activity.tagWarning
+        tagScenario.onActivity {
+            val warning = it.findViewById<Tag>(R.id.tagWarning)
 
             Truth.assertThat(warning.getLabel()).isEqualTo("Right Warning Small")
         }
@@ -136,8 +137,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagWarningType() {
-        tagScenario.onActivity { activity ->
-            val warning = activity.tagWarning
+        tagScenario.onActivity {
+            val warning = it.findViewById<Tag>(R.id.tagWarning)
 
             Truth.assertThat(warning.getType()).isEqualTo(TYPE_WARNING)
         }
@@ -145,8 +146,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagWarningPosition() {
-        tagScenario.onActivity { activity ->
-            val warning = activity.tagWarning
+        tagScenario.onActivity {
+            val warning = it.findViewById<Tag>(R.id.tagWarning)
 
             Truth.assertThat(warning.getPosition()).isEqualTo(POSITION_RIGHT)
         }
@@ -154,8 +155,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagLinkLabelContent() {
-        tagScenario.onActivity { activity ->
-            val link = activity.tagLink
+        tagScenario.onActivity {
+            val link = it.findViewById<Tag>(R.id.tagLink)
 
             Truth.assertThat(link.getLabel()).isEqualTo("Right Link Standard")
         }
@@ -163,8 +164,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagLinkType() {
-        tagScenario.onActivity { activity ->
-            val link = activity.tagLink
+        tagScenario.onActivity {
+            val link = it.findViewById<Tag>(R.id.tagLink)
 
             Truth.assertThat(link.getType()).isEqualTo(TYPE_LINK)
         }
@@ -172,8 +173,8 @@ class TagActivityTest {
 
     @Test
     fun checkTagLinkPosition() {
-        tagScenario.onActivity { activity ->
-            val link = activity.tagLink
+        tagScenario.onActivity {
+            val link = it.findViewById<Tag>(R.id.tagLink)
 
             Truth.assertThat(link.getPosition()).isEqualTo(POSITION_RIGHT)
         }

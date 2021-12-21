@@ -6,10 +6,11 @@ import android.os.Handler
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.AlphaAnimation
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_splash.*
+import com.natura.android.sample.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
     lateinit var mDelayHandler: Handler
+    private lateinit var binding: ActivitySplashBinding
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
@@ -21,13 +22,15 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val fadeIn = AlphaAnimation(0f, 1f)
         fadeIn.interpolator = AccelerateInterpolator()
         fadeIn.duration = 2000
 
-        splashContainer.apply {
+        binding.splashContainer.apply {
             animation = fadeIn
         }
 

@@ -1,10 +1,10 @@
-package com.natura.android.sample.components
+package com.natura.android.sample.tokens
 
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.natura.android.sample.tokens.SpacingActivity
-import kotlinx.android.synthetic.main.activity_spacing.*
+import com.natura.android.sample.R
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -22,8 +22,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingNoneValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTop.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTop).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(0, marginValue.bottomMargin)
         }
@@ -31,8 +31,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingMicroValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopMicro.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopMicro).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(4, marginValue.bottomMargin)
         }
@@ -40,8 +40,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingTinyValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopTiny.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopTiny).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(8, marginValue.bottomMargin)
         }
@@ -49,8 +49,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingSmallValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopSmall.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopSmall).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(16, marginValue.bottomMargin)
         }
@@ -58,8 +58,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingStandardValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopStandard.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopStandard).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(24, marginValue.bottomMargin)
         }
@@ -67,8 +67,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingSemiValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopSemi.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopSemi).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(32, marginValue.bottomMargin)
         }
@@ -76,8 +76,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingLargeValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopLarge.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopLarge).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(48, marginValue.bottomMargin)
         }
@@ -85,8 +85,8 @@ class SpacingActivityTest {
 
     @Test
     fun checksSpacingXLargeValue() {
-        spacingActivityScenario.onActivity { spacingActivity ->
-            val marginValue = spacingActivity.cardFirstTopXLarge.layoutParams as ViewGroup.MarginLayoutParams
+        spacingActivityScenario.onActivity {
+            val marginValue = it.findViewById<CardView>(R.id.cardFirstTopXLarge).layoutParams as ViewGroup.MarginLayoutParams
 
             assertEquals(64, marginValue.bottomMargin)
         }

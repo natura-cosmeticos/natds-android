@@ -4,13 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.AppBarTopActivity
-import kotlinx.android.synthetic.main.activity_appbartop_attributes.*
+import com.natura.android.sample.databinding.ActivityAppbartopAttributesBinding
 
 class AppBarTopAttributesActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityAppbartopAttributesBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_appbartop_attributes)
+
+        binding = ActivityAppbartopAttributesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.title = this.getString(R.string.app_title)
         setButtonsActions()
@@ -18,27 +22,27 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
 
     private fun setButtonsActions() {
 
-        btnTwoActions.setOnClickListener {
+        binding.btnTwoActions.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_TWOACTIONS))
         }
 
-        btnTitleCenter.setOnClickListener {
+        binding.btnTitleCenter.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_TITLE_CENTER))
         }
 
-        btnTItleAndThreeActions.setOnClickListener {
+        binding.btnTItleAndThreeActions.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_THREE_ACTIONS))
         }
 
-        btnSearch.setOnClickListener {
+        binding.btnSearch.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_SEARCH))
         }
 
-        btnThreeActionsRight.setOnClickListener {
+        binding.btnThreeActionsRight.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT))
         }
 
-        btnActionButton.setOnClickListener {
+        binding.btnActionButton.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_BUTTON))
         }
     }

@@ -1,9 +1,11 @@
 package com.natura.android.sample.components
 
+import android.widget.TextView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
-import kotlinx.android.synthetic.main.activity_shortcut.*
+import com.natura.android.sample.R
+import com.natura.android.shortcut.Shortcut
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,9 +21,9 @@ class ShortcutActivityTest {
 
     @Test
     fun incrementCounterWhenTapAtContainedShortcut() {
-        shortcutActivityScenario.onActivity { shortcutActivity ->
-            val shortcutContained = shortcutActivity.shortcutContained1
-            val counter = shortcutActivity.counter
+        shortcutActivityScenario.onActivity {
+            val shortcutContained = it.findViewById<Shortcut>(R.id.firstShortcutContained)
+            val counter = it.findViewById<TextView>(R.id.counter)
 
             shortcutContained.performClick()
 
@@ -31,9 +33,9 @@ class ShortcutActivityTest {
 
     @Test
     fun incrementCounterWhenTapAtOutlinedShortcut() {
-        shortcutActivityScenario.onActivity { shortcutActivity ->
-            val shortcutOutlined = shortcutActivity.shortcutOutlined1
-            val counter = shortcutActivity.counter
+        shortcutActivityScenario.onActivity {
+            val shortcutOutlined = it.findViewById<Shortcut>(R.id.firstShorcutOutlined)
+            val counter = it.findViewById<TextView>(R.id.counter)
 
             shortcutOutlined.performClick()
 

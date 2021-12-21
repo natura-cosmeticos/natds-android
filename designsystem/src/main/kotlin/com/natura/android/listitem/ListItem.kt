@@ -6,8 +6,8 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
 import com.natura.android.R
+import com.natura.android.divider.Divider
 import com.natura.android.exceptions.MissingThemeException
-import kotlinx.android.synthetic.main.list_item_dividers.view.*
 
 class ListItem @JvmOverloads constructor(
     context: Context,
@@ -37,17 +37,17 @@ class ListItem @JvmOverloads constructor(
     }
 
     fun setDividerMiddle() {
-        dividerAttribute = Divider.MIDDLE.value
+        dividerAttribute = DividerTypes.MIDDLE.value
         showDivider()
     }
 
     fun setDividerInset() {
-        dividerAttribute = Divider.INSET.value
+        dividerAttribute = DividerTypes.INSET.value
         showDivider()
     }
 
     fun setDividerFullbleed() {
-        dividerAttribute = Divider.FULLBLEED.value
+        dividerAttribute = DividerTypes.FULLBLEED.value
         showDivider()
     }
 
@@ -85,7 +85,7 @@ class ListItem @JvmOverloads constructor(
     fun getSelectableState(): Boolean = selectableAttribute
 
     private fun getListItemAttributes() {
-        dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, Divider.NONE.value)
+        dividerAttribute = listItemAttributesArray.getInt(R.styleable.ListItem_dividerBottom, DividerTypes.NONE.value)
         touchStateAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_touchState, false)
         selectableAttribute = listItemAttributesArray.getBoolean(R.styleable.ListItem_selectableState, false)
 
@@ -109,12 +109,12 @@ class ListItem @JvmOverloads constructor(
     }
 
     private fun showDivider() {
-        View.inflate(context, R.layout.list_item_dividers, this)
+        val listItemDividers = View.inflate(context, R.layout.list_item_dividers, this)
 
         when (dividerAttribute) {
-            Divider.INSET.value -> dividerInset.visibility = View.VISIBLE
-            Divider.MIDDLE.value -> dividerMiddle.visibility = View.VISIBLE
-            Divider.FULLBLEED.value -> dividerFullBleed.visibility = View.VISIBLE
+            DividerTypes.INSET.value -> listItemDividers.findViewById<Divider>(R.id.dividerInset).visibility = View.VISIBLE
+            DividerTypes.MIDDLE.value -> listItemDividers.findViewById<Divider>(R.id.dividerMiddle).visibility = View.VISIBLE
+            DividerTypes.FULLBLEED.value -> listItemDividers.findViewById<Divider>(R.id.dividerFullBleed).visibility = View.VISIBLE
         }
     }
 
@@ -151,7 +151,7 @@ class ListItem @JvmOverloads constructor(
     }
 }
 
-enum class Divider(val value: Int) {
+enum class DividerTypes(val value: Int) {
     NONE(0),
     FULLBLEED(1),
     INSET(2),

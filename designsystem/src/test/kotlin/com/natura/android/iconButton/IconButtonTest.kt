@@ -1,10 +1,11 @@
 package com.natura.android.iconButton
 
 import android.view.View
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth
 import com.natura.android.R
-import kotlinx.android.synthetic.main.icon_button.view.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Shadows
@@ -126,8 +127,8 @@ class IconButtonTest {
     fun checksIfWidthAndHeightWereSetWhenSizeIsSemi() {
         val iconButton = buildIconButtonSizeSemi()
 
-        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
-        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+        val sizeContainer = iconButton.findViewById<ConstraintLayout>(R.id.iconButtonContainer).layoutParams.width
+        val sizeIcon = iconButton.findViewById<ImageView>(R.id.iconButtonIcon).layoutParams.width
 
         Truth.assertThat(sizeIcon).isEqualTo(24)
         Truth.assertThat(sizeContainer).isEqualTo(32)
@@ -137,8 +138,8 @@ class IconButtonTest {
     fun checksIfWidthAndHeightWereSetWhenSizeIsSemiX() {
         val iconButton = buildIconButtonSizeSemiX()
 
-        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
-        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+        val sizeContainer = iconButton.findViewById<ConstraintLayout>(R.id.iconButtonContainer).layoutParams.width
+        val sizeIcon = iconButton.findViewById<ImageView>(R.id.iconButtonIcon).layoutParams.width
 
         Truth.assertThat(sizeIcon).isEqualTo(32)
         Truth.assertThat(sizeContainer).isEqualTo(40)
@@ -148,8 +149,8 @@ class IconButtonTest {
     fun checksIfWidthAndHeightWereSetWhenSizeIsMedium() {
         val iconButton = buildIconButtonSizeMedium()
 
-        val sizeContainer = iconButton.iconButtonContainer.layoutParams.width
-        val sizeIcon = iconButton.iconButtonContainer.iconButtonIcon.layoutParams.width
+        val sizeContainer = iconButton.findViewById<ConstraintLayout>(R.id.iconButtonContainer).layoutParams.width
+        val sizeIcon = iconButton.findViewById<ImageView>(R.id.iconButtonIcon).layoutParams.width
 
         Truth.assertThat(sizeIcon).isEqualTo(40)
         Truth.assertThat(sizeContainer).isEqualTo(48)
