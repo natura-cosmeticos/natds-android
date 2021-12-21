@@ -2,22 +2,31 @@
 <resources>
     <!-- DIALOG STYLES -->
     <style name="Theme.DS.Dialog.Standard" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Theme.DS.Dialog.Standard.SecondaryButton.V23
+        </item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>
 
     <style name="Theme.DS.Dialog.Alert" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Theme.DS.Dialog.Standard.SecondaryButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Theme.DS.Dialog.Standard.SecondaryButton.V23
+        </item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
     </style>
 
     <style name="Theme.DS.Dialog.ContainedButtons" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.V23
+        </item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
         <item name="android:layout_marginBottom">?spacingTiny</item>
@@ -25,8 +34,12 @@
     </style>
 
     <style name="Theme.DS.Dialog.TextButtons" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Theme.DS.Dialog.Standard.SecondaryButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Theme.DS.Dialog.Standard.SecondaryButton.V23
+        </item>
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
         <item name="android:layout_marginBottom">?spacingTiny</item>
@@ -182,6 +195,7 @@
     <style name="RobotoMedium">
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
     </style>
+
     <style name="RobotoRegular">
         <item name="android:fontFamily">?typographyFontWeightRegular</item>
     </style>
@@ -466,7 +480,7 @@
         <item name="iconColor">?colorLowEmphasis</item>
         <item name="customElevation">@dimen/ds_elevation00</item>
     </style>
-    
+
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
         <item name="colorBackground">?colorPrimary</item>
@@ -529,8 +543,7 @@
         <item name="customHeight">?sizeStandard</item>
     </style>
 
-    <style name="Widget.DS.Tag">
-    </style>
+    <style name="Widget.DS.Tag"></style>
 
     <style name="TextAppearance.DS.Tag" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">?tagLabelFontSize</item>
@@ -637,6 +650,66 @@
         <item name="android:lineSpacingMultiplier">?radioButtonLabelLineHeight</item>
     </style>
 
+    <!-- AVATAR STYLES -->
+
+    <style name="Widget.DS.Avatar">
+        <item name="colorBackground">?colorPrimary</item>
+        <item name="android:padding">?spacingMicro</item>
+        <item name="android:fontFamily">?avatarPrimaryFontWeight</item>
+        <item name="android:textColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.DS.Avatar.Standard" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeStandard</item>
+        <item name="avt_icon_size">?sizeSmall</item>
+        <item name="avt_image_size">?sizeStandard</item>
+        <item name="android:textSize">?avatarStandardFontSize</item>
+        <item name="android:letterSpacing">?avatarStandardLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarStandardLineHeight</item>
+        <item name="android:radius">?avatarStandardBorderRadius</item>
+
+    </style>
+
+    <style name="Widget.DS.Avatar.Semi" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeSemi</item>
+        <item name="avt_icon_size">?sizeStandard</item>
+        <item name="avt_image_size">?sizeSemi</item>
+        <item name="android:textSize">?avatarSemiFontSize</item>
+        <item name="android:letterSpacing">?avatarSemiLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarSemiLineHeight</item>
+        <item name="android:radius">?avatarSemiBorderRadius</item>
+    </style>
+
+    <style name="Widget.DS.Avatar.Semix" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeSemiX</item>
+        <item name="avt_icon_size">?sizeSemi</item>
+        <item name="avt_image_size">?sizeSemiX</item>
+        <item name="android:textSize">?avatarSemiXFontSize</item>
+        <item name="android:letterSpacing">?avatarSemiXLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarSemiXLineHeight</item>
+        <item name="android:radius">?avatarSemiXBorderRadius</item>
+    </style>
+
+    <style name="Widget.DS.Avatar.Medium" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeMedium</item>
+        <item name="avt_icon_size">?sizeSemiX</item>
+        <item name="avt_image_size">?sizeMedium</item>
+        <item name="android:textSize">?avatarMediumFontSize</item>
+        <item name="android:letterSpacing">?avatarMediumLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarMediumLineHeight</item>
+        <item name="android:radius">?avatarMediumBorderRadius</item>
+    </style>
+
+    <style name="Widget.DS.Avatar.Largexxx" parent="Widget.DS.Avatar">
+        <item name="avt_view_size">?sizeLargeXXX</item>
+        <item name="avt_icon_size">?sizeLargeXX</item>
+        <item name="avt_image_size">?sizeLargeXXX</item>
+        <item name="android:textSize">?avatarLargeXXXFontSize</item>
+        <item name="android:letterSpacing">?avatarLargeXXXLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?avatarLargeXXXLineHeight</item>
+        <item name="android:radius">?avatarLargeXXXBorderRadius</item>
+    </style>
+
     <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">?textFieldLabelFontSize</item>
         <item name="android:textColor">@color/colorMediumEmphasis</item>
@@ -663,6 +736,7 @@
         <item name="android:letterSpacing">?textFieldHelperTextLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?textFieldHelperTextLineHeight</item>
     </style>
-    <style name="Widget.DS"/>
+
+    <style name="Widget.DS" />
 
 </resources>

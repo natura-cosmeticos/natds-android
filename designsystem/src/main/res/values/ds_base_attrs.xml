@@ -125,6 +125,13 @@
     <attr name="radioButtonStyle" format="reference"/>
     <attr name="radioButtonStyleSecondary" format="reference"/>
 
+    <!-- Avatar references -->
+    <attr name="avatarStandard" format="reference"/>
+    <attr name="avatarSemi" format="reference"/>
+    <attr name="avatarSemix" format="reference"/>
+    <attr name="avatarMedium" format="reference"/>
+    <attr name="avatarLargexxx" format="reference"/>
+
     <!-- { @deprecated Attributes }-->
     <attr name="buttonDefaultFontSize" format="dimension" />
     <attr name="buttonDefaultFontWeight" formastring="string" />

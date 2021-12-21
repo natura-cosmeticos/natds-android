@@ -3,14 +3,14 @@ package com.natura.android.divider
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
-import android.view.View
+import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import com.natura.android.R
+import com.natura.android.databinding.DividerBinding
 import com.natura.android.exceptions.MissingThemeException
-import kotlinx.android.synthetic.main.divider.view.*
 
 /**
  * Divider is a thin line view with the purpose of separating content within a layout.
@@ -42,10 +42,11 @@ class Divider @JvmOverloads constructor(
     private var marginLeftResourceAttribute: Int = 0
     private var marginRightResourceAttribute: Int = 0
 
-    init {
+    private var binding: DividerBinding
 
+    init {
         try {
-            View.inflate(context, R.layout.divider, this)
+            binding = DividerBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
@@ -97,9 +98,9 @@ class Divider @JvmOverloads constructor(
     }
 
     private fun configureAppearance() {
-        this.dividerLine.setBackgroundColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        binding.dividerLine.setBackgroundColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
-        val marginLayoutParams = this.dividerLine.layoutParams as MarginLayoutParams
+        val marginLayoutParams = binding.dividerLine.layoutParams as MarginLayoutParams
 
         marginLayoutParams.setMargins(
             resources.getDimension(marginLeftResourceAttribute).toInt(),
@@ -107,7 +108,7 @@ class Divider @JvmOverloads constructor(
             resources.getDimension(marginRightResourceAttribute).toInt(),
             0
         )
-        this.dividerLine.layoutParams = marginLayoutParams
+        binding.dividerLine.layoutParams = marginLayoutParams
     }
 
     companion object {

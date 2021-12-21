@@ -4,14 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider.getApplicationContext
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.sample.R
 import com.natura.android.sample.data.ThemeRepository
-import kotlinx.android.synthetic.main.background_surface_colors.*
-import kotlinx.android.synthetic.main.content_colors.*
-import kotlinx.android.synthetic.main.feedback_colors.*
-import kotlinx.android.synthetic.main.primary_secondary_colors.*
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -25,9 +24,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#004236"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
@@ -38,9 +37,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#7CC4BC"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -51,9 +50,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryDarkColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryDarkContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryDarkCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#001D10"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
@@ -64,9 +63,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryDarkColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryDarkContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryDarkCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryDarkContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryDarkCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#4C938C"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -77,9 +76,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryLightColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryLightContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#356D60"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
@@ -90,9 +89,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfPrimaryLightColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorPrimaryLightContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorPrimaryLightCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryLightContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#AEF7EE"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -103,9 +102,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#D6CE4B"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -116,9 +115,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#F3F1A5"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -129,9 +128,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryDarkColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryDarkContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryDarkCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#A29D12"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -142,9 +141,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryDarkColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryDarkContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryDarkCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryDarkContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryDarkCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#BFBF75"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -155,9 +154,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryLightColorMatchesWithTheBodyShopTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryLightContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLightCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#FFFF7C"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -168,9 +167,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSecondaryLightColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSecondaryLightContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSecondaryLightCodeLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryLightContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLightCodeLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#FFFFD7"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
@@ -181,9 +180,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfBackgroundColorMatchesWithTheBodyShopLightTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorBackgroundContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorBackgroundLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorBackgroundContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorBackgroundLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#FAFAFA"), colorCode.color)
             assertEquals(Color.parseColor("#333333"), colorOnCode)
@@ -194,9 +193,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfBackgroundColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorBackgroundContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorBackgroundLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorBackgroundContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorBackgroundLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#121212"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
@@ -207,9 +206,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSurfaceColorMatchesWithTheBodyShopLightTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSurfaceContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSurfaceLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSurfaceContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSurfaceLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
             assertEquals(Color.parseColor("#333333"), colorOnCode)
@@ -220,9 +219,9 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfSurfaceColorMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorCode = colorsActivity.colorSurfaceContainer.background as ColorDrawable
-            val colorOnCode = colorsActivity.colorSurfaceLabel.textColors.defaultColor
+        colorsActivityScenario.onActivity {
+            val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSurfaceContainer).background as ColorDrawable
+            val colorOnCode = it.findViewById<TextView>(R.id.colorSurfaceLabel).textColors.defaultColor
 
             assertEquals(Color.parseColor("#333333"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
@@ -233,11 +232,11 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfContentColorsMatchesWithTheBodyShopLightTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorHighLight = colorsActivity.colorHighLightContainer.background as ColorDrawable
-            val colorHighEmphasis = colorsActivity.colorHighEmphasisContainer.background as ColorDrawable
-            val colorMediumEmphasis = colorsActivity.colorMediumEmphasisContainer.background as ColorDrawable
-            val colorLowEmphasis = colorsActivity.colorLowEmphasisContainer.background as ColorDrawable
+        colorsActivityScenario.onActivity {
+            val colorHighLight = it.findViewById<ConstraintLayout>(R.id.colorHighLightContainer).background as ColorDrawable
+            val colorHighEmphasis = it.findViewById<ConstraintLayout>(R.id.colorHighEmphasisContainer).background as ColorDrawable
+            val colorMediumEmphasis = it.findViewById<ConstraintLayout>(R.id.colorMediumEmphasisContainer).background as ColorDrawable
+            val colorLowEmphasis = it.findViewById<ConstraintLayout>(R.id.colorLowEmphasisContainer).background as ColorDrawable
 
             assertEquals(Color.parseColor("#000000"), colorHighLight.color)
             assertEquals(Color.parseColor("#333333"), colorHighEmphasis.color)
@@ -250,11 +249,11 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfContentColorsMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorHighLight = colorsActivity.colorHighLightContainer.background as ColorDrawable
-            val colorHighEmphasis = colorsActivity.colorHighEmphasisContainer.background as ColorDrawable
-            val colorMediumEmphasis = colorsActivity.colorMediumEmphasisContainer.background as ColorDrawable
-            val colorLowEmphasis = colorsActivity.colorLowEmphasisContainer.background as ColorDrawable
+        colorsActivityScenario.onActivity {
+            val colorHighLight = it.findViewById<ConstraintLayout>(R.id.colorHighLightContainer).background as ColorDrawable
+            val colorHighEmphasis = it.findViewById<ConstraintLayout>(R.id.colorHighEmphasisContainer).background as ColorDrawable
+            val colorMediumEmphasis = it.findViewById<ConstraintLayout>(R.id.colorMediumEmphasisContainer).background as ColorDrawable
+            val colorLowEmphasis = it.findViewById<ConstraintLayout>(R.id.colorLowEmphasisContainer).background as ColorDrawable
 
             assertEquals(Color.parseColor("#FFFFFF"), colorHighLight.color)
             assertEquals(Color.parseColor("#FAFAFA"), colorHighEmphasis.color)
@@ -267,11 +266,11 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfFeedbackColorsMatchesWithTheBodyShopLightTheme() {
         launchActivityScenarioWithLightMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorSuccess = colorsActivity.colorSuccessContainer.background as ColorDrawable
-            val colorWarning = colorsActivity.colorWarningContainer.background as ColorDrawable
-            val colorAlert = colorsActivity.colorAlertContainer.background as ColorDrawable
-            val colorLink = colorsActivity.colorLinkContainer.background as ColorDrawable
+        colorsActivityScenario.onActivity {
+            val colorSuccess = it.findViewById<ConstraintLayout>(R.id.colorSuccessContainer).background as ColorDrawable
+            val colorWarning = it.findViewById<ConstraintLayout>(R.id.colorWarningContainer).background as ColorDrawable
+            val colorAlert = it.findViewById<ConstraintLayout>(R.id.colorAlertContainer).background as ColorDrawable
+            val colorLink = it.findViewById<ConstraintLayout>(R.id.colorLinkContainer).background as ColorDrawable
 
             assertEquals(Color.parseColor("#569A32"), colorSuccess.color)
             assertEquals(Color.parseColor("#FCC433"), colorWarning.color)
@@ -284,11 +283,11 @@ class ColorsActivityTheBodyShopTest {
     fun checksIfFeedbackColorsMatchesWithTheBodyShopDarkTheme() {
         launchActivityScenarioWithDarkMode()
 
-        colorsActivityScenario.onActivity { colorsActivity ->
-            val colorSuccess = colorsActivity.colorSuccessContainer.background as ColorDrawable
-            val colorWarning = colorsActivity.colorWarningContainer.background as ColorDrawable
-            val colorAlert = colorsActivity.colorAlertContainer.background as ColorDrawable
-            val colorLink = colorsActivity.colorLinkContainer.background as ColorDrawable
+        colorsActivityScenario.onActivity {
+            val colorSuccess = it.findViewById<ConstraintLayout>(R.id.colorSuccessContainer).background as ColorDrawable
+            val colorWarning = it.findViewById<ConstraintLayout>(R.id.colorWarningContainer).background as ColorDrawable
+            val colorAlert = it.findViewById<ConstraintLayout>(R.id.colorAlertContainer).background as ColorDrawable
+            val colorLink = it.findViewById<ConstraintLayout>(R.id.colorLinkContainer).background as ColorDrawable
 
             assertEquals(Color.parseColor("#569A32"), colorSuccess.color)
             assertEquals(Color.parseColor("#FCC433"), colorWarning.color)

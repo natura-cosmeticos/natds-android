@@ -9,7 +9,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
 import com.natura.android.resources.getColorTokenFromTheme
-import kotlinx.android.synthetic.main.ds_menu_view_in_layout.view.*
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotEquals
 import org.junit.Before
@@ -47,7 +46,7 @@ class MenuViewTest {
     @Config(sdk = [28])
     @Test
     fun checksIfDefaultIconIsSetWhenIconAttributeIsEmpty() {
-        val icon = shadowOf(layout.menuItemBase.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
+        val icon = shadowOf(layout.findViewById<MenuView>(R.id.menuItemBase).findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
 
         assertEquals(R.drawable.default_icon_outlined_default_mockup, icon.createdFromResId)
     }
@@ -55,36 +54,36 @@ class MenuViewTest {
     @Config(sdk = [28])
     @Test
     fun checksIfIconDrawableWasSetWhenAttributeIsFilledWithIconName() {
-        val icon = shadowOf(layout.menuItemWithIcon.findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
+        val icon = shadowOf(layout.findViewById<MenuView>(R.id.menuItemWithIcon).findViewById<AppCompatImageView>(R.id.ds_menu_icon).drawable)
 
         assertEquals(R.drawable.default_icon_outlined_action_cancel, icon.createdFromResId)
     }
 
     @Test
     fun checksLabelValueWhenMenuInflated() {
-        val label = layout.menuItemBase.label
+        val label = layout.findViewById<MenuView>(R.id.menuItemBase).label
 
         assertEquals("Menu item to test", label)
     }
 
     @Test
     fun checksLowEmphasisIsFalseByDefault() {
-        val isLowEmphasis = layout.menuItemBase.isLowEmphasis
+        val isLowEmphasis = layout.findViewById<MenuView>(R.id.menuItemBase).isLowEmphasis
 
         assertEquals(false, isLowEmphasis)
     }
 
     @Test
     fun checksColorIsLowEmphasisWhenSetTrue() {
-        layout.menuItemBase.isLowEmphasis = true
+        layout.findViewById<MenuView>(R.id.menuItemBase).isLowEmphasis = true
 
-        assertEquals(getColorTokenFromTheme(activityController.get(), R.attr.colorLowEmphasis), layout.menuItemBase.getLabelColor())
+        assertEquals(getColorTokenFromTheme(activityController.get(), R.attr.colorLowEmphasis), layout.findViewById<MenuView>(R.id.menuItemBase).getLabelColor())
     }
 
     @Test
     fun checksColorIsLowEmphasisWhenSetFalse() {
-        layout.menuItemBase.isLowEmphasis = false
+        layout.findViewById<MenuView>(R.id.menuItemBase).isLowEmphasis = false
 
-        assertNotEquals(getColorTokenFromTheme(activityController.get(), R.attr.colorLowEmphasis), layout.menuItemBase.getLabelColor())
+        assertNotEquals(getColorTokenFromTheme(activityController.get(), R.attr.colorLowEmphasis), layout.findViewById<MenuView>(R.id.menuItemBase).getLabelColor())
     }
 }

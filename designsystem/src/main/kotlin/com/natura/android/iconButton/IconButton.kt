@@ -3,6 +3,7 @@ package com.natura.android.iconButton
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -12,10 +13,10 @@ import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
 import com.natura.android.badge.BadgeDrawable
+import com.natura.android.databinding.IconButtonBinding
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
-import kotlinx.android.synthetic.main.icon_button.view.*
 
 class IconButton @JvmOverloads constructor(
     context: Context,
@@ -39,13 +40,11 @@ class IconButton @JvmOverloads constructor(
     private var styleAttribute: Int = 0
     private var enabledAttribute: Boolean = true
 
-    private val iconButton by lazy { findViewById<ImageView>(R.id.iconButtonIcon) }
-    private val iconButtonContainer by lazy { findViewById<ConstraintLayout>(R.id.iconButtonContainer) }
-    private val badgeContainer by lazy { findViewById<ImageView>(R.id.iconButtonBadgeContainer) }
+    private lateinit var binding: IconButtonBinding
 
     init {
         try {
-            View.inflate(context, R.layout.icon_button, this)
+            binding = IconButtonBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
             throw (MissingThemeException())
         }
@@ -71,13 +70,13 @@ class IconButton @JvmOverloads constructor(
 
     private fun configureNotification() {
         if (notifyAttribute > 0) {
-            badgeContainer.visibility = View.VISIBLE
-            BadgeDrawable(context, notifyAttribute, badgeContainer.drawable, 0, 0, 0, false)
+            binding.iconButtonBadgeContainer.visibility = View.VISIBLE
+            BadgeDrawable(context, notifyAttribute, binding.iconButtonBadgeContainer.drawable, 0, 0, 0, false)
         }
     }
 
     override fun setEnabled(enabled: Boolean) {
-        iconButton.isEnabled = enabled
+        binding.iconButtonIcon.isEnabled = enabled
         if (!enabled) {
             if (styleAttribute == Style.OVERLAY.value) {
                 setDisabledIconColorWithOverlayStyle()
@@ -92,14 +91,14 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun setDisabledIconColor() {
-        iconButton.setColorFilter(
+        binding.iconButtonIcon.setColorFilter(
             getColorTokenFromTheme(context, R.attr.colorMediumEmphasis),
             android.graphics.PorterDuff.Mode.SRC_IN
         )
     }
 
     private fun setDisabledIconColorWithOverlayStyle() {
-        iconButton.setColorFilter(
+        binding.iconButtonIcon.setColorFilter(
             getColorTokenFromTheme(context, R.attr.colorLowEmphasis),
             android.graphics.PorterDuff.Mode.SRC_IN
         )
@@ -108,16 +107,16 @@ class IconButton @JvmOverloads constructor(
     fun setIcon(icon: String?) {
         icon?.apply {
             val iconDrawableId = getIconResourceIdFromName(context, icon)
-            iconButton.setImageResource(iconDrawableId)
+            binding.iconButtonIcon.setImageResource(iconDrawableId)
         }
     }
 
     fun getIcon(): ImageView {
-        return iconButton
+        return binding.iconButtonIcon
     }
 
     fun getBadge(): ImageView {
-        return badgeContainer
+        return binding.iconButtonBadgeContainer
     }
 
     fun getColor(): Int? {
@@ -289,35 +288,35 @@ class IconButton @JvmOverloads constructor(
 
     private fun configureAppearance() {
         setIcon(iconNameAttribute)
-        iconButton.setColorFilter(
+        binding.iconButtonIcon.setColorFilter(
             ContextCompat.getColor(context, iconColorResourceAttribute),
             android.graphics.PorterDuff.Mode.SRC_IN
         )
-        iconButtonRippleBackground.background =
+        binding.iconButtonRippleBackground.background =
             resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
     }
 
     private fun configureSize() {
-        val containerlayoutParams = iconButtonContainer.layoutParams
+        val containerlayoutParams = binding.iconButtonContainer.layoutParams
         containerlayoutParams.height =
             resources.getDimension(backgroundSizeResourceAttribute).toInt()
         containerlayoutParams.width =
             resources.getDimension(backgroundSizeResourceAttribute).toInt()
 
-        iconButtonContainer.layoutParams = containerlayoutParams
+        binding.iconButtonContainer.layoutParams = containerlayoutParams
 
-        val iconLayoutParams = iconButton.layoutParams
+        val iconLayoutParams = binding.iconButtonIcon.layoutParams
         iconLayoutParams.height = resources.getDimension(iconSizeResourceAttribute).toInt()
         iconLayoutParams.width = resources.getDimension(iconSizeResourceAttribute).toInt()
 
-        iconButton.layoutParams = iconLayoutParams
+        binding.iconButtonIcon.layoutParams = iconLayoutParams
     }
 
     private fun configureStyle() {
         if (styleAttribute != Style.INHERIT.value) {
-            iconButtonContainer.background =
+            binding.iconButtonContainer.background =
                 resources.getDrawable(backgroundDrawableResourceAttribute, context.theme)
-            iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
+            binding.iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
         }
     }
 

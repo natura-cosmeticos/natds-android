@@ -5,10 +5,9 @@ import android.content.Intent
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.natura.android.logo.Logo
 import com.natura.android.sample.R
 import com.natura.android.sample.data.ThemeRepository
-import kotlinx.android.synthetic.main.activity_brand_selector.view.*
-import kotlinx.android.synthetic.main.activity_logo.*
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
@@ -29,8 +28,8 @@ class LogoActivityTest {
     fun checksNaturaALogoResource() {
         launchActivityWithBrandTheme(NATURA, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.natura_a_official, logoShadow.createdFromResId)
@@ -41,8 +40,8 @@ class LogoActivityTest {
     fun checksNaturaADarkLogoResource() {
         launchActivityWithBrandTheme(NATURA, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.natura_a_official_dark, logoShadow.createdFromResId)
@@ -53,8 +52,8 @@ class LogoActivityTest {
     fun checksNaturaBLogoResource() {
         launchActivityWithBrandTheme(NATURA, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelB.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelB).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.natura_b_official, logoShadow.createdFromResId)
@@ -65,8 +64,8 @@ class LogoActivityTest {
     fun checksNaturaBDarkLogoResource() {
         launchActivityWithBrandTheme(NATURA, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelB.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelB).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.natura_b_official_dark, logoShadow.createdFromResId)
@@ -77,8 +76,8 @@ class LogoActivityTest {
     fun checksAvonALogoResource() {
         launchActivityWithBrandTheme(AVON, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.avon_a_official, logoShadow.createdFromResId)
@@ -89,8 +88,8 @@ class LogoActivityTest {
     fun checksAvonADarkLogoResource() {
         launchActivityWithBrandTheme(AVON, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.avon_a_official_dark, logoShadow.createdFromResId)
@@ -101,8 +100,8 @@ class LogoActivityTest {
     fun checksAesopALogoResource() {
         launchActivityWithBrandTheme(AESOP, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.aesop_a_official, logoShadow.createdFromResId)
@@ -113,8 +112,8 @@ class LogoActivityTest {
     fun checksAesopADarkLogoResource() {
         launchActivityWithBrandTheme(AESOP, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.aesop_a_official_dark, logoShadow.createdFromResId)
@@ -125,8 +124,8 @@ class LogoActivityTest {
     fun checksTbsALogoResource() {
         launchActivityWithBrandTheme(TBS, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.thebodyshop_a_official, logoShadow.createdFromResId)
@@ -137,8 +136,8 @@ class LogoActivityTest {
     fun checksTbsADarkLogoResource() {
         launchActivityWithBrandTheme(TBS, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelA.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.thebodyshop_a_official_dark, logoShadow.createdFromResId)
@@ -149,8 +148,8 @@ class LogoActivityTest {
     fun checksTbsBLogoResource() {
         launchActivityWithBrandTheme(TBS, false)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelB.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelB).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.thebodyshop_b_official, logoShadow.createdFromResId)
@@ -161,8 +160,8 @@ class LogoActivityTest {
     fun checksTbsBDarkLogoResource() {
         launchActivityWithBrandTheme(TBS, true)
 
-        logoActivity.onActivity { logoActivity ->
-            val logo = logoActivity.logoModelB.getImageView()
+        logoActivity.onActivity {
+            val logo = it.findViewById<Logo>(R.id.logoModelB).getImageView()
             val logoShadow = shadowOf(logo)
 
             assertEquals(R.drawable.thebodyshop_b_official_dark, logoShadow.createdFromResId)

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/appBarContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/appbartop_button_action" android:visibility="gone"/>
-    <include layout="@layout/appbartop_search" android:visibility="gone"/>
-    <include layout="@layout/appbartop_threeactions" android:visibility="gone"/>
-    <include layout="@layout/appbartop_title_center" android:visibility="gone"/>
-    <include layout="@layout/appbartop_title_long" android:visibility="gone"/>
-    <include layout="@layout/appbartop_twoactions" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_button_action" layout="@layout/appbartop_button_action" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_search" layout="@layout/appbartop_search" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_threeactions" layout="@layout/appbartop_threeactions" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_title_center" layout="@layout/appbartop_title_center" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_title_long" layout="@layout/appbartop_title_long" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_twoactions" layout="@layout/appbartop_twoactions" android:visibility="gone"/>
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

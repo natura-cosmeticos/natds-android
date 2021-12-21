@@ -2,99 +2,96 @@ package com.natura.android.sample.components
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
-import com.natura.android.iconButton.IconButton
-import com.natura.android.sample.R
+import com.natura.android.sample.databinding.ActivityAppbarTopBinding
+import com.natura.android.sample.databinding.AppbartopButtonActionBinding
+import com.natura.android.sample.databinding.AppbartopSearchBinding
+import com.natura.android.sample.databinding.AppbartopThreeactionsBinding
+import com.natura.android.sample.databinding.AppbartopTitleCenterBinding
+import com.natura.android.sample.databinding.AppbartopTitleLongBinding
+import com.natura.android.sample.databinding.AppbartopTwoactionsBinding
 import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
-import kotlinx.android.synthetic.main.appbartop_threeactions.view.appBar
-import kotlinx.android.synthetic.main.appbartop_title_center.view.appBarTitleCenter
 
 class AppBarTopActivity : AppCompatActivity() {
 
-    private val appBarTopWithTwoActions by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithTwoActions) }
-    private val appBarTopWithTitleCenter by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithTitleCenter) }
-    private val appBarTopWithTitleLong by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithTitleLong) }
-    private val appBarTopWithSearch by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithSearch) }
-    private val appBarTopWithThreeActions by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithThreeActions) }
-    private val appBarTopWithButtonAction by lazy { findViewById<ConstraintLayout>(R.id.appBarTopWithButtonAction) }
-
-    private val buttonActionViewIconButtonActionRight by lazy { findViewById<IconButton>(R.id.buttonActionViewIconButtonActionRight) }
-    private val buttonActionViewOutlinedButtonActionRight by lazy { findViewById<Button>(R.id.buttonActionViewOutlinedButtonActionRight) }
-
-    private val searchViewIconButtonActionRight by lazy { findViewById<IconButton>(R.id.searchViewIconButtonActionRight) }
-    private val searchViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.searchViewIconButtonActionLeft) }
-
-    private val threeActionsViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.threeActionsViewIconButtonActionLeft) }
-    private val threeActionsViewFirstIconButtonActionRight by lazy { findViewById<IconButton>(R.id.threeActionsViewFirstIconButtonActionRight) }
-    private val threeActionsViewSecondIconButtonActionRight by lazy { findViewById<IconButton>(R.id.threeActionsViewSecondIconButtonActionRight) }
-    private val threeActionsViewThirdIconButtonActionRight by lazy { findViewById<IconButton>(R.id.threeActionsViewThirdIconButtonActionRight) }
-
-    private val titleCenterViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.titleCenterViewIconButtonActionLeft) }
-    private val titleCenterViewIconButtonActionRight by lazy { findViewById<IconButton>(R.id.titleCenterViewIconButtonActionRight) }
-
-    private val titleLongViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.titleLongViewIconButtonActionLeft) }
-    private val titleLongViewFirstIconButtonActionRight by lazy { findViewById<IconButton>(R.id.titleLongViewFirstIconButtonActionRight) }
-    private val titleLongViewSecondIconButtonActionRight by lazy { findViewById<IconButton>(R.id.titleLongViewSecondIconButtonActionRight) }
-    private val titleLongViewThirdIconButtonActionRight by lazy { findViewById<IconButton>(R.id.titleLongViewThirdIconButtonActionRight) }
-
-    private val twoActionsViewFirstIconButtonActionRight by lazy { findViewById<IconButton>(R.id.twoActionsViewFirstIconButtonActionRight) }
-    private val twoActionsViewSecondIconButtonActionRight by lazy { findViewById<IconButton>(R.id.twoActionsViewSecondIconButtonActionRight) }
-    private val twoActionsViewIconButtonActionLeft by lazy { findViewById<IconButton>(R.id.twoActionsViewIconButtonActionLeft) }
+    private lateinit var binding: ActivityAppbarTopBinding
+    private lateinit var layoutButtonActionBinding: AppbartopButtonActionBinding
+    private lateinit var layoutSearchBinding: AppbartopSearchBinding
+    private lateinit var layoutThreeActionsBinding: AppbartopThreeactionsBinding
+    private lateinit var layoutTitleCenterBinding: AppbartopTitleCenterBinding
+    private lateinit var layoutTitleLongBinding: AppbartopTitleLongBinding
+    private lateinit var layoutTwoActionsBinding: AppbartopTwoactionsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultWithNoActionBarTheme()
 
         super.onCreate(savedInstanceState)
 
+        binding = ActivityAppbarTopBinding.inflate(layoutInflater)
+
+        layoutButtonActionBinding = binding.appbartopButtonAction
+        layoutSearchBinding = binding.appbartopSearch
+        layoutThreeActionsBinding = binding.appbartopThreeactions
+        layoutTitleCenterBinding = binding.appbartopTitleCenter
+        layoutTwoActionsBinding = binding.appbartopTwoactions
+        layoutTitleLongBinding = binding.appbartopTitleLong
+
         val pattern = intent.getIntExtra("pattern", PATTERN_APPBARTOP_TWOACTIONS)
 
-        setContentView(R.layout.activity_appbar_top)
+        setContentView(binding.root)
 
-        setSupportActionBar(appBarTopWithThreeActions.appBar.toolbar)
-
-        appBarTopWithTitleCenter.appBarTitleCenter.setText("Title Center")
+        setSupportActionBar(layoutThreeActionsBinding.appBar.toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         createListeners()
 
         when (pattern) {
-            PATTERN_APPBARTOP_TWOACTIONS -> appBarTopWithTwoActions.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_TITLE_CENTER -> appBarTopWithTitleCenter.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_THREE_ACTIONS -> appBarTopWithTitleLong.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_SEARCH -> appBarTopWithSearch.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT -> appBarTopWithThreeActions.visibility = View.VISIBLE
-            PATTERN_APPBARTOP_BUTTON -> appBarTopWithButtonAction.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_TWOACTIONS -> layoutTwoActionsBinding.root.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_TITLE_CENTER -> layoutTitleCenterBinding.root.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_THREE_ACTIONS -> layoutTitleLongBinding.root.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_SEARCH -> layoutSearchBinding.root.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT -> layoutThreeActionsBinding.root.visibility = View.VISIBLE
+            PATTERN_APPBARTOP_BUTTON -> layoutButtonActionBinding.root.visibility = View.VISIBLE
         }
     }
 
     private fun createListeners() {
 
-        buttonActionViewIconButtonActionRight.setOnClickListener {}
-        buttonActionViewOutlinedButtonActionRight.setOnClickListener {}
+        layoutButtonActionBinding.apply {
+            buttonActionViewIconButtonActionRight.setOnClickListener {}
+            buttonActionViewOutlinedButtonActionRight.setOnClickListener {}
+        }
 
-        searchViewIconButtonActionRight.setOnClickListener {}
-        searchViewIconButtonActionLeft.setOnClickListener {}
+        layoutSearchBinding.apply {
+            searchViewIconButtonActionRight.setOnClickListener {}
+            searchViewIconButtonActionLeft.setOnClickListener {}
+        }
 
-        threeActionsViewIconButtonActionLeft.setOnClickListener {}
-        threeActionsViewFirstIconButtonActionRight.setOnClickListener {}
-        threeActionsViewSecondIconButtonActionRight.setOnClickListener {}
-        threeActionsViewThirdIconButtonActionRight.setOnClickListener {}
+        layoutThreeActionsBinding.apply {
+            threeActionsViewIconButtonActionLeft.setOnClickListener {}
+            threeActionsViewFirstIconButtonActionRight.setOnClickListener {}
+            threeActionsViewSecondIconButtonActionRight.setOnClickListener {}
+            threeActionsViewThirdIconButtonActionRight.setOnClickListener {}
+        }
 
-        titleCenterViewIconButtonActionLeft.setOnClickListener {}
-        titleCenterViewIconButtonActionRight.setOnClickListener {}
+        layoutTitleCenterBinding.apply {
+            titleCenterViewIconButtonActionLeft.setOnClickListener {}
+            titleCenterViewIconButtonActionRight.setOnClickListener {}
+        }
 
-        titleLongViewIconButtonActionLeft.setOnClickListener {}
-        titleLongViewFirstIconButtonActionRight.setOnClickListener {}
-        titleLongViewSecondIconButtonActionRight.setOnClickListener {}
-        titleLongViewThirdIconButtonActionRight.setOnClickListener {}
+        layoutTitleLongBinding.apply {
+            titleLongViewIconButtonActionLeft.setOnClickListener {}
+            titleLongViewFirstIconButtonActionRight.setOnClickListener {}
+            titleLongViewSecondIconButtonActionRight.setOnClickListener {}
+            titleLongViewThirdIconButtonActionRight.setOnClickListener {}
+        }
 
-        twoActionsViewFirstIconButtonActionRight.setOnClickListener {}
-        twoActionsViewSecondIconButtonActionRight.setOnClickListener {}
-
-        twoActionsViewIconButtonActionLeft.setOnClickListener {}
+        layoutTwoActionsBinding.apply {
+            twoActionsViewFirstIconButtonActionRight.setOnClickListener {}
+            twoActionsViewSecondIconButtonActionRight.setOnClickListener {}
+            twoActionsViewIconButtonActionLeft.setOnClickListener {}
+        }
     }
 
     companion object {
