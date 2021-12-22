@@ -26,7 +26,7 @@ class DrawableActivity : AppCompatActivity() {
                 IconsRepository(this).getIconsNamesFromFile()
             )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Icons (drawables)")
+        supportActionBar?.title = "Icons (drawables)"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
