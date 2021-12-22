@@ -68,10 +68,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, DrawableActivity::class.java))
         }
 
-        binding.btnIconsFont.setOnClickListener {
-            startActivity(Intent(this, IconActivity::class.java))
-        }
-
         binding.opacityTokensButton.setOnClickListener {
             startActivity(Intent(this, OpacityActivity::class.java))
         }

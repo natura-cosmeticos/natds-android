@@ -68,19 +68,7 @@
             android:text="Icons (drawables)"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
-
-        <Button
-            android:id="@+id/btnIconsFont"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:background="@color/surface"
-            android:drawableRight="@drawable/outlined_navigation_arrowleft"
-            android:padding="16dp"
-            android:text="Icons (fonts)"
-            android:textAlignment="textStart"
-            android:textColor="@color/highEmphasis" />
-
+        
         <Button
             android:id="@+id/opacityTokensButton"
             android:layout_width="match_parent"

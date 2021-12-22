@@ -46,17 +46,6 @@ class MainActivityTest {
     }
 
     @Test
-    fun checksIconFontsButtonClickStartsIconsFontsScreen() {
-        val button = mainActivity.findViewById<Button>(R.id.btnIconsFont)
-
-        button.performClick()
-        val startedIntent = shadowActivity.peekNextStartedActivity()
-        val shadowIntent = shadowOf(startedIntent)
-
-        assertEquals(IconActivity::class.java, shadowIntent.intentClass)
-    }
-
-    @Test
     fun checksIconDrawableButtonClickStartsIconsDrawableScreen() {
         val button = mainActivity.findViewById<Button>(R.id.btnIconsDrawables)
 
