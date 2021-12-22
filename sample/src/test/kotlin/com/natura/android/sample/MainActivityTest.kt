@@ -24,7 +24,6 @@ import com.natura.android.sample.tokens.SizeActivity
 import com.natura.android.sample.tokens.SpacingActivity
 import com.natura.android.sample.tokens.TypographyActivity
 import com.natura.android.sample.tokens.icons.DrawableActivity
-import com.natura.android.sample.tokens.icons.IconActivity
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

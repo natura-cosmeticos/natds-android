@@ -33,7 +33,6 @@ import com.natura.android.sample.tokens.OpacityActivity
 import com.natura.android.sample.tokens.SizeActivity
 import com.natura.android.sample.tokens.SpacingActivity
 import com.natura.android.sample.tokens.icons.DrawableActivity
-import com.natura.android.sample.tokens.icons.IconActivity
 import com.natura.android.sample.tokens.TypographyActivity
 
 class MainActivity : AppCompatActivity() {
