@@ -17,19 +17,17 @@ lintOptions {
     ignoreTestSources true
 }
 
-def kotlinVersion = "1.4.21"
-def lintVersion = "27.2.1"
 
 dependencies {
     compileOnly("com.android.tools.lint:lint-api:$lintVersion")
     compileOnly("com.android.tools.lint:lint-checks:$lintVersion")
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
-    compileOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
+    compileOnly("org.jetbrains.kotlin:kotlin-reflect:$kotlin_version")
 
     // Lint testing
     testImplementation("com.android.tools.lint:lint:$lintVersion")
     testImplementation("com.android.tools.lint:lint-tests:$lintVersion")
-    testImplementation("junit:junit:4.13.1")
+    testImplementation("junit:junit:$junitVersion")
 }
 java {
     sourceCompatibility = JavaVersion.VERSION_1_8
