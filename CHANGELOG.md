@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.7.0...v.9.8.0) (2021-12-22)
+
+
+### Features
+
+* adds Avatar Component createy through Jetpack Compose ([6d44b2b](https://github.com/natura-cosmeticos/natds-android/commit/6d44b2b20ee7eb9d717066fcf0c19045dd29e05b))
+* adds image option at Avatar Component ([f3e3983](https://github.com/natura-cosmeticos/natds-android/commit/f3e39831d05322deae26c24de978e5f1a0453d0e))
+
+
+### Bug Fixes
+
+* fixes Avatar doc structure ([d1c580d](https://github.com/natura-cosmeticos/natds-android/commit/d1c580dd1a9c70c5b336389668d135d44965d106))
+* fixes Tag Activity because bindint is not being initialized ([ba44e25](https://github.com/natura-cosmeticos/natds-android/commit/ba44e25bc06f0a33d5996efcf6593176ea6af3ab))
+* removes synthetic references ([0d3bfbd](https://github.com/natura-cosmeticos/natds-android/commit/0d3bfbd22811febceae784cc79d43e20437c810d))
+
 ## [9.7.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.6.2...v.9.7.0) (2021-12-13)
 
 ### Features
