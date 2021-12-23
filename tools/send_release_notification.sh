@@ -5,7 +5,7 @@ cp ./tools/message_teams.json ./tools/updated_message_teams.json
 
 # get and update version at message
 NEW_VERSION=`cat ./version.txt`
-sed -i '' 's/VERSIONVALUE/'$NEW_VERSION'/g' ./tools/message_teams.json
+sed -i '' 's/VERSIONVALUE/'$NEW_VERSION'/g' ./tools/updated_message_teams.json
 
 releaselinecontent='https://github.com/natura-cosmeticos/natds-android/compare/'
 major=`echo $NEW_VERSION | cut -d. -f1`
@@ -23,13 +23,12 @@ awk '{printf "%s\\\n ",$0 > "./tools/message_text.txt"} END {print ""}' ./tools/
 
 # update release message at json
 CHANGELOG_UPDATES=`cat ./tools/message_text.txt`
-sed -i '' "s|CHANGELOGMESSAGE|$CHANGELOG_UPDATES|g" ./tools/message_teams.json
+sed -i '' "s|CHANGELOGMESSAGE|$CHANGELOG_UPDATES|g" ./tools/updated_message_teams.json
 
 # send message
-message=`cat ./tools/message_teams.json`
+message=`cat ./tools/updated_message_teams.json`
 curl -H 'Content-Type: application/json' -d "$message" "$TEAMS_RELEASE_WEBHOOK"
-
 # remove helper files
-rm ./tools/message_teams.json
+rm ./tools/updated_message_teams.json
 rm ./tools/message_release.txt
 rm ./tools/message_text.txt
