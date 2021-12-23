@@ -64,3 +64,6 @@ distribute-sample:
 	sh bundle exec fastlane build
 	fastlane build
 	fastlane distribute_sample
+
+send-release-notification-teams:
+	sh ./tools/send_release_notification.sh
