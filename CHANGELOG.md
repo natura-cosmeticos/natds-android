@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.9.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.8.1...v.9.9.0) (2021-12-23)
+
+
+### Features
+
+* adds automatic release message script for channel in MSTeams ([ba0a38d](https://github.com/natura-cosmeticos/natds-android/commit/ba0a38d17d4811274ce36f04768755cf1d9b0ac0))
+
+
+### Bug Fixes
+
+* fixes release message generation script ([acb6003](https://github.com/natura-cosmeticos/natds-android/commit/acb600362ebcce4658f89e7d7f29a68403beafb8))
+* fixes the format of the version identification in the regex that delimits the release content ([0602879](https://github.com/natura-cosmeticos/natds-android/commit/06028799615cc74735135099e45bc3192a155be3))
+
 ### [9.8.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.8.0...v.9.8.1) (2021-12-23)
 
 ## [9.8.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.7.0...v.9.8.0) (2021-12-22)
