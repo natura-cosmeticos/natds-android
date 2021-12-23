@@ -8,10 +8,11 @@ NEW_VERSION=`cat ./version.txt`
 sed -i '' 's/VERSIONVALUE/'$NEW_VERSION'/g' ./tools/updated_message_teams.json
 
 releaselinecontent='https://github.com/natura-cosmeticos/natds-android/compare/'
+
 major=`echo $NEW_VERSION | cut -d. -f1`
 minor=`echo $NEW_VERSION | cut -d. -f2`
 patch=`echo $NEW_VERSION | cut -d. -f3`
-rgxversion="$major\.$minor\.$patch" # regex for new version
+rgxversion="v.$major\.$minor\.$patch" # regex for new version
 
 # save last version output to file
 awk 's{print $0 > "./tools/message_release.txt"}; $0~v {print $0 > "./tools/message_release.txt"; s=1; next}; (!($0~v) && $0~l) {s=0};' RS= v=$rgxversion l=$releaselinecontent CHANGELOG.md

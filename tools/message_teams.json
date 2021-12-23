@@ -1,7 +1,8 @@
 {
     "@type": "MessageCard",
     "@context": "http://schema.org/extensions",
-    "title": "🎉 Android - New Design System version available!",
+    "title": "New DS ANDROID release!",
+    "themeColor": "A4C639",
     "text": "CHANGELOGMESSAGE",
     "sections": [{
         "activityTitle": "Info:",
