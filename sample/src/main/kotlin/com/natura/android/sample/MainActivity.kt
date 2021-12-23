@@ -33,7 +33,6 @@ import com.natura.android.sample.tokens.OpacityActivity
 import com.natura.android.sample.tokens.SizeActivity
 import com.natura.android.sample.tokens.SpacingActivity
 import com.natura.android.sample.tokens.icons.DrawableActivity
-import com.natura.android.sample.tokens.icons.IconActivity
 import com.natura.android.sample.tokens.TypographyActivity
 
 class MainActivity : AppCompatActivity() {
@@ -66,10 +65,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnIconsDrawables.setOnClickListener {
             startActivity(Intent(this, DrawableActivity::class.java))
-        }
-
-        binding.btnIconsFont.setOnClickListener {
-            startActivity(Intent(this, IconActivity::class.java))
         }
 
         binding.opacityTokensButton.setOnClickListener {

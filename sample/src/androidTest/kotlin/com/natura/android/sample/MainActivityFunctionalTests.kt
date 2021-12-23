@@ -53,14 +53,6 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenIconFontsScreenWhenTapOnItButton() {
-        onView(withId(R.id.btnIconsFont)).perform(scrollTo())
-        onView(withId(R.id.btnIconsFont)).perform(click())
-
-        onView(withText("Icons (fonts)")).check(matches(isDisplayed()))
-    }
-
-    @Test
     fun shouldOpenOpacityScreenWhenTapOnItButton() {
         onView(withId(R.id.opacityTokensButton)).perform(scrollTo())
         onView(withId(R.id.opacityTokensButton)).perform(click())
