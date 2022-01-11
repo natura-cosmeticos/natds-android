@@ -1,71 +1,84 @@
 # Logo
+Official logo of brands that DS supports. 
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
-#### Note:
 
-This component is available in the following variants:
+| _Created: 7.1.0_ |
+| -----------------| 
 
-* ✅ Aesop
-* ✅ Avon
-* ✅ Natura
-* ✅ The Body Shop
 
-With the following attribute status:
-    
-* Color:
-    * ✅ `Neutral`  (default)
-    * ✅ `Primary`
-    * ✅ `Secondary`
-    * ✅ `Highlight`
-    * ✅ `Surface`
-    
-* Model:
-    * ✅ `A` (default)
-    * ✅ `B`
-    
-* Size:
-    * ✅ `Medium` 
-    * ✅ `MediumX`
-    * ✅ `Large`
-    * ✅ `LargeX`
-    * ✅ `LargeXX`
-    * ✅ `LargeXXX`
-    * ✅ `Huge`
-    * ✅ `HugeX`
-    * ✅ `HugeXX`
-    * ✅ `HugeXXX`
-    * ✅ `VeryHuge` (default)
-    
-    
-### What is it?
-The official logo application for brands that Design System support.
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`app:model`|  Defines the component model.| string | A or B|
+|`app:customColor`| Sets the color of component.| string | neutral, primary, secondary, highlight or surface
+|`app:customSize`| Sets the component size. | string | medium, mediumx, large, largex, largexx, largexxx, huge, hugex, hugexx, hugexxx or veryhuge 
 
-### Why should I use it?
-It's easier use the logo component, because it support diferent brands.
+## Usage Examples
+Logo model B with highlight color and mediumx size
 
-### When should I use it?
-Every time you need to put brand logo to your product.
+![Logo](./images/logo_mediumx.png)
 
-### How to use it?
-Logo component is available according to the selected theme. It means fist of all you MUST set to your view theme (or to a parent of this view) one of your themes.
-Check more info about it [here](getting-started.md)
-
-After that, just insert component in XML file like below:
+#### Layout XML
 
 ```android
-          <com.natura.android.logo.Logo
-              android:id="@+id/logoModelA"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              app:customColor="neutral"
-              app:customSize="hugexx"
-              app:layout_constraintStart_toStartOf="parent"
-              app:layout_constraintTop_toTopOf="parent"
-              app:model="a" />
-   ```
+    <com.natura.android.logo.Logo
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:customColor="highlight"
+        app:customSize="mediumx"
+        app:model="b"/>
+```
+<br><br>
 
-#### Logo component has the following attributes that can be set:
-- `app:model` : receives two values, `A`,`B`
-- `app:customColor` : receives eleven values, `neutral`, `primary`, `secondary`, `highlight`, `surface`,
-- `app:customSize` : receives eleven values, `medium`, `mediumx`, `large`, `largex`, `largexx`, `largexxx`, `huge`, `hugex`, `hugexx`, `hugexxx` or `veryhuge` 
+Logo model A with surface color and hugexx size
+
+![Logo](./images/logo_hugexx.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.logo.Logo
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:customColor="surface"
+        app:customSize="hugexx"
+        app:model="a"/>
+```
+<br><br>
+
+Logo model A with neutral color and veryhuge size
+
+![Logo](./images/logo_veryhuge.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.logo.Logo
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:customColor="neutral"
+        app:customSize="veryhuge"
+        app:model="a"/>
+```
+<br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Logo Light" src="./images/logo_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Logo Dark" src="./images/logo_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_logo.xml).
+
+## Attention points
+
+1. A logo is a DS component based on DS **multibrand themes**. It means if you want to use a logo in your app, you MUST set the DS theme on a view parent or in the logo component itself. [Check more info about how to set DS themes in your app](getting-started.md).
 
 

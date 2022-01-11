@@ -62,7 +62,7 @@ RadioButton enabled checked
     radioButton.isChecked = true
 ```    
 <br><br>
-RadioButton disable unchecked
+RadioButton disabled unchecked
 
 ![RadioButton](./images/radiobutton_disabledUnchecked.png)
 
@@ -87,7 +87,7 @@ RadioButton disable unchecked
 ```
 
 <br><br>
-RadioButton disable checked
+RadioButton disabled checked
 
 ![RadioButton](./images/radiobutton_disabledChecked.png)
 
@@ -117,9 +117,9 @@ RadioButton disable checked
 ## Light mode / Dark mode
 
 <p align="center">
-  <img alt="Tag Light" src="./images/radiobutton_lightMode.png" width="40%"> 
+  <img alt="Radio Button Light" src="./images/radiobutton_lightMode.png" width="40%"> 
 &nbsp;
-  <img alt="Tag Dark" src="./images/radiobutton_darkMode.png" width="40%">
+  <img alt="Radio Button Dark" src="./images/radiobutton_darkMode.png" width="40%">
 </p>
 
 ## More code

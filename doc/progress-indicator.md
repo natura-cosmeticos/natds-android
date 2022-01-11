@@ -15,7 +15,7 @@ Extends from [ProgressBar](https://developer.android.com/reference/android/widge
 |`app:pgid_layer`| Defines if the component has a background layer.| boolean | true or false |
 
 ## Usage Examples
-Progress Indicator with standard size and layer true
+Progress Indicator with standard size and layer
 
 ![Progress Indicator](./images/progressindicator_standard.png)
 
@@ -31,7 +31,7 @@ Progress Indicator with standard size and layer true
 ```
 
 <br><br>
-Progress Indicator with large size and layer false
+Progress Indicator with large size without layer
 
 ![Progress Indicator](./images/progressindicator_large.png)
 
@@ -50,9 +50,9 @@ Progress Indicator with large size and layer false
 ## Light mode / Dark mode
 
 <p align="center">
-  <img alt="Tag Light" src="./images/progressindicator_lightMode.png" width="40%"> 
+  <img alt="Progress Indicator Light" src="./images/progressindicator_lightMode.png" width="40%"> 
 &nbsp;
-  <img alt="Tag Dark" src="./images/progressindicator_darkMode.png" width="40%">
+  <img alt="Progress Indicator Dark" src="./images/progressindicator_darkMode.png" width="40%">
 </p>
 
 ## More code

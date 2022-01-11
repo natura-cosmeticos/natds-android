@@ -24,7 +24,7 @@ Shortcut with mockup icon, type contained and notify
 
 ```android
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutContained"
+        android:id="@+id/shortcut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:shct_icon_name="outlined-default-mockup"
@@ -36,7 +36,7 @@ Shortcut with mockup icon, type contained and notify
 #### Kotlin
 
 ```kotlin
-    val shortcut = findViewById<Shortcut>(R.id.shortcutContained)
+    val shortcut = findViewById<Shortcut>(R.id.shortcut)
     shortcut.notify = 1000
     shortcut.setLabel("Contained/Primary")
     shortcut.setIcon("outlined-default-mockup")
@@ -50,7 +50,7 @@ Shortcut with mockup icon, type outlined and action
 
 ```android
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutOutlined"
+        android:id="@+id/shortcut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:shct_icon_name="outlined-default-mockup"
@@ -61,7 +61,7 @@ Shortcut with mockup icon, type outlined and action
 #### Kotlin
 
 ```kotlin
-    val shortcut = findViewById<Shortcut>(R.id.shortcutOutlined)
+    val shortcut = findViewById<Shortcut>(R.id.shortcut)
     shortcut.setLabel("Outlined/Primary")
     shortcut.setIcon("outlined-default-mockup")
 
@@ -75,9 +75,9 @@ Shortcut with mockup icon, type outlined and action
 ## Light mode / Dark mode
 
 <p align="center">
-  <img alt="Tag Light" src="./images/shortcut_lightMode.png" width="40%"> 
+  <img alt="Shortcut Light" src="./images/shortcut_lightMode.png" width="40%"> 
 &nbsp;
-  <img alt="Tag Dark" src="./images/shortcut_darkMode.png" width="40%">
+  <img alt="Shortcut Dark" src="./images/shortcut_darkMode.png" width="40%">
 </p>
 
 ## More code

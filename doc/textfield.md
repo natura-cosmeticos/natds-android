@@ -56,8 +56,6 @@ Textfield with error
 ![TextField with error](./images/textfield_withError.png)
 #### Layout XML
 
-Add the TextField component in your xml layout file
-
 ```android
     <com.natura.android.textfield.TextField
         android:id="@+id/error_long_footer_item"
@@ -84,8 +82,6 @@ Textfield with image
 
 ![TextField with image](./images/textfield_withImage.png)
 #### Layout XML
-
-Add the TextField component in your xml layout file
 
 ```android
      <com.natura.android.textfield.TextField

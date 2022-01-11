@@ -14,7 +14,7 @@ Extends from [ConstraintLayout](https://developer.android.com/reference/androidx
 |`app:text_field_label`| Defines the Label showed inside the component. | string | text
 
 ## Usage examples
-Tag with Position Center, Primary Type and Small Size
+Tag with position center, primary type and small size
 
 ![Tag Center Primary](./images/tag_centersmall.png)
 
@@ -36,7 +36,7 @@ Tag with Position Center, Primary Type and Small Size
     tag.setLabel("Center Primary Small")
 ```
 <br><br>
-Tag with Position Left, Alert Type and Standard Size
+Tag with position left, alert type and standard size
 
 ![Tag Center Primary](./images/tag_leftstandard.png)
 
@@ -61,7 +61,7 @@ Tag with Position Left, Alert Type and Standard Size
     tag.setLabel("Left Alert Standard")
 ```
 <br><br>
-Tag with Position Right, Warning Type and Small Size
+Tag with position right, warning type and small size
 
 ![Tag Center Primary](./images/tag_rightsmall.png)
 
