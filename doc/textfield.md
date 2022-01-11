@@ -1,6 +1,6 @@
 # TextField
 A component that let users enter and edit text.    
-Extends from ConstraintLayout.
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
 | _Created: 1.1.0_  <br> _Last updated (With Breaking Change): 7.0.0_ |
 | ----- | 
@@ -105,3 +105,19 @@ Add the TextField component in your xml layout file
     textField.label = "Action with image"
     textField.image = R.drawable.myImage
 ```
+<br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Textfield Light" src="./images/textfield_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Textfield Dark" src="./images/textfield_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_textfield.xml).
+
+## Attention points
+
+1. A textfield is a DS component based on DS **multibrand themes**. It means if you want to use a textfield in your app, you MUST set the DS theme on a view parent or in the textfield component itself. [Check more info about how to set DS themes in your app](getting-started.md).

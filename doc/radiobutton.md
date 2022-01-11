@@ -1,6 +1,6 @@
 ### RadioButton
 Radio buttons allow the user to select one option from a set.   
-Extends from AppCompatRadioButton.
+Extends from [AppCompatRadioButton](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatRadioButton).
 
 
 | _Created: 1.0.0_ <br> _Last updated (With Breaking Change): 9.2.0_ |
@@ -111,6 +111,23 @@ RadioButton disable checked
     radioButton.isEnabled = false
     radioButton.isChecked = true
 ```
+
+<br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Tag Light" src="./images/radiobutton_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Tag Dark" src="./images/radiobutton_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_radiobutton.xml).
+
+## Attention points
+
+1. A radio button is a DS component based on DS **multibrand themes**. It means if you want to use a radio button in your app, you MUST set the DS theme on a view parent or in the radio button component itself. [Check more info about how to set DS themes in your app](getting-started.md).
 
 
 

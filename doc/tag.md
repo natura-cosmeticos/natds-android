@@ -1,6 +1,6 @@
 # Tag
-Tag is a component that represents a text tag that can be add as a marker.
-Extends from ConstraintLayout.
+Tag is a component that represents a text tag that can be add as a marker.   
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
 | _Created: 2.7.0_  <br> _Last updated: 5.9.0_ |
 | ----- | 
@@ -84,3 +84,21 @@ Tag with Position Right, Warning Type and Small Size
     val tag = findViewById<Tag>(R.id.tagWarning)
     tag.setLabel("Right Warning Small")
 ```
+
+<br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Tag Light" src="./images/tag_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Tag Dark" src="./images/tag_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_tag.xml).
+
+## Attention points
+
+1. A tag is a DS component based on DS **multibrand themes**. It means if you want to use a tag in your app, you MUST set the DS theme on a view parent or in the tag component itself. [Check more info about how to set DS themes in your app](getting-started.md).
+
