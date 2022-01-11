@@ -1,60 +1,72 @@
-# Getting Started - Nat Design System - WIP
+# Getting Started - Nat Design System
 
 ### How DS is structured for use on Android - Applying themes
 
-Our lib is being built from Android themes and styles. This means to consume any of resources
-available in the library you need, at some level, to define as a base theme for the use of your view
-a design system theme.
+Our lib is being built from Android themes and styles. This means to consume any of resources available in the library you need to define as a base theme for the use of your view, a design system theme.
 
-Perhaps now you are asking yourself: what? wait...
+However, it is necessary to define this place to insert the theme. According to the Android structure, there are the following options:
 
-Look at this example:
+1) Set the theme attribute in tag Application at file AndroidManifest.XML 
+    
+```android
+<application 
+  android:theme="@style/Theme.Natura.Dark">
+  ...
 
-We have several colors available on the DS. One is the colorSuccess color. This should be used in
-any context where we want give feedback that some task were completed successfully. Let's say you
-want to color a button with that color:
+</application>
+```
+
+2) Set the theme attribute in tag Activity at file AndroidManifest.XML
 
 ```android
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="?colorSuccess">
- ```
+<activity
+  android:name=".components.ButtonActivity"
+  android:theme="@style/Theme.Natura.Light" />
+```
 
-Notice: we use ?colorSuccess to fill the backgroundTint attribute of the Button component. When we
-write ?attributeName, we are indicating to Android that we want to pull this reference from the
-theme applied to this view.
+3) Define the theme attribute in the views XML file
+  ```android
+   
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.Natura.Light">
 
-However, we need to define this theme somewhere. You know where? I'll show you:
+    ...
 
-1) Tag Application in MANIFEST.XML, set the theme attribute or
-2) Tag Activity in MANIFEST.XML define the theme or attribute
-3) Define the theme attribute in the views XML file or
-4) Set the theme using the setTheme () method in the views onCreate
+ </LinearLayout>   
+   ```
+   
+4) Set the theme using the setTheme() method in the views onCreate
+```android
+setTheme(R.style.Theme_Natura_Light)
+```
 
 Our suggestion: always try to apply the DS theme to the most generic layers of your App. This
-greatly simplifies the use :)
+greatly simplifies the use.
+
 But, if for some reason is not possible, fine. Define the theme locally in the view where you want
 to apply DS.
 
+
 ### Design Tokens - The foundation of Nat DS
 
-Now you get how to access DS themes, let's talk about the most basic portion of our DS: the design
-tokens. We call design tokens all the basic attributes of design systems. For example: colors,
-ypography definitions, etc. Currently android lib provide the following tokens:
+Now you get how to access DS themes, let's talk about the most basic portion of our DS: the design tokens. We call design tokens all the basic attributes of design systems. For example: colors, typography definitions, etc. Currently android lib provide the following tokens:
 
-- [Border radius​](border-radius.md)
-- [Color​](color.md)
-- [Elevation​](elevation.md)
-- [Icons (drawables)](icon-token.md)
-- Opacity​
-- [Size​](size.md)
-- [Spacing​](spacing.md)
-- [Typography](typography-token.md)
+- Color
+- Border-radius
+- Elevation
+- Font-family
+- Font-weight
+- Line-height
+- Opacity
+- Sizes
+- Spacing
 
-And how can this be used by applications? First of all, it is worth remembering that the components
-made available by DS are built from these tokens. In addition, you can explore our tokens to define
-your screens and components.
+And how can this be used by applications? First of all, it is worth remembering that the components made available by DS are built from these tokens. In addition, you can explore our tokens to define your screens and components.
 
 For example: you need to add text to a view that will be styled with the following attributes:
 
@@ -64,14 +76,14 @@ For example: you need to add text to a view that will be styled with the followi
 - Font weight: Regular
 - Lineheight: Medium (1.5)
 
-You can set these attributes manually in an Android TextView component:
+You can set these attributes manually in an Android TextView component
 
  ```android
      <TextView
          android:id="@+id/textView"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="Meu texto"
+         android:text="My Text"
          android:padlineSpacingMultipliering="1.5"
          android:textSize="96sp"
          android:textColor="#333333"
@@ -90,6 +102,9 @@ or you can simply use the Heading 1 typography token that has exactly these attr
           ..../>
   ```
 
+| Notice: we use ?textAppereanceHeading1 to fill the textAppereance attribute of the TextView component. When we write ?attributeName, we are indicating to Android that we want to pull this reference from the theme applied to this view. |
+| --- |
+
 Also, if you need to, for example apply a different color to your text. Okay! You can use a color
 token for this:
 
@@ -104,27 +119,8 @@ token for this:
           ..../>
   ```
 
-💡 **More info about [typography here](typography-token.md)**
+### Components
 
-### How to Use Components
+Components are a collection of interface elements used to create great and consistent user experiences. The currently available components are listed in [general Natura Group Design System documentation](https://ds.natura.design), with instructions and usage examples.
 
-- [App Bar Top](app-bar-top.md)
-- [Avatar](avatar.md)
-- [Badge](badge.md)
-- [Button](button.md)
-- [Card](card.md)
-- [Checkbox](checkbox.md)
-- [Dialog](dialog.md)
-- [Divider](divider.md)
-- [Expansion Panel](expansion-panel.md)
-- [Icon Button](iconbutton.md)
-- [List Item](list-item.md)
-- [Logo](logo.md)
-- Menu
-- Navigation View
-- [Progress Indicator](progress-indicator.md)
-- [RadioButton](radiobutton.md)
-- [Shortcut](shortcut.md)
-- [Tag](tag.md)
-- [Text Field](textfield.md)
-
+You can also check tokens and components by downloading from this repository and running the Sample App.

@@ -6,6 +6,10 @@
 ## What for
 Library with Android components defined by [Natura Group Design System Team](https://zeroheight.com/28db352be/p/35bf2e-natds--natura-design-system).
 
+
+
+![Design Systen](doc/images/ds_screen.png)
+
 ## How to use
 
 ### How to add dependency
@@ -43,8 +47,9 @@ And:
 ![VERSION](https://img.shields.io/github/v/release/natura-cosmeticos/natds-commons?style=for-the-badge)
 
 Since 4.0.0 Nat DS Android has no longer Nat DS Icons. In order to use Nat DS Icons, you MUST add a new dependency:
- repositories {
-    
+
+    repositories {
+
         def githubProperties = new Properties()
         def githubFile = rootProject.file("github_credentials.properties")
         if (githubFile.exists()) {
@@ -66,14 +71,13 @@ Since 4.0.0 Nat DS Android has no longer Nat DS Icons. In order to use Nat DS Ic
 And:
 
     dependencies {
-    implementation "com.natura:icons:$rootProject.<version>"
-
+        implementation "com.natura:icons:$rootProject.<version>"
     }
     
 You can use Nat DS Icons without using Nat DS Android 
 
 ### Getting Started
-[Start using our lib](doc/getting-started.md).
+[Start using our lib](doc/getting-started.md)
 
-## How to contribute
-[Help us to grow!](doc/how-to-contribute.md)
+<!-- ## How to contribute
+[Help us to grow!](doc/how-to-contribute.md) -->

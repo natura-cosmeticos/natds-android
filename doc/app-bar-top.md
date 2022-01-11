@@ -1,47 +1,24 @@
-# App Bar Top Component - Default variant
+# App Bar Top
 
-#### Note:
+<p align="center">
+  <img alt="App Bar Top with Button" src="./images/appbartop_button.png" width="30%"> 
+&nbsp; &nbsp; 
+  <img alt="App Bar Top with Search" src="./images/appbartop_search.png" width="30%">
+&nbsp; &nbsp;
+  <img alt="App Bar Top with three Actions" src="./images/appbartop_threeactions.png" width="30%">
+  afsdfas&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+fadsfas
+</p>
 
-This component is available in the following variants:
 
-* ✅ Base
-* ✅ Standard
 
-With the following attribute status:
-
-* Color(Base/Standard):
-    * ✅ `Default` (default)
-    * ✅ `Primary`
-    * ✅ `Inverse`
-    * ✅ `None`
-    
-* ✅ Elevation(Base/Standard)
-* ✅ Scrollable(Base/Standard)
-* ✅ Action Right(Standard)
-* ✅ Action Left(Standard)
-* ✅ Menu(Standard)
-* ✅ Media Height(Standard)
-* ✅ Media Width(Standard)
-* ✅ Content Proeminent(Standard)
-
-* Content Position (Standard):
-    * ✅ `Center`
-    * ✅ `Left` (default)
-    
-* Content Type (Standard):
-    * ✅ `Text` (default)
-    * ✅ `Media`
-    * ✅ `Search`
-  
-    
-### What is it?
-The app bar top displays information and actions relating to the current screen
-
-### Why should I use it?
-This component can help you to show some info and/or actions on the top of the screen
-
-### When should I use it?
-Every time you want to configure an quick acess to some basic info or actions
+<p align="center">
+  <img alt="App Bar Top with Button, dark mode" src="./images/appbartop_button_dark.png" width="30%">
+&nbsp; &nbsp;
+  <img alt="App Bar Top with Search, dark mode" src="./images/appbartop_search_dark.png" width="30%">
+&nbsp; &nbsp; 
+  <img alt="App Bar Top with three Actions, dark mode" src="./images/appbartop_threeactions_dark.png" width="30%">
+</p>
 
 ### How to use it?
 Add the app bar component in your xml layout file

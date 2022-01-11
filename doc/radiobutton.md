@@ -1,32 +1,119 @@
 ### RadioButton
+Radio buttons allow the user to select one option from a set.   
+Extends from AppCompatRadioButton.
 
-This component is available in the following variants:
 
-* ✅ Standard
+| _Created: 1.0.0_ <br> _Last updated (With Breaking Change): 9.2.0_ |
+| ----- | 
 
-With the following attribute status:
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|` android:checked`|  Defines if the component is checked.| boolean | true or false <br> |
+|` android:enabled`| Defines if the component is enabled.| boolean | true or false <br> |
+|` android:text`| Sets the component label.| string | text |
 
-* ✅ Disabled
-* ✅ Selected
+## Usage Examples
+RadioButton enabled unchecked
 
-* Interaction state:
-    * ✅ `Enabled`
-    * ✅ `Press`
+![RadioButton](./images/radiobutton_enabledUnchecked.png)
 
-### What is it?
-Radio buttons allow the user to select one option from a set.
-Nat DS Android RadioButton is based on a android [RadioButton](https://developer.android.com/reference/android/widget/RadioButton).
-
-### When should I use it?
-Radio buttons should be used instead of checkboxes if only one item can be selected from a list.
-
-### How to use it?
-To use it, a Nat DS Theme must be provided to the view or its parents. After that, its possible to add a RadioButton component on xml layout:
+#### Layout XML
 
 ```android
-    <<com.natura.android.radiobutton.RadioButton
+    <com.natura.android.radiobutton.RadioButton
         android:id="@+id/radioButton"
-        android:text="RadioButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="Radio Button" />
 ```
+
+#### Kotlin
+
+```kotlin
+    val radioButton = findViewById<RadioButton>(R.id.radioButton)
+    radioButton.text = "Radio Button"
+    radioButton.isEnabled = true
+    radioButton.isChecked = false
+```
+<br><br>
+RadioButton enabled checked
+<br>       
+
+![RadioButton](./images/radiobutton_enabledChecked.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.radiobutton.RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Radio Button" />
+```
+
+#### Kotlin
+
+```kotlin
+    val radioButton = findViewById<RadioButton>(R.id.radioButton)
+    radioButton.text = "Radio Button"
+    radioButton.isEnabled = true
+    radioButton.isChecked = true
+```    
+<br><br>
+RadioButton disable unchecked
+
+![RadioButton](./images/radiobutton_disabledUnchecked.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.radiobutton.RadioButton
+        android:id="@+id/radioButton"
+        android:enabled="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio Button" />
+```
+
+#### Kotlin
+
+```kotlin
+    val radioButton = findViewById<RadioButton>(R.id.radioButton)
+    radioButton.text = "Radio Button"
+    radioButton.isEnabled = false
+    radioButton.isChecked = false
+```
+
+<br><br>
+RadioButton disable checked
+
+![RadioButton](./images/radiobutton_disabledChecked.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.radiobutton.RadioButton
+        android:id="@+id/radioButton"
+        android:enabled="false"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Radio Button" />
+```
+
+#### Kotlin
+
+```kotlin
+    val radioButton = findViewById<RadioButton>(R.id.radioButton)
+    radioButton.text = "Radio Button"
+    radioButton.isEnabled = false
+    radioButton.isChecked = true
+```
+
+
+
+
+
+
