@@ -1,78 +1,91 @@
-# Button
+### Button
+A user interface element the user can tap or click to perform an action.
 
-### What is it?
-Buttons allow users to take actions, and make choices, with a single tap.
+In the context of NatDS, it is defined as a component style that can be applied to a native Android button.
 
-### Why should I use it?
-Using it is a good way to increase visual consistency in apps.
 
-### When should I use it?
-You should use buttons according to its variations: [check buttons variations](https://zeroheight.com/28db352be/p/39708f-button/b/51a722)
+| _Created: 1.1.0_ <br> _Last updated: 3.3.0_ |
+| ----- | 
 
-![Button Avon](buttonsAvon.png)
-![Button Natura](buttonsNatura.png)
-![Button TBS](buttonsTbs.png)
+## Component Styles
+| Name | Description |
+| - | --- |
+|`containedButton`|  Default style of the native component and that provides the button background filled with the primary color|
+|`outlinedButton`| Style that proves the only outlined component.| 
+|`textButton`| Style that proves the component with its text only.| 
 
-## Contained Button
-It is the default button. On it is possible to set:
-- Size
-- Icon
+## Usage Examples
+Button Contained Disabled
 
-The contained button is based at native Button component. To use it, you should:
+![Button](./images/button_contained.png)
 
-- Set a DS Theme at the view or its parent
-- Add the Button at xml layout file
+#### Layout XML
 
 ```android
-<Button
-     android:id="@+id/containedButton"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:text="contained"/>
-}
+    <Button
+          android:id="@+id/button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="?sizeHuge"
+          android:text="contained" />
 ```
 
-## Outlined Button
-It is the default button. On it is possible to set:
-- Size
-- Icon
+<br><br>
 
-The outlined button is based at native Button component. But it has an `style` applied on it. To use it, you should:
+Button Outlined
 
-- Set a DS Theme at the view or its parent
-- Add the Button at xml layout file
-- Set the Outlined Button Style
+![Button](./images/button_outlined.png)
+
+#### Layout XML
 
 ```android
-<Button
-     android:id="@+id/containedButton"
-     android:style="?outlinedButton"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:text="contained"/>
-}
+    <Button
+          android:id="@+id/button"
+          style="?outlinedButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="?sizeHuge"
+          android:text="outlined" />
 ```
 
-## Text Button
-It is the default button. On it is possible to set:
-- Size
-- Icon
+<br><br>
 
-The outlined button is based at native Button component. But it has an `style` applied on it. To use it, you should:
 
-- Set a DS Theme at the view or its parent
-- Add the Button at xml layout file
-- Set the Text Button Style
+Button Text
+
+![Button](./images/button_text.png)
+
+#### Layout XML
 
 ```android
-<Button
-     android:id="@+id/containedButton"
-     android:style="?textButton"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:text="contained"/>
-}
+    <Button
+          android:id="@+id/button"
+          style="?textButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:minWidth="?sizeHuge"
+          android:text="text" />
 ```
+
+<br><br>
+
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Button Light" src="./images/button_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Button Dark" src="./images/button_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_button.xml).
+
+## Attention points
+
+1. A button is a DS component based on DS **multibrand themes**. It means if you want to use a button in your app, you MUST set the DS theme on a view parent or in the button component itself. [Check more info about how to set DS themes in your app](getting-started.md).
+
+
 
 
 
