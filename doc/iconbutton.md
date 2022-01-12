@@ -1,58 +1,113 @@
 # Icon Button
-
-#### Note:
-
-This component is available in the following variants:
-
-* ✅ Standard
-
-With the following attribute status:
-
-* Size:
-    * ✅ `Semi` (default)
-    * ✅ `SemiX`
-    * ✅ `Medium`
-    
-* Icon color:
-    * ✅ `HighEmphasis` (default)
-    * ✅ `Primary`
-    * ✅ `Light`
-    
-* Background style:
-    * ✅ `Inherit` (default)
-    * ✅ `Float`
-    * ✅ `Overlay`
-    
-* ✅ Disabled
-* ✅ Onclick
-* ✅ Icon
-
-* Interaction state:
-    * ✅ `Enabled`
-    * ✅ `Press`
-
-## What is it?
 Icon buttons are commonly found in app bars and toolbars.
 
 They are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
 
-### How to use it?
-Add the Icon Button component in your xml layout file:
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
+
+
+| _Created: 4.1.0_ <br> _Last updated: 5.8.1_ |
+| ----- | 
+
+
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`android:enabled`|  Defines whether the component is enabled or disabled.| boolean | true or false|
+|`app:iconName`| Receives a string with the drawable to be render at component| string | text (icon name) |
+|`app:buttonColor`| Sets the icon color. | string | defaultColor, primaryColor or lightColor|
+|`app:sizeButton`| Sets the component size. | string | semi, semix or medium
+|`app:styleButton`| Sets the component's style. | string | inherit, floating or overlay|
+
+## Usage Examples
+Icon Button enabled with primary color, medium size and float style.
+
+![IconButton](./images/iconButton_medium.png)
+
+#### Layout XML
 
 ```android
     <com.natura.android.iconButton.IconButton
-            android:id="@+id/iconButtonDefault"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:buttonColor="defaultColor"
-            app:iconName="outlined_action_calendar" />
+        android:id="@+id/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="primaryColor"
+        app:iconName="outlined-navigation-exit"
+        app:sizeButton="medium"
+        app:styleButton="floating" />
 ```
-#### Icon Button component has the following attributes that can be set:
-- `android:enabled` : when true, the button is active, when false the button is inactive
-- `app:iconName` : receives a string with the drawable to be render at button
-- `app:buttonColor` : receives three values, `default`,`primary` or `light`
-- `app:styleButton` : receives three values, `inherit`, `overlay` or `floating`
-- `app:sizeButton` : receives three values, `semi`, `semix`, or `medium`
 
+#### Kotlin
 
-![IconButton](icon-button.png)
+```kotlin
+    val iconButton = findViewById<IconButton>(R.id.iconButton)
+    iconButton.setIcon("outlined-navigation-exit")
+    iconButton.setEnabled(true)
+```
+<br><br>
+Icon Button enabled with high emphasis (default) color, semix size and overlay style.
+
+![IconButton](./images/iconButton_semix.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonColor="defaultColor"
+        app:iconName="outlined-navigation-exit"
+        app:sizeButton="semix"
+        app:styleButton="overlay" />
+```
+
+#### Kotlin
+
+```kotlin
+    val iconButton = findViewById<IconButton>(R.id.iconButton)
+    iconButton.setIcon("outlined-navigation-exit")
+    iconButton.setEnabled(true)
+```
+<br><br>
+Icon Button disabled with light color, semi size and inherit style.
+
+![IconButton](./images/iconButton_semi.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonSizeMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        app:buttonColor="lightColor"
+        app:iconName="outlined-navigation-exit"
+        app:sizeButton="semi"
+        app:styleButton="inherit" />
+```
+
+#### Kotlin
+
+```kotlin
+    val iconButton = findViewById<IconButton>(R.id.iconButton)
+    iconButton.setIcon("outlined-navigation-exit")
+    iconButton.setEnabled(false)
+```
+<br><br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Icon Button Light" src="./images/iconButton_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Icon Button Dark" src="./images/iconButton_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_icon_button.xml).
+
+## Attention points
+
+1. An icon button is a DS component based on DS **multibrand themes**. It means if you want to use a icon button in your app, you MUST set the DS theme on a view parent or in the icon button component itself. [Check more info about how to set DS themes in your app](getting-started.md).
