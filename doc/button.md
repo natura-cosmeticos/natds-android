@@ -3,13 +3,13 @@ Buttons allow users to take actions, and make choices, with a single tap.
 
 ## Note for Design:
 
-This component is available in the following variants:
+This component is available in the following styles:
 
 - ✅ **Contained**
 - ✅ **Outlined**
 - ✅ **Text**
 
-With the following attribute statuses:
+With the following attribute status:
 
 - ✅ **Disabled**
 - **Size**:
@@ -25,10 +25,8 @@ With the following attribute statuses:
 
 ## Attributes
 | Attr | Description | Type | Options |
-| - | --- |:-:|:-:|
-|`containedButton`|  Default style of the native component and that provides the button background filled with the primary color |-|-|
-|`outlinedButton`| Style that proves the only outlined component. |-|-|
-|`textButton`| Style that proves the component with its text only.|-| -|
+| - | --- |:-:|-|
+|`style`|  Set component appearance attributes.| Theme attribute| -`containedButton`: Default style of the native component and that provides the button background filled with the primary color<br> - `outlinedButton`: Style that proves the only outlined component. <br> -`textButton`: Style that proves the component with its text only.|
 
 ## Usage Examples
 Button Contained Disabled
@@ -43,6 +41,8 @@ Button Contained Disabled
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:minWidth="?sizeHuge"
+          android:enabled="false"
+          style="?containedButton"
           android:text="contained" />
 ```
 
