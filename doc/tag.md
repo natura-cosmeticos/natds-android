@@ -1,10 +1,31 @@
 # Tag
-Tag is a component that represents a text tag that can be add as a marker.   
+Tags are used to label, categorize, or organize items using keywords that describe them.  
+
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
-| _Created: 2.7.0_  <br> _Last updated: 5.9.0_ |
-| ----- | 
+## Note for Design:
 
+This component is available in the following variants:
+
+- ✅ **Standard**
+
+With the following attribute status:
+
+- **Size**:
+  - ✅ `Standard`
+  - ✅ `Small`
+- **Color**:
+  - ✅ `Primary`
+  - ✅ `Secondary`
+  - ✅ `Alert`
+  - ✅ `Success`
+  - ✅ `Link`
+  - ✅ `Warning`
+- **Position**:
+  - ✅ `Center`
+  - ✅ `Left`
+  - ✅ `Right`
+  
 ## Attributes
 | Attr | Description | Type | Options |
 | - | --- | --- | --- |

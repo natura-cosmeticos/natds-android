@@ -2,8 +2,26 @@
 Avatar is a component that allows you to add images or identification of people and profiles in applications.  
 Extends from [AbstractComposeView](https://developer.android.com/reference/kotlin/androidx/compose/ui/platform/AbstractComposeView).
 
-| _Created: 9.8.0_|
-| ----- | 
+
+This component is available in the following variants:
+
+- ✅ **Standard**
+   
+With the following attribute statuses:
+
+- **Size**:
+  - ✅ `Standard`
+  - ✅ `Semi`
+  - ✅ `Semix`
+  - ✅ `Medium`
+  - ✅ `Largexxx`
+- **Type**:
+  - ✅ `Icon`
+  - ✅ `Label`
+  - ✅ `Image`
+- **Fallback**:
+  - ✅ `Icon`
+  - ✅ `Label`
 
 ## Attributes
 | Attr | Description | Type | Options |

@@ -1,11 +1,16 @@
 # Divider
-Divider is a thin line view with the purpose of separating content within a layout.
+A divider is a thin line that groups content in lists and layouts.
 
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
 
-| _Created: 5.4.0_ |
-| --- | 
+## Note for Design:
+
+This component is available in the following variants:
+
+- ✅ **Full-bleed**
+- ✅ **Inset**
+- ✅ **Middle**
 
 
 ## Attributes

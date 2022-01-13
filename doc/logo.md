@@ -1,10 +1,42 @@
 # Logo
-Official logo of brands that DS supports. 
+Logo adapted as brand standards for each company.
+
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
 
-| _Created: 7.1.0_ |
-| -----------------| 
+## Note for Design:
+
+This component is available in the following variants:
+
+- ✅ **Natura**
+- ✅ **The Body Shop**
+- ✅ **Aesop**
+- ✅ **Avon**
+- ✅ **Natura&Co** 
+   
+With the following attribute statuses:
+
+- **Model**:
+  - ✅ `A`
+  - ✅ `B`
+- **Color**:
+  - ✅ `Primary`
+  - ✅ `Secondary`
+  - ✅ `Highlight`
+  - ✅ `Surface`
+  - ✅ `Neutral`
+- **Size**:
+  - ✅ `Medium`
+  - ✅ `Mediumx`
+  - ✅ `Large`
+  - ✅ `Largex`
+  - ✅ `Largexx`
+  - ✅ `Largexxx`
+  - ✅ `Huge`
+  - ✅ `Hugex`
+  - ✅ `Hugexx`
+  - ✅ `Hugexxx`
+  - ✅ `Veryhuge`
 
 
 ## Attributes

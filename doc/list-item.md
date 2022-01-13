@@ -1,12 +1,25 @@
 # List Item
-List item view is a container (Group View) that can be applied to the layout of an item in a list.
+Lists are continuous, vertical indexes of content such as text and images.
 
 Extends from [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout).
 
 
-| _Created: 5.7.0_ |
-| -----------------| 
+## Note for Design:
 
+This component is available in the following variants:
+
+- ✅ **Base**
+   
+With the following attribute statuses:
+
+- **Type**:
+  - ✅ `None`
+  - ✅ `Action`
+  - ✅ `Selectable`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Press`
+  - ✅ `Selected`
 
 ## Attributes
 | Attr | Description | Type | Options |

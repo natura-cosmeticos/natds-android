@@ -1,11 +1,22 @@
-### Card
-A container (GroupView) that can contain a rounded corner background and shadow.
+# Card
+Cards are surfaces that groups content and actions in the same space. Its construction must always create a visual hierarchy of the content and communicate its purposes.
 
 Extends from [MaterialCardView](https://developer.android.com/reference/com/google/android/material/card/MaterialCardView).
 
+## Note for Design:
 
-| _Created: 5.4.0_|
-| ----- | 
+This component is available in the following variants:
+
+- ✅ **Base**
+
+With the following attribute statuses:
+
+- **Elevation**:
+  - ✅ `True`
+  - ✅ `False`
+- **Radius**:
+  - ✅ `True`
+  - ✅ `False`
 
 ## Attributes
 | Attr | Description | Type | Options |

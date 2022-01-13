@@ -1,11 +1,25 @@
-### Checkbox
-A checkbox is a specific type of three-states button that can be either checked, unchecked or indeterminate.
+# Checkbox
+Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
 
 Extends from [AppCompatCheckBox](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatCheckBox).
 
+## Note for Design:
 
-| _Created: 5.7.0_ <br> _Last updated: 9.0.0_ |
-| ----- | 
+This component is available in the following variants:
+
+- ✅ **Checked**
+- ✅ **Unchecked**
+- ✅ **Indeterminate**
+   
+With the following attribute statuses:
+
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Pressed`
+
+- ✅ **Disabled**
+
+
 
 ## Attributes
 | Attr | Description | Type | Options |

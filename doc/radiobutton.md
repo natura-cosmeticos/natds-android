@@ -1,10 +1,20 @@
-### RadioButton
-Radio buttons allow the user to select one option from a set.   
+# RadioButton
+Radio buttons allow users to select one option from a set.
+
 Extends from [AppCompatRadioButton](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatRadioButton).
 
+## Note for Design:
 
-| _Created: 1.0.0_ <br> _Last updated (With Breaking Change): 9.2.0_ |
-| ----- | 
+This component is available in the following variants:
+
+- ✅ **Standard**
+  
+With the following attribute statuses:
+
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Pressed`
+- ✅ **Disabled**
 
 ## Attributes
 | Attr | Description | Type | Options |

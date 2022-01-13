@@ -1,10 +1,31 @@
 # Shortcut
-Shortcut is a component that represents a shortcut to some action.   
+Shortcuts for quick access to a page and facilitate navigation.  
+
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
+## Note for Design:
 
-| _Created: 2.3.0_ <br> _Last updated (With Breaking Change): 9.0.0_ |
-| ----- | 
+This component is available in the following variants:
+
+- ✅ **Standard**
+- ✅ **Outlined**
+  
+With the following attribute statuses:
+
+- **Size**:
+  - ✅ `Medium`
+  - ✅ `MediumX`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Press`
+- **Color**:
+  - ✅ `Contained / Primary`
+  - 🚧 `Contained / Light`
+  - ✅ `Outlined / Primary`
+  - 🚧 `Outlined / Light`
+- **Notify**:
+  - ✅ `None`
+  - ✅ `Standard`
 
 
 ## Attributes

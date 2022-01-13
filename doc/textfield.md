@@ -1,9 +1,41 @@
 # TextField
-A component that let users enter and edit text.    
+Text fields let users enter and edit text.
+
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
-| _Created: 1.1.0_  <br> _Last updated (With Breaking Change): 7.0.0_ |
-| ----- | 
+## Note for Design:
+
+This component is available in the following variants:
+
+- ✅ **Standard**
+
+With the following attribute statuses:
+
+- **Size**:
+  - ✅ `Medium`
+  - ✅ `MediumX`
+- **Style**:
+  - ✅ `Outlined`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Active`
+  - ✅ `Filled`
+- **Feedback**:
+  - ✅ `Error`
+  - ✅ `Success`
+  - ✅ `Required`
+  - ✅ `Disabled`
+  - ✅ `Read Only`
+  - ✅ `Helper Text`
+- **Action**:
+  - ✅ `None`
+  - ✅ `Icon Button`
+  - ✅ `Image`
+- **Type**:
+  - ✅ `Text`
+  - ✅ `Password`
+  - ✅ `Multi-line`
+  - ✅ `Number`
 
 
 ## Attributes

@@ -1,18 +1,34 @@
-### Button
-A user interface element the user can tap or click to perform an action.
+# Button
+Buttons allow users to take actions, and make choices, with a single tap.
 
-In the context of NatDS, it is defined as a component style that can be applied to a native Android button.
+## Note for Design:
 
+This component is available in the following variants:
 
-| _Created: 1.1.0_ <br> _Last updated: 3.3.0_ |
-| ----- | 
+- ✅ **Contained**
+- ✅ **Outlined**
+- ✅ **Text**
 
-## Component Styles
-| Name | Description |
-| - | --- |
-|`containedButton`|  Default style of the native component and that provides the button background filled with the primary color|
-|`outlinedButton`| Style that proves the only outlined component.| 
-|`textButton`| Style that proves the component with its text only.| 
+With the following attribute statuses:
+
+- ✅ **Disabled**
+- **Size**:
+  - 🚧 `Semi`
+  - 🚧 `Semix`
+  - 🚧 `Medium`
+- **Icon**:
+  - 🚧 `Left`
+  - 🚧 `Right`
+- **Display**:
+  - 🚧 `Inline`
+  - 🚧 `Block`
+
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- |:-:|:-:|
+|`containedButton`|  Default style of the native component and that provides the button background filled with the primary color |-|-|
+|`outlinedButton`| Style that proves the only outlined component. |-|-|
+|`textButton`| Style that proves the component with its text only.|-| -|
 
 ## Usage Examples
 Button Contained Disabled

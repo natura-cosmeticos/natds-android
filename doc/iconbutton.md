@@ -1,13 +1,30 @@
 # Icon Button
 Icon buttons are commonly found in app bars and toolbars.
 
-They are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
+Icons are also appropriate for toggle buttons that allow a single choice to be selected or deselected, such as adding or removing a star to an item.
 
 Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
 
-| _Created: 4.1.0_ <br> _Last updated: 5.8.1_ |
-| ----- | 
+## Note for Design:
+
+This component is available in the following variants:
+
+- ✅ **Standard**
+   
+With the following attribute statuses:
+
+- **Icon color**:
+  - ✅ `HighEmphasis`
+  - ✅ `Primary`
+  - ✅ `Light`
+- **Background style**:
+  - ✅ `Inherit`
+  - ✅ `Float`
+  - ✅ `Overlay`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Press`
 
 
 ## Attributes

@@ -1,11 +1,26 @@
 # Progress Indicator
-The progress indicator is a component that informs users about the status of ongoing processes, such as loading an application, submitting a form, or saving updates.
+Progress indicators express an unspecified wait time or display the length of a process.
 
 Extends from [ProgressBar](https://developer.android.com/reference/android/widget/ProgressBar).
 
+## Note for Design:
 
-| _Created: 3.4.0_ <br> _Last updated (With Breaking Change): 9.0.0_ |
-| ----- | 
+This component is available in the following variants:
+
+- ✅ **Circular**
+  
+With the following attribute statuses:
+
+- **Type**:
+  - ✅ `Indeterminated`
+- **Size**:
+  - ✅ `Standard`
+  - ✅ `Semi`
+  - ✅ `Medium`
+  - ✅ `Large`
+- **Layer**:
+  - ✅ `True`
+  - ✅ `False`
 
 
 ## Attributes
