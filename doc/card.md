@@ -1,35 +1,110 @@
-# Card Component - Default variant
+# Card
+Cards are surfaces that groups content and actions in the same space. Its construction must always create a visual hierarchy of the content and communicate its purposes.
 
-## What is it?
+Extends from [MaterialCardView](https://developer.android.com/reference/com/google/android/material/card/MaterialCardView).
 
-The card is a container with rounded corners and shadow based on its elevation, which is based on the CardView component.
-It involves a layout and can be used to group static content, or it can also be used for each item in a ListView or RecyclerView.
-The visibility of the radius and elevation attributes are configurable, so that when enabledRadius or enabledElevation are false values, the Card will not have these characteristics.
+## Note for Design:
 
-Card is available at version 5.4.0 of NatDS Android.
+This component is available in the following variants:
 
-### Why should I use it?
+- ✅ **Base**
 
-The component can help you group elements in a visually attractive container.
+With the following attribute statuses:
 
-### When should I use it?
+- **Elevation**:
+  - ✅ `True`
+  - ✅ `False`
+- **Radius**:
+  - ✅ `True`
+  - ✅ `False`
 
-Every time you want to bring a card layout to the content grouping container.
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`app:enabledRadius`|  Defines if the radius effect is visible.| boolean | true or false <br> |
+|`app:enabledElevation`| Defines if the elevation effect is visible| boolean | true or false <br> |
 
-### How to use it?
+## Usage Examples
+Card with radius and elevation enabled
 
-Add the Card component in your xml layout file
-        
+![Card](./images/card_allEnabled.png)
+
+#### Layout XML
+
 ```android
-<com.natura.android.card.Card
+    <com.natura.android.card.Card
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:enabledRadius="true"
         app:enabledElevation="true">
 
-</com.natura.android.card.Card>
+        ...
+
+    </Card>
 ```
-#### Card component has the following attributes that can be set:
-- `android:enabledRadius` : when true, the radius effect is visible, when false the radius is hidden
-- `android:enabledElevation` : when true, the elevation effect is visible, when false the elevation is hidden
+
+<br><br>
+
+Card with radius disabled
+
+![Card](./images/card_radiusDisabled.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.card.Card
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:enabledRadius="false"
+        app:enabledElevation="true">
+
+        ...
+
+    </Card>
+```
+
+<br><br>
+
+Card with elevation disabled
+
+![Card](./images/card_elevationDisabled.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.card.Card
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:enabledRadius="true"
+        app:enabledElevation="false">
+
+        ...
+
+    </Card>
+```
+
+<br><br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Card Light" src="./images/card_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Card Dark" src="./images/card_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_card.xml).
+
+## Attention points
+
+1. A card is a DS component based on DS **multibrand themes**. It means if you want to use a card in your app, you MUST set the DS theme on a view parent or in the card component itself. [Check more info about how to set DS themes in your app](../README.md).
+
+
+
+
+
+

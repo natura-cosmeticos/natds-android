@@ -1,63 +1,132 @@
-# List Item Component
+# List Item
+Lists are continuous, vertical indexes of content such as text and images.
 
-## What is it?
+Extends from [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout).
 
-List item view is a container that can be applied to the layout of an item in a list.
 
-### Why should I use it?
+## Note for Design:
 
-To facilitate the work of creating a list item that adheres to Natura's visual standard.
+This component is available in the following variants:
 
-### When should I use it?
+- ✅ **Base**
+   
+With the following attribute statuses:
 
-Every time you want to create a list item with Natura's visual pattern and effects.
+- **Type**:
+  - ✅ `None`
+  - ✅ `Action`
+  - ✅ `Selectable`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Press`
+  - ✅ `Selected`
 
-### How to use it?
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`app:touchState`|  Sets the component's state and touch effect. | boolean | true or false|
+|`app:selectableState`| Sets the component selection state and its effect.| boolean | true or false |
+|`app:dividerBottom`| Defines the type of bottom separator that the view can contain. | string | none, fullbleed, inset,  middle
 
-Add the List Item component in your xml layout file
-        
+## Usage Examples
+List Item  with fullbleed divider and selectable
+
+![Logo](./images/listItem_selectable.png)
+
+#### Layout XML
+
 ```android
-<com.natura.android.listitem.ListItem
+    <com.natura.android.listitem.ListItem
         android:id="@+id/listItem"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="wrap_content"
+        app:selectableState="true"
+        app:dividerBottom="fullBleed"
+        app:touchState="false">
 
         ...
 
-        <TextView
-            android:id="@+id/itemListDescription"
-            android:layout_marginStart="?spacingSmall"
-            android:layout_marginTop="?spacingSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="teste" />
-
-    </com.natura.android.listitem.ListItem>
+    </ListItem>
 ```
-#### List item component has the following attribute that can be set:
 
-- `dividerBottom`:  Defines the type of bottom separator that the view can contain. The options are: None (0), Fullbleed (1), Inset(2),  Middle(3)
+#### Kotlin
 
 ```kotlin
-    listItem.setDividerInset()
-    listItem.setDividerMiddle()
+    val listItem = itemView.findViewById<ListItem>(R.id.listItem)
+    listItem.setSelectableStateTrue()
     listItem.setDividerFullbleed()
 ```
+<br><br>
 
-- `touchState`:  defines whether the view is enabled to receive touch events. It can be true or false.
+List Item  with none divider and touchable
+
+![Logo](./images/listItem_touchable.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.listitem.ListItem
+        android:id="@+id/listItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectableState="false"
+        app:dividerBottom="none"
+        app:touchState="true">
+
+        ...
+
+    </ListItem>
+```
+
+#### Kotlin
 
 ```kotlin
+    val listItem = itemView.findViewById<ListItem>(R.id.listItem)
     listItem.setTouchStateTrue()
-    listItem.setTouchStateFalse()
+```
+<br><br>
+
+
+List Item with inset divider, not selectable and not touchable
+
+![Logo](./images/listItem_notclick.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.listitem.ListItem
+        android:id="@+id/listItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:selectableState="false"
+        app:dividerBottom="inset"
+        app:touchState="false">
+
+        ...
+
+    </ListItem>
 ```
 
-- `selectableState`:  defines whether the display is enabled to remain selected after the touch. It can be true or false.
+#### Kotlin
 
 ```kotlin
-    listItem.setSelectableStateTrue()
-    listItem.setSelectableStateFalse()
+    val listItem = itemView.findViewById<ListItem>(R.id.listItem)
+    listItem.setDividerInset()
 ```
+<br><br>
 
-           
-![List Item](list-item.png)
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Logo Light" src="./images/listItem_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Logo Dark" src="./images/listItem_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_list_item.xml).
+
+## Attention points
+
+1. A list item is a DS component based on DS **multibrand themes**. It means if you want to use a list item in your app, you MUST set the DS theme on a view parent or in the list item component itself. [Check more info about how to set DS themes in your app](../README.md).
 

@@ -10,7 +10,7 @@ It helps you to develop interfaces with an consistent size scale
 Every time it is necessary to define width and/or height to an visual component
 
 ### Using size token at components
-To access size tokens, you should set a DS [theme](getting-started.md) at the view or its parents.
+To access size tokens, you should set a DS [theme](../README.md) at the view or its parents.
 
 ```android
             android:layout_width="?sizeNone"

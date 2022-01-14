@@ -1,34 +1,86 @@
-# Divider Component
+# Divider
+A divider is a thin line that groups content in lists and layouts.
 
-## What is it?
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
-Divider is a thin line view with the purpose of separating content within a layout. 
 
-Divider is available at version 5.4.0 of NatDS Android.
+## Note for Design:
 
-### Why should I use it?
+This component is available in the following variants:
 
-The component can help you separate content and elements.
+- ✅ **Full-bleed**
+- ✅ **Inset**
+- ✅ **Middle**
 
-### When should I use it?
 
-Every time you want to organize your layout so that different content is isolated.
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`app:dividerType`|  Sets the component type based on its position. | string| fullBleed, inset or middle |
 
-### How to use it?
+## Usage Examples
+Divider with fullBleed type
 
-Add the Divider component in your xml layout file
-        
+![Divider](./images/divider_fullBleed.png)
+
+#### Layout XML
+
 ```android
-<com.natura.android.divider.Divider
-        android:id="@+id/dividerFullbleed"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:dividerType="fullBleed" />
+    <com.natura.android.divider.Divider
+       android:id="@+id/divider"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:dividerType="fullBleed" />
 ```
-#### Divider component has the following attribute that can be set:
 
-- `type`:  differs depending on the distance from the ends.
-           Remember that the margins are fixed and not customizable.
-           
-![Divider](divider.png)
+<br><br>
+Divider with inset type
 
+![Divider](./images/divider_inset.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.divider.Divider
+       android:id="@+id/divider"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:dividerType="inset" />
+```
+
+<br><br>
+
+<br><br>
+Divider with middle type
+
+![Divider](./images/divider_middle.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.divider.Divider
+       android:id="@+id/divider"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:dividerType="middle" />
+```
+
+<br><br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Divider Light" src="./images/divider_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Divider Dark" src="./images/divider_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_divider.xml).
+
+
+## Attention points
+
+1. A divider is a DS component based on DS **multibrand themes**. It means if you want to use a divider in your app, you MUST set the DS theme on a view parent or in the divider component itself. [Check more info about how to set DS themes in your app](../README.md).
+   
+2. Margin spacing is fixed and not customizable.
