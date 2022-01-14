@@ -178,9 +178,6 @@ open class TextField @JvmOverloads constructor(
         }
 
     var required: Boolean = false
-        set(value) {
-            field = value
-        }
 
     var size: Int = MEDIUMX
         set(value) {

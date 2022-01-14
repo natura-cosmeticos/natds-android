@@ -16,7 +16,6 @@ class CheckBox : AppCompatCheckBox {
         }
 
     var state = UNCHECKED
-        get() = field
         set(value) {
             field = value
             refreshDrawableState()

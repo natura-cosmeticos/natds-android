@@ -75,9 +75,6 @@ class Avatar : AbstractComposeView {
     var type: Int = RESOURCE_NOT_DEFINED
     var icon: Int = RESOURCE_NOT_DEFINED
     var image: Int = RESOURCE_NOT_DEFINED
-        set(value) {
-            field = value
-        }
     var label: String = LABEL_FALLBACK_DEFAULT
     var url: String = ""
     var accessibilityDescription: String = ""

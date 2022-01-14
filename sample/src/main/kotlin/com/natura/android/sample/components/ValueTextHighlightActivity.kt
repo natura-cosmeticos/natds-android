@@ -20,7 +20,7 @@ class ValueTextHighlightActivity : AppCompatActivity() {
         inputHighlight.setHighlightedInfo("$ 00.00")
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Value Text Highlight")
+        supportActionBar?.title = "Value Text Highlight"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

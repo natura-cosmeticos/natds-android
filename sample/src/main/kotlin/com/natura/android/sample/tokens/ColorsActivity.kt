@@ -8,6 +8,7 @@ import com.natura.android.sample.R
 import com.natura.android.sample.getChosenBrand
 import com.natura.android.sample.setChosenDarkTheme
 import com.natura.android.sample.setChosenDefaultTheme
+import java.util.*
 
 class ColorsActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class ColorsActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_color)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "Colors ${getChosenBrand().toUpperCase()}"
+        supportActionBar?.title = "Colors ${getChosenBrand().uppercase(Locale.getDefault())}"
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -14,7 +14,7 @@ class SubmenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_submenu)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Submenu Pattern")
+        supportActionBar?.title = "Submenu Pattern"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

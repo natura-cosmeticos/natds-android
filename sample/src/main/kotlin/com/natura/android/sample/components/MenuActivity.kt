@@ -14,7 +14,7 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Menu Pattern")
+        supportActionBar?.title = "Menu Pattern"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

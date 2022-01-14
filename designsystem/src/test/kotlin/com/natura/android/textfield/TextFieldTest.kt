@@ -395,7 +395,7 @@ class TextFieldTest {
         val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
         var clicked = false
 
-        textField.setOnImageClickListener() {
+        textField.setOnImageClickListener {
             clicked = true
         }
         imageView.performClick()
