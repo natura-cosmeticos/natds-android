@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.9.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.1...v.9.9.2) (2022-01-14)
+
+
+### Bug Fixes
+
+* fix avatar doc structure ([fce5e07](https://github.com/natura-cosmeticos/natds-android/commit/fce5e07ebef361066c0729515f7918e520c875b6))
+* fixes button documentations ([6008bf7](https://github.com/natura-cosmeticos/natds-android/commit/6008bf7b6fbaf474237a574a9a9811923fada53f))
+* fixes documentations content and structures ([57a99f2](https://github.com/natura-cosmeticos/natds-android/commit/57a99f271819644068197a135f7f8a947b33bc44))
+
 ### [9.9.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.0...v.9.9.1) (2021-12-23)
 
 ## [9.9.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.8.1...v.9.9.0) (2021-12-23)

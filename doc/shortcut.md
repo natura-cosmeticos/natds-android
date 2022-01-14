@@ -1,99 +1,118 @@
 # Shortcut
+Shortcuts for quick access to a page and facilitate navigation.  
 
-## What is it?
-Shortcut is a component that represents a shortcut to some action.
+Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
 
-## How to use it?
-Shortcut receives an icon, a notify, a label and its type. The shortcut type represents
-it's visual style: contained or outlined.
+## Note for Design:
 
-![Shortcut](shortcut_type.png)
+This component is available in the following variants:
 
-Following there's an example of an shortcut outlined:
+- ✅ **Standard**
+- ✅ **Outlined**
+  
+With the following attribute statuses:
+
+- **Size**:
+  - ✅ `Medium`
+  - ✅ `MediumX`
+- **States**:
+  - ✅ `Enabled`
+  - ✅ `Press`
+- **Color**:
+  - ✅ `Contained / Primary`
+  - 🚧 `Contained / Light`
+  - ✅ `Outlined / Primary`
+  - 🚧 `Outlined / Light`
+- **Notify**:
+  - ✅ `None`
+  - ✅ `Standard`
+
+
+## Attributes
+| Attr | Description | Type | Options |
+| - | --- | --- | --- |
+|`app:shct_type`|  Defines the type of the component's background.| string | - **contained**: background is filled <br> - **outlined**: the component is just outlined <br> |
+|`app:shct_text_label`| Sets the label of component.| string | text
+|`app:shct_icon_name`| Defines the name of the icon that will be shown in the center of the component. | string | text
+|`app:shct_notify`| Sets the number showed by notification at Shortcut | integer | When 0, notification is not visible, limit is 10000. |
+
+## Usage Examples
+Shortcut with mockup icon, type contained and notify
+
+![Shortcut](./images/shortcut_contained.png)
+
+#### Layout XML
 
 ```android
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutOutlined"
+        android:id="@+id/shortcut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Shortcut outlined sample"
+        app:shct_notify="1000"
+        app:shct_text_label="Contained/Primary"
+        app:shct_type="contained" />
+```
+
+#### Kotlin
+
+```kotlin
+    val shortcut = findViewById<Shortcut>(R.id.shortcut)
+    shortcut.notify = 1000
+    shortcut.setLabel("Contained/Primary")
+    shortcut.setIcon("outlined-default-mockup")
+```
+<br><br>
+Shortcut with mockup icon, type outlined and action
+
+![Shortcut](./images/shortcut_outlined.png)
+
+#### Layout XML
+
+```android
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Outlined/Primary"
         app:shct_type="outlined" />
 ```
 
-Following there's an example of an shortcut contained:
-
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Shortcut contained sample"
-        app:shct_type="contained" />
-```
-
-To insert a notification badge, simply add the notify property to the xml. Its value can be modified programmatically.
-
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutContained"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_notify="10"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Contained/ \nPrimary"
-        app:shct_type="contained" />
-```
+#### Kotlin
 
 ```kotlin
-    shortcutContained.notify = 10
-```
+    val shortcut = findViewById<Shortcut>(R.id.shortcut)
+    shortcut.setLabel("Outlined/Primary")
+    shortcut.setIcon("outlined-default-mockup")
 
-When value is 0, notification is not visible, when bigger than 99, notification shows 99+.
-
-![Shortcut](shortcut_notify.png)
-
-
-⚠️ ⚠️ ⚠️ Before the 3.0.0 version, the parameter to set the shortcut icon is different ⚠️ ⚠️ ⚠️
-
-- attribute name: icon
-- parameter type: drawable
-
-Ex: app:icon="@drawable/outlined_default_mockup"
-
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Shortcut contained sample"
-        app:shct_type="contained" />
-```
-
-**A shortcut is a DS component based on DS multibrand themes. It means
-if you want to use a shortcut in your app, you MUST set the DS theme
-on a view parent or in the shortcut component itself. [Check
-more info about how to set DS themes in your app](getting-started.md).**
-
-```android
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/shortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Shortcut sample"
-        app:shct_type="outlined"
-        android:theme="@style/Theme.Natura"/>
-```
-
-### Setting shortcut action
-A shortcut behave similar to a button. So, to add action to it
-just set a shortcut click listenerr:
-
-```kotlin
-    shortcutContained.setOnClickListener {
+    shortcut.setOnClickListener {
         Toast.makeText(this, "Testing shortcut", Toast.LENGTH_SHORT).show()
     }
 ```
+
+<br>
+
+## Light mode / Dark mode
+
+<p align="center">
+  <img alt="Shortcut Light" src="./images/shortcut_lightMode.png" width="40%"> 
+&nbsp;
+  <img alt="Shortcut Dark" src="./images/shortcut_darkMode.png" width="40%">
+</p>
+
+## More code
+You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_shortcut.xml).
+
+## Attention points
+
+1. Before the **3.0.0** version, the parameter to set the shortcut icon is different <br>
+    - Attribute name: icon  
+    - Parameter type: drawable
+
+    Ex: `app:icon="@drawable/outlined_default_mockup"`
+
+<br>
+
+
+2. A shortcut is a DS component based on DS **multibrand themes**. It means if you want to use a shortcut in your app, you MUST set the DS theme on a view parent or in the shortcut component itself. [Check more info about how to set DS themes in your app](../README.md).

@@ -10,7 +10,7 @@ It helps you to develop interfaces with an consistent elevation scale
 Every time it is necessary to define an elevation to a component
 
 ### Using elevation token at components
-To access elevation tokens, you should set a DS [theme](getting-started.md) at the view or its parents.
+To access elevation tokens, you should set a DS [theme](../README.md) at the view or its parents.
 Set at a component that supports elevation. For example, at a CardView it can be set like following:
 
 ```android
