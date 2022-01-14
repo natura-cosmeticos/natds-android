@@ -114,5 +114,5 @@ For that to happen, it is necessary add the Badge component in your xml layout f
 </com.natura.android.card.Card>
 ```
 
-![Badge](badgeScreen.png)
+![Badge](./images/badgeScreen.png)
 
