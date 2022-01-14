@@ -33,11 +33,7 @@ class DesignSystemUastDetector : Detector(), Detector.UastScanner {
 
         private fun process(type: PsiType, node: UElement) {
             val qualifiedName = context.evaluator.getTypeClass(type)?.qualifiedName
-            val issue = getSuggestedIssue(qualifiedName)
-
-            if (issue == null) {
-                return
-            }
+            val issue = getSuggestedIssue(qualifiedName) ?: return
 
             context.report(
                 issue = issue,

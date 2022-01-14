@@ -345,14 +345,6 @@ class Avatar : AbstractComposeView {
         }
     }
 
-    @Composable
-    private fun getFontFromTheme(resource: Int): Typeface {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(resource, typedValue, true)
-
-        return Typeface.create(typedValue.string.toString(), Typeface.NORMAL)
-    }
-
     companion object {
         const val STANDARD_SIZE = 0
         const val SEMI_SIZE = 1

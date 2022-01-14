@@ -14,7 +14,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class TypographyActivityTest {
 
-    lateinit var typographyActivityScenario: ActivityScenario<TypographyActivity>
+    private lateinit var typographyActivityScenario: ActivityScenario<TypographyActivity>
 
     @Before
     fun setUp() {
