@@ -17,7 +17,7 @@ import java.lang.String
 @RunWith(AndroidJUnit4::class)
 class RadioButtonActivityTest {
 
-    lateinit var selectionControlActivityScenario: ActivityScenario<RadioButtonActivity>
+    private lateinit var selectionControlActivityScenario: ActivityScenario<RadioButtonActivity>
 
     @Test
     fun checkRadioButtonPrimaryColorsWhenThemeIsNatura() {

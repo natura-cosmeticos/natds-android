@@ -18,7 +18,7 @@ import org.robolectric.android.controller.ActivityController
 class ExpansionPanelTest {
 
     private val activityController: ActivityController<Activity> = Robolectric.buildActivity(Activity::class.java)
-    lateinit var expansionPanel: ExpansionPanel
+    private lateinit var expansionPanel: ExpansionPanel
 
     @Before
     fun setUp() {

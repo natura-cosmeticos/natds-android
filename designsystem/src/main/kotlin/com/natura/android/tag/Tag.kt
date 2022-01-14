@@ -75,7 +75,7 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun configureTagBySize() {
-        var params = binding.tgBackground.layoutParams
+        val params = binding.tgBackground.layoutParams
         params.height = resources.getDimension(sizeResourceAttribute).toInt()
         binding.tgBackground.layoutParams = params
     }

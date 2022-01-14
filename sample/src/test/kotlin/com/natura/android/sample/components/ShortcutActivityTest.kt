@@ -12,7 +12,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class ShortcutActivityTest {
-    lateinit var shortcutActivityScenario: ActivityScenario<ShortcutActivity>
+    private lateinit var shortcutActivityScenario: ActivityScenario<ShortcutActivity>
 
     @Before
     fun setUp() {

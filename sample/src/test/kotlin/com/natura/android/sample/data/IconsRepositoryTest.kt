@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class IconsRepositoryTest {
 
-    lateinit var iconsRepository: IconsRepository
+    private lateinit var iconsRepository: IconsRepository
 
     @Before
     fun setUp() {

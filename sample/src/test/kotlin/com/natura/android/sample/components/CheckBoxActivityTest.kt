@@ -16,7 +16,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class CheckBoxActivityTest {
 
-    lateinit var checkBoxActivityScenario: ActivityScenario<CheckBoxActivity>
+    private lateinit var checkBoxActivityScenario: ActivityScenario<CheckBoxActivity>
 
     @Test
     fun checkCheckBoxButtonPrimaryColorsWhenThemeIsNatura() {

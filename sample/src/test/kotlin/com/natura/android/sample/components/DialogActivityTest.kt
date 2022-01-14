@@ -13,7 +13,7 @@ import org.robolectric.shadows.ShadowAlertDialog
 @RunWith(AndroidJUnit4::class)
 class DialogActivityTest {
 
-    lateinit var dialogActivityScenario: ActivityScenario<DialogActivity>
+    private lateinit var dialogActivityScenario: ActivityScenario<DialogActivity>
 
     @Before
     fun setUp() {

@@ -3,7 +3,6 @@ package com.natura.android.avatar
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.TypedValue
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

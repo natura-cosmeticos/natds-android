@@ -22,7 +22,7 @@ import org.robolectric.annotation.Config
 class MenuViewTest {
 
     private val activityController = Robolectric.buildActivity(Activity::class.java)
-    lateinit var layout: LinearLayout
+    private lateinit var layout: LinearLayout
 
     @Before
     fun setUp() {

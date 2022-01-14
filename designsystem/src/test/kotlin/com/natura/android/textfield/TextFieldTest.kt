@@ -27,7 +27,7 @@ import org.robolectric.annotation.Config
 class TextFieldTest {
 
     private val activityController: ActivityController<Activity> = Robolectric.buildActivity(Activity::class.java)
-    lateinit var textField: TextField
+    private lateinit var textField: TextField
 
     private val EMPTY_TEXT = ""
     private val NOT_EMPTY_TEXT = "test"
