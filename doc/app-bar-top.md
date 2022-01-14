@@ -22,7 +22,7 @@ fadsfas
 
 ### How to use it?
 Add the app bar component in your xml layout file
-Important! Do not use the default theme, use the NoActionBar variant. You can check more info [Getting Started guide](getting-started.md).
+Important! Do not use the default theme, use the NoActionBar variant. You can check more info [Getting Started guide](../README.md).
 ```android
         <com.natura.android.appbartop.StandardAppBarTop
                    android:id="@+id/appBar"

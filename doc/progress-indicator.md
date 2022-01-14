@@ -76,6 +76,6 @@ You can check out more examples from SampleApp by clicking [here](../sample/src/
 
 ## Attention points
 
-1. A progress indicator is a DS component based on DS **multibrand themes**. It means if you want to use a progress indicator in your app, you MUST set the DS theme on a view parent or in the progress indicator component itself. [Check more info about how to set DS themes in your app](getting-started.md).
+1. A progress indicator is a DS component based on DS **multibrand themes**. It means if you want to use a progress indicator in your app, you MUST set the DS theme on a view parent or in the progress indicator component itself. [Check more info about how to set DS themes in your app](../README.md).
    
 2. Nat DS Android supports for now only Circular variant of Progress Indicator

@@ -10,7 +10,7 @@ It helps you to develop interfaces with an consistent border radius appearance
 Every time it is necessary to define an rounded border to an visual component
 
 ### Using border radius token at components
-To access size tokens, you should set a DS [theme](getting-started.md) at the view or its parents.
+To access size tokens, you should set a DS [theme](../README.md) at the view or its parents.
 Nat DS Android provides two ways to use border radius:
 
 #### Border radius by background drawable

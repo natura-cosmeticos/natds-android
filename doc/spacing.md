@@ -10,7 +10,7 @@ It helps you to develop interfaces with an consistent spacing scale
 Every time it is necessary to define an margin, padding or define some type os spacing between visual elements.
 
 ### Using spacing token at components
-To access spacing tokens, you should set a DS [theme](getting-started.md) at the view or its parents.
+To access spacing tokens, you should set a DS [theme](../README.md) at the view or its parents.
 
 ```android
             android:layout_marginStart="?spacingSmall"
