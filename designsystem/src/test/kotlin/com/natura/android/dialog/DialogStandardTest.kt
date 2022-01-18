@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getColor
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
@@ -15,6 +17,7 @@ import com.natura.android.iconButton.IconButton
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
 class DialogStandardTest {
@@ -115,6 +118,16 @@ class DialogStandardTest {
         assertThat(bottomDivider?.visibility).isEqualTo(View.VISIBLE)
     }
 
+    @Test
+    @Config(sdk = [23])
+    fun checksStandardDialogWithOutlinedButton() {
+        dialogStandard = createStandardDialogWithOutlinedButton()
+        dialogStandard.show()
+
+        val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_NEGATIVE)
+        assertThat(mainButton.backgroundTintList?.defaultColor).isEqualTo(getColor(context, R.color.button_outlined_background_color_v23))
+    }
+
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
         return DialogStandard(
             context,
@@ -204,6 +217,29 @@ class DialogStandardTest {
             null,
             "outlined-action-cancel",
             null
+        ).create()
+    }
+
+    private fun createStandardDialogWithOutlinedButton(): DialogStandard {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                context,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        return DialogStandard(
+            context,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            null,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            true,
+            DialogStandard.OUTLINED
         ).create()
     }
 }
