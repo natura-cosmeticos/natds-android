@@ -64,7 +64,6 @@ class Badge @JvmOverloads constructor(
          * Change the number showed by badge
          * When 0, badge is not visible, when bigger than 99, badge
          * show 99+
-         * @param [number] to be showed by badge
          * */
         set(value) {
             field = value
@@ -83,7 +82,6 @@ class Badge @JvmOverloads constructor(
         get() = attrVisibility
         /**
          * Set badge visibility.
-         * @param [isVisible] as true to set badge as visible, false to not
          * */
         set(value) {
             attrVisibility = value

@@ -4,14 +4,14 @@
 cp ./tools/message_teams.json ./tools/updated_message_teams.json
 
 # get and update version at message
-NEW_VERSION=`cat ./version.txt`
+NEW_VERSION=$(cat ./version.txt)
 sed -i '' 's/VERSIONVALUE/'$NEW_VERSION'/g' ./tools/updated_message_teams.json
 
 releaselinecontent='https://github.com/natura-cosmeticos/natds-android/compare/'
 
-major=`echo $NEW_VERSION | cut -d. -f1`
-minor=`echo $NEW_VERSION | cut -d. -f2`
-patch=`echo $NEW_VERSION | cut -d. -f3`
+major=$(echo "$NEW_VERSION" | cut -d. -f1)
+minor=$(echo "$NEW_VERSION" | cut -d. -f2)
+patch=$(echo "$NEW_VERSION" | cut -d. -f3)
 rgxversion="v.$major\.$minor\.$patch" # regex for new version
 
 # save last version output to file

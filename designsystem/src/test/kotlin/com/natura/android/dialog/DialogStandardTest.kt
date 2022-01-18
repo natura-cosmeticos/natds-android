@@ -81,7 +81,7 @@ class DialogStandardTest {
         dialogStandard.show()
 
         val dialogCustomContent = dialogStandard.dialog
-            .findViewById<TextView>(R.id.dialogAlertText)?.let { it.text }
+            .findViewById<TextView>(R.id.dialogAlertText)?.text
 
         assertThat(dialogCustomContent).isEqualTo("Text Example")
     }
@@ -91,9 +91,12 @@ class DialogStandardTest {
         dialogStandard = createDialogWithHeaderIcons()
         dialogStandard.show()
 
-        val firstIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.firstIconButton)?.let { it.getIcon() }
-        val secondIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.secondIconButton)?.let { it.getIcon() }
-        val thirdIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.thirdIconButton)?.let { it.getIcon() }
+        val firstIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.firstIconButton)
+            ?.getIcon()
+        val secondIconButton =
+            dialogStandard.dialog.findViewById<IconButton>(R.id.secondIconButton)?.getIcon()
+        val thirdIconButton = dialogStandard.dialog.findViewById<IconButton>(R.id.thirdIconButton)
+            ?.getIcon()
 
         assertThat(firstIconButton).isNotNull()
         assertThat(secondIconButton).isNotNull()

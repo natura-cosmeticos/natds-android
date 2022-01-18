@@ -5,12 +5,12 @@ git ls-remote --tags --sort="v:refname" https://github.com/natura-cosmeticos/nat
 
 # get commons from github
 domain='https://github.com/natura-cosmeticos/natds-commons/archive/refs/tags/@naturacosmeticos/'
-version=`cat version-theme.txt`
+version=$(cat version-theme.txt)
 extension='.tar.gz'
 
 echo "Downloading from $domain$version$extension"
 mkdir /tmp/natds
-curl $domain$version$extension -J -L -o /tmp/natds/Themes.tar.gz
+curl $domain"$version"$extension -J -L -o /tmp/natds/Themes.tar.gz
 tar -xzvf /tmp/natds/Themes.tar.gz -C /tmp/natds
 
 # copy themes folder from commons to project source files

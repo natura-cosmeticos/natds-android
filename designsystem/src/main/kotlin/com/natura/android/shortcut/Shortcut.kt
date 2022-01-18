@@ -68,7 +68,6 @@ class Shortcut @JvmOverloads constructor(
          * Change the number showed by notification at shortcut
          * When 0, notification is not visible, when bigger than 99, notification
          * shows 99+
-         * @param [number] to be showed by notification
          * */
         set(value) {
             field = value

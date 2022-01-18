@@ -137,7 +137,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         return contentText
     }
 
-    fun getContentImage(): Int? {
+    fun getContentImage(): Int {
         return contentMedia
     }
 

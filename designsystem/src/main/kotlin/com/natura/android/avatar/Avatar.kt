@@ -306,13 +306,13 @@ class Avatar : AbstractComposeView {
             .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
             .apply {
                 backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_colorBackground)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_colorBackground)
                 fontFamilyResourceAttribute =
-                    this.getStringOrThrow(com.natura.android.R.styleable.AvatarStyle_android_fontFamily)
+                    this.getStringOrThrow(R.styleable.AvatarStyle_android_fontFamily)
                 textColorResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_textColor)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textColor)
                 paddingResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_padding)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_padding)
                 sizeResourceAttribute =
                     this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_view_size)
                 iconSizeResourceAttribute =
