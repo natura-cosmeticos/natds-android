@@ -19,6 +19,7 @@ class DialogActivity : AppCompatActivity() {
     lateinit var standardDialogMaxHeight: DialogStandard
     lateinit var standardDialogCustomView: DialogStandard
     lateinit var standardDialogWithDivider: DialogStandard
+    lateinit var standardDialogWithOutlinedButton: DialogStandard
     lateinit var dialogNoDismissable: DialogStandard
 
     lateinit var alertDialog: DialogAlert
@@ -43,6 +44,7 @@ class DialogActivity : AppCompatActivity() {
         createStandardDialogWithCustomView()
         createStandardDialogWithDivider()
         createNoDismissableStandardDialog()
+        createStandardDialogWithOutlinedButton()
 
         binding.standardDialogButton.setOnClickListener {
             standardDialog.show()
@@ -74,6 +76,10 @@ class DialogActivity : AppCompatActivity() {
 
         binding.dialogNoDismissableButton.setOnClickListener {
             dialogNoDismissable.show()
+        }
+
+        binding.standardDialogWithOutlinedButton.setOnClickListener {
+            standardDialogWithOutlinedButton.show()
         }
     }
 
@@ -239,6 +245,29 @@ class DialogActivity : AppCompatActivity() {
         ).create()
     }
 
+    private fun createStandardDialogWithOutlinedButton() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        standardDialogWithOutlinedButton = DialogStandard(
+            this,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            null,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            true,
+            DialogStandard.OUTLINED
+        ).create()
+    }
+
     private fun createStandardDialogWithCustomView() {
         val mainClickListener = DialogInterface.OnClickListener { _, _ ->
             Toast.makeText(
@@ -304,7 +333,7 @@ class DialogActivity : AppCompatActivity() {
             true,
             null,
             true,
-            0,
+            DialogStandard.DEFAULT,
             "outlined-action-mic",
             firstHeaderAction,
             "outlined-action-add",

@@ -263,7 +263,8 @@ class DialogStandard private constructor(
         val dialogStyle = when (styleButtons) {
             DEFAULT -> { R.attr.dialogStandardTheme }
             CONTAINED -> { R.attr.dialogWithContainedButtons }
-            else -> { R.attr.dialogWithTextButtons }
+            TEXT -> { R.attr.dialogWithTextButtons }
+            else -> { R.attr.dialogWithOutlinedButtons }
         }
 
         context.theme.resolveAttribute(dialogStyle, dialogThemeResource, true)
@@ -275,5 +276,6 @@ class DialogStandard private constructor(
         const val DEFAULT = 0
         const val CONTAINED = 1
         const val TEXT = 2
+        const val OUTLINED = 3
     }
 }
