@@ -46,10 +46,10 @@ and TextField children:
 ### How it looks like
 
 #### Collapsed:
-[![Collapsed](expansion_panel_collapsed.png)](https://postimg.cc/gX4JPZfR)
+[![Collapsed](./images/expansion_panel_collapsed.png)](https://postimg.cc/gX4JPZfR)
 
 #### Opened:
-[![Expanded](expansion_panel_opened.png)](https://postimg.cc/kR45M5mH)
+[![Expanded](./images/expansion_panel_opened.png)](https://postimg.cc/kR45M5mH)
 
 ### How to handle state
 

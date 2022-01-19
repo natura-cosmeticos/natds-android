@@ -123,7 +123,7 @@ Icon Button disabled with light color, semi size and inherit style.
 </p>
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_icon_button.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_icon_button.xml).
 
 ## Attention points
 

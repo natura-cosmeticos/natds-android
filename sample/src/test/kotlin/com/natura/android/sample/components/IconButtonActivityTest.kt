@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 internal class IconButtonActivityTest {
-    lateinit var activity: ActivityScenario<IconButtonActivity>
+    private lateinit var activity: ActivityScenario<IconButtonActivity>
 
     @Before
     fun setUp() {

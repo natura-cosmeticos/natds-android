@@ -48,9 +48,9 @@ class ProgressIndicator @JvmOverloads constructor(
         configureAppearance()
     }
 
-    fun getSize(): Int? = sizeAttribute
+    fun getSize(): Int = sizeAttribute
 
-    fun getLayer(): Boolean? = layerAttribute
+    fun getLayer(): Boolean = layerAttribute
 
     private fun getProgressIndicatorAttributes() {
         sizeAttribute = progressIndicatorAttributesArray.getInt(R.styleable.ProgressIndicator_pgid_size, Size.MEDIUM.value)

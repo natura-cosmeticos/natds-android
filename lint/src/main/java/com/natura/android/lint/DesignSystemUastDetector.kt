@@ -32,12 +32,8 @@ class DesignSystemUastDetector : Detector(), Detector.UastScanner {
         override fun visitClass(node: UClass) = node.uastSuperTypes.forEach { process(it.type, it) }
 
         private fun process(type: PsiType, node: UElement) {
-            val qualifiedName = context.evaluator.getTypeClass(type)?.getQualifiedName()
-            val issue = getSuggestedIssue(qualifiedName)
-
-            if (issue == null) {
-                return
-            }
+            val qualifiedName = context.evaluator.getTypeClass(type)?.qualifiedName
+            val issue = getSuggestedIssue(qualifiedName) ?: return
 
             context.report(
                 issue = issue,

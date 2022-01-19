@@ -75,7 +75,7 @@ class Tag @JvmOverloads constructor(
     }
 
     private fun configureTagBySize() {
-        var params = binding.tgBackground.layoutParams
+        val params = binding.tgBackground.layoutParams
         params.height = resources.getDimension(sizeResourceAttribute).toInt()
         binding.tgBackground.layoutParams = params
     }
@@ -94,7 +94,7 @@ class Tag @JvmOverloads constructor(
             resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
 
-        val cornerRadius: Float = 50F
+        val cornerRadius = 50F
         when (positionAttribute) {
             Position.CENTER.value -> background.cornerRadius = cornerRadius
             Position.RIGHT.value ->

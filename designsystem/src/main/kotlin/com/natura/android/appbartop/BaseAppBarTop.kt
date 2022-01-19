@@ -14,7 +14,7 @@ import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 
-open class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
+class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
 
     private var typedArray: TypedArray
 

@@ -3,7 +3,6 @@ package com.natura.android.avatar
 import android.content.Context
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.TypedValue
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -75,9 +74,6 @@ class Avatar : AbstractComposeView {
     var type: Int = RESOURCE_NOT_DEFINED
     var icon: Int = RESOURCE_NOT_DEFINED
     var image: Int = RESOURCE_NOT_DEFINED
-        set(value) {
-            field = value
-        }
     var label: String = LABEL_FALLBACK_DEFAULT
     var url: String = ""
     var accessibilityDescription: String = ""
@@ -310,13 +306,13 @@ class Avatar : AbstractComposeView {
             .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
             .apply {
                 backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_colorBackground)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_colorBackground)
                 fontFamilyResourceAttribute =
-                    this.getStringOrThrow(com.natura.android.R.styleable.AvatarStyle_android_fontFamily)
+                    this.getStringOrThrow(R.styleable.AvatarStyle_android_fontFamily)
                 textColorResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_textColor)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textColor)
                 paddingResourceAttribute =
-                    this.getResourceIdOrThrow(com.natura.android.R.styleable.AvatarStyle_android_padding)
+                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_padding)
                 sizeResourceAttribute =
                     this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_view_size)
                 iconSizeResourceAttribute =
@@ -346,14 +342,6 @@ class Avatar : AbstractComposeView {
         return with(LocalDensity.current) {
             value.toSp()
         }
-    }
-
-    @Composable
-    private fun getFontFromTheme(resource: Int): Typeface {
-        val typedValue = TypedValue()
-        context.theme.resolveAttribute(resource, typedValue, true)
-
-        return Typeface.create(typedValue.string.toString(), Typeface.NORMAL)
     }
 
     companion object {

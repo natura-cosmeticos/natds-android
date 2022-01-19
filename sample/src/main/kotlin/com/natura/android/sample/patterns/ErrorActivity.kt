@@ -24,7 +24,7 @@ class ErrorActivity : AppCompatActivity() {
             snackbar.show()
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("Error Pattern")
+        supportActionBar?.title = "Error Pattern"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -111,6 +111,9 @@
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Aesop.Dark</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Aesop.Dark</item>
+        <item name="dialogWithOutlinedButtons">@style/Theme.DS.Dialog.OutlinedButtons.Aesop.Dark</item>
+        <item name="dialogWithContainedButtons">@style/Theme.DS.Dialog.ContainedButtons.Aesop.Dark</item>
+        <item name="dialogWithTextButtons">@style/Theme.DS.Dialog.TextButtons.Aesop.Dark</item>
         <item name="dialogTitleAppearance">@style/Theme.DS.Dialog.Title</item>
         <item name="dialogBodyAppearance">@style/Theme.DS.Dialog.Body</item>
 

@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.Standard.TBS.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.TBS.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light</item>
+    <style name="Theme.DS.Dialog.TBS" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.TBS.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.TBS.Light" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.TBS.Light" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.TBS.Light" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.TBS.Light" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.TBS.Light" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.TBS.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.TBS.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.TBS.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -20,23 +37,40 @@
         <item name="backgroundTint">@color/button_contained_background_color_tbs_light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.TBS.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.TBS.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.TBS.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.TBS.Light" parent="@style/Widget.DS.Button.Outlined.TBS.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.TBS.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.TBS.Dark" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.TBS.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.TBS.Dark" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.TBS.Dark" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.TBS.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.TBS.Dark" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.TBS.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.TBS.Dark" parent="Theme.DS.Dialog.TBS">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.TBS.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.TBS.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.TBS.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -44,7 +78,11 @@
         <item name="backgroundTint">@color/button_contained_background_color_tbs_dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.TBS.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.TBS.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.TBS.Dark" parent="@style/Widget.DS.Button.Outlined.TBS.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 

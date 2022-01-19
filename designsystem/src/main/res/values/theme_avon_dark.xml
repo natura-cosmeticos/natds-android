@@ -109,6 +109,9 @@
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Avon.Dark</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Avon.Dark</item>
+        <item name="dialogWithOutlinedButtons">@style/Theme.DS.Dialog.OutlinedButtons.Avon.Dark</item>
+        <item name="dialogWithContainedButtons">@style/Theme.DS.Dialog.ContainedButtons.Avon.Dark</item>
+        <item name="dialogWithTextButtons">@style/Theme.DS.Dialog.TextButtons.Avon.Dark</item>
         <item name="dialogTitleAppearance">@style/Theme.DS.Dialog.Title</item>
         <item name="dialogBodyAppearance">@style/Theme.DS.Dialog.Body</item>
 

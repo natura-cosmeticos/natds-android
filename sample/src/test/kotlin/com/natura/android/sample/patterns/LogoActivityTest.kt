@@ -16,8 +16,8 @@ import org.robolectric.Shadows.shadowOf
 
 @RunWith(AndroidJUnit4::class)
 class LogoActivityTest {
-    lateinit var logoActivity: ActivityScenario<LogoActivity>
-    lateinit var context: Context
+    private lateinit var logoActivity: ActivityScenario<LogoActivity>
+    private lateinit var context: Context
 
     @Before
     fun setUp() {

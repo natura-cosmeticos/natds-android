@@ -95,7 +95,7 @@ class TagTest {
     fun checksIfTagSizeSmallWasSet() {
         tag = buildTagSmall()
 
-        var size = tag.getSize()
+        val size = tag.getSize()
 
         assertThat(size).isEqualTo(0)
     }
@@ -104,7 +104,7 @@ class TagTest {
     fun checksIfTagSizeStandardWasSet() {
         tag = buildTagStandard()
 
-        var size = tag.getSize()
+        val size = tag.getSize()
 
         assertThat(size).isEqualTo(1)
     }
@@ -113,7 +113,7 @@ class TagTest {
     fun checksIfTagPositionCenterWasSet() {
         tag = buildTagCenter()
 
-        var position = tag.getPosition()
+        val position = tag.getPosition()
 
         assertThat(position).isEqualTo(0)
     }
@@ -122,7 +122,7 @@ class TagTest {
     fun checksIfTagPositionLeftWasSet() {
         tag = buildTagLeft()
 
-        var position = tag.getPosition()
+        val position = tag.getPosition()
 
         assertThat(position).isEqualTo(1)
     }
@@ -131,7 +131,7 @@ class TagTest {
     fun checksIfTagPositionRightWasSet() {
         tag = buildTagRight()
 
-        var position = tag.getPosition()
+        val position = tag.getPosition()
 
         assertThat(position).isEqualTo(2)
     }

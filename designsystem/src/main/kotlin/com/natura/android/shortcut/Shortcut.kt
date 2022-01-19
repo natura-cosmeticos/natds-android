@@ -35,7 +35,7 @@ class Shortcut @JvmOverloads constructor(
     private var iconAttribute: String? = null
     private var shortcutAttributesArray: TypedArray
 
-    val labelContainer by lazy { findViewById<TextView>(R.id.shortCutLabel) }
+    val labelContainer: TextView by lazy { findViewById(R.id.shortCutLabel) }
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
     private val notifyContainer by lazy { findViewById<Badge>(R.id.notifyContainer) }
@@ -68,7 +68,6 @@ class Shortcut @JvmOverloads constructor(
          * Change the number showed by notification at shortcut
          * When 0, notification is not visible, when bigger than 99, notification
          * shows 99+
-         * @param [number] to be showed by notification
          * */
         set(value) {
             field = value

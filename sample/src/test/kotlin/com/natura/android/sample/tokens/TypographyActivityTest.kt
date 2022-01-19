@@ -14,7 +14,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class TypographyActivityTest {
 
-    lateinit var typographyActivityScenario: ActivityScenario<TypographyActivity>
+    private lateinit var typographyActivityScenario: ActivityScenario<TypographyActivity>
 
     @Before
     fun setUp() {
@@ -24,8 +24,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading1TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h1Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h1Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h1Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h1Sample).currentTextColor
 
             assertEquals(96.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -35,8 +35,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading2TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h2Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h2Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h2Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h2Sample).currentTextColor
 
             assertEquals(60.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -46,8 +46,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading3TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h3Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h3Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h3Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h3Sample).currentTextColor
 
             assertEquals(48.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -57,8 +57,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading4TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h4Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h4Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h4Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h4Sample).currentTextColor
 
             assertEquals(34.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -68,8 +68,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading5TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h5Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h5Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h5Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h5Sample).currentTextColor
 
             assertEquals(24.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -79,8 +79,8 @@ class TypographyActivityTest {
     @Test
     fun checksHeading6TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.h6Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.h6Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.h6Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.h6Sample).currentTextColor
 
             assertEquals(20.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -90,8 +90,8 @@ class TypographyActivityTest {
     @Test
     fun checksSubtitle1TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.subtitle1Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.subtitle1Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.subtitle1Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.subtitle1Sample).currentTextColor
 
             assertEquals(16.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -101,8 +101,8 @@ class TypographyActivityTest {
     @Test
     fun checksSubtitle2TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.subtitle2Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.subtitle2Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.subtitle2Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.subtitle2Sample).currentTextColor
 
             assertEquals(14.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -112,8 +112,8 @@ class TypographyActivityTest {
     @Test
     fun checksBody1TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.body1Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.body1Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.body1Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.body1Sample).currentTextColor
 
             assertEquals(16.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -123,8 +123,8 @@ class TypographyActivityTest {
     @Test
     fun checksBody2TextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.body2Sample).textSize
-            var textColor = it.findViewById<TextView>(R.id.body2Sample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.body2Sample).textSize
+            val textColor = it.findViewById<TextView>(R.id.body2Sample).currentTextColor
 
             assertEquals(14.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -134,8 +134,8 @@ class TypographyActivityTest {
     @Test
     fun checksButtonTextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.buttonSample).textSize
-            var textColor = it.findViewById<TextView>(R.id.buttonSample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.buttonSample).textSize
+            val textColor = it.findViewById<TextView>(R.id.buttonSample).currentTextColor
 
             assertEquals(14.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -145,8 +145,8 @@ class TypographyActivityTest {
     @Test
     fun checksCaptionTextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.captionSample).textSize
-            var textColor = it.findViewById<TextView>(R.id.captionSample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.captionSample).textSize
+            val textColor = it.findViewById<TextView>(R.id.captionSample).currentTextColor
 
             assertEquals(12.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
@@ -156,8 +156,8 @@ class TypographyActivityTest {
     @Test
     fun checksOverlineTextSize() {
         typographyActivityScenario.onActivity {
-            var textSize = it.findViewById<TextView>(R.id.overlineSample).textSize
-            var textColor = it.findViewById<TextView>(R.id.overlineSample).currentTextColor
+            val textSize = it.findViewById<TextView>(R.id.overlineSample).textSize
+            val textColor = it.findViewById<TextView>(R.id.overlineSample).currentTextColor
 
             assertEquals(12.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)

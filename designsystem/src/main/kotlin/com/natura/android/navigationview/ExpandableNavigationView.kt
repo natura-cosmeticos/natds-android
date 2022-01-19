@@ -14,7 +14,7 @@ class ExpandableNavigationView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : NavigationView(context, attrs, defStyleAttr) {
 
-    private val navigationMenu: ExpandableListView by lazy { findViewById<ExpandableListView>(R.id.navigation_menu) }
+    private val navigationMenu: ExpandableListView by lazy { findViewById(R.id.navigation_menu) }
     private var navigationAdapter: ExpandableNavigationAdapter? = null
     private var navigationItems: List<NavigationItem>? = null
     private var oldGroupPosition = 0

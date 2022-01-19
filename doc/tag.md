@@ -117,7 +117,7 @@ Tag with position right, warning type and small size
 </p>
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_tag.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_tag.xml).
 
 ## Attention points
 

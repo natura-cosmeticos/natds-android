@@ -71,7 +71,7 @@ Progress Indicator with large size without layer
 </p>
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_progress_indicator.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_progress_indicator.xml).
 
 
 ## Attention points

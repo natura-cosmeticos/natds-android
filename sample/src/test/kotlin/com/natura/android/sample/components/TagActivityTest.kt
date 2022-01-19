@@ -11,7 +11,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class TagActivityTest {
-    lateinit var tagScenario: ActivityScenario<TagActivity>
+    private lateinit var tagScenario: ActivityScenario<TagActivity>
 
     @Before
     fun setUp() {

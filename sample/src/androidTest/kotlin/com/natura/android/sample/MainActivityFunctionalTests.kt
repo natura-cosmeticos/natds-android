@@ -4,7 +4,6 @@ import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.hamcrest.CoreMatchers.allOf
@@ -109,7 +108,7 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.dialogButton)).perform(scrollTo())
         onView(withId(R.id.dialogButton)).perform(click())
 
-        onView(ViewMatchers.withText("Dialog")).check(matches(ViewMatchers.isDisplayed()))
+        onView(withText("Dialog")).check(matches(isDisplayed()))
     }
 
     @Test
@@ -117,8 +116,8 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.btnExpansionPanel)).perform(scrollTo())
         onView(withId(R.id.btnExpansionPanel)).perform(click())
 
-        onView(allOf(ViewMatchers.withText("Expansion Panel"), withParent(withResourceName("action_bar"))))
-            .check(matches(ViewMatchers.isDisplayed()))
+        onView(allOf(withText("Expansion Panel"), withParent(withResourceName("action_bar"))))
+            .check(matches(isDisplayed()))
     }
 
     @Test

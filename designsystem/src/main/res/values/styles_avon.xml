@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.Standard.Avon.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Avon.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Light</item>
+    <style name="Theme.DS.Dialog.Avon" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Avon.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Light</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Avon.Light" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Avon.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.Avon.Light" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.Avon.Light" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Avon.Light" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Avon.Light" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Avon.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -20,23 +37,40 @@
         <item name="backgroundTint">@color/button_contained_background_color_avon_light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Avon.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Avon.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Avon.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Avon.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Avon.Light" parent="@style/Widget.DS.Button.Outlined.Avon.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Avon.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Avon.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Avon.Dark" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Avon.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.Avon.Dark" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.Avon.Dark" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Avon.Dark" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Avon.Dark" parent="Theme.DS.Dialog.Avon">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Avon.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -44,7 +78,11 @@
         <item name="backgroundTint">@color/button_contained_background_color_avon_dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Avon.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Avon.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Avon.Dark" parent="@style/Widget.DS.Button.Outlined.Avon.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 

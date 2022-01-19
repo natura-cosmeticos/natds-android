@@ -12,7 +12,7 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class SizeActivityTest {
 
-    lateinit var sizeActivityScenario: ActivityScenario<SizeActivity>
+    private lateinit var sizeActivityScenario: ActivityScenario<SizeActivity>
 
     @Before
     fun setUp() {

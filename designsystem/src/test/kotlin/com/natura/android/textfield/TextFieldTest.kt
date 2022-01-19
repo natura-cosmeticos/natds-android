@@ -20,20 +20,21 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
 import org.robolectric.Shadows
+import org.robolectric.android.controller.ActivityController
 import org.robolectric.annotation.Config
 
 @RunWith(AndroidJUnit4::class)
 class TextFieldTest {
 
-    val activityController = Robolectric.buildActivity(Activity::class.java)
-    lateinit var textField: TextField
+    private val activityController: ActivityController<Activity> = Robolectric.buildActivity(Activity::class.java)
+    private lateinit var textField: TextField
 
-    val EMPTY_TEXT = ""
-    val NOT_EMPTY_TEXT = "test"
-    val NOT_EMPTY_TEXT_REQUIRED = "test*"
-    val ERROR_ICON_CODE = "EA13"
-    val SUCCESS_ICON_CODE = "EA15"
-    val MULTILINE_TYPE = 131073
+    private val EMPTY_TEXT = ""
+    private val NOT_EMPTY_TEXT = "test"
+    private val NOT_EMPTY_TEXT_REQUIRED = "test*"
+    private val ERROR_ICON_CODE = "EA13"
+    private val SUCCESS_ICON_CODE = "EA15"
+    private val MULTILINE_TYPE = 131073
 
     @Before
     fun setup() {
@@ -395,7 +396,7 @@ class TextFieldTest {
         val imageView = textField.findViewById(R.id.text_field_input_image) as ImageView
         var clicked = false
 
-        textField.setOnImageClickListener() {
+        textField.setOnImageClickListener {
             clicked = true
         }
         imageView.performClick()

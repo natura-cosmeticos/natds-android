@@ -26,7 +26,7 @@ class ListItemActivity : AppCompatActivity() {
                 getAttributesList()
             )
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle("List Item")
+        supportActionBar?.title = "List Item"
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

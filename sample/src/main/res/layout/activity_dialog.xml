@@ -29,6 +29,17 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
+        android:id="@+id/standardDialogWithOutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Standard With Outlined Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standardDialogVerticalButtonsButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/standardDialogMaxHeightButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +47,7 @@
         android:text="Standard With Max Height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/standardDialogVerticalButtonsButton"
+        app:layout_constraintTop_toBottomOf="@+id/standardDialogWithOutlinedButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button

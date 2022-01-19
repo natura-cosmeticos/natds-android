@@ -17,11 +17,11 @@ import com.natura.android.sample.setChosenDefaultTheme
 class ExpandableNavigationViewActivity : AppCompatActivity() {
 
     private val expandableNavigationMenu: ExpandableNavigationView by lazy {
-        findViewById<ExpandableNavigationView>(
+        findViewById(
             R.id.expandable_navigation_menu
         )
     }
-    private val drawerLayout: DrawerLayout by lazy { findViewById<DrawerLayout>(R.id.drawer_layout) }
+    private val drawerLayout: DrawerLayout by lazy { findViewById(R.id.drawer_layout) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()

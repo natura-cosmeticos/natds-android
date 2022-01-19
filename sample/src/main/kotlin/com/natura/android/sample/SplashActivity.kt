@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
-    lateinit var mDelayHandler: Handler
+    private lateinit var mDelayHandler: Handler
     private lateinit var binding: ActivitySplashBinding
 
     private val mRunnable: Runnable = Runnable {

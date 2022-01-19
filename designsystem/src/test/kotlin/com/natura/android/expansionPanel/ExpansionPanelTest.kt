@@ -12,12 +12,13 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.Robolectric
+import org.robolectric.android.controller.ActivityController
 
 @RunWith(AndroidJUnit4::class)
 class ExpansionPanelTest {
 
-    val activityController = Robolectric.buildActivity(Activity::class.java)
-    lateinit var expansionPanel: ExpansionPanel
+    private val activityController: ActivityController<Activity> = Robolectric.buildActivity(Activity::class.java)
+    private lateinit var expansionPanel: ExpansionPanel
 
     @Before
     fun setUp() {
