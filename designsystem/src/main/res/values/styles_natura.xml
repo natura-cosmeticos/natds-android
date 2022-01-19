@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.Standard.Natura.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
+    <style name="Theme.DS.Dialog.Natura" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Natura.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Natura.Light" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.Natura.Light" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.Natura.Light" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Natura.Light" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Natura.Light" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Natura.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -20,23 +37,40 @@
         <item name="backgroundTint">@color/button_contained_background_color_natura_light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Natura.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>f
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Natura.Light" parent="@style/Widget.DS.Button.Outlined.Natura.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Natura.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Natura.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Natura.Dark" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Natura.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Alert.Natura.Dark" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Natura.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.ContainedButtons.Natura.Dark" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Natura.Dark" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Natura.Dark" parent="Theme.DS.Dialog.Natura">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Natura.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -44,7 +78,11 @@
         <item name="backgroundTint">@color/button_contained_background_color_natura_dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Natura.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Natura.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Natura.Dark" parent="@style/Widget.DS.Button.Outlined.Natura.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 

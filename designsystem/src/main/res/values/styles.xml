@@ -30,8 +30,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.OutlinedButtons" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.Outlined.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.Outlined.V23</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.V23</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.V23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Title" parent="">
@@ -74,7 +74,7 @@
         <item name="android:layout_marginTop">?spacingTiny</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Outlined.V23" parent="@style/Widget.DS.Button.Outlined.V23">
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.V23" parent="@style/Widget.DS.Button.Outlined.V23">
         <item name="android:layout_marginStart">?spacingMicro</item>
         <item name="android:layout_gravity">center_vertical|right</item>
         <item name="android:layout_marginBottom">?spacingTiny</item>

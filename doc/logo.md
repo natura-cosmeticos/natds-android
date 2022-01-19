@@ -107,7 +107,7 @@ Logo model A with neutral color and veryhuge size
 </p>
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_logo.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_logo.xml).
 
 ## Attention points
 

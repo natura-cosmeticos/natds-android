@@ -40,7 +40,7 @@ With the following attribute status:
 | Cancelable | Flag that set if dialog can be closed by clicking out of it or not. You can omite this parameter and it will be assumed as true | boolean | true or false
 | Dialog Theme (Optional) | If the view where dialog is in has not a DS theme applyed, you can pass the DS theme reference at the constructor. The theme will be used only inside the dialog. <p>⚠️ **If you omit this, the parent theme will be used to set the dialog. If the parent theme is not an Nat DS Theme, the dialog will not be set as expected**</P> | Android theme | - 
 | Divider (Optional)  | Flag that defines whether two division lines will separate the content (top and bottom) | boolean | true or false
-| StyleButtons (Optional)  | Constant that indicates whether the buttons will have default style (Main and Secondary), primary or text. | integer | - 
+| StyleButtons (Optional)  | Constant that indicates whether the buttons will have default style (Main and Secondary), Contained, Text or Outlined. | integer | - 
 | firstHeaderIconButton (Optional)  | String used to define the icon of the first iconbutton of the dialog header | string | Icon name
 | firstHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at first iconbutton in header | Listener | Listener
 | secondHeaderIconButton (Optional)  | String used to define the icon of the second iconbutton of the dialog header | string | icon name
@@ -48,7 +48,6 @@ With the following attribute status:
 | thirdHeaderIconButton (Optional)  | String used to define the icon of the third iconbutton of the dialog header | string | icon name
 | thirdHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at third iconbutton in header | Listener | Listener
 
-## Usage Examples
 
 ## Usage Examples
 Dialog with icon, dividers, icon buttons and text
@@ -106,8 +105,6 @@ private fun createStandardDialogWithHeaderIconButtons() {
     }
 ```
 
-
-## Usage Examples
 Dialog with title, text and two buttons only
 
 ![Dialog](./images/dialog_standard.png)
@@ -128,6 +125,37 @@ private fun createDialog() {
         secondaryClickListener,
         "Long text that should be substitied for some alert text. This might actually take two lines or more").create()
 }
+```
+
+Dialog with title, text, dividers and outlined buttons
+
+![Dialog](./images/dialog_outlinedButtons.png)
+
+#### Kotlin
+
+```android
+private fun createDialog() {
+        val mainClickListener = DialogInterface.OnClickListener { _, _ ->
+            Toast.makeText(
+                this,
+                "Dialog Main Action",
+                Toast.LENGTH_LONG
+            ).show()
+        }
+        dialogStandard = DialogStandard(
+            this,
+            "Title",
+            "Confirm Button",
+            mainClickListener,
+            "Close",
+            null,
+            "Long text that should be substitied for some dialog text. This might actually take two lines or more",
+            true,
+            null,
+            true,
+            DialogStandard.OUTLINED
+        ).create()
+    }
 ```
 
 Showing the dialog

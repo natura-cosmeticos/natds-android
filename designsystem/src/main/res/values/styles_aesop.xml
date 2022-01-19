@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.Standard.Aesop.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Aesop.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Light</item>
+
+    <style name="Theme.DS.Dialog.Aesop" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Aesop.Light" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Light</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Aesop.Light" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Aesop.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.Aesop.Light" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.Aesop.Light" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Aesop.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Aesop.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Aesop.Light" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Aesop.Light" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Aesop.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Aesop.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Aesop.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -20,23 +38,41 @@
         <item name="backgroundTint">@color/button_contained_background_color_aesop_light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Aesop.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Aesop.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.MainButton.Aesop.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Aesop.Light" parent="@style/Widget.DS.Button.Outlined.Aesop.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Aesop.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Dark</item>
-        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+    <style name="Theme.DS.Dialog.Standard.Aesop.Dark" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Aesop.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.MainButton.Aesop.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Alert.Aesop.Dark" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.Aesop.Dark" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.Aesop.Dark" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.Aesop.Dark" parent="Theme.DS.Dialog.Aesop">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Aesop.Dark</item>
+    </style>
+
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.Aesop.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -44,7 +80,11 @@
         <item name="backgroundTint">@color/button_contained_background_color_aesop_dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.SecondaryButton.Aesop.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.Aesop.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Aesop.Dark" parent="@style/Widget.DS.Button.Outlined.Aesop.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 

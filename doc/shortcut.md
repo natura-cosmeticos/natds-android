@@ -102,7 +102,7 @@ Shortcut with mockup icon, type outlined and action
 </p>
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](../sample/src/main/res/layout/activity_shortcut.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_shortcut.xml).
 
 ## Attention points
 

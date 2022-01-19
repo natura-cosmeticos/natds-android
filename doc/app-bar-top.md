@@ -58,7 +58,7 @@ Important! Do not use the default theme, use the NoActionBar variant. You can ch
                        android:text="DEFAULT" />
                </com.natura.android.appbartop.StandardAppBarTop>
 ```
-For more usage examples, access the code in the Sample App: [AppBar Top Example] (../sample/src/main/res/layout/appbartop_button_action.xml)
+For more usage examples, access the code in the Sample App: [AppBar Top Example] (https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/appbartop_button_action.xml)
 
 
 
