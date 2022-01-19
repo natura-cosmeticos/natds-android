@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.9.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.2...v.9.9.3) (2022-01-19)
+
+
+### Bug Fixes
+
+* adds mechanism to use outlined button ([a2d98a8](https://github.com/natura-cosmeticos/natds-android/commit/a2d98a880b00e138110374cfb847e8f0a3e1df23))
+* changes visibility and read and write settings of variables ([0f0d3e6](https://github.com/natura-cosmeticos/natds-android/commit/0f0d3e6511ec4b45acc42684eed5390787dba4c2))
+* fixes dialog with outlined Button style and fixes documentations with correct link ([413013c](https://github.com/natura-cosmeticos/natds-android/commit/413013cf9f1390dd34489a9d98b59e5fee046f2d))
+* fixes kotlin alerts from report issued by Android Studio ([81fcf94](https://github.com/natura-cosmeticos/natds-android/commit/81fcf94b9b45365d33f6c1adb095185fec62bf34))
+* fixes kotlin and shell warnings ([b8126fa](https://github.com/natura-cosmeticos/natds-android/commit/b8126fa0d96a0d371c00bcecb9e8c95400beac69))
+* fixes namespaces not used at xml files ([150017a](https://github.com/natura-cosmeticos/natds-android/commit/150017aaf3601ea0350ce0de7a0e7bf16219d3cd))
+* fixes shell warnings ([78c03fc](https://github.com/natura-cosmeticos/natds-android/commit/78c03fc42d59ab7f0f6e54e7caa323b789d535e8))
+* fixes warnings in documentation files ([ad69d0a](https://github.com/natura-cosmeticos/natds-android/commit/ad69d0a9b6933760cac3b0f08bbaa89c59963335))
+
 ### [9.9.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.1...v.9.9.2) (2022-01-14)
 
 
