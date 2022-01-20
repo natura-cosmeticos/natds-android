@@ -22,15 +22,14 @@ class CheckBox : AppCompatCheckBox {
             updateDrawable()
         }
 
-    private lateinit var STATE_INDETERMINATE: IntArray
+    private lateinit var indeterminateState: IntArray
 
     private fun init() {
         updateDrawable()
     }
 
     private fun updateDrawable() {
-        var btnDrawable = R.drawable.checkbox_status_indeterminate
-        btnDrawable = when (state) {
+        val btnDrawable: Int = when (state) {
             INDETERMINATE -> R.drawable.checkbox_status_indeterminate
             UNCHECKED -> R.drawable.checkbox_status_unchecked
             CHECKED -> R.drawable.checkbox_status_checked
@@ -40,9 +39,9 @@ class CheckBox : AppCompatCheckBox {
     }
 
     override fun onCreateDrawableState(extraSpace: Int): IntArray {
-        STATE_INDETERMINATE = intArrayOf(R.attr.state_indeterminate)
+        indeterminateState = intArrayOf(R.attr.state_indeterminate)
         val drawableState = super.onCreateDrawableState(extraSpace + 1)
-        mergeDrawableStates(drawableState, STATE_INDETERMINATE)
+        mergeDrawableStates(drawableState, indeterminateState)
         return drawableState
     }
 

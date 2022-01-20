@@ -126,9 +126,6 @@ open class TextField @JvmOverloads constructor(
 
     var stateLayout = LayoutStates(context)
 
-    private val SUCCESS_ICON = "EA15"
-    private val ERROR_ICON = "EA13"
-
     private val inputLabel by lazy { findViewById<TextView>(R.id.text_field_input_label) }
 
     private val inputBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_box) }
@@ -570,5 +567,8 @@ open class TextField @JvmOverloads constructor(
         const val MEDIUMX_PADDING_TOP = 18
         const val MEDIUMX_PADDING_BOTTOM = 17
         const val MULTILINE_TYPE = 131073
+
+        private const val SUCCESS_ICON = "EA15"
+        private const val ERROR_ICON = "EA13"
     }
 }
