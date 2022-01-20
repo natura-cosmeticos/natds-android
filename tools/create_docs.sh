@@ -5,9 +5,10 @@ npm install markdown-to-document -g --only=prod
 
 for file in $(
   find . -path ./fastlane -prune -o \
-  -name 'README.md' -type f -print
+    -name 'README.md' -type f -print
   find ./doc -iname "*.md" -type f -print
 )
+  
 do
 [[ $file = "./README.md" ]] && BASE_URL="https:\/\/github.com\/natura-cosmeticos\/natds-android\/blob\/master\/" || BASE_URL="https:\/\/github.com\/natura-cosmeticos\/natds-android\/blob\/master\/doc\/"
   echo "Working on $file file now"
@@ -15,7 +16,8 @@ do
   mdtodoc "$file" --dest ./doc/html --layout "page" --theme "github" --numbered-headings --code-copy --mermaid
 done
 
-for file in $(find ./doc/html -type f -print)
-do
+find ./doc/html -type f -print >tmp
+
+while IFS= read -r -d '' file; do
   sed -i "s/<a\(.*\)/<a target='_blank'\1/g" "$file"
-done
+done <tmp
