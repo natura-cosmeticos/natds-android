@@ -5,7 +5,6 @@ import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.util.TypedValue
-import androidx.core.content.res.ResourcesCompat
 
 import com.natura.android.R
 
@@ -61,7 +60,8 @@ class BadgeDrawable(
         val bounds = bounds
         val badgeWith = getDimenFromTheme(R.attr.badgeDotHeight).toInt()
 
-        ResourcesCompat.getDrawable(context.resources, R.drawable.badge_dot, context.theme).apply {
+        context.resources.getDrawable(R.drawable.badge_dot, context.theme).apply {
+
             setTint(getColorFromTheme(getBackgroundColorByAttr()))
             setBounds(
                 bounds.right - badgeWith,
@@ -121,23 +121,22 @@ class BadgeDrawable(
         val bounds = bounds
         val badgeWidth = mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
 
-        ResourcesCompat.getDrawable(context.resources, R.drawable.badge_standard, context.theme)
-            ?.apply {
-                setTint(getColorFromTheme(getBackgroundColorByAttr()))
-                setBounds(
-                    bounds.right - badgeWidth,
-                    bounds.top,
-                    bounds.right,
-                    getDimenFromTheme(R.attr.badgeStandardHeight).toInt()
-                )
-                draw(canvas)
+        context.resources.getDrawable(R.drawable.badge_standard, context.theme).apply {
+            setTint(getColorFromTheme(getBackgroundColorByAttr()))
+            setBounds(
+                bounds.right - badgeWidth,
+                bounds.top,
+                bounds.right,
+                getDimenFromTheme(R.attr.badgeStandardHeight).toInt()
+            )
+            draw(canvas)
 
-                drawText(
-                    canvas,
-                    this.bounds.exactCenterX(),
-                    this.bounds.centerY() + getDimenFromTheme(R.attr.sizeMicro)
-                )
-            }
+            drawText(
+                canvas,
+                this.bounds.exactCenterX(),
+                this.bounds.centerY() + getDimenFromTheme(R.attr.sizeMicro)
+            )
+        }
     }
 
     private fun drawText(canvas: Canvas, x: Float, y: Float) {
