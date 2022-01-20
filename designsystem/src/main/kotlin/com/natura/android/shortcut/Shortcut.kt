@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
@@ -191,15 +192,15 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun setBackgroundContained() {
-        val background = resources.getDrawable(R.drawable.shortcut_background, null)
-        val backgroundWrap = DrawableCompat.wrap(background).mutate()
-        DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
+        val background = ResourcesCompat.getDrawable(context.resources,R.drawable.shortcut_background, null)
+        val backgroundWrap = background?.let { DrawableCompat.wrap(it).mutate() }
+        backgroundWrap?.let { DrawableCompat.setTint(it, ContextCompat.getColor(context, backgroundColorResourceAttribute)) }
 
         backgroundContainer.background = background
     }
 
     private fun setBackgroundOutlined() {
-        val background = resources.getDrawable(R.drawable.shortcut_background, null) as GradientDrawable
+        val background = ResourcesCompat.getDrawable(context.resources,R.drawable.shortcut_background, null) as GradientDrawable
         background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
         background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
 

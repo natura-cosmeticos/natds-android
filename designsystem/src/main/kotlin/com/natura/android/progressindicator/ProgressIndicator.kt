@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.widget.ProgressBar
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getResourceIdOrThrow
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
@@ -94,7 +95,7 @@ class ProgressIndicator @JvmOverloads constructor(
     private fun configureAppearance() {
         if (layerAttribute) {
             this.background =
-                context.resources.getDrawable(R.drawable.progress_indicator_layer, context.theme)
+                ResourcesCompat.getDrawable(context.resources,R.drawable.progress_indicator_layer, context.theme)
         }
     }
 
