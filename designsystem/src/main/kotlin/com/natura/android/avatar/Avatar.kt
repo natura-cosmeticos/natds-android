@@ -252,7 +252,7 @@ class Avatar : AbstractComposeView {
         }
     }
 
-    private fun init(attrs: AttributeSet? = null, defStyleAttr: Int = 0) {
+    private fun init(attrs: AttributeSet? = null) {
         if (attrs != null) {
             this.attrs = attrs
 

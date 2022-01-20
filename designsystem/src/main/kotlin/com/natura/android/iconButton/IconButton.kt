@@ -40,7 +40,7 @@ class IconButton @JvmOverloads constructor(
     private var styleAttribute: Int = 0
     private var enabledAttribute: Boolean = true
 
-    private lateinit var binding: IconButtonBinding
+    private var binding: IconButtonBinding
 
     init {
         try {

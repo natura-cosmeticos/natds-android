@@ -29,7 +29,7 @@ class Tag @JvmOverloads constructor(
     private var labelTextColorResourceAttribute = 0
     private var tagAttributesArray: TypedArray
 
-    private lateinit var binding: TagBinding
+    private var binding: TagBinding
 
     init {
         try {
