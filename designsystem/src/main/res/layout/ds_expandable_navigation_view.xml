@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_view"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_gravity="start"
-    tools:parentTag="android.support.design.widget.NavigationView">
+    android:layout_gravity="start">
 
     <ExpandableListView
         android:id="@+id/navigation_menu"
