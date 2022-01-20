@@ -95,7 +95,7 @@ class ProgressIndicator @JvmOverloads constructor(
     private fun configureAppearance() {
         if (layerAttribute) {
             this.background =
-                ResourcesCompat.getDrawable(context.resources,R.drawable.progress_indicator_layer, context.theme)
+                ResourcesCompat.getDrawable(context.resources, R.drawable.progress_indicator_layer, context.theme)
         }
     }
 

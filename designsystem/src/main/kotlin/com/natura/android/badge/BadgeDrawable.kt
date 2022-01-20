@@ -61,7 +61,7 @@ class BadgeDrawable(
         val bounds = bounds
         val badgeWith = getDimenFromTheme(R.attr.badgeDotHeight).toInt()
 
-        ResourcesCompat.getDrawable(context.resources,R.drawable.badge_dot, context.theme).apply {
+        ResourcesCompat.getDrawable(context.resources, R.drawable.badge_dot, context.theme).apply {
             setTint(getColorFromTheme(getBackgroundColorByAttr()))
             setBounds(
                 bounds.right - badgeWith,
@@ -121,7 +121,7 @@ class BadgeDrawable(
         val bounds = bounds
         val badgeWidth = mTxtRect.width() + getDimenFromTheme(R.attr.spacingTiny).toInt()
 
-        ResourcesCompat.getDrawable(context.resources,R.drawable.badge_standard, context.theme)
+        ResourcesCompat.getDrawable(context.resources, R.drawable.badge_standard, context.theme)
             ?.apply {
                 setTint(getColorFromTheme(getBackgroundColorByAttr()))
                 setBounds(

@@ -92,7 +92,7 @@ class Tag @JvmOverloads constructor(
 
     private fun setBackground() {
         val background: GradientDrawable =
-            ResourcesCompat.getDrawable(context.resources,R.drawable.tag_background, null) as GradientDrawable
+            ResourcesCompat.getDrawable(context.resources, R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
 
         val cornerRadius = 50F

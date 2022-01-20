@@ -294,7 +294,7 @@ class IconButton @JvmOverloads constructor(
             android.graphics.PorterDuff.Mode.SRC_IN
         )
         binding.iconButtonRippleBackground.background =
-            ResourcesCompat.getDrawable(context.resources,rippleDrawableResourceAttribute, context.theme)
+            ResourcesCompat.getDrawable(context.resources, rippleDrawableResourceAttribute, context.theme)
     }
 
     private fun configureSize() {
@@ -316,7 +316,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureStyle() {
         if (styleAttribute != Style.INHERIT.value) {
             binding.iconButtonContainer.background =
-                ResourcesCompat.getDrawable(context.resources,backgroundDrawableResourceAttribute, context.theme)
+                ResourcesCompat.getDrawable(context.resources, backgroundDrawableResourceAttribute, context.theme)
             binding.iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
         }
     }
