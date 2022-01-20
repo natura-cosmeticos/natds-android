@@ -13,16 +13,16 @@ import com.natura.android.sample.databinding.ActivityDialogBinding
 import com.natura.android.sample.setChosenDefaultTheme
 
 class DialogActivity : AppCompatActivity() {
-    lateinit var standardDialog: DialogStandard
-    lateinit var standardDialogVerticalButtons: DialogStandard
-    lateinit var standardDialogHeaderIconButtons: DialogStandard
-    lateinit var standardDialogMaxHeight: DialogStandard
-    lateinit var standardDialogCustomView: DialogStandard
-    lateinit var standardDialogWithDivider: DialogStandard
-    lateinit var standardDialogWithOutlinedButton: DialogStandard
-    lateinit var dialogNoDismissable: DialogStandard
+    private lateinit var standardDialog: DialogStandard
+    private lateinit var standardDialogVerticalButtons: DialogStandard
+    private lateinit var standardDialogHeaderIconButtons: DialogStandard
+    private lateinit var standardDialogMaxHeight: DialogStandard
+    private lateinit var standardDialogCustomView: DialogStandard
+    private lateinit var standardDialogWithDivider: DialogStandard
+    private lateinit var standardDialogWithOutlinedButton: DialogStandard
+    private lateinit var dialogNoDismissable: DialogStandard
 
-    lateinit var alertDialog: DialogAlert
+    private lateinit var alertDialog: DialogAlert
     private lateinit var binding: ActivityDialogBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
