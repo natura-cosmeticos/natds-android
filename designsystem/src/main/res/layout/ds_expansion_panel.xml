@@ -57,7 +57,7 @@
                 android:layout_marginEnd="?spacingStandard"
                 android:background="?selectableItemBackgroundBorderless"
                 android:contentDescription="Collapse Arrow Icon"
-                android:tint="?colorOnBackground"
+                app:tint="?colorOnBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/ds_expansion_panel_title"
                 app:layout_constraintTop_toTopOf="@id/ds_expansion_panel_title"
