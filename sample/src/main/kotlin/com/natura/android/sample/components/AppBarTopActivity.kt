@@ -40,7 +40,7 @@ class AppBarTopActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        setSupportActionBar(layoutThreeActionsBinding.appBar.toolbar)
+        setSupportActionBar(layoutThreeActionsBinding.appBarWithThreeActions.toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
