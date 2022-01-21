@@ -10,7 +10,7 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <com.natura.android.appbartop.StandardAppBarTop
-        android:id="@+id/appBar"
+        android:id="@+id/appBarWithButtonAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="?toolbarDefaultTheme"

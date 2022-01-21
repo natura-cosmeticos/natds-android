@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
@@ -29,7 +30,7 @@ class Tag @JvmOverloads constructor(
     private var labelTextColorResourceAttribute = 0
     private var tagAttributesArray: TypedArray
 
-    private lateinit var binding: TagBinding
+    private var binding: TagBinding
 
     init {
         try {
@@ -91,7 +92,7 @@ class Tag @JvmOverloads constructor(
 
     private fun setBackground() {
         val background: GradientDrawable =
-            resources.getDrawable(R.drawable.tag_background, null) as GradientDrawable
+            ResourcesCompat.getDrawable(context.resources, R.drawable.tag_background, null) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
 
         val cornerRadius = 50F

@@ -5,6 +5,7 @@ import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.view.View
 import android.widget.RelativeLayout
+import androidx.core.content.res.ResourcesCompat
 import com.natura.android.R
 import com.natura.android.divider.Divider
 import com.natura.android.exceptions.MissingThemeException
@@ -72,7 +73,7 @@ class ListItem @JvmOverloads constructor(
     }
 
     fun enableSelectedState() {
-        this.background = resources.getDrawable(R.color.list_item_color_background_selected, context.theme)
+        this.background = ResourcesCompat.getDrawable(context.resources, R.color.list_item_color_background_selected, context.theme)
         isViewSelected = true
     }
 
@@ -98,7 +99,7 @@ class ListItem @JvmOverloads constructor(
             return
         }
 
-        this.background = resources.getDrawable(R.drawable.list_item_ripple_background, context.theme)
+        this.background = ResourcesCompat.getDrawable(context.resources, R.drawable.list_item_ripple_background, context.theme)
         allowTouch(true)
     }
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NATDS_ICON_VERSION="$(grep -o "iconsVersion\s=\s.*" build.gradle | awk '{ print $3 }' | tr -d \''"\')"
+NATDS_ICON_VERSION="$(grep -o "iconsVersion\s=\s.*" build.gradle | awk '{ print $3 }' | tr -d \'''\''')"
 # get commons from github
 domain='https://raw.githubusercontent.com/natura-cosmeticos/natds-commons/@naturacosmeticos/natds-icons@'
 path="/packages/natds-icons/dist/"
