@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.9.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.3...v.9.9.4) (2022-01-21)
+
+
+### Bug Fixes
+
+* fixes kotlin warnings ([7d153de](https://github.com/natura-cosmeticos/natds-android/commit/7d153de7873afff390336496787631005f7ee15d))
+* fixes kotlin warnings in Dialog Activity ([53b8357](https://github.com/natura-cosmeticos/natds-android/commit/53b8357d9c2e996cf2a69b124d60f91f96c601bd))
+* fixes lint appoitments ([1863d3d](https://github.com/natura-cosmeticos/natds-android/commit/1863d3d8db0e6e4f8a3cdf715dfdd8ef4275bcc6))
+* fixes shell script warnings ([d4af3ab](https://github.com/natura-cosmeticos/natds-android/commit/d4af3abb23e46bf88c6e2809b2a4365937a58fdb))
+* fixes shell script warnings ([6d6a636](https://github.com/natura-cosmeticos/natds-android/commit/6d6a636fbd073c24094776c43a559e42ea643433))
+* fixes the way to get the drawable to ensure backward compatibility with old android versions ([ae32c30](https://github.com/natura-cosmeticos/natds-android/commit/ae32c3067761ede2eace6d7fea937e541178b135))
+* fixes warning in create docs script ([90e57eb](https://github.com/natura-cosmeticos/natds-android/commit/90e57ebeedc48e4bde483db822cb0645ed8135fd))
+* fixes warnings in  Standard App Bar top layout and class ([e27c019](https://github.com/natura-cosmeticos/natds-android/commit/e27c019e0b8bd9604f6d845d831691675fc4ef2d))
+* fixes wrong property in ExpansionPanel layout ([07650ce](https://github.com/natura-cosmeticos/natds-android/commit/07650ce844aeb7994d447577a1b53ae9f88a5c35))
+* removes broken reference at  Expandable Navigation View ([29f3bbe](https://github.com/natura-cosmeticos/natds-android/commit/29f3bbe5941599fb1be40c4bcd066aa95630459c))
+* removes unnused params and syntaxes ([260e589](https://github.com/natura-cosmeticos/natds-android/commit/260e589239d86c1e4e45eed217cd1269c67a70be))
+
 ### [9.9.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.2...v.9.9.3) (2022-01-19)
 
 
