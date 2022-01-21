@@ -193,7 +193,7 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun setBackground(): GradientDrawable {
-        val background = ResourcesCompat.getDrawable(context.resources,R.drawable.shortcut_background, null) as GradientDrawable
+        val background = ResourcesCompat.getDrawable(context.resources, R.drawable.shortcut_background, null) as GradientDrawable
         background.cornerRadius = getDimenFromTheme(context, R.attr.shortcutBorderRadius)
 
         return background
