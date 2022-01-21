@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
@@ -40,7 +41,7 @@ class IconButton @JvmOverloads constructor(
     private var styleAttribute: Int = 0
     private var enabledAttribute: Boolean = true
 
-    private lateinit var binding: IconButtonBinding
+    private var binding: IconButtonBinding
 
     init {
         try {
@@ -293,7 +294,7 @@ class IconButton @JvmOverloads constructor(
             android.graphics.PorterDuff.Mode.SRC_IN
         )
         binding.iconButtonRippleBackground.background =
-            resources.getDrawable(rippleDrawableResourceAttribute, context.theme)
+            ResourcesCompat.getDrawable(context.resources, rippleDrawableResourceAttribute, context.theme)
     }
 
     private fun configureSize() {
@@ -315,7 +316,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureStyle() {
         if (styleAttribute != Style.INHERIT.value) {
             binding.iconButtonContainer.background =
-                resources.getDrawable(backgroundDrawableResourceAttribute, context.theme)
+                ResourcesCompat.getDrawable(context.resources, backgroundDrawableResourceAttribute, context.theme)
             binding.iconButtonContainer.elevation = resources.getDimension(elevationResourceAttribute)
         }
     }

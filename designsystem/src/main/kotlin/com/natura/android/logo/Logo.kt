@@ -16,7 +16,7 @@ import com.natura.android.resources.getDrawableFromTheme
 
 class Logo @JvmOverloads constructor(
     context: Context,
-    private val attrs: AttributeSet? = null,
+    attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
