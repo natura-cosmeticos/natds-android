@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
@@ -19,6 +20,7 @@ import com.natura.android.badge.Badge
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.extensions.setAppearance
+import com.natura.android.resources.getDimenFromTheme
 
 class Shortcut @JvmOverloads constructor(
     context: Context,
@@ -180,8 +182,8 @@ class Shortcut @JvmOverloads constructor(
             configureNotify()
 
             when (this) {
-                CONTAINED -> setBackgroundContained()
-                OUTLINED -> setBackgroundOutlined()
+                CONTAINED -> setContainedAppearance(setBackground())
+                OUTLINED -> setOutlinedAppearance(setBackground())
             }
         }
     }
@@ -190,16 +192,21 @@ class Shortcut @JvmOverloads constructor(
         notifyContainer.number = notifyAttribute
     }
 
-    private fun setBackgroundContained() {
-        val background = resources.getDrawable(R.drawable.shortcut_background, null)
+    private fun setBackground(): GradientDrawable {
+        val background = ResourcesCompat.getDrawable(context.resources,R.drawable.shortcut_background, null) as GradientDrawable
+        background.cornerRadius = getDimenFromTheme(context, R.attr.shortcutBorderRadius)
+
+        return background
+    }
+
+    private fun setContainedAppearance(background: GradientDrawable) {
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
         DrawableCompat.setTint(backgroundWrap, ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
         backgroundContainer.background = background
     }
 
-    private fun setBackgroundOutlined() {
-        val background = resources.getDrawable(R.drawable.shortcut_background, null) as GradientDrawable
+    private fun setOutlinedAppearance(background: GradientDrawable) {
         background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
         background.setStroke(1, ContextCompat.getColor(context, iconColorResourceAttribute))
 
