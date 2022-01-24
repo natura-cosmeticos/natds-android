@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.10.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.4...v.9.10.0) (2022-01-24)
+
+
+### Features
+
+* adds custom border radius attribute for Shortcut ([d6146f0](https://github.com/natura-cosmeticos/natds-android/commit/d6146f0c8f4a6c5edd301b28484ff01f2da71a52))
+
 ### [9.9.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.3...v.9.9.4) (2022-01-21)
 
 
