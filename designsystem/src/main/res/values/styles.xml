@@ -8,30 +8,45 @@
     </style>
 
     <style name="Theme.DS.Dialog.Standard" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Theme.DS.Dialog.Standard.ContainedButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23
+        </item>
     </style>
 
     <style name="Theme.DS.Dialog.Alert" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23
+        </item>
     </style>
 
     <style name="Theme.DS.Dialog.ContainedButtons" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Theme.DS.Dialog.Standard.ContainedButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Theme.DS.Dialog.Standard.ContainedButton.V23
+        </item>
     </style>
 
     <style name="Theme.DS.Dialog.TextButtons" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.V23
+        </item>
         <item name="android:layout_marginBottom">?spacingTiny</item>
         <item name="android:layout_marginTop">?spacingTiny</item>
     </style>
 
     <style name="Theme.DS.Dialog.OutlinedButtons" parent="Theme.DS.Dialog">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.V23</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.V23</item>
+        <item name="buttonBarPositiveButtonStyle">
+            @style/Theme.DS.Dialog.Standard.OutlinedButton.V23
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/Theme.DS.Dialog.Standard.OutlinedButton.V23
+        </item>
     </style>
 
     <style name="Theme.DS.Dialog.Title" parent="">
@@ -234,6 +249,13 @@
     </style>
 
     <!-- BUTTON STYLES -->
+
+    <style name="Widget.DS.ButtonSmall.V23" parent="Widget.DS.Button.V23">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemi</item>
+    </style>
+
     <style name="Widget.DS.Button.V23" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_v23</item>
         <item name="android:textColor">@color/button_contained_label_color_v23</item>
@@ -248,16 +270,16 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.V23" parent="Widget.DS.Button.V23">
-        <item name="android:insetTop">?spacingNone</item>
-        <item name="android:insetBottom">?spacingNone</item>
-        <item name="android:minHeight">?sizeSemi</item>
-    </style>
-
     <style name="Widget.DS.ButtonLarge.V23" parent="Widget.DS.Button.V23">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Light" parent="Widget.DS.Button.Light">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Light" parent="Widget.MaterialComponents.Button">
@@ -274,16 +296,16 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Light" parent="Widget.DS.Button.Light">
-        <item name="android:insetTop">?spacingNone</item>
-        <item name="android:insetBottom">?spacingNone</item>
-        <item name="android:minHeight">?sizeSemi</item>
-    </style>
-
     <style name="Widget.DS.ButtonLarge.Light" parent="Widget.DS.Button.Light">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Dark" parent="Widget.DS.Button.Dark">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Dark" parent="Widget.MaterialComponents.Button">
@@ -300,18 +322,6 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Dark" parent="Widget.DS.Button.Dark">
-        <item name="android:insetTop">?spacingNone</item>
-        <item name="android:insetBottom">?spacingNone</item>
-        <item name="android:minHeight">?sizeSemi</item>
-    </style>
-
-    <style name="Widget.DS.ButtonLarge.Dark" parent="Widget.DS.Button.Dark">
-        <item name="android:insetTop">?spacingNone</item>
-        <item name="android:insetBottom">?spacingNone</item>
-        <item name="android:minHeight">?sizeMedium</item>
-    </style>
-
     <style name="Widget.DS.ButtonSmall.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
@@ -319,10 +329,10 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.V23" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_v23</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_v23</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_v23</item>
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_v23</item>
+        <item name="android:textColor">@color/button_outlined_label_color_v23</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_v23</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
@@ -338,6 +348,12 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Dark" parent="Widget.DS.Button.Dark">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
     <style name="Widget.DS.ButtonSmall.TextButton.V23" parent="Widget.DS.Button.TextButton.V23">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
@@ -345,10 +361,10 @@
     </style>
 
     <style name="Widget.DS.Button.TextButton.V23" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/button_text_label_color_v23</item>
-        <item name="backgroundTint">@color/button_text_background_color_v23</item>
-        <item name="strokeColor">@color/button_text_stroke_color_v23</item>
         <item name="rippleColor">@color/button_ripple_color_v23</item>
+        <item name="backgroundTint">@color/button_text_background_color_v23</item>
+        <item name="android:textColor">@color/button_text_label_color_v23</item>
+        <item name="strokeColor">@color/button_text_stroke_color_v23</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
@@ -371,10 +387,10 @@
     </style>
 
     <style name="Widget.DS.Button.TextButton.Light" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/button_text_label_color_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="strokeColor">@color/button_text_stroke_color_light</item>
         <item name="backgroundTint">@color/button_text_background_color_light</item>
+        <item name="android:textColor">@color/button_text_label_color_light</item>
+        <item name="strokeColor">@color/button_text_stroke_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
@@ -397,10 +413,10 @@
     </style>
 
     <style name="Widget.DS.Button.TextButton.Dark" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/button_text_label_color_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="strokeColor">@color/button_text_stroke_color_dark</item>
         <item name="backgroundTint">@color/button_text_background_color_dark</item>
+        <item name="android:textColor">@color/button_text_label_color_dark</item>
+        <item name="strokeColor">@color/button_text_stroke_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>

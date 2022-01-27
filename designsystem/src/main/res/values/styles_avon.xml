@@ -131,8 +131,8 @@
     </style>
 
     <style name="Widget.DS.ButtonSmall.Avon.Light" parent="Widget.DS.Button.Avon.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Avon.Light" parent="Widget.MaterialComponents.Button">
@@ -147,13 +147,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Avon.Light" parent="Widget.DS.Button.Avon.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Avon.Dark" parent="Widget.DS.Button.Avon.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Avon.Dark" parent="Widget.MaterialComponents.Button">
@@ -168,13 +168,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Avon.Dark" parent="Widget.DS.Button.Avon.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Avon.Light" parent="Widget.DS.Button.Outlined.Avon.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -189,13 +189,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Avon.Light" parent="Widget.DS.Button.Outlined.Avon.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Avon.Dark" parent="Widget.DS.Button.Outlined.Avon.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -210,8 +210,8 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Avon.Dark" parent="Widget.DS.Button.Outlined.Avon.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Avon.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">

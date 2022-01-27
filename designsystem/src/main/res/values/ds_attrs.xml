@@ -312,4 +312,36 @@
         <attr name="avt_view_size" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="Button">
+        <attr name="bt_type" format="enum">
+            <enum name="contained" value="0" />
+            <enum name="outlined" value="1" />
+            <enum name="text" value="2" />
+        </attr>
+        <attr name="bt_size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="large" value="2" />
+        </attr>
+
+        <attr name="bt_display" format="enum">
+            <enum name="inline" value="0" />
+            <enum name="block" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ButtonStyle">
+        <attr name="rippleColor"/>
+        <attr name="backgroundTint"/>
+        <attr name="android:textColor"/>
+        <attr name="strokeColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:letterSpacing"/>
+        <attr name="cornerRadius"/>
+        <attr name="fontFamily"/>
+        <attr name="android:insetTop"/>
+        <attr name="android:insetBottom"/>
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+
 </resources>

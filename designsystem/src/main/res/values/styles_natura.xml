@@ -131,8 +131,8 @@
     </style>
 
     <style name="Widget.DS.ButtonSmall.Natura.Light" parent="Widget.DS.Button.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
@@ -147,13 +147,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Light" parent="Widget.DS.Button.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Natura.Dark" parent="Widget.MaterialComponents.Button">
@@ -168,13 +168,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -189,13 +189,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -210,8 +210,8 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <!--Navigation Drawer-->

@@ -133,8 +133,8 @@
     </style>
 
     <style name="Widget.DS.ButtonSmall.Aesop.Light" parent="Widget.DS.Button.Aesop.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Aesop.Light" parent="Widget.MaterialComponents.Button">
@@ -149,13 +149,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Aesop.Light" parent="Widget.DS.Button.Aesop.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Aesop.Dark" parent="Widget.DS.Button.Aesop.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Aesop.Dark" parent="Widget.MaterialComponents.Button">
@@ -170,13 +170,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Aesop.Dark" parent="Widget.DS.Button.Aesop.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Aesop.Light" parent="Widget.DS.Button.Outlined.Aesop.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Aesop.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -191,13 +191,13 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Aesop.Light" parent="Widget.DS.Button.Outlined.Aesop.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Aesop.Dark" parent="Widget.DS.Button.Outlined.Aesop.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Aesop.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -212,8 +212,8 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Aesop.Dark" parent="Widget.DS.Button.Outlined.Aesop.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Aesop.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
