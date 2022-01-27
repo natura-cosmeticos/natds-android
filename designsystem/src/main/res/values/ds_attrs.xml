@@ -319,9 +319,9 @@
             <enum name="text" value="2" />
         </attr>
         <attr name="bt_size" format="enum">
-            <enum name="small" value="0" />
-            <enum name="medium" value="1" />
-            <enum name="large" value="2" />
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
         </attr>
 
         <attr name="bt_display" format="enum">

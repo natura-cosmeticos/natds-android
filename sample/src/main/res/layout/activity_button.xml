@@ -13,13 +13,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
+            <com.natura.android.button.Button
                 android:id="@+id/containedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
-                android:minWidth="?sizeHuge"
                 android:text="contained"
+                app:bt_display="inline"
+                app:bt_size="semix"
+                app:bt_type="outlined"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/outlinedButton"
                 app:layout_constraintHorizontal_bias="0.5"

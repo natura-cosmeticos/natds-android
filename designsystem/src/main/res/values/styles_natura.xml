@@ -138,7 +138,7 @@
     <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textColor">@color/button_contained_label_color_natura_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_natura_light</item>
+        <item name="backgroundTint">@color/black</item>
         <item name="strokeColor">@color/button_contained_stroke_color_natura_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
