@@ -142,6 +142,7 @@
         <item name="strokeColor">@color/button_contained_stroke_color_avon_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_contained_label_color_avon_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -164,6 +165,7 @@
         <item name="strokeColor">@color/button_contained_stroke_color_avon_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_contained_label_color_avon_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -186,6 +188,7 @@
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_outlined_label_color_avon_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -208,6 +211,7 @@
         <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_outlined_label_color_avon_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>

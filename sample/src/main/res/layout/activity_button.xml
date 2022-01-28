@@ -63,7 +63,7 @@
                 android:id="@+id/containedButtonDisable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="?spacingSmall"
                 android:minWidth="?sizeHuge"
                 android:enabled="false"
                 android:text="contained"
@@ -121,7 +121,7 @@
             android:layout_marginTop="?spacingSmall"
             android:text="contained - semix"
             app:bt_size="semix"
-            app:iconGravity="textStart"
+            app:iconGravity="textEnd"
             app:icon="@drawable/outlined_action_like"/>
 
         <com.natura.android.button.ContainedButton
