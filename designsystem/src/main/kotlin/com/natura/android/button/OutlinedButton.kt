@@ -28,6 +28,10 @@ class OutlinedButton : MaterialButton {
             init()
         }
 
+    fun getSize(): Int {
+        return sizeAttribute
+    }
+
     private fun init() {
         buttonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Button)
         getAttributeValue()

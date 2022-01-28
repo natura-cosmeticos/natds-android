@@ -28,6 +28,10 @@ class ContainedButton : MaterialButton {
             init()
         }
 
+    fun getSize(): Int {
+        return sizeAttribute
+    }
+
     private fun init() {
         buttonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Button)
         getAttributeValue()
@@ -68,9 +72,9 @@ class ContainedButton : MaterialButton {
     }
 
     private fun configureAppearance() {
-        this.minHeight = context.resources.getDimension(minHeightResourceAttribute).toInt()
-        this.insetBottom = context.resources.getDimension(insetBottomResourceAttribute).toInt()
-        this.insetTop = context.resources.getDimension(insetTopResourceAttribute).toInt()
+        this.minHeight = resources.getDimension(minHeightResourceAttribute).toInt()
+        this.insetBottom = resources.getDimension(insetBottomResourceAttribute).toInt()
+        this.insetTop = resources.getDimension(insetTopResourceAttribute).toInt()
     }
 
     companion object {
