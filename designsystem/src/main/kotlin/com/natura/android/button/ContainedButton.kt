@@ -18,13 +18,13 @@ class ContainedButton : MaterialButton {
     private var minHeightResourceAttribute: Int = 0
 
     constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs, R.attr.buttonStyleMedium) {
+        super(context, attrs, R.attr.buttonStyleSmall) {
             this.attrs = attrs
             init()
         }
 
     constructor(context: Context) :
-        super(context, null, R.attr.buttonStyleMedium) {
+        super(context, null, R.attr.buttonStyleSmall) {
             init()
         }
 

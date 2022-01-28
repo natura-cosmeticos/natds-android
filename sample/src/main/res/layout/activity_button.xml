@@ -18,7 +18,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
-                android:drawableLeft="@drawable/outlined_action_like"
                 android:text="contained"
                 app:bt_size="semix"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -68,7 +67,6 @@
                 android:minWidth="?sizeHuge"
                 android:enabled="false"
                 android:text="contained"
-                android:drawableRight="@drawable/outlined_action_like"
                 app:bt_size="semi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/outlinedButtonDisable"
@@ -117,28 +115,50 @@
             app:bt_size="medium"/>
 
         <com.natura.android.button.ContainedButton
+            android:id="@+id/blockContainedButtonWithIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="contained - semix"
+            app:bt_size="semix"
+            app:iconGravity="textStart"
+            app:icon="@drawable/outlined_action_like"/>
+
+        <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButtonDisable"
             android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="disable contained - semix"
-            app:bt_size="semix"/>
+            android:text="disable contained - semi"
+            app:bt_size="semi"/>
+
         <com.natura.android.button.OutlinedButton
-            android:id="@+id/blockOutlinedButton"
+            android:id="@+id/blockMediumOutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSemi"
+            android:text="outlined - medium"
+            app:bt_size="medium"/>
+
+        <com.natura.android.button.OutlinedButton
+            android:id="@+id/blockSemixOutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="outlined - semi"
-            app:bt_size="semi"/>
+            android:text="outlined - semix"
+            app:bt_size="semix"
+            app:iconGravity="textStart"
+            app:icon="@drawable/outlined_action_like"/>
+
         <com.natura.android.button.OutlinedButton
-            android:id="@+id/blockOutlinedButtonDisable"
+            android:id="@+id/blockSemiOutlinedButtonDisable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             android:enabled="false"
-            android:text="disable outlined"
-            app:bt_size="medium"/>
+            android:text="disable outlined - semi"
+            app:bt_size="semi"/>
         <com.natura.android.button.TextButton
             android:id="@+id/blockTextButton"
             android:layout_width="match_parent"

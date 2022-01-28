@@ -262,6 +262,7 @@
         <item name="backgroundTint">@color/button_contained_background_color_v23</item>
         <item name="strokeColor">@color/button_contained_stroke_color_v23</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -288,6 +289,7 @@
         <item name="android:textColor">@color/button_contained_label_color_light</item>
         <item name="strokeColor">@color/button_contained_stroke_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -314,6 +316,7 @@
         <item name="android:textColor">@color/button_contained_label_color_dark</item>
         <item name="strokeColor">@color/button_contained_stroke_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -340,6 +343,7 @@
         <item name="android:textColor">@color/button_outlined_label_color_v23</item>
         <item name="strokeColor">@color/button_outlined_stroke_color_v23</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -366,6 +370,7 @@
         <item name="android:textColor">@color/button_text_label_color_v23</item>
         <item name="strokeColor">@color/button_text_stroke_color_v23</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -392,6 +397,7 @@
         <item name="android:textColor">@color/button_text_label_color_light</item>
         <item name="strokeColor">@color/button_text_stroke_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -418,6 +424,7 @@
         <item name="android:textColor">@color/button_text_label_color_dark</item>
         <item name="strokeColor">@color/button_text_stroke_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>

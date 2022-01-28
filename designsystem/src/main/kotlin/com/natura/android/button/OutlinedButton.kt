@@ -18,13 +18,13 @@ class OutlinedButton : MaterialButton {
     private var minHeightResourceAttribute: Int = 0
 
     constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs, R.attr.outlinedButton) {
+        super(context, attrs, R.attr.outlinedButtonSmall) {
             this.attrs = attrs
             init()
         }
 
     constructor(context: Context) :
-        super(context, null, R.attr.outlinedButton) {
+        super(context, null, R.attr.outlinedButtonSmall) {
             init()
         }
 

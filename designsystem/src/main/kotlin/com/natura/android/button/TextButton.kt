@@ -18,13 +18,13 @@ class TextButton : MaterialButton {
     private var minHeightResourceAttribute: Int = 0
 
     constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs, R.attr.textButton) {
+        super(context, attrs, R.attr.textButtonSmall) {
             this.attrs = attrs
             init()
         }
 
     constructor(context: Context) :
-        super(context, null, R.attr.textButton) {
+        super(context, null, R.attr.textButtonSmall) {
             init()
         }
 
