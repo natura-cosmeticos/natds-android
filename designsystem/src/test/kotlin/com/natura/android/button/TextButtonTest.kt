@@ -23,27 +23,33 @@ class TextButtonTest {
     fun checksIfSizeSemiWasSet() {
         button = buildTextButtonWithSemiSize()
 
-        val type = button.getSize()
+        val size = button.getSize()
+        val height = button.minHeight
 
-        Truth.assertThat(type).isEqualTo(0)
+        Truth.assertThat(size).isEqualTo(SEMI_SIZE)
+        Truth.assertThat(height).isEqualTo(SEMI_HEIGHT)
     }
 
     @Test
     fun checksIfSizeSemixWasSet() {
         button = buildTextButtonWithSemiXSize()
 
-        val type = button.getSize()
+        val size = button.getSize()
+        val height = button.minHeight
 
-        Truth.assertThat(type).isEqualTo(1)
+        Truth.assertThat(size).isEqualTo(SEMIX_SIZE)
+        Truth.assertThat(height).isEqualTo(SEMIX_HEIGHT)
     }
 
     @Test
     fun checksIfSizeMediumWasSet() {
         button = buildTextButtonWithMediumSize()
 
-        val type = button.getSize()
+        val size = button.getSize()
+        val height = button.minHeight
 
-        Truth.assertThat(type).isEqualTo(2)
+        Truth.assertThat(size).isEqualTo(MEDIUM_SIZE)
+        Truth.assertThat(height).isEqualTo(MEDIUM_HEIGHT)
     }
 
     private fun buildTextButtonWithSemiSize(): TextButton {
@@ -65,5 +71,15 @@ class TextButtonTest {
             .aTextButton()
             .withMediumSize()
             .build()
+    }
+
+    companion object {
+        private const val SEMI_HEIGHT = 32
+        private const val SEMIX_HEIGHT = 40
+        private const val MEDIUM_HEIGHT = 48
+
+        private const val SEMI_SIZE = 0
+        private const val SEMIX_SIZE = 1
+        private const val MEDIUM_SIZE = 2
     }
 }
