@@ -13,20 +13,26 @@ With the following attribute status:
 
 - ✅ **Disabled**
 - **Size**:
-  - 🚧 `Semi`
-  - 🚧 `Semix`
-  - 🚧 `Medium`
+  - ✅ `Semi`
+  - ✅`Semix`
+  - ✅`Medium`
 - **Icon**:
-  - 🚧 `Left`
-  - 🚧 `Right`
+  - ✅`Left`
+  - ✅ `Right`
 - **Display**:
-  - 🚧 `Inline`
-  - 🚧 `Block`
+  - ✅ `Inline`
+  - ✅ `Block`
+
+## Subcomponents
+The Button is divided into subcomponents: `ContainedButton`, `OutlinedButton` and `TextButton`, all coming from MaterialDesign. The way of use is the same for everyone, what changes is only the design.
 
 ## Attributes
 | Attr | Description | Type | Options |
 | - | --- |:-:|-|
-|`style`|  Set component appearance attributes.| Theme attribute| -`containedButton`: Default style of the native component and that provides the button background filled with the primary color<br> - `outlinedButton`: Style that proves the only outlined component. <br> -`textButton`: Style that proves the component with its text only.|
+|`app:iconName`| Receives a drawable to be render at component| drawable | icon drawable | 
+|`app:iconGravity`| defines the icon's position within the component| string | start, end, top, textStart, textEnd, textTop| 
+|`app:bt_size`| Set the height of the button| string | semi (old small), semix (old medium) or medium (old large)| 
+|`android:layout_width`| Sets the width of the component| dimension |- **match_parent**: Component covers the entire width of the screen. <br> - **wrap_content**: Width defined according to the content size <br> - **(Dimension)**: Field allows you to enter dimension value <br>| 
 
 ## Usage Examples
 Button Contained Disabled
@@ -36,13 +42,12 @@ Button Contained Disabled
 #### Layout XML
 
 ```android
-    <Button
+     <com.natura.android.button.ContainedButton
           android:id="@+id/button"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:minWidth="?sizeHuge"
           android:enabled="false"
-          style="?containedButton"
           android:text="contained" />
 ```
 
@@ -55,9 +60,8 @@ Button Outlined
 #### Layout XML
 
 ```android
-    <Button
+    <com.natura.android.button.OutlinedButton
           android:id="@+id/button"
-          style="?outlinedButton"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:minWidth="?sizeHuge"
@@ -74,7 +78,7 @@ Button Text
 #### Layout XML
 
 ```android
-    <Button
+    <com.natura.android.button.TextButton
           android:id="@+id/button"
           style="?textButton"
           android:layout_width="wrap_content"

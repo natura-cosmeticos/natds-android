@@ -112,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             android:text="contained - medium"
-            app:bt_size="medium"/>
+            app:bt_size="large"/>
 
         <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButtonWithIcon"
