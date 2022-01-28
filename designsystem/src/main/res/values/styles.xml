@@ -322,6 +322,12 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
+    <style name="Widget.DS.ButtonLarge.Dark" parent="Widget.DS.Button.Dark">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
     <style name="Widget.DS.ButtonSmall.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
@@ -343,12 +349,6 @@
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.V23" parent="Widget.DS.Button.Outlined.V23">
-        <item name="android:insetTop">?spacingNone</item>
-        <item name="android:insetBottom">?spacingNone</item>
-        <item name="android:minHeight">?sizeSemiX</item>
-    </style>
-
-    <style name="Widget.DS.ButtonLarge.Dark" parent="Widget.DS.Button.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
