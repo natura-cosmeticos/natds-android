@@ -37,7 +37,8 @@ class Card @JvmOverloads constructor(
     private var elevationAttribute: Boolean = false
     private var radiusAttribute: Boolean = false
     private var backgroundColorResourceAttribute: Int = 0
-    private var radiusResourceAttribute: Int = 0
+    private var radiusEnabledResourceAttribute: Int = 0
+    private var radiusDisabledResourceAttribute: Int = 0
     private var elevationResourceAttribute: Int = 0
 
     init {
@@ -65,15 +66,16 @@ class Card @JvmOverloads constructor(
             .apply {
                 backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Card_colorBackground)
                 elevationResourceAttribute = this.getResourceIdOrThrow(R.styleable.Card_customElevation)
-                radiusResourceAttribute = this.getResourceIdOrThrow(R.styleable.Card_customRadius)
+                radiusEnabledResourceAttribute = this.getResourceIdOrThrow(R.styleable.Card_radiusEnabledValue)
+                radiusDisabledResourceAttribute = this.getResourceIdOrThrow(R.styleable.Card_radiusDisabledValue)
             }
 
         this.setCardBackgroundColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
 
         if (!radiusAttribute) {
-            this.radius = 0F
+            this.radius = resources.getDimension(radiusDisabledResourceAttribute)
         } else {
-            this.radius = resources.getDimension(radiusResourceAttribute)
+            this.radius = resources.getDimension(radiusEnabledResourceAttribute)
         }
 
         if (!elevationAttribute) {
