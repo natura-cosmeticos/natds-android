@@ -500,6 +500,10 @@
     </style>
 
     <!-- TAG STYLES -->
+
+    <style name="Widget.DS.Tag">
+    </style>
+
     <style name="Widget.DS.Tag.Primary" parent="Widget.DS.Tag">
         <item name="colorBackground">?colorPrimary</item>
         <item name="android:textColor">?colorOnPrimary</item>
@@ -532,13 +536,16 @@
 
     <style name="Widget.DS.Tag.Small" parent="Widget.DS.Tag">
         <item name="customHeight">?sizeSmall</item>
+        <item name="radiusEnabledValue">?tagSmallBorderRadiusEnable</item>
+        <item name="radiusDisabledValue">?tagSmallBorderRadiusDisable</item>
+
     </style>
 
     <style name="Widget.DS.Tag.Standard" parent="Widget.DS.Tag">
         <item name="customHeight">?sizeStandard</item>
+        <item name="radiusEnabledValue">?tagStandardBorderRadiusEnable</item>
+        <item name="radiusDisabledValue">?tagStandardBorderRadiusDisable</item>
     </style>
-
-    <style name="Widget.DS.Tag"></style>
 
     <style name="TextAppearance.DS.Tag" parent="TextAppearance.AppCompat.Caption">
         <item name="android:textSize">?tagLabelFontSize</item>

@@ -37,6 +37,8 @@
         <attr name="textLabel" format="string" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
+        <attr name="radiusDisabledValue" format="reference" />
+        <attr name="radiusEnabledValue" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="Shortcut">
