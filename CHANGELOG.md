@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.12.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.11.0...v.9.12.0) (2022-02-01)
+
+
+### Features
+
+* updates card component with custom border radius attribute ([d1ad535](https://github.com/natura-cosmeticos/natds-android/commit/d1ad535a8e76c29d1d377f216726e87b076981d1))
+
 ## [9.11.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.10.0...v.9.11.0) (2022-02-01)
 
 
