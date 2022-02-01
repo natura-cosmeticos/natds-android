@@ -551,7 +551,8 @@
     <style name="Widget.DS.Card">
         <item name="colorBackground">?colorSurface</item>
         <item name="customElevation">?elevation01</item>
-        <item name="customRadius">?borderRadiusMedium</item>
+        <item name="radiusEnabledValue">?cardBorderRadiusEnable</item>
+        <item name="radiusDisabledValue">?cardBorderRadiusDisable</item>
     </style>
 
     <!-- DIVIDER STYLE -->

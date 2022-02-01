@@ -206,7 +206,8 @@
 
     <declare-styleable name="Card">
         <attr name="colorBackground" />
-        <attr name="customRadius" format="reference" />
+        <attr name="radiusEnabledValue" format="reference" />
+        <attr name="radiusDisabledValue" format="reference" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" />
         <attr name="customElevation" />
