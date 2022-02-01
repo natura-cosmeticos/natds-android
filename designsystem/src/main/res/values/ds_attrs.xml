@@ -312,4 +312,20 @@
         <attr name="avt_view_size" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="Button">
+        <attr name="bt_size" format="enum">
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="small" value="0" />
+            <enum name="large" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ButtonStyle">
+        <attr name="android:insetTop"/>
+        <attr name="android:insetBottom"/>
+        <attr name="android:minHeight"/>
+    </declare-styleable>
+
 </resources>
