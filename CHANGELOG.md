@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.13.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.12.0...v.9.13.0) (2022-02-02)
+
+
+### Features
+
+* updates Tag component with custom border radius value ([8df74fa](https://github.com/natura-cosmeticos/natds-android/commit/8df74fad0f7e58d549ea03d4e8789a5fdc1f8c36))
+
+
+### Bug Fixes
+
+* fixes attributes with the same name ([57033d6](https://github.com/natura-cosmeticos/natds-android/commit/57033d689c2151c48ab9026a3a53818a18cb0270))
+
 ## [9.12.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.11.0...v.9.12.0) (2022-02-01)
 
 
