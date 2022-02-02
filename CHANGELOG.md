@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.12.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.11.0...v.9.12.0) (2022-02-01)
+
+
+### Features
+
+* updates card component with custom border radius attribute ([d1ad535](https://github.com/natura-cosmeticos/natds-android/commit/d1ad535a8e76c29d1d377f216726e87b076981d1))
+
+## [9.11.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.10.0...v.9.11.0) (2022-02-01)
+
+
+### Features
+
+* adds button attributes and refactor its styles at xml files ([547d1da](https://github.com/natura-cosmeticos/natds-android/commit/547d1daab609845dae7c3921a564ef40fa15cf85))
+* creates button component and includes at Sample app ([5ce19be](https://github.com/natura-cosmeticos/natds-android/commit/5ce19be2a0ee0a1aeca279b387f4af6dd7f0b648))
+* splits the button component into three subcomponents to reduce code ([179789e](https://github.com/natura-cosmeticos/natds-android/commit/179789ea5368f65c88a59e73e437d93025655cee))
+
+
+### Bug Fixes
+
+* adds mechanism to set icon color at Button component ([2a4d963](https://github.com/natura-cosmeticos/natds-android/commit/2a4d9636a9a69f1b11e8185dfcaedb06cc681759))
+* fixes background tint color of button ([7a1026c](https://github.com/natura-cosmeticos/natds-android/commit/7a1026c8b4a3de96f5b01bace3156fbb59cb08fa))
+* fixes mechanism to set icon at Button ([b901e56](https://github.com/natura-cosmeticos/natds-android/commit/b901e5622731612328896b3f3ff5fe1701776648))
+
 ## [9.10.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.9.4...v.9.10.0) (2022-01-24)
 
 

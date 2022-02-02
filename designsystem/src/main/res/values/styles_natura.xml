@@ -131,8 +131,9 @@
     </style>
 
     <style name="Widget.DS.ButtonSmall.Natura.Light" parent="Widget.DS.Button.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Natura.Light" parent="Widget.MaterialComponents.Button">
@@ -141,19 +142,24 @@
         <item name="backgroundTint">@color/button_contained_background_color_natura_light</item>
         <item name="strokeColor">@color/button_contained_stroke_color_natura_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_contained_label_color_natura_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Light" parent="Widget.DS.Button.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Natura.Dark" parent="Widget.MaterialComponents.Button">
@@ -162,19 +168,24 @@
         <item name="backgroundTint">@color/button_contained_background_color_natura_dark</item>
         <item name="strokeColor">@color/button_contained_stroke_color_natura_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_contained_label_color_natura_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura.Dark" parent="Widget.DS.Button.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -183,19 +194,24 @@
         <item name="backgroundTint">@color/button_outlined_background_color_natura_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_outlined_label_color_natura_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Light" parent="Widget.DS.Button.Outlined.Natura.Light">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_tiny</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_tiny</item>
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
@@ -204,14 +220,18 @@
         <item name="strokeColor">@color/button_outlined_stroke_color_natura_dark</item>
         <item name="backgroundTint">@color/button_outlined_background_color_natura_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="iconTint">@color/button_outlined_label_color_natura_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura.Dark" parent="Widget.DS.Button.Outlined.Natura.Dark">
-        <item name="android:insetTop">@dimen/ds_spacing_none</item>
-        <item name="android:insetBottom">@dimen/ds_spacing_none</item>
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <!--Navigation Drawer-->

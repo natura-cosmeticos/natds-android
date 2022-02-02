@@ -208,7 +208,8 @@
 
     <declare-styleable name="Card">
         <attr name="colorBackground" />
-        <attr name="customRadius" format="reference" />
+        <attr name="radiusEnabledValue" format="reference" />
+        <attr name="radiusDisabledValue" format="reference" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" />
         <attr name="customElevation" />
@@ -312,6 +313,22 @@
         <attr name="avt_icon_size" format="reference" />
         <attr name="avt_image_size" format="reference" />
         <attr name="avt_view_size" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Button">
+        <attr name="bt_size" format="enum">
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="small" value="0" />
+            <enum name="large" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ButtonStyle">
+        <attr name="android:insetTop"/>
+        <attr name="android:insetBottom"/>
+        <attr name="android:minHeight"/>
     </declare-styleable>
 
 </resources>
