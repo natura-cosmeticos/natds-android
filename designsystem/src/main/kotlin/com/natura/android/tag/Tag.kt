@@ -26,6 +26,8 @@ class Tag @JvmOverloads constructor(
     private var sizeAttribute: Int = 0
     private var positionAttribute: Int = 0
     private var sizeResourceAttribute = 0
+    private var radiusEnabledResourceAttribute = 0
+    private var radiusDisabledesourceAttribute = 0
     private var backgroundColorResourceAttribute = 0
     private var labelTextColorResourceAttribute = 0
     private var tagAttributesArray: TypedArray
@@ -92,18 +94,42 @@ class Tag @JvmOverloads constructor(
 
     private fun setBackground() {
         val background: GradientDrawable =
-            ResourcesCompat.getDrawable(context.resources, R.drawable.tag_background, null) as GradientDrawable
+            ResourcesCompat.getDrawable(
+                context.resources,
+                R.drawable.tag_background,
+                null
+            ) as GradientDrawable
         val backgroundWrap = DrawableCompat.wrap(background).mutate()
 
-        val cornerRadius = 50F
+        val enabledBorderRadius = context.resources.getDimension(radiusEnabledResourceAttribute)
+        val disabledBorderRadius = context.resources.getDimension(radiusDisabledesourceAttribute)
+
         when (positionAttribute) {
-            Position.CENTER.value -> background.cornerRadius = cornerRadius
+            Position.CENTER.value -> background.cornerRadius = enabledBorderRadius
             Position.RIGHT.value ->
                 background.cornerRadii =
-                    floatArrayOf(cornerRadius, cornerRadius, 0F, 0F, 0F, 0F, cornerRadius, cornerRadius)
+                    floatArrayOf(
+                        enabledBorderRadius,
+                        enabledBorderRadius,
+                        disabledBorderRadius,
+                        disabledBorderRadius,
+                        disabledBorderRadius,
+                        disabledBorderRadius,
+                        enabledBorderRadius,
+                        enabledBorderRadius
+                    )
             Position.LEFT.value ->
                 background.cornerRadii =
-                    floatArrayOf(0F, 0F, cornerRadius, cornerRadius, cornerRadius, cornerRadius, 0F, 0F)
+                    floatArrayOf(
+                        disabledBorderRadius,
+                        disabledBorderRadius,
+                        enabledBorderRadius,
+                        enabledBorderRadius,
+                        enabledBorderRadius,
+                        enabledBorderRadius,
+                        disabledBorderRadius,
+                        disabledBorderRadius
+                    )
         }
 
         DrawableCompat.setTint(
@@ -167,6 +193,10 @@ class Tag @JvmOverloads constructor(
             )
             .apply {
                 sizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_customHeight)
+                radiusEnabledResourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.Tag_radiusEnabledValue)
+                radiusDisabledesourceAttribute =
+                    this.getResourceIdOrThrow(R.styleable.Tag_radiusDisabledValue)
             }
     }
 

@@ -7,6 +7,8 @@
     <attr name="customWidth" format="reference" />
     <attr name="enabledElevation" format="boolean" />
     <attr name="scrollable" format="boolean" />
+    <attr name="radiusEnabledValue" format="reference" />
+    <attr name="radiusDisabledValue" format="reference" />
 
     <attr name="appBarColor" format="enum">
         <enum name="colorDefault" value="0" />
@@ -37,6 +39,8 @@
         <attr name="textLabel" format="string" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
+        <attr name="radiusDisabledValue"/>
+        <attr name="radiusEnabledValue"/>
     </declare-styleable>
 
     <declare-styleable name="Shortcut">
@@ -206,8 +210,8 @@
 
     <declare-styleable name="Card">
         <attr name="colorBackground" />
-        <attr name="radiusEnabledValue" format="reference" />
-        <attr name="radiusDisabledValue" format="reference" />
+        <attr name="radiusEnabledValue"/>
+        <attr name="radiusDisabledValue"/>
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" />
         <attr name="customElevation" />
