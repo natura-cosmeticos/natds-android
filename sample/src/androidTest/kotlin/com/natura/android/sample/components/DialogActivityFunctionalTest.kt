@@ -12,11 +12,9 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.natura.android.sample.R
 import org.hamcrest.CoreMatchers.not
 import org.junit.Before
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 
-@Ignore
 @RunWith(AndroidJUnit4::class)
 class DialogActivityFunctionalTest {
     private lateinit var dialogActivityScenario: ActivityScenario<DialogActivity>
@@ -40,7 +38,7 @@ class DialogActivityFunctionalTest {
     fun shouldShowDialogCustomContent() {
         onView(withId(R.id.standardDialogButton)).perform(click())
 
-        onView(withId(R.id.dialogCustomContent))
+        onView(withText("Long text that should be substitied for some dialog text. This might actually take two lines or more"))
             .inRoot(isDialog())
             .check(matches(isDisplayed()))
     }
