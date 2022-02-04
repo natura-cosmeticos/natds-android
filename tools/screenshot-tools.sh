@@ -1,3 +1,3 @@
 #!/bin/sh
-pip install -U pip
-pip install Pillow
+pip install --upgrade pip
+pip install --upgrade Pillow
