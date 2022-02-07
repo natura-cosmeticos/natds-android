@@ -9,6 +9,7 @@
     android:background="@drawable/ds_expansion_panel_border_collapsed"
     android:animateLayoutChanges="true"
     android:layout_margin="?spacingMicro"
+    app:cardCornerRadius="?expansionPanelBorderRadius"
     app:cardElevation="?elevation01"
     app:rippleColor="@android:color/transparent"
     app:layout_constraintBottom_toBottomOf="parent"
