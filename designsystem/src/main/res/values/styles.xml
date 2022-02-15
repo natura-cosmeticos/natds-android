@@ -5,6 +5,11 @@
     <style name="Theme.DS.Dialog" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="android:windowBackground">@drawable/dialog_standard_background</item>
+        <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ShapeAppearanceOverlay" parent="">
+        <item name="cornerSize">?dialogBorderRadius</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard" parent="Theme.DS.Dialog">
