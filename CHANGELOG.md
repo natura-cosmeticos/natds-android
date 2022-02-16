@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.15.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.14.0...v.9.15.0) (2022-02-16)
+
+
+### Features
+
+* adds custom border radius to AlertDialog component ([9d4afa3](https://github.com/natura-cosmeticos/natds-android/commit/9d4afa31a3617eeac6082655ffaf29753a098133))
+* adds custom border radius to StandardDialog component ([a21049d](https://github.com/natura-cosmeticos/natds-android/commit/a21049df2775d826fb0d2a90053dd9a2686d8a90))
+
 ## [9.14.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.13.1...v.9.14.0) (2022-02-07)
 
 
