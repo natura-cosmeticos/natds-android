@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.16.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.15.0...v.9.16.0) (2022-02-16)
+
+
+### Features
+
+* update TextField component to use custom border radius from natds-commons ([332d3b4](https://github.com/natura-cosmeticos/natds-android/commit/332d3b4c3314096a1463eacb7dcd2abfde321fb9))
+
 ## [9.15.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.14.0...v.9.15.0) (2022-02-16)
 
 
