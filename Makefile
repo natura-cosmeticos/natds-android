@@ -24,7 +24,7 @@ instrumentation-test: clean disable-animations
 screenshot-test: clean install-tools-screenshot-test
 	./gradlew verifyDebugAndroidTestScreenshotTest
 
-update-screenshots: clean install-tools-screenshot-test
+update-screenshots: clean disable-animations install-tools-screenshot-test
 	./gradlew recordDebugAndroidTestScreenshotTest
 
 install-tools-screenshot-test:
