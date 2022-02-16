@@ -9,6 +9,7 @@ import android.view.Window
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.natura.android.R
 import com.natura.android.divider.Divider
 import com.natura.android.iconButton.IconButton
@@ -164,8 +165,7 @@ class DialogStandard private constructor(
     lateinit var dialog: AlertDialog
 
     fun create(): DialogStandard {
-        dialog = AlertDialog.Builder(context, resolveThemeResource()).create().apply {
-            requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog = MaterialAlertDialogBuilder(context, resolveThemeResource()).create().apply {
 
             val dialogView = layoutInflater.inflate(R.layout.dialog_standard_view, null).apply {
                 val title = findViewById<TextView>(R.id.dialogStandardTitle)
@@ -225,10 +225,9 @@ class DialogStandard private constructor(
                     secondaryButtonAction
                 )
             }
-
             setCancelable(isCancelable)
+            supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         }
-
         return this
     }
 

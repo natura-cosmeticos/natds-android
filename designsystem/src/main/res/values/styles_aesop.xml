@@ -3,6 +3,7 @@
 
     <style name="Theme.DS.Dialog.Aesop" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+        <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.Aesop.Light" parent="Theme.DS.Dialog.Aesop">

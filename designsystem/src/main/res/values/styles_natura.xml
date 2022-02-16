@@ -2,6 +2,7 @@
 <resources>
     <style name="Theme.DS.Dialog.Natura" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+        <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.Natura.Light" parent="Theme.DS.Dialog.Natura">

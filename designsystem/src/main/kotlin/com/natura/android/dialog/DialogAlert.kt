@@ -5,6 +5,7 @@ import android.content.DialogInterface
 import android.util.TypedValue
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.natura.android.R
 
 class DialogAlert constructor(
@@ -21,7 +22,7 @@ class DialogAlert constructor(
 
     fun create(): DialogAlert {
 
-        dialog = AlertDialog.Builder(context, resolveThemeResource()).create().apply {
+        dialog = MaterialAlertDialogBuilder(context, resolveThemeResource()).create().apply {
             setButton(DialogInterface.BUTTON_POSITIVE, mainButtonTitle, mainButtonAction)
             setButton(DialogInterface.BUTTON_NEGATIVE, secondaryButtonTitle, secondaryButtonAction)
             setCancelable(isCancelable)
