@@ -733,7 +733,7 @@
         <item name="android:radius">?avatarLargeXXXBorderRadius</item>
     </style>
 
-    <style name="TextAppearance.DS.Label" parent="TextAppearance.AppCompat.Title">
+    <style name="TextAppearance.DS.TextField.Label" parent="TextAppearance.AppCompat.Title">
         <item name="android:textSize">?textFieldLabelFontSize</item>
         <item name="android:textColor">@color/colorMediumEmphasis</item>
         <item name="android:fontFamily">?textFieldLabelPrimaryFontWeight</item>
@@ -742,7 +742,7 @@
         <item name="android:paddingBottom">?spacingMicro</item>
     </style>
 
-    <style name="TextAppearance.DS.EditText" parent="TextAppearance.AppCompat.Body1">
+    <style name="TextAppearance.DS.TextField.EditText" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textSize">?textFieldContentFontSize</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">?textFieldContentPrimaryFontWeight</item>
@@ -759,6 +759,26 @@
         <item name="android:letterSpacing">?textFieldHelperTextLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?textFieldHelperTextLineHeight</item>
     </style>
+
+    <style name="TextAppearance.DS.Counter.Label" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textSize">?counterLabelFontSize</item>
+        <item name="android:textColor">@color/colorMediumEmphasis</item>
+        <item name="android:fontFamily">?counterLabelPrimaryFontWeight</item>
+        <item name="android:letterSpacing">?counterLabelLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?counterLabelLineHeight</item>
+        <item name="android:paddingBottom">?spacingMicro</item>
+    </style>
+
+    <style name="TextAppearance.DS.Counter.EditText" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">?counterContentFontSize</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:fontFamily">?counterContentPrimaryFontWeight</item>
+        <item name="android:paddingBottom">?spacingMicro</item>
+        <item name="android:letterSpacing">?counterContentLetterSpacing</item>
+        <item name="android:lineSpacingMultiplier">?counterContentLineHeight</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
 
     <style name="Widget.DS" />
 

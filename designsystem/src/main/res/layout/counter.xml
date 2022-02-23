@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctrContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/ctrLabel"
+        style="@style/TextAppearance.DS.Counter.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="counter_label" />
+
+    <LinearLayout
+        android:id="@+id/ctrBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ds_shape_rounded_corners"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctrLabel">
+
+        <com.natura.android.button.TextButton
+            android:id="@+id/ctrSubtractButton"
+            android:layout_width="?sizeSemiX"
+            android:text="-"
+            android:layout_height="?sizeMedium"/>
+
+        <EditText
+            android:id="@+id/ctrEditText"
+            style="@style/TextAppearance.DS.Counter.EditText"
+            android:layout_width="?sizeSemiX"
+            android:layout_height="?sizeMedium"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            tools:text="counter_input_value" />
+
+        <com.natura.android.button.TextButton
+            android:id="@+id/ctrAddButton"
+            android:text="+"
+            android:layout_width="?sizeSemiX"
+            android:layout_height="?sizeMedium"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

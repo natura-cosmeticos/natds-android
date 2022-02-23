@@ -333,4 +333,18 @@
         <attr name="android:minHeight"/>
     </declare-styleable>
 
+    <declare-styleable name="Counter">
+        <attr name="ctr_size" format="enum">
+            <enum name="semix" value="0" />
+            <enum name="medium" value="1" />
+        </attr>
+        <attr name="ctr_disabled" format="enum">
+            <enum name="none" value="0" />
+            <enum name="subtract" value="1" />
+            <enum name="add" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="ctr_label" format="string"/>
+    </declare-styleable>
+
 </resources>
