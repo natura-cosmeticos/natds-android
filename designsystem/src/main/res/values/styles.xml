@@ -769,7 +769,7 @@
         <item name="android:paddingBottom">?spacingMicro</item>
     </style>
 
-    <style name="TextAppearance.DS.Counter.EditText" parent="TextAppearance.AppCompat.Body1">
+    <style name="TextAppearance.DS.Counter.Input" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textSize">?counterContentFontSize</item>
         <item name="android:textColor">?colorOnSurface</item>
         <item name="android:fontFamily">?counterContentPrimaryFontWeight</item>

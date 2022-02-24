@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ctrContainer"
@@ -22,13 +21,12 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="counter_label" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/ctrBox"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="?sizeMedium"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/ds_shape_rounded_corners"
-        android:orientation="horizontal"
+        android:background="@drawable/counter_shape_rounded_corners"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ctrLabel">
@@ -36,24 +34,44 @@
         <com.natura.android.button.TextButton
             android:id="@+id/ctrSubtractButton"
             android:layout_width="?sizeSemiX"
+            android:layout_height="match_parent"
             android:text="-"
-            android:layout_height="?sizeMedium"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/ctrEditText"
-            style="@style/TextAppearance.DS.Counter.EditText"
+        <View
+            android:id="@+id/ctrLeftInternalStroke"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?colorLowEmphasis"
+            app:layout_constraintStart_toEndOf="@id/ctrSubtractButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ctrInputValue"
+            style="@style/TextAppearance.DS.Counter.Input"
             android:layout_width="?sizeSemiX"
-            android:layout_height="?sizeMedium"
-            android:layout_gravity="center"
-            android:inputType="number"
-            android:gravity="top|left"
-            android:scrollbars="vertical"
+            android:layout_height="wrap_content"
+            android:gravity="center|bottom"
+            android:maxLength="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ctrLeftInternalStroke"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="counter_input_value" />
+
+        <View
+            android:id="@+id/ctrRightInternalStroke"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="?colorLowEmphasis"
+            app:layout_constraintStart_toEndOf="@id/ctrInputValue"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.natura.android.button.TextButton
             android:id="@+id/ctrAddButton"
-            android:text="+"
             android:layout_width="?sizeSemiX"
-            android:layout_height="?sizeMedium"/>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:text="+"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ctrRightInternalStroke" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

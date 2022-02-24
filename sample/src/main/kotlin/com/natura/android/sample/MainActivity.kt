@@ -7,6 +7,7 @@ import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.BadgeActivity
 import com.natura.android.sample.components.ButtonActivity
 import com.natura.android.sample.components.CardActivity
+import com.natura.android.sample.components.CounterActivity
 import com.natura.android.sample.components.CheckBoxActivity
 import com.natura.android.sample.components.DialogActivity
 import com.natura.android.sample.components.DividerActivity
@@ -113,6 +114,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.tagButton.setOnClickListener {
             startActivity(Intent(this, TagActivity::class.java))
+        }
+
+        binding.counterButton.setOnClickListener {
+            startActivity(Intent(this, CounterActivity::class.java))
         }
 
         binding.btnTextfield.setOnClickListener {
