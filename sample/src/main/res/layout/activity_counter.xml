@@ -17,7 +17,7 @@
             android:id="@+id/counterActivityContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="?spacingSmall"
+            android:paddingHorizontal="?spacingStandard"
             android:paddingVertical="?spacingSmall">
 
             <TextView
@@ -29,6 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.natura.android.counter.Counter
+                android:id="@+id/counterMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
@@ -38,8 +39,87 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textViewCounterMedium" />
 
+            <TextView
+                android:id="@+id/textViewCounterSemix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size Semix"
+                app:layout_constraintStart_toStartOf="@+id/counterSemix"
+                app:layout_constraintTop_toTopOf="parent"/>
 
+            <com.natura.android.counter.Counter
+                android:id="@+id/counterSemix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingSmall"
+                app:ctr_disabled="none"
+                app:ctr_label="Label"
+                app:ctr_size="semix"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewCounterSemix" />
 
+            <TextView
+                android:id="@+id/textViewSubtractDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtract Disable"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintStart_toStartOf="@+id/counterSubtractDisable"
+                app:layout_constraintTop_toBottomOf="@+id/counterMedium"/>
+
+            <com.natura.android.counter.Counter
+                android:id="@+id/counterSubtractDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingSmall"
+                app:ctr_disabled="subtract"
+                app:ctr_label="Label"
+                app:ctr_size="semix"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewSubtractDisable" />
+
+            <TextView
+                android:id="@+id/textViewAddDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Disable"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintStart_toStartOf="@+id/counterAddDisable"
+                app:layout_constraintTop_toBottomOf="@+id/counterMedium"/>
+
+            <com.natura.android.counter.Counter
+                android:id="@+id/counterAddDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingSmall"
+                app:ctr_disabled="add"
+                app:ctr_label="Label"
+                app:ctr_size="semix"
+                android:layout_marginStart="?spacingSmall"
+                android:layout_marginEnd="?spacingSmall"
+                app:layout_constraintStart_toEndOf="@+id/counterSubtractDisable"
+                app:layout_constraintEnd_toStartOf="@id/counterAllDisable"
+                app:layout_constraintTop_toBottomOf="@id/textViewAddDisable" />
+
+            <TextView
+                android:id="@+id/textViewAllDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Disable"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintStart_toStartOf="@+id/counterAllDisable"
+                app:layout_constraintTop_toBottomOf="@+id/counterMedium"/>
+
+            <com.natura.android.counter.Counter
+                android:id="@+id/counterAllDisable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingSmall"
+                app:ctr_disabled="all"
+                app:ctr_label="Label"
+                app:ctr_size="semix"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewAllDisable" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
