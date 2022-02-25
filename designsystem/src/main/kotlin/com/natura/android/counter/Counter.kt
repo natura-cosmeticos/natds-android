@@ -21,7 +21,6 @@ class Counter : ConstraintLayout {
 
     private val vibrator: Vibrator by lazy { context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator }
 
-
     constructor(context: Context) :
         super(context) {
             init(context)
