@@ -53,8 +53,8 @@
                 android:layout_height="wrap_content"
                 app:ctr_disabled="none"
                 app:ctr_label="Label"
-                app:ctr_size="semix"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:ctr_size="medium"
+                app:layout_constraintStart_toStartOf="@id/counterAddDisable"
                 app:layout_constraintTop_toBottomOf="@id/textViewCounterSemix"
                 app:layout_constraintTop_toTopOf="@id/counterMedium" />
 

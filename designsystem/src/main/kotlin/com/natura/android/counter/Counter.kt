@@ -21,7 +21,6 @@ class Counter : ConstraintLayout {
 
     private val vibrator: Vibrator by lazy { context.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator }
 
-    private var inputValue = MIN_LIMIT
 
     constructor(context: Context) :
         super(context) {
@@ -36,6 +35,12 @@ class Counter : ConstraintLayout {
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) :
         super(context, attrs, defStyleAttr) {
             init(context, attrs)
+        }
+
+    var inputValue: Int = MIN_LIMIT
+        set(value) {
+            field = value
+            updateValue(inputValue)
         }
 
     var label: String? = null
@@ -82,6 +87,9 @@ class Counter : ConstraintLayout {
         }
 
         getSelectedAttributes()
+
+        typedArray.recycle()
+        requestLayout()
     }
 
     override fun onFinishInflate() {
@@ -144,14 +152,19 @@ class Counter : ConstraintLayout {
     private fun setDimensions(viewGroupDimenAttr: Int, subtractDimenAttr: Int, addButtonDimenAttr: Int, editTextDimenAttr: Int) {
         val subtractButtonLayoutParams = binding.ctrSubtractButton.layoutParams
         val addButtonLayoutParams = binding.ctrAddButton.layoutParams
-        val editTextLayoutParams = binding.ctrInputValue.layoutParams
+        val inputLayoutParams = binding.ctrInputValue.layoutParams
         val viewGroup = binding.ctrBox.layoutParams
 
         viewGroup.height = getDimenFromTheme(context, viewGroupDimenAttr).toInt()
 
         subtractButtonLayoutParams.width = getDimenFromTheme(context, subtractDimenAttr).toInt()
         addButtonLayoutParams.width = getDimenFromTheme(context, addButtonDimenAttr).toInt()
-        editTextLayoutParams.width = getDimenFromTheme(context, editTextDimenAttr).toInt()
+        inputLayoutParams.width = getDimenFromTheme(context, editTextDimenAttr).toInt()
+
+        binding.ctrSubtractButton.layoutParams = subtractButtonLayoutParams
+        binding.ctrAddButton.layoutParams = addButtonLayoutParams
+        binding.ctrInputValue.layoutParams = inputLayoutParams
+        binding.ctrBox.layoutParams = viewGroup
     }
 
     private fun configureDisabled() {
