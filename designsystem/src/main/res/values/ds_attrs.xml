@@ -345,6 +345,8 @@
             <enum name="all" value="3" />
         </attr>
         <attr name="ctr_label" format="string"/>
+        <attr name="ctr_add_description" format="string"/>
+        <attr name="ctr_subtract_description" format="string"/>
     </declare-styleable>
 
 </resources>

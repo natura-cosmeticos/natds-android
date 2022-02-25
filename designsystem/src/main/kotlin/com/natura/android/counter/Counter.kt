@@ -45,6 +45,18 @@ class Counter : ConstraintLayout {
             changeLabelVisibility(value)
         }
 
+    var addDescription: String? = null
+        set(value) {
+            field = value
+            setAddAccessibilityDescription(value)
+        }
+
+    var subtractDescription: String? = null
+        set(value) {
+            field = value
+            setSubtractAccessibilityDescription(value)
+        }
+
     var size: Int = MEDIUM_SIZE
         set(value) {
             field = value
@@ -111,6 +123,8 @@ class Counter : ConstraintLayout {
         size = typedArray.getInt(R.styleable.Counter_ctr_size, MEDIUM_SIZE)
         disabled = typedArray.getInt(R.styleable.Counter_ctr_disabled, NONE_DISABLE)
         label = typedArray.getString(R.styleable.Counter_ctr_label)
+        addDescription = typedArray.getString(R.styleable.Counter_ctr_add_description)
+        subtractDescription = typedArray.getString(R.styleable.Counter_ctr_subtract_description)
     }
 
     private fun configureSize() {
@@ -167,6 +181,14 @@ class Counter : ConstraintLayout {
 
     private fun setTextLabel(label: String?) {
         binding.ctrLabel.text = label
+    }
+
+    private fun setAddAccessibilityDescription(description: String?) {
+        binding.ctrAddButton.contentDescription = description
+    }
+
+    private fun setSubtractAccessibilityDescription(description: String?) {
+        binding.ctrSubtractButton.contentDescription = description
     }
 
     private fun changeLabelVisibility(value: String?) {

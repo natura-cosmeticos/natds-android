@@ -5,8 +5,6 @@
     android:id="@+id/ctrContainer"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:clickable="true"
-    android:focusable="true"
     android:orientation="vertical"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
@@ -15,6 +13,7 @@
         style="@style/TextAppearance.DS.Counter.Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusable="true"
         android:ellipsize="end"
         android:maxLines="2"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="?sizeMedium"
         android:layout_gravity="center_vertical"
+        android:focusable="false"
         android:background="@drawable/counter_shape_rounded_corners"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +34,8 @@
         <com.natura.android.button.TextButton
             android:id="@+id/ctrSubtractButton"
             android:layout_width="?sizeSemiX"
+            android:focusable="true"
+            android:clickable="true"
             android:layout_height="match_parent"
             android:text="-"
             app:layout_constraintStart_toStartOf="parent" />
@@ -42,6 +44,7 @@
             android:id="@+id/ctrLeftInternalStroke"
             android:layout_width="1dp"
             android:layout_height="match_parent"
+            android:focusable="false"
             android:background="?colorLowEmphasis"
             app:layout_constraintStart_toEndOf="@id/ctrSubtractButton"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,6 +55,8 @@
             android:layout_width="?sizeSemiX"
             android:layout_height="wrap_content"
             android:gravity="center|bottom"
+            android:focusable="false"
+            android:clickable="false"
             android:maxLength="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/ctrLeftInternalStroke"
@@ -63,6 +68,8 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="?colorLowEmphasis"
+            android:focusable="false"
+            android:importantForAccessibility="no"
             app:layout_constraintStart_toEndOf="@id/ctrInputValue"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,6 +77,8 @@
             android:id="@+id/ctrAddButton"
             android:layout_width="?sizeSemiX"
             android:layout_height="match_parent"
+            android:focusable="true"
+            android:clickable="true"
             android:text="+"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/ctrRightInternalStroke" />
