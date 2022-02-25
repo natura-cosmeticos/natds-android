@@ -773,7 +773,6 @@
         <item name="android:textSize">?counterContentFontSize</item>
         <item name="android:textColor">?colorOnSurface</item>
         <item name="android:fontFamily">?counterContentPrimaryFontWeight</item>
-        <item name="android:paddingBottom">?spacingMicro</item>
         <item name="android:letterSpacing">?counterContentLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?counterContentLineHeight</item>
         <item name="android:background">@android:color/transparent</item>

@@ -26,7 +26,7 @@ class CounterActivity : AppCompatActivity() {
         binding.counterSubtractDisable.inputValue = 5
 
         binding.counterSemix.size = Counter.SEMIX_SIZE
-        binding.counterSemix.label = "Dynamic Label"
+        binding.counterSemix.label = "Label"
 
         supportActionBar?.title = "Counter"
         supportActionBar?.setHomeButtonEnabled(true)
