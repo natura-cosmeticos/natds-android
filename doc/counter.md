@@ -29,12 +29,13 @@ With the following attribute statuses:
 
 ## Attributes
 
-| Attr | Description | Type | Options | | - | --- | --- | --- | |`app:ctr_size`| Sets the component
-size.| string | semix or medium <br> | |`app:ctr_disabled`| Defines whether one of the buttons will
-be disabled, none or both.| string | none, subtract, add or all. <br> | |`app:ctr_label`| | Sets the
-label of component.| string | text <br> | |`app:ctr_add_description`| Sets the accessibility
-description for the add button.| string | text |`app:ctr_add_description`| Sets the accessibility
-description for the subtract button.| string | text
+| Attr | Description | Type | Options | 
+| - | --- | --- | --- | 
+|`app:ctr_size`| Sets the component size.| string | semix or medium <br> | 
+|`app:ctr_disabled`| Defines whether one of the buttons will be disabled, none or both.| string | none, subtract, add or all. <br> | 
+|`app:ctr_label`| Sets the label of component.| string | text <br> | 
+|`app:ctr_add_description`| Sets the accessibility description for the add button.| string | text |
+|`app:ctr_subtract_description`| Sets the accessibility description for the subtract button.| string | text |
 
 ## Usage Examples
 
