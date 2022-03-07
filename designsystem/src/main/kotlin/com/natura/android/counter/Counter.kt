@@ -78,7 +78,7 @@ class Counter : ConstraintLayout {
         try {
             binding = CounterBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
-            throw (LayoutInflateException())
+            throw LayoutInflateException()
         }
 
         if (attrs != null) {
@@ -136,15 +136,9 @@ class Counter : ConstraintLayout {
 
     private fun configureSize() {
         when (size) {
-            SEMIX_SIZE -> {
-                setDimensions(R.attr.sizeSemiX, R.attr.sizeSemi, R.attr.sizeSemi, R.attr.sizeSemiX)
-            }
-            MEDIUM_SIZE -> {
-                setDimensions(R.attr.sizeMedium, R.attr.sizeSemiX, R.attr.sizeSemiX, R.attr.sizeSemiX)
-            }
-            else -> {
-                setDimensions(R.attr.sizeMedium, R.attr.sizeSemiX, R.attr.sizeSemiX, R.attr.sizeSemiX)
-            }
+            SEMIX_SIZE -> setDimensions(R.attr.sizeSemiX, R.attr.sizeSemi, R.attr.sizeSemi, R.attr.sizeSemiX)
+            MEDIUM_SIZE -> setDimensions(R.attr.sizeMedium, R.attr.sizeSemiX, R.attr.sizeSemiX, R.attr.sizeSemiX)
+            else -> setDimensions(R.attr.sizeMedium, R.attr.sizeSemiX, R.attr.sizeSemiX, R.attr.sizeSemiX)
         }
     }
 
@@ -204,7 +198,7 @@ class Counter : ConstraintLayout {
     }
 
     private fun changeLabelVisibility(value: String?) {
-        if (value == null || value.isEmpty()) {
+        if (value.isNullOrEmpty() || value.isEmpty()) {
             binding.ctrLabel.visibility = View.GONE
         } else {
             binding.ctrLabel.visibility = View.VISIBLE
