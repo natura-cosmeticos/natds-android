@@ -12,7 +12,7 @@
 
     <TextView
         android:id="@+id/text_field_input_label"
-        style="@style/TextAppearance.DS.Label"
+        style="@style/TextAppearance.DS.TextField.Label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -38,7 +38,7 @@
 
         <EditText
             android:id="@+id/text_field_input_value"
-            style="@style/TextAppearance.DS.EditText"
+            style="@style/TextAppearance.DS.TextField.EditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

@@ -3,4 +3,5 @@
     package="com.natura.android"
     android:sharedUserId="com.natura.android.designsystem.uid">
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
 </manifest>
