@@ -11,7 +11,7 @@ internal class CounterFixture private constructor(
     private var label: String? = null,
     private var addDescription: String? = null,
     private var subtractDescription: String? = null,
-    private var context: Context = ApplicationProvider.getApplicationContext()
+    private val context: Context = ApplicationProvider.getApplicationContext(),
 ) {
 
     companion object {
