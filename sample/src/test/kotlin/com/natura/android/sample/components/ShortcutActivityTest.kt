@@ -22,7 +22,7 @@ class ShortcutActivityTest {
     @Test
     fun incrementCounterWhenTapAtContainedShortcut() {
         shortcutActivityScenario.onActivity {
-            val shortcutContained = it.findViewById<Shortcut>(R.id.firstShortcutContained)
+            val shortcutContained = it.findViewById<Shortcut>(R.id.shortcutContainedPrimary)
             val counter = it.findViewById<TextView>(R.id.counter)
 
             shortcutContained.performClick()
@@ -34,7 +34,7 @@ class ShortcutActivityTest {
     @Test
     fun incrementCounterWhenTapAtOutlinedShortcut() {
         shortcutActivityScenario.onActivity {
-            val shortcutOutlined = it.findViewById<Shortcut>(R.id.firstShorcutOutlined)
+            val shortcutOutlined = it.findViewById<Shortcut>(R.id.shortcutOutlinedNeutral)
             val counter = it.findViewById<TextView>(R.id.counter)
 
             shortcutOutlined.performClick()

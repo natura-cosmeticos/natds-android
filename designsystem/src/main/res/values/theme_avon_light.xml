@@ -138,8 +138,12 @@
         <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
         <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
 
-        <item name="shortcutContained">@style/Widget.DS.Shortcut.Contained</item>
-        <item name="shortcutOutlined">@style/Widget.DS.Shortcut.Outlined</item>
+        <item name="shortcutOutlinedPrimary">@style/Widget.DS.Shortcut.Outlined.Primary</item>
+        <item name="shortcutOutlinedNeutral">@style/Widget.DS.Shortcut.Outlined.Neutral</item>
+        <item name="shortcutOutlinedDisabled">@style/Widget.DS.Shortcut.Outlined.Disabled</item>
+        <item name="shortcutContainedPrimary">@style/Widget.DS.Shortcut.Contained.Primary</item>
+        <item name="shortcutContainedNeutral">@style/Widget.DS.Shortcut.Contained.Neutral</item>
+        <item name="shortcutContainedDisabled">@style/Widget.DS.Shortcut.Contained.Disabled</item>
 
         <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
         <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>

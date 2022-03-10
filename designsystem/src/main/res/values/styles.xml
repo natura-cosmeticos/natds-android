@@ -499,42 +499,42 @@
     <!-- SHORTCUT STYLES -->
     <style name="Widget.DS.Shortcut.Contained.Primary" parent="">
         <item name="colorBackground">?shortcutContainedColorEnablePrimaryBackground</item>
-        <item name="shct_icon_color">?shortcutContainedColorEnablePrimaryLabel</item>
+        <item name="shct_icon_color">?colorOnPrimary</item>
         <item name="shct_border_color">?shortcutContainedColorEnablePrimaryBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Primary</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Contained.Neutral" parent="">
         <item name="colorBackground">?shortcutContainedColorEnableNeutralBackground</item>
-        <item name="shct_icon_color">?shortcutContainedColorEnableNeutralLabel</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
         <item name="shct_border_color">?shortcutContainedColorEnableNeutralBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Neutral</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Contained.Disabled" parent="">
         <item name="colorBackground">?shortcutContainedColorDisablePrimaryBackground</item>
-        <item name="shct_icon_color">?shortcutContainedColorDisablePrimaryLabel</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
         <item name="shct_border_color">?shortcutContainedColorDisablePrimaryBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Disabled</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Outlined.Primary" parent="">
         <item name="colorBackground">?shortcutOutlinedColorEnablePrimaryBackground</item>
-        <item name="shct_icon_color">?shortcutOutlinedColorEnableNeutralLabel</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
         <item name="shct_border_color">?shortcutOutlinedColorEnableNeutralBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Neutral</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Outlined.Neutral" parent="">
         <item name="colorBackground">?shortcutOutlinedColorEnableNeutralBackground</item>
-        <item name="shct_icon_color">?shortcutOutlinedColorEnableNeutralLabel</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
         <item name="shct_border_color">?shortcutOutlinedColorEnableNeutralBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Neutral</item>
     </style>
 
     <style name="Widget.DS.Shortcut.Outlined.Disabled" parent="">
         <item name="colorBackground">?shortcutOutlinedColorDisablePrimaryBackground</item>
-        <item name="shct_icon_color">?shortcutOutlinedColorDisablePrimaryLabel</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
         <item name="shct_border_color">?shortcutOutlinedColorDisablePrimaryBorder</item>
         <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Disabled</item>
     </style>

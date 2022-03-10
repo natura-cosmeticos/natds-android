@@ -90,8 +90,12 @@
     <attr name="dialogBodyAppearance" format="reference"/>
 
     <!-- Shortcut references -->
-    <attr name="shortcutOutlined" format="reference"/>
-    <attr name="shortcutContained" format="reference"/>
+    <attr name="shortcutOutlinedPrimary" format="reference"/>
+    <attr name="shortcutOutlinedNeutral" format="reference"/>
+    <attr name="shortcutOutlinedDisabled" format="reference"/>
+    <attr name="shortcutContainedPrimary" format="reference"/>
+    <attr name="shortcutContainedNeutral" format="reference"/>
+    <attr name="shortcutContainedDisabled" format="reference"/>
 
     <!-- Tag references -->
     <attr name="tagPrimary" format="reference"/>

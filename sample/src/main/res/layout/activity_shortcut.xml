@@ -5,120 +5,126 @@
     android:id="@+id/shortcutContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="?spacingSemi"
     tools:context=".components.ShortcutActivity">
 
     <com.natura.android.shortcut.Shortcut
-        android:id="@+id/firstShortcutContained"
+        android:id="@+id/shortcutContainedPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shct_color="primary"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Contained Primary"
+        app:shct_type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutContainedNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintEnd_toStartOf="@+id/shortcutContainedDisabled"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutContainedPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shct_color="neutral"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Contained Neutral"
+        app:shct_type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutContainedDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Contained Disabled"
+        app:shct_type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlinedPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContainedPrimary"
+        app:shct_color="primary"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Outlined Primary"
+        app:shct_type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlinedNeutral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintEnd_toStartOf="@id/shortcutOutlinedDisabled"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/shortcutOutlinedPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContainedNeutral"
+        app:shct_color="neutral"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Outlined Neutral"
+        app:shct_type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutOutlinedDisabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:enabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutContainedDisabled"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Outlined Disabled"
+        app:shct_type="outlined" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shortcutWithNotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutOutlinedPrimary"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Badge"
+        app:shct_type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shorcutWithLongText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:layout_constraintEnd_toStartOf="@id/shorcutWithBreakLine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/shortcutWithNotify"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutOutlinedNeutral"
+        app:shct_icon_name="outlined-default-mockup"
+        app:shct_text_label="Long Text"
+        app:shct_type="contained" />
+
+    <com.natura.android.shortcut.Shortcut
+        android:id="@+id/shorcutWithBreakLine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingSmall"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/secondShortcutContained"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutOutlinedDisabled"
         app:shct_icon_name="outlined-default-mockup"
-        app:shct_notify="1000"
-        app:shct_text_label="Contained/ \nPrimary"
-        app:shct_type="contained" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/secondShortcutContained"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/firstShortcutContained"
-        app:layout_constraintEnd_toStartOf="@+id/firstShortcutContained"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/thirdShortcutContained"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_notify="10"
-        app:shct_text_label="Contained/ \nPrimary"
-        app:shct_type="contained" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/thirdShortcutContained"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/secondShortcutContained"
-        app:layout_constraintEnd_toStartOf="@+id/secondShortcutContained"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fourthShortcutContained"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_notify="1"
-        app:shct_text_label="Contained/ \nPrimary"
-        app:shct_type="contained" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/fourthShortcutContained"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/thirdShortcutContained"
-        app:layout_constraintEnd_toStartOf="@+id/thirdShortcutContained"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Contained/ \nPrimary"
-        app:shct_type="contained" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/firstShorcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/secondShortcutOutlined"
-        app:layout_constraintTop_toBottomOf="@+id/firstShortcutContained"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Outlined/ \nPrimary"
-        app:shct_type="outlined" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/secondShortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/firstShorcutOutlined"
-        app:layout_constraintEnd_toStartOf="@+id/firstShorcutOutlined"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/thirdShortcutOutlined"
-        app:layout_constraintTop_toBottomOf="@+id/secondShortcutContained"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Outlined/ \nPrimary"
-        app:shct_type="outlined" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/thirdShortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/secondShortcutOutlined"
-        app:layout_constraintEnd_toStartOf="@+id/secondShortcutOutlined"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fourthShortcutOutlined"
-        app:layout_constraintTop_toBottomOf="@+id/thirdShortcutContained"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Outlined/ \nPrimary"
-        app:shct_type="outlined" />
-
-    <com.natura.android.shortcut.Shortcut
-        android:id="@+id/fourthShortcutOutlined"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingSmall"
-        app:layout_constraintBottom_toBottomOf="@+id/thirdShortcutOutlined"
-        app:layout_constraintEnd_toStartOf="@+id/thirdShortcutOutlined"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fourthShortcutContained"
-        app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Outlined/ \nPrimary"
-        app:shct_type="outlined" />
+        app:shct_text_label="Long Text"
+        app:shct_type="contained"
+        app:shct_color="primary"/>
 
     <TextView
         android:id="@+id/counter"
