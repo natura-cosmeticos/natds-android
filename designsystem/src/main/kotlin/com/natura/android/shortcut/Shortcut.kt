@@ -118,14 +118,14 @@ class Shortcut @JvmOverloads constructor(
             .theme
             .obtainStyledAttributes(
                 attrs,
-                R.styleable.Shortcut,
+                R.styleable.ShortcutStyle,
                 R.attr.shortcutContained,
                 0
             )
             .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_icon_color)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_label_appearance)
+                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_colorBackground)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_shct_icon_color)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_shct_label_appearance)
             }
     }
 
@@ -134,9 +134,9 @@ class Shortcut @JvmOverloads constructor(
             .theme
             .obtainStyledAttributes(attrs, R.styleable.Shortcut, R.attr.shortcutOutlined, 0)
             .apply {
-                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_colorBackground)
-                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_icon_color)
-                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.Shortcut_shct_label_appearance)
+                backgroundColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_colorBackground)
+                iconColorResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_shct_icon_color)
+                labelTextAppearanceResourceAttribute = this.getResourceIdOrThrow(R.styleable.ShortcutStyle_shct_label_appearance)
             }
     }
 
