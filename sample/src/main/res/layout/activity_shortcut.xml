@@ -98,6 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/shortcutOutlinedPrimary"
         app:shct_icon_name="outlined-default-mockup"
         app:shct_text_label="Badge"
+        app:shct_notify="100"
         app:shct_type="contained" />
 
     <com.natura.android.shortcut.Shortcut
@@ -110,7 +111,7 @@
         app:layout_constraintStart_toEndOf="@id/shortcutWithNotify"
         app:layout_constraintTop_toBottomOf="@+id/shortcutOutlinedNeutral"
         app:shct_icon_name="outlined-default-mockup"
-        app:shct_text_label="Long Text"
+        app:shct_text_label="Contained/ \nPrimary"
         app:shct_type="contained" />
 
     <com.natura.android.shortcut.Shortcut

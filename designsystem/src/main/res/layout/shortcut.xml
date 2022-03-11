@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shortcutMainContainer"
     android:layout_width="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:layout_height="wrap_content"
-    android:layout_marginStart="?spacingSmall"
-    android:layout_marginEnd="?spacingSmall"
     android:minWidth="?sizeMediumX">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -64,6 +64,7 @@
     <TextView
         android:id="@+id/shortCutLabel"
         android:layout_width="wrap_content"
+        android:maxWidth="?sizeHuge"
         android:layout_height="wrap_content"
         android:layout_marginTop="?spacingTiny"
         android:autoSizeTextType="uniform"

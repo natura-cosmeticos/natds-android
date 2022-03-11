@@ -27,8 +27,9 @@ class Shortcut @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     private var labelAttribute: String? = null
-    private var typeAttribute: Int? = null
-    private var colorAttribute: Int? = null
+    private var typeAttribute: Int = CONTAINED
+    private var enabledAttribute: Boolean = true
+    private var colorAttribute: Int = PRIMARY
     private var notifyAttribute: Int = 0
     private var backgroundColorResourceAttribute = 0
     private var borderColorResourceAttribute = 0
@@ -41,6 +42,7 @@ class Shortcut @JvmOverloads constructor(
     private val backgroundContainer by lazy { findViewById<LinearLayout>(R.id.shortcutBackground) }
     private val iconContainer by lazy { findViewById<ImageView>(R.id.shortCutIcon) }
     private val notifyContainer by lazy { findViewById<Badge>(R.id.notifyContainer) }
+    private val mainContainer by lazy { findViewById<ConstraintLayout>(R.id.shortcutMainContainer) }
 
     init {
         try {
@@ -52,8 +54,10 @@ class Shortcut @JvmOverloads constructor(
         shortcutAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Shortcut)
 
         getShortcutAttributes()
-        getAttributesFromTheme()
-        configureShortCutByType()
+        getAttributesFromTheme(getStyleAttributeForEnabled())
+        setAppearance(setBackground())
+
+        configureEnabled()
 
         shortcutAttributesArray.recycle()
     }
@@ -82,6 +86,21 @@ class Shortcut @JvmOverloads constructor(
         setLabel(labelAttribute)
         setIcon(iconAttribute)
         configureNotify()
+    }
+
+    override fun setEnabled(enabled: Boolean) {
+        mainContainer.isEnabled = enabled
+
+        getAttributesFromTheme(
+            if (!enabled) {
+                getStyleAttributeForDisabled()
+            } else {
+                getStyleAttributeForEnabled()
+            }
+        )
+        setAppearance(setBackground())
+
+        super.setEnabled(enabled)
     }
 
     fun setLabel(text: String?) {
@@ -114,7 +133,11 @@ class Shortcut @JvmOverloads constructor(
         return iconContainer
     }
 
-    private fun getStyleAttribute(): Int {
+    private fun configureEnabled() {
+        isEnabled = enabledAttribute
+    }
+
+    private fun getStyleAttributeForEnabled(): Int {
         return when {
             typeAttribute == CONTAINED && colorAttribute == PRIMARY -> R.attr.shortcutContainedPrimary
             typeAttribute == CONTAINED && colorAttribute == NEUTRAL -> R.attr.shortcutContainedNeutral
@@ -124,13 +147,21 @@ class Shortcut @JvmOverloads constructor(
         }
     }
 
-    private fun getAttributesFromTheme() {
+    private fun getStyleAttributeForDisabled(): Int {
+        return when (typeAttribute) {
+            CONTAINED -> R.attr.shortcutContainedDisabled
+            OUTLINED -> R.attr.shortcutOutlinedDisabled
+            else -> R.attr.shortcutContainedDisabled
+        }
+    }
+
+    private fun getAttributesFromTheme(styleAttr: Int) {
         context
             .theme
             .obtainStyledAttributes(
                 attrs,
                 R.styleable.ShortcutStyle,
-                getStyleAttribute(),
+                styleAttr,
                 0
             )
             .apply {
@@ -146,26 +177,14 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun getShortcutAttributes() {
-        getNotify()
-        getLabelAttribute()
+
         getIconAttribute()
-        getTypeAttribute()
-        getColorAttribute()
-    }
 
-    private fun getNotify() {
+        enabledAttribute =
+            shortcutAttributesArray.getBoolean(R.styleable.Shortcut_android_enabled, true)
         notifyAttribute = shortcutAttributesArray.getInteger(R.styleable.Shortcut_shct_notify, 0)
-    }
-
-    private fun getTypeAttribute() {
         typeAttribute = shortcutAttributesArray.getInt(R.styleable.Shortcut_shct_type, CONTAINED)
-    }
-
-    private fun getColorAttribute() {
         colorAttribute = shortcutAttributesArray.getInt(R.styleable.Shortcut_shct_color, PRIMARY)
-    }
-
-    private fun getLabelAttribute() {
         labelAttribute = shortcutAttributesArray.getString(R.styleable.Shortcut_shct_text_label)
     }
 
@@ -180,16 +199,6 @@ class Shortcut @JvmOverloads constructor(
                     e
                 )
                 )
-        }
-    }
-
-    private fun configureShortCutByType() {
-        typeAttribute?.apply {
-            setAppearance(setBackground())
-            backgroundContainer.elevation = when (typeAttribute) {
-                CONTAINED -> getDimenFromTheme(context, R.attr.elevationTiny)
-                else -> 0F
-            }
         }
     }
 
@@ -216,6 +225,12 @@ class Shortcut @JvmOverloads constructor(
                 ContextCompat.getColor(context, borderColorResourceAttribute)
             )
         }
+
+        backgroundContainer.elevation = when (typeAttribute) {
+            CONTAINED -> getDimenFromTheme(context, R.attr.elevationTiny)
+            else -> 0F
+        }
+
         background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
         backgroundContainer.background = background
 
