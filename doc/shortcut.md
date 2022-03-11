@@ -35,6 +35,7 @@ With the following attribute statuses:
 |`app:shct_text_label`| Sets the label of component.| string | text
 |`app:shct_icon_name`| Defines the name of the icon that will be shown in the center of the component. | string | text
 |`app:shct_notify`| Sets the number showed by notification at Shortcut | integer | When 0, notification is not visible, limit is 10000. |
+|`app:shct_color`| Sets the color style of component, based at background and border| string | primary or neutral |
 
 ## Usage Examples
 Shortcut with mockup icon, type contained and notify
