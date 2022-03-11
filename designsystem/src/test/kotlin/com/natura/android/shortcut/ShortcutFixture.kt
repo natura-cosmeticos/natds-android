@@ -9,6 +9,8 @@ internal class ShortcutFixture private constructor(
     private var type: Int? = null,
     private var label: String? = null,
     private var iconName: String? = null,
+    private var color: Int? = null,
+    private var enabled: Boolean? = true,
     private var notify: Int = 0,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
@@ -17,15 +19,20 @@ internal class ShortcutFixture private constructor(
         private const val OUTLINED = 0
         private const val CONTAINED = 1
 
+        private const val PRIMARY = 0
+        private const val NEUTRAL = 1
+
         private const val defaultType = OUTLINED
         private const val defaultLabel = "shortcut label"
         private const val defaultIcon = "outlined-default-mockup"
+        private const val defaultColor = PRIMARY
+        private const val defaultEnabled = true
         private const val defaultNotify = 10
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aShortcut(): ShortcutFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return ShortcutFixture(defaultType, defaultLabel, defaultIcon, defaultNotify, context)
+            return ShortcutFixture(defaultType, defaultLabel, defaultIcon, defaultColor, defaultEnabled, defaultNotify, context)
         }
 
         fun aEmptyShortcut(): ShortcutFixture {
@@ -58,13 +65,25 @@ internal class ShortcutFixture private constructor(
         return this
     }
 
+    fun withPrimaryColor(): ShortcutFixture {
+        this.color = PRIMARY
+        return this
+    }
+
+    fun withNeutralColor(): ShortcutFixture {
+        this.color = NEUTRAL
+        return this
+    }
+
     fun build(): Shortcut {
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.shct_type, type.toString())
             .addAttribute(R.attr.shct_icon_name, iconName)
             .addAttribute(R.attr.shct_text_label, label)
+            .addAttribute(R.attr.shct_color, color.toString())
             .addAttribute(R.attr.shct_notify, notify.toString())
+            .addAttribute(android.R.attr.enabled, enabled.toString())
             .build()
 
         return Shortcut(context, attributes)

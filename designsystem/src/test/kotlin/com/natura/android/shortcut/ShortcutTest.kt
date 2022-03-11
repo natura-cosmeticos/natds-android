@@ -94,12 +94,57 @@ class ShortcutTest {
         assertThat(type).isEqualTo(1)
     }
 
+    @Test
+    fun checksIfShortcutContainedWithPrimaryColorTypeWasSet() {
+        shortcut = buildShortcutContainedWithPrimaryColor()
+
+        val type = shortcut.getType()
+        val color = shortcut.getColor()
+
+        assertThat(type).isEqualTo(1)
+        assertThat(color).isEqualTo(0)
+    }
+
+    @Test
+    fun checksIfShortcutContainedWithNeutralColorTypeWasSet() {
+        shortcut = buildShortcutContainedWithNeutralColor()
+
+        val type = shortcut.getType()
+        val color = shortcut.getColor()
+
+        assertThat(type).isEqualTo(1)
+        assertThat(color).isEqualTo(1)
+    }
+
+    @Test
+    fun checksIfShortcutOutlinedWithPrimaryColorTypeWasSet() {
+        shortcut = buildShortcutOutlinedWithPrimaryColor()
+
+        val type = shortcut.getType()
+        val color = shortcut.getColor()
+
+        assertThat(type).isEqualTo(0)
+        assertThat(color).isEqualTo(0)
+    }
+
+    @Test
+    fun checksIfShortcutOutlinedWithNeutralColorTypeWasSet() {
+        shortcut = buildShortcutOutlinedWithNeutralColor()
+
+        val type = shortcut.getType()
+        val color = shortcut.getColor()
+
+        assertThat(type).isEqualTo(0)
+        assertThat(color).isEqualTo(1)
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun shouldThrowsExceptionWhenBuildingContainedShortCutWithoutAnIcon() {
         shortcut = ShortcutFixture
             .aEmptyShortcut()
             .withLabel("Label")
             .withTypeContained()
+            .withNeutralColor()
             .build()
     }
 
@@ -109,24 +154,7 @@ class ShortcutTest {
             .aEmptyShortcut()
             .withLabel("Label")
             .withTypeOutlined()
-            .build()
-    }
-
-    @Test(expected = IllegalArgumentException::class)
-    fun shouldThrowsExceptionWhenBuildingContainedShortCutWithoutALabel() {
-        shortcut = ShortcutFixture
-            .aEmptyShortcut()
-            .withTypeContained()
-            .withIcon("@drawable/default_icon_outlined_default_mockup")
-            .build()
-    }
-
-    @Test(expected = IllegalArgumentException::class)
-    fun shouldThrowsExceptionWhenBuildingOutlinedShortCutWithoutALabel() {
-        shortcut = ShortcutFixture
-            .aEmptyShortcut()
-            .withTypeOutlined()
-            .withIcon("@drawable/default_icon_outlined_default_mockup")
+            .withNeutralColor()
             .build()
     }
 
@@ -148,6 +176,38 @@ class ShortcutTest {
         return ShortcutFixture
             .aShortcut()
             .withTypeContained()
+            .build()
+    }
+
+    private fun buildShortcutContainedWithPrimaryColor(): Shortcut {
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeContained()
+            .withPrimaryColor()
+            .build()
+    }
+
+    private fun buildShortcutOutlinedWithPrimaryColor(): Shortcut {
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeOutlined()
+            .withPrimaryColor()
+            .build()
+    }
+
+    private fun buildShortcutContainedWithNeutralColor(): Shortcut {
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeContained()
+            .withNeutralColor()
+            .build()
+    }
+
+    private fun buildShortcutOutlinedWithNeutralColor(): Shortcut {
+        return ShortcutFixture
+            .aShortcut()
+            .withTypeOutlined()
+            .withNeutralColor()
             .build()
     }
 }

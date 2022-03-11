@@ -22,20 +22,20 @@ class ShortcutActivityFunctionalTest {
     @Test
     fun checksEllipsisAtShortcutContainedLabel() {
         scenario.onActivity {
-            val shortcut = it.findViewById<Shortcut>(R.id.shortcutContainedPrimary)
-            val ellipsis = shortcut.labelContainer.layout.getEllipsisCount(0)
+            val shortcut = it.findViewById<Shortcut>(R.id.shortcutWithBreakLine)
+            val ellipsis = shortcut.labelContainer.layout.getEllipsisCount(1)
 
             Truth.assertThat(ellipsis > 0).isTrue()
         }
     }
 
     @Test
-    fun checksEllipsisAtShortcutOutlinedLabel() {
+    fun checksNoLabelAtShorcutContained() {
         scenario.onActivity {
-            val shortcut = it.findViewById<Shortcut>(R.id.shortcutOutlinedNeutral)
-            val ellipsis = shortcut.labelContainer.layout.getEllipsisCount(0)
+            val shortcut = it.findViewById<Shortcut>(R.id.shortcutWithNoLabel)
+            val label = shortcut.labelContainer.layout.text
 
-            Truth.assertThat(ellipsis > 0).isTrue()
+            Truth.assertThat(label).isEqualTo("")
         }
     }
 }

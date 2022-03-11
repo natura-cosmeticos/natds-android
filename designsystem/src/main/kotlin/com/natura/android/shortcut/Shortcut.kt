@@ -26,7 +26,7 @@ class Shortcut @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
 
-    private var labelAttribute: String? = null
+    private var labelAttribute: String? = ""
     private var typeAttribute: Int = CONTAINED
     private var enabledAttribute: Boolean = true
     private var colorAttribute: Int = PRIMARY
@@ -81,13 +81,6 @@ class Shortcut @JvmOverloads constructor(
             configureNotify()
         }
 
-    override fun onFinishInflate() {
-        super.onFinishInflate()
-        setLabel(labelAttribute)
-        setIcon(iconAttribute)
-        configureNotify()
-    }
-
     override fun setEnabled(enabled: Boolean) {
         mainContainer.isEnabled = enabled
 
@@ -112,7 +105,9 @@ class Shortcut @JvmOverloads constructor(
         return labelContainer.text
     }
 
-    fun getType(): Int? = typeAttribute
+    fun getType(): Int = typeAttribute
+
+    fun getColor(): Int = colorAttribute
 
     fun setIcon(icon: String?) {
         icon?.apply {
@@ -177,15 +172,18 @@ class Shortcut @JvmOverloads constructor(
     }
 
     private fun getShortcutAttributes() {
-
         getIconAttribute()
-
-        enabledAttribute =
-            shortcutAttributesArray.getBoolean(R.styleable.Shortcut_android_enabled, true)
-        notifyAttribute = shortcutAttributesArray.getInteger(R.styleable.Shortcut_shct_notify, 0)
-        typeAttribute = shortcutAttributesArray.getInt(R.styleable.Shortcut_shct_type, CONTAINED)
-        colorAttribute = shortcutAttributesArray.getInt(R.styleable.Shortcut_shct_color, PRIMARY)
-        labelAttribute = shortcutAttributesArray.getString(R.styleable.Shortcut_shct_text_label)
+        shortcutAttributesArray.apply {
+            try {
+                enabledAttribute = getBoolean(R.styleable.Shortcut_android_enabled, true)
+                notifyAttribute = getInteger(R.styleable.Shortcut_shct_notify, 0)
+                typeAttribute = getInt(R.styleable.Shortcut_shct_type, CONTAINED)
+                colorAttribute = getInt(R.styleable.Shortcut_shct_color, PRIMARY)
+                labelAttribute = getString(R.styleable.Shortcut_shct_text_label) ?: ""
+            } finally {
+                recycle()
+            }
+        }
     }
 
     private fun getIconAttribute() {
@@ -233,6 +231,10 @@ class Shortcut @JvmOverloads constructor(
 
         background.setColor(ContextCompat.getColor(context, backgroundColorResourceAttribute))
         backgroundContainer.background = background
+
+        setLabel(labelAttribute)
+        setIcon(iconAttribute)
+        configureNotify()
 
         requestLayout()
     }
