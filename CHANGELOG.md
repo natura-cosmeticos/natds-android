@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.17.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.16.0...v.9.17.0) (2022-03-07)
+
+
+### Features
+
+* adds basic structure for new component - Counter ([f767c98](https://github.com/natura-cosmeticos/natds-android/commit/f767c98fdfff57bd89e88c082c5e16db66dd10c8))
+* applies attributes at Counter component and show it at Sample ([72eaacd](https://github.com/natura-cosmeticos/natds-android/commit/72eaacdd2463b14e4dd634e948d20da2ae52a38a))
+* inserts accessibility params for buttons at Counter component ([0779db0](https://github.com/natura-cosmeticos/natds-android/commit/0779db06c858d6166b657fc5a91319be45d1bb5d))
+* refactor mechanism to define number limits of Counter and adds new examples at sample ([df39606](https://github.com/natura-cosmeticos/natds-android/commit/df39606a9de5460f2a3748d674405eb712c4761e))
+
+
+### Bug Fixes
+
+* fixes code review appointments ([bb11181](https://github.com/natura-cosmeticos/natds-android/commit/bb11181c65b69b4ebae1e4fd4c5c97138a442459))
+* fixes code review appoitments ([bf0fb78](https://github.com/natura-cosmeticos/natds-android/commit/bf0fb780bcc34c0710652c2be88573a991b0087b))
+* fixes doc structure ([d03c1c3](https://github.com/natura-cosmeticos/natds-android/commit/d03c1c3ddde129c7533ef78e7b0f9bcffd3eb149))
+* fixes dynamically updating attributes at Counter component ([1d93299](https://github.com/natura-cosmeticos/natds-android/commit/1d932991179ec5acd75a7836f53af10e9fdce5f8))
+* fixes input view vertical alignment at Counter component ([e5063df](https://github.com/natura-cosmeticos/natds-android/commit/e5063df5a8f7d79af3abab837546de349c09bc85))
+* fixes lint rules ([7a9c38b](https://github.com/natura-cosmeticos/natds-android/commit/7a9c38b60c818ffc6373c33da9dd3f8a6736ec80))
+
 ## [9.16.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.15.0...v.9.16.0) (2022-02-16)
 
 
