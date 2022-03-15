@@ -20,9 +20,9 @@ With the following attribute statuses:
   - ✅ `Press`
 - **Color**:
   - ✅ `Contained / Primary`
-  - 🚧 `Contained / Light`
+  - ✅ `Contained / Light`
   - ✅ `Outlined / Primary`
-  - 🚧 `Outlined / Light`
+  - ✅`Outlined / Light`
 - **Notify**:
   - ✅ `None`
   - ✅ `Standard`
