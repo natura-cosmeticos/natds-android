@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.18.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.17.0...v.9.18.0) (2022-03-16)
+
+
+### Features
+
+* sets the enable attribute for the shortcut component ([e3f4799](https://github.com/natura-cosmeticos/natds-android/commit/e3f4799ce2ac0e9967be0ded4e886e0dce928c51))
+* updates and refactors Shortcut component ([be5de99](https://github.com/natura-cosmeticos/natds-android/commit/be5de99400c8e48c55e13f6597794a7275cccdb9))
+* updates Shorcut styles and theme attributes ([047c1fd](https://github.com/natura-cosmeticos/natds-android/commit/047c1fd9d3d6851b0f91fb7d25f26e352dee2ff7))
+
 ## [9.17.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.16.0...v.9.17.0) (2022-03-07)
 
 
