@@ -44,16 +44,25 @@
     </declare-styleable>
 
     <declare-styleable name="Shortcut">
-        <attr name="colorBackground" />
         <attr name="shct_type" format="enum">
             <enum name="outlined" value="0" />
             <enum name="contained" value="1" />
         </attr>
-        <attr name="shct_icon_color" format="color" />
-        <attr name="shct_label_appearance" format="reference" />
         <attr name="shct_text_label" format="string" />
         <attr name="shct_icon_name" format="string" />
         <attr name="shct_notify" format="integer" />
+        <attr name="shct_color" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="neutral" value="1" />
+        </attr>
+        <attr name="android:enabled" />
+    </declare-styleable>
+
+    <declare-styleable name="ShortcutStyle">
+        <attr name="colorBackground" />
+        <attr name="shct_border_color" format="color" />
+        <attr name="shct_icon_color" format="color" />
+        <attr name="shct_label_appearance" format="reference" />
     </declare-styleable>
 
     <declare-styleable name="BaseAppBarTop">

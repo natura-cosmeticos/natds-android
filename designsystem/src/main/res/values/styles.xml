@@ -497,18 +497,46 @@
     </style>
 
     <!-- SHORTCUT STYLES -->
-    <style name="Widget.DS.Shortcut.Contained" parent="Widget.DS.Shortcut">
-        <item name="colorBackground">?colorPrimary</item>
+    <style name="Widget.DS.Shortcut.Contained.Primary" parent="">
+        <item name="colorBackground">?shortcutContainedColorEnablePrimaryBackground</item>
         <item name="shct_icon_color">?colorOnPrimary</item>
+        <item name="shct_border_color">?shortcutContainedColorEnablePrimaryBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Primary</item>
     </style>
 
-    <style name="Widget.DS.Shortcut.Outlined" parent="Widget.DS.Shortcut">
-        <item name="colorBackground">?colorSurface</item>
-        <item name="shct_icon_color">?colorPrimary</item>
+    <style name="Widget.DS.Shortcut.Contained.Neutral" parent="">
+        <item name="colorBackground">?shortcutContainedColorEnableNeutralBackground</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
+        <item name="shct_border_color">?shortcutContainedColorEnableNeutralBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Neutral</item>
     </style>
 
-    <style name="Widget.DS.Shortcut">
-        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut</item>
+    <style name="Widget.DS.Shortcut.Contained.Disabled" parent="">
+        <item name="colorBackground">?shortcutContainedColorDisablePrimaryBackground</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
+        <item name="shct_border_color">?shortcutContainedColorDisablePrimaryBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Contained.Disabled</item>
+    </style>
+
+    <style name="Widget.DS.Shortcut.Outlined.Primary" parent="">
+        <item name="colorBackground">?shortcutOutlinedColorEnablePrimaryBackground</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
+        <item name="shct_border_color">?shortcutOutlinedColorEnablePrimaryBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Neutral</item>
+    </style>
+
+    <style name="Widget.DS.Shortcut.Outlined.Neutral" parent="">
+        <item name="colorBackground">?shortcutOutlinedColorEnableNeutralBackground</item>
+        <item name="shct_icon_color">?colorHighEmphasis</item>
+        <item name="shct_border_color">?shortcutOutlinedColorEnableNeutralBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Neutral</item>
+    </style>
+
+    <style name="Widget.DS.Shortcut.Outlined.Disabled" parent="">
+        <item name="colorBackground">?shortcutOutlinedColorDisablePrimaryBackground</item>
+        <item name="shct_icon_color">?colorLowEmphasis</item>
+        <item name="shct_border_color">?shortcutOutlinedColorDisablePrimaryBorder</item>
+        <item name="shct_label_appearance">@style/TextAppearance.DS.Shortcut.Outlined.Disabled</item>
     </style>
 
     <style name="TextAppearance.DS.Shortcut" parent="">
@@ -517,6 +545,30 @@
         <item name="android:fontFamily">?shortcutLabelPrimaryFontWeight</item>
         <item name="android:letterSpacing">?shortcutLabelLetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?shortcutLabelLineHeight</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Contained.Primary" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutContainedColorEnablePrimaryLabel</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Contained.Neutral" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutContainedColorEnableNeutralLabel</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Contained.Disabled" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutContainedColorDisablePrimaryLabel</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Outlined.Primary" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutOutlinedColorEnablePrimaryLabel</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Outlined.Neutral" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutOutlinedColorEnableNeutralLabel</item>
+    </style>
+
+    <style name="TextAppearance.DS.Shortcut.Outlined.Disabled" parent="TextAppearance.DS.Shortcut">
+        <item name="android:textColor">?shortcutOutlinedColorDisablePrimaryLabel</item>
     </style>
 
     <!-- TAG STYLES -->
