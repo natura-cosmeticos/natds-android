@@ -573,47 +573,44 @@
 
     <!-- TAG STYLES -->
 
-    <style name="Widget.DS.Tag">
+    <style name="Widget.DS.Tag.Primary" parent="">
+        <item name="colorBackground">?tagColorBackgroundPrimary</item>
+        <item name="android:textColor">?tagColorLabelPrimary</item>
     </style>
 
-    <style name="Widget.DS.Tag.Primary" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorPrimary</item>
-        <item name="android:textColor">?colorOnPrimary</item>
+    <style name="Widget.DS.Tag.Alert" parent="">
+        <item name="colorBackground">?tagColorBackgroundAlert</item>
+        <item name="android:textColor">?tagColorLabelAlert</item>
     </style>
 
-    <style name="Widget.DS.Tag.Alert" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorAlert</item>
-        <item name="android:textColor">?colorOnAlert</item>
+    <style name="Widget.DS.Tag.Secondary" parent="">
+        <item name="colorBackground">?tagColorBackgroundSecondary</item>
+        <item name="android:textColor">?tagColorLabelSecondary</item>
     </style>
 
-    <style name="Widget.DS.Tag.Secondary" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorSecondary</item>
-        <item name="android:textColor">?colorOnSecondary</item>
+    <style name="Widget.DS.Tag.Success" parent="">
+        <item name="colorBackground">?tagColorBackgroundSuccess</item>
+        <item name="android:textColor">?tagColorLabelSuccess</item>
     </style>
 
-    <style name="Widget.DS.Tag.Success" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorSuccess</item>
-        <item name="android:textColor">?colorOnSuccess</item>
+    <style name="Widget.DS.Tag.Warning" parent="">
+        <item name="colorBackground">?tagColorBackgroundWarning</item>
+        <item name="android:textColor">?tagColorLabelWarning</item>
     </style>
 
-    <style name="Widget.DS.Tag.Warning" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorWarning</item>
-        <item name="android:textColor">?colorOnWarning</item>
+    <style name="Widget.DS.Tag.Link" parent="">
+        <item name="colorBackground">?tagColorBackgroundLink</item>
+        <item name="android:textColor">?tagColorLabelLink</item>
     </style>
 
-    <style name="Widget.DS.Tag.Link" parent="Widget.DS.Tag">
-        <item name="colorBackground">?colorLink</item>
-        <item name="android:textColor">?colorOnLink</item>
-    </style>
-
-    <style name="Widget.DS.Tag.Small" parent="Widget.DS.Tag">
+    <style name="Widget.DS.Tag.Small" parent="">
         <item name="customHeight">?sizeSmall</item>
         <item name="radiusEnabledValue">?tagSmallBorderRadiusEnable</item>
         <item name="radiusDisabledValue">?tagSmallBorderRadiusDisable</item>
 
     </style>
 
-    <style name="Widget.DS.Tag.Standard" parent="Widget.DS.Tag">
+    <style name="Widget.DS.Tag.Standard" parent="">
         <item name="customHeight">?sizeStandard</item>
         <item name="radiusEnabledValue">?tagStandardBorderRadiusEnable</item>
         <item name="radiusDisabledValue">?tagStandardBorderRadiusDisable</item>

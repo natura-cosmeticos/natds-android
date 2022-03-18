@@ -25,6 +25,7 @@
             <enum name="success" value="3" />
             <enum name="warning" value="4" />
             <enum name="link" value="5" />
+            <enum name="custom" value="6" />
         </attr>
         <attr name="tag_size" format="enum">
             <enum name="small" value="0" />
@@ -35,8 +36,14 @@
             <enum name="left" value="1" />
             <enum name="right" value="2" />
         </attr>
-        <attr name="colorBackground" />
+        <attr name="tag_icon" format="reference"/>
+        <attr name="tag_custom_background_color" format="reference"/>
+        <attr name="tag_custom_label_color" format="reference"/>
         <attr name="textLabel" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TagStyle">
+        <attr name="colorBackground" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
         <attr name="radiusDisabledValue"/>
