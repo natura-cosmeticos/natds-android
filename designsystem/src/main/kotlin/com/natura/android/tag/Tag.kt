@@ -2,10 +2,11 @@ package com.natura.android.tag
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
-import android.view.InflateException
 import android.view.LayoutInflater
+import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -14,6 +15,7 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.databinding.TagBinding
+import com.natura.android.exceptions.LayoutInflateException
 import com.natura.android.exceptions.MissingThemeException
 
 class Tag @JvmOverloads constructor(
@@ -24,7 +26,7 @@ class Tag @JvmOverloads constructor(
 
     private var labelAttribute: String? = null
     private var typeAttribute: Int = 0
-    private var iconAttribute: Int = 0
+    private var iconAttribute: Drawable? = null
     private var sizeAttribute: Int = 0
     private var positionAttribute: Int = 0
     private var sizeResourceAttribute = 0
@@ -40,7 +42,7 @@ class Tag @JvmOverloads constructor(
         try {
             binding = TagBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
-            throw (InflateException())
+            throw (LayoutInflateException())
         }
 
         tagAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Tag)
@@ -145,6 +147,11 @@ class Tag @JvmOverloads constructor(
             ContextCompat.getColor(context, backgroundColorResourceAttribute)
         )
         binding.tgBackground.background = background
+
+        iconAttribute?.let {
+            binding.tgIcon.visibility = View.VISIBLE
+            binding.tgIcon.setImageDrawable(it)
+        }
     }
 
     private fun getTypeAttributesFromTheme() {
@@ -245,7 +252,7 @@ class Tag @JvmOverloads constructor(
         typeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_type, PRIMARY)
         sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, SMALL)
         iconAttribute =
-            tagAttributesArray.getResourceId(R.styleable.Tag_tag_icon, RESOURCE_NOT_DEFINED)
+            tagAttributesArray.getDrawable(R.styleable.Tag_tag_icon)
         positionAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_position, CENTER)
     }
 
