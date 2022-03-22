@@ -68,6 +68,8 @@ class Tag @JvmOverloads constructor(
 
     fun getType(): Int = typeAttribute
 
+    fun getIcon(): Drawable? = iconAttribute
+
     fun getSize(): Int = sizeAttribute
 
     fun getPosition(): Int = positionAttribute
@@ -203,7 +205,7 @@ class Tag @JvmOverloads constructor(
     private fun setCustomBackgroundColorAttribute() {
         try {
             backgroundColorResourceAttribute =
-                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_custom_background_color)
+                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_background_color)
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
@@ -217,7 +219,7 @@ class Tag @JvmOverloads constructor(
     private fun setCustomLabelColorAttribute() {
         try {
             labelTextColorResourceAttribute =
-                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_custom_label_color)
+                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_label_color)
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
@@ -263,7 +265,6 @@ class Tag @JvmOverloads constructor(
             throw (
                 IllegalArgumentException(
                     "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label(string).",
-                    e
                 )
                 )
         }

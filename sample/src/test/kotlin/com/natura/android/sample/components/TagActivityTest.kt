@@ -180,6 +180,15 @@ class TagActivityTest {
         }
     }
 
+    @Test
+    fun checkTagCustom() {
+        tagScenario.onActivity {
+            val customColor = it.findViewById<Tag>(R.id.tagCustomColor)
+
+            Truth.assertThat(customColor.getType()).isEqualTo(TYPE_CUSTOM)
+        }
+    }
+
     companion object {
         const val TYPE_PRIMARY = 0
         const val TYPE_ALERT = 1
@@ -187,6 +196,7 @@ class TagActivityTest {
         const val TYPE_SUCCESS = 3
         const val TYPE_WARNING = 4
         const val TYPE_LINK = 5
+        const val TYPE_CUSTOM = 6
 
         const val POSITION_CENTER = 0
         const val POSITION_LEFT = 1

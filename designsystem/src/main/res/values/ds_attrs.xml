@@ -37,8 +37,8 @@
             <enum name="right" value="2" />
         </attr>
         <attr name="tag_icon" format="reference"/>
-        <attr name="tag_custom_background_color" format="reference"/>
-        <attr name="tag_custom_label_color" format="reference"/>
+        <attr name="tag_background_color" format="color"/>
+        <attr name="tag_label_color" format="color"/>
         <attr name="textLabel" format="string" />
     </declare-styleable>
 

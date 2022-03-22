@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
+import com.natura.android.R
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -152,6 +153,14 @@ class TagTest {
             .build()
     }
 
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingTagWithCustomTypeWithoutColors() {
+        tag = TagFixture
+            .aEmptyTag()
+            .withTypeCustom()
+            .build()
+    }
+
     private fun buildTagAlert(): Tag {
         return TagFixture
             .aTag()
@@ -194,6 +203,13 @@ class TagTest {
             .build()
     }
 
+    private fun buildTagCustom(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeCustom()
+            .build()
+    }
+
     private fun buildTagSmall(): Tag {
         return TagFixture
             .aTag()
@@ -226,6 +242,27 @@ class TagTest {
         return TagFixture
             .aTag()
             .withPositionRight()
+            .build()
+    }
+
+    private fun buildTagWithIcon(): Tag {
+        return TagFixture
+            .aTag()
+            .withIcon(R.drawable.default_icon_outlined_default_mockup)
+            .build()
+    }
+
+    private fun buildTagWithCustomBackgroundColor(): Tag {
+        return TagFixture
+            .aTag()
+            .withCustomBackgroundColor(R.color.colorBrdNatGray)
+            .build()
+    }
+
+    private fun buildTagWithCustomLabelColor(): Tag {
+        return TagFixture
+            .aTag()
+            .withCustomBackgroundColor(R.color.colorBrdNatOrange)
             .build()
     }
 }
