@@ -244,25 +244,4 @@ class TagTest {
             .withPositionRight()
             .build()
     }
-
-    private fun buildTagWithIcon(): Tag {
-        return TagFixture
-            .aTag()
-            .withIcon(R.drawable.default_icon_outlined_default_mockup)
-            .build()
-    }
-
-    private fun buildTagWithCustomBackgroundColor(): Tag {
-        return TagFixture
-            .aTag()
-            .withCustomBackgroundColor(R.color.colorBrdNatGray)
-            .build()
-    }
-
-    private fun buildTagWithCustomLabelColor(): Tag {
-        return TagFixture
-            .aTag()
-            .withCustomBackgroundColor(R.color.colorBrdNatOrange)
-            .build()
-    }
 }
