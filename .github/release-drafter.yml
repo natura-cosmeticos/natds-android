@@ -1,15 +1,31 @@
-name-template: 'Release Template 🌈'
+name-template: 'v.$NATDS_VERSION 🌈'
+tag-template: 'v.$NATDS_VERSION'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+  - title: '🧰 Maintenance'
+    label: 'chore'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
 template: |
-  ## Release XXX - DS Android
-  Hi today we’re releasing the new version of Nat DS For Android!
-  ## What’s new:
-  ### 🎸 New Feature
-  Description New Feature
-  ### 🐛 Bug
-  Description Bug
-  ### ⚠️⚠️⚠️ Breaking Change ⚠️⚠️⚠️
-  Description Breaking Change
+  ## Changes
 
-  ---
-  If you have ideas or suggestions how to make our Design System even better please send us an issue:
-  https://github.com/natura-cosmeticos/natds-android/issues
+  $CHANGES
