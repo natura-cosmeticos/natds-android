@@ -7,108 +7,138 @@
     android:layout_height="match_parent"
     tools:context=".components.TagActivity">
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagPrimary"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingXLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tag_type="primary"
-        app:textLabel="Center Primary Small" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagSecondary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingXLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagPrimary"
-        app:tag_size="standard"
-        app:tag_type="secondary"
-        app:textLabel="Center Secondary Standard" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagSuccess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagSecondary"
-        app:tag_position="left"
-        app:tag_size="small"
-        app:tag_type="success"
-        app:textLabel="Left Success Small" />
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagAlert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagSuccess"
-        app:tag_position="left"
-        app:tag_size="standard"
-        app:tag_type="alert"
-        app:textLabel="Left Alert Standard" />
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tag_type="primary"
+                app:textLabel="Center Primary Small" />
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagWarning"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tagAlert"
-        app:tag_position="right"
-        app:tag_size="small"
-        app:tag_type="warning"
-        app:textLabel="Right Warning Small" />
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagPrimary"
+                app:tag_size="standard"
+                app:tag_type="secondary"
+                app:textLabel="Center Secondary Standard" />
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagWarning"
-        app:tag_position="right"
-        app:tag_size="standard"
-        app:tag_type="link"
-        app:textLabel="Right Link Standard" />
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagSuccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tagSecondary"
+                app:tag_position="left"
+                app:tag_size="small"
+                app:tag_type="success"
+                app:textLabel="Left Success Small" />
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagCustomColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagLink"
-        app:tag_background_color="?colorNeutral300"
-        app:tag_label_color="?colorOnPrimary"
-        app:tag_position="center"
-        app:tag_size="standard"
-        app:tag_type="custom"
-        app:textLabel="Center Custom Standard" />
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tagSuccess"
+                app:tag_position="left"
+                app:tag_size="standard"
+                app:tag_type="alert"
+                app:textLabel="Left Alert Standard" />
 
-    <com.natura.android.tag.Tag
-        android:id="@+id/tagWithIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tagCustomColor"
-        app:tag_icon="@drawable/outlined_action_mic"
-        app:tag_position="center"
-        app:tag_size="standard"
-        app:tag_type="primary"
-        app:textLabel="Center Custom Standard" />
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tagAlert"
+                app:tag_position="right"
+                app:tag_size="small"
+                app:tag_type="warning"
+                app:textLabel="Right Warning Small" />
+
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagWarning"
+                app:tag_position="right"
+                app:tag_size="standard"
+                app:tag_type="link"
+                app:textLabel="Right Link Standard" />
+
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagCustomColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagLink"
+                app:tag_background_color="?colorNeutral300"
+                app:tag_label_color="?colorOnPrimary"
+                app:tag_position="center"
+                app:tag_size="standard"
+                app:tag_type="custom"
+                app:textLabel="Center Custom Standard" />
+
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagStandardWithIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagCustomColor"
+                app:tag_icon="@drawable/outlined_action_mic"
+                app:tag_position="center"
+                app:tag_size="standard"
+                app:tag_type="primary"
+                app:textLabel="Center Standard With Icon" />
+
+            <com.natura.android.tag.Tag
+                android:id="@+id/tagSmallWithIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tagStandardWithIcon"
+                app:tag_icon="@drawable/outlined_action_mic"
+                app:tag_position="center"
+                app:tag_size="small"
+                app:tag_type="success"
+                app:textLabel="Center Small With Icon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
