@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.20.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.19.0...v.9.20.0) (2022-03-24)
+
+
+### Features
+
+* adds icon attribute and permission to define custom color to background and icon ([1d8e8eb](https://github.com/natura-cosmeticos/natds-android/commit/1d8e8eb3e3cd1a6f0aafb9926dfbe33e3bdd21c8))
+* adds tag example with small size and icon at sample app screen ([f3b5ed9](https://github.com/natura-cosmeticos/natds-android/commit/f3b5ed9bbf30ddf5d338cece4cfdee8b238367c6))
+* adds tests and refactor documentation of tag Component ([ff9c0ea](https://github.com/natura-cosmeticos/natds-android/commit/ff9c0ea22501beb1ac1db55622a69a146f8e23ba))
+
 ## [9.19.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.18.0...v.9.19.0) (2022-03-23)
 
 
