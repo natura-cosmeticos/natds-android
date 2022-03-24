@@ -2,9 +2,11 @@ package com.natura.android.tag
 
 import android.content.Context
 import android.content.res.TypedArray
+import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -13,6 +15,7 @@ import androidx.core.content.res.getStringOrThrow
 import androidx.core.graphics.drawable.DrawableCompat
 import com.natura.android.R
 import com.natura.android.databinding.TagBinding
+import com.natura.android.exceptions.LayoutInflateException
 import com.natura.android.exceptions.MissingThemeException
 
 class Tag @JvmOverloads constructor(
@@ -23,6 +26,7 @@ class Tag @JvmOverloads constructor(
 
     private var labelAttribute: String? = null
     private var typeAttribute: Int = 0
+    private var iconAttribute: Drawable? = null
     private var sizeAttribute: Int = 0
     private var positionAttribute: Int = 0
     private var sizeResourceAttribute = 0
@@ -38,15 +42,15 @@ class Tag @JvmOverloads constructor(
         try {
             binding = TagBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
-            throw (MissingThemeException())
+            throw (LayoutInflateException())
         }
 
         tagAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Tag)
 
         getTagAttributes()
-        getAttributesFromTheme()
+        getTypeAttributesFromTheme()
         getSizeAttributeFromTheme()
-        configureTagByType(typeAttribute)
+        configureTagByType()
         configureTagBySize()
 
         tagAttributesArray.recycle()
@@ -54,7 +58,6 @@ class Tag @JvmOverloads constructor(
 
     fun setLabel(text: String?) {
         binding.tgLabel.text = text
-        setTextColor()
         invalidate()
         requestLayout()
     }
@@ -65,12 +68,14 @@ class Tag @JvmOverloads constructor(
 
     fun getType(): Int = typeAttribute
 
+    fun getIcon(): Drawable? = iconAttribute
+
     fun getSize(): Int = sizeAttribute
 
     fun getPosition(): Int = positionAttribute
 
-    private fun configureTagByType(type: Int) {
-        type.apply {
+    private fun configureTagByType() {
+        typeAttribute.apply {
             setLabel(labelAttribute)
             setTextColor()
             setBackground()
@@ -85,6 +90,13 @@ class Tag @JvmOverloads constructor(
 
     private fun setTextColor() {
         binding.tgLabel.setTextColor(
+            ContextCompat.getColor(
+                context,
+                labelTextColorResourceAttribute
+            )
+        )
+
+        binding.tgIcon.setColorFilter(
             ContextCompat.getColor(
                 context,
                 labelTextColorResourceAttribute
@@ -105,8 +117,8 @@ class Tag @JvmOverloads constructor(
         val disabledBorderRadius = context.resources.getDimension(radiusDisabledesourceAttribute)
 
         when (positionAttribute) {
-            Position.CENTER.value -> background.cornerRadius = enabledBorderRadius
-            Position.RIGHT.value ->
+            CENTER -> background.cornerRadius = enabledBorderRadius
+            RIGHT ->
                 background.cornerRadii =
                     floatArrayOf(
                         enabledBorderRadius,
@@ -118,7 +130,7 @@ class Tag @JvmOverloads constructor(
                         enabledBorderRadius,
                         enabledBorderRadius
                     )
-            Position.LEFT.value ->
+            LEFT ->
                 background.cornerRadii =
                     floatArrayOf(
                         disabledBorderRadius,
@@ -137,28 +149,31 @@ class Tag @JvmOverloads constructor(
             ContextCompat.getColor(context, backgroundColorResourceAttribute)
         )
         binding.tgBackground.background = background
+
+        iconAttribute?.let {
+            binding.tgIcon.visibility = View.VISIBLE
+            binding.tgIcon.setImageDrawable(it)
+        }
     }
 
-    private fun getAttributesFromTheme() {
-        try {
-            when (typeAttribute) {
-                PRIMARY -> setTypeAttributes(R.attr.tagPrimary)
-                SECONDARY -> setTypeAttributes(R.attr.tagSecondary)
-                ALERT -> setTypeAttributes(R.attr.tagAlert)
-                SUCCESS -> setTypeAttributes(R.attr.tagSuccess)
-                WARNING -> setTypeAttributes(R.attr.tagWarning)
-                LINK -> setTypeAttributes(R.attr.tagLink)
-            }
-        } catch (e: Exception) {
-            throw (MissingThemeException())
+    private fun getTypeAttributesFromTheme() {
+        when (typeAttribute) {
+            PRIMARY -> setTypeAttributes(R.attr.tagPrimary)
+            SECONDARY -> setTypeAttributes(R.attr.tagSecondary)
+            ALERT -> setTypeAttributes(R.attr.tagAlert)
+            SUCCESS -> setTypeAttributes(R.attr.tagSuccess)
+            WARNING -> setTypeAttributes(R.attr.tagWarning)
+            LINK -> setTypeAttributes(R.attr.tagLink)
+            CUSTOM -> setCustomTypeAttributes()
+            else -> setTypeAttributes(R.attr.tagPrimary)
         }
     }
 
     private fun getSizeAttributeFromTheme() {
         try {
             when (sizeAttribute) {
-                Size.SMALL.value -> setSizeAttribute(R.attr.tagSizeSmall)
-                Size.STANDARD.value -> setSizeAttribute(R.attr.tagSizeStandard)
+                SMALL -> setSizeAttribute(R.attr.tagSizeSmall)
+                STANDARD -> setSizeAttribute(R.attr.tagSizeStandard)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -170,16 +185,49 @@ class Tag @JvmOverloads constructor(
             .theme
             .obtainStyledAttributes(
                 attrs,
-                R.styleable.Tag,
+                R.styleable.TagStyle,
                 styleAttr,
                 0
             )
             .apply {
                 backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.Tag_colorBackground)
+                    this.getResourceIdOrThrow(R.styleable.TagStyle_colorBackground)
                 labelTextColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.Tag_android_textColor)
+                    this.getResourceIdOrThrow(R.styleable.TagStyle_android_textColor)
             }
+    }
+
+    private fun setCustomTypeAttributes() {
+        setCustomBackgroundColorAttribute()
+        setCustomLabelColorAttribute()
+    }
+
+    private fun setCustomBackgroundColorAttribute() {
+        try {
+            backgroundColorResourceAttribute =
+                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_background_color)
+        } catch (e: Exception) {
+            throw (
+                IllegalArgumentException(
+                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag background color.",
+                    e
+                )
+                )
+        }
+    }
+
+    private fun setCustomLabelColorAttribute() {
+        try {
+            labelTextColorResourceAttribute =
+                tagAttributesArray.getResourceIdOrThrow(R.styleable.Tag_tag_label_color)
+        } catch (e: Exception) {
+            throw (
+                IllegalArgumentException(
+                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label color.",
+                    e
+                )
+                )
+        }
     }
 
     private fun setSizeAttribute(sizeAttr: Int) {
@@ -187,28 +235,27 @@ class Tag @JvmOverloads constructor(
             .theme
             .obtainStyledAttributes(
                 attrs,
-                R.styleable.Tag,
+                R.styleable.TagStyle,
                 sizeAttr,
                 0
             )
             .apply {
-                sizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.Tag_customHeight)
+                sizeResourceAttribute = this.getResourceIdOrThrow(R.styleable.TagStyle_customHeight)
                 radiusEnabledResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.Tag_radiusEnabledValue)
+                    this.getResourceIdOrThrow(R.styleable.TagStyle_radiusEnabledValue)
                 radiusDisabledesourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.Tag_radiusDisabledValue)
+                    this.getResourceIdOrThrow(R.styleable.TagStyle_radiusDisabledValue)
             }
     }
 
     private fun getTagAttributes() {
         getLabelAttribute()
-        getTypeAttribute()
-        getSizeAttribute()
-        getPositionAttribute()
-    }
 
-    private fun getTypeAttribute() {
         typeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_type, PRIMARY)
+        sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, SMALL)
+        iconAttribute =
+            tagAttributesArray.getDrawable(R.styleable.Tag_tag_icon)
+        positionAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_position, CENTER)
     }
 
     private fun getLabelAttribute() {
@@ -218,19 +265,9 @@ class Tag @JvmOverloads constructor(
             throw (
                 IllegalArgumentException(
                     "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label(string).",
-                    e
                 )
                 )
         }
-    }
-
-    private fun getSizeAttribute() {
-        sizeAttribute = tagAttributesArray.getInt(R.styleable.Tag_tag_size, Size.SMALL.value)
-    }
-
-    private fun getPositionAttribute() {
-        positionAttribute =
-            tagAttributesArray.getInt(R.styleable.Tag_tag_position, Position.CENTER.value)
     }
 
     companion object {
@@ -240,16 +277,15 @@ class Tag @JvmOverloads constructor(
         const val SUCCESS = 3
         const val WARNING = 4
         const val LINK = 5
+        const val CUSTOM = 6
+
+        const val SMALL = 0
+        const val STANDARD = 1
+
+        const val CENTER = 0
+        const val LEFT = 1
+        const val RIGHT = 2
+
+        private const val RESOURCE_NOT_DEFINED = 0
     }
-}
-
-enum class Size(val value: Int) {
-    SMALL(0),
-    STANDARD(1)
-}
-
-enum class Position(val value: Int) {
-    CENTER(0),
-    LEFT(1),
-    RIGHT(2)
 }

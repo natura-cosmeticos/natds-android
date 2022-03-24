@@ -6,10 +6,13 @@ import com.natura.android.R
 import org.robolectric.Robolectric
 
 internal class TagFixture private constructor(
-    private var type: Int = 0,
-    private var size: Int = 0,
-    private var position: Int = 0,
+    private var type: Int? = 0,
+    private var size: Int? = 0,
+    private var position: Int? = 0,
     private var label: String? = null,
+    private var icon: Int? = null,
+    private var backgroundColor: Int? = 0,
+    private var labelColor: Int? = 0,
     private var context: Context = ApplicationProvider.getApplicationContext()
 ) {
 
@@ -20,6 +23,7 @@ internal class TagFixture private constructor(
         private const val SUCCESS = 3
         private const val WARNING = 4
         private const val LINK = 5
+        private const val CUSTOM = 6
 
         private const val SMALL = 0
         private const val STANDARD = 1
@@ -32,11 +36,24 @@ internal class TagFixture private constructor(
         private const val defaultSize = SMALL
         private const val defaultPosition = CENTER
         private const val defaultLabel = "tag label"
+
+        private val defaultIcon = null
+        private const val defaultBackgroundColor = 1
+        private const val defaultLabelColor = 1
         private var context = ApplicationProvider.getApplicationContext<Context>()
 
         fun aTag(): TagFixture {
             context.setTheme(R.style.Theme_Natura_Light)
-            return TagFixture(defaultType, defaultSize, defaultPosition, defaultLabel, context)
+            return TagFixture(
+                defaultType,
+                defaultSize,
+                defaultPosition,
+                defaultLabel,
+                defaultIcon,
+                defaultBackgroundColor,
+                defaultLabelColor,
+                context
+            )
         }
 
         fun aEmptyTag(): TagFixture {
@@ -99,8 +116,30 @@ internal class TagFixture private constructor(
         return this
     }
 
+    fun withTypeCustom(): TagFixture {
+        this.type = CUSTOM
+        this.backgroundColor = 3
+        this.labelColor = 3
+        return this
+    }
+
     fun withLabel(label: String): TagFixture {
         this.label = label
+        return this
+    }
+
+    fun withIcon(icon: Int?): TagFixture {
+        this.icon = icon
+        return this
+    }
+
+    fun withCustomBackgroundColor(color: Int): TagFixture {
+        this.backgroundColor = color
+        return this
+    }
+
+    fun withCustomLabelColor(color: Int): TagFixture {
+        this.labelColor = color
         return this
     }
 
@@ -113,8 +152,11 @@ internal class TagFixture private constructor(
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.tag_type, type.toString())
+            .addAttribute(R.attr.tag_background_color, backgroundColor.toString())
             .addAttribute(R.attr.textLabel, label)
             .addAttribute(R.attr.tag_size, size.toString())
+            .addAttribute(R.attr.tag_icon, icon.toString())
+            .addAttribute(R.attr.tag_label_color, labelColor.toString())
             .addAttribute(R.attr.tag_position, position.toString())
             .build()
 

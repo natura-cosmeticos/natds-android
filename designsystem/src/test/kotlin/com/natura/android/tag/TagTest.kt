@@ -152,6 +152,14 @@ class TagTest {
             .build()
     }
 
+    @Test(expected = IllegalArgumentException::class)
+    fun shouldThrowsExceptionWhenBuildingTagWithCustomTypeWithoutColors() {
+        tag = TagFixture
+            .aEmptyTag()
+            .withTypeCustom()
+            .build()
+    }
+
     private fun buildTagAlert(): Tag {
         return TagFixture
             .aTag()
@@ -191,6 +199,13 @@ class TagTest {
         return TagFixture
             .aTag()
             .withTypeLink()
+            .build()
+    }
+
+    private fun buildTagCustom(): Tag {
+        return TagFixture
+            .aTag()
+            .withTypeCustom()
             .build()
     }
 
