@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.19.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.18.0...v.9.19.0) (2022-03-23)
+
+
+### Features
+
+* adds Release Drafter to generate release notes automatically ([20eacee](https://github.com/natura-cosmeticos/natds-android/commit/20eacee37605b5bb7560ae0b094f8e9d1bd98807))
+
 ## [9.18.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.17.0...v.9.18.0) (2022-03-16)
 
 
