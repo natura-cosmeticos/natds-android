@@ -1,5 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+apply from: 'jacoco/project.gradle'
+
 buildscript {
     ext.kotlin_version = '1.5.10'
     ext.android_tools_gradle = '4.2.0'
