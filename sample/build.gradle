@@ -5,6 +5,7 @@ apply plugin: 'com.facebook.testing.screenshot'
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-kapt'
+apply from: '../jacoco/modules.gradle'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion

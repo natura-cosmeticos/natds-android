@@ -3,8 +3,9 @@ apply plugin: 'kotlin-android'
 apply from: "$rootDir/tools/publish.gradle"
 apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
-
 apply plugin: 'kotlin-kapt'
+
+apply from: '../jacoco/modules.gradle'
 
 group = 'com.github.systemteamopensource'
 
