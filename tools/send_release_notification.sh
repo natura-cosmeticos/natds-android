@@ -20,7 +20,7 @@ awk 's{print $0 > "./tools/message_release.txt"}; $0~v {print $0 > "./tools/mess
 sed -i '' -e '$ d' ./tools/message_release.txt
 
 # write release message with line breaks
-awk '{printf "%s\\\n ",$0 > "./tools/message_text.txt"} END {print ""}' ./tools/message_release.txt
+awk '{printf "%s\\\\n ",$0 > "./tools/message_text.txt"} END {print ""}' ./tools/message_release.txt
 
 # update release message at json
 CHANGELOG_UPDATES=$(cat ./tools/message_text.txt)
