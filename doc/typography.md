@@ -3,6 +3,8 @@ Typography component style can help you to style texts. It is the easiest way to
 consume an standard style to texts
 
 
+
+
 ## How to use it?
 Right now Nat DS Typography Tokens support these variants:
 
@@ -127,6 +129,8 @@ Right now Nat DS Typography Tokens support these variants:
     android:text="Overline"
     android:textAppearance="?textAppearanceOverline"/>
    ```
+
+![Typography](./images/typography.png)
 
  ### Styles
  All these variations allow the application of the bold and italic styles through the xml, as shown below:
