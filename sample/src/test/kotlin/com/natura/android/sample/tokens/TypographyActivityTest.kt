@@ -132,17 +132,6 @@ class TypographyActivityTest {
     }
 
     @Test
-    fun checksButtonTextSize() {
-        typographyActivityScenario.onActivity {
-            val textSize = it.findViewById<TextView>(R.id.buttonSample).textSize
-            val textColor = it.findViewById<TextView>(R.id.buttonSample).currentTextColor
-
-            assertEquals(14.0F, textSize)
-            assertEquals(Color.parseColor("#333333"), textColor)
-        }
-    }
-
-    @Test
     fun checksCaptionTextSize() {
         typographyActivityScenario.onActivity {
             val textSize = it.findViewById<TextView>(R.id.captionSample).textSize

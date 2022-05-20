@@ -155,20 +155,6 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"/>
             <TextView
-                android:id="@+id/buttonSample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Button"
-                android:textAppearance="?textAppearanceButton"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
                 android:id="@+id/captionSample"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
