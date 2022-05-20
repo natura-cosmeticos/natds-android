@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.21.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.20.0...v.9.21.0) (2022-05-20)
+
+
+### Features
+
+* updates typography style component with new font assets ([2d65be6](https://github.com/natura-cosmeticos/natds-android/commit/2d65be6487d4ab506fcf378b6d9d909cfa175967))
+
+
+### Bug Fixes
+
+* removes button typography referece at activity test ([ea5eef7](https://github.com/natura-cosmeticos/natds-android/commit/ea5eef7ee39ae1ded881ca8336dd88d123f1db1a))
+
 ## [9.20.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.19.0...v.9.20.0) (2022-03-24)
 
 
