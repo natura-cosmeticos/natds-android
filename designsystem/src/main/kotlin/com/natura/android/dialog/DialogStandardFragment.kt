@@ -14,6 +14,7 @@ import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.natura.android.R
 import com.natura.android.divider.Divider
+import java.lang.ClassCastException
 
 class DialogStandardFragment : DialogFragment() {
 
@@ -27,6 +28,8 @@ class DialogStandardFragment : DialogFragment() {
     private var styleButtons: Int = DialogStandard.DEFAULT
     private var canCancelable: Boolean = true
     private var dialogTheme: Int = 0
+
+    private var callback: DialogStandardFragmentCallback? = null
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -82,7 +85,6 @@ class DialogStandardFragment : DialogFragment() {
 
             if (mainButtonTitle.isNotEmpty()) {
                 setButton(DialogInterface.BUTTON_POSITIVE, mainButtonTitle) { _, _ ->
-                    val callback = targetFragment as? DialogStandardFragmentCallback
                     callback?.onMainButtonClick()
                 }
             }
@@ -92,7 +94,6 @@ class DialogStandardFragment : DialogFragment() {
                     DialogInterface.BUTTON_NEGATIVE,
                     secondaryButtonTitle
                 ) { _, _ ->
-                    val callback = targetFragment as? DialogStandardFragmentCallback
                     callback?.onSecondaryButtonClick()
                 }
             }
@@ -104,6 +105,12 @@ class DialogStandardFragment : DialogFragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         dialogContext = context
+
+        try {
+            callback = activity as DialogStandardFragmentCallback?
+        } catch (e: ClassCastException) {
+            throw ClassCastException("Calling fragment must implement DialogStandardFragmentCallback interface")
+        }
     }
 
     private fun resolveThemeResource(): Int {

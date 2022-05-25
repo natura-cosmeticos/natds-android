@@ -6,13 +6,16 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import com.natura.android.dialog.DialogAlert
 import com.natura.android.dialog.DialogStandard
+import com.natura.android.dialog.DialogStandardFragment
+import com.natura.android.dialog.DialogStandardFragmentCallback
 import com.natura.android.sample.R
 import com.natura.android.sample.databinding.ActivityDialogBinding
 import com.natura.android.sample.setChosenDefaultTheme
 
-class DialogActivity : AppCompatActivity() {
+class DialogActivity : AppCompatActivity(), DialogStandardFragmentCallback {
     private lateinit var standardDialog: DialogStandard
     private lateinit var standardDialogVerticalButtons: DialogStandard
     private lateinit var standardDialogHeaderIconButtons: DialogStandard
@@ -80,6 +83,14 @@ class DialogActivity : AppCompatActivity() {
 
         binding.standardDialogWithOutlinedButton.setOnClickListener {
             standardDialogWithOutlinedButton.show()
+        }
+
+        binding.standardFragmentButton.setOnClickListener {
+            val fragmentManager: FragmentManager = supportFragmentManager
+            val alertDialog: DialogStandardFragment =
+                DialogStandardFragment.newInstance("Some title", "Some text", "OK", "Cancel")
+//            alertDialog.setTargetFragment(this, 1)
+            alertDialog.show(fragmentManager, "DialogFragment")
         }
     }
 
@@ -369,5 +380,21 @@ class DialogActivity : AppCompatActivity() {
             "Long text that should be substitied for some dialog text. This might actually take two lines or more",
             false
         ).create()
+    }
+
+    override fun onMainButtonClick() {
+        Toast.makeText(
+            this,
+            "Dialog Main Action",
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onSecondaryButtonClick() {
+        Toast.makeText(
+            this,
+            "Dialog Secondary Action",
+            Toast.LENGTH_LONG
+        ).show()
     }
 }
