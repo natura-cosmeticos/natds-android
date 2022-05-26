@@ -89,7 +89,6 @@ class DialogActivity : AppCompatActivity(), DialogStandardFragmentCallback {
             val fragmentManager: FragmentManager = supportFragmentManager
             val alertDialog: DialogStandardFragment =
                 DialogStandardFragment.newInstance("Some title", "Some text", "OK", "Cancel")
-//            alertDialog.setTargetFragment(this, 1)
             alertDialog.show(fragmentManager, "DialogFragment")
         }
     }

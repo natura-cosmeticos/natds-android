@@ -29,7 +29,7 @@ class DialogStandardFragment : DialogFragment() {
     private var canCancelable: Boolean = true
     private var dialogTheme: Int = 0
 
-    private var callback: DialogStandardFragmentCallback? = null
+    var callback: DialogStandardFragmentCallback? = null
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
@@ -107,7 +107,7 @@ class DialogStandardFragment : DialogFragment() {
         dialogContext = context
 
         try {
-            callback = activity as DialogStandardFragmentCallback?
+            callback = context as DialogStandardFragmentCallback?
         } catch (e: ClassCastException) {
             throw ClassCastException("Calling fragment must implement DialogStandardFragmentCallback interface")
         }

@@ -50,6 +50,7 @@ With the following attribute status:
 
 
 ## Usage Examples
+
 Dialog with icon, dividers, icon buttons and text
 
 ![Dialog](./images/dialog_withIcons.png)
@@ -165,6 +166,46 @@ With the dialog created, you can show it whenever you want, calling *show()* met
 ```android
 button.setOnClickListener {
     dialogStandard.show()
+}
+```
+
+#### Dialog Standard from Dialog Fragment
+
+We also allow the use of DialogStandard extending from DialogFragment, in order to aggregate the
+life cycle of a fragment to some development need.
+
+Instead of sending callbacks as a parameter, the class that will use the DialogStandardFragment will
+need to implement the DialogStandardFragmentCallback interface, where the button click methods are.
+Below is an example of how to use it:
+
+```android
+val fragmentManager: FragmentManager = supportFragmentManager
+val alertDialog: DialogStandardFragment = DialogStandardFragment.newInstance("Some title", "Some text", "OK", "Cancel")
+alertDialog.show(fragmentManager, "DialogFragment")
+```
+
+```android
+class DialogActivity : AppCompatActivity(), DialogStandardFragmentCallback {
+    .
+    .
+    .
+    .
+    
+    override fun onMainButtonClick() {
+        Toast.makeText(
+            this,
+            "Dialog Main Action",
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun onSecondaryButtonClick() {
+        Toast.makeText(
+            this,
+            "Dialog Secondary Action",
+            Toast.LENGTH_LONG
+        ).show()
+    }
 }
 ```
 
