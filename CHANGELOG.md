@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.22.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.21.0...v.9.22.0) (2022-05-30)
+
+
+### Features
+
+* adds callback mechanism at DialogStandardFragment to get click in buttons ([47991c2](https://github.com/natura-cosmeticos/natds-android/commit/47991c256976b87bea6810d74bcad3b057417cba))
+* adds functional test to DialogStandard Fragment and refactor Dialog documentation ([61685d9](https://github.com/natura-cosmeticos/natds-android/commit/61685d9a6003445e0f5aab07b4c8e41836e4fae1))
+* adds Standard Dialog variant extended from DialogFragment ([d22d11b](https://github.com/natura-cosmeticos/natds-android/commit/d22d11b51b2d45bdfd55dcf17cbf1a38284b697f))
+
 ## [9.21.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.20.0...v.9.21.0) (2022-05-20)
 
 
