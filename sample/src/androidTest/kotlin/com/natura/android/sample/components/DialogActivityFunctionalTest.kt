@@ -78,4 +78,13 @@ class DialogActivityFunctionalTest {
 
         onView(withText("Dialog Secondary Action")).inRoot(withDecorView(not(decorView))).check(matches(isDisplayed()))
     }
+
+    @Test
+    fun shouldShowMainButtonActionWhenClickOnItUsingDialogFragment() {
+        onView(withId(R.id.standardFragmentButton)).perform(click())
+
+        onView(withText("OK")).perform(click())
+
+        onView(withText("Dialog Main Action")).inRoot(withDecorView(not(decorView))).check(matches(isDisplayed()))
+    }
 }
