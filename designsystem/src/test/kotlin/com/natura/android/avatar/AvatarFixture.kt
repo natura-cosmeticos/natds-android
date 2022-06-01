@@ -48,10 +48,6 @@ internal class AvatarFixture private constructor(
                 defaultLabel, defaultFallbackLabel, defaultUrl, defaultContentDescription, context
             )
         }
-
-        fun aEmptyAvatar(): AvatarFixture {
-            return AvatarFixture()
-        }
     }
 
     fun withIconType(): AvatarFixture {

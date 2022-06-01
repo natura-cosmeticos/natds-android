@@ -13,15 +13,13 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import coil.compose.ImagePainter
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.AbstractComposeView
 import androidx.compose.ui.platform.LocalDensity
@@ -111,14 +109,18 @@ class Avatar : AbstractComposeView {
         size: Dp,
         @DrawableRes drawable: Int
     ) {
+        val painter: Painter
+        var state: ImagePainter.State = ImagePainter.State.Empty
+
         if (isVisible) {
 
-            val painter = if (url == "") {
-                painterResource(drawable)
+            if (url == "") {
+                painter = painterResource(drawable)
             } else {
-                rememberImagePainter(
+                painter = rememberImagePainter(
                     data = url
                 )
+                state = painter.state
             }
 
             Image(
@@ -129,45 +131,40 @@ class Avatar : AbstractComposeView {
                     .size(size)
             )
 
-            if (painter is ImagePainter) {
+            if ((painter is ImagePainter) && (state is ImagePainter.State.Error)) {
 
-                when (painter.state) {
-                    is ImagePainter.State.Error -> {
+                if (iconFallback != RESOURCE_NOT_DEFINED) {
 
-                        if (iconFallback != RESOURCE_NOT_DEFINED) {
-
-                            IconDrawable(
-                                true,
-                                contentDescription = accessibilityDescription,
-                                convertFloatToDp(
-                                    resources.getDimension(
-                                        iconSizeResourceAttribute
-                                    )
-                                ),
-                                colorResource(textColorResourceAttribute),
-                                iconFallback
+                    IconDrawable(
+                        true,
+                        contentDescription = accessibilityDescription,
+                        convertFloatToDp(
+                            resources.getDimension(
+                                iconSizeResourceAttribute
                             )
-                        } else {
-                            Label(
-                                true,
-                                labelFallback,
-                                convertFloatToSp(
-                                    resources.getDimension(
-                                        textSizeResourceAttribute
-                                    )
-                                ),
-                                colorResource(textColorResourceAttribute),
-                                FontFamily(
-                                    Typeface.create(
-                                        fontFamilyResourceAttribute,
-                                        Typeface.NORMAL
-                                    )
-                                ),
-                                convertFloatToSp(letterSpacingResourceAttribute),
-                                convertFloatToSp(lineHeightResourceAttribute)
+                        ),
+                        colorResource(textColorResourceAttribute),
+                        iconFallback
+                    )
+                } else {
+                    Label(
+                        true,
+                        labelFallback,
+                        convertFloatToSp(
+                            resources.getDimension(
+                                textSizeResourceAttribute
                             )
-                        }
-                    }
+                        ),
+                        colorResource(textColorResourceAttribute),
+                        FontFamily(
+                            Typeface.create(
+                                fontFamilyResourceAttribute,
+                                Typeface.NORMAL
+                            )
+                        ),
+                        convertFloatToSp(letterSpacingResourceAttribute),
+                        convertFloatToSp(lineHeightResourceAttribute)
+                    )
                 }
             }
         }
@@ -274,7 +271,8 @@ class Avatar : AbstractComposeView {
                 icon = getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
                 image = getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
                 label = getString(R.styleable.Avatar_avt_label) ?: LABEL_FALLBACK_DEFAULT
-                accessibilityDescription = getString(R.styleable.Avatar_avt_content_description) ?: ""
+                accessibilityDescription =
+                    getString(R.styleable.Avatar_avt_content_description) ?: ""
                 labelFallback =
                     getString(R.styleable.Avatar_avt_fallback_label) ?: LABEL_FALLBACK_DEFAULT
                 url = getString(R.styleable.Avatar_avt_image_url) ?: ""
@@ -296,6 +294,7 @@ class Avatar : AbstractComposeView {
             SEMI_SIZE -> setSizeAttributes(R.attr.avatarSemi)
             SEMIX_SIZE -> setSizeAttributes(R.attr.avatarSemix)
             MEDIUM_SIZE -> setSizeAttributes(R.attr.avatarMedium)
+            LARGEXX_SIZE -> setSizeAttributes(R.attr.avatarLargexxx)
             else -> setSizeAttributes(R.attr.avatarLargexxx)
         }
     }
