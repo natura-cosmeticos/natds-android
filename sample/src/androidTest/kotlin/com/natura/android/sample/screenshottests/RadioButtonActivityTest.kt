@@ -17,7 +17,7 @@ class RadioButtonActivityTest : ScreenShotActivityTestBase() {
 
     @Before
     fun before() {
-        InstrumentationRegistry.getInstrumentation().getUiAutomation()
+        InstrumentationRegistry.getInstrumentation().uiAutomation
     }
 
     @Test
