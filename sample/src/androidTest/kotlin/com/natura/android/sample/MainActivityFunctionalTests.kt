@@ -161,7 +161,8 @@ class MainActivityFunctionalTests {
         onView(withText("Text Field")).check(matches(isDisplayed()))
     }
 
-    @Test @Ignore
+    @Test
+    @Ignore("The component ValueTextHighlight was deprecated")
     fun shouldOpenValueTextHighlightScreenWhenTapOnItButton() {
         onView(withId(R.id.btnValueTextHighlight)).perform(scrollTo())
         onView(withId(R.id.btnValueTextHighlight)).perform(click())
