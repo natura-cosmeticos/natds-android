@@ -11,16 +11,17 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Primary / Secondary"
         android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?colorHighEmphasis"/>
+        android:text="Primary / Secondary"
+        android:textColor="?colorHighEmphasis"
+        android:textSize="12sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorPrimaryContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimary">
+
         <TextView
             android:id="@+id/colorPrimaryLabel"
             android:layout_width="wrap_content"
@@ -30,8 +31,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Primary"
-            android:textSize="16sp"
             android:textColor="?colorOnPrimary"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorPrimaryCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,11 +48,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorPrimaryLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorPrimaryDarkContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimaryVariant">
+
         <TextView
             android:id="@+id/colorPrimaryDarkLabel"
             android:layout_width="wrap_content"
@@ -61,8 +64,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Primary Dark"
-            android:textSize="16sp"
             android:textColor="?colorOnPrimaryDark"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorPrimaryDarkCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -78,11 +81,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorPrimaryDarkLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorPrimaryLightContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimaryLight">
+
         <TextView
             android:id="@+id/colorPrimaryLightLabel"
             android:layout_width="wrap_content"
@@ -92,8 +97,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Primary Light"
-            android:textSize="16sp"
             android:textColor="?colorOnPrimaryLight"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorPrimaryLightCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -115,6 +120,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorSecondary">
+
         <TextView
             android:id="@+id/colorSecondaryLabel"
             android:layout_width="wrap_content"
@@ -124,8 +130,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Secondary"
-            android:textSize="16sp"
             android:textColor="?colorOnSecondary"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorSecondarCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -141,11 +147,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorSecondaryLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorSecondaryDarkContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorSecondaryVariant">
+
         <TextView
             android:id="@+id/colorSecondaryDarkLabel"
             android:layout_width="wrap_content"
@@ -155,8 +163,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Secondary Dark"
-            android:textSize="16sp"
             android:textColor="?colorOnSecondaryDark"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorSecondaryDarkCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -167,16 +175,18 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="On Secondary Dark"
-            android:textSize="12sp"
             android:textColor="?colorOnSecondaryDark"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorSecondaryDarkLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorSecondaryLightContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorSecondaryLight">
+
         <TextView
             android:id="@+id/colorSecondaryLightLabel"
             android:layout_width="wrap_content"
@@ -186,8 +196,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Secondary Light"
-            android:textSize="16sp"
             android:textColor="?colorOnSecondaryLight"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorSecondaryLightCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -205,10 +215,9 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:layout_height="0.5dp"
         android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
+        android:layout_height="0.5dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp">
-    </ImageView>
+        android:layout_marginBottom="10dp"
+        android:background="?colorMediumEmphasis"/>
 </merge>

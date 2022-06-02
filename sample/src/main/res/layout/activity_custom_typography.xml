@@ -40,7 +40,8 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/mediumGrey" />
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
 
             <TextView
                 android:id="@+id/textViewDisplay"
@@ -66,7 +67,8 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/mediumGrey" />
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
 
             <TextView
                 android:id="@+id/textViewBodyRegular"
@@ -92,7 +94,8 @@
                 android:layout_height="0.5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
-                android:background="@color/mediumGrey" />
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
 
             <TextView
                 android:id="@+id/textViewBodyBold"

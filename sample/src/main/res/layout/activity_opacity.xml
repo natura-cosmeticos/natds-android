@@ -1,298 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".tokens.SizeActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".tokens.SizeActivity">
+
         <TextView
             android:id="@+id/opacity0Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity Transparent"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity Transparent"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacityTransparentCardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacityTransparent"
             android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacityTransparent"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
         <TextView
             android:id="@+id/opacity1Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 01"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 01"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity1CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity01"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity01"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity2Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 02"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 02"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity2CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity02"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity02"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity3Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 03"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 03"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity3CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity03"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity03"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity4Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 04"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 04"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity4CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity04"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity04"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity5Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 05"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 05"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity5CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity05"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity05"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity6Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 06"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 06"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity6CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity06"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity06"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity7Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 07"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 07"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity7CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity07"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity07"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity8Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 08"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 08"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity8CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity08"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity08"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity9Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 09"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 09"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity9CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity09"
-                        android:layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/sizeMediumX"
+            android:layout_gravity="center"
             android:layout_marginLeft="?sizeSmall"
             android:layout_marginRight="?sizeSmall"
-            android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:alpha="?attr/opacity09"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/opacity10Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity 10"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity 10"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacity10CardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacity10"
             android:layout_width="match_parent"
-            android:layout_marginLeft="?sizeSmall"
-            android:layout_marginRight="?sizeSmall"
             android:layout_height="?attr/sizeMediumX"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginLeft="?sizeSmall"
+            android:layout_marginRight="?sizeSmall"
+            android:layout_marginBottom="10dp"
+            android:alpha="?attr/opacity10"
+            android:backgroundTint="?colorPrimary" />
+
         <TextView
             android:id="@+id/opacityFullLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opacity Full"
             android:padding="5dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="Opacity Full"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/opacityFullCardView"
-            android:backgroundTint="?colorPrimary"
-            android:alpha="?attr/opacityFull"
             android:layout_width="match_parent"
-            android:layout_marginLeft="?sizeSmall"
-            android:layout_marginRight="?sizeSmall"
             android:layout_height="?attr/sizeMediumX"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginLeft="?sizeSmall"
+            android:layout_marginRight="?sizeSmall"
+            android:layout_marginBottom="10dp"
+            android:alpha="?attr/opacityFull"
+            android:backgroundTint="?colorPrimary" />
     </LinearLayout>
 </ScrollView>

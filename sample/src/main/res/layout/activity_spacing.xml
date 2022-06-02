@@ -1,639 +1,701 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".tokens.SpacingActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="None - 0dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="None - 0dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSecondBottom"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:elevation="?attr/elevation00"
-                android:backgroundTint="?attr/colorPrimary"
-                android:layout_marginLeft="?attr/spacingNone"
-                android:layout_marginTop="?attr/spacingNone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cardFirstBottom"
-                app:layout_constraintTop_toBottomOf="@+id/cardSecondTop" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSecondTop"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:elevation="?attr/elevation00"
-                android:backgroundTint="?attr/colorPrimary"
-                android:layout_marginLeft="?attr/spacingNone"
-                android:layout_marginBottom="?attr/spacingNone"
-                app:layout_constraintBottom_toTopOf="@+id/cardSecondBottom"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/cardFirstTop"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed"/>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardFirstBottom"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:elevation="?attr/elevation00"
-                android:backgroundTint="?attr/colorPrimary"
-                android:layout_marginRight="?attr/spacingNone"
-                android:layout_marginTop="?attr/spacingNone"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cardSecondBottom"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardFirstTop"/>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardFirstTop"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:elevation="?attr/elevation00"
-                android:backgroundTint="?attr/colorPrimary"
-                android:layout_marginRight="?attr/spacingNone"
-                android:layout_marginBottom="?attr/spacingNone"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintBottom_toTopOf="@+id/cardFirstBottom"
-                app:layout_constraintEnd_toStartOf="@+id/cardSecondTop"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSecondBottom"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="?attr/spacingNone"
+                    android:layout_marginTop="?attr/spacingNone"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardFirstBottom"
+                    app:layout_constraintTop_toBottomOf="@+id/cardSecondTop" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSecondTop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="?attr/spacingNone"
+                    android:layout_marginBottom="?attr/spacingNone"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardFirstTop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFirstBottom"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="?attr/spacingNone"
+                    android:layout_marginRight="?attr/spacingNone"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cardSecondBottom"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTop"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFirstTop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="?attr/spacingNone"
+                    android:layout_marginBottom="?attr/spacingNone"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardFirstBottom"
+                    app:layout_constraintEnd_toStartOf="@+id/cardSecondTop"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
-            android:id="@+id/spacingMicrolabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Micro - 4dp"
-            android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+                android:id="@+id/spacingMicrolabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Micro - 4dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomMicro"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingMicro"
                     android:layout_marginLeft="?attr/spacingMicro"
+                    android:layout_marginTop="?attr/spacingMicro"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomMicro"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopMicro" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopMicro"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingMicro"
                     android:layout_marginLeft="?attr/spacingMicro"
+                    android:layout_marginBottom="?attr/spacingMicro"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomMicro"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopMicro"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomMicro"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingMicro"
                     android:layout_marginRight="?attr/spacingMicro"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomMicro"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopMicro"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopMicro"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopMicro"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingMicro"
                     android:layout_marginRight="?attr/spacingMicro"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingMicro"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomMicro"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopMicro"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingTinylabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tiny - 8dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="Tiny - 8dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomTiny"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingTiny"
                     android:layout_marginLeft="?attr/spacingTiny"
+                    android:layout_marginTop="?attr/spacingTiny"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomTiny"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopTiny" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopTiny"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingTiny"
                     android:layout_marginLeft="?attr/spacingTiny"
+                    android:layout_marginBottom="?attr/spacingTiny"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomTiny"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopTiny"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomTiny"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingTiny"
                     android:layout_marginRight="?attr/spacingTiny"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomTiny"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopTiny"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopTiny"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopTiny"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingTiny"
                     android:layout_marginRight="?attr/spacingTiny"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingTiny"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomTiny"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopTiny"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingSmallabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Small - 16dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="Small - 16dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomSmall"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingSmall"
                     android:layout_marginLeft="?attr/spacingSmall"
+                    android:layout_marginTop="?attr/spacingSmall"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomSmall"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopSmall" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopSmall"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingSmall"
                     android:layout_marginLeft="?attr/spacingSmall"
-                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomSmall"                   app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="?attr/spacingSmall"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopSmall"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomSmall"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingSmall"
                     android:layout_marginRight="?attr/spacingSmall"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomSmall"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopSmall"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopSmall"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopSmall"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingSmall"
                     android:layout_marginRight="?attr/spacingSmall"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingSmall"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomSmall"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopSmall"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingStandardLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Standard - 24dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="Standard - 24dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomStandard"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingStandard"
                     android:layout_marginLeft="?attr/spacingStandard"
+                    android:layout_marginTop="?attr/spacingStandard"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomStandard"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopStandard" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopStandard"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingStandard"
                     android:layout_marginLeft="?attr/spacingStandard"
-                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomStandard"                   app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="?attr/spacingStandard"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomStandard"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopStandard"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomStandard"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingStandard"
                     android:layout_marginRight="?attr/spacingStandard"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomStandard"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopStandard"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopStandard"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopStandard"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingStandard"
                     android:layout_marginRight="?attr/spacingStandard"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingStandard"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomStandard"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopStandard"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingSemiLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Semi - 32dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="Semi - 32dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomSemi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingSemi"
                     android:layout_marginLeft="?attr/spacingSemi"
+                    android:layout_marginTop="?attr/spacingSemi"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomSemi"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopSemi" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopSemi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingSemi"
                     android:layout_marginLeft="?attr/spacingSemi"
-                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomSemi"                   app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="?attr/spacingSemi"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomSemi"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopSemi"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomSemi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingSemi"
                     android:layout_marginRight="?attr/spacingSemi"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomSemi"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopSemi"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopSemi"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopSemi"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingSemi"
                     android:layout_marginRight="?attr/spacingSemi"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingSemi"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomSemi"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopSemi"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingLargeLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Large - 48dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="Large - 48dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingLarge"
                     android:layout_marginLeft="?attr/spacingLarge"
+                    android:layout_marginTop="?attr/spacingLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomLarge"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopLarge" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingLarge"
                     android:layout_marginLeft="?attr/spacingLarge"
-                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomLarge"                   app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="?attr/spacingLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomLarge"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopLarge"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingLarge"
                     android:layout_marginRight="?attr/spacingLarge"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomLarge"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopLarge"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopLarge"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingLarge"
                     android:layout_marginRight="?attr/spacingLarge"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomLarge"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopLarge"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
+
             <TextView
                 android:id="@+id/spacingLargeXLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="XLarge - 64dp"
                 android:padding="10dp"
-                android:textSize="12sp"
-                android:textColor="?attr/colorMediumEmphasis"/>
+                android:text="XLarge - 64dp"
+                android:textColor="?attr/colorMediumEmphasis"
+                android:textSize="12sp" />
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondBottomXLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginTop="?attr/spacingXLarge"
                     android:layout_marginLeft="?attr/spacingXLarge"
+                    android:layout_marginTop="?attr/spacingXLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstBottomXLarge"
                     app:layout_constraintTop_toBottomOf="@+id/cardSecondTopXLarge" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardSecondTopXLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingXLarge"
                     android:layout_marginLeft="?attr/spacingXLarge"
-                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomXLarge"                   app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="?attr/spacingXLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
+                    app:layout_constraintBottom_toTopOf="@+id/cardSecondBottomXLarge"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/cardFirstTopXLarge"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed"/>
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstBottomXLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
                     android:layout_marginTop="?attr/spacingXLarge"
                     android:layout_marginRight="?attr/spacingXLarge"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondBottomXLarge"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopXLarge"/>
+                    app:layout_constraintTop_toBottomOf="@+id/cardFirstTopXLarge"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardFirstTopXLarge"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:elevation="?attr/elevation00"
-                    android:backgroundTint="?attr/colorPrimary"
-                    android:layout_marginBottom="?attr/spacingXLarge"
                     android:layout_marginRight="?attr/spacingXLarge"
-                    app:layout_constraintHorizontal_chainStyle="packed"
-                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="?attr/spacingXLarge"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:elevation="?attr/elevation00"
                     app:layout_constraintBottom_toTopOf="@+id/cardFirstBottomXLarge"
                     app:layout_constraintEnd_toStartOf="@+id/cardSecondTopXLarge"
                     app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <ImageView
-                android:layout_height="0.5dp"
                 android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
+                android:layout_height="0.5dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp">
-            </ImageView>
+                android:layout_marginBottom="10dp"
+                android:background="?colorMediumEmphasis"
+                android:contentDescription="@null" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
