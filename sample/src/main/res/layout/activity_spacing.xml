@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="None - 0dp"
+                android:text="@string/spacing_screen_none_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -107,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Micro - 4dp"
+                android:text="@string/spacing_screen_micro_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Tiny - 8dp"
+                android:text="@string/spacing_screen_tiny_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -277,7 +277,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Small - 16dp"
+                android:text="@string/spacing_screen_small_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -362,7 +362,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Standard - 24dp"
+                android:text="@string/spacing_screen_standard_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -447,7 +447,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Semi - 32dp"
+                android:text="@string/spacing_screen_semi_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -532,7 +532,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Large - 48dp"
+                android:text="@string/spacing_screen_large_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 
@@ -617,7 +617,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="XLarge - 64dp"
+                android:text="@string/spacing_screen_xlarge_text"
                 android:textColor="?attr/colorMediumEmphasis"
                 android:textSize="12sp" />
 

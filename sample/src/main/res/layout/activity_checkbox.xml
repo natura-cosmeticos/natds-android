@@ -1,61 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?android:colorBackground"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="?android:colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="start"
+        android:orientation="vertical"
         android:padding="@dimen/ds_spacing_large"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical">
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryChecked"
-            android:text="Checkbox Primary Checked"
             android:layout_width="wrap_content"
-            android:checked="true"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingSmall"/>
+            android:layout_marginBottom="?spacingSmall"
+            android:checked="true"
+            android:text="@string/checkbox_screen_checkbox_primary_checked_text" />
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryIndeterminate"
-            android:text="CheckBox Primary Indeterminate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingSmall"/>
+            android:layout_marginBottom="?spacingSmall"
+            android:text="@string/checkbox_screen_checkbox_primary_indeterminate_text" />
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryUnchecked"
-            android:text="Checkbox Primary Unchecked"
             android:layout_width="wrap_content"
-            android:checked="false"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="?spacingSmall"/>
+            android:layout_marginBottom="?spacingSmall"
+            android:checked="false"
+            android:text="@string/checkbox_screen_checkbox_primary_unchecked_text" />
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryCheckedDisabled"
-            android:text="CheckBox Primary Checked Disabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:enabled="false"
+            android:layout_marginBottom="?spacingSmall"
             android:checked="true"
-            android:layout_marginBottom="?spacingSmall"/>
+            android:enabled="false"
+            android:text="@string/checkbox_screen_checkbox_primary_checked_disabled_text" />
 
         <com.natura.android.checkbox.CheckBox
             android:id="@+id/checkboxPrimaryUncheckedDisabled"
-            android:text="CheckBox Primary Unchecked Disabled"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="?spacingSmall"
             android:enabled="false"
-            android:layout_marginBottom="?spacingSmall"/>
-
+            android:text="@string/checkbox_screen_checkbox_primary_unchecked_disabled_text" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

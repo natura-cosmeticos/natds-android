@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="@dimen/ds_spacing_small"
-            android:text="Patterns"
+            android:text="@string/appbartop_attributes_screen_patterns_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -29,7 +29,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Action Button"
+            android:text="@string/appbartop_attributes_screen_action_button_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -41,7 +41,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="2 actions right"
+            android:text="@string/appbartop_attributes_screen_2_actions_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -53,7 +53,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="3 actions right"
+            android:text="@string/appbartop_attributes_screen_3_actions_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -65,7 +65,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Search"
+            android:text="@string/appbartop_attributes_screen_search_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -77,7 +77,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Title Center"
+            android:text="@string/appbartop_attributes_screen_title_center_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -89,7 +89,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Title long + 3 actions right"
+            android:text="@string/appbartop_attributes_screen_title_long_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 

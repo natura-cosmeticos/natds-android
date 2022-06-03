@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Border None"
+            android:text="@string/border_radius_screen_border_none_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Border Small"
+            android:text="@string/border_radius_screen_border_small_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Border Medium"
+            android:text="@string/border_radius_screen_border_medium_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Border Large"
+            android:text="@string/border_radius_screen_border_large_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Border Circle"
+            android:text="@string/border_radius_screen_border_circle_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 

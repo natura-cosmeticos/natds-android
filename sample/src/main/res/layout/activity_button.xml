@@ -3,22 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingEnd="?spacingTiny"
-        android:paddingStart="?spacingTiny">
+        android:paddingStart="?spacingTiny"
+        android:paddingEnd="?spacingTiny">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <com.natura.android.button.ContainedButton
                 android:id="@+id/containedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
-                android:text="contained"
+                android:text="@string/button_screen_contained_semix_text"
                 app:bt_size="semix"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/outlinedButton"
@@ -32,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="?sizeHuge"
-                android:text="text"
+                android:text="@string/button_screen_text_semix_text"
                 app:bt_size="semix"
                 app:layout_constraintBottom_toBottomOf="@+id/outlinedButton"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -40,12 +42,13 @@
                 app:layout_constraintStart_toEndOf="@+id/outlinedButton"
                 app:layout_constraintTop_toTopOf="@+id/outlinedButton"
                 app:layout_constraintVertical_bias="0.0" />
+
             <com.natura.android.button.OutlinedButton
                 android:id="@+id/outlinedButton"
                 android:layout_width="wrap_content"
-                android:minWidth="?sizeHuge"
                 android:layout_height="wrap_content"
-                android:text="outlined"
+                android:minWidth="?sizeHuge"
+                android:text="@string/button_screen_outlined_semix_text"
                 app:bt_size="semix"
                 app:layout_constraintBottom_toBottomOf="@+id/containedButton"
                 app:layout_constraintEnd_toStartOf="@+id/textButton"
@@ -64,9 +67,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingSmall"
-                android:minWidth="?sizeHuge"
                 android:enabled="false"
-                android:text="contained"
+                android:minWidth="?sizeHuge"
+                android:text="@string/button_screen_contained_semi_text"
                 app:bt_size="semi"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/outlinedButtonDisable"
@@ -78,10 +81,10 @@
             <com.natura.android.button.TextButton
                 android:id="@+id/textButtonDisable"
                 android:layout_width="wrap_content"
-                android:minWidth="?sizeHuge"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:text="text"
+                android:minWidth="?sizeHuge"
+                android:text="@string/button_screen_text_semi_text"
                 app:bt_size="semi"
                 app:layout_constraintBottom_toBottomOf="@+id/outlinedButtonDisable"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,10 +96,10 @@
             <com.natura.android.button.OutlinedButton
                 android:id="@+id/outlinedButtonDisable"
                 android:layout_width="wrap_content"
-                android:minWidth="?sizeHuge"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:text="outlined"
+                android:minWidth="?sizeHuge"
+                android:text="@string/button_screen_outlined_semi_text"
                 app:bt_size="semi"
                 app:layout_constraintBottom_toBottomOf="@+id/containedButtonDisable"
                 app:layout_constraintEnd_toStartOf="@+id/textButtonDisable"
@@ -111,45 +114,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="contained - medium"
-            app:bt_size="large"/>
+            android:text="@string/button_screen_contained_medium_text"
+            app:bt_size="large" />
 
         <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButtonWithIcon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="contained - semix"
+            android:text="@string/button_screen_contained_semix_with_icon_text"
             app:bt_size="semix"
-            app:iconGravity="textEnd"
-            app:icon="@drawable/outlined_action_like"/>
+            app:icon="@drawable/outlined_action_like"
+            app:iconGravity="textEnd" />
 
         <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButtonDisable"
-            android:enabled="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="disable contained - semi"
-            app:bt_size="semi"/>
+            android:enabled="false"
+            android:text="@string/button_screen_contained_disabled_semi_text"
+            app:bt_size="semi" />
 
         <com.natura.android.button.OutlinedButton
             android:id="@+id/blockMediumOutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSemi"
-            android:text="outlined - medium"
-            app:bt_size="medium"/>
+            android:text="@string/button_screen_outlined_medium_text"
+            app:bt_size="medium" />
 
         <com.natura.android.button.OutlinedButton
             android:id="@+id/blockSemixOutlinedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="outlined - semix"
+            android:text="@string/button_screen_outlined_semix_with_icon_text"
             app:bt_size="semix"
-            app:iconGravity="textStart"
-            app:icon="@drawable/outlined_action_like"/>
+            app:icon="@drawable/outlined_action_like"
+            app:iconGravity="textStart" />
 
         <com.natura.android.button.OutlinedButton
             android:id="@+id/blockSemiOutlinedButtonDisable"
@@ -157,22 +160,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             android:enabled="false"
-            android:text="disable outlined - semi"
-            app:bt_size="semi"/>
+            android:text="@string/button_screen_outlined_disabled_semi_text"
+            app:bt_size="semi" />
+
         <com.natura.android.button.TextButton
             android:id="@+id/blockTextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
-            android:text="text"
-            app:bt_size="medium"/>
+            android:text="@string/button_screen_text_medium_text"
+            app:bt_size="medium" />
+
         <com.natura.android.button.TextButton
             android:id="@+id/blockTextButtonDisable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             android:enabled="false"
-            android:text="disable text"
-            app:bt_size="medium"/>
-</LinearLayout>
+            android:text="@string/button_screen_text_medium_disabled_text"
+            app:bt_size="medium" />
+    </LinearLayout>
 </ScrollView>

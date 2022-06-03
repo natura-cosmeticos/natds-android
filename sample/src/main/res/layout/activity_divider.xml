@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
    <TextView
-       android:id="@+id/textView1"
+       android:id="@+id/textViewFullBleed1"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
@@ -15,83 +15,83 @@
        android:layout_marginTop="?spacingXLarge"
        android:gravity="center"
        app:layout_constraintTop_toTopOf="parent"
-       android:text="Full-bleed" />
+       android:text="@string/divider_screen_fullbleed_text" />
 
    <com.natura.android.divider.Divider
        android:id="@+id/dividerFullbleed"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       app:layout_constraintTop_toBottomOf="@id/textView1"
+       app:layout_constraintTop_toBottomOf="@id/textViewFullBleed1"
        app:layout_constraintLeft_toLeftOf="parent"
        app:dividerType="fullBleed" />
 
    <TextView
-       android:id="@+id/textView2"
+       android:id="@+id/textViewFullBleed2"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:gravity="center"
        app:layout_constraintTop_toBottomOf="@id/dividerFullbleed"
-       android:text="Full-bleed" />
+       android:text="@string/divider_screen_fullbleed_text" />
 
    <TextView
-       android:id="@+id/textView3"
+       android:id="@+id/textViewInset1"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:layout_marginTop="?spacingXLarge"
        android:gravity="center"
-       app:layout_constraintTop_toBottomOf="@id/textView2"
-       android:text="Inset" />
+       app:layout_constraintTop_toBottomOf="@id/textViewFullBleed2"
+       android:text="@string/divider_screen_inset_text" />
 
    <com.natura.android.divider.Divider
        android:id="@+id/dividerInset"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       app:layout_constraintTop_toBottomOf="@id/textView3"
+       app:layout_constraintTop_toBottomOf="@id/textViewInset1"
        app:layout_constraintLeft_toLeftOf="parent"
        app:dividerType="inset" />
 
    <TextView
-       android:id="@+id/textView4"
+       android:id="@+id/textViewInset2"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:gravity="center"
        app:layout_constraintTop_toBottomOf="@id/dividerInset"
-       android:text="Inset" />
+       android:text="@string/divider_screen_inset_text" />
 
    <TextView
-       android:id="@+id/textViewDotSecondary"
+       android:id="@+id/textViewMiddle1"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:gravity="center"
        android:layout_marginTop="?spacingXLarge"
-       app:layout_constraintTop_toBottomOf="@id/textView4"
-       android:text="Middle" />
+       app:layout_constraintTop_toBottomOf="@id/textViewInset2"
+       android:text="@string/divider_screen_middle_text" />
 
    <com.natura.android.divider.Divider
        android:id="@+id/dividerMiddle"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       app:layout_constraintTop_toBottomOf="@id/textViewDotSecondary"
+       app:layout_constraintTop_toBottomOf="@id/textViewMiddle1"
        app:layout_constraintLeft_toLeftOf="parent"
        app:dividerType="middle" />
 
    <TextView
-       android:id="@+id/textViewDotPrimary"
+       android:id="@+id/textViewMiddle2"
        android:layout_width="match_parent"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        android:layout_height="wrap_content"
        android:gravity="center"
        app:layout_constraintTop_toBottomOf="@id/dividerMiddle"
-       android:text="Middle" />
+       android:text="@string/divider_screen_middle_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
