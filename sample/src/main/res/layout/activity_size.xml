@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size None - 0dp"
+            android:text="@string/size_screen_size_none_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Micro - 4dp"
+            android:text="@string/size_screen_size_micro_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Tiny - 8dp"
+            android:text="@string/size_screen_size_tiny_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Small - 16dp"
+            android:text="@string/size_screen_size_small_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -107,11 +107,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyStandard"
+            android:id="@+id/sizeStandardLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Standard - 24dp"
+            android:text="@string/size_screen_size_standard_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -131,11 +131,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinySemi"
+            android:id="@+id/sizeSemiLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Semi - 32dp"
+            android:text="@string/size_screen_size_semi_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -155,11 +155,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinySemiX"
+            android:id="@+id/sizeSemiXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size SemiX - 40dp"
+            android:text="@string/size_screen_size_semix_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -179,11 +179,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyMedium"
+            android:id="@+id/sizeMediumLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Medium - 48dp"
+            android:text="@string/size_screen_size_medium_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -203,11 +203,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyMediumX"
+            android:id="@+id/sizeMediumXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size MediumX - 56dp"
+            android:text="@string/size_screen_size_mediumx_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -227,11 +227,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLarge"
+            android:id="@+id/sizeLargeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Large - 64dp"
+            android:text="@string/size_screen_size_large_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -251,11 +251,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeX"
+            android:id="@+id/sizeLargeXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size LargeX - 72dp"
+            android:text="@string/size_screen_size_largex_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -275,11 +275,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeXX"
+            android:id="@+id/sizeLargeXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size LargeXX - 80dp"
+            android:text="@string/size_screen_size_largexx_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -299,11 +299,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeXXX"
+            android:id="@+id/sizeLargeXXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size LargeXXX - 88dp"
+            android:text="@string/size_screen_size_largexxx_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -323,11 +323,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHuge"
+            android:id="@+id/sizeHugeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Huge - 96dp"
+            android:text="@string/size_screen_size_huge_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -347,11 +347,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeX"
+            android:id="@+id/sizeHugeXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size HugeX - 128dp"
+            android:text="@string/size_screen_size_hugex_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -371,11 +371,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeXX"
+            android:id="@+id/sizeHugeXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size HugeXX - 144dp"
+            android:text="@string/size_screen_size_hugexx_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -395,11 +395,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeXXX"
+            android:id="@+id/sizeHugeXXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size HugeXXX - 192dp"
+            android:text="@string/size_screen_size_hugexxx_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -419,11 +419,11 @@
             android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyVeryHuge"
+            android:id="@+id/sizeVeryHugeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Size Very Huge - 256dp"
+            android:text="@string/size_screen_size_veryhuge_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 

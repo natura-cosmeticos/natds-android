@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 1"
+                android:text="@string/typography_screen_heading1_text"
                 android:textAppearance="?textAppearanceHeadline1" />
 
             <ImageView
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 2"
+                android:text="@string/typography_screen_heading2_text"
                 android:textAppearance="?textAppearanceHeadline2" />
 
             <ImageView
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 3"
+                android:text="@string/typography_screen_heading3_text"
                 android:textAppearance="?textAppearanceHeadline3" />
 
             <ImageView
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 4"
+                android:text="@string/typography_screen_heading4_text"
                 android:textAppearance="?textAppearanceHeadline4" />
 
             <ImageView
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 5"
+                android:text="@string/typography_screen_heading5_text"
                 android:textAppearance="?textAppearanceHeadline5" />
 
             <ImageView
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Heading 6"
+                android:text="@string/typography_screen_heading6_text"
                 android:textAppearance="?textAppearanceHeadline6" />
 
             <ImageView
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Subtitle 1"
+                android:text="@string/typography_screen_subtitle1_text"
                 android:textAppearance="?textAppearanceSubtitle1" />
 
             <ImageView
@@ -141,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Subtitle 2"
+                android:text="@string/typography_screen_subtitle2_text"
                 android:textAppearance="?textAppearanceSubtitle2" />
 
             <ImageView
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Body 1"
+                android:text="@string/typography_screen_body1_text"
                 android:textAppearance="?textAppearanceBody1" />
 
             <ImageView
@@ -175,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Body 2"
+                android:text="@string/typography_screen_body2_text"
                 android:textAppearance="?textAppearanceBody2" />
 
             <ImageView
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Caption"
+                android:text="@string/typography_screen_caption_text"
                 android:textAppearance="?textAppearanceCaption" />
 
             <ImageView
@@ -210,7 +210,7 @@
                 android:layout_marginBottom="20dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Overline"
+                android:text="@string/typography_screen_overline_text"
                 android:textAppearance="?textAppearanceOverline" />
         </LinearLayout>
     </ScrollView>

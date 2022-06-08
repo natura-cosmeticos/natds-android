@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileHeadline"
-                android:text="Headline"
+                android:text="@string/custom_typography_screen_headline_text"
                 android:textSize="?heading4FontSize" />
 
             <TextView
@@ -32,7 +32,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileHeadline"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."
+                android:text="@string/custom_typography_screen_headline_example_text"
                 android:textSize="?heading6FontSize" />
 
             <ImageView
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileDisplay"
-                android:text="Display"
+                android:text="@string/custom_typography_screen_display_text"
                 android:textSize="?heading4FontSize" />
 
             <TextView
@@ -59,7 +59,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileDisplay"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."
+                android:text="@string/custom_typography_screen_display_example_text"
                 android:textSize="?heading6FontSize" />
 
             <ImageView
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileBodyRegular"
-                android:text="Body Regular"
+                android:text="@string/custom_typography_screen_body_regular_text"
                 android:textSize="?heading4FontSize" />
 
             <TextView
@@ -86,7 +86,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileBodyRegular"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."
+                android:text="@string/custom_typography_screen_body_regular_example_text"
                 android:textSize="?heading6FontSize" />
 
             <ImageView
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileBodyBold"
-                android:text="Body Bold"
+                android:text="@string/custom_typography_screen_body_bold_text"
                 android:textSize="?heading4FontSize" />
 
             <TextView
@@ -113,7 +113,7 @@
                 android:layout_marginTop="5dp"
                 android:ellipsize="end"
                 android:fontFamily="?assetFontFileBodyBold"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc."
+                android:text="@string/custom_typography_screen_body_bold_example_text"
                 android:textSize="?heading6FontSize" />
 
 

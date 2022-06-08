@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation None"
+            android:text="@string/elevation_screen_elevation_none_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 1"
+            android:text="@string/elevation_screen_elevation_1_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 2"
+            android:text="@string/elevation_screen_elevation_2_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 3"
+            android:text="@string/elevation_screen_elevation_3_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -116,7 +116,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 4"
+            android:text="@string/elevation_screen_elevation_4_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -141,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 5"
+            android:text="@string/elevation_screen_elevation_5_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -166,7 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 6"
+            android:text="@string/elevation_screen_elevation_6_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -191,7 +191,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 7"
+            android:text="@string/elevation_screen_elevation_7_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -216,7 +216,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 8"
+            android:text="@string/elevation_screen_elevation_8_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -241,7 +241,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 9"
+            android:text="@string/elevation_screen_elevation_9_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 
@@ -266,7 +266,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Elevation 10"
+            android:text="@string/elevation_screen_elevation_10_text"
             android:textColor="?attr/colorMediumEmphasis"
             android:textSize="12sp" />
 

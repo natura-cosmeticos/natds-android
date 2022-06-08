@@ -16,6 +16,5 @@
         android:paddingTop="@dimen/ds_spacing_small"
         android:ellipsize="end"
         android:paddingBottom="@dimen/ds_spacing_small"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         android:textAppearance="?dialogBodyAppearance" />
 </LinearLayout>
