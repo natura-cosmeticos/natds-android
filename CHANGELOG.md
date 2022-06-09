@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.22.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.0...v.9.22.1) (2022-06-09)
+
+
+### Bug Fixes
+
+* fixes repository link ([7977eca](https://github.com/natura-cosmeticos/natds-android/commit/7977eca7a7c33cffcafa7e1fcfa10c45ca18a8a0))
+* removes unnecessary xml theme files ([1a82451](https://github.com/natura-cosmeticos/natds-android/commit/1a82451adc7db8714735cdeb078a3556225bf18b))
+
 ## [9.22.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.21.0...v.9.22.0) (2022-05-30)
 
 
