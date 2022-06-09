@@ -29,12 +29,12 @@ class TextFieldTest {
     private val activityController: ActivityController<Activity> = Robolectric.buildActivity(Activity::class.java)
     private lateinit var textField: TextField
 
-    private val EMPTY_TEXT = ""
-    private val NOT_EMPTY_TEXT = "test"
-    private val NOT_EMPTY_TEXT_REQUIRED = "test*"
-    private val ERROR_ICON_CODE = "EA13"
-    private val SUCCESS_ICON_CODE = "EA15"
-    private val MULTILINE_TYPE = 131073
+    private val emptyText = ""
+    private val notEmptyText = "test"
+    private val notEmptyTextRequired = "test*"
+    private val errorIconCode = "EA13"
+    private val successIconCode = "EA15"
+    private val multilineType = 131073
 
     @Before
     fun setup() {
@@ -80,17 +80,17 @@ class TextFieldTest {
 
     @Test
     fun setText_NullValue() {
-        test_setText(null, EMPTY_TEXT, textField.stateLayout.DEFAULT)
+        test_setText(null, emptyText, textField.stateLayout.DEFAULT)
     }
 
     @Test
     fun setText_EmptyValue() {
-        test_setText(EMPTY_TEXT, EMPTY_TEXT, textField.stateLayout.DEFAULT)
+        test_setText(emptyText, emptyText, textField.stateLayout.DEFAULT)
     }
 
     @Test
     fun setText_NoEmptyValue() {
-        test_setText(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, textField.stateLayout.FILLED)
+        test_setText(notEmptyText, notEmptyText, textField.stateLayout.FILLED)
     }
 
     private fun test_setText(
@@ -108,17 +108,17 @@ class TextFieldTest {
 
     @Test
     fun setLabel_NullValue() {
-        test_setLabel(null, EMPTY_TEXT, View.GONE)
+        test_setLabel(null, emptyText, View.GONE)
     }
 
     @Test
     fun setLabel_EmptyValue() {
-        test_setLabel(EMPTY_TEXT, EMPTY_TEXT, View.GONE)
+        test_setLabel(emptyText, emptyText, View.GONE)
     }
 
     @Test
     fun setLabel_NoEmptyValue() {
-        test_setLabel(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE)
+        test_setLabel(notEmptyText, notEmptyText, View.VISIBLE)
     }
 
     @Test
@@ -126,8 +126,8 @@ class TextFieldTest {
         val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
 
         textField.required = true
-        textField.label = NOT_EMPTY_TEXT
-        assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT_REQUIRED)
+        textField.label = notEmptyText
+        assertThat(labelView.text.toString()).isEqualTo(notEmptyTextRequired)
     }
 
     @Test
@@ -135,8 +135,8 @@ class TextFieldTest {
         val labelView = textField.findViewById(R.id.text_field_input_label) as TextView
 
         textField.required = false
-        textField.label = NOT_EMPTY_TEXT
-        assertThat(labelView.text.toString()).isEqualTo(NOT_EMPTY_TEXT)
+        textField.label = notEmptyText
+        assertThat(labelView.text.toString()).isEqualTo(notEmptyText)
     }
 
     private fun test_setLabel(value: String?, expectedValue: String, expectedVisibility: Int) {
@@ -200,17 +200,17 @@ class TextFieldTest {
 
     @Test
     fun setFooter_NullValue() {
-        test_setFooter(null, EMPTY_TEXT, View.GONE)
+        test_setFooter(null, emptyText, View.GONE)
     }
 
     @Test
     fun setFooter_EmptyValue() {
-        test_setFooter(EMPTY_TEXT, EMPTY_TEXT, View.GONE)
+        test_setFooter(emptyText, emptyText, View.GONE)
     }
 
     @Test
     fun setFooter_NoEmptyValue() {
-        test_setFooter(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE)
+        test_setFooter(notEmptyText, notEmptyText, View.VISIBLE)
     }
 
     private fun test_setFooter(value: String?, expectedValue: String, expectedVisibility: Int) {
@@ -224,12 +224,12 @@ class TextFieldTest {
 
     @Test
     fun setError_NullValue() {
-        test_seError(null, EMPTY_TEXT, View.GONE, EMPTY_TEXT)
+        test_seError(null, emptyText, View.GONE, emptyText)
     }
 
     @Test
     fun setError_NoEmptyValue() {
-        test_seError(NOT_EMPTY_TEXT, NOT_EMPTY_TEXT, View.VISIBLE, ERROR_ICON_CODE.toIcon())
+        test_seError(notEmptyText, notEmptyText, View.VISIBLE, errorIconCode.toIcon())
     }
 
     private fun test_seError(
@@ -260,7 +260,7 @@ class TextFieldTest {
             TextField.State.ERROR,
             textField.stateLayout.ERROR,
             View.VISIBLE,
-            ERROR_ICON_CODE.toIcon()
+            errorIconCode.toIcon()
         )
     }
 
@@ -270,7 +270,7 @@ class TextFieldTest {
             TextField.State.SUCCESS,
             textField.stateLayout.SUCCESS,
             View.VISIBLE,
-            SUCCESS_ICON_CODE.toIcon()
+            successIconCode.toIcon()
         )
     }
 
@@ -317,7 +317,7 @@ class TextFieldTest {
         val expectedValue = 5
         val textView = textField.findViewById(R.id.text_field_input_value) as EditText
 
-        textField.inputType = MULTILINE_TYPE
+        textField.inputType = multilineType
         textField.lines = expectedValue
         assertThat(textView.maxLines).isEqualTo(expectedValue)
         assertThat(textView.minLines).isEqualTo(expectedValue)

@@ -19,7 +19,7 @@
         android:id="@+id/standardAvatarWithIconDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Standard"
+        android:text="@string/avatar_screen_standard_text"
         app:layout_constraintEnd_toEndOf="@+id/standardAvatarWithIcon"
         app:layout_constraintStart_toStartOf="@+id/standardAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithIcon" />
@@ -40,7 +40,7 @@
         android:id="@+id/semiAvatarWithIconDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Semi"
+        android:text="@string/avatar_screen_semi_text"
         app:layout_constraintEnd_toEndOf="@+id/semiAvatarWithIcon"
         app:layout_constraintStart_toStartOf="@+id/semiAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithIcon" />
@@ -60,7 +60,7 @@
         android:id="@+id/semixAvatarWithIconDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SemiX"
+        android:text="@string/avatar_screen_semix_text"
         app:layout_constraintEnd_toEndOf="@+id/semixAvatarWithIcon"
         app:layout_constraintStart_toStartOf="@+id/semixAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithIcon" />
@@ -79,7 +79,7 @@
         android:id="@+id/mediumAvatarWithIconDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium"
+        android:text="@string/avatar_screen_medium_text"
         app:layout_constraintEnd_toEndOf="@+id/mediumAvatarWithIcon"
         app:layout_constraintStart_toStartOf="@+id/mediumAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithIcon" />
@@ -99,7 +99,7 @@
         android:id="@+id/largexxxAvatarWithIconDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LargeXXX"
+        android:text="@string/avatar_screen_largexxx_text"
         app:layout_constraintEnd_toEndOf="@+id/largexxxAvatarWithIcon"
         app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithIcon"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithIcon" />
@@ -120,7 +120,7 @@
         android:id="@+id/standardAvatarWithLabelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Standard"
+        android:text="@string/avatar_screen_standard_with_label_text"
         app:layout_constraintEnd_toEndOf="@+id/standardAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/standardAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithLabel" />
@@ -141,7 +141,7 @@
         android:id="@+id/semiAvatarWithLabelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Semi"
+        android:text="@string/avatar_screen_semi_with_label_text"
         app:layout_constraintEnd_toEndOf="@+id/semiAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/semiAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithLabel" />
@@ -162,7 +162,7 @@
         android:id="@+id/semixAvatarWithLabelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SemiX"
+        android:text="@string/avatar_screen_semix_with_label_text"
         app:layout_constraintEnd_toEndOf="@+id/semixAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/semixAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithLabel" />
@@ -182,7 +182,7 @@
         android:id="@+id/mediumAvatarWithLabelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium"
+        android:text="@string/avatar_screen_medium_with_label_text"
         app:layout_constraintEnd_toEndOf="@+id/mediumAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/mediumAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithLabel" />
@@ -202,7 +202,7 @@
         android:id="@+id/largexxxAvatarWithLabelDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LargeXXX"
+        android:text="@string/avatar_screen_largexxx_with_label_text"
         app:layout_constraintEnd_toEndOf="@+id/largexxxAvatarWithLabel"
         app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithLabel"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithLabel" />
@@ -224,7 +224,7 @@
         android:id="@+id/standardAvatarWithImageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Standard"
+        android:text="@string/avatar_screen_standard_with_image_text"
         app:layout_constraintEnd_toEndOf="@+id/standardAvatarWithImage"
         app:layout_constraintStart_toStartOf="@+id/standardAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/standardAvatarWithImage" />
@@ -245,7 +245,7 @@
         android:id="@+id/semiAvatarWithImageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Semi"
+        android:text="@string/avatar_screen_semi_with_image_text"
         app:layout_constraintEnd_toEndOf="@+id/semiAvatarWithImage"
         app:layout_constraintStart_toStartOf="@+id/semiAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/semiAvatarWithImage" />
@@ -266,7 +266,7 @@
         android:id="@+id/semixAvatarWithImageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SemiX"
+        android:text="@string/avatar_screen_semix_with_image_text"
         app:layout_constraintEnd_toEndOf="@+id/semixAvatarWithImage"
         app:layout_constraintStart_toStartOf="@+id/semixAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/semixAvatarWithImage" />
@@ -287,7 +287,7 @@
         android:id="@+id/mediumAvatarWithImageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Medium"
+        android:text="@string/avatar_screen_medium_with_image_text"
         app:layout_constraintEnd_toEndOf="@+id/mediumAvatarWithImage"
         app:layout_constraintStart_toStartOf="@+id/mediumAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/mediumAvatarWithImage" />
@@ -308,7 +308,7 @@
         android:id="@+id/largexxxAvatarWithImageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LargeXXX"
+        android:text="@string/avatar_screen_largexxx_with_image_text"
         app:layout_constraintEnd_toEndOf="@+id/largexxxAvatarWithImage"
         app:layout_constraintStart_toStartOf="@+id/largexxxAvatarWithImage"
         app:layout_constraintTop_toBottomOf="@+id/largexxxAvatarWithImage" />

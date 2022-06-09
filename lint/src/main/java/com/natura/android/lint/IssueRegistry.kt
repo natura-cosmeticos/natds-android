@@ -18,7 +18,7 @@ class IssueRegistry : IssueRegistry() {
 
     companion object {
         private const val DETAILS_LINK = "For more details, please take a look at Nat DS documentation: " +
-                "https://github.com/natura-cosmeticos/natds-android/blob/master/doc/getting-started.md"
+                "https://github.com/natura-cosmeticos/natds-android/blob/main/doc/getting-started.md"
 
         private const val SPACING_ERROR_MESSAGE =
             "Please, use one of Design System spacing tokens. Nat DS currently supports:\n" +

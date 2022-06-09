@@ -18,72 +18,72 @@
             android:id="@+id/text_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type some text"
-            app:text_field_label="Text" />
+            android:hint="@string/textfield_screen_type_some_text_hint"
+            app:text_field_label="@string/textfield_screen_type_some_text_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/name_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your name"
+            android:hint="@string/textfield_screen_type_name_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Name" />
+            app:text_field_label="@string/textfield_screen_type_name_label" />
 
         <com.natura.android.textfield.TextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input some text (Multi line with 3 lines)"
+            android:hint="@string/textfield_screen_input_multline_hint"
             android:inputType="textMultiLine"
             android:lines="3"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Multi-line" />
+            app:text_field_label="@string/textfield_screen_input_multline_label" />
 
         <com.natura.android.textfield.TextField
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type numbers"
+            android:hint="@string/textfield_screen_type_numbers_hint"
             android:inputType="number"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Number" />
+            app:text_field_label="@string/textfield_screen_type_numbers_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/password_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your password"
+            android:hint="@string/textfield_screen_type_password_hint"
             android:inputType="textPassword"
             android:paddingTop="?spacingSmall"
             app:text_field_icon="outlined-action-visibility"
-            app:text_field_label="Password" />
+            app:text_field_label="@string/textfield_screen_type_password_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/password_number_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Type your password (only numbers)"
+            android:hint="@string/textfield_screen_type_password_numbers_hint"
             android:inputType="numberPassword"
             android:paddingTop="?spacingSmall"
             app:text_field_icon="outlined-action-visibility"
-            app:text_field_label="Password" />
+            app:text_field_label="@string/textfield_screen_type_password_numbers_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/error_short_footer_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input with error"
+            android:hint="@string/textfield_screen_input_with_error_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_footer="Opss...This input has an error!"
-            app:text_field_label="Error"
+            app:text_field_footer="@string/textfield_screen_input_with_error_footer"
+            app:text_field_label="@string/textfield_screen_input_with_error_label"
             app:text_field_state="error" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/error_long_footer_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input with error"
+            android:hint="@string/textfield_screen_long_input_with_error_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_footer="Opss...This input has an error - Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
-            app:text_field_label="Error"
+            app:text_field_footer="@string/textfield_screen_long_input_with_error_footer"
+            app:text_field_label="@string/textfield_screen_long_input_with_error_label"
             app:text_field_state="error" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -100,8 +100,8 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:text_field_footer="Opss...This input has an error"
-                app:text_field_label="Error"
+                app:text_field_footer="@string/textfield_screen_small_left_field_error_footer"
+                app:text_field_label="@string/textfield_screen_small_left_field_error_label"
                 app:text_field_state="error" />
 
             <com.natura.android.textfield.TextField
@@ -111,8 +111,8 @@
                 android:layout_marginStart="?spacingSmall"
                 app:layout_constraintStart_toEndOf="@id/errorTextFieldSmallLeft"
                 app:layout_constraintTop_toTopOf="parent"
-                app:text_field_footer="Opss...This input has an error"
-                app:text_field_label="Error"
+                app:text_field_footer="@string/textfield_screen_small_right_field_error_footer"
+                app:text_field_label="@string/textfield_screen_small_right_field_error_label"
                 app:text_field_state="error" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -120,56 +120,56 @@
             android:id="@+id/helper_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input with helper"
+            android:hint="@string/textfield_screen_input_with_helper_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_footer="This input has a helper text."
-            app:text_field_label="Helper" />
+            app:text_field_footer="@string/textfield_screen_input_with_helper_footer"
+            app:text_field_label="@string/textfield_screen_input_with_helper_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/medium_size_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="A text field with height size medium"
+            android:hint="@string/textfield_screen_medium_size_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Medium Size"
+            app:text_field_label="@string/textfield_screen_medium_size_label"
             app:text_field_size="medium" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/mediumx_size_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="A text field with height size mediumX"
+            android:hint="@string/textfield_screen_mediumx_size_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="MediumX Size (Default)"
+            app:text_field_label="@string/textfield_screen_mediumx_size_label"
             app:text_field_size="mediumx" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/success_short_footer_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input with success"
+            android:hint="@string/text_field_screen_input_with_success_short_footer_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_footer="Success message validating what's typed."
-            app:text_field_label="Success"
+            app:text_field_footer="@string/text_field_screen_input_with_success_short_footer_footer"
+            app:text_field_label="@string/text_field_screen_input_with_success_short_footer_label"
             app:text_field_state="success" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/success_long_footer_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input with success"
+            android:hint="@string/text_field_screen_input_with_success_long_footer_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_footer="A very, very long success message validating what's typed and giving more info."
-            app:text_field_label="Success"
+            app:text_field_footer="@string/text_field_screen_input_with_success_long_footer_footer"
+            app:text_field_label="@string/text_field_screen_input_with_success_long_footer_label"
             app:text_field_state="success" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/required_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="This text field is required"
+            android:hint="@string/text_field_screen_required_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Required"
+            app:text_field_label="@string/text_field_screen_required_label"
             app:text_field_required="true" />
 
         <com.natura.android.textfield.TextField
@@ -177,45 +177,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:hint="Disabled input"
+            android:hint="@string/text_field_screen_disabled_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Disabled" />
+            app:text_field_label="@string/text_field_screen_disabled_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/read_only_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Input is read-only"
+            android:hint="@string/text_field_screen_readonly_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Read only"
+            app:text_field_label="@string/text_field_screen_readonly_label"
             app:text_field_readonly="true" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/filled_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Filled text field"
+            android:hint="@string/text_field_screen_filled_hint"
             android:paddingTop="?spacingSmall"
-            app:text_field_label="Filled"
+            app:text_field_label="@string/text_field_screen_filled_label"
             app:text_field_text="Filled text field" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/action_icon_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Icon has action on touch"
+            android:hint="@string/text_field_icon_action_hint"
             android:paddingTop="?spacingSmall"
             app:text_field_icon="outlined_default_mockup"
-            app:text_field_label="Action with icon" />
+            app:text_field_label="@string/text_field_icon_action_label" />
 
         <com.natura.android.textfield.TextField
             android:id="@+id/action_image_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Icon has action on touch"
+            android:hint="@string/text_field_image_action_hint"
             android:paddingTop="?spacingSmall"
             app:text_field_image="@drawable/textfield_image_arealimit"
-            app:text_field_label="Action with image" />
+            app:text_field_label="@string/text_field_image_action_label" />
 
     </LinearLayout>
 

@@ -16,7 +16,7 @@ class BadgeActivityScreenshotTest : ScreenShotActivityTestBase() {
 
     @Before
     fun before() {
-        InstrumentationRegistry.getInstrumentation().getUiAutomation()
+        InstrumentationRegistry.getInstrumentation().uiAutomation
     }
 
     @Test

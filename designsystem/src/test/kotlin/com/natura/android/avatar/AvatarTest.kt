@@ -202,14 +202,6 @@ class AvatarTest {
             .build()
     }
 
-    private fun buildAvatarWithFallbackIcon(): Avatar {
-        return AvatarFixture
-            .aAvatar()
-            .withImageType()
-            .withFallbackIcon(2)
-            .build()
-    }
-
     private fun buildAvatarWithLabelFallback(): Avatar {
         return AvatarFixture
             .aAvatar()

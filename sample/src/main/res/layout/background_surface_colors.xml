@@ -11,15 +11,17 @@
         android:id="@+id/backgroundLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Background / Surface"
         android:padding="10dp"
-        android:textSize="12sp"
-        android:textColor="?colorHighEmphasis"/>
+        android:text="@string/color_screen_background_surface_text"
+        android:textColor="?colorHighEmphasis"
+        android:textSize="12sp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorBackgroundContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/colorBackground">
+
         <TextView
             android:id="@+id/colorBackgroundLabel"
             android:layout_width="wrap_content"
@@ -28,9 +30,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="Background"
-            android:textSize="16sp"
+            android:text="@string/color_screen_background_text"
             android:textColor="?attr/colorOnBackground"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/backgroundLabelText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -40,17 +42,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="On Background"
+            android:text="@string/color_screen_onbackground_text"
             android:textColor="?attr/colorOnBackground"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorBackgroundLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/colorSurfaceContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorSurface">
+
         <TextView
             android:id="@+id/colorSurfaceLabel"
             android:layout_width="wrap_content"
@@ -59,9 +63,9 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
-            android:text="Surface"
-            android:textSize="16sp"
+            android:text="@string/color_screen_surface_text"
             android:textColor="?attr/colorOnSurface"
+            android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/colorSurfaceCodeLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -71,16 +75,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="On Surface"
+            android:text="@string/color_screen_onsurface_text"
             android:textColor="?attr/colorOnSurface"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/colorSurfaceLabel" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ImageView
-        android:layout_height="0.5dp"
         android:layout_width="match_parent"
-        android:background="@color/mediumGrey"
+        android:layout_height="0.5dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp" />
+        android:layout_marginBottom="10dp"
+        android:background="?colorMediumEmphasis" />
 </merge>

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="@dimen/ds_spacing_small"
-            android:text="TOKEN (A-Z)"
+            android:text="@string/main_screen_token_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -29,7 +29,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Border Radius"
+            android:text="@string/main_screen_border_radius_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -41,7 +41,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Color"
+            android:text="@string/main_screen_color_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -53,7 +53,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Elevation"
+            android:text="@string/main_screen_elevation_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -65,10 +65,10 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Icons (drawables)"
+            android:text="@string/main_screen_icons_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
-        
+
         <Button
             android:id="@+id/opacityTokensButton"
             android:layout_width="match_parent"
@@ -77,7 +77,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Opacity"
+            android:text="@string/main_screen_opacity_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -89,7 +89,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Size"
+            android:text="@string/main_screen_size_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -101,7 +101,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Spacing"
+            android:text="@string/main_screen_spacing_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -113,7 +113,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Typography"
+            android:text="@string/main_screen_typography_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -125,7 +125,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Custom Typography"
+            android:text="@string/main_screen_custom_typography_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="16dp"
-            android:text="COMPONENT (A-Z)"
+            android:text="@string/main_screen_component_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -146,7 +146,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="App Bar Top"
+            android:text="@string/main_screen_app_bar_top_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -158,7 +158,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/default_icon_outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Avatar"
+            android:text="@string/main_screen_avatar_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -170,7 +170,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Badge"
+            android:text="@string/main_screen_badge_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -182,7 +182,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Button"
+            android:text="@string/main_screen_button_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -194,7 +194,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Card"
+            android:text="@string/main_screen_card_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -206,7 +206,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Checkbox"
+            android:text="@string/main_screen_checkbox_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -218,7 +218,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Counter"
+            android:text="@string/main_screen_counter_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -230,7 +230,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Dialog"
+            android:text="@string/main_screen_dialog_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -242,7 +242,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Divider"
+            android:text="@string/main_screen_divider_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -254,7 +254,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Expansion Panel"
+            android:text="@string/main_screen_expansion_panel_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -266,7 +266,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Icon Button"
+            android:text="@string/main_screen_icon_button_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -278,7 +278,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Logo"
+            android:text="@string/main_screen_logo_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -290,7 +290,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="List Item"
+            android:text="@string/main_screen_list_item_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -302,7 +302,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Progress Indicator"
+            android:text="@string/main_screen_progress_indicator_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -314,7 +314,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Radio Button"
+            android:text="@string/main_screen_radio_button_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -326,7 +326,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Shortcut"
+            android:text="@string/main_screen_shortcut_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -338,7 +338,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Tag"
+            android:text="@string/main_screen_tag_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -350,7 +350,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Text Field"
+            android:text="@string/main_screen_textfield_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -362,7 +362,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Value Text Highlight"
+            android:text="@string/main_screen_value_text_highlight_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis"
             android:visibility="gone" />
@@ -372,7 +372,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="16dp"
-            android:text="PATTERN (A-Z)"
+            android:text="@string/main_screen_pattern_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -384,7 +384,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Error Default"
+            android:text="@string/main_screen_error_default_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -396,7 +396,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Navigation Drawer"
+            android:text="@string/main_screen_navigation_drawer_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -408,7 +408,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Menu Item"
+            android:text="@string/main_screen_menu_item_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
@@ -420,7 +420,7 @@
             android:background="@color/surface"
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
-            android:text="Submenu Item"
+            android:text="@string/main_screen_submenu_item_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
     </LinearLayout>

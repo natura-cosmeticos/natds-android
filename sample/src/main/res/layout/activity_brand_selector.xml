@@ -19,7 +19,7 @@
             android:layout_marginTop="?spacingXLarge"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            android:text="NATDS - ANDROID"
+            android:text="@string/brand_selector_screen_app_name_text"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceHeadline6"
             android:textColor="#FAFAFA" />
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="?spacingSmall"
             android:gravity="center"
-            android:text="version 9.9.1"
+            android:text="@string/brand_selector_screen_app_version_text"
             android:textAlignment="center"
             android:textAppearance="?textAppearanceCaption"
             android:textColor="#FAFAFA" />
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSemi"
             android:layout_marginBottom="?spacingSmall"
-            android:text="Select a brand:"
+            android:text="@string/brand_selector_select_brand_text"
             android:textAppearance="?textAppearanceBody1"
             android:textColor="#FAFAFA" />
 
@@ -57,6 +57,7 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/brand_selector_aesop_text"
                 app:srcCompat="@drawable/logo_aesop" />
         </androidx.cardview.widget.CardView>
 
@@ -75,6 +76,7 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/brand_selector_avon_text"
                 app:srcCompat="@drawable/avon_horizontal" />
         </androidx.cardview.widget.CardView>
 
@@ -92,8 +94,9 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/brand_selector_natura_text"
                 app:srcCompat="@drawable/natura_horizontal"
-                app:tint="@color/black"/>
+                app:tint="@color/black" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -111,10 +114,11 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:alpha="?opacity03"
+                android:contentDescription="@string/brand_selector_naturaeco_text"
                 app:srcCompat="@drawable/logo_natura_co"
-                app:tint="@color/black"
-                android:alpha="?opacity03"/>
-            </androidx.cardview.widget.CardView>
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/tbsThemeButton"
@@ -130,8 +134,9 @@
                 android:layout_width="?sizeHugeX"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:contentDescription="@string/brand_selector_tbs_text"
                 app:srcCompat="@drawable/tbs_horizontal"
-                app:tint="@color/black"/>
-            </androidx.cardview.widget.CardView>
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

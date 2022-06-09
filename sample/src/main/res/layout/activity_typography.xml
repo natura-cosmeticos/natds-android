@@ -1,182 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     tools:context=".tokens.SpacingActivity">
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/h1Sample"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
-            <TextView
-                android:id="@+id/h1Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 1"
-                android:textAppearance="?textAppearanceHeadline1"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/h2Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 2"
-                android:textAppearance="?textAppearanceHeadline2"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/h3Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 3"
-                android:textAppearance="?textAppearanceHeadline3"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/h4Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 4"
-                android:textAppearance="?textAppearanceHeadline4"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/h5Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 5"
-                android:textAppearance="?textAppearanceHeadline5"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/h6Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Heading 6"
-                android:textAppearance="?textAppearanceHeadline6"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/subtitle1Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Subtitle 1"
-                android:textAppearance="?textAppearanceSubtitle1"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/subtitle2Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Subtitle 2"
-                android:textAppearance="?textAppearanceSubtitle2"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/body1Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Body 1"
-                android:textAppearance="?textAppearanceBody1"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/body2Sample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Body 2"
-                android:textAppearance="?textAppearanceBody2"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/captionSample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Caption"
-                android:textAppearance="?textAppearanceCaption"/>
-            <ImageView
-                android:layout_height="0.5dp"
-                android:layout_width="match_parent"
-                android:background="@color/mediumGrey"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"/>
-            <TextView
-                android:id="@+id/overlineSample"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="Overline"
-                android:textAppearance="?textAppearanceOverline"
-                android:layout_marginBottom="20dp"/>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading1_text"
+            android:textAppearance="?textAppearanceHeadline1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/h2Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading2_text"
+            android:textAppearance="?textAppearanceHeadline2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/h3Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading3_text"
+            android:textAppearance="?textAppearanceHeadline3" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/h4Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading4_text"
+            android:textAppearance="?textAppearanceHeadline4" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/h5Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading5_text"
+            android:textAppearance="?textAppearanceHeadline5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/h6Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_heading6_text"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/subtitle1Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_subtitle1_text"
+            android:textAppearance="?textAppearanceSubtitle1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/subtitle2Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_subtitle2_text"
+            android:textAppearance="?textAppearanceSubtitle2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/body1Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_body1_text"
+            android:textAppearance="?textAppearanceBody1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/body2Sample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_body2_text"
+            android:textAppearance="?textAppearanceBody2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/captionSample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_caption_text"
+            android:textAppearance="?textAppearanceCaption" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/overlineSample"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/typography_screen_overline_text"
+            android:textAppearance="?textAppearanceOverline" />
+    </LinearLayout>
+</ScrollView>

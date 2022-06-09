@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="Overline"
+            android:text="@string/card_screen_overline_text"
             style="?textAppearanceOverline" />
 
         <TextView
@@ -40,7 +40,7 @@
             android:layout_marginTop="?spacingSmall"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewOverline"
-            android:text="Header 6"
+            android:text="@string/card_screen_header_text"
             style="@style/Heading6"/>
 
         <TextView
@@ -50,17 +50,17 @@
             android:layout_marginTop="?spacingTiny"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewHeader"
-            android:text="Caption"
+            android:text="@string/card_screen_caption_text"
             style="@style/Caption"/>
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewCaption"
-            android:text="This is an example of text using the body2 variant of Typography component"
+            android:text="@string/card_screen_body_text"
             style="@style/Body2"/>
 
             <Button
@@ -70,8 +70,8 @@
                 android:layout_marginTop="?spacingSmall"
                 android:layout_marginBottom="?spacingTiny"
                 android:minWidth="?sizeHuge"
-                android:text="Default"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
+                android:text="@string/card_screen_button_text"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBody"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 

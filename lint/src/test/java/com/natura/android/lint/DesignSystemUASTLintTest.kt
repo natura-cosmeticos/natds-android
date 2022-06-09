@@ -30,7 +30,7 @@ class DesignSystemUASTLintTest {
             .run()
             .expect(
                 "src/test/TestActivity.java:11: Warning: Please, use Design System Dialog Standard component.\n" +
-                        " For more details, please take a look at Nat DS documentation: https://github.com/natura-cosmeticos/natds-android/blob/master/doc/getting-started.md [NonNatDsDialogStandard]\n" +
+                        " For more details, please take a look at Nat DS documentation: https://github.com/natura-cosmeticos/natds-android/blob/main/doc/getting-started.md [NonNatDsDialogStandard]\n" +
                         "    AlertDialog dialog = new AlertDialog.Builder(this).create();\n" +
                         "    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                         "0 errors, 1 warnings"
@@ -60,7 +60,7 @@ class DesignSystemUASTLintTest {
             .run()
             .expect(
                 "src/test/TestActivity.kt:11: Warning: Please, use Design System Dialog Standard component.\n" +
-                        " For more details, please take a look at Nat DS documentation: https://github.com/natura-cosmeticos/natds-android/blob/master/doc/getting-started.md [NonNatDsDialogStandard]\n" +
+                        " For more details, please take a look at Nat DS documentation: https://github.com/natura-cosmeticos/natds-android/blob/main/doc/getting-started.md [NonNatDsDialogStandard]\n" +
                         "    val dialog = AlertDialog.Builder(this).create()\n" +
                         "    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                         "0 errors, 1 warnings"

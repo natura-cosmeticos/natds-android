@@ -1,408 +1,445 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".tokens.SizeActivity"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:context=".tokens.SizeActivity">
+
         <TextView
             android:id="@+id/sizeNoneLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size None - 0dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_none_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeNone"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeNone"
             android:layout_height="?attr/sizeNone"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/sizeMicroLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Micro - 4dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_micro_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMicro"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeMicro"
             android:layout_height="?attr/sizeMicro"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/sizeTinyLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Tiny - 8dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_tiny_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeTiny"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeTiny"
             android:layout_height="?attr/sizeTiny"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
             android:id="@+id/sizeSmallLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Small - 16dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_small_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSmall"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeSmall"
             android:layout_height="?attr/sizeSmall"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyStandard"
+            android:id="@+id/sizeStandardLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Standard - 24dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_standard_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeStandard"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeStandard"
             android:layout_height="?attr/sizeStandard"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinySemi"
+            android:id="@+id/sizeSemiLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Semi - 32dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_semi_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSemi"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeSemi"
             android:layout_height="?attr/sizeSemi"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinySemiX"
+            android:id="@+id/sizeSemiXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size SemiX - 40dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_semix_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeSemiX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeSemiX"
             android:layout_height="?attr/sizeSemiX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyMedium"
+            android:id="@+id/sizeMediumLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Medium - 48dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_medium_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMedium"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeMedium"
             android:layout_height="?attr/sizeMedium"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyMediumX"
+            android:id="@+id/sizeMediumXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size MediumX - 56dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_mediumx_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeMediumX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeMediumX"
             android:layout_height="?attr/sizeMediumX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLarge"
+            android:id="@+id/sizeLargeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Large - 64dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_large_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLarge"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeLarge"
             android:layout_height="?attr/sizeLarge"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeX"
+            android:id="@+id/sizeLargeXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size LargeX - 72dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_largex_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeLargeX"
             android:layout_height="?attr/sizeLargeX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeXX"
+            android:id="@+id/sizeLargeXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size LargeXX - 80dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_largexx_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeXX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeLargeXX"
             android:layout_height="?attr/sizeLargeXX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyLargeXXX"
+            android:id="@+id/sizeLargeXXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size LargeXXX - 88dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_largexxx_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeLargeXXX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeLargeXXX"
             android:layout_height="?attr/sizeLargeXXX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHuge"
+            android:id="@+id/sizeHugeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Huge - 96dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_huge_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHuge"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeHuge"
             android:layout_height="?attr/sizeHuge"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeX"
+            android:id="@+id/sizeHugeXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size HugeX - 128dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_hugex_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeHugeX"
             android:layout_height="?attr/sizeHugeX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeXX"
+            android:id="@+id/sizeHugeXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size HugeXX - 144dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_hugexx_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeXX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeHugeXX"
             android:layout_height="?attr/sizeHugeXX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyHugeXXX"
+            android:id="@+id/sizeHugeXXXLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size HugeXXX - 192dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_hugexxx_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeHugeXXX"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeHugeXXX"
             android:layout_height="?attr/sizeHugeXXX"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
 
         <TextView
-            android:id="@+id/sizeTinyVeryHuge"
+            android:id="@+id/sizeVeryHugeLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Size Very Huge - 256dp"
             android:padding="10dp"
-            android:textSize="12sp"
-            android:textColor="?attr/colorMediumEmphasis"/>
+            android:text="@string/size_screen_size_veryhuge_text"
+            android:textColor="?attr/colorMediumEmphasis"
+            android:textSize="12sp" />
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardSizeVeryHuge"
-            android:backgroundTint="?colorPrimary"
             android:layout_width="?attr/sizeVeryHuge"
             android:layout_height="?attr/sizeVeryHuge"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:backgroundTint="?colorPrimary" />
+
         <ImageView
-            android:layout_height="0.5dp"
             android:layout_width="match_parent"
-            android:background="@color/mediumGrey"
+            android:layout_height="0.5dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
-        </ImageView>
+            android:layout_marginBottom="10dp"
+            android:background="?colorMediumEmphasis"
+            android:contentDescription="@null" />
     </LinearLayout>
 </ScrollView>

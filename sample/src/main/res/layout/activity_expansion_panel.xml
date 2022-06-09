@@ -19,7 +19,7 @@
             android:id="@+id/first_expansion_panel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Expansion Panel 1">
+            app:title="@string/expansion_panel_screen_componentone_title">
 
             <LinearLayout
                 android:id="@+id/circle_example"
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="?spacingSmall"
                 android:layout_marginTop="0dp"
-                android:text="Details\n\nThis expanded area is a Constraint Layout.\nAny group of components can be used here."
+                android:text="@string/expansion_panel_screen_componentone_content"
                 android:textAppearance="?textAppearanceBody1"
                 android:textColor="?colorOnSurface"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
             android:id="@+id/second_expansion_panel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Expansion Panel 2">
+            app:title="@string/expansion_panel_screen_componenttwo_title">
 
             <TextView
                 android:id="@+id/listener_text"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="?spacingSmall"
                 android:layout_marginTop="0dp"
-                android:text="Details\n\nThere's a state change listener in this sample collapsing one ExpansionPanel when the other one expands."
+                android:text="@string/expansion_panel_screen_componenttwo_content"
                 android:textAppearance="?textAppearanceBody1"
                 android:textColor="?colorOnSurface"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -8,15 +8,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:paddingVertical="?spacingSmall"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="?spacingSmall"
-        android:layout_height="wrap_content">
+        android:paddingVertical="?spacingSmall">
 
         <TextView
             android:id="@+id/dialogStandardTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title"
             android:textAppearance="?dialogTitleAppearance"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,10 +72,9 @@
     <LinearLayout
         android:id="@+id/contentContainer"
         android:layout_width="match_parent"
-        android:paddingHorizontal="?spacingSmall"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
-    </LinearLayout>
+        android:paddingHorizontal="?spacingSmall"></LinearLayout>
 
     <com.natura.android.divider.Divider
         android:id="@+id/bottomDivider"

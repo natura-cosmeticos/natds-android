@@ -24,7 +24,7 @@
                 android:id="@+id/textViewCounterMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Size Medium"
+                android:text="@string/counter_screen_size_medium_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +43,7 @@
                 android:id="@+id/textViewCounterSemix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Size Semix"
+                android:text="@string/counter_screen_size_semix_text"
                 app:layout_constraintStart_toStartOf="@+id/counterSemix"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:text="Subtract Disable"
+                android:text="@string/counter_screen_subtract_disable_text"
                 app:layout_constraintStart_toStartOf="@+id/counterSubtractDisable"
                 app:layout_constraintTop_toBottomOf="@+id/counterMedium" />
 
@@ -82,7 +82,7 @@
                 android:id="@+id/textViewAddDisable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add Disable"
+                android:text="@string/counter_screen_add_disable_text"
                 app:layout_constraintStart_toStartOf="@+id/counterAddDisable"
                 app:layout_constraintTop_toBottomOf="@+id/counterSemix"
                 app:layout_constraintTop_toTopOf="@id/textViewSubtractDisable" />
@@ -103,7 +103,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:text="All Disable"
+                android:text="@string/counter_screen_all_disable_text"
                 app:layout_constraintStart_toStartOf="@+id/counterAllDisable"
                 app:layout_constraintTop_toBottomOf="@+id/counterSubtractDisable" />
 
@@ -122,7 +122,7 @@
                 android:id="@+id/textViewNoLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No label"
+                android:text="@string/counter_screen_no_label_text"
                 app:layout_constraintStart_toStartOf="@+id/counterAddDisable"
                 app:layout_constraintTop_toBottomOf="@+id/counterAddDisable"
                 app:layout_constraintTop_toTopOf="@id/textViewAllDisable" />

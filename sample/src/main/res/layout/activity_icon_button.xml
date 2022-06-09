@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color hight emphasis (default)"
+                android:text="@string/iconbutton_screen_color_highemphasis_default_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/iconButtonColorDefault" />
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color hight emphasis (disabled)"
+                android:text="@string/iconbutton_screen_color_highemphasis_disabled_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorDefaultDisabled" />
 
@@ -80,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color primary"
+                android:text="@string/iconbutton_screen_color_primary_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimary" />
 
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color primary (disabled)"
+                android:text="@string/iconbutton_screen_color_primary_disabled_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorPrimaryDisabled" />
 
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color light"
+                android:text="@string/iconbutton_screen_color_light_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorLight" />
 
@@ -148,7 +148,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Color light (disabled)"
+                android:text="@string/iconbutton_screen_color_light_disabled_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonColorLightDisabled" />
 
@@ -170,7 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Inherit background (default)"
+                android:text="@string/iconbutton_screen_inherit_background_default_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonStyleInherit" />
 
@@ -192,7 +192,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Float background"
+                android:text="@string/iconbutton_screen_float_background_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloating" />
 
@@ -215,7 +215,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Float background (disabled)"
+                android:text="@string/iconbutton_screen_float_background_default_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonStyleFloatingDisabled" />
 
@@ -237,7 +237,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Overlay background"
+                android:text="@string/iconbutton_screen_overlay_background_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlay" />
 
@@ -260,7 +260,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Overlay background (disabled)"
+                android:text="@string/iconbutton_screen_overlay_background_disabled_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonStyleOverlayDisabled" />
 
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Size semi (default)"
+                android:text="@string/iconbutton_screen_size_semi_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemi" />
 
@@ -304,7 +304,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Size semiX"
+                android:text="@string/iconbutton_screen_size_semix_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonSizeSemix" />
 
@@ -326,7 +326,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="?spacingTiny"
-                android:text="Size Medium"
+                android:text="@string/iconbutton_screen_size_medium_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/iconButtonSizeMedium" />
 
