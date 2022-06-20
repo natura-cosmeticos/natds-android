@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <TextView
+        android:id="@+id/selectLabel"
+        style="@style/TextAppearance.DS.Select.Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="selectLabel" />
+
+    <LinearLayout
+        android:id="@+id/selectInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/ds_shape_rounded_corners"
+        android:orientation="horizontal"
+        android:paddingStart="?attr/spacingSmall"
+        android:paddingTop="?attr/spacingSmall"
+        android:paddingEnd="?attr/spacingSmall"
+        android:paddingBottom="?attr/spacingSmall"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectLabel">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/selectSpinner"
+            style="@style/TextAppearance.DS.Select.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:entries="@array/spinnerItems"
+            android:gravity="top|left"
+            android:scrollbars="vertical"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footerBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="@dimen/ds_spacing_micro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectInputBox">
+
+        <com.natura.android.icon.FontIcon
+            android:id="@+id/selectFooterIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="?attr/spacingMicro"
+            android:textColor="@color/text_color_secondary_selector"
+            android:textSize="@dimen/ds_text_default_icon_small_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="EA13" />
+
+        <TextView
+            android:id="@+id/selectFooter"
+            style="@style/TextAppearance.DS.Select.Footer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/selectFooterIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="select_footer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

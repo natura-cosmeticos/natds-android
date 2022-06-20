@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".components.SelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <com.natura.android.select.Select
+            android:id="@+id/text_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_type_some_text_hint"
+            app:slc_label="@string/textfield_screen_type_some_text_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/name_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_type_name_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_type_name_label" />
+
+        <com.natura.android.select.Select
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_input_multline_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_input_multline_label" />
+
+        <com.natura.android.select.Select
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_type_numbers_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_type_numbers_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/password_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_type_password_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_type_password_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/password_number_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_type_password_numbers_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_type_password_numbers_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/error_short_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_input_with_error_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_footer="@string/textfield_screen_input_with_error_footer"
+            app:slc_label="@string/textfield_screen_input_with_error_label"
+            app:slc_state="error" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/error_long_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_long_input_with_error_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_footer="@string/textfield_screen_long_input_with_error_footer"
+            app:slc_label="@string/textfield_screen_long_input_with_error_label"
+            app:slc_state="error" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textFieldContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?spacingSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.natura.android.select.Select
+                android:id="@+id/errorTextFieldSmallLeft"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:slc_footer="@string/textfield_screen_small_left_field_error_footer"
+                app:slc_label="@string/textfield_screen_small_left_field_error_label"
+                app:slc_state="error" />
+
+            <com.natura.android.select.Select
+                android:id="@+id/errorTextFieldSmallRight"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                app:layout_constraintStart_toEndOf="@id/errorTextFieldSmallLeft"
+                app:layout_constraintTop_toTopOf="parent"
+                app:slc_footer="@string/textfield_screen_small_right_field_error_footer"
+                app:slc_label="@string/textfield_screen_small_right_field_error_label"
+                app:slc_state="error" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.natura.android.select.Select
+            android:id="@+id/helper_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_input_with_helper_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_footer="@string/textfield_screen_input_with_helper_footer"
+            app:slc_label="@string/textfield_screen_input_with_helper_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/medium_size_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_medium_size_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_medium_size_label"
+            app:slc_size="medium" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/mediumx_size_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/textfield_screen_mediumx_size_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/textfield_screen_mediumx_size_label"
+            app:slc_size="mediumx" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/success_short_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_screen_input_with_success_short_footer_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_footer="@string/text_field_screen_input_with_success_short_footer_footer"
+            app:slc_label="@string/text_field_screen_input_with_success_short_footer_label"
+            app:slc_state="success" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/success_long_footer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_screen_input_with_success_long_footer_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_footer="@string/text_field_screen_input_with_success_long_footer_footer"
+            app:slc_label="@string/text_field_screen_input_with_success_long_footer_label"
+            app:slc_state="success" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/required_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_screen_required_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_screen_required_label"
+            app:slc_required="true" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/disabled_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="@string/text_field_screen_disabled_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_screen_disabled_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/read_only_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_screen_readonly_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_screen_readonly_label"
+            app:slc_readonly="true" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/filled_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_screen_filled_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_screen_filled_label"/>
+
+        <com.natura.android.select.Select
+            android:id="@+id/action_icon_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_icon_action_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_icon_action_label" />
+
+        <com.natura.android.select.Select
+            android:id="@+id/action_image_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_image_action_hint"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="@string/text_field_image_action_label" />
+
+    </LinearLayout>
+
+</ScrollView>
