@@ -855,7 +855,6 @@
         <item name="android:paddingBottom">?attr/spacingMicro</item>
         <item name="android:letterSpacing">?body1LetterSpacing</item>
         <item name="android:lineSpacingMultiplier">?textFieldContentLineHeight</item>
-        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <style name="TextAppearance.DS.Select.Footer" parent="TextAppearance.AppCompat.Title">

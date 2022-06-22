@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.*
+import androidx.appcompat.widget.AppCompatSpinner
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.databinding.SelectBinding
@@ -37,7 +38,7 @@ class Select : ConstraintLayout {
     private val inputLabel by lazy { findViewById<TextView>(R.id.selectLabel) }
 
     private val inputBox by lazy { findViewById<LinearLayout>(R.id.selectInputBox) }
-    private val inputValue by lazy { findViewById<Spinner>(R.id.selectSpinner) }
+    private val inputValue by lazy { findViewById<AppCompatSpinner>(R.id.selectSpinner) }
     private val inputContainerMain by lazy { findViewById<ConstraintLayout>(R.id.selectContainer) }
 
     private val footerBox by lazy { findViewById<ConstraintLayout>(R.id.footerBox) }
@@ -63,7 +64,7 @@ class Select : ConstraintLayout {
     private lateinit var typedArray: TypedArray
     private lateinit var binding: SelectBinding
 
-    val spinner: Spinner
+    val spinner: AppCompatSpinner
         get() {
             return inputValue
         }
@@ -162,6 +163,9 @@ class Select : ConstraintLayout {
             typedArray = context.obtainStyledAttributes(attrs, R.styleable.Select)
         }
 
+        inputValue.isFocusableInTouchMode = true
+        inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
+
         getAttributes()
 
         typedArray.recycle()
@@ -219,8 +223,17 @@ class Select : ConstraintLayout {
         }
     }
 
+    private fun onFocusChanged(hasFocus: Boolean) {
+
+        if (hasFocus && !readOnly && isEnabled) {
+            layoutState = stateLayout.focused
+        } else {
+            resetLayoutState()
+        }
+    }
+
     private fun configureReadOnly(enabled: Boolean) {
-        spinner.isClickable = enabled
+        spinner.isClickable = !enabled
     }
 
     private fun configureSize() {
@@ -269,7 +282,6 @@ class Select : ConstraintLayout {
         const val MEDIUM_PADDING_BOTTOM = 13
         const val MEDIUMX_PADDING_TOP = 18
         const val MEDIUMX_PADDING_BOTTOM = 17
-        const val MULTILINE_TYPE = 131073
 
         private const val SUCCESS_ICON = "EA15"
         private const val ERROR_ICON = "EA13"

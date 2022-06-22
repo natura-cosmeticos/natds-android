@@ -8,6 +8,7 @@
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
+    android:focusableInTouchMode="true"
     android:orientation="vertical"
     tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
@@ -29,23 +30,22 @@
         android:layout_gravity="center_vertical"
         android:background="@drawable/ds_shape_rounded_corners"
         android:orientation="horizontal"
-        android:paddingStart="?attr/spacingSmall"
         android:paddingTop="?attr/spacingSmall"
-        android:paddingEnd="?attr/spacingSmall"
         android:paddingBottom="?attr/spacingSmall"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectLabel">
 
-        <androidx.appcompat.widget.AppCompatSpinner
+        <Spinner
             android:id="@+id/selectSpinner"
             style="@style/TextAppearance.DS.Select.Spinner"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/spinner_background"
+            android:dropDownVerticalOffset ="42dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_weight="1"
-            android:entries="@array/spinnerItems"
-            android:gravity="top|left"
+            android:padding="0dp"
+            android:spinnerMode="dropdown"
             android:scrollbars="vertical"/>
     </LinearLayout>
 
