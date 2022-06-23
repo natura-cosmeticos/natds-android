@@ -48,7 +48,7 @@ class Select : ConstraintLayout {
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
         inputLabel?.isEnabled = enabled
-        inputValue?.isEnabled = enabled
+        spinner.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
         inputContainerMain?.isEnabled = enabled
@@ -233,7 +233,12 @@ class Select : ConstraintLayout {
     }
 
     private fun configureReadOnly(enabled: Boolean) {
-        spinner.isClickable = !enabled
+        if (isEnabled) {
+            spinner.isClickable = !enabled
+            spinner.isFocusableInTouchMode = !enabled
+            spinner.isFocusable = !enabled
+            spinner.isEnabled = !enabled
+        }
     }
 
     private fun configureSize() {
@@ -249,6 +254,8 @@ class Select : ConstraintLayout {
                     inputBox.paddingRight,
                     MEDIUM_PADDING_BOTTOM
                 )
+
+                inputValue.dropDownVerticalOffset = getDimenFromTheme(context, R.attr.sizeMedium).toInt()
             }
             else -> {
                 textFieldBoxLayoutParams.height =
@@ -259,6 +266,8 @@ class Select : ConstraintLayout {
                     inputBox.paddingRight,
                     MEDIUMX_PADDING_BOTTOM
                 )
+
+                inputValue.dropDownVerticalOffset = getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
             }
         }
 

@@ -36,12 +36,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectLabel">
 
-        <Spinner
+        <androidx.appcompat.widget.AppCompatSpinner
             android:id="@+id/selectSpinner"
             style="@style/TextAppearance.DS.Select.Spinner"
             android:layout_width="match_parent"
             android:background="@drawable/spinner_background"
-            android:dropDownVerticalOffset ="42dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:padding="0dp"

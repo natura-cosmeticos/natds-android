@@ -32,6 +32,9 @@ class SelectActivity : AppCompatActivity() {
         binding.selectWithError.spinner.adapter = arrayAdapter
         binding.selectWithSuccess.spinner.adapter = arrayAdapter
         binding.selectReadOnly.spinner.adapter = arrayAdapter
+        binding.selectHelperText.spinner.adapter = arrayAdapter
+
+        binding.selectHelperText.spinner.selectedItem.toString()
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Select"

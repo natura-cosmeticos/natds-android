@@ -18,14 +18,12 @@
             android:id="@+id/selectDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             app:slc_label="Label" />
 
         <com.natura.android.select.Select
             android:id="@+id/selectMediumX"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_label="MediumX Size"
             app:slc_size="mediumx" />
@@ -34,16 +32,23 @@
             android:id="@+id/selectMedium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_label="Medium Size"
             app:slc_size="medium" />
 
         <com.natura.android.select.Select
+            android:id="@+id/selectHelperText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="?spacingSmall"
+            app:slc_label="Example with Helper Text"
+            app:slc_footer="Helper Text"
+            app:slc_size="mediumx" />
+
+        <com.natura.android.select.Select
             android:id="@+id/selectWithError"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_label="Error"
             app:slc_footer="Opss...This input has an error"
@@ -53,7 +58,6 @@
             android:id="@+id/selectWithSuccess"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_label="Success"
             app:slc_footer="Success message validating what\'s typed"
@@ -63,7 +67,6 @@
             android:id="@+id/selectRequired"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_label="Required"
             app:slc_required="true"/>
@@ -72,7 +75,6 @@
             android:id="@+id/selectDisabled"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             android:enabled="false"
             app:slc_label="Disabled"/>
@@ -81,11 +83,9 @@
             android:id="@+id/selectReadOnly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select one option"
             android:paddingTop="?spacingSmall"
             app:slc_readonly="true"
             app:slc_label="Read only"/>
-
 
     </LinearLayout>
 

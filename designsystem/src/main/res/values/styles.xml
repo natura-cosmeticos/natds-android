@@ -848,9 +848,9 @@
         <item name="android:paddingBottom">?attr/spacingMicro</item>
     </style>
 
-    <style name="TextAppearance.DS.Select.Spinner" parent="TextAppearance.AppCompat.Body1">
+    <style name="TextAppearance.DS.Select.Spinner" parent="Widget.AppCompat.DropDownItem.Spinner">
         <item name="android:textSize">?body1FontSize</item>
-        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:textColor">@color/colorBrdNatRed</item>
         <item name="android:fontFamily">?body1FontWeight</item>
         <item name="android:paddingBottom">?attr/spacingMicro</item>
         <item name="android:letterSpacing">?body1LetterSpacing</item>
