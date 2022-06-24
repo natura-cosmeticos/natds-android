@@ -166,6 +166,22 @@ class Select : ConstraintLayout {
         inputValue.isFocusableInTouchMode = true
         inputValue.setOnFocusChangeListener { _, hasFocus -> onFocusChanged(hasFocus) }
 
+        inputValue.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                if (position == 0) {
+                    (view as TextView).setTextColor(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis))
+                }
+            }
+        }
+
         getAttributes()
 
         typedArray.recycle()
