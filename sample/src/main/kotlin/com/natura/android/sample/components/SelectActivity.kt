@@ -22,7 +22,7 @@ class SelectActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val arraySpinner = listOf("Item 1", "Item 2", "Item 3", "Item 4")
-        val arrayAdapter = ArrayAdapter(this, R.layout.support_simple_spinner_dropdown_item, arraySpinner)
+        val arrayAdapter = ArrayAdapter(this, R.layout.custom_spinner_dropdown_item, arraySpinner)
 
         binding.selectDefault.spinner.adapter = arrayAdapter
         binding.selectDisabled.spinner.adapter = arrayAdapter

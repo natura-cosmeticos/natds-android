@@ -1,6 +1,7 @@
 # Select
 
-Select lets user choose one option from an options menu. Consider using select when you have 4 or more options.
+Select lets user choose one option from an options menu. Consider using select when you have 4 or
+more options.
 
 Extends
 from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout)
@@ -15,7 +16,7 @@ This component is available in the following variants:
 With the following attribute statuses:
 
 - ✅ **Label**
-- ✅ **Footer**  
+- ✅ **Footer**
 - **Size**:
     - ✅ `Medium`
     - ✅ `MediumX`
@@ -29,15 +30,15 @@ With the following attribute statuses:
 
 ## Attributes
 
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`android:enable`| Specifies whether the widget is enabled. An unenabled Select prevents the user from choosing any option. | boolean | true or false
-|`app:slc_label`| Label showed above the input. Can be used to describe the field. | string | text
-|`app:slc_footer`| | Label showed below the input. Can be used to give feedback about the field state. | string | text
-|`app:slc_state`| Describes the state of the field. | string | none, success or error
-|`app:slc_size`| Describes the size (height) of the field. | string | mediumx or medium
-|`app:slc_required`| Specifies if the widget is required, with an asterisk in label. | boolean | true or false
-|`app:slc_readonly`| Specifies whether the widget is read only. | boolean | true or false
+| Attr | Description | Type | Options | | - | --- | --- | --- | |`android:enable`| Specifies whether
+the widget is enabled. An unenabled Select prevents the user from choosing any option. | boolean |
+true or false |`app:slc_label`| Label showed above the input. Can be used to describe the field. |
+string | text |`app:slc_footer`| | Label showed below the input. Can be used to give feedback about
+the field state. | string | text |`app:slc_state`| Describes the state of the field. | string |
+none, success or error |`app:slc_size`| Describes the size (height) of the field. | string | mediumx
+or medium |`app:slc_required`| Specifies if the widget is required, with an asterisk in label. |
+boolean | true or false |`app:slc_readonly`| Specifies whether the widget is read only. | boolean |
+true or false
 
 ## Usage Examples
 
@@ -92,8 +93,20 @@ Select Read Only
         app:slc_label="Read only"/>
 ```
 
-<br><br>
+<br>
 
+### Kotlin
+
+ So that it is possible to show the items in the select, it is necessary to create and assign an
+  adapter to the spinner, inside a kotlin class. This trick will allow you to control the selected
+  values and actions on them. Below is an example:
+
+```android
+
+val arraySpinner = listOf("Item 1", "Item 2", "Item 3", "Item 4")
+val arrayAdapter = ArrayAdapter(this, R.layout.custom_spinner_dropdown_item, arraySpinner)
+binding.selectDefault.spinner.adapter = arrayAdapter
+```
 
 ## Light mode / Dark mode
 
@@ -111,8 +124,8 @@ clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/s
 
 ## Attention points
 
-1. A select is a DS component based on DS **multibrand themes**. It means if you want to use a select in
-   your app, you MUST set the DS theme on a view parent or in the select component
+1. A select is a DS component based on DS **multibrand themes**. It means if you want to use a
+   select in your app, you MUST set the DS theme on a view parent or in the select component
    itself. [Check more info about how to set DS themes in your app](../README.md).
 
 

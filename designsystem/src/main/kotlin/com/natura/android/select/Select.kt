@@ -255,7 +255,8 @@ class Select : ConstraintLayout {
                     MEDIUM_PADDING_BOTTOM
                 )
 
-                inputValue.dropDownVerticalOffset = getDimenFromTheme(context, R.attr.sizeMedium).toInt()
+                inputValue.dropDownVerticalOffset =
+                    getDimenFromTheme(context, R.attr.sizeMedium).toInt()
             }
             else -> {
                 textFieldBoxLayoutParams.height =
@@ -267,7 +268,8 @@ class Select : ConstraintLayout {
                     MEDIUMX_PADDING_BOTTOM
                 )
 
-                inputValue.dropDownVerticalOffset = getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
+                inputValue.dropDownVerticalOffset =
+                    getDimenFromTheme(context, R.attr.sizeMediumX).toInt()
             }
         }
 
