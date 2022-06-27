@@ -36,9 +36,9 @@
             <enum name="left" value="1" />
             <enum name="right" value="2" />
         </attr>
-        <attr name="tag_icon" format="reference"/>
-        <attr name="tag_background_color" format="color"/>
-        <attr name="tag_label_color" format="color"/>
+        <attr name="tag_icon" format="reference" />
+        <attr name="tag_background_color" format="color" />
+        <attr name="tag_label_color" format="color" />
         <attr name="textLabel" format="string" />
     </declare-styleable>
 
@@ -46,8 +46,8 @@
         <attr name="colorBackground" />
         <attr name="customHeight" />
         <attr name="android:textColor" />
-        <attr name="radiusDisabledValue"/>
-        <attr name="radiusEnabledValue"/>
+        <attr name="radiusDisabledValue" />
+        <attr name="radiusEnabledValue" />
     </declare-styleable>
 
     <declare-styleable name="Shortcut">
@@ -226,8 +226,8 @@
 
     <declare-styleable name="Card">
         <attr name="colorBackground" />
-        <attr name="radiusEnabledValue"/>
-        <attr name="radiusDisabledValue"/>
+        <attr name="radiusEnabledValue" />
+        <attr name="radiusDisabledValue" />
         <attr name="enabledRadius" format="boolean" />
         <attr name="enabledElevation" />
         <attr name="customElevation" />
@@ -310,13 +310,13 @@
             <enum name="medium" value="3" />
             <enum name="largexxx" value="4" />
         </attr>
-        <attr name="avt_icon" format="reference"/>
-        <attr name="avt_image" format="reference"/>
-        <attr name="avt_label" format="string"/>
-        <attr name="avt_fallback_icon" format="reference"/>
-        <attr name="avt_fallback_label" format="string"/>
-        <attr name="avt_image_url" format="string"/>
-        <attr name="avt_content_description" format="string"/>
+        <attr name="avt_icon" format="reference" />
+        <attr name="avt_image" format="reference" />
+        <attr name="avt_label" format="string" />
+        <attr name="avt_fallback_icon" format="reference" />
+        <attr name="avt_fallback_label" format="string" />
+        <attr name="avt_image_url" format="string" />
+        <attr name="avt_content_description" format="string" />
     </declare-styleable>
 
     <declare-styleable name="AvatarStyle">
@@ -344,9 +344,9 @@
     </declare-styleable>
 
     <declare-styleable name="ButtonStyle">
-        <attr name="android:insetTop"/>
-        <attr name="android:insetBottom"/>
-        <attr name="android:minHeight"/>
+        <attr name="android:insetTop" />
+        <attr name="android:insetBottom" />
+        <attr name="android:minHeight" />
     </declare-styleable>
 
     <declare-styleable name="Counter">
@@ -360,9 +360,27 @@
             <enum name="add" value="2" />
             <enum name="all" value="3" />
         </attr>
-        <attr name="ctr_label" format="string"/>
-        <attr name="ctr_add_description" format="string"/>
-        <attr name="ctr_subtract_description" format="string"/>
+        <attr name="ctr_label" format="string" />
+        <attr name="ctr_add_description" format="string" />
+        <attr name="ctr_subtract_description" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Select">
+        <attr name="android:hint" />
+        <attr name="android:enabled" />
+        <attr name="slc_label" format="string" />
+        <attr name="slc_footer" format="string" />
+        <attr name="slc_state" format="enum">
+            <enum name="none" value="0" />
+            <enum name="success" value="1" />
+            <enum name="error" value="2" />
+        </attr>
+        <attr name="slc_size" format="enum">
+            <enum name="medium" value="0" />
+            <enum name="mediumx" value="1" />
+        </attr>
+        <attr name="slc_required" format="boolean" />
+        <attr name="slc_readonly" format="boolean" />
     </declare-styleable>
 
 </resources>

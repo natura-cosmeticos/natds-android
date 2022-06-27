@@ -37,7 +37,7 @@ open class TextField @JvmOverloads constructor(
 
     class LayoutStates(val context: Context) {
         private val colorPrimary = getColorTokenFromTheme(context, R.attr.colorPrimary)
-        private val colorError = getColorTokenFromTheme(context, R.attr.colorError)
+        private val colorError = getColorTokenFromTheme(context, R.attr.colorAlert)
         private val colorSuccess = getColorTokenFromTheme(context, R.attr.colorSuccess)
         private val colorLowEmphasis = getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
         private val colorMediumEmphasis =
