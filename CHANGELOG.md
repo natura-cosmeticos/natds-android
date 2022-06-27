@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.23.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.1...v.9.23.0) (2022-06-27)
+
+
+### Features
+
+* adapts the focus mechanism of the select component and adds background with arrow ([8d5bfff](https://github.com/natura-cosmeticos/natds-android/commit/8d5bfff62fc15ffe5f348c59793cb4a283ab944e))
+* adds select component and its use at sample app ([c4e491b](https://github.com/natura-cosmeticos/natds-android/commit/c4e491bf0863139ae9a44da5c7ec6494403adfc5))
+
+
+### Bug Fixes
+
+* fixes behavor to define color to item selected at Select component ([66cb73d](https://github.com/natura-cosmeticos/natds-android/commit/66cb73d206f0e76e3e6c8ffe27a28e4c5f5a9168))
+* fixes text color at spinner item and update spinner documentation ([96d33b8](https://github.com/natura-cosmeticos/natds-android/commit/96d33b8d2a208076b7bae53a3153e749a015d22f))
+
 ### [9.22.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.0...v.9.22.1) (2022-06-09)
 
 
