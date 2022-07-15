@@ -54,3 +54,6 @@ sed -i '' -e "s/Component/$capital_case_name/g" $COMPONENT_ACTIVITY_CLASS_PATH/"
 
 cp -r $SKELETON_PATH/activity_component.xml $COMPONENT_ACTIVITY_LAYOUT_PATH/
 mv $COMPONENT_ACTIVITY_LAYOUT_PATH/activity_component.xml $COMPONENT_ACTIVITY_LAYOUT_PATH/"activity_""$lower_case_name.xml"
+
+# Adds activity at manifest
+sed -i '' -e "s/<\/application>/    <activity \n            android:name=\".components."$capital_case_name"Activity""\" \n            android:theme=\"@style\/Theme.Natura.Light\" \/>\n    <\/application>/g" sample/src/main/AndroidManifest.xml
