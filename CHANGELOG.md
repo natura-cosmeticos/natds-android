@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.24.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.23.0...v.9.24.0) (2022-07-15)
+
+
+### Features
+
+* adds script to add activity at manifest ([ef29370](https://github.com/natura-cosmeticos/natds-android/commit/ef293706cc7eabde7285c330a417f39a67928001))
+* adds script to create base component skeleton ([e9ae4de](https://github.com/natura-cosmeticos/natds-android/commit/e9ae4dee48a9318481e0ac39c5bcccefcac9bd3e))
+
 ## [9.23.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.1...v.9.23.0) (2022-06-27)
 
 
