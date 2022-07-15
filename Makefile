@@ -67,3 +67,6 @@ distribute-sample:
 
 send-release-notification-teams:
 	sh ./tools/send_release_notification.sh
+
+create-component-skeleton:
+	sh ./tools/create_component_skeleton.sh $(component)
