@@ -383,4 +383,39 @@
         <attr name="slc_readonly" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="Chip">
+        <attr name="android:enabled" />
+        <attr name="chp_action" format="boolean" />
+        <attr name="chp_selected" format="boolean" />
+        <attr name="chp_size" format="enum">
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
+        </attr>
+        <attr name="chp_color" format="enum">
+            <enum name="neutral" value="0" />
+            <enum name="primary" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="custom" value="2" />
+        </attr>
+        <attr name="chp_custom_color_background" format="color" />
+        <attr name="chp_custom_color_label" format="color" />
+        <attr name="chp_custom_color_border" format="color" />
+
+        <attr name="chp_right_helper" format="color" />
+        <attr name="chp_helper_right_type" format="enum">
+            <enum name="icon" value="0" />
+            <enum name="avatar" value="1" />
+        </attr>
+
+        <attr name="chp_helper_left_type" format="enum">
+            <enum name="icon" value="0" />
+            <enum name="avatar" value="1" />
+        </attr>
+
+        <attr name="chp_helper_left" format="reference" />
+        <attr name="chp_helper_right" format="reference" />
+
+    </declare-styleable>
+
 </resources>

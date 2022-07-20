@@ -865,6 +865,15 @@
         <item name="android:lineSpacingMultiplier">?textFieldHelperTextLineHeight</item>
     </style>
 
+    <style name="TextAppearance.DS.Chip.Label" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">?assetFontFileBodyRegular</item>
+        <item name="android:textSize">?body2FontSize</item>
+        <item name="android:lineSpacingMultiplier">?body2LineHeight</item>
+        <item name="android:letterSpacing">?body2LetterSpacing</item>
+        <item name="android:textColorPrimary">?colorHighEmphasis</item>
+        <item name="android:textColor">?colorHighEmphasis</item>
+    </style>
+
     <style name="Widget.DS" />
 
 </resources>
