@@ -72,7 +72,7 @@ class Chip : ConstraintLayout {
             configureSize(getDrawable())
         }
 
-    var hasAction: Boolean = false
+    private var hasAction: Boolean = false
     private var isComponentSelected: Boolean = false
     private var isComponentEnabled: Boolean = true
 
@@ -109,6 +109,50 @@ class Chip : ConstraintLayout {
         requestLayout()
     }
 
+    fun getHasActionValue(): Boolean {
+        return hasAction
+    }
+
+    fun getIsComponentSelectedValue(): Boolean {
+        return isComponentSelected
+    }
+
+    fun getIsComponentEnabledValue(): Boolean {
+        return isComponentEnabled
+    }
+
+    fun getColorValue(): Int {
+        return color
+    }
+
+    fun getHelperLeftTypeValue(): Int {
+        return helperLeftType
+    }
+
+    fun getHelperRightTypeValue(): Int {
+        return helperRightType
+    }
+
+    fun getHelperLeft(): Int {
+        return helperLeft
+    }
+
+    fun getHelperRight(): Int {
+        return helperRight
+    }
+
+    fun getLabelColorValue(): Int {
+        return labelResourceColor
+    }
+
+    fun getBorderColorValue(): Int {
+        return borderResourceColor
+    }
+
+    fun getBackgroundColorValue(): Int {
+        return backgroundResourceColor
+    }
+
     private fun getAttributes() {
 
         typedArray.apply {
@@ -131,8 +175,8 @@ class Chip : ConstraintLayout {
             isComponentSelected = getBoolean(R.styleable.Chip_chp_selected, false)
             helperLeftType = getInt(R.styleable.Chip_chp_helper_left_type, NONE_TYPE)
             helperRightType = getInt(R.styleable.Chip_chp_helper_right_type, NONE_TYPE)
-            helperLeft = getResourceId(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
-            helperRight = getResourceId(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
+            helperLeft = getInt(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
+            helperRight = getInt(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
             isComponentEnabled = getBoolean(R.styleable.Chip_android_enabled, true)
         }
     }
