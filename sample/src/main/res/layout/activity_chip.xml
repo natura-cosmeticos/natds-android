@@ -2,6 +2,154 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="?spacingSmall"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_neutral_selected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Neutral Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="neutral"
+        app:chp_selected="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_primary_selected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Primary Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="primary"
+        app:chp_selected="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_neutral_selected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_secondary_selected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Secondary Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="secondary"
+        app:chp_selected="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_primary_selected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_custom_selected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Custom Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="custom"
+        app:chp_custom_background_color="@color/darkBackground"
+        app:chp_custom_label_color="@color/colorBrdNatRed"
+        app:chp_custom_border_color="@color/colorBrdNatRed"
+        app:chp_selected="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_secondary_selected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_neutral_notselected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Neutral Not Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="neutral"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_custom_selected"
+        android:layout_height="wrap_content"/>
+
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_primary_notselected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Primary Not Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="primary"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_neutral_notselected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_secondary_notselected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Secondary Not Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="secondary"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_primary_notselected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_color_custom_notselected"
+        android:layout_width="wrap_content"
+        app:chp_label="Color Custom Not Selected"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="custom"
+        app:chp_selected="false"
+        app:chp_custom_background_color="@color/darkBackground"
+        app:chp_custom_label_color="@color/colorBrdNatRed"
+        app:chp_custom_border_color="@color/colorBrdNatRed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_secondary_notselected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_size_semi"
+        android:layout_width="wrap_content"
+        app:chp_label="Size Semi"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="neutral"
+        app:chp_size="semi"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_color_custom_notselected"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_size_semix"
+        android:layout_width="wrap_content"
+        app:chp_label="Size Semix"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="neutral"
+        app:chp_size="semix"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_size_semi"
+        android:layout_height="wrap_content"/>
+
+    <com.natura.android.chip.Chip
+        android:id="@+id/chip_size_medium"
+        android:layout_width="wrap_content"
+        app:chp_label="Size Medium"
+        android:layout_marginTop="?spacingSmall"
+        app:chp_color="neutral"
+        app:chp_size="medium"
+        app:chp_selected="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_size_semix"
+        android:layout_height="wrap_content"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

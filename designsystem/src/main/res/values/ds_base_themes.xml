@@ -35,6 +35,9 @@
         <item name="colorLowEmphasisOpacityDisabledLow">#3DBBBBBB</item>
         <item name="colorHighLightOpacityFull">#FFFFFFFF</item>
 
+        <item name="colorTranparent">#00FFFFFF</item>
+        <item name="chipSemiXBorderRadius">@dimen/ssotdee911e3860cd0a0c290215546ecdc43</item>
+
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
         <item name="spacingTiny">@dimen/ds_spacing_tiny</item>
@@ -227,6 +230,9 @@
         <item name="colorMediumEmphasisOpacity06">#51BBBBBB</item>
         <item name="colorHighlightOpacity05">#3DFFFFFF</item>
         <item name="colorHighlightOpacityMediumHigh">#8FFFFFFF</item>
+        <item name="colorTranparent">#00FFFFFF</item>
+
+        <item name="chipSemiXBorderRadius">@dimen/ssotdee911e3860cd0a0c290215546ecdc43</item>
 
         <item name="spacingNone">@dimen/ds_spacing_none</item>
         <item name="spacingMicro">@dimen/ds_spacing_micro</item>
@@ -372,7 +378,6 @@
         <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
         <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
         <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
-
 
         <item name="avatarStandard">@style/Widget.DS.Avatar.Standard</item>
         <item name="avatarSemi">@style/Widget.DS.Avatar.Semi</item>

@@ -1,52 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/chp_background"
+        android:id="@+id/chipContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="?spacingTiny"
-        android:background="@drawable/chip_background"
+        android:elevation="?elevation04"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/chip_helper_left"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:layout_marginEnd="?spacingMicro"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
-
-        <TextView
-            android:id="@+id/chip_label"
+        <LinearLayout
+            android:id="@+id/chp_ripple_background"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.DS.Chip.Label"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/chip_helper_left"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="chip example" />
-
-        <ImageView
-            android:id="@+id/chip_helper_right"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"
-            android:layout_marginStart="?spacingMicro"
+            android:background="@drawable/chip_ripple_background"
+            android:elevation="?elevation04"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/chp_background" />
+
+        <LinearLayout
+            android:id="@+id/chp_background"
+            android:layout_width="wrap_content"
+            android:layout_height="?sizeSemi"
+            android:paddingHorizontal="?spacingTiny"
+            android:background="@drawable/chip_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:backgroundTint="?colorPrimary">
+
+            <ImageView
+                android:id="@+id/chp_avatar_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            <ImageView
+                android:id="@+id/chp_icon_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            <TextView
+                android:id="@+id/chp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.DS.Chip.Label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/chp_icon_left"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="chip example" />
+
+            <ImageView
+                android:id="@+id/chp_avatar_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            <ImageView
+                android:id="@+id/chp_icon_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
