@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.res.ResourcesCompat
 import com.natura.android.R
@@ -32,24 +33,30 @@ class Chip : ConstraintLayout {
             init(context, attrs)
         }
 
+    private val mainContainer by lazy { findViewById<ConstraintLayout>(R.id.chip_main_container) }
     private val labelTextView by lazy { findViewById<TextView>(R.id.chp_label) }
     private val backgroundView by lazy { findViewById<LinearLayout>(R.id.chp_background) }
 
     private val iconLeft by lazy { findViewById<ImageView>(R.id.chp_icon_left) }
     private val avatarLeft by lazy { findViewById<ImageView>(R.id.chp_avatar_left) }
+    private val containerAvatarLeft by lazy { findViewById<CardView>(R.id.chp_avatar_container_left) }
 
     private val iconRight by lazy { findViewById<ImageView>(R.id.chp_icon_right) }
     private val avatarRight by lazy { findViewById<ImageView>(R.id.chp_avatar_right) }
+    private val containerAvatarRight by lazy { findViewById<CardView>(R.id.chp_avatar_container_right) }
 
     override fun setEnabled(enabled: Boolean) {
-        super.setEnabled(enabled)
 
-        labelTextView.isEnabled = false
-        backgroundView.isEnabled = false
-        iconLeft.isEnabled = false
-        avatarLeft.isEnabled = false
-        iconRight.isEnabled = false
-        avatarRight.isEnabled = false
+        labelTextView.isEnabled = enabled
+        backgroundView.isEnabled = enabled
+        iconLeft.isEnabled = enabled
+        avatarLeft.isEnabled = enabled
+        iconRight.isEnabled = enabled
+        avatarRight.isEnabled = enabled
+
+        mainContainer.isClickable = enabled
+
+        super.setEnabled(enabled)
     }
 
     private lateinit var typedArray: TypedArray
@@ -66,18 +73,19 @@ class Chip : ConstraintLayout {
         }
 
     var hasAction: Boolean = false
-    var isComponentSelected: Boolean = false
+    private var isComponentSelected: Boolean = false
+    private var isComponentEnabled: Boolean = true
 
-    var color: Int = NEUTRAL
+    private var color: Int = NEUTRAL
 
-    var helperRightType: Int = NONE_TYPE
-    var helperLeftType: Int = NONE_TYPE
-    var helperLeft: Int = RESOURCE_NOT_DEFINED
-    var helperRight: Int = RESOURCE_NOT_DEFINED
+    private var helperRightType: Int = NONE_TYPE
+    private var helperLeftType: Int = NONE_TYPE
+    private var helperLeft: Int = RESOURCE_NOT_DEFINED
+    private var helperRight: Int = RESOURCE_NOT_DEFINED
 
-    var labelResourceColor: Int = RESOURCE_NOT_DEFINED
-    var borderResourceColor: Int = RESOURCE_NOT_DEFINED
-    var backgroundResourceColor: Int = RESOURCE_NOT_DEFINED
+    private var labelResourceColor: Int = RESOURCE_NOT_DEFINED
+    private var borderResourceColor: Int = RESOURCE_NOT_DEFINED
+    private var backgroundResourceColor: Int = RESOURCE_NOT_DEFINED
 
     private fun init(context: Context, attrs: AttributeSet? = null) {
 
@@ -92,7 +100,9 @@ class Chip : ConstraintLayout {
         }
 
         getAttributes()
+        configureEnabled()
         configureAction()
+        configureHelpers()
         configureAppearance(getDrawable())
 
         typedArray.recycle()
@@ -123,7 +133,12 @@ class Chip : ConstraintLayout {
             helperRightType = getInt(R.styleable.Chip_chp_helper_right_type, NONE_TYPE)
             helperLeft = getResourceId(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
             helperRight = getResourceId(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
+            isComponentEnabled = getBoolean(R.styleable.Chip_android_enabled, true)
         }
+    }
+
+    private fun configureEnabled() {
+        isEnabled = isComponentEnabled
     }
 
     private fun configureSize(backgroundDrawable: GradientDrawable) {
@@ -142,12 +157,14 @@ class Chip : ConstraintLayout {
     }
 
     private fun configureAction() {
+        mainContainer.isClickable = hasAction
+        mainContainer.isFocusable = hasAction
     }
 
     private fun configureAppearance(backgroundDrawable: GradientDrawable) {
 
         val backgroundColorAttr = when {
-            !isEnabled -> R.attr.colorLowEmphasis
+            !isEnabled -> R.attr.colorTranparent
             !isComponentSelected -> R.attr.colorTranparent
             else -> {
                 when (color) {
@@ -177,11 +194,12 @@ class Chip : ConstraintLayout {
             }
         }
 
-        val labelColor = if (color == CUSTOM) {
-            labelResourceColor
-        } else {
-            getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-        }
+        val labelColor =
+            when {
+                !isEnabled -> getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
+                color == CUSTOM -> labelResourceColor
+                else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+            }
 
         labelTextView.setTextColor(labelColor)
 
@@ -206,8 +224,27 @@ class Chip : ConstraintLayout {
         requestLayout()
     }
 
+    private fun configureHelpers() {
+        when {
+            helperLeftType == AVATAR_TYPE && helperLeft != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperLeft, containerAvatarLeft, avatarLeft)
+            helperRightType == AVATAR_TYPE && helperRight != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperRight, containerAvatarRight, avatarRight)
+            helperLeftType == ICON_TYPE && helperLeft != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperLeft, null, iconLeft)
+            helperRightType == ICON_TYPE && helperRight != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperRight, null, iconRight)
+        }
+    }
+
+    private fun setHelperVisibility(helper: Int, view: CardView?, imageView: ImageView) {
+        imageView.setImageResource(helper)
+        view?.let {
+            it.visibility = View.VISIBLE
+            return
+        }
+
+        imageView.visibility = View.VISIBLE
+    }
+
     private fun getDrawable(): GradientDrawable {
-        val gradientDrawable = (
+        val backgroundDrawable = (
             ResourcesCompat.getDrawable(
                 context.resources,
                 R.drawable.chip_background,
@@ -222,9 +259,9 @@ class Chip : ConstraintLayout {
             else -> R.attr.sizeSmall
         }
 
-        gradientDrawable.cornerRadius = getDimenFromTheme(context, borderRadiusAttr)
+        backgroundDrawable.cornerRadius = getDimenFromTheme(context, borderRadiusAttr)
 
-        return gradientDrawable
+        return backgroundDrawable
     }
 
     private fun setContentLabel(text: String) {
@@ -241,9 +278,9 @@ class Chip : ConstraintLayout {
         const val SECONDARY = 2
         const val CUSTOM = 3
 
-        const val ICON_TYPE = 0
-        const val AVATAR_TYPE = 1
-        const val NONE_TYPE = 2
+        const val NONE_TYPE = 0
+        const val ICON_TYPE = 1
+        const val AVATAR_TYPE = 2
 
         const val RESOURCE_NOT_DEFINED = 0
 
