@@ -175,8 +175,8 @@ class Chip : ConstraintLayout {
             isComponentSelected = getBoolean(R.styleable.Chip_chp_selected, false)
             helperLeftType = getInt(R.styleable.Chip_chp_helper_left_type, NONE_TYPE)
             helperRightType = getInt(R.styleable.Chip_chp_helper_right_type, NONE_TYPE)
-            helperLeft = getInt(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
-            helperRight = getInt(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
+            helperLeft = getResourceId(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
+            helperRight = getResourceId(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
             isComponentEnabled = getBoolean(R.styleable.Chip_android_enabled, true)
         }
     }
