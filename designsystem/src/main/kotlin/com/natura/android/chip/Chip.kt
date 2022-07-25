@@ -241,8 +241,16 @@ class Chip : ConstraintLayout {
         val labelColor =
             when {
                 !isEnabled -> getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
-                color == CUSTOM -> labelResourceColor
-                else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+                !isComponentSelected -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+                else -> {
+                    when (color) {
+                        NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                        PRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                        SECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondary)
+                        CUSTOM -> labelResourceColor
+                        else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+                    }
+                }
             }
 
         labelTextView.setTextColor(labelColor)
