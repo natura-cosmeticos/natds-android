@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.23.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.1...v.9.23.0) (2022-07-26)
+
+
+### Features
+
+* adapts the focus mechanism of the select component and adds background with arrow ([8d5bfff](https://github.com/natura-cosmeticos/natds-android/commit/8d5bfff62fc15ffe5f348c59793cb4a283ab944e))
+* adds action feature and ripple effect at Chip component ([30a2bfb](https://github.com/natura-cosmeticos/natds-android/commit/30a2bfb1f4b311703544833b7774d868f7f81d9e))
+* adds border radius, height and color attributes to chip component ([ce5bbdc](https://github.com/natura-cosmeticos/natds-android/commit/ce5bbdcc956eaf1d0af4d6a642fe0642ddc18767))
+* adds chip documentation ([11b7bdd](https://github.com/natura-cosmeticos/natds-android/commit/11b7bdd662037b52db1154758f90907777b3343f))
+* adds classes from new component Chip ([184a0a8](https://github.com/natura-cosmeticos/natds-android/commit/184a0a8eb1e241b280892d83f838ba53ce4e479d))
+* adds script to add activity at manifest ([ef29370](https://github.com/natura-cosmeticos/natds-android/commit/ef293706cc7eabde7285c330a417f39a67928001))
+* adds script to create base component skeleton ([e9ae4de](https://github.com/natura-cosmeticos/natds-android/commit/e9ae4dee48a9318481e0ac39c5bcccefcac9bd3e))
+* adds select component and its use at sample app ([c4e491b](https://github.com/natura-cosmeticos/natds-android/commit/c4e491bf0863139ae9a44da5c7ec6494403adfc5))
+* adds unit test to Chip component ([26ac911](https://github.com/natura-cosmeticos/natds-android/commit/26ac911383b351fc62f7a450971de4f610b631af))
+
+
+### Bug Fixes
+
+* fix label colors at Chip component to avoid contrast fail ([e060da6](https://github.com/natura-cosmeticos/natds-android/commit/e060da614d7af818442a652b9b2f8b6ed412f60e))
+* fixes behavor to define color to item selected at Select component ([66cb73d](https://github.com/natura-cosmeticos/natds-android/commit/66cb73d206f0e76e3e6c8ffe27a28e4c5f5a9168))
+* fixes text color at spinner item and update spinner documentation ([96d33b8](https://github.com/natura-cosmeticos/natds-android/commit/96d33b8d2a208076b7bae53a3153e749a015d22f))
+
 ## [9.24.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.23.0...v.9.24.0) (2022-07-15)
 
 
