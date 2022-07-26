@@ -42,6 +42,9 @@
         <item name="colorLowEmphasisOpacityDisabledLow">#3DBBBBBB</item>
         <item name="colorHighLightOpacityFull">#FFFFFFFF</item>
 
+        <item name="colorTranparent">#00FFFFFF</item>
+        <item name="chipSemiXBorderRadius">@dimen/ssotdee911e3860cd0a0c290215546ecdc43</item>
+
         <!-- { @deprecated Tokens }-->
         <item name="opacity01">@dimen/ds_opacity01</item>
         <item name="opacity02">@dimen/ds_opacity02</item>

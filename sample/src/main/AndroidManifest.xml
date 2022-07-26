@@ -128,5 +128,8 @@
             android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".AppBarTopAttributesActivity"/>
+        <activity 
+            android:name=".components.ChipActivity" 
+            android:theme="@style/Theme.Natura.Light" />
     </application>
 </manifest>

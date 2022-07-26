@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chip_main_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chip_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="?elevation04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/chp_ripple_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/chip_ripple_background"
+            android:elevation="?elevation04"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/chp_background" />
+
+        <LinearLayout
+            android:id="@+id/chp_background"
+            android:layout_width="wrap_content"
+            android:layout_height="?sizeSemi"
+            android:background="@drawable/chip_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="?spacingTiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:backgroundTint="?colorPrimary">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chp_avatar_container_left"
+                android:layout_width="?sizeStandard"
+                android:layout_height="?sizeStandard"
+                android:layout_marginEnd="?spacingMicro"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/chp_avatar_left"
+                    android:layout_width="?sizeStandard"
+                    android:layout_height="?sizeStandard"
+                    tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageView
+                android:id="@+id/chp_icon_left"
+                android:layout_width="?sizeStandard"
+                android:layout_height="?sizeStandard"
+                android:layout_marginEnd="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            <TextView
+                android:id="@+id/chp_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.DS.Chip.Label"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="chip example" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/chp_avatar_container_right"
+                android:layout_width="?sizeStandard"
+                android:layout_height="?sizeStandard"
+                android:layout_marginStart="?spacingMicro"
+                android:visibility="gone"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/chp_avatar_right"
+                    android:layout_width="?sizeStandard"
+                    android:layout_height="?sizeStandard"
+                    tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/chp_icon_right"
+                android:layout_width="?sizeStandard"
+                android:layout_height="?sizeStandard"
+                android:layout_marginStart="?spacingMicro"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

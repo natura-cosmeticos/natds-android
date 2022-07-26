@@ -3,7 +3,27 @@ package com.natura.android.sample
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.natura.android.sample.components.*
+import com.natura.android.sample.components.AvatarActivity
+import com.natura.android.sample.components.BadgeActivity
+import com.natura.android.sample.components.ButtonActivity
+import com.natura.android.sample.components.CardActivity
+import com.natura.android.sample.components.CheckBoxActivity
+import com.natura.android.sample.components.ChipActivity
+import com.natura.android.sample.components.CounterActivity
+import com.natura.android.sample.components.DialogActivity
+import com.natura.android.sample.components.DividerActivity
+import com.natura.android.sample.components.ExpandableNavigationViewActivity
+import com.natura.android.sample.components.ExpansionPanelActivity
+import com.natura.android.sample.components.IconButtonActivity
+import com.natura.android.sample.components.MenuActivity
+import com.natura.android.sample.components.ProgressIndicatorActivity
+import com.natura.android.sample.components.RadioButtonActivity
+import com.natura.android.sample.components.SelectActivity
+import com.natura.android.sample.components.ShortcutActivity
+import com.natura.android.sample.components.SubmenuActivity
+import com.natura.android.sample.components.TagActivity
+import com.natura.android.sample.components.TextFieldActivity
+import com.natura.android.sample.components.ValueTextHighlightActivity
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
@@ -164,6 +184,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnAvatar.setOnClickListener {
             startActivity(Intent(this, AvatarActivity::class.java))
+        }
+
+        binding.chipButton.setOnClickListener {
+            startActivity(Intent(this, ChipActivity::class.java))
         }
     }
 }

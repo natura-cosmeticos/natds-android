@@ -259,6 +259,7 @@
     <string name="main_screen_button_text">Button</string>
     <string name="main_screen_card_text">Card</string>
     <string name="main_screen_checkbox_text">Checkbox</string>
+    <string name="main_screen_chip_text">Chip</string>
     <string name="main_screen_counter_text">Counter</string>
     <string name="main_screen_dialog_text">Dialog</string>
     <string name="main_screen_divider_text">Divider</string>

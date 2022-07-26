@@ -12,6 +12,7 @@
     <attr name="colorHighlightOpacityMediumHigh" format="color"/>
     <attr name="colorLowEmphasisOpacityDisabledLow" format="color"/>
     <attr name="colorHighLightOpacityFull" format="color"/>
+    <attr name="colorTranparent" format="color"/>
 
     <!-- opacity tokens attributes -->
     <attr name="opacity01" format="dimension"/>
@@ -137,6 +138,9 @@
     <attr name="avatarMedium" format="reference"/>
     <attr name="avatarLargexxx" format="reference"/>
 
+    <!-- Chip reference -->
+    <attr name="chipSemiXBorderRadius" format="reference"/>
+    
     <!-- { @deprecated Attributes }-->
     <attr name="buttonDefaultFontSize" format="dimension" />
     <attr name="buttonDefaultFontWeight" formastring="string" />
