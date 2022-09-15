@@ -254,6 +254,7 @@
     <string name="main_screen_custom_typography_text">Custom Typography</string>
     <string name="main_screen_component_text">COMPONENT (A-Z)</string>
     <string name="main_screen_app_bar_top_text">App Bar Top</string>
+    <string name="main_screen_alert">Alert</string>
     <string name="main_screen_avatar_text">Avatar</string>
     <string name="main_screen_badge_text">Badge</string>
     <string name="main_screen_button_text">Button</string>
@@ -459,4 +460,17 @@
     <string name="brand_selector_natura_text">Natura</string>
     <string name="brand_selector_naturaeco_text">NaturaeCo</string>
     <string name="brand_selector_tbs_text">The Body Shop</string>
+    <string name="alert_with_title">Alert Only Title</string>
+    <string name="alert_success">Alert Success</string>
+    <string name="alert_success_outlined">Alert Success Outlined</string>
+    <string name="alert_error">Alert Error</string>
+    <string name="alert_error_outlined">Alert Error Outlined</string>
+    <string name="alert_warning">Alert Warning</string>
+    <string name="alert_warning_outlined">Alert Warning Outlined</string>
+    <string name="alert_info">Alert Info</string>
+    <string name="alert_info_outlined">Alert Info Outlined</string>
+    <string name="alert_custom">Alert Custom</string>
+    <string name="alert_custom_outlined">Alert Custom Outlined</string>
+    <string name="alert_description">Lorem ipsum dolor sit amet. Est aliquam rerum aut voluptatibus quasi ut tenetur laborum. Ut quae reiciendis et voluptatibus voluptatem ut itaque voluptatem.</string>
+    <string name="alert_button_label">Button</string>
 </resources>
