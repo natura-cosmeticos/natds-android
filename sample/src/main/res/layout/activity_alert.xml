@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?spacingSmall">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertSuccessOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_success_outlined"
+            app:show_icon="true"
+            app:iconName="outlined_alert_check"
+            app:alert_type="outlined"
+            app:alert_color="success"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:text="@string/alert_description">
+            </TextView>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertErrorOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_error_outlined"
+            app:show_icon="true"
+            app:iconName="outlined_alert_cancel"
+            app:alert_type="outlined"
+            app:alert_color="error"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:text="@string/alert_description">
+            </TextView>
+
+        </com.natura.android.alert.Alert>
+
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWarningOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_warning_outlined"
+            app:show_icon="true"
+            app:iconName="outlined_alert_warning"
+            app:alert_type="outlined"
+            app:alert_color="warning"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:text="@string/alert_description"/>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertInfoOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_info_outlined"
+            app:show_icon="true"
+            app:iconName="outlined_alert_info"
+            app:alert_type="outlined"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:text="@string/alert_description"/>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertCustomOutlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_custom_outlined"
+            app:show_icon="true"
+            app:alert_type="outlined"
+            app:alert_color="custom"
+            app:alert_custom_background_color="@color/avonDarkPrimary"
+            app:alert_custom_stroke_color="@color/avonSecondary"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"
+                    android:textColor="@color/tbsLightSecondary"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertSuccessContained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_success"
+            app:show_icon="true"
+            app:iconName="outlined_alert_check"
+            app:alert_type="contained"
+            app:alert_color="success"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertErrorContained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_error"
+            app:show_icon="true"
+            app:iconName="outlined_alert_cancel"
+            app:alert_type="contained"
+            app:alert_color="error"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWarningContained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_warning"
+            app:show_icon="true"
+            app:iconName="outlined_alert_warning"
+            app:alert_type="contained"
+            app:alert_color="warning"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertInfoContained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_info"
+            app:show_icon="true"
+            app:iconName="outlined_alert_info"
+            app:alert_type="contained"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertCustomContained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_custom"
+            app:show_icon="true"
+            app:alert_type="contained"
+            app:alert_color="custom"
+            app:alert_custom_background_color="@color/avonDarkPrimary"
+            app:alert_custom_stroke_color="@color/avonSecondary"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"
+                    android:textColor="@color/tbsLightSecondary"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWithTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_with_title"
+            app:show_icon="false"
+            app:iconName="outlined_alert_info"
+            app:alert_type="contained"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWithIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="false"
+            app:show_icon="true"
+            app:iconName="outlined_alert_info"
+            app:alert_type="contained"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_description"
+                android:layout_marginTop="?spacingSmall"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="?spacingSmall"
+                android:layout_marginBottom="?spacingSmall"/>
+
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWithLargeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_info"
+            app:show_icon="true"
+            app:iconName="outlined_alert_info"
+            app:alert_type="contained"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:layout_marginEnd="?spacingSmall"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+                <com.natura.android.button.OutlinedButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_button_label"
+                    android:layout_marginTop="?spacingTiny"
+                    app:bt_size="small"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+        <com.natura.android.alert.Alert
+            android:id="@+id/alertWithSmallButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:show_title="true"
+            app:title_text="@string/alert_info"
+            app:show_icon="true"
+            app:iconName="outlined_alert_info"
+            app:alert_type="contained"
+            app:alert_color="info"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginStart="?spacingStandard"
+            android:layout_marginEnd="?spacingStandard">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingLarge"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="?spacingStandard"
+                android:layout_marginEnd="?spacingSmall"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_description"/>
+
+                <com.natura.android.button.OutlinedButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alert_button_label"
+                    android:layout_marginTop="?spacingTiny"
+                    app:bt_size="small"/>
+
+            </LinearLayout>
+
+        </com.natura.android.alert.Alert>
+
+    </LinearLayout>
+
+</ScrollView>
