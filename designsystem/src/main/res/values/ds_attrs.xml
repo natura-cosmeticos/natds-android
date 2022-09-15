@@ -420,4 +420,24 @@
 
     </declare-styleable>
 
+    <declare-styleable name="Alert">
+        <attr name="show_title" format="boolean"/>
+        <attr name="title_text" format="string" />
+        <attr name="show_icon" format="boolean"/>
+        <attr name="iconName"/>
+        <attr name="alert_type" format="enum">
+            <enum name="contained" value="0" />
+            <enum name="outlined" value="1" />
+        </attr>
+        <attr name="alert_color" format="enum">
+            <enum name="success" value="0"/>
+            <enum name="error" value="1"/>
+            <enum name="warning" value="2"/>
+            <enum name="info" value="3"/>
+            <enum name="custom" value="4"/>
+        </attr>
+        <attr name="alert_custom_background_color" format="color"/>
+        <attr name="alert_custom_stroke_color" format="color"/>
+    </declare-styleable>
+
 </resources>
