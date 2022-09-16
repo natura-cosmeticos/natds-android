@@ -213,15 +213,15 @@ Alert without title
 ## Light mode / Dark mode
 
 <p align="center">
-  <img alt="Alert Light" src="./images/textfield_lightMode.png" width="40%"> 
+  <img alt="Alert Light" src="./images/alert_lightMode.png" width="40%"> 
 &nbsp;
-  <img alt="Alert Dark" src="./images/textfield_darkMode.png" width="40%">
+  <img alt="Alert Dark" src="./images/alert_darkMode.png" width="40%">
 </p>
 
 
 ## More code
-You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_textfield.xml).
+You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_alert.xml).
 
 ## Attention points
 
-1. A alert is a DS component based on DS **multibrand themes**. It means if you want to use a alert in your app, you MUST set the DS theme on a view parent or in the alert component itself. [Check more info about how to set DS themes in your app](../README.md).
+1. An alert is a DS component based on DS **multibrand themes**. It means if you want to use an alert in your app, you MUST set the DS theme on a view parent or in the alert component itself. [Check more info about how to set DS themes in your app](../README.md).
