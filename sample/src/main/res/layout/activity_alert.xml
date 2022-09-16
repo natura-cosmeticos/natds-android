@@ -28,8 +28,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
+                android:textColor="@color/colorHighEmphasis"
                 android:text="@string/alert_description">
             </TextView>
 
@@ -53,8 +54,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
+                android:textColor="@color/colorHighEmphasis"
                 android:text="@string/alert_description">
             </TextView>
 
@@ -79,8 +81,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
+                android:textColor="@color/colorHighEmphasis"
                 android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
@@ -103,8 +106,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
+                android:textColor="@color/colorHighEmphasis"
                 android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
@@ -124,21 +128,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"
-                    android:textColor="@color/tbsLightSecondary"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -157,20 +154,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -188,20 +179,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -219,20 +204,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -251,20 +230,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -283,21 +256,14 @@
             android:layout_marginStart="?spacingStandard"
             android:layout_marginEnd="?spacingStandard">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/alert_description"
-                    android:textColor="@color/tbsLightSecondary"/>
-
-            </LinearLayout>
+                android:textColor="@color/colorHighEmphasis"
+                android:text="@string/alert_description"/>
 
         </com.natura.android.alert.Alert>
 
@@ -332,9 +298,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/colorHighEmphasis"
                 android:text="@string/alert_description"
                 android:layout_marginTop="?spacingSmall"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginEnd="?spacingSmall"
                 android:layout_marginBottom="?spacingSmall"/>
 
@@ -359,7 +326,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
                 android:layout_marginEnd="?spacingSmall"
                 android:orientation="vertical">
@@ -367,12 +334,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorHighEmphasis"
                     android:text="@string/alert_description"/>
 
                 <com.natura.android.button.OutlinedButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/alert_button_label"
+                    android:textColor="@color/colorHighEmphasis"
                     android:layout_marginTop="?spacingTiny"
                     app:bt_size="small"/>
 
@@ -398,7 +367,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingLarge"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="?spacingLarge"
                 android:layout_marginBottom="?spacingStandard"
                 android:layout_marginEnd="?spacingSmall"
                 android:orientation="vertical">
@@ -406,12 +375,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/colorHighEmphasis"
                     android:text="@string/alert_description"/>
 
                 <com.natura.android.button.OutlinedButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/alert_button_label"
+                    android:textColor="@color/colorHighEmphasis"
                     android:layout_marginTop="?spacingTiny"
                     app:bt_size="small"/>
 
