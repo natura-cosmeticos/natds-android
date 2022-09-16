@@ -34,9 +34,8 @@ show_icon
 |`app:iconName`| Receives a string with the drawable to be render at component| string | text (icon name)
 |`app:alert_type`| Defines whether the alert should render the contained or outlined border | string | contained, outlined
 |`app:alert_color`| Sets the alert color | string | success, error, warning, info, custom
-
-|`app:alert_custom_background_color`| Give the alert a custom color | color | success, error, warning, info, custom
-|`app:alert_custom_stroke_color`| Give the stroke a custom color | color | success, error, warning, info, custom
+|`app:alert_custom_background_color`| Give the alert a custom color | color | colorToken
+|`app:alert_custom_stroke_color`| Give the stroke a custom color | color | colorToken
 
 
 
