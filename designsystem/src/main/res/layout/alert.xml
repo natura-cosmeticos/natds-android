@@ -13,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
+        app:iconColor="@color/colorHighEmphasis"
+        android:paddingStart="?spacingTiny"
         app:buttonColor="defaultColor"
         app:iconName="outlined_default_mockup" />
 
@@ -20,5 +22,6 @@
         android:id="@+id/alert_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorHighEmphasis"
         style="@style/TextAppearance.AppCompat.Title"/>
 </LinearLayout>
