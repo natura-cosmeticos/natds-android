@@ -139,6 +139,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/btnAlert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/main_screen_alert"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/btnAppBarTop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
