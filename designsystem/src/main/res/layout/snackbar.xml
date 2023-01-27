@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="?elevation05">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/snackBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="?spacingStandard"
+        android:layout_marginVertical="?spacingSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInnerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="?spacingSmall">
+
+            <ImageView
+                android:id="@+id/ivTitleIcon"
+                android:layout_width="?sizeSemi"
+                android:layout_height="?sizeSemi"
+                android:background="@drawable/default_icon_outlined_default_mockup"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="?spacingTiny"
+                android:layout_marginBottom="?spacingSmall"
+                android:textAppearance="?textAppearanceHeadline6"
+                app:layout_constraintBottom_toTopOf="@id/txtMessage"
+                app:layout_constraintStart_toEndOf="@id/ivTitleIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Title" />
+
+            <ImageView
+                android:id="@+id/ivNoTitleIcon"
+                android:layout_width="?sizeSemi"
+                android:layout_height="?sizeSemi"
+                android:background="@drawable/default_icon_outlined_default_mockup"
+                android:backgroundTint="@color/white"
+                android:translationY="-5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtMessage" />
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="?spacingTiny"
+                android:textAppearance="?textAppearanceBody1"
+                app:layout_constraintStart_toEndOf="@id/ivNoTitleIcon"
+                app:layout_constraintTop_toTopOf="@id/ivNoTitleIcon"
+                app:layout_constraintEnd_toStartOf="@id/clButtonContainer"
+                tools:text="The snackbar text goes here.The snackbar text goes here.The snackbar text goes here." />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/txtMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/txtMessage">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnInline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Button"
+                    app:button_enabled="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/btnIcon"
+                    android:layout_width="?sizeSemiX"
+                    android:layout_height="?sizeSemiX"
+                    android:background="@drawable/default_icon_outlined_default_mockup"
+                    android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?spacingTiny"
+                tools:text="Button with a large text"
+                app:button_enabled="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMessage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
