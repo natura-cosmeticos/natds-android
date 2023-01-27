@@ -16,7 +16,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$android_tools_gradle"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.google.gms:google-services:4.3.10'
