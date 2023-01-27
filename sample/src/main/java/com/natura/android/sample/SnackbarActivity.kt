@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.natura.android.sample.databinding.ActivitySnackbarBinding
-import com.natura.android.snackbar.SnackbarActionButtonType
-import com.natura.android.snackbar.SnackbarDS
-import com.natura.android.snackbar.SnackbarFeedbackType
+import com.natura.android.snackbar.*
 
 class SnackbarActivity : AppCompatActivity() {
     private lateinit var  binding: ActivitySnackbarBinding
@@ -169,5 +167,58 @@ class SnackbarActivity : AppCompatActivity() {
             snackbarDS?.show()
         }
 
+        binding.btnAnimationCenterTop.setOnClickListener {
+            snackbarDS?.dismiss()
+            snackbarDS = SnackbarDS(
+                mainView = binding.root,
+                message = "This is the INFO snack feedback",
+                feedbackType = SnackbarFeedbackType.INFO,
+                iconName = "outlined-navigation-exit",
+                animation = true,
+                positionType = SnackbarPositionType.TOP,
+                animationtype = SnackbarAnimationtype.CENTER
+            )
+            snackbarDS?.show()
+        }
+
+        binding.btnAnimationCenterBottom.setOnClickListener {
+            snackbarDS?.dismiss()
+            snackbarDS = SnackbarDS(
+                mainView = binding.root,
+                message = "This is the INFO snack feedback",
+                feedbackType = SnackbarFeedbackType.INFO,
+                iconName = "outlined-navigation-exit",
+                animation = true,
+                positionType = SnackbarPositionType.BOTTOM,
+                animationtype = SnackbarAnimationtype.CENTER
+            )
+            snackbarDS?.show()
+        }
+        binding.btnAnimationLeft.setOnClickListener {
+            snackbarDS?.dismiss()
+            snackbarDS = SnackbarDS(
+                mainView = binding.root,
+                message = "This is the INFO snack feedback",
+                feedbackType = SnackbarFeedbackType.INFO,
+                iconName = "outlined-navigation-exit",
+                animation = true,
+                positionType = SnackbarPositionType.BOTTOM,
+                animationtype = SnackbarAnimationtype.LEFT
+            )
+            snackbarDS?.show()
+        }
+        binding.btnAnimationRight.setOnClickListener {
+            snackbarDS?.dismiss()
+            snackbarDS = SnackbarDS(
+                mainView = binding.root,
+                message = "This is the INFO snack feedback",
+                feedbackType = SnackbarFeedbackType.INFO,
+                iconName = "outlined-navigation-exit",
+                animation = true,
+                positionType = SnackbarPositionType.TOP,
+                animationtype = SnackbarAnimationtype.RIGHT
+            )
+            snackbarDS?.show()
+        }
     }
 }
