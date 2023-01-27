@@ -16,7 +16,7 @@ import com.natura.android.databinding.SnackbarBinding
 import com.natura.android.resources.getIconResourceIdFromName
 
 
-class Snackbar private constructor(
+class SnackBar private constructor(
     private val snackMainView: View,
     private val snackMessage: String,
     private val snackTitle: String? = null,

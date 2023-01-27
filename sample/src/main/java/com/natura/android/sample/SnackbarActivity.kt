@@ -8,7 +8,7 @@ import com.natura.android.snackbar.*
 
 class SnackbarActivity : AppCompatActivity() {
     private lateinit var  binding: ActivitySnackbarBinding
-    private var snackbarDS: Snackbar? = null
+    private var snackBarDS: SnackBar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
         super.onCreate(savedInstanceState)
@@ -20,8 +20,8 @@ class SnackbarActivity : AppCompatActivity() {
         title = "SnackBar"
 
         binding.btnDefaultSnackbar.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "",
                 message = "This message is showing according with default test",
@@ -32,11 +32,11 @@ class SnackbarActivity : AppCompatActivity() {
                 mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
 
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWithTitle.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -46,11 +46,11 @@ class SnackbarActivity : AppCompatActivity() {
                 },
                 mainButtonType = SnackbarActionButtonType.INLINE_BOTTON
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWithIcon.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -62,12 +62,12 @@ class SnackbarActivity : AppCompatActivity() {
                 showIcon = true,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWithIconNoButton.setOnClickListener {
 
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -75,19 +75,19 @@ class SnackbarActivity : AppCompatActivity() {
                 showIcon = true,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnOnlyText.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This message is showing according with default test",
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWithBlockButton.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -99,11 +99,11 @@ class SnackbarActivity : AppCompatActivity() {
                 showIcon = true,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWithIconButton.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -116,62 +116,62 @@ class SnackbarActivity : AppCompatActivity() {
                 showIcon = true,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnDefaultFeedback.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the default snackbar feedback",
                 feedbackType = SnackbarFeedbackType.DEFAULT,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnSuccessFeedback.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the SUCCESS snackbar feedback",
                 feedbackType = SnackbarFeedbackType.SUCCESS,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnErrorFeedback.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the ERROR snackbar feedback",
                 feedbackType = SnackbarFeedbackType.ERROR,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnWarningFeedback.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the WARNING snackbar feedback",
                 feedbackType = SnackbarFeedbackType.WARNING,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnInfoFeedback.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit"
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
 
         binding.btnAnimationCenterTop.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
@@ -180,12 +180,12 @@ class SnackbarActivity : AppCompatActivity() {
                 positionType = SnackbarPositionType.TOP,
                 animationType = SnackbarAnimationtype.CENTER
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
 
         binding.btnAnimationCenterBottom.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
@@ -194,11 +194,11 @@ class SnackbarActivity : AppCompatActivity() {
                 positionType = SnackbarPositionType.BOTTOM,
                 animationType = SnackbarAnimationtype.CENTER
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnAnimationLeft.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
@@ -207,11 +207,11 @@ class SnackbarActivity : AppCompatActivity() {
                 positionType = SnackbarPositionType.BOTTOM,
                 animationType = SnackbarAnimationtype.LEFT
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnAnimationRight.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
@@ -220,12 +220,12 @@ class SnackbarActivity : AppCompatActivity() {
                 positionType = SnackbarPositionType.TOP,
                 animationType = SnackbarAnimationtype.RIGHT
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
 
         binding.btnIndeterminateTimer.setOnClickListener {
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "",
                 message = "SnackBar showing til user interact with it",
@@ -236,11 +236,11 @@ class SnackbarActivity : AppCompatActivity() {
                 mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
                 timerType = SnackbarTimerType.INDETERMINATE
                 )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
         binding.btnCustomTimer.setOnClickListener{
-            snackbarDS?.dismiss()
-            snackbarDS = Snackbar(
+            snackBarDS?.dismiss()
+            snackBarDS = SnackBar(
                 mainView = binding.root,
                 title = "",
                 message = "Time showing snackbar 30 seconds",
@@ -252,7 +252,7 @@ class SnackbarActivity : AppCompatActivity() {
                 timerType = SnackbarTimerType.CUSTOM,
                 customTimerMillisecondInterval = 30000
             )
-            snackbarDS?.show()
+            snackBarDS?.show()
         }
     }
 }
