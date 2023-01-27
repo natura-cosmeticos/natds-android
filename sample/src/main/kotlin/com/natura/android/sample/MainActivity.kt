@@ -173,5 +173,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnAlert.setOnClickListener{
             startActivity(Intent(this, AlertActivity::class.java))
         }
+        binding.btnSnackbar.setOnClickListener{
+            startActivity(Intent(this, SnackbarActivity::class.java))
+        }
     }
 }

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SnackbarActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="?spacingSmall"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnDefaultSnackbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+        <Button
+            android:id="@+id/btnWithTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Title"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnWithIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Icon"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnWithIconNoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Icon, No Button"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnOnlyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Only Text"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnWithBlockButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With BlockButton"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnWithIconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With IconButton"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+
+        <Button
+            android:id="@+id/btnDefaultFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default Feedback"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnSuccessFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success Feedback"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnErrorFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Error Feedback"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnWarningFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Warning Feedback"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+
+        <Button
+            android:id="@+id/btnInfoFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Info Feedback"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="?spacingSmall"
+            />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
