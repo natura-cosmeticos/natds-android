@@ -2,7 +2,6 @@ package com.natura.android.snackbar
 
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
 import android.os.CountDownTimer
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -10,13 +9,10 @@ import android.view.View
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.doOnDetach
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.natura.android.R
 import com.natura.android.databinding.SnackbarBinding
-import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.getIconResourceIdFromName
-import com.natura.android.shortcut.Shortcut
 
 
 class SnackbarDS private constructor(
@@ -29,13 +25,13 @@ class SnackbarDS private constructor(
     private val snackIconName: String? = null,
     private val snackIconButtonName: String? = null,
     private val snackFeedbackType: SnackbarFeedbackType? = null,
-    private val snackPositionType: SnackbarPositionType = SnackbarPositionType.BOTTOM,
-    private val snackAnimationtype: SnackbarAnimationtype = SnackbarAnimationtype.NONE,
+    private val snackPositionType: SnackbarPositionType? = SnackbarPositionType.BOTTOM,
+    private val snackAnimation: Boolean = false,
+    private val snackAnimationtype: SnackbarAnimationtype? = SnackbarAnimationtype.NONE,
     private val snackTimerType: SnackbarTimerType = SnackbarTimerType.MINIMUM,
-    private val snackCustomTimerMillisecondInterval: Int = 0,
+    private val snackCustomTimerMillisecondInterval: Int? = null,
     private val snackActionButtonType: SnackbarActionButtonType? = null
-
-    ){
+) {
 
     @JvmOverloads
     constructor(
@@ -44,14 +40,16 @@ class SnackbarDS private constructor(
         message: String,
         mainButtonTitle: String?,
         mainButtonAction: (() -> Unit)?,
-        mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.INLINE_BOTTON
+        mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.INLINE_BOTTON,
+        animation: Boolean = false
     ) : this(
         snackMainView = mainView,
         snackTitle = title,
         snackMessage = message,
         snackMainButtonTitle = mainButtonTitle,
         snackMainButtonAction = mainButtonAction,
-        snackActionButtonType = mainButtonType
+        snackActionButtonType = mainButtonType,
+        snackAnimation = animation
     )
 
     @JvmOverloads
@@ -59,14 +57,20 @@ class SnackbarDS private constructor(
         mainView: View,
         message: String,
         feedbackType: SnackbarFeedbackType,
-        iconName: String
+        iconName: String,
+        animation: Boolean = false,
+        positionType: SnackbarPositionType? = null,
+        animationtype: SnackbarAnimationtype? = null
     ) : this(
         snackMainView = mainView,
         snackTitle = "",
         snackMessage = message,
         showSnackIcon = true,
         snackIconName = iconName,
-        snackFeedbackType = feedbackType
+        snackFeedbackType = feedbackType,
+        snackAnimation = animation,
+        snackPositionType = positionType,
+        snackAnimationtype = animationtype
     )
 
 
@@ -83,8 +87,9 @@ class SnackbarDS private constructor(
         positionType: SnackbarPositionType = SnackbarPositionType.BOTTOM,
         animationType: SnackbarAnimationtype = SnackbarAnimationtype.NONE,
         timerType: SnackbarTimerType = SnackbarTimerType.MINIMUM,
-        mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.NONE
-    ) : this (
+        mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.NONE,
+        animation: Boolean = false
+    ) : this(
         snackMainView = mainView,
         snackTitle = title,
         snackMessage = message,
@@ -96,7 +101,8 @@ class SnackbarDS private constructor(
         snackPositionType = positionType,
         snackAnimationtype = animationType,
         snackTimerType = timerType,
-        snackActionButtonType = mainButtonType
+        snackActionButtonType = mainButtonType,
+        snackAnimation = animation
     )
 
     private var snackbarBody: MaterialCardView? = null
@@ -135,37 +141,37 @@ class SnackbarDS private constructor(
         }
     }
 
-    private fun setSnackTexts(){
+    private fun setSnackTexts() {
         binding?.txtMessage?.text = snackMessage
-        if(!snackTitle.isNullOrEmpty()){
+        if (!snackTitle.isNullOrEmpty()) {
             binding?.txtTitle?.text = snackTitle
-        }else{
+        } else {
             binding?.txtTitle?.visibility = View.GONE
         }
     }
 
-    private fun setSnackIcon(){
-        val titleIcon =  binding?.ivTitleIcon
+    private fun setSnackIcon() {
+        val titleIcon = binding?.ivTitleIcon
         val noTitleIcon = binding?.ivNoTitleIcon
-        when(showSnackIcon){
+        when (showSnackIcon) {
             true -> {
-                if(snackTitle?.isNotEmpty() == true){
+                if (snackTitle?.isNotEmpty() == true) {
                     titleIcon?.visibility = View.VISIBLE
                     noTitleIcon?.visibility = View.GONE
-                }else{
+                } else {
                     titleIcon?.visibility = View.GONE
                     noTitleIcon?.visibility = View.VISIBLE
                 }
             }
-            false ->{
+            false -> {
                 titleIcon?.visibility = View.GONE
                 noTitleIcon?.visibility = View.GONE
             }
         }
 
         snackIconName?.let {
-            setIcon(it,titleIcon)
-            setIcon(it,noTitleIcon)
+            setIcon(it, titleIcon)
+            setIcon(it, noTitleIcon)
         }
     }
 
@@ -175,22 +181,22 @@ class SnackbarDS private constructor(
     }
 
 
-    private fun setActionButtonType(){
-        val btnInline =  binding?.btnInline
-        val btnBlock =  binding?.btnBlock
-        val btnIcon =  binding?.btnIcon
+    private fun setActionButtonType() {
+        val btnInline = binding?.btnInline
+        val btnBlock = binding?.btnBlock
+        val btnIcon = binding?.btnIcon
         snackMainButtonTitle?.let {
             btnInline?.text = it
             btnBlock?.text = it
         }
 
-        when(snackActionButtonType){
+        when (snackActionButtonType) {
             SnackbarActionButtonType.NONE -> {
                 btnInline?.visibility = View.GONE
                 btnBlock?.visibility = View.GONE
                 btnIcon?.visibility = View.GONE
             }
-            SnackbarActionButtonType.BLOCK_BOTTON ->{
+            SnackbarActionButtonType.BLOCK_BOTTON -> {
                 btnInline?.visibility = View.GONE
                 btnBlock?.visibility = View.VISIBLE
                 btnIcon?.visibility = View.GONE
@@ -206,7 +212,7 @@ class SnackbarDS private constructor(
                 btnIcon?.visibility = View.VISIBLE
 
                 snackIconButtonName?.let {
-                    setIcon(it,btnIcon)
+                    setIcon(it, btnIcon)
                 }
             }
         }
@@ -216,8 +222,7 @@ class SnackbarDS private constructor(
     }
 
 
-
-    private fun setPositionType(){
+    private fun setPositionType() {
         when (snackPositionType) {
             SnackbarPositionType.TOP -> {
                 val location = IntArray(2)
@@ -231,13 +236,13 @@ class SnackbarDS private constructor(
         }
     }
 
-    private fun setFeedbackType(){
-        when(snackFeedbackType){
+    private fun setFeedbackType() {
+        when (snackFeedbackType) {
             SnackbarFeedbackType.SUCCESS,
             SnackbarFeedbackType.DEFAULT,
             SnackbarFeedbackType.ERROR,
             SnackbarFeedbackType.WARNING,
-            SnackbarFeedbackType.INFO ->{
+            SnackbarFeedbackType.INFO -> {
                 binding?.txtTitle?.visibility = View.GONE
                 binding?.ivTitleIcon?.visibility = View.GONE
                 binding?.btnBlock?.visibility = View.GONE
@@ -249,15 +254,33 @@ class SnackbarDS private constructor(
         }
     }
 
-    private fun setAnimationtype(){
+    private fun setAnimationtype() {
 
+        if (snackAnimation) {
+            when (snackAnimationtype) {
+                SnackbarAnimationtype.CENTER -> {
+                    when (snackPositionType) {
+                        SnackbarPositionType.TOP -> popupWindow?.animationStyle =
+                            R.style.SnackBarInOutFromTop
+                        SnackbarPositionType.BOTTOM -> popupWindow?.animationStyle =
+                            (R.style.SnackBarInOutFromBottom)
+                    }
+                }
+                SnackbarAnimationtype.LEFT -> popupWindow?.animationStyle =
+                    R.style.SnackBarInLeftOutRight
+                SnackbarAnimationtype.RIGHT -> popupWindow?.animationStyle =
+                    R.style.SnackBarInRightOutLeft
+            }
+        }
     }
 
-
-    private fun setTimerType(){
-        when(snackTimerType){
-            SnackbarTimerType.MINIMUM ->{
-               timer = object : CountDownTimer(MINIMUM_INTERVAL_MILLISECOND.toLong(),MINIMUM_INTERVAL_MILLISECOND.toLong()){
+    private fun setTimerType() {
+        when (snackTimerType) {
+            SnackbarTimerType.MINIMUM -> {
+                timer = object : CountDownTimer(
+                    MINIMUM_INTERVAL_MILLISECOND.toLong(),
+                    MINIMUM_INTERVAL_MILLISECOND.toLong()
+                ) {
                     override fun onTick(millisUntilFinished: Long) {}
                     override fun onFinish() {
                         popupWindow?.dismiss()
@@ -265,20 +288,27 @@ class SnackbarDS private constructor(
                 }.start()
             }
             SnackbarTimerType.INTERMEDIARY -> {
-               timer = object : CountDownTimer(INTERMEDIARY_INTERVAL_MILLISECOND.toLong(),INTERMEDIARY_INTERVAL_MILLISECOND.toLong()){
+                timer = object : CountDownTimer(
+                    INTERMEDIARY_INTERVAL_MILLISECOND.toLong(),
+                    INTERMEDIARY_INTERVAL_MILLISECOND.toLong()
+                ) {
                     override fun onTick(millisUntilFinished: Long) {}
                     override fun onFinish() {
                         popupWindow?.dismiss()
                     }
                 }.start()
             }
-            SnackbarTimerType.INDETERMINATE ->{
+            SnackbarTimerType.INDETERMINATE -> {
                 snackbarBody?.setOnClickListener {
                     popupWindow?.dismiss()
                 }
             }
             SnackbarTimerType.CUSTOM -> {
-                timer = object : CountDownTimer(snackCustomTimerMillisecondInterval.toLong(),snackCustomTimerMillisecondInterval.toLong()){
+                SNA
+                timer = object : CountDownTimer(
+                    snackCustomTimerMillisecondInterval.toLong(),
+                    snackCustomTimerMillisecondInterval.toLong()
+                ) {
                     override fun onTick(millisUntilFinished: Long) {}
                     override fun onFinish() {
                         popupWindow?.dismiss()
@@ -288,11 +318,11 @@ class SnackbarDS private constructor(
         }
     }
 
-    fun show(){
-        popupWindow?.showAtLocation(snackMainView,gravityPosition, 0, toolbarHeight)
+    fun show() {
+        popupWindow?.showAtLocation(snackMainView, gravityPosition, 0, toolbarHeight)
     }
 
-    fun dismiss(){
+    fun dismiss() {
         popupWindow?.dismiss()
     }
 
@@ -300,9 +330,10 @@ class SnackbarDS private constructor(
 
     }
 
-    private fun getSnackbarAttibutes(){
+    private fun getSnackbarAttibutes() {
 
     }
+
     private fun getAttributesFromTheme(styleAttr: Int) {
 
     }
@@ -324,7 +355,8 @@ class SnackbarDS private constructor(
                 snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#FCC433"))
 
                 binding?.txtMessage?.setTextColor(parseStringColorToInt("#333333"))
-                binding?.ivNoTitleIcon?.backgroundTintList = ColorStateList.valueOf(parseStringColorToInt("#333333"))
+                binding?.ivNoTitleIcon?.backgroundTintList =
+                    ColorStateList.valueOf(parseStringColorToInt("#333333"))
             }
 
             SnackbarFeedbackType.INFO -> {
@@ -349,7 +381,7 @@ class SnackbarDS private constructor(
     }
 }
 
-enum class SnackbarFeedbackType{
+enum class SnackbarFeedbackType {
     DEFAULT,
     SUCCESS,
     ERROR,
@@ -357,29 +389,26 @@ enum class SnackbarFeedbackType{
     INFO
 }
 
-enum class SnackbarPositionType{
+enum class SnackbarPositionType {
     TOP,
     BOTTOM
 }
 
-enum class SnackbarTimerType{
+enum class SnackbarTimerType {
     MINIMUM,
     INTERMEDIARY,
     INDETERMINATE,
     CUSTOM
 }
 
-enum class SnackbarAnimationtype{
+enum class SnackbarAnimationtype {
     NONE,
-    TOP_LEFT,
-    BOTTOM_LEFT,
-    TOP_CENTER,
-    BOTTOM_CENTER,
-    TOP_RIGHT,
-    BOTTOM_RIGHT
+    CENTER,
+    RIGHT,
+    LEFT
 }
 
-enum class SnackbarActionButtonType{
+enum class SnackbarActionButtonType {
     NONE,
     INLINE_BOTTON,
     BLOCK_BOTTON,
