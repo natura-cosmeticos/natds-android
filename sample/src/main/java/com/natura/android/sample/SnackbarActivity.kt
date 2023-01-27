@@ -8,8 +8,9 @@ import com.natura.android.snackbar.*
 
 class SnackbarActivity : AppCompatActivity() {
     private lateinit var  binding: ActivitySnackbarBinding
-    private var snackbarDS: SnackbarDS? = null
+    private var snackbarDS: Snackbar? = null
     override fun onCreate(savedInstanceState: Bundle?) {
+        setChosenDefaultTheme()
         super.onCreate(savedInstanceState)
 
         binding = ActivitySnackbarBinding.inflate(layoutInflater)
@@ -20,7 +21,7 @@ class SnackbarActivity : AppCompatActivity() {
 
         binding.btnDefaultSnackbar.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "",
                 message = "This message is showing according with default test",
@@ -28,13 +29,14 @@ class SnackbarActivity : AppCompatActivity() {
                 mainButtonAction = {
                     Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
                 },
-                mainButtonType = SnackbarActionButtonType.INLINE_BOTTON
+                mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
+
             )
             snackbarDS?.show()
         }
         binding.btnWithTitle.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -48,7 +50,7 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnWithIcon.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -65,7 +67,7 @@ class SnackbarActivity : AppCompatActivity() {
         binding.btnWithIconNoButton.setOnClickListener {
 
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -77,7 +79,7 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnOnlyText.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 message = "This message is showing according with default test",
             )
@@ -85,7 +87,7 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnWithBlockButton.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -101,7 +103,7 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnWithIconButton.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
                 title = "Title",
                 message = "This message is showing according with default test",
@@ -118,9 +120,9 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnDefaultFeedback.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the default snack feedback",
+                message = "This is the default snackbar feedback",
                 feedbackType = SnackbarFeedbackType.DEFAULT,
                 iconName = "outlined-navigation-exit"
             )
@@ -128,9 +130,9 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnSuccessFeedback.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the SUCCESS snack feedback",
+                message = "This is the SUCCESS snackbar feedback",
                 feedbackType = SnackbarFeedbackType.SUCCESS,
                 iconName = "outlined-navigation-exit"
             )
@@ -138,9 +140,9 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnErrorFeedback.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the ERROR snack feedback",
+                message = "This is the ERROR snackbar feedback",
                 feedbackType = SnackbarFeedbackType.ERROR,
                 iconName = "outlined-navigation-exit"
             )
@@ -148,9 +150,9 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnWarningFeedback.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the WARNING snack feedback",
+                message = "This is the WARNING snackbar feedback",
                 feedbackType = SnackbarFeedbackType.WARNING,
                 iconName = "outlined-navigation-exit"
             )
@@ -158,9 +160,9 @@ class SnackbarActivity : AppCompatActivity() {
         }
         binding.btnInfoFeedback.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the INFO snack feedback",
+                message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit"
             )
@@ -169,54 +171,86 @@ class SnackbarActivity : AppCompatActivity() {
 
         binding.btnAnimationCenterTop.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the INFO snack feedback",
+                message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.TOP,
-                animationtype = SnackbarAnimationtype.CENTER
+                animationType = SnackbarAnimationtype.CENTER
             )
             snackbarDS?.show()
         }
 
         binding.btnAnimationCenterBottom.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the INFO snack feedback",
+                message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM,
-                animationtype = SnackbarAnimationtype.CENTER
+                animationType = SnackbarAnimationtype.CENTER
             )
             snackbarDS?.show()
         }
         binding.btnAnimationLeft.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the INFO snack feedback",
+                message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM,
-                animationtype = SnackbarAnimationtype.LEFT
+                animationType = SnackbarAnimationtype.LEFT
             )
             snackbarDS?.show()
         }
         binding.btnAnimationRight.setOnClickListener {
             snackbarDS?.dismiss()
-            snackbarDS = SnackbarDS(
+            snackbarDS = Snackbar(
                 mainView = binding.root,
-                message = "This is the INFO snack feedback",
+                message = "This is the INFO snackbar feedback",
                 feedbackType = SnackbarFeedbackType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.TOP,
-                animationtype = SnackbarAnimationtype.RIGHT
+                animationType = SnackbarAnimationtype.RIGHT
+            )
+            snackbarDS?.show()
+        }
+
+        binding.btnIndeterminateTimer.setOnClickListener {
+            snackbarDS?.dismiss()
+            snackbarDS = Snackbar(
+                mainView = binding.root,
+                title = "",
+                message = "SnackBar showing til user interact with it",
+                mainButtonTitle = "Button",
+                mainButtonAction = {
+                    Toast.makeText(this,"SnackBar showing til user interact with it",Toast.LENGTH_SHORT).show()
+                },
+                mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
+                timerType = SnackbarTimerType.INDETERMINATE
+                )
+            snackbarDS?.show()
+        }
+        binding.btnCustomTimer.setOnClickListener{
+            snackbarDS?.dismiss()
+            snackbarDS = Snackbar(
+                mainView = binding.root,
+                title = "",
+                message = "Time showing snackbar 30 seconds",
+                mainButtonTitle = "Button",
+                mainButtonAction = {
+                    Toast.makeText(this,"Time showing snackbar 30 seconds",Toast.LENGTH_SHORT).show()
+                },
+                mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
+                timerType = SnackbarTimerType.CUSTOM,
+                customTimerMillisecondInterval = 30000
             )
             snackbarDS?.show()
         }

@@ -440,4 +440,7 @@
         <attr name="alert_custom_stroke_color" format="color"/>
     </declare-styleable>
 
+    <declare-styleable name="Snackbar">
+
+    </declare-styleable>
 </resources>

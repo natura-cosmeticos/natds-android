@@ -159,6 +159,23 @@
                 android:layout_marginTop="?spacingSmall"
                 />
 
+            <Button
+                android:id="@+id/btnIndeterminateTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indeterminate Timer"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
+
+            <Button
+                android:id="@+id/btnCustomTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Timer"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 

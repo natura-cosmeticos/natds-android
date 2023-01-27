@@ -280,6 +280,7 @@
     <string name="main_screen_navigation_drawer_text">Navigation Drawer</string>
     <string name="main_screen_menu_item_text">Menu Item</string>
     <string name="main_screen_submenu_item_text">Submenu Item</string>
+    <string name="main_screeen_snackbar_text">Snackbar</string>
     <string name="custom_typography_screen_headline_text">Headline</string>
     <string name="custom_typography_screen_headline_example_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fringilla tincidunt ipsum at iaculis. Phasellus vel nisi quis ligula aliquet placerat. Etiam vitae vulputate nibh. Aliquam eros sapien, sollicitudin et ex nec, interdum fringilla dui. Praesent vel metus sollicitudin, accumsan nisl vel, pellentesque magna. Fusce sagittis eros non neque euismod elementum quis ut sem. Mauris et auctor erat, a pretium diam. Duis suscipit consequat purus ut auctor. Duis elementum in nulla in convallis. Vivamus id sem est. Donec vitae dui placerat, venenatis orci vitae, congue nunc.</string>
     <string name="custom_typography_screen_display_text">Display</string>

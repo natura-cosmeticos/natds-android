@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:elevation="?elevation05">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/snackBody"
@@ -37,6 +36,7 @@
                 android:layout_marginHorizontal="?spacingTiny"
                 android:layout_marginBottom="?spacingSmall"
                 android:textAppearance="?textAppearanceHeadline6"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toTopOf="@id/txtMessage"
                 app:layout_constraintStart_toEndOf="@id/ivTitleIcon"
                 app:layout_constraintTop_toTopOf="parent"
@@ -58,29 +58,30 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="?spacingTiny"
                 android:textAppearance="?textAppearanceBody1"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/clButtonContainer"
                 app:layout_constraintStart_toEndOf="@id/ivNoTitleIcon"
                 app:layout_constraintTop_toTopOf="@id/ivNoTitleIcon"
-                app:layout_constraintEnd_toStartOf="@id/clButtonContainer"
                 tools:text="The snackbar text goes here.The snackbar text goes here.The snackbar text goes here." />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clButtonContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="@id/txtMessage"
+                app:layout_constraintBottom_toBottomOf="@id/txtMessage"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="@id/txtMessage">
+                app:layout_constraintTop_toTopOf="@id/txtMessage">
 
-                <com.google.android.material.button.MaterialButton
+                <com.natura.android.button.ContainedButton
                     android:id="@+id/btnInline"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Button"
                     app:button_enabled="true"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Button" />
 
                 <ImageView
                     android:id="@+id/btnIcon"
@@ -90,23 +91,23 @@
                     android:backgroundTint="@color/white"
                     android:clickable="true"
                     android:focusable="true"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-            <com.google.android.material.button.MaterialButton
+            <com.natura.android.button.ContainedButton
                 android:id="@+id/btnBlock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="?spacingTiny"
-                tools:text="Button with a large text"
                 app:button_enabled="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtMessage" />
+                app:layout_constraintTop_toBottomOf="@id/txtMessage"
+                tools:text="Button with a large text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

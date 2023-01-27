@@ -1,5 +1,6 @@
 package com.natura.android.snackbar
 
+import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.CountDownTimer
@@ -15,7 +16,7 @@ import com.natura.android.databinding.SnackbarBinding
 import com.natura.android.resources.getIconResourceIdFromName
 
 
-class SnackbarDS private constructor(
+class Snackbar private constructor(
     private val snackMainView: View,
     private val snackMessage: String,
     private val snackTitle: String? = null,
@@ -25,10 +26,10 @@ class SnackbarDS private constructor(
     private val snackIconName: String? = null,
     private val snackIconButtonName: String? = null,
     private val snackFeedbackType: SnackbarFeedbackType? = null,
-    private val snackPositionType: SnackbarPositionType? = SnackbarPositionType.BOTTOM,
+    private val snackPositionType: SnackbarPositionType? = null,
     private val snackAnimation: Boolean = false,
-    private val snackAnimationtype: SnackbarAnimationtype? = SnackbarAnimationtype.NONE,
-    private val snackTimerType: SnackbarTimerType = SnackbarTimerType.MINIMUM,
+    private val snackAnimationType: SnackbarAnimationtype? = null,
+    private val snackTimerType: SnackbarTimerType? = null,
     private val snackCustomTimerMillisecondInterval: Int? = null,
     private val snackActionButtonType: SnackbarActionButtonType? = null
 ) {
@@ -41,7 +42,10 @@ class SnackbarDS private constructor(
         mainButtonTitle: String?,
         mainButtonAction: (() -> Unit)?,
         mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.INLINE_BOTTON,
-        animation: Boolean = false
+        animation: Boolean = false,
+        animationType: SnackbarAnimationtype? = null,
+        timerType: SnackbarTimerType? = null,
+        customTimerMillisecondInterval: Int? = null,
     ) : this(
         snackMainView = mainView,
         snackTitle = title,
@@ -49,7 +53,10 @@ class SnackbarDS private constructor(
         snackMainButtonTitle = mainButtonTitle,
         snackMainButtonAction = mainButtonAction,
         snackActionButtonType = mainButtonType,
-        snackAnimation = animation
+        snackAnimation = animation,
+        snackAnimationType = animationType,
+        snackTimerType = timerType,
+        snackCustomTimerMillisecondInterval = customTimerMillisecondInterval
     )
 
     @JvmOverloads
@@ -60,7 +67,9 @@ class SnackbarDS private constructor(
         iconName: String,
         animation: Boolean = false,
         positionType: SnackbarPositionType? = null,
-        animationtype: SnackbarAnimationtype? = null
+        animationType: SnackbarAnimationtype? = null,
+        timerType: SnackbarTimerType? = null,
+        customTimerMillisecondInterval: Int? = null,
     ) : this(
         snackMainView = mainView,
         snackTitle = "",
@@ -70,7 +79,9 @@ class SnackbarDS private constructor(
         snackFeedbackType = feedbackType,
         snackAnimation = animation,
         snackPositionType = positionType,
-        snackAnimationtype = animationtype
+        snackAnimationType = animationType,
+        snackTimerType = timerType,
+        snackCustomTimerMillisecondInterval = customTimerMillisecondInterval
     )
 
 
@@ -86,7 +97,8 @@ class SnackbarDS private constructor(
         iconButtonName: String? = null,
         positionType: SnackbarPositionType = SnackbarPositionType.BOTTOM,
         animationType: SnackbarAnimationtype = SnackbarAnimationtype.NONE,
-        timerType: SnackbarTimerType = SnackbarTimerType.MINIMUM,
+        timerType: SnackbarTimerType? = null,
+        customTimerMillisecondInterval: Int? = null,
         mainButtonType: SnackbarActionButtonType = SnackbarActionButtonType.NONE,
         animation: Boolean = false
     ) : this(
@@ -99,10 +111,11 @@ class SnackbarDS private constructor(
         snackIconName = iconName,
         snackIconButtonName = iconButtonName,
         snackPositionType = positionType,
-        snackAnimationtype = animationType,
+        snackAnimationType = animationType,
         snackTimerType = timerType,
+        snackCustomTimerMillisecondInterval = customTimerMillisecondInterval,
         snackActionButtonType = mainButtonType,
-        snackAnimation = animation
+        snackAnimation = animation,
     )
 
     private var snackbarBody: MaterialCardView? = null
@@ -112,6 +125,7 @@ class SnackbarDS private constructor(
     private var toolbarHeight: Int = 0
     private var timer: CountDownTimer? = null
     private var binding: SnackbarBinding? = null
+    private lateinit var context: Context
 
     private val mainButtonClickListener = object : View.OnClickListener {
         override fun onClick(v: View?) {
@@ -123,6 +137,7 @@ class SnackbarDS private constructor(
     init {
         binding = SnackbarBinding.inflate(LayoutInflater.from(snackMainView.context))
         layoutBody = binding?.root
+        context = snackMainView.context
         val width = LinearLayout.LayoutParams.MATCH_PARENT
         val height = LinearLayout.LayoutParams.WRAP_CONTENT
         popupWindow = PopupWindow(binding?.root, width, height, false)
@@ -257,7 +272,7 @@ class SnackbarDS private constructor(
     private fun setAnimationtype() {
 
         if (snackAnimation) {
-            when (snackAnimationtype) {
+            when (snackAnimationType) {
                 SnackbarAnimationtype.CENTER -> {
                     when (snackPositionType) {
                         SnackbarPositionType.TOP -> popupWindow?.animationStyle =
@@ -276,6 +291,7 @@ class SnackbarDS private constructor(
 
     private fun setTimerType() {
         when (snackTimerType) {
+            null,
             SnackbarTimerType.MINIMUM -> {
                 timer = object : CountDownTimer(
                     MINIMUM_INTERVAL_MILLISECOND.toLong(),
@@ -304,16 +320,17 @@ class SnackbarDS private constructor(
                 }
             }
             SnackbarTimerType.CUSTOM -> {
-                SNA
-                timer = object : CountDownTimer(
-                    snackCustomTimerMillisecondInterval.toLong(),
-                    snackCustomTimerMillisecondInterval.toLong()
-                ) {
-                    override fun onTick(millisUntilFinished: Long) {}
-                    override fun onFinish() {
-                        popupWindow?.dismiss()
-                    }
-                }.start()
+                snackCustomTimerMillisecondInterval?.let { timeout->
+                    timer = object : CountDownTimer(
+                        timeout.toLong(),
+                        timeout.toLong()
+                    ) {
+                        override fun onTick(millisUntilFinished: Long) {}
+                        override fun onFinish() {
+                            popupWindow?.dismiss()
+                        }
+                    }.start()
+                }
             }
         }
     }
@@ -324,18 +341,6 @@ class SnackbarDS private constructor(
 
     fun dismiss() {
         popupWindow?.dismiss()
-    }
-
-    private fun configureEnabled() {
-
-    }
-
-    private fun getSnackbarAttibutes() {
-
-    }
-
-    private fun getAttributesFromTheme(styleAttr: Int) {
-
     }
 
     private fun configureBackgroundColor() {
