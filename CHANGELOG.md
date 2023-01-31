@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.24.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.23.0...v.9.24.0) (2023-01-31)
+
+
+### Features
+
+* added alert attributes ([0b7a814](https://github.com/natura-cosmeticos/natds-android/commit/0b7a8149c9e173d7a0dd0a6dae13635df4349d80))
+* added menu button to open alert activity ([33d0312](https://github.com/natura-cosmeticos/natds-android/commit/33d0312b056d4d507589dc5105ef173e58733e11))
+* added sample alert activity to manifest ([1a2b5df](https://github.com/natura-cosmeticos/natds-android/commit/1a2b5df04d4cdb81bdc8bb21a1a32a3d00da814f))
+* added strings resources for sample alert activity ([a7c351c](https://github.com/natura-cosmeticos/natds-android/commit/a7c351cc7a602c3ee5632ae70878c3fa2d85ecfe))
+* added the view and component logic ([f2bf1bf](https://github.com/natura-cosmeticos/natds-android/commit/f2bf1bf7b33804ca4abcb7f1b9f87778e13b4955))
+* created sample activity for alert ([3ff7874](https://github.com/natura-cosmeticos/natds-android/commit/3ff7874857c70b7fe60f342ac72578826d3d8243))
+
+
+### Bug Fixes
+
+* font color and spacing adjustment in alert icon and title ([e18392c](https://github.com/natura-cosmeticos/natds-android/commit/e18392cf95b26a584b5b0ee1129364485f931f08))
+* font color and spacing adjustment in alert sample activity items ([b3f1673](https://github.com/natura-cosmeticos/natds-android/commit/b3f16737d92658590b93197181c99ffdf491b6ae))
+
 ## [9.23.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.22.1...v.9.23.0) (2022-07-26)
 
 
