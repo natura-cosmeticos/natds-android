@@ -8,7 +8,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class AlertActivityTest : ScreenShotActivityTestBase() {
+class AlertActivityScreenshotTest : ScreenShotActivityTestBase() {
     @get:Rule
     var activityTestRule = ActivityTestRule(AlertActivity::class.java, false, false)
 
