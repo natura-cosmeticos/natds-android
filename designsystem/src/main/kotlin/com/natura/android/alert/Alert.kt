@@ -1,5 +1,6 @@
 package com.natura.android.alert
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Color
@@ -77,6 +78,7 @@ open class Alert @JvmOverloads constructor(
         typedArray.recycle()
     }
 
+    @SuppressLint("ResourceAsColor")
     private fun getAlertAttributes() {
         typedArray.apply {
             isTitleVisible = getBoolean(R.styleable.Alert_show_title, true)
