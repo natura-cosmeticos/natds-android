@@ -3,7 +3,6 @@ package com.natura.android.alert
 import android.content.Context
 import androidx.test.core.app.ApplicationProvider
 import com.natura.android.R
-import com.natura.android.card.CardFixture
 import org.robolectric.Robolectric
 
 internal class AlertFixture private constructor(
@@ -14,7 +13,7 @@ internal class AlertFixture private constructor(
     private var type: Int = 0,
     private var color: Int = 2,
     private var context: Context = ApplicationProvider.getApplicationContext()
-){
+) {
 
     companion object {
         private const val defaultShowTitle = true
@@ -34,7 +33,8 @@ internal class AlertFixture private constructor(
                 defaultIconName,
                 defaultType,
                 defaultColor,
-                context)
+                context
+            )
         }
     }
 

@@ -11,7 +11,6 @@ import com.google.android.material.card.MaterialCardView
 import com.natura.android.R
 import com.natura.android.iconButton.IconButton
 
-
 open class Alert @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -29,7 +28,7 @@ open class Alert @JvmOverloads constructor(
     }
 
     private var typedArray: TypedArray
-    private val alertTitle by lazy {findViewById<TextView>(R.id.alert_title)}
+    private val alertTitle by lazy { findViewById<TextView>(R.id.alert_title) }
     private val alertIcon by lazy { findViewById<IconButton>(R.id.alert_icon) }
 
     private var isTitleVisible: Boolean = true
@@ -66,7 +65,6 @@ open class Alert @JvmOverloads constructor(
     fun getIsIconVisible(): Boolean = isIconVisible
     fun getAlertType(): Int = type
 
-
     init {
         this.let {
             View.inflate(context, R.layout.alert, it)
@@ -93,13 +91,13 @@ open class Alert @JvmOverloads constructor(
     }
 
     private fun changeVisibility(view: View, isVisible: Boolean) {
-        if(isVisible) view.visibility = VISIBLE else view.visibility = GONE
+        if (isVisible) view.visibility = VISIBLE else view.visibility = GONE
     }
 
     private fun setAlertBorder() {
         this.cardElevation = 0F
         type.let {
-            if(it == CONTAINED)
+            if (it == CONTAINED)
                 this.strokeWidth = 0
             else {
                 this.strokeWidth = 1
@@ -108,7 +106,7 @@ open class Alert @JvmOverloads constructor(
     }
 
     private fun adjustTitleMarginWhenIconIsGone() {
-        if(!isIconVisible && isTitleVisible) {
+        if (!isIconVisible && isTitleVisible) {
             val params = LinearLayout.LayoutParams(
                 LayoutParams.WRAP_CONTENT,
                 LayoutParams.WRAP_CONTENT
@@ -123,36 +121,36 @@ open class Alert @JvmOverloads constructor(
     }
 
     private fun configureAlertColor() {
-         when (alertColor) {
-             SUCCESS -> {
-                 this.strokeColor = parseStringColorToInt("#37B24D")
-                 this.setCardBackgroundColor(parseStringColorToInt("#D3F9D8"))
-             }
+        when (alertColor) {
+            SUCCESS -> {
+                this.strokeColor = parseStringColorToInt("#37B24D")
+                this.setCardBackgroundColor(parseStringColorToInt("#D3F9D8"))
+            }
 
-             ERROR -> {
-                 this.strokeColor = parseStringColorToInt("#F03E3E")
-                 this.setCardBackgroundColor(parseStringColorToInt("#FFE3E3"))
-             }
+            ERROR -> {
+                this.strokeColor = parseStringColorToInt("#F03E3E")
+                this.setCardBackgroundColor(parseStringColorToInt("#FFE3E3"))
+            }
 
-             WARNING -> {
-                 this.strokeColor = parseStringColorToInt("#F59F00")
-                 this.setCardBackgroundColor(parseStringColorToInt("#FFF3BF"))
-             }
+            WARNING -> {
+                this.strokeColor = parseStringColorToInt("#F59F00")
+                this.setCardBackgroundColor(parseStringColorToInt("#FFF3BF"))
+            }
 
-             INFO -> {
-                 this.strokeColor = parseStringColorToInt("#1C7ED6")
-                 this.setCardBackgroundColor(parseStringColorToInt("#D0EBFF"))
-             }
+            INFO -> {
+                this.strokeColor = parseStringColorToInt("#1C7ED6")
+                this.setCardBackgroundColor(parseStringColorToInt("#D0EBFF"))
+            }
 
-             CUSTOM -> {
-                 customStrokeColor?.let {
-                     this.strokeColor = it
-                 }
+            CUSTOM -> {
+                customStrokeColor?.let {
+                    this.strokeColor = it
+                }
 
-                 customBackgroundColor?.let {
+                customBackgroundColor?.let {
                     this.setCardBackgroundColor(customBackgroundColor!!)
-                 }
-             }
-         }
+                }
+            }
+        }
     }
 }

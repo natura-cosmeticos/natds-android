@@ -3,7 +3,6 @@ package com.natura.android.sample
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.natura.android.sample.components.*
 import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
@@ -170,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ChipActivity::class.java))
         }
 
-        binding.btnAlert.setOnClickListener{
+        binding.btnAlert.setOnClickListener {
             startActivity(Intent(this, AlertActivity::class.java))
         }
     }
