@@ -4,19 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.components.*
-import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
+import com.natura.android.sample.patterns.ErrorActivity
 import com.natura.android.sample.patterns.LogoActivity
-import com.natura.android.sample.tokens.BorderRadiusActivity
-import com.natura.android.sample.tokens.ColorsActivity
-import com.natura.android.sample.tokens.CustomTypographyActivity
-import com.natura.android.sample.tokens.ElevationActivity
-import com.natura.android.sample.tokens.OpacityActivity
-import com.natura.android.sample.tokens.SizeActivity
-import com.natura.android.sample.tokens.SpacingActivity
+import com.natura.android.sample.tokens.*
 import com.natura.android.sample.tokens.icons.DrawableActivity
-import com.natura.android.sample.tokens.TypographyActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -76,7 +69,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.dialogButton.setOnClickListener {
             startActivity(Intent(this, DialogActivity::class.java))
-
         }
 
         binding.btnExpansionPanel.setOnClickListener {
