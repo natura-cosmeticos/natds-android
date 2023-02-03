@@ -16,7 +16,7 @@ unit-test-sample:
 	./gradlew sample:test --parallel
 
 unit-test-designsystem:
-	./gradlew designsystem:test --parallel
+	./gradlew designsystem:test --parallel --info --scan
 
 instrumentation-test: clean disable-animations
 	./gradlew connectedAndroidTest

@@ -54,8 +54,8 @@ class ColorsActivityNaturaTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#EF8426"), colorCode.color)
-            assertEquals(Color.parseColor("#333333"), colorOnCode)
+            assertEquals(Color.parseColor("#CD902C"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
@@ -80,7 +80,7 @@ class ColorsActivityNaturaTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FEFDE8"), colorCode.color)
+            assertEquals(Color.parseColor("#F6B854"), colorCode.color)
             assertEquals(Color.parseColor("#333333"), colorOnCode)
         }
     }
@@ -132,8 +132,8 @@ class ColorsActivityNaturaTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FF5808"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            assertEquals(Color.parseColor("#D65A09"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
 
@@ -158,7 +158,7 @@ class ColorsActivityNaturaTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFF8E1"), colorCode.color)
+            assertEquals(Color.parseColor("#FF8332"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
