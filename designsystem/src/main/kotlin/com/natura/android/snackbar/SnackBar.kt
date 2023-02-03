@@ -125,7 +125,7 @@ class SnackBar private constructor(
     private var toolbarHeight: Int = 0
     private var timer: CountDownTimer? = null
     private var binding: SnackbarBinding? = null
-    private lateinit var context: Context
+    private var context: Context
 
     private val mainButtonClickListener = object : View.OnClickListener {
         override fun onClick(v: View?) {
