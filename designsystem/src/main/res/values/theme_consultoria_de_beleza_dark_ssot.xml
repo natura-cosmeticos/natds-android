@@ -528,4 +528,9 @@
     <item name="typographyBodyBoldFontWeight">sans-serif-bold</item>
     <item name="typographyFallbackFontWeight">sans-serif</item>
   </style>
+
+  <style name="Theme.ConsultoriaDeBeleza.Dark.NoActionBar" parent="Theme.ConsultoriaDeBeleza.Dark.SSOT">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+  </style>
 </resources>
