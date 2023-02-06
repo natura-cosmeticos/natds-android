@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.3...v.9.24.4) (2023-02-06)
+
+
+### Bug Fixes
+
+* fixes 'consultoria de beleza' theme completing with 'no action bar' variation ([7e7aa4d](https://github.com/natura-cosmeticos/natds-android/commit/7e7aa4d3b0e71d70f6ebe8963cb3dade1f4c1225))
+
 ### [9.24.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.2...v.9.24.3) (2023-02-03)
 
 
