@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.5](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.4...v.9.24.5) (2023-02-08)
+
+
+### Bug Fixes
+
+* consultoria de beleza na tela ([b53a3fe](https://github.com/natura-cosmeticos/natds-android/commit/b53a3fee657b13a7a9fdc144030b1651ca57b6d1))
+
 ### [9.24.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.3...v.9.24.4) (2023-02-06)
 
 
