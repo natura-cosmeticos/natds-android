@@ -138,5 +138,24 @@
                 app:srcCompat="@drawable/tbs_horizontal"
                 app:tint="@color/black" />
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/conBelezaThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="?sizeLargeX"
+            android:layout_marginBottom="?spacingSmall"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="?borderRadiusMedium">
+
+            <ImageView
+                android:layout_width="?sizeHugeX"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/brand_selector_conBeleza_text"
+                app:srcCompat="@drawable/consultoriadebeleza_b_official"
+                app:tint="@color/black" />
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>
