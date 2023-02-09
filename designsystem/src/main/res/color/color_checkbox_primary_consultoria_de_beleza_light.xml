@@ -10,17 +10,16 @@
         android:alpha="?opacity06"/>
     <item
         android:state_checked="true"
-        android:color="@color/ssot380a6ec94e4949e054bb47042b084108"/>
-
+        android:color="@color/ssotb876a6c87e9436f656a64f68585ea377"/>
     <item
         app:state_indeterminate="true"
-        android:color="@color/ssot380a6ec94e4949e054bb47042b084108" />
+        android:color="@color/ssotb876a6c87e9436f656a64f68585ea377"/>
     <item
         android:state_selected="true"
-        android:color="@color/ssot380a6ec94e4949e054bb47042b084108"/>
+        android:color="@color/ssotb876a6c87e9436f656a64f68585ea377"/>
     <item
         android:state_activated="true"
-        android:color="@color/ssot380a6ec94e4949e054bb47042b084108"/>
+        android:color="@color/ssotb876a6c87e9436f656a64f68585ea377"/>
     <item
         android:state_enabled="false"
         android:color="@color/ssot09c72ac813bc7a0108f7f274f6197773" />
