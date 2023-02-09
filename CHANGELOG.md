@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.6](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.5...v.9.24.6) (2023-02-09)
+
+
+### Bug Fixes
+
+* adds style and custom attributes to Consultoria de Beleza theme ([388530a](https://github.com/natura-cosmeticos/natds-android/commit/388530a47f6f8ab0fbbb7ce10581d842ee81b0da))
+
 ### [9.24.5](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.4...v.9.24.5) (2023-02-08)
 
 
