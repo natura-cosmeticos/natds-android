@@ -138,7 +138,7 @@
                 android:id="@+id/btnPositionCenterTop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prop: Position / Value: TOP"
+                android:text="Prop: Position / Value: TOP_CENTER"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -147,7 +147,7 @@
                 android:id="@+id/btnPositionCenterBottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prop: Position / Value: BOTTOM"
+                android:text="Prop: Position / Value: BOTTOM_CENTER"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
