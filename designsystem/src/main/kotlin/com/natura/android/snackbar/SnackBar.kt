@@ -20,6 +20,7 @@ class SnackBar private constructor(
     private val snackMainView: View,
     private val snackMessage: String,
     private val snackTitle: String? = null,
+    private val snackShowTitle: Boolean = false,
     private val snackMainButtonAction: (() -> Unit)? = null,
     private val snackMainButtonTitle: String? = null,
     private val showSnackIcon: Boolean = false,
@@ -38,6 +39,7 @@ class SnackBar private constructor(
     constructor(
         mainView: View,
         title: String,
+        showTitle: Boolean,
         message: String,
         mainButtonTitle: String?,
         mainButtonAction: (() -> Unit)?,
@@ -49,6 +51,7 @@ class SnackBar private constructor(
     ) : this(
         snackMainView = mainView,
         snackTitle = title,
+        snackShowTitle = showTitle,
         snackMessage = message,
         snackMainButtonTitle = mainButtonTitle,
         snackMainButtonAction = mainButtonAction,
@@ -65,6 +68,7 @@ class SnackBar private constructor(
         message: String,
         feedbackType: SnackbarFeedbackType,
         iconName: String,
+        showTitle: Boolean = false,
         animation: Boolean = false,
         positionType: SnackbarPositionType? = null,
         animationType: SnackbarAnimationtype? = null,
@@ -73,6 +77,7 @@ class SnackBar private constructor(
     ) : this(
         snackMainView = mainView,
         snackTitle = "",
+        snackShowTitle = false,
         snackMessage = message,
         showSnackIcon = true,
         snackIconName = iconName,
@@ -90,12 +95,13 @@ class SnackBar private constructor(
         mainView: View,
         message: String,
         title: String = "",
+        showTitle: Boolean = false,
         mainButtonAction: (() -> Unit)? = null,
         mainButtonTitle: String? = null,
         showIcon: Boolean = false,
         iconName: String? = null,
         iconButtonName: String? = null,
-        positionType: SnackbarPositionType = SnackbarPositionType.BOTTOM,
+        positionType: SnackbarPositionType = SnackbarPositionType.BOTTOM_CENTER,
         animationType: SnackbarAnimationtype = SnackbarAnimationtype.NONE,
         timerType: SnackbarTimerType? = null,
         customTimerMillisecondInterval: Int? = null,
@@ -104,6 +110,7 @@ class SnackBar private constructor(
     ) : this(
         snackMainView = mainView,
         snackTitle = title,
+        snackShowTitle = showTitle,
         snackMessage = message,
         snackMainButtonAction = mainButtonAction,
         snackMainButtonTitle = mainButtonTitle,
@@ -158,7 +165,7 @@ class SnackBar private constructor(
 
     private fun setSnackTexts() {
         binding?.txtMessage?.text = snackMessage
-        if (!snackTitle.isNullOrEmpty()) {
+        if (snackShowTitle) {
             binding?.txtTitle?.text = snackTitle
         } else {
             binding?.txtTitle?.visibility = View.GONE
@@ -239,7 +246,7 @@ class SnackBar private constructor(
 
     private fun setPositionType() {
         when (snackPositionType) {
-            SnackbarPositionType.TOP -> {
+            SnackbarPositionType.TOP_CENTER -> {
                 val location = IntArray(2)
                 snackMainView?.getLocationOnScreen(location)
                 toolbarHeight = location[1]
@@ -275,9 +282,9 @@ class SnackBar private constructor(
             when (snackAnimationType) {
                 SnackbarAnimationtype.CENTER -> {
                     when (snackPositionType) {
-                        SnackbarPositionType.TOP -> popupWindow?.animationStyle =
+                        SnackbarPositionType.TOP_CENTER -> popupWindow?.animationStyle =
                             R.style.SnackBarInOutFromTop
-                        SnackbarPositionType.BOTTOM -> popupWindow?.animationStyle =
+                        SnackbarPositionType.BOTTOM_CENTER -> popupWindow?.animationStyle =
                             (R.style.SnackBarInOutFromBottom)
                     }
                 }
@@ -395,8 +402,8 @@ enum class SnackbarFeedbackType {
 }
 
 enum class SnackbarPositionType {
-    TOP,
-    BOTTOM
+    TOP_CENTER,
+    BOTTOM_CENTER
 }
 
 enum class SnackbarTimerType {

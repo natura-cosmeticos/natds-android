@@ -19,7 +19,7 @@
                 android:id="@+id/btnDefaultSnackbar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Default"
+                android:text="Prop: Title / Value: False"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -27,7 +27,7 @@
                 android:id="@+id/btnWithTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With Title"
+                android:text="Prop: Title / Value: True"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -36,7 +36,18 @@
                 android:id="@+id/btnWithIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With Icon"
+                android:text="Prop: Icon / Value: True"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
+
+
+
+            <Button
+                android:id="@+id/btnOnlyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop: Icon / Value: False"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -45,16 +56,16 @@
                 android:id="@+id/btnWithIconNoButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With Icon, No Button"
+                android:text="Prop: Button / Value: NONE"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
 
             <Button
-                android:id="@+id/btnOnlyText"
+                android:id="@+id/btnWithInLineButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Only Text"
+                android:text="Prop: Button / Value: INLINE_BUTTON"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -63,7 +74,7 @@
                 android:id="@+id/btnWithBlockButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With BlockButton"
+                android:text="Prop: Button / Value: BLOCK_BUTTON"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -72,7 +83,7 @@
                 android:id="@+id/btnWithIconButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With IconButton"
+                android:text="Prop: Button / Value: ICON_BUTTON"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -82,7 +93,7 @@
                 android:id="@+id/btnDefaultFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Default Feedback"
+                android:text="Prop: Feedback / Value: DEFAULT"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -91,7 +102,7 @@
                 android:id="@+id/btnSuccessFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Success Feedback"
+                android:text="Prop: Feedback / Value: SUCCESS"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -100,7 +111,7 @@
                 android:id="@+id/btnErrorFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Error Feedback"
+                android:text="Prop: Feedback / Value: ERROR"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -109,7 +120,7 @@
                 android:id="@+id/btnWarningFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Warning Feedback"
+                android:text="Prop: Feedback / Value: Warning"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -118,7 +129,25 @@
                 android:id="@+id/btnInfoFeedback"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Info Feedback"
+                android:text="Prop: Feedback / Value: INFO"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
+
+            <Button
+                android:id="@+id/btnPositionCenterTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop: Position / Value: TOP"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
+
+            <Button
+                android:id="@+id/btnPositionCenterBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop: Position / Value: BOTTOM"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -127,7 +156,7 @@
                 android:id="@+id/btnAnimationCenterBottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Animation Center Bottom"
+                android:text="Prop: Animation / Value  CENTER_BOTTOM"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -136,7 +165,7 @@
                 android:id="@+id/btnAnimationCenterTop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Animation Center Top"
+                android:text="Prop: Animation / Value  CENTER_TOP"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -145,7 +174,7 @@
                 android:id="@+id/btnAnimationRight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Animation Right"
+                android:text="Prop: Animation / Value  RIGHT"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
@@ -154,25 +183,41 @@
                 android:id="@+id/btnAnimationLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Animation Left"
+                android:text="Prop: Animation / Value  LEFT"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
 
+            <Button
+                android:id="@+id/btnMinimumTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop: TIMER / Value: MINIMUM"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
+
+            <Button
+                android:id="@+id/btnIntermediaryTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prop: TIMER / Value: INTERMEDIARY"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="?spacingSmall"
+                />
             <Button
                 android:id="@+id/btnIndeterminateTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Indeterminate Timer"
+                android:text="Prop: TIMER / Value: INDETERMINATE"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
-
             <Button
                 android:id="@+id/btnCustomTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Custom Timer"
+                android:text="Prop: TIMER / Value: CUSTOM"
                 android:gravity="center_horizontal"
                 android:layout_marginTop="?spacingSmall"
                 />
