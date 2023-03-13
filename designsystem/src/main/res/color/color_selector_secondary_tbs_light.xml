@@ -2,16 +2,16 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:state_enabled="false" android:state_checked="true"
-        android:color="@color/ssot2fbbceb6696a9a09c30b6625cbff41c0"/>
+        android:color="@color/ssot973fc1300b40e99c3d7800840fc85257"/>
     <item
         android:state_checked="true"
-        android:color="@color/ssot2fbbceb6696a9a09c30b6625cbff41c0"/>
+        android:color="@color/ssot973fc1300b40e99c3d7800840fc85257"/>
     <item
         android:state_selected="true"
-        android:color="@color/ssot2fbbceb6696a9a09c30b6625cbff41c0"/>
+        android:color="@color/ssot973fc1300b40e99c3d7800840fc85257"/>
     <item
         android:state_activated="true"
-        android:color="@color/ssot2fbbceb6696a9a09c30b6625cbff41c0"/>
+        android:color="@color/ssot973fc1300b40e99c3d7800840fc85257"/>
     <item
         android:state_enabled="false"
         android:color="@color/ssot09c72ac813bc7a0108f7f274f6197773" />
