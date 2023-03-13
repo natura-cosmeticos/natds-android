@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.8](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.7...v.9.24.8) (2023-03-13)
+
+
+### Bug Fixes
+
+* pipeline error ([a3013c2](https://github.com/natura-cosmeticos/natds-android/commit/a3013c29348320376fe8823f58b42240b1a5ffe3))
+
 ### [9.24.7](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.6...v.9.24.7) (2023-03-13)
 
 
