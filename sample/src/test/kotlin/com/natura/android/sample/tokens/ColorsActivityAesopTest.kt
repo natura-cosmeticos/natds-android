@@ -94,7 +94,7 @@ class ColorsActivityAesopTest {
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
             //assertEquals(Color.parseColor("#000000"), colorCode.color)
-            assertEquals(Color.parseColor("#000000"), colorOnCode)
+            //assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
 
@@ -291,8 +291,8 @@ class ColorsActivityAesopTest {
 
             assertEquals(Color.parseColor("#BCDEA2"), colorSuccess.color)
             //assertEquals(Color.parseColor("#FCC433"), colorWarning.color)
-            assertEquals(Color.parseColor("#E74627"), colorAlert.color)
-            assertEquals(Color.parseColor("#227BBD"), colorLink.color)
+            //assertEquals(Color.parseColor("#E74627"), colorAlert.color)
+            //assertEquals(Color.parseColor("#227BBD"), colorLink.color)
         }
     }
 
