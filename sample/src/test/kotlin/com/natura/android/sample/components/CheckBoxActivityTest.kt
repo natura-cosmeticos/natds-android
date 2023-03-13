@@ -44,7 +44,7 @@ class CheckBoxActivityTest {
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#7F28C4"), colorSelected)
+            assertEquals(Color.parseColor("#6221BD"), colorSelected)
         }
     }
 
@@ -74,7 +74,7 @@ class CheckBoxActivityTest {
             val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
 
             assertEquals(Color.parseColor("#333333"), colorText)
-            assertEquals(Color.parseColor("#262625"), colorSelected)
+            assertEquals(Color.parseColor("#333333"), colorSelected)
         }
     }
 

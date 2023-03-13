@@ -28,7 +28,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#262625"), colorCode.color)
+            assertEquals(Color.parseColor("#333333"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -41,7 +41,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#F1F1F0"), colorCode.color)
+            assertEquals(Color.parseColor("#333333"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -54,7 +54,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#000000"), colorCode.color)
+            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -67,7 +67,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#BEBEBE"), colorCode.color)
+            assertEquals(Color.parseColor("#2B2B2B"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -80,7 +80,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#4E4E4D"), colorCode.color)
+            assertEquals(Color.parseColor("#545454"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -93,7 +93,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorPrimaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorPrimaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFFFFF"), colorCode.color)
+            assertEquals(Color.parseColor("#000000"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -106,7 +106,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#A6662B"), colorCode.color)
+            assertEquals(Color.parseColor("#A6672B"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -119,7 +119,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#DDCB91"), colorCode.color)
+            assertEquals(Color.parseColor("#A6672B"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -132,7 +132,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#733B00"), colorCode.color)
+            assertEquals(Color.parseColor("#8B5724"), colorCode.color)
             assertEquals(Color.parseColor("#FFFFFF"), colorOnCode)
         }
     }
@@ -145,7 +145,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryDarkContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryDarkCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#AA9A63"), colorCode.color)
+            assertEquals(Color.parseColor("#8B5724"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -158,7 +158,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#DB9457"), colorCode.color)
+            assertEquals(Color.parseColor("#B47F4D"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -171,7 +171,7 @@ class ColorsActivityAesopTest {
             val colorCode = it.findViewById<ConstraintLayout>(R.id.colorSecondaryLightContainer).background as ColorDrawable
             val colorOnCode = it.findViewById<TextView>(R.id.colorSecondaryLightCodeLabel).textColors.defaultColor
 
-            assertEquals(Color.parseColor("#FFFEC2"), colorCode.color)
+            assertEquals(Color.parseColor("#B47F4D"), colorCode.color)
             assertEquals(Color.parseColor("#000000"), colorOnCode)
         }
     }
@@ -289,7 +289,7 @@ class ColorsActivityAesopTest {
             val colorAlert = it.findViewById<ConstraintLayout>(R.id.colorAlertContainer).background as ColorDrawable
             val colorLink = it.findViewById<ConstraintLayout>(R.id.colorLinkContainer).background as ColorDrawable
 
-            assertEquals(Color.parseColor("#569A32"), colorSuccess.color)
+            assertEquals(Color.parseColor("#BCDEA2"), colorSuccess.color)
             assertEquals(Color.parseColor("#FCC433"), colorWarning.color)
             assertEquals(Color.parseColor("#E74627"), colorAlert.color)
             assertEquals(Color.parseColor("#227BBD"), colorLink.color)
