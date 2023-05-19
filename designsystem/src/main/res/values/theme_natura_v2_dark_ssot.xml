@@ -450,10 +450,10 @@
     <item name="assetBrandNeutralBFile">@drawable/natura_b_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/natura_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/natura_b_custom</item>
-    <item name="assetFontFileDisplay">@font/helvetica_now_display_bd</item>
-    <item name="assetFontFileHeadline">@font/helvetica_now_display_md</item>
-    <item name="assetFontFileBodyRegular">@font/helvetica_now_display_regular</item>
-    <item name="assetFontFileBodyBold">@font/helvetica_now_display_bd</item>
+    <item name="assetFontFileDisplay">@font/roboto_regular</item>
+    <item name="assetFontFileHeadline">@font/roboto_regular</item>
+    <item name="assetFontFileBodyRegular">@font/roboto_regular</item>
+    <item name="assetFontFileBodyBold">@font/roboto_medium</item>
     <item name="alertTitlePrimaryFontWeight">sans-serif-medium</item>
     <item name="alertTitleFallbackFontWeight">sans-serif</item>
     <item name="alertContentPrimaryFontWeight">sans-serif</item>
