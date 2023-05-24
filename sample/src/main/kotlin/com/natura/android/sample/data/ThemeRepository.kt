@@ -28,6 +28,8 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Light
             "aesop" -> R.style.Theme_Aesop_Light
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Light
+            "naturav2" -> R.style.Theme_Natura_V2_Light
+            "avonv2" -> R.style.Theme_Avon_V2_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -38,6 +40,8 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Dark
             "aesop" -> R.style.Theme_Aesop_Dark
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Dark
+            "naturav2" -> R.style.Theme_Natura_V2_Dark
+            "avonv2" -> R.style.Theme_Avon_V2_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -48,6 +52,8 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Light_NoActionBar
             "aesop" -> R.style.Theme_Aesop_Light_NoActionBar
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Light_NoActionBar
+            "naturav2" -> R.style.Theme_Natura_V2_Light_NoActionBar
+            "avonv2" -> R.style.Theme_Avon_V2_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -58,6 +64,8 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Dark_NoActionBar
             "aesop" -> R.style.Theme_Aesop_Dark_NoActionBar
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Dark_NoActionBar
+            "naturav2" -> R.style.Theme_Natura_V2_Dark_NoActionBar
+            "avonv2" -> R.style.Theme_Avon_V2_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
