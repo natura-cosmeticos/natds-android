@@ -4,8 +4,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.24.9](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.8...v.9.24.9) (2023-05-26)
 
-### [9.24.8](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.7...v.9.24.8) (2023-03-13)
+- Adding Natura V2 theme
+- Adding Avon V2 theme
+- Replacing Helvetica font family with Roboto
 
+### [9.24.8](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.7...v.9.24.8) (2023-03-13)
 
 ### Bug Fixes
 
