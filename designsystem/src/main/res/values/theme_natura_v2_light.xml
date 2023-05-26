@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Theme.Natura_v2.Light" parent="Theme.Natura_v2.Light.SSOT">
+
+        <!-- { @deprecated Attributes }-->
+        <item name="buttonDefaultFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
+        <item name="buttonDefaultLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
+        <item name="buttonDefaultLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
+        <item name="buttonDefaultFontWeight">sans-serif-medium</item>
+        <item name="badgeLabelPrimaryFontFamily">Roboto</item>
+        <item name="badgeLabelFallbackFontFamily">Roboto</item>
+
+        <!--
+        /***
+        * LOCAL ATTRIBUTES (INFOS THAT ARE NOT IN NATDS COMMONS)
+        * YOU CAN EDIT THOSE FIELDS IF NECESSARY
+        */
+        -->
+
+        <!-- Definitions based on appcompat colors -->
+        <item name="colorPrimaryVariant">?colorPrimaryDark</item>
+        <item name="colorSecondaryVariant">?colorSecondaryDark</item>
+        <item name="colorAccent">?colorPrimary</item>
+        <item name="colorControlHighlight">#1F000000</item>
+        <item name="colorControlNormal">?colorOnBackground</item>
+        <item name="android:colorBackground">?colorBackground</item>
+        <item name="colorError">?colorAlert</item>
+        <item name="colorOnError">?colorOnAlert</item>
+
+        <item name="android:textColorPrimary">?colorOnSurface</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/lowGrey</item>
+        <item name="android:textColorSecondary">@color/mediumGrey</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:textColorLink">@color/link</item>
+
+        <item name="colorHighEmphasisOpacity06">#51333333</item>
+        <item name="colorMediumEmphasisOpacity06">#51777777</item>
+        <item name="colorHighlightOpacity05">#3D000000</item>
+        <item name="colorHighlightOpacityMediumHigh">#8F000000</item>
+        <item name="colorLowEmphasisOpacityDisabledLow">#3DBBBBBB</item>
+        <item name="colorHighLightOpacityFull">#FFFFFFFF</item>
+
+        <item name="colorTranparent">#00FFFFFF</item>
+        <item name="chipSemiXBorderRadius">@dimen/ssotdee911e3860cd0a0c290215546ecdc43</item>
+
+        <!--Component styles-->
+        <item name="textAppearanceHeadline1">@style/Heading1</item>
+        <item name="textAppearanceHeadline2">@style/Heading2</item>
+        <item name="textAppearanceHeadline3">@style/Heading3</item>
+        <item name="textAppearanceHeadline4">@style/Heading4</item>
+        <item name="textAppearanceHeadline5">@style/Heading5</item>
+        <item name="textAppearanceHeadline6">@style/Heading6</item>
+        <item name="textAppearanceSubtitle1">@style/Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/Subtitle2</item>
+        <item name="textAppearanceBody1">@style/Body1</item>
+        <item name="textAppearanceBody2">@style/Body2</item>
+        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceOverline">@style/Overline</item>
+
+        <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
+        <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
+        <item name="android:statusBarColor">?colorControlHighlight</item>
+
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura_v2.Primary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura_v2.Secondary.Light</item>
+        <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura_v2.Primary.Light</item>
+        <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura_v2.Secondary.Light
+        </item>
+
+        <item name="buttonStyle">@style/Widget.DS.Button.Natura_v2.Light</item>
+        <item name="materialButtonStyle">@style/Widget.DS.Button.Natura_v2.Light</item>
+        <item name="outlinedButton">@style/Widget.DS.Button.Outlined.Natura_v2.Light</item>
+        <item name="textButton">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.Natura_v2.Light</item>
+        <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.Natura_v2.Light</item>
+        <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.Natura_v2.Light</item>
+        <item name="textButtonSmall">@style/Widget.DS.ButtonSmall.TextButton.Light</item>
+
+        <item name="buttonStyleMedium">@style/Widget.DS.Button.Natura_v2.Light</item>
+        <item name="materialButtonStyleMedium">@style/Widget.DS.Button.Natura_v2.Light</item>
+        <item name="outlinedButtonMedium">@style/Widget.DS.Button.Outlined.Natura_v2.Light</item>
+        <item name="textButtonMedium">@style/Widget.DS.Button.TextButton.Light</item>
+
+        <item name="buttonStyleLarge">@style/Widget.DS.ButtonLarge.Natura_v2.Light</item>
+        <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.Natura_v2.Light</item>
+        <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.Natura_v2.Light</item>
+        <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.Light</item>
+
+        <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard.Natura_v2.Light</item>
+        <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert.Natura_v2.Light</item>
+        <item name="dialogTitleAppearance">@style/Theme.DS.Dialog.Title</item>
+        <item name="dialogBodyAppearance">@style/Theme.DS.Dialog.Body</item>
+
+        <item name="iconButtonPrimary">@style/Widget.DS.IconButton.Primary</item>
+        <item name="iconButtonDefault">@style/Widget.DS.IconButton.Default</item>
+        <item name="iconButtonLight">@style/Widget.DS.IconButton.Light</item>
+
+        <item name="iconButtonSizeSemi">@style/Widget.DS.IconButton.Semi</item>
+        <item name="iconButtonSizeSemiX">@style/Widget.DS.IconButton.SemiX</item>
+        <item name="iconButtonSizeMedium">@style/Widget.DS.IconButton.Medium</item>
+
+        <item name="iconButtonFloatingEnabled">@style/Widget.DS.IconButton.Floating.Enabled</item>
+        <item name="iconButtonOverlayEnabled">@style/Widget.DS.IconButton.Overlay.Enabled</item>
+
+        <item name="iconButtonFloatingDisabled">@style/Widget.DS.IconButton.Floating.Disabled</item>
+        <item name="iconButtonOverlayDisabled">@style/Widget.DS.IconButton.Overlay.Disabled</item>
+
+        <item name="toolbarStyle">@style/Widget.DS.AppBarTop</item>
+        <item name="toolbarHeight">@dimen/ds_toolbar_height</item>
+        <item name="toolbarDefaultTheme">@style/Theme.DS.Toolbar</item>
+
+        <item name="shortcutOutlinedPrimary">@style/Widget.DS.Shortcut.Outlined.Primary</item>
+        <item name="shortcutOutlinedNeutral">@style/Widget.DS.Shortcut.Outlined.Neutral</item>
+        <item name="shortcutOutlinedDisabled">@style/Widget.DS.Shortcut.Outlined.Disabled</item>
+        <item name="shortcutContainedPrimary">@style/Widget.DS.Shortcut.Contained.Primary</item>
+        <item name="shortcutContainedNeutral">@style/Widget.DS.Shortcut.Contained.Neutral</item>
+        <item name="shortcutContainedDisabled">@style/Widget.DS.Shortcut.Contained.Disabled</item>
+
+        <item name="tagPrimary">@style/Widget.DS.Tag.Primary</item>
+        <item name="tagAlert">@style/Widget.DS.Tag.Alert</item>
+        <item name="tagSecondary">@style/Widget.DS.Tag.Secondary</item>
+        <item name="tagSuccess">@style/Widget.DS.Tag.Success</item>
+        <item name="tagWarning">@style/Widget.DS.Tag.Warning</item>
+        <item name="tagLink">@style/Widget.DS.Tag.Link</item>
+        <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
+        <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
+
+        <item name="card">@style/Widget.DS.Card</item>
+
+        <item name="dividerFullbleed">@style/Widget.DS.Divider.Fullbleed</item>
+        <item name="dividerInset">@style/Widget.DS.Divider.Inset</item>
+        <item name="dividerMiddle">@style/Widget.DS.Divider.Middle</item>
+
+        <item name="progressIndicatorStandard">@style/Widget.DS.ProgressIndicator.Standard</item>
+        <item name="progressIndicatorSemi">@style/Widget.DS.ProgressIndicator.Semi</item>
+        <item name="progressIndicatorMedium">@style/Widget.DS.ProgressIndicator.Medium</item>
+        <item name="progressIndicatorLarge">@style/Widget.DS.ProgressIndicator.Large</item>
+
+        <item name="avatarStandard">@style/Widget.DS.Avatar.Standard</item>
+        <item name="avatarSemi">@style/Widget.DS.Avatar.Semi</item>
+        <item name="avatarSemix">@style/Widget.DS.Avatar.Semix</item>
+        <item name="avatarMedium">@style/Widget.DS.Avatar.Medium</item>
+        <item name="avatarLargexxx">@style/Widget.DS.Avatar.Largexxx</item>
+
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Natura_v2.Light</item>
+    </style>
+
+    <style name="Theme.Natura_v2.Light.NoActionBar" parent="Theme.Natura_v2.Light.SSOT">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
