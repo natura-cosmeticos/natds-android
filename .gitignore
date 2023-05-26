@@ -11,3 +11,5 @@ fastlane/README.md
 .externalNativeBuild
 .cxx
 github_credentials.properties
+github_credentials.properties.sample
+github_credentials.properties.sample

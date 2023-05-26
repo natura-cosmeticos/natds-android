@@ -461,6 +461,8 @@
     <string name="brand_selector_naturaeco_text">NaturaeCo</string>
     <string name="brand_selector_tbs_text">The Body Shop</string>
     <string name="brand_selector_conBeleza_text">Consultoria de Beleza</string>
+    <string name="brand_selector_naturav2_text">Natura v2</string>
+    <string name="brand_selector_avonv2_text">Avon v2</string>
     <string name="alert_with_title">Alert Only Title</string>
     <string name="alert_success">Alert Success</string>
     <string name="alert_success_outlined">Alert Success Outlined</string>
