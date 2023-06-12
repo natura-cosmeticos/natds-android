@@ -35,8 +35,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_consultoria_de_beleza_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_consultoria_de_beleza_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_avon_v2_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_avon_v2_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Avon_v2.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -77,8 +77,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_consultoria_de_beleza_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_consultoria_de_beleza_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_avon_v2_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_avon_v2_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Avon_v2.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
@@ -90,46 +90,46 @@
     </style>
 
     <style name="Widget.DS.RadioButton.Avon_v2.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Avon_v2.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Avon_v2.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Avon_v2.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon_v2.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon_v2.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon_v2.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Avon_v2.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
@@ -141,12 +141,12 @@
 
     <style name="Widget.DS.Button.Avon_v2.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_consultoria_de_beleza_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_consultoria_de_beleza_light</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_consultoria_de_beleza_light</item>
+        <item name="android:textColor">@color/button_contained_label_color_avon_v2_light</item>
+        <item name="backgroundTint">@color/button_contained_background_color_avon_v2_light</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_avon_v2_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_consultoria_de_beleza_light</item>
+        <item name="iconTint">@color/button_contained_label_color_avon_v2_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -167,12 +167,12 @@
 
     <style name="Widget.DS.Button.Avon_v2.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_consultoria_de_beleza_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_consultoria_de_beleza_dark</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_consultoria_de_beleza_dark</item>
+        <item name="android:textColor">@color/button_contained_label_color_avon_v2_dark</item>
+        <item name="backgroundTint">@color/button_contained_background_color_avon_v2_dark</item>
+        <item name="strokeColor">@color/button_contained_stroke_color_avon_v2_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_consultoria_de_beleza_dark</item>
+        <item name="iconTint">@color/button_contained_label_color_avon_v2_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -192,13 +192,13 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon_v2.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_consultoria_de_beleza_light</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_consultoria_de_beleza_light</item>
+        <item name="android:textColor">@color/button_outlined_label_color_avon_v2_light</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_avon_v2_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_consultoria_de_beleza_light</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_avon_v2_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_consultoria_de_beleza_light</item>
+        <item name="iconTint">@color/button_outlined_label_color_avon_v2_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -218,13 +218,13 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon_v2.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_consultoria_de_beleza_dark</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_consultoria_de_beleza_dark</item>
+        <item name="android:textColor">@color/button_outlined_label_color_avon_v2_dark</item>
+        <item name="strokeColor">@color/button_outlined_stroke_color_avon_v2_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_consultoria_de_beleza_dark</item>
+        <item name="backgroundTint">@color/button_outlined_background_color_avon_v2_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_consultoria_de_beleza_dark</item>
+        <item name="iconTint">@color/button_outlined_label_color_avon_v2_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -238,13 +238,13 @@
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Avon_v2.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_avon_v2_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Avon_v2.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_avon_v2_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>
