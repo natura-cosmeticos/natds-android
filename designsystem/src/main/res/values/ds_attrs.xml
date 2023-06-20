@@ -17,6 +17,25 @@
         <enum name="inverse" value="3" />
     </attr>
 
+    <attr name="customTheme" format="enum">
+        <enum name="aesopDark" value="1" />
+        <enum name="aesopLight" value="2" />
+        <enum name="avonDark" value="3" />
+        <enum name="avonLight" value="4" />
+        <enum name="avonV2Dark" value="5" />
+        <enum name="avonV2Light" value="6" />
+        <enum name="casaEstiloDark" value="7" />
+        <enum name="casaEstiloLight" value="8" />
+        <enum name="consultoriaBelezaDark" value="9" />
+        <enum name="consultoriaBelezaLight" value="10" />
+        <enum name="naturaDark" value="11" />
+        <enum name="naturaLight" value="12" />
+        <enum name="naturaV2Dark" value="13" />
+        <enum name="naturaV2Light" value="14" />
+        <enum name="theBodyShopDark" value="15" />
+        <enum name="theBodyShopLight" value="16" />
+    </attr>
+
     <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
             <enum name="primary" value="0" />
@@ -121,6 +140,7 @@
             <enum name="colorSecondary" value="2" />
             <enum name="colorSuccess" value="3" />
         </attr>
+        <attr name="customTheme"/>
     </declare-styleable>
 
     <declare-styleable name="ds_menu">
@@ -153,6 +173,7 @@
         <attr name="button_icon_left" format="string" />
         <attr name="button_icon_right" format="string" />
         <attr name="button_enabled" format="boolean" />
+        <attr name="customTheme"/>
     </declare-styleable>
 
     <declare-styleable name="ds_error_default">
@@ -194,6 +215,7 @@
 
     <declare-styleable name="ds_expansion_panel">
         <attr name="title" format="string" />
+        <attr name="customTheme"/>
     </declare-styleable>
 
     <declare-styleable name="IconButton">
@@ -341,6 +363,7 @@
             <enum name="small" value="0" />
             <enum name="large" value="2" />
         </attr>
+        <attr name="customTheme"/>
     </declare-styleable>
 
     <declare-styleable name="ButtonStyle">
@@ -417,6 +440,7 @@
 
         <attr name="chp_helper_left" format="reference" />
         <attr name="chp_helper_right" format="reference" />
+        <attr name="customTheme"/>
 
     </declare-styleable>
 
