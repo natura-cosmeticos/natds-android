@@ -24,11 +24,13 @@ import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
 import com.natura.android.resources.getColorTokenFromTheme
+import com.natura.android.resources.getDrawableFromTheme
 import com.natura.android.textfield.TextField
 
 class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(context, attrs) {
 
     private var typedArray: TypedArray
+    private val imageView = ImageView(context)
 
     private var barColor: Int = DEFAULT
         set(value) {
@@ -219,6 +221,39 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 }
             }
             SEARCH -> addTextField(context)
+            LOGO -> {
+                val desiredHeight = 48
+                val heightInPixels = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, desiredHeight.toFloat(), resources.displayMetrics).toInt()
+                val desiredWidth = 120
+                val widthInPixels = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, desiredWidth.toFloat(), resources.displayMetrics).toInt()
+
+                if (barColor == NONE) {
+                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile))
+                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    addContentView(imageView)
+                } else if (barColor == PRIMARY) {
+                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
+                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnPrimary))
+                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    addContentView(imageView)
+                } else if (barColor == SECONDARY) {
+                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
+                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnSecondary))
+                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    addContentView(imageView)
+                } else if (barColor == INVERSE) {
+                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
+                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorSurface))
+                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    addContentView(imageView)
+                } else {
+                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile))
+                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    addContentView(imageView)
+                }
+            }
         }
     }
 
@@ -262,6 +297,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             when (color) {
                 DEFAULT -> getColorTokenFromTheme(context, R.attr.colorSurface)
                 PRIMARY -> getColorTokenFromTheme(context, R.attr.colorPrimary)
+                SECONDARY -> getColorTokenFromTheme(context, R.attr.colorSecondary)
                 INVERSE -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
                 else -> Color.TRANSPARENT
             }
@@ -397,13 +433,15 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     companion object {
         const val DEFAULT = 0
-        const val PRIMARY = 1
-        const val NONE = 2
-        const val INVERSE = 3
+        const val NONE = 1
+        const val PRIMARY = 2
+        const val SECONDARY = 3
+        const val INVERSE = 4
 
         const val TEXT = 0
         const val MEDIA = 1
         const val SEARCH = 2
+        const val LOGO = 3
 
         const val LEFT = 0
         const val CENTER = 1

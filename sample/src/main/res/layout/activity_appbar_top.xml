@@ -6,6 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include android:id="@+id/appbartop_color_default" layout="@layout/appbartop_color_default" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_color_none" layout="@layout/appbartop_color_none" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_color_primary" layout="@layout/appbartop_color_primary" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_color_secondary" layout="@layout/appbartop_color_secondary" android:visibility="gone"/>
+    <include android:id="@+id/appbartop_color_inverse" layout="@layout/appbartop_color_inverse" android:visibility="gone"/>
+
     <include android:id="@+id/appbartop_button_action" layout="@layout/appbartop_button_action" android:visibility="gone"/>
     <include android:id="@+id/appbartop_search" layout="@layout/appbartop_search" android:visibility="gone"/>
     <include android:id="@+id/appbartop_threeactions" layout="@layout/appbartop_threeactions" android:visibility="gone"/>

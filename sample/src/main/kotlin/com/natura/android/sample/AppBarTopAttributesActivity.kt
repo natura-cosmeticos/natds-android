@@ -45,6 +45,25 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
         binding.btnActionButton.setOnClickListener {
             startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_APPBARTOP_BUTTON))
         }
+
+        binding.btnColorDefault.setOnClickListener {
+            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_COLOR_DEFAULT))
+        }
+
+        binding.btnColorNone.setOnClickListener {
+            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_COLOR_NONE))
+        }
+
+        binding.btnColorPrimary.setOnClickListener {
+            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_COLOR_PRIMARY))
+        }
+
+        binding.btnColorSecondary.setOnClickListener {
+            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_COLOR_SECONDARY))
+        }
+        binding.btnColorInverse.setOnClickListener {
+            startActivity(Intent(this, AppBarTopActivity::class.java).putExtra("pattern", PATTERN_COLOR_INVERSE))
+        }
     }
 
     companion object {
@@ -54,5 +73,10 @@ class AppBarTopAttributesActivity : AppCompatActivity() {
         private const val PATTERN_APPBARTOP_SEARCH = 4
         private const val PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT = 5
         private const val PATTERN_APPBARTOP_BUTTON = 6
+        private const val PATTERN_COLOR_DEFAULT = 7
+        private const val PATTERN_COLOR_NONE = 8
+        private const val PATTERN_COLOR_PRIMARY = 9
+        private const val PATTERN_COLOR_SECONDARY = 10
+        private const val PATTERN_COLOR_INVERSE = 11
     }
 }
