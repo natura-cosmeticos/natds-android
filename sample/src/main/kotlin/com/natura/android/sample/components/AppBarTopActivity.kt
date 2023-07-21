@@ -5,6 +5,11 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.sample.databinding.ActivityAppbarTopBinding
 import com.natura.android.sample.databinding.AppbartopButtonActionBinding
+import com.natura.android.sample.databinding.AppbartopColorDefaultBinding
+import com.natura.android.sample.databinding.AppbartopColorInverseBinding
+import com.natura.android.sample.databinding.AppbartopColorNoneBinding
+import com.natura.android.sample.databinding.AppbartopColorPrimaryBinding
+import com.natura.android.sample.databinding.AppbartopColorSecondaryBinding
 import com.natura.android.sample.databinding.AppbartopSearchBinding
 import com.natura.android.sample.databinding.AppbartopThreeactionsBinding
 import com.natura.android.sample.databinding.AppbartopTitleCenterBinding
@@ -15,6 +20,11 @@ import com.natura.android.sample.setChosenDefaultWithNoActionBarTheme
 class AppBarTopActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAppbarTopBinding
+    private lateinit var layoutColorDefault: AppbartopColorDefaultBinding
+    private lateinit var layoutColorNone: AppbartopColorNoneBinding
+    private lateinit var layoutColorPrimary: AppbartopColorPrimaryBinding
+    private lateinit var layoutColorSecondary: AppbartopColorSecondaryBinding
+    private lateinit var layoutColorInverse: AppbartopColorInverseBinding
     private lateinit var layoutButtonActionBinding: AppbartopButtonActionBinding
     private lateinit var layoutSearchBinding: AppbartopSearchBinding
     private lateinit var layoutThreeActionsBinding: AppbartopThreeactionsBinding
@@ -29,6 +39,11 @@ class AppBarTopActivity : AppCompatActivity() {
 
         binding = ActivityAppbarTopBinding.inflate(layoutInflater)
 
+        layoutColorDefault = binding.appbartopColorDefault
+        layoutColorNone = binding.appbartopColorNone
+        layoutColorPrimary = binding.appbartopColorPrimary
+        layoutColorSecondary = binding.appbartopColorSecondary
+        layoutColorInverse = binding.appbartopColorInverse
         layoutButtonActionBinding = binding.appbartopButtonAction
         layoutSearchBinding = binding.appbartopSearch
         layoutThreeActionsBinding = binding.appbartopThreeactions
@@ -53,13 +68,17 @@ class AppBarTopActivity : AppCompatActivity() {
             PATTERN_APPBARTOP_SEARCH -> layoutSearchBinding.root.visibility = View.VISIBLE
             PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT -> layoutThreeActionsBinding.root.visibility = View.VISIBLE
             PATTERN_APPBARTOP_BUTTON -> layoutButtonActionBinding.root.visibility = View.VISIBLE
+            PATTERN_COLOR_DEFAULT -> layoutColorDefault.root.visibility = View.VISIBLE
+            PATTERN_COLOR_NONE -> layoutColorNone.root.visibility = View.VISIBLE
+            PATTERN_COLOR_PRIMARY -> layoutColorPrimary.root.visibility = View.VISIBLE
+            PATTERN_COLOR_SECONDARY -> layoutColorSecondary.root.visibility = View.VISIBLE
+            PATTERN_COLOR_INVERSE -> layoutColorInverse.root.visibility = View.VISIBLE
         }
     }
 
     private fun createListeners() {
 
         layoutButtonActionBinding.apply {
-            buttonActionViewIconButtonActionRight.setOnClickListener {}
             buttonActionViewOutlinedButtonActionRight.setOnClickListener {}
         }
 
@@ -101,5 +120,10 @@ class AppBarTopActivity : AppCompatActivity() {
         private const val PATTERN_APPBARTOP_SEARCH = 4
         private const val PATTERN_APPBARTOP_THREE_ACTIONS_RIGHT = 5
         private const val PATTERN_APPBARTOP_BUTTON = 6
+        private const val PATTERN_COLOR_DEFAULT = 7
+        private const val PATTERN_COLOR_NONE = 8
+        private const val PATTERN_COLOR_PRIMARY = 9
+        private const val PATTERN_COLOR_SECONDARY = 10
+        private const val PATTERN_COLOR_INVERSE = 11
     }
 }

@@ -16,33 +16,12 @@
         android:theme="?toolbarDefaultTheme"
         app:actionLeft="true"
         app:actionRight="true"
-        app:appBarColor="colorDefault"
+        app:appBarColor="colorPrimary"
         app:contentPosition="center"
-        app:contentText="Title Page Center"
-        app:contentType="text"
-        app:enabledElevation="true"
+        app:contentType="logo"
+        app:enabledElevation="false"
         app:proeminentContent="false"
         app:scrollable="true">
-
-        <com.natura.android.iconButton.IconButton
-            android:id="@+id/buttonActionViewOutlinedButtonActionRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            app:buttonColor="defaultColor"
-            app:iconName="outlined_default_mockup"
-            app:sizeButton="semi"
-            app:styleButton="inherit" />
-
-        <com.natura.android.iconButton.IconButton
-            android:id="@+id/threeActionsViewIconButtonActionLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            app:buttonColor="defaultColor"
-            app:iconName="outlined_default_mockup"
-            app:sizeButton="semi"
-            app:styleButton="inherit" />
 
     </com.natura.android.appbartop.StandardAppBarTop>
 

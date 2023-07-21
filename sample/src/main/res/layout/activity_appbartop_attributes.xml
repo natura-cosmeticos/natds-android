@@ -17,6 +17,75 @@
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:padding="@dimen/ds_spacing_small"
+            android:text="Colors"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnColorDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/appbartop_color_default"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnColorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/appbartop_color_primary"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnColorSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/appbartop_color_secondary"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnColorNone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/appbartop_color_none"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/btnColorInverse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="@string/appbartop_color_inverse"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="@dimen/ds_spacing_small"
             android:text="@string/appbartop_attributes_screen_patterns_text"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />

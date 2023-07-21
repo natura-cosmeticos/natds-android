@@ -84,6 +84,7 @@ class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(contex
             when (color) {
                 DEFAULT -> getColorTokenFromTheme(context, R.attr.colorSurface)
                 PRIMARY -> getColorTokenFromTheme(context, R.attr.colorPrimary)
+                SECONDARY -> getColorTokenFromTheme(context, R.attr.colorSecondary)
                 INVERSE -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
                 else -> Color.TRANSPARENT
             }
@@ -139,8 +140,9 @@ class BaseAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(contex
 
     companion object {
         const val DEFAULT = 0
-        const val PRIMARY = 1
-        const val NONE = 2
-        const val INVERSE = 3
+        const val NONE = 1
+        const val PRIMARY = 2
+        const val SECONDARY = 3
+        const val INVERSE = 4
     }
 }
