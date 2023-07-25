@@ -84,11 +84,9 @@ android {
 }
 
 dependencies {
-
-    //lintPublish project(":lint")
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':lint')
+    //lintPublish project(":lint")
+    //implementation project(':lint')
 
     //Compose dependencies
     implementation "androidx.compose.foundation:foundation:$rootProject.composeVersion"
