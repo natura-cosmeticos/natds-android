@@ -64,11 +64,11 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
-    
+    /*
     lintOptions {
         //baseline file("lint-baseline.xml")
         checkReleaseBuilds false
-    }
+    }*/
 
     testOptions {
         unitTests.includeAndroidResources = true
