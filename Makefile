@@ -43,6 +43,7 @@ enable-animations:
 publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
 
+# run-all-pipeline-steps: lint unit-test instrumentation-test
 run-all-pipeline-steps: lint unit-test instrumentation-test
 
 update-icons:
