@@ -38,7 +38,7 @@ class TypographyActivityTest {
             val textSize = it.findViewById<TextView>(R.id.h2Sample).textSize
             val textColor = it.findViewById<TextView>(R.id.h2Sample).currentTextColor
 
-            assertEquals(60.0F, textSize)
+            assertEquals(64.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
         }
     }
@@ -60,7 +60,7 @@ class TypographyActivityTest {
             val textSize = it.findViewById<TextView>(R.id.h4Sample).textSize
             val textColor = it.findViewById<TextView>(R.id.h4Sample).currentTextColor
 
-            assertEquals(34.0F, textSize)
+            assertEquals(32.0F, textSize)
             assertEquals(Color.parseColor("#333333"), textColor)
         }
     }

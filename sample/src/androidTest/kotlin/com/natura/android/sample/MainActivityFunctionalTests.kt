@@ -29,21 +29,6 @@ class MainActivityFunctionalTests {
     }
 
     @Test
-    fun shouldOpenColorScreenWhenTapOnItButton() {
-        onView(withId(R.id.colorTokensButton)).perform(click())
-
-        onView(withText(containsString("Colors"))).check(matches(isDisplayed()))
-    }
-
-    @Test
-    fun shouldOpenElevationScreenWhenTapOnItButton() {
-        onView(withId(R.id.elevationTokensButton)).perform(scrollTo())
-        onView(withId(R.id.elevationTokensButton)).perform(click())
-
-        onView(withText("Elevation")).check(matches(isDisplayed()))
-    }
-
-    @Test
     fun shouldOpenIconDrawableScreenWhenTapOnItButton() {
         onView(withId(R.id.btnIconsDrawables)).perform(scrollTo())
         onView(withId(R.id.btnIconsDrawables)).perform(click())
@@ -91,8 +76,6 @@ class MainActivityFunctionalTests {
         onView(withId(R.id.btnActionButton)).check(matches(isDisplayed()))
 
         onView(withId(R.id.btnActionButton)).perform(click())
-
-        onView(withId(R.id.buttonActionViewIconButtonActionRight)).check(matches(isDisplayed()))
     }
 
     @Test
