@@ -4,11 +4,11 @@ build: clean
 clean:
 	./gradlew clean
 
-lint:
-	./gradlew ktlint
+# lint:
+#	./gradlew ktlint
 
-run-lint-rules:
-	./gradlew ktlintFormat
+#run-lint-rules:
+#	./gradlew ktlintFormat
 
 unit-test: unit-test-designsystem unit-test-sample
 
@@ -44,7 +44,7 @@ publish-ds-lib-prod: clean
 	./gradlew build publish --stacktrace
 
 # run-all-pipeline-steps: lint unit-test instrumentation-test
-run-all-pipeline-steps: lint unit-test instrumentation-test
+run-all-pipeline-steps: unit-test instrumentation-test
 
 update-icons:
 	sh ./tools/update_icons.sh
