@@ -109,9 +109,6 @@
             android:name=".components.DividerActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
-            android:name=".components.AvatarActivity"
-            android:theme="@style/Theme.Natura.Light" />
-        <activity
             android:name=".components.RadioButtonActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
