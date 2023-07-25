@@ -224,10 +224,12 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             LOGO -> {
                 val desiredHeight = 48
                 val heightInPixels = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, desiredHeight.toFloat(), resources.displayMetrics).toInt()
+                    TypedValue.COMPLEX_UNIT_DIP, desiredHeight.toFloat(), resources.displayMetrics
+                ).toInt()
                 val desiredWidth = 120
                 val widthInPixels = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, desiredWidth.toFloat(), resources.displayMetrics).toInt()
+                    TypedValue.COMPLEX_UNIT_DIP, desiredWidth.toFloat(), resources.displayMetrics
+                ).toInt()
 
                 if (barColor == NONE) {
                     imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile))
