@@ -60,7 +60,7 @@ ext {
     // App dependencies
     constraintLayout = '2.1.2'
     junitVersion = '4.13.2'
-    junitExtVersion = '1.1.0'
+    junitExtVersion = '1.1.5'
     espressoVersion = '3.4.0'
     androidXTestVersion = '1.4.0'
     testCoreKtxVersion = "1.4.0"
