@@ -1,7 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply from: "$rootDir/tools/publish.gradle"
-//apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'kotlin-kapt'
 
@@ -64,12 +63,6 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
-    /*
-    lintOptions {
-        //baseline file("lint-baseline.xml")
-        checkReleaseBuilds false
-    }*/
-
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
@@ -85,8 +78,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //lintPublish project(":lint")
-    //implementation project(':lint')
 
     //Compose dependencies
     implementation "androidx.compose.foundation:foundation:$rootProject.composeVersion"
