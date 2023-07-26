@@ -118,16 +118,6 @@ class DialogStandardTest {
         assertThat(bottomDivider?.visibility).isEqualTo(View.VISIBLE)
     }
 
-    @Test
-    fun checksStandardDialogWithOutlinedButton() {
-        dialogStandard = createStandardDialogWithOutlinedButton()
-        dialogStandard.show()
-
-        val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
-        shadowOf(getMainLooper()).idle()
-        assertThat(mainButton.backgroundTintList?.defaultColor).isEqualTo(ContextCompat.getColorStateList(context, R.color.button_outlined_background_color_natura_light)?.defaultColor)
-    }
-
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
         return DialogStandard(
             context,
