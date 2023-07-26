@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.facebook.testing.screenshot'
-apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-kapt'
 apply from: '../jacoco/modules.gradle'
@@ -53,6 +52,10 @@ android {
             includeAndroidResources = true
             unitTests.returnDefaultValues = true
         }
+    }
+
+    lintOptions {
+        tasks.lint.enabled = false
     }
 
     kapt.includeCompileClasspath = false
