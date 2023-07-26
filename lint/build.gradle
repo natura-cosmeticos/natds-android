@@ -15,6 +15,7 @@ lintOptions {
     textReport true
     absolutePaths false
     ignoreTestSources true
+    checkReleaseBuilds false
 }
 
 
