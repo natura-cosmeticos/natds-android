@@ -28,5 +28,6 @@ find /tmp/natds/*/packages/natds-themes/build/android/assets/ -type f -maxdepth 
 
 echo "Themes copied to project source files"
 
-git add .
-git commit -m "chore: Updates themes and assets from natds-commons"
+make run-lint-rules
+# git add .
+# git commit -m "chore: Updates themes and assets from natds-commons"
