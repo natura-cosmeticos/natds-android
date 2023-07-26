@@ -84,7 +84,7 @@ android {
 
 dependencies {
 
-    lintPublish project(":lint")
+    //lintPublish project(":lint")
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':lint')
