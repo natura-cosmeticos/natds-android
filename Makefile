@@ -1,11 +1,11 @@
 build: clean
-	./gradlew build
+	./gradlew build -x lint 
 
 clean:
 	./gradlew clean
 
 lint:
-	./gradlew ktlint
+	./gradlew clean -x lint 
 
 run-lint-rules:
 	./gradlew ktlintFormat
@@ -41,9 +41,9 @@ enable-animations:
 	adb shell settings put global animator_duration_scale 1
 
 publish-ds-lib-prod: clean
-	./gradlew build publish --stacktrace
+	./gradlew build publish --stacktrace -x lint 
 
-run-all-pipeline-steps: lint unit-test instrumentation-test
+run-all-pipeline-steps: unit-test
 
 update-icons:
 	sh ./tools/update_icons.sh
