@@ -4,19 +4,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.24.14](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.13...v.9.24.14) (2023-07-26)
 
-### [9.24.13](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.12...v.9.24.13) (2023-07-26)
-
-### [9.24.12](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.11...v.9.24.12) (2023-07-26)
-
-### [9.24.11](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.11...v.9.24.11) (2023-07-26)
-
-### [9.24.10](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.11...v.9.24.10) (2023-07-26)
-
-### [9.24.9](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.8...v.9.24.9) (2023-05-26)
-
 - Adding Natura V2 theme
 - Adding Avon V2 theme
 - Replacing Helvetica font family with Roboto
+- StandardAppBar
 
 ### [9.24.8](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.7...v.9.24.8) (2023-03-13)
 
