@@ -1,6 +1,6 @@
 # Design System Natura for Android
 
-![build](https://img.shields.io/bitrise/7f2a8943b9821eb7/master?style=for-the-badge&token=FxAKpfZdgAYqXYTaox0E8Q)
+[![Build Status](https://app.bitrise.io/app/38848108b04aa71a/status.svg?token=KeP02isBtn73sdE7KEZO4w&branch=master)](https://app.bitrise.io/app/38848108b04aa71a)
 ![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
 
 ## What for
