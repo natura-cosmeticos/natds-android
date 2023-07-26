@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply from: "$rootDir/tools/publish.gradle"
+apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'kotlin-kapt'
 
@@ -33,6 +34,10 @@ android {
         }
     }
 
+    buildFeatures {
+        compose = true
+    }
+
     // Set both the Java and Kotlin compilers to target Java 8.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -40,6 +45,11 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion rootProject.composeVersion
+        kotlinCompilerVersion kotlin_version
     }
 
     buildTypes {
@@ -54,12 +64,18 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
+    }
+
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
     }
 
     buildFeatures {
+        compose = true
         viewBinding = true
     }
 
@@ -67,7 +83,19 @@ android {
 }
 
 dependencies {
+
+    lintPublish project(":lint")
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':lint')
+
+    //Compose dependencies
+    implementation "androidx.compose.foundation:foundation:$rootProject.composeVersion"
+    implementation "androidx.compose.material:material:$rootProject.composeVersion"
+    implementation "androidx.compose.runtime:runtime:$rootProject.composeVersion"
+    implementation "androidx.compose.ui:ui-tooling:$rootProject.composeVersion"
+    implementation "io.coil-kt:coil-compose:$rootProject.coilVersion"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.google.android.material:material:$rootProject.materialVersion"

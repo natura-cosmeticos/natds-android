@@ -22,6 +22,7 @@ import com.natura.android.sample.components.BadgeActivity
 import com.natura.android.sample.components.DividerActivity
 import com.natura.android.sample.components.RadioButtonActivity
 import com.natura.android.sample.components.SelectActivity
+import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
@@ -180,6 +181,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.customTypographyButton.setOnClickListener {
             startActivity(Intent(this, CustomTypographyActivity::class.java))
+        }
+
+        binding.btnAvatar.setOnClickListener {
+            startActivity(Intent(this, AvatarActivity::class.java))
         }
 
         binding.chipButton.setOnClickListener {
