@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.24.16](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.14...v.9.24.16) (2023-08-09)
 
-### [9.24.15](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.14...v.9.24.15) (2023-08-09)
+- Fix standart appbar
 
 ### [9.24.14](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.13...v.9.24.14) (2023-07-26)
 
