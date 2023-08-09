@@ -94,9 +94,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         initialConfigurations()
         getAttributes()
-
-        toolbar.setNavigationIcon(null);
-
+        toolbar.setNavigationIcon(null)
         addContent()
         typedArray.recycle()
     }
