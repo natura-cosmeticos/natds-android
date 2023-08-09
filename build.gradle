@@ -19,7 +19,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.facebook.testing.screenshot:plugin:$screen_shot_plugin"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.gms:google-services:4.3.15'
         classpath "org.jetbrains.dokka:dokka-gradle-plugin:$dokka_version_plugin"
 
     }
