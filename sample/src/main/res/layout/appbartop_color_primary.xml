@@ -13,7 +13,6 @@
         android:id="@+id/appBarWithButtonAction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="?toolbarDefaultTheme"
         app:actionLeft="true"
         app:actionRight="true"
         app:appBarColor="colorPrimary"
