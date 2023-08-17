@@ -471,6 +471,18 @@
         <item name="iconColor">?colorSurface</item>
     </style>
 
+    <style name="Widget.DS.IconButton.OnPrimary" parent="Widget.DS.IconButton.Enabled">
+        <item name="iconColor">?colorOnPrimary</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.OnSecondary" parent="Widget.DS.IconButton.Enabled">
+        <item name="iconColor">?colorOnSecondary</item>
+    </style>
+
+    <style name="Widget.DS.IconButton.Inverse" parent="Widget.DS.IconButton.Enabled">
+        <item name="iconColor">?colorOnSurface</item>
+    </style>
+
     <style name="Widget.DS.IconButton.Semi" parent="Widget.DS.IconButton">
         <item name="iconSize">?sizeStandard</item>
         <item name="backgroundSize">?sizeSemi</item>

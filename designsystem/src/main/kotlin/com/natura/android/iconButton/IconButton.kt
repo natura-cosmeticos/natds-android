@@ -196,6 +196,9 @@ class IconButton @JvmOverloads constructor(
                 PRIMARY -> setAppearanceAttributes(R.attr.iconButtonPrimary)
                 DEFAULT -> setAppearanceAttributes(R.attr.iconButtonDefault)
                 LIGHT -> setAppearanceAttributes(R.attr.iconButtonLight)
+                ONPRIMARY -> setAppearanceAttributes(R.attr.iconButtonOnPrimary)
+                ONSECONDARY -> setAppearanceAttributes(R.attr.iconButtonOnSecondary)
+                INVERSE -> setAppearanceAttributes(R.attr.iconButtonInverse)
             }
         } catch (e: Exception) {
             throw (MissingThemeException())
@@ -333,6 +336,9 @@ class IconButton @JvmOverloads constructor(
         const val DEFAULT = 0
         const val PRIMARY = 1
         const val LIGHT = 2
+        const val ONPRIMARY = 3
+        const val ONSECONDARY = 4
+        const val INVERSE = 5
     }
 }
 

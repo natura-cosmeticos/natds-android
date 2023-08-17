@@ -205,6 +205,9 @@
             <enum name="defaultColor" value="0" />
             <enum name="primaryColor" value="1" />
             <enum name="lightColor" value="2" />
+            <enum name="onPrimary" value="3" />
+            <enum name="onSecondary" value="4" />
+            <enum name="inverse" value="5" />
         </attr>
         <attr name="sizeButton" format="enum">
             <enum name="semi" value="0" />
