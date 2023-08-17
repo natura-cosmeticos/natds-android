@@ -4,23 +4,17 @@ import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.Color
-import android.os.Build
 import android.text.TextUtils
 import android.util.AttributeSet
-import android.util.DisplayMetrics
-import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
@@ -114,7 +108,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         toolbar.setNavigationIcon(null)
         addContent()
         typedArray.recycle()
-
     }
 
     override fun onAttachedToWindow() {
