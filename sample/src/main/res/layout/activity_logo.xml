@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".patterns.LogoActivity">
 
     <ScrollView
@@ -13,9 +15,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/iconButtonActivityContainer"
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:layout_height="wrap_content"
             android:paddingHorizontal="?spacingSmall"
             android:paddingVertical="?spacingSmall">
@@ -26,17 +29,47 @@
                 android:layout_height="wrap_content"
                 app:customColor="neutral"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_modela_text"
+                android:text="@string/logo_screen_modela_text" />
+
+            <com.natura.android.logo.Logo
+                android:id="@+id/logoModelAPt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:customColor="neutral"
+                android:layout_marginTop="@dimen/ds_spacing_large"
+                app:customSize="hugexx"
+                app:model="a"
+                app:language="pt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                android:text="@string/logo_screen_modelapt_text" />
+
+            <com.natura.android.logo.Logo
+                android:id="@+id/logoModelAEs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_spacing_large"
+                app:customColor="neutral"
+                app:customSize="hugexx"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoModelA" />
+                app:layout_constraintTop_toBottomOf="@id/logoModelAPt"
+                app:model="a"
+                app:language="es"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                android:text="@string/logo_screen_modelaes_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoModelB"
@@ -45,17 +78,45 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoModelA"
                 app:model="b" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_modelb_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoModelB" />
+                android:text="@string/logo_screen_modelb_text" />
+
+            <com.natura.android.logo.Logo
+                android:id="@+id/logoModelBPt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_spacing_large"
+                app:customColor="neutral"
+                app:customSize="hugexx"
+                app:model="b"
+                app:language="pt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                android:text="@string/logo_screen_modelbpt_text" />
+
+            <com.natura.android.logo.Logo
+                android:id="@+id/logoModelBEs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ds_spacing_large"
+                app:customColor="neutral"
+                app:customSize="hugexx"
+                app:model="b"
+                app:language="es"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="?spacingSmall"
+                android:text="@string/logo_screen_modelbes_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorPrimary"
@@ -64,17 +125,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="primary"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoModelB"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_color_primary_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorPrimary" />
+                android:text="@string/logo_screen_color_primary_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorSecondary"
@@ -83,17 +140,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="secondary"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorPrimary"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_color_secondary_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorSecondary" />
+                android:text="@string/logo_screen_color_secondary_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorHighlight"
@@ -102,17 +155,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="highlight"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorSecondary"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_color_highlight_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorHighlight" />
+                android:text="@string/logo_screen_color_highlight_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorSurface"
@@ -121,18 +170,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="surface"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorHighlight"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_color_surface_text"
-                app:layout_constraintStart_toStartOf="parent"
-
-                app:layout_constraintTop_toBottomOf="@id/logoColorSurface" />
+                android:text="@string/logo_screen_color_surface_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoColorNeutral"
@@ -141,17 +185,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorSurface"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_color_neutral_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorNeutral" />
+                android:text="@string/logo_screen_color_neutral_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeMedium"
@@ -160,17 +200,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoColorNeutral"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_medium_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeMedium" />
+                android:text="@string/logo_screen_size_medium_text"/>
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeMediumX"
@@ -179,17 +215,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="mediumx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeMedium"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_mediumx_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeMediumX" />
+                android:text="@string/logo_screen_size_mediumx_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLarge"
@@ -198,17 +230,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="large"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeMediumX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_large_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLarge" />
+                android:text="@string/logo_screen_size_large_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeX"
@@ -217,17 +245,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="largex"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLarge"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_largex_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeX" />
+                android:text="@string/logo_screen_size_largex_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeXX"
@@ -236,17 +260,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="largexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_largexx_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXX" />
+                android:text="@string/logo_screen_size_largexx_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeLargeXXX"
@@ -255,17 +275,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="largexxx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_largexxx_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXXX" />
+                android:text="@string/logo_screen_size_largexxx_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHuge"
@@ -274,17 +290,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="huge"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeLargeXXX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_huge_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHuge" />
+                android:text="@string/logo_screen_size_huge_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeX"
@@ -293,17 +305,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="hugex"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHuge"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_hugex_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeX" />
+                android:text="@string/logo_screen_size_hugex_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeXX"
@@ -312,17 +320,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="hugexx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_hugexx_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXX" />
+                android:text="@string/logo_screen_size_hugexx_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeHugeXXX"
@@ -331,17 +335,13 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="hugexxx"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_hugexxx_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXXX" />
+                android:text="@string/logo_screen_size_hugexxx_text" />
 
             <com.natura.android.logo.Logo
                 android:id="@+id/logoSizeVeryHuge"
@@ -350,20 +350,16 @@
                 android:layout_marginTop="@dimen/ds_spacing_large"
                 app:customColor="neutral"
                 app:customSize="veryhuge"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeHugeXXX"
                 app:model="a" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?spacingSmall"
-                android:text="@string/logo_screen_size_veryhuge_text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/logoSizeVeryHuge" />
+                android:text="@string/logo_screen_size_veryhuge_text" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

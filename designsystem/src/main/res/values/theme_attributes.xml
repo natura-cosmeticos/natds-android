@@ -503,16 +503,24 @@
   <attr name="assetFontFileHeadline" format="reference" />  
   <attr name="assetFontFileBodyRegular" format="reference" />  
   <attr name="assetFontFileBodyBold" format="reference" />  
-  <attr name="assetBrandNeutralAFile" format="reference" />  
+  <attr name="assetBrandNeutralAFile" format="reference" />
+  <attr name="assetBrandNeutralAPtFile" format="reference" />
+  <attr name="assetBrandNeutralAEsFile" format="reference" />
   <attr name="assetBrandNeutralAWidth" format="dimension" />  
   <attr name="assetBrandNeutralAHeight" format="dimension" />  
-  <attr name="assetBrandNeutralBFile" format="reference" />  
+  <attr name="assetBrandNeutralBFile" format="reference" />
+  <attr name="assetBrandNeutralBPtFile" format="reference" />
+  <attr name="assetBrandNeutralBEsFile" format="reference" />
   <attr name="assetBrandNeutralBWidth" format="dimension" />  
   <attr name="assetBrandNeutralBHeight" format="dimension" />  
-  <attr name="assetBrandCustomAFile" format="reference" />  
+  <attr name="assetBrandCustomAFile" format="reference" />
+  <attr name="assetBrandCustomAEsFile" format="reference" />
+  <attr name="assetBrandCustomAPtFile" format="reference" />
   <attr name="assetBrandCustomAWidth" format="dimension" />  
   <attr name="assetBrandCustomAHeight" format="dimension" />  
-  <attr name="assetBrandCustomBFile" format="reference" />  
+  <attr name="assetBrandCustomBFile" format="reference" />
+  <attr name="assetBrandCustomBEsFile" format="reference" />
+  <attr name="assetBrandCustomBPtFile" format="reference" />
   <attr name="assetBrandCustomBWidth" format="dimension" />  
   <attr name="assetBrandCustomBHeight" format="dimension" />  
   <attr name="elevationNone" format="dimension" />  

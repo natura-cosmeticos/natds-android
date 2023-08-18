@@ -450,6 +450,14 @@
     <item name="assetBrandNeutralBFile">@drawable/thebodyshop_b_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/thebodyshop_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/thebodyshop_b_custom</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/thebodyshop_a_official_dark</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/thebodyshop_b_official_dark</item>
+    <item name="assetBrandCustomAPtFile">@drawable/thebodyshop_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/thebodyshop_b_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/thebodyshop_a_official_dark</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/thebodyshop_b_official_dark</item>
+    <item name="assetBrandCustomAEsFile">@drawable/thebodyshop_a_custom</item>
+    <item name="assetBrandCustomBEsFile">@drawable/thebodyshop_b_custom</item>
     <item name="assetFontFileDisplay">@font/druk_cy_bold</item>
     <item name="assetFontFileHeadline">@font/recoleta_semi_bold</item>
     <item name="assetFontFileBodyRegular">@font/work_sans_regular</item>

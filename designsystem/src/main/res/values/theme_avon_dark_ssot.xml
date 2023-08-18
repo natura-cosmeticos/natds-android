@@ -450,6 +450,14 @@
     <item name="assetBrandNeutralBFile">@drawable/avon_a_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/avon_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/avon_a_custom</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/avon_a_official_dark</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/avon_a_official_dark</item>
+    <item name="assetBrandCustomAPtFile">@drawable/avon_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/avon_a_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/avon_a_official_dark</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/avon_a_official_dark</item>
+    <item name="assetBrandCustomAEsFile">@drawable/avon_a_custom</item>
+    <item name="assetBrandCustomBEsFile">@drawable/avon_a_custom</item>
     <item name="assetFontFileDisplay">@font/montserrat_bold</item>
     <item name="assetFontFileHeadline">@font/montserrat_semi_bold</item>
     <item name="assetFontFileBodyRegular">@font/montserrat_regular</item>

@@ -450,6 +450,14 @@
     <item name="assetBrandNeutralBFile">@drawable/aesop_a_official</item>
     <item name="assetBrandCustomAFile">@drawable/aesop_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/aesop_a_custom</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/aesop_a_official</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/aesop_a_official</item>
+    <item name="assetBrandCustomAPtFile">@drawable/aesop_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/aesop_a_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/aesop_a_official</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/aesop_a_official</item>
+    <item name="assetBrandCustomAEsFile">@drawable/aesop_a_custom</item>
+    <item name="assetBrandCustomBEsFile">@drawable/aesop_a_custom</item>
     <item name="assetFontFileDisplay">@font/zapf_humanist601bt_roman</item>
     <item name="assetFontFileHeadline">@font/suisse_intl_regular</item>
     <item name="assetFontFileBodyRegular">@font/suisse_intl_regular</item>
