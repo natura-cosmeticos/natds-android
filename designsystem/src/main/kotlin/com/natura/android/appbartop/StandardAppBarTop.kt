@@ -15,6 +15,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.compose.ui.text.style.TextAlign
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
@@ -364,6 +365,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(R.dimen.ds_size_h6))
         textView.isSingleLine = false
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
