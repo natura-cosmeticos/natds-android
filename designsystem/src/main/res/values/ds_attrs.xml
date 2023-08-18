@@ -277,6 +277,11 @@
             <enum name="a" value="0" />
             <enum name="b" value="1" />
         </attr>
+        <attr name="language" format="enum">
+            <enum name="none" value="0" />
+            <enum name="es" value="1" />
+            <enum name="pt" value="2" />
+        </attr>
         <attr name="customColor" format="enum">
             <enum name="neutral" value="0" />
             <enum name="primary" value="1" />

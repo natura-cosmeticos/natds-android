@@ -450,6 +450,14 @@
     <item name="assetBrandNeutralBFile">@drawable/consultoriadebeleza_b_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/consultoriadebeleza_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/consultoriadebeleza_b_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/consultoriadebeleza_a_official_dark</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/consultoriadebeleza_b_official_dark</item>
+    <item name="assetBrandCustomAEsFile">@drawable/consultoriadebeleza_a_custom</item>
+    <item name="assetBrandCustomAPtFile">@drawable/consultoriadebeleza_b_custom</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/consultoriadebeleza_a_official_dark</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/consultoriadebeleza_b_official_dark</item>
+    <item name="assetBrandCustomBEsFile">@drawable/consultoriadebeleza_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/consultoriadebeleza_b_custom</item>
     <item name="assetFontFileDisplay">@font/roboto_regular</item>
     <item name="assetFontFileHeadline">@font/roboto_regular</item>
     <item name="assetFontFileBodyRegular">@font/roboto_regular</item>

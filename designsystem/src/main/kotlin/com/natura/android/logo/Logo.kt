@@ -27,6 +27,10 @@ class Logo @JvmOverloads constructor(
         A, B
     }
 
+    enum class Language {
+        None, Es, Pt
+    }
+
     enum class Color(@AttrRes val attribute: Int) {
         NEUTRAL(0),
         PRIMARY(R.attr.colorPrimary),
@@ -50,6 +54,7 @@ class Logo @JvmOverloads constructor(
     }
 
     var model: Model = Model.A
+    var language:Language = Language.None
     var color: Color = Color.NEUTRAL
     var size: Size = Size.VERYHUGE
 
@@ -78,23 +83,41 @@ class Logo @JvmOverloads constructor(
         color = intToColor(typedArray.getInt(R.styleable.Logo_customColor, 0))
         size = intToSize(typedArray.getInt(R.styleable.Logo_customSize, 0))
         model = intToModel(typedArray.getInt(R.styleable.Logo_model, 0))
+        language = intToLanguage(typedArray.getInt(R.styleable.Logo_language, 0))
+    }
+
+    private fun getLanguageSuffix(language: Language): String {
+        return when (language) {
+            Language.None -> ""
+            else -> language.name
+        }
     }
 
     private fun setDrawableResource() {
 
+        val languageSuffix = getLanguageSuffix(language)
+
         val drawableAttr = if (color == Color.NEUTRAL) {
             when (model) {
-                Model.A -> R.attr.assetBrandNeutralAFile
-                else -> R.attr.assetBrandNeutralBFile
+                Model.A -> getDrawableAttr("assetBrandNeutralA${languageSuffix}File")
+                Model.B -> getDrawableAttr("assetBrandNeutralB${languageSuffix}File")
             }
         } else {
             when (model) {
-                Model.A -> R.attr.assetBrandCustomAFile
-                else -> R.attr.assetBrandCustomBFile
+                Model.A -> getDrawableAttr("assetBrandCustomA${languageSuffix}File")
+                Model.B -> getDrawableAttr("assetBrandCustomB${languageSuffix}File")
             }
         }
 
         this.imageView.setImageDrawable(getDrawableFromTheme(context, drawableAttr))
+    }
+
+    private fun getDrawableAttr(attributeName: String): Int {
+        val resourceId = context.resources.getIdentifier(attributeName, "attr", context.packageName)
+        if (resourceId == 0) {
+            throw IllegalArgumentException("Attribute not found: $attributeName")
+        }
+        return resourceId
     }
 
     private fun setColor() {
@@ -125,6 +148,12 @@ class Logo @JvmOverloads constructor(
     private fun intToModel(model: Int) = when (model) {
         0 -> Model.A
         else -> Model.B
+    }
+
+    private fun intToLanguage(language: Int) = when (language) {
+        0 -> Language.None
+        1 -> Language.Es
+        else -> Language.Pt
     }
 
     private fun intToSize(size: Int) = when (size) {
