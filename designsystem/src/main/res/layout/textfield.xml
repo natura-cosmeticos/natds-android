@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/text_field_input_main"
@@ -21,14 +22,14 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="text_field_input_label" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/text_field_input_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:background="@drawable/ds_shape_rounded_corners"
         android:orientation="horizontal"
-        android:paddingStart="@dimen/ds_spacing_border_left"
+        android:paddingStart="@dimen/ds_spacin_tiny"
         android:paddingTop="@dimen/ds_spacing_border_top"
         android:paddingEnd="@dimen/ds_spacing_border_right"
         android:paddingBottom="@dimen/ds_spacing_border_bottom"
@@ -36,43 +37,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_field_input_label">
 
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/text_field_leading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:sizeButton="semi"
+            android:clickable="false"
+            app:styleButton="inherit"
+            android:visibility="gone" />
+
         <EditText
             android:id="@+id/text_field_input_value"
             style="@style/TextAppearance.DS.TextField.EditText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="top|left"
+            app:layout_constraintStart_toEndOf="@id/text_field_leading_icon"
+            app:layout_constraintEnd_toStartOf="@+id/text_field_input_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:scrollbars="vertical"
+            android:paddingStart="8dp"
             tools:text="text_field_input_value" />
 
         <com.natura.android.iconButton.IconButton
             android:id="@+id/text_field_input_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center"
             android:layout_marginEnd="?spacingTiny"
-            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/text_field_input_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:buttonColor="defaultColor"
             app:iconName="outlined_default_mockup"
             app:sizeButton="semi"
-            app:styleButton="inherit" />
+            app:styleButton="inherit"
+            android:visibility="gone" />
 
         <ImageView
             android:id="@+id/text_field_input_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="center"
             android:layout_marginStart="?spacingTiny"
             android:layout_marginEnd="?spacingTiny"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:adjustViewBounds="true"
             android:clickable="true"
             android:focusable="true"
             android:visibility="gone" />
-    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/text_field_input_footer_box"

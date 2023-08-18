@@ -453,6 +453,8 @@
     <string name="text_field_screen_filled_hint">Filled text field</string>
     <string name="text_field_screen_filled_label">Filled</string>
     <string name="text_field_icon_action_hint">Icon has action on touch</string>
+    <string name="text_field_icon_leading_label">With icon leading</string>
+    <string name="text_field_icon_leading_hint">Icon leading</string>
     <string name="text_field_icon_action_label">Action with icon</string>
     <string name="text_field_image_action_hint">Icon has action on touch</string>
     <string name="text_field_image_action_label">Action with image</string>

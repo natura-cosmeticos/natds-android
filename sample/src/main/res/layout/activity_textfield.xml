@@ -209,6 +209,15 @@
             app:text_field_label="@string/text_field_icon_action_label" />
 
         <com.natura.android.textfield.TextField
+            android:id="@+id/leading_icon_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/text_field_icon_leading_hint"
+            android:paddingTop="?spacingSmall"
+            app:text_field_leading_icon="outlined_default_mockup"
+            app:text_field_label="@string/text_field_icon_leading_label" />
+
+        <com.natura.android.textfield.TextField
             android:id="@+id/action_image_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

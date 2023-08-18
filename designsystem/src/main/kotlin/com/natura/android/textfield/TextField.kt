@@ -128,11 +128,12 @@ open class TextField @JvmOverloads constructor(
 
     private val inputLabel by lazy { findViewById<TextView>(R.id.text_field_input_label) }
 
-    private val inputBox by lazy { findViewById<LinearLayout>(R.id.text_field_input_box) }
+    private val inputBox by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_box) }
     private val inputValue by lazy { findViewById<EditText>(R.id.text_field_input_value) }
     private val inputIconButton by lazy { findViewById<IconButton>(R.id.text_field_input_icon) }
     private val inputContainerMain by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_main) }
     private val inputImage by lazy { findViewById<ImageView>(R.id.text_field_input_image) }
+    private val inputLeadingIcon by lazy { findViewById<IconButton>(R.id.text_field_leading_icon) }
 
     private val footerBox by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
@@ -143,6 +144,7 @@ open class TextField @JvmOverloads constructor(
         inputLabel?.isEnabled = enabled
         inputValue?.isEnabled = enabled
         inputIconButton?.isEnabled = enabled
+        inputLeadingIcon?.isEnabled = enabled
         inputImage?.isEnabled = enabled
         footerIcon?.isEnabled = enabled
         footerValue?.isEnabled = enabled
@@ -222,6 +224,15 @@ open class TextField @JvmOverloads constructor(
             inputIconButton.setIcon(iconButton)
             changeVisibilityByValue(inputIconButton, value)
             removePaddingRight(value)
+        }
+
+    var iconLeading: String? = null
+        set(value) {
+            field = value
+            //hideActionComponent(inputImage, value)
+            inputLeadingIcon.setIcon(iconLeading)
+            changeVisibilityByValue(inputLeadingIcon, value)
+            //removePaddingRight(value)
         }
 
     var image: Int = 0
@@ -361,6 +372,7 @@ open class TextField @JvmOverloads constructor(
         label = typedArray.getString(R.styleable.TextField_text_field_label)
         footer = typedArray.getString(R.styleable.TextField_text_field_footer)
         iconButton = typedArray.getString(R.styleable.TextField_text_field_icon)
+        iconLeading = typedArray.getString(R.styleable.TextField_text_field_leading_icon)
         image = typedArray.getResourceId(R.styleable.TextField_text_field_image, 0)
         state = intToState(typedArray.getInt(R.styleable.TextField_text_field_state, 0))
         readOnly = typedArray.getBoolean(R.styleable.TextField_text_field_readonly, false)
