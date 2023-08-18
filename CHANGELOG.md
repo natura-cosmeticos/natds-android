@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.17](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.16...v.9.24.17) (2023-08-18)
+
+- Adding new icons
+- Fix empty bag icon
+- Change appbar textColor programmatically when setting appbar color
+- New prop for Logo component: language
+- Adding new prop color to IconButton: onPrimary, onSecondary and inverse
+- Adding leading icon to Textfield component
+
 ### [9.24.16](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.14...v.9.24.16) (2023-08-09)
 
 - Fix standart appbar
