@@ -371,7 +371,11 @@
     <string name="iconbutton_screen_size_semix_text">Size semiX</string>
     <string name="iconbutton_screen_size_medium_text">Size Medium</string>
     <string name="logo_screen_modela_text">Model A</string>
+    <string name="logo_screen_modelapt_text">Model A - Pt</string>
+    <string name="logo_screen_modelaes_text">Model A - Es</string>
     <string name="logo_screen_modelb_text">Model B</string>
+    <string name="logo_screen_modelbpt_text">Model B - Pt</string>
+    <string name="logo_screen_modelbes_text">Model B - Es</string>
     <string name="logo_screen_color_primary_text">Color Primary</string>
     <string name="logo_screen_color_secondary_text">Color Secondary</string>
     <string name="logo_screen_color_highlight_text">Color Highlight</string>
@@ -449,6 +453,8 @@
     <string name="text_field_screen_filled_hint">Filled text field</string>
     <string name="text_field_screen_filled_label">Filled</string>
     <string name="text_field_icon_action_hint">Icon has action on touch</string>
+    <string name="text_field_icon_leading_label">With icon leading</string>
+    <string name="text_field_icon_leading_hint">Icon leading</string>
     <string name="text_field_icon_action_label">Action with icon</string>
     <string name="text_field_image_action_hint">Icon has action on touch</string>
     <string name="text_field_image_action_label">Action with image</string>

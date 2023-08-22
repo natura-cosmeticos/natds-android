@@ -177,6 +177,7 @@
         <attr name="android:enabled" />
         <attr name="text_field_text" format="string" />
         <attr name="text_field_icon" format="string" />
+        <attr name="text_field_leading_icon" format="string" />
         <attr name="text_field_image" format="reference" />
         <attr name="text_field_label" format="string" />
         <attr name="text_field_footer" format="string" />
@@ -205,6 +206,9 @@
             <enum name="defaultColor" value="0" />
             <enum name="primaryColor" value="1" />
             <enum name="lightColor" value="2" />
+            <enum name="onPrimary" value="3" />
+            <enum name="onSecondary" value="4" />
+            <enum name="inverse" value="5" />
         </attr>
         <attr name="sizeButton" format="enum">
             <enum name="semi" value="0" />
@@ -276,6 +280,11 @@
         <attr name="model" format="enum">
             <enum name="a" value="0" />
             <enum name="b" value="1" />
+        </attr>
+        <attr name="language" format="enum">
+            <enum name="none" value="0" />
+            <enum name="es" value="1" />
+            <enum name="pt" value="2" />
         </attr>
         <attr name="customColor" format="enum">
             <enum name="neutral" value="0" />

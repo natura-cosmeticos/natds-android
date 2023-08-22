@@ -4,21 +4,18 @@ import android.animation.ObjectAnimator
 import android.animation.StateListAnimator
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.Color
-import android.os.Build
 import android.text.TextUtils
 import android.util.AttributeSet
-import android.util.DisplayMetrics
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.view.WindowManager
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.compose.ui.text.style.TextAlign
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
@@ -32,11 +29,26 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private var typedArray: TypedArray
     private val imageView = ImageView(context)
 
-    private var barColor: Int = DEFAULT
-        set(value) {
-            field = value
-            setColor(value, context)
+    private var barColor: Int = PRIMARY
+
+    private fun setAppBarColorAndTextColor(context: Context) {
+
+        val textView = findViewById<TextView>(R.id.contentText)
+
+        if (barColor == NONE) {
+            toolbar.setBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSurface))
+            textView?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnSurface))
+        } else if (barColor == PRIMARY) {
+            toolbar.setBackgroundColor(getColorTokenFromTheme(context, R.attr.colorPrimary))
+            textView?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnPrimary))
+        } else if (barColor == SECONDARY) {
+            toolbar.setBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSecondary))
+            textView?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnSecondary))
+        } else if (barColor == INVERSE) {
+            toolbar.setBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSurface))
+            textView?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnSurface))
         }
+    }
 
     private var enabledElevation: Boolean = true
         set(value) {
@@ -106,10 +118,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         throwsCountElementsException()
         changeActionsVisibility()
         removeParentsElevation()
-    }
-
-    fun getColor(): Int {
-        return barColor
+        setAppBarColorAndTextColor(context)
     }
 
     fun getElevationEnabled(): Boolean {
@@ -248,7 +257,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                     addContentView(imageView)
                 } else if (barColor == INVERSE) {
                     imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
-                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorSurface))
+                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnSurface))
                     imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 } else {
@@ -290,20 +299,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         proeminentContent = typedArray.getBoolean(
             R.styleable.StandardAppBarTop_proeminentContent,
             false
-        )
-    }
-
-    private fun setColor(color: Int, context: Context) {
-        setBackgroundColor(Color.TRANSPARENT)
-
-        toolbar.setBackgroundColor(
-            when (color) {
-                DEFAULT -> getColorTokenFromTheme(context, R.attr.colorSurface)
-                PRIMARY -> getColorTokenFromTheme(context, R.attr.colorPrimary)
-                SECONDARY -> getColorTokenFromTheme(context, R.attr.colorSecondary)
-                INVERSE -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-                else -> Color.TRANSPARENT
-            }
         )
     }
 
@@ -370,22 +365,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            textView.setTextAppearance(R.style.TextAppearance_DS_AppBarTop)
-        } else {
-            textView.setTextAppearance(context, R.style.TextAppearance_DS_AppBarTop)
-        }
-
-        textView.layoutParams =
-            LayoutParams(
-                WRAP_CONTENT,
-                WRAP_CONTENT
-            )
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(R.dimen.ds_size_h6))
         textView.isSingleLine = false
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
-
         addContentView(textView)
     }
 
@@ -400,14 +383,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         addContentView(textField)
     }
 
-    private fun getContentAlign(context: Context): Int {
-        return if ((getWindowWidthInPx(context) < MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO) || (contentPosition == LEFT)) {
-            Gravity.START or Gravity.CENTER
-        } else {
-            Gravity.CENTER
-        }
-    }
-
     private fun haveChildrenToMove(): Boolean = getChildAt(ACTION_RIGHT_FIRST_ELEMENT_INDEX) != null
 
     private fun getNextChild(): View? = getChildAt(ACTION_RIGHT_FIRST_ELEMENT_INDEX)
@@ -415,25 +390,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private fun countElements(): Int {
         return actionCenterContainer.childCount + actionRightContainer.childCount + actionLeftContainer.childCount
     }
-
-    private fun getWindowWidthInPx(context: Context): Int {
-        return try {
-
-            val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
-            val metrics = DisplayMetrics()
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                context.display?.getRealMetrics(metrics)
-            } else {
-                windowManager.defaultDisplay.getMetrics(metrics)
-            }
-
-            metrics.widthPixels
-        } catch (ex: Exception) {
-            MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO
-        }
-    }
-
     companion object {
         const val DEFAULT = 0
         const val NONE = 1
@@ -449,12 +405,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         const val LEFT = 0
         const val CENTER = 1
 
-        private const val MINIMUM_SCREEN_SIZE_FOR_CENTRALIZED_LOGO = 361
         private const val MAX_COUNT_ELEMENTS = 5
         private const val COUNT_ELEMENTS_ONLY_ACTION_LEFT = 2
         private const val ACTION_LEFT_ELEMENT_INDEX = 1
         private const val ACTION_RIGHT_FIRST_ELEMENT_INDEX = 1
-        private const val MIN_COUNT_ELEMENTS = 1
 
         private const val NOT_RESOURCE_FOUND_CODE = 0
     }

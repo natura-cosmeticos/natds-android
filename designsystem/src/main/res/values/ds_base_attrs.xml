@@ -62,6 +62,9 @@
     <attr name="iconButtonDefault" format="reference"/>
     <attr name="iconButtonPrimary" format="reference"/>
     <attr name="iconButtonLight" format="reference"/>
+    <attr name="iconButtonOnPrimary" format="reference"/>
+    <attr name="iconButtonOnSecondary" format="reference"/>
+    <attr name="iconButtonInverse" format="reference"/>
 
     <attr name="iconButtonSizeSemi" format="reference"/>
     <attr name="iconButtonSizeSemiX" format="reference"/>
