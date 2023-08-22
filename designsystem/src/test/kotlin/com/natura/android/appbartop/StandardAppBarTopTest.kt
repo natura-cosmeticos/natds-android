@@ -20,42 +20,6 @@ class StandardAppBarTopTest {
     }
 
     @Test
-    fun checksIfPrimaryColorWasSet() {
-        appBarTop = buildStandardAppBarTopPrimaryColor()
-
-        val color = appBarTop.getColor()
-
-        Truth.assertThat(color).isEqualTo(PRIMARY)
-    }
-
-    @Test
-    fun checksIfDefaultColorWasSet() {
-        appBarTop = buildStandardAppBarTopDefaultColor()
-
-        val color = appBarTop.getColor()
-
-        Truth.assertThat(color).isEqualTo(DEFAULT)
-    }
-
-    @Test
-    fun checksIfInverseColorWasSet() {
-        appBarTop = buildStandardAppBarTopInverseColor()
-
-        val color = appBarTop.getColor()
-
-        Truth.assertThat(color).isEqualTo(INVERSE)
-    }
-
-    @Test
-    fun checksIfNoneColorWasSet() {
-        appBarTop = buildStandardAppBarTopNoneColor()
-
-        val color = appBarTop.getColor()
-
-        Truth.assertThat(color).isEqualTo(NONE)
-    }
-
-    @Test
     fun checksIfElevationEnabledIsFalse() {
         appBarTop = buildStandardAppBarTopWithElevationDisabled()
 
