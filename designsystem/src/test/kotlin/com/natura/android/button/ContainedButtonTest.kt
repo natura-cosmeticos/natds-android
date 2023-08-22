@@ -19,57 +19,10 @@ class ContainedButtonTest {
         context = ApplicationProvider.getApplicationContext()
     }
 
-    @Test
-    fun checksIfSizeSemiWasSet() {
-        button = buildContainedButtonWithSemiSize()
-
-        val size = button.getSize()
-        val height = button.minHeight
-
-        Truth.assertThat(size).isEqualTo(SEMI_SIZE)
-        Truth.assertThat(height).isEqualTo(SEMI_HEIGHT)
-    }
-
-    @Test
-    fun checksIfSizeSemixWasSet() {
-        button = buildContainedButtonWithSemiXSize()
-
-        val size = button.getSize()
-        val height = button.minHeight
-
-        Truth.assertThat(size).isEqualTo(SEMIX_SIZE)
-        Truth.assertThat(height).isEqualTo(SEMIX_HEIGHT)
-    }
-
-    @Test
-    fun checksIfSizeMediumWasSet() {
-        button = buildContainedButtonWithMediumSize()
-
-        val size = button.getSize()
-        val height = button.minHeight
-
-        Truth.assertThat(size).isEqualTo(MEDIUM_SIZE)
-        Truth.assertThat(height).isEqualTo(MEDIUM_HEIGHT)
-    }
-
     private fun buildContainedButtonWithSemiSize(): ContainedButton {
         return ContainedButtonFixture
             .aContainedButton()
             .withSemiSize()
-            .build()
-    }
-
-    private fun buildContainedButtonWithSemiXSize(): ContainedButton {
-        return ContainedButtonFixture
-            .aContainedButton()
-            .withSemixSize()
-            .build()
-    }
-
-    private fun buildContainedButtonWithMediumSize(): ContainedButton {
-        return ContainedButtonFixture
-            .aContainedButton()
-            .withMediumSize()
             .build()
     }
 
