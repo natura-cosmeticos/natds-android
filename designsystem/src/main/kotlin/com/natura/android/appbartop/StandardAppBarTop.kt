@@ -121,10 +121,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         setAppBarColorAndTextColor(context)
     }
 
-    fun getColor(): Int {
-        return barColor
-    }
-
     fun getElevationEnabled(): Boolean {
         return enabledElevation
     }
