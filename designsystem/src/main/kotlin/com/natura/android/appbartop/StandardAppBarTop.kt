@@ -15,7 +15,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import androidx.compose.ui.text.style.TextAlign
 import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException

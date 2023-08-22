@@ -229,10 +229,10 @@ open class TextField @JvmOverloads constructor(
     var iconLeading: String? = null
         set(value) {
             field = value
-            //hideActionComponent(inputImage, value)
+            // hideActionComponent(inputImage, value)
             inputLeadingIcon.setIcon(iconLeading)
             changeVisibilityByValue(inputLeadingIcon, value)
-            //removePaddingRight(value)
+            // removePaddingRight(value)
         }
 
     var image: Int = 0

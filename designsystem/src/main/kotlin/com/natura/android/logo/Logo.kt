@@ -54,7 +54,7 @@ class Logo @JvmOverloads constructor(
     }
 
     var model: Model = Model.A
-    var language:Language = Language.None
+    var language: Language = Language.None
     var color: Color = Color.NEUTRAL
     var size: Size = Size.VERYHUGE
 
