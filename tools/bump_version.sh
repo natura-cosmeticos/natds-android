@@ -11,7 +11,6 @@ then
     git clean -f -d
     git commit -m "chore: Updates version"
     git push --follow-tags origin HEAD
-    make send-release-notification-teams
 else
     echo "No applicable changes since the previous tag, skipping..."
 fi
