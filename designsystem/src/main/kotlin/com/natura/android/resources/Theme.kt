@@ -23,3 +23,7 @@ fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
     val imageResId = value.resourceId
     return ContextCompat.getDrawable(context, imageResId) ?: throw IllegalArgumentException("Cannot load drawable $imageResId")
 }
+
+enum class BarColors(val value: Int) {
+    DEFAULT(0), NONE(1), PRIMARY(2), SECONDARY(3), INVERSE(4)
+}

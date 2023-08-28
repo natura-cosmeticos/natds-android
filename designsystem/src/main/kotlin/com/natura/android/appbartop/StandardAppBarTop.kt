@@ -19,6 +19,7 @@ import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
+import com.natura.android.resources.BarColors
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDrawableFromTheme
 import com.natura.android.textfield.TextField
@@ -30,8 +31,9 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private var barColor: Int = PRIMARY
 
-    fun setAppBarColor(color: Int) {
-        barColor = color
+    fun setAppBarColor(color: BarColors) {
+        barColor = color.value
+        addContent()
         setAppBarColorAndTextColor(context)
     }
 

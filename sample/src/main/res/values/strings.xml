@@ -210,7 +210,7 @@
     <string name="appbartop_attributes_screen_2_actions_text">2 actions right</string>
     <string name="appbartop_attributes_screen_3_actions_text">3 actions right</string>
     <string name="appbartop_attributes_screen_search_text">Search</string>
-    <string name="appbartop_attributes_screen_title_center_text">Title Center</string>
+    <string name="appbartop_attributes_screen_title_center_text">AppBarColor in code</string>
     <string name="appbartop_attributes_screen_title_long_text">Title long + 3 actions right</string>
     <string name="appbartop_color_default">Default Color</string>
     <string name="appbartop_color_primary">Primary Color without Elevation</string>
