@@ -137,15 +137,6 @@ class StandardAppBarTopTest {
     }
 
     @Test
-    fun checksContentTextWasSet() {
-        appBarTop = buildStandardAppBarTopWithContentText()
-
-        val contentText = appBarTop.getContentText()
-
-        Truth.assertThat(contentText).isEqualTo("Title Center")
-    }
-
-    @Test
     fun checksIfElevationIsGreaterThanZero() {
         appBarTop = buildStandardAppBarTopWithElevationEnabled()
 

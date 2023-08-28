@@ -3,6 +3,7 @@ package com.natura.android.sample.components
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.natura.android.resources.BarColors
 import com.natura.android.sample.databinding.ActivityAppbarTopBinding
 import com.natura.android.sample.databinding.AppbartopButtonActionBinding
 import com.natura.android.sample.databinding.AppbartopColorDefaultBinding
@@ -97,6 +98,7 @@ class AppBarTopActivity : AppCompatActivity() {
         layoutTitleCenterBinding.apply {
             titleCenterViewIconButtonActionLeft.setOnClickListener {}
             titleCenterViewIconButtonActionRight.setOnClickListener {}
+            appBarWithTitleCenter.setAppBarColor(BarColors.SECONDARY)
         }
 
         layoutTitleLongBinding.apply {

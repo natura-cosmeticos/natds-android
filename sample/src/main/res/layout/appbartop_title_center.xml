@@ -16,7 +16,6 @@
         android:layout_height="wrap_content"
         app:actionLeft="true"
         app:actionRight="true"
-        app:appBarColor="colorPrimary"
         app:contentPosition="left"
         app:contentText="Title Center"
         app:contentType="text"
