@@ -30,6 +30,11 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private var barColor: Int = PRIMARY
 
+    fun setAppBarColor(color: Int) {
+        barColor = color
+        setAppBarColorAndTextColor(context)
+    }
+
     private fun setAppBarColorAndTextColor(context: Context) {
 
         val textView = findViewById<TextView>(R.id.contentText)
