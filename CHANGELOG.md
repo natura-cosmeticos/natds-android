@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [9.24.18](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.18...v.9.24.19) (2023-08-28)
+### [9.24.19](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.18...v.9.24.19) (2023-08-28)
 
 - Add option to set appbarcolor programmatically 
 
