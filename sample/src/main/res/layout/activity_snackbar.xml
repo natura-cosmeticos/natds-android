@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".components.SnackbarActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnDefaultSnackbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Title / Value: False"
+        android:layout_marginTop="?spacingSmall"
+        />
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Title / Value: True"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Icon / Value: True"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnOnlyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Icon / Value: False"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithIconNoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Button / Value: NONE"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithInLineButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Button / Value: INLINE_BUTTON"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithBlockButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Button / Value: BLOCK_BUTTON"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWithIconButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Button / Value: ICON_BUTTON"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnDefaultFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Feedback / Value: DEFAULT"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnSuccessFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Feedback / Value: SUCCESS"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnErrorFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Feedback / Value: ERROR"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnWarningFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Feedback / Value: Warning"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnInfoFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Feedback / Value: INFO"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnPositionCenterTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Position / Value: TOP_CENTER"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnPositionCenterBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Position / Value: BOTTOM_CENTER"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnAnimationCenterBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Animation / Value  CENTER_BOTTOM"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnAnimationCenterTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Animation / Value  CENTER_TOP"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnAnimationRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Animation / Value  RIGHT"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnAnimationLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: Animation / Value  LEFT"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnMinimumTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: TIMER / Value: MINIMUM"
+        android:layout_marginTop="?spacingSmall"
+        />
+
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnIntermediaryTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: TIMER / Value: INTERMEDIARY"
+        android:layout_marginTop="?spacingSmall"
+        />
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnIndeterminateTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: TIMER / Value: INDETERMINATE"
+        android:layout_marginTop="?spacingSmall"
+        />
+    <com.natura.android.button.ContainedButton
+        android:id="@+id/btnCustomTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prop: TIMER / Value: CUSTOM"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingSemi"
+        />
+
+    </LinearLayout>
+
+</ScrollView>
