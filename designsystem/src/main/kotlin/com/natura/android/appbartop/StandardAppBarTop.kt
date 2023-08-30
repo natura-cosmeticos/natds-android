@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
@@ -19,6 +20,7 @@ import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
+import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.BarColors
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDrawableFromTheme
@@ -213,12 +215,19 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             actionCenterContainer.gravity = Gravity.CENTER
             actionCenterContainer.addView(view)
         }
+
+        if (!proeminentContent) {
+            val params = actionCenterContainer.layoutParams as LinearLayout.LayoutParams
+            params.gravity = Gravity.CENTER_VERTICAL
+            actionCenterContainer.layoutParams = params
+        }
     }
 
     private fun positionActionLeft() {
         val child = getChildAt(ACTION_LEFT_ELEMENT_INDEX)
         this.removeView(child)
         actionLeftContainer.addView(child)
+        adjustTextViewPosition()
     }
 
     private fun positionActionRight() {
@@ -375,8 +384,42 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         textView.isSingleLine = false
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
-        addContentView(textView)
+        textView.gravity = Gravity.CENTER_VERTICAL
+        textView.layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+
+        actionLeftContainer.gravity = Gravity.CENTER_VERTICAL
+
+        if (contentPosition == CENTER) {
+            actionCenterContainer.gravity = Gravity.CENTER
+            addContentView(textView)
+        } else {
+            actionLeftContainer.addView(textView)
+        }
     }
+
+    private fun adjustTextViewPosition() {
+        val textView = actionLeftContainer.findViewById<TextView>(R.id.contentText)
+
+        if (textView != null) {
+            if (contentPosition == LEFT) {
+                when (actionLeftContainer.childCount) {
+                    0, 1 -> actionLeftContainer.addView(textView)
+                    2 -> {
+                        actionLeftContainer.removeViewAt(0)
+                        actionLeftContainer.addView(textView, 1)
+                    }
+                }
+            }
+            else {
+                actionCenterContainer.removeAllViews()
+                actionCenterContainer.addView(textView)
+            }
+        }
+    }
+
 
     private fun addTextField(context: Context) {
         val textField = TextField(context)

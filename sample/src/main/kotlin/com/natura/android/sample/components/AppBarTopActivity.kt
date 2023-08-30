@@ -96,8 +96,6 @@ class AppBarTopActivity : AppCompatActivity() {
         }
 
         layoutTitleCenterBinding.apply {
-            titleCenterViewIconButtonActionLeft.setOnClickListener {}
-            titleCenterViewIconButtonActionRight.setOnClickListener {}
             appBarWithTitleCenter.setAppBarColor(BarColors.SECONDARY)
         }
 
