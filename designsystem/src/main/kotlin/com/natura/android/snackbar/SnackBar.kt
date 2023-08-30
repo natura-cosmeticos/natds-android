@@ -26,7 +26,7 @@ class SnackBar private constructor(
     private val showSnackIcon: Boolean = false,
     private val snackIconName: String? = null,
     private val snackIconButtonName: String? = null,
-    private val snackFeedbackType: SnackbarFeedbackType? = null,
+    private val snackColorType: SnackbarColorType? = null,
     private val snackPositionType: SnackbarPositionType? = null,
     private val snackAnimation: Boolean = false,
     private val snackAnimationType: SnackbarAnimationtype? = null,
@@ -66,7 +66,7 @@ class SnackBar private constructor(
     constructor(
         mainView: View,
         message: String,
-        feedbackType: SnackbarFeedbackType,
+        color: SnackbarColorType,
         iconName: String,
         showTitle: Boolean = false,
         animation: Boolean = false,
@@ -81,7 +81,7 @@ class SnackBar private constructor(
         snackMessage = message,
         showSnackIcon = true,
         snackIconName = iconName,
-        snackFeedbackType = feedbackType,
+        snackColorType = color,
         snackAnimation = animation,
         snackPositionType = positionType,
         snackAnimationType = animationType,
@@ -155,7 +155,7 @@ class SnackBar private constructor(
         setTimerType()
         setSnackTexts()
         setSnackIcon()
-        setFeedbackType()
+        setColorType()
         configureBackgroundColor()
         snackMainView.doOnDetach {
             timer?.cancel()
@@ -258,13 +258,13 @@ class SnackBar private constructor(
         }
     }
 
-    private fun setFeedbackType() {
-        when (snackFeedbackType) {
-            SnackbarFeedbackType.SUCCESS,
-            SnackbarFeedbackType.DEFAULT,
-            SnackbarFeedbackType.ERROR,
-            SnackbarFeedbackType.WARNING,
-            SnackbarFeedbackType.INFO -> {
+    private fun setColorType() {
+        when (snackColorType) {
+            SnackbarColorType.SUCCESS,
+            SnackbarColorType.DEFAULT,
+            SnackbarColorType.ERROR,
+            SnackbarColorType.WARNING,
+            SnackbarColorType.INFO -> {
                 binding?.txtTitle?.visibility = View.GONE
                 binding?.ivTitleIcon?.visibility = View.GONE
                 binding?.btnBlock?.visibility = View.GONE
@@ -351,18 +351,18 @@ class SnackBar private constructor(
     }
 
     private fun configureBackgroundColor() {
-        when (snackFeedbackType) {
-            SnackbarFeedbackType.SUCCESS -> {
+        when (snackColorType) {
+            SnackbarColorType.SUCCESS -> {
                 snackbarBody?.strokeColor = parseStringColorToInt("#569A32")
                 snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#569A32"))
             }
 
-            SnackbarFeedbackType.ERROR -> {
+            SnackbarColorType.ERROR -> {
                 snackbarBody?.strokeColor = parseStringColorToInt("#E74627")
                 snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#E74627"))
             }
 
-            SnackbarFeedbackType.WARNING -> {
+            SnackbarColorType.WARNING -> {
                 snackbarBody?.strokeColor = parseStringColorToInt("#FCC433")
                 snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#FCC433"))
 
@@ -371,7 +371,7 @@ class SnackBar private constructor(
                     ColorStateList.valueOf(parseStringColorToInt("#333333"))
             }
 
-            SnackbarFeedbackType.INFO -> {
+            SnackbarColorType.INFO -> {
                 snackbarBody?.strokeColor = parseStringColorToInt("#227BBD")
                 snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#227BBD"))
             }
@@ -393,7 +393,7 @@ class SnackBar private constructor(
     }
 }
 
-enum class SnackbarFeedbackType {
+enum class SnackbarColorType {
     DEFAULT,
     SUCCESS,
     ERROR,

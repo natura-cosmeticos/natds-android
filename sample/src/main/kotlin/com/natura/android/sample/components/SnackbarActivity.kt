@@ -139,52 +139,52 @@ class SnackbarActivity : AppCompatActivity() {
             )
             snackBarDS?.show()
         }
-        binding.btnDefaultFeedback.setOnClickListener {
+        binding.btnDefaultColor.setOnClickListener {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the default snackbar feedback",
-                feedbackType = SnackbarFeedbackType.DEFAULT,
+                message = "This is the default snackbar color",
+                color = SnackbarColorType.DEFAULT,
                 iconName = "outlined-navigation-exit"
             )
             snackBarDS?.show()
         }
-        binding.btnSuccessFeedback.setOnClickListener {
+        binding.btnSuccessColor.setOnClickListener {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the SUCCESS snackbar feedback",
-                feedbackType = SnackbarFeedbackType.SUCCESS,
+                message = "This is the SUCCESS snackbar color",
+                color = SnackbarColorType.SUCCESS,
                 iconName = "outlined-navigation-exit"
             )
             snackBarDS?.show()
         }
-        binding.btnErrorFeedback.setOnClickListener {
+        binding.btnErrorColor.setOnClickListener {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the ERROR snackbar feedback",
-                feedbackType = SnackbarFeedbackType.ERROR,
+                message = "This is the ERROR snackbar color",
+                color = SnackbarColorType.ERROR,
                 iconName = "outlined-navigation-exit"
             )
             snackBarDS?.show()
         }
-        binding.btnWarningFeedback.setOnClickListener {
+        binding.btnWarningColor.setOnClickListener {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the WARNING snackbar feedback",
-                feedbackType = SnackbarFeedbackType.WARNING,
+                message = "This is the WARNING snackbar color",
+                color = SnackbarColorType.WARNING,
                 iconName = "outlined-navigation-exit"
             )
             snackBarDS?.show()
         }
-        binding.btnInfoFeedback.setOnClickListener {
+        binding.btnInfoColor.setOnClickListener {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the INFO snackbar feedback",
-                feedbackType = SnackbarFeedbackType.INFO,
+                message = "This is the INFO snackbar color",
+                color = SnackbarColorType.INFO,
                 iconName = "outlined-navigation-exit"
             )
             snackBarDS?.show()
@@ -194,8 +194,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the DEFAULT snackbar feedback",
-                feedbackType = SnackbarFeedbackType.DEFAULT,
+                message = "This is the DEFAULT snackbar color",
+                color = SnackbarColorType.DEFAULT,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,
@@ -208,8 +208,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the DEFAULT snackbar feedback",
-                feedbackType = SnackbarFeedbackType.DEFAULT,
+                message = "This is the DEFAULT snackbar color",
+                color = SnackbarColorType.DEFAULT,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
@@ -223,8 +223,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the INFO snackbar feedback",
-                feedbackType = SnackbarFeedbackType.INFO,
+                message = "This is the INFO snackbar color",
+                color = SnackbarColorType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,
@@ -237,8 +237,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the INFO snackbar feedback",
-                feedbackType = SnackbarFeedbackType.INFO,
+                message = "This is the INFO snackbar color",
+                color = SnackbarColorType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
@@ -250,8 +250,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the INFO snackbar feedback",
-                feedbackType = SnackbarFeedbackType.INFO,
+                message = "This is the INFO snackbar color",
+                color = SnackbarColorType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
@@ -263,8 +263,8 @@ class SnackbarActivity : AppCompatActivity() {
             snackBarDS?.dismiss()
             snackBarDS = SnackBar(
                 mainView = binding.root,
-                message = "This is the INFO snackbar feedback",
-                feedbackType = SnackbarFeedbackType.INFO,
+                message = "This is the INFO snackbar color",
+                color = SnackbarColorType.INFO,
                 iconName = "outlined-navigation-exit",
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,

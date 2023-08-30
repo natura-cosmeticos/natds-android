@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,14 +12,14 @@
         android:layout_height="match_parent"
         android:gravity="center">
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnDefaultSnackbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prop: Title / Value: False"
         android:layout_marginTop="?spacingSmall"
         />
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,7 +27,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +35,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnOnlyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +43,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithIconNoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,7 +51,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithInLineButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +59,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithBlockButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,7 +67,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnWithIconButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -76,47 +75,47 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
-        android:id="@+id/btnDefaultFeedback"
+    <Button
+        android:id="@+id/btnDefaultColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prop: Feedback / Value: DEFAULT"
+        android:text="Prop: Color / Value: DEFAULT"
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
-        android:id="@+id/btnSuccessFeedback"
+    <Button
+        android:id="@+id/btnSuccessColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prop: Feedback / Value: SUCCESS"
+        android:text="Prop: Color / Value: SUCCESS"
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
-        android:id="@+id/btnErrorFeedback"
+    <Button
+        android:id="@+id/btnErrorColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prop: Feedback / Value: ERROR"
+        android:text="Prop: Color / Value: ERROR"
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
-        android:id="@+id/btnWarningFeedback"
+    <Button
+        android:id="@+id/btnWarningColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prop: Feedback / Value: Warning"
+        android:text="Prop: Color / Value: Warning"
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
-        android:id="@+id/btnInfoFeedback"
+    <Button
+        android:id="@+id/btnInfoColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Prop: Feedback / Value: INFO"
+        android:text="Prop: Color / Value: INFO"
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnPositionCenterTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,7 +123,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnPositionCenterBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,7 +131,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnAnimationCenterBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -140,7 +139,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnAnimationCenterTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,7 +147,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnAnimationRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,7 +155,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnAnimationLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -164,7 +163,7 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnMinimumTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -172,21 +171,21 @@
         android:layout_marginTop="?spacingSmall"
         />
 
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnIntermediaryTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prop: TIMER / Value: INTERMEDIARY"
         android:layout_marginTop="?spacingSmall"
         />
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnIndeterminateTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prop: TIMER / Value: INDETERMINATE"
         android:layout_marginTop="?spacingSmall"
         />
-    <com.natura.android.button.ContainedButton
+    <Button
         android:id="@+id/btnCustomTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
