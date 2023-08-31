@@ -13,6 +13,7 @@ import androidx.core.view.doOnDetach
 import com.google.android.material.card.MaterialCardView
 import com.natura.android.R
 import com.natura.android.databinding.SnackbarBinding
+import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
 
 
@@ -353,32 +354,32 @@ class SnackBar private constructor(
     private fun configureBackgroundColor() {
         when (snackColorType) {
             SnackbarColorType.SUCCESS -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#569A32")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#569A32"))
+                snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorSuccess)
+                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSuccess))
             }
 
             SnackbarColorType.ERROR -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#E74627")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#E74627"))
+                snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorError)
+                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorError))
             }
 
             SnackbarColorType.WARNING -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#FCC433")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#FCC433"))
+                snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorWarning)
+                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorWarning))
 
-                binding?.txtMessage?.setTextColor(parseStringColorToInt("#333333"))
+                binding?.txtMessage?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnWarning))
                 binding?.ivNoTitleIcon?.backgroundTintList =
-                    ColorStateList.valueOf(parseStringColorToInt("#333333"))
+                    ColorStateList.valueOf(getColorTokenFromTheme(context, R.attr.colorOnWarning))
             }
 
             SnackbarColorType.INFO -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#227BBD")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#227BBD"))
+                snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorLink)
+                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorLink))
             }
 
             else -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#36454F")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#36454F"))
+                snackbarBody?.strokeColor = parseStringColorToInt("#333333")
+                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#333333"))
             }
         }
     }
