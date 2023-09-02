@@ -12,11 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".components.SnackbarActivity"
+            android:exported="false"
+            android:label="@string/title_activity_snackbar"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
             android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -126,13 +132,13 @@
         <activity
             android:name=".tokens.CustomTypographyActivity"
             android:theme="@style/Theme.Natura.Light" />
+        <activity android:name=".AppBarTopAttributesActivity" />
         <activity
-            android:name=".AppBarTopAttributesActivity"/>
-        <activity 
-            android:name=".components.ChipActivity" 
+            android:name=".components.ChipActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
             android:name=".components.AlertActivity"
-            android:theme="@style/Theme.Natura.Light"/>
+            android:theme="@style/Theme.Natura.Light" />
     </application>
+
 </manifest>

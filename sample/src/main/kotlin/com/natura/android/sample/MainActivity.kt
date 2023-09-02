@@ -25,6 +25,7 @@ import com.natura.android.sample.components.SelectActivity
 import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
+import com.natura.android.sample.components.SnackbarActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
 import com.natura.android.sample.patterns.ErrorActivity
@@ -173,6 +174,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.selectButton.setOnClickListener {
             startActivity(Intent(this, SelectActivity::class.java))
+        }
+
+        binding.snackbarButton.setOnClickListener {
+            startActivity(Intent(this, SnackbarActivity::class.java))
         }
 
         binding.btnListItem.setOnClickListener {

@@ -888,4 +888,24 @@
 
     <style name="Widget.DS" />
 
+    <style name="SnackBarInOutFromBottom">
+        <item name="android:windowEnterAnimation">@anim/in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/out_to_bottom</item>
+    </style>
+
+    <style name="SnackBarInOutFromTop">
+        <item name="android:windowEnterAnimation">@anim/in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/out_to_top</item>
+    </style>
+
+    <style name="SnackBarInLeftOutRight">
+        <item name="android:windowEnterAnimation">@anim/in_from_left</item>
+        <item name="android:windowExitAnimation">@anim/out_to_right</item>
+    </style>
+
+    <style name="SnackBarInRightOutLeft">
+        <item name="android:windowEnterAnimation">@anim/in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/out_to_left</item>
+    </style>
+
 </resources>
