@@ -9,7 +9,6 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
@@ -20,7 +19,6 @@ import com.google.android.material.appbar.AppBarLayout
 import com.natura.android.R
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.extensions.setVisibilityFromBoolean
-import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.BarColors
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDrawableFromTheme
@@ -30,7 +28,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private var typedArray: TypedArray
     private val imageView = ImageView(context)
-
     private var barColor: Int = PRIMARY
 
     fun setAppBarColor(color: BarColors) {
@@ -40,9 +37,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     }
 
     private fun setAppBarColorAndTextColor(context: Context) {
-
         val textView = findViewById<TextView>(R.id.contentText)
-
         if (barColor == NONE) {
             toolbar.setBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSurface))
             textView?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnSurface))
@@ -74,19 +69,15 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         set(value) {
             field = value
             value?.let {
-                if (it != NOT_RESOURCE_FOUND_CODE) {
+                if (it != NOT_RESOURCE_FOUND_CODE)
                     toolbar.inflateMenu(it)
-                }
             }
         }
     private var contentText: String? = ""
         set(value) {
             field = value
-            if (contentType == TEXT) {
-                value?.let {
-                    addTextView(context, it)
-                }
-            }
+            if (contentType == TEXT)
+                value?.let { addTextView(context, it) }
         }
 
     private var contentType: Int = TEXT
@@ -185,42 +176,41 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private fun changeActionsVisibility() {
         actionRightContainer.setVisibilityFromBoolean(actionRight)
         actionLeftContainer.setVisibilityFromBoolean(actionLeft)
+
+        if (contentPosition == LEFT && contentType == TEXT)
+            actionLeftContainer.setVisibilityFromBoolean(true)
     }
 
     private fun positionActions() {
         when {
-            childCount == COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
-                positionActionLeft()
-                actionRightContainer.setVisibilityFromBoolean(false)
+            childCount == 1 -> {
+                if (contentPosition == LEFT && contentType == TEXT) {
+                    adjustTextViewPosition()
+                }
             }
-            childCount > COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
-                positionActionLeft()
-                positionActionRight()
+            childCount > 0 -> {
+                if(actionRight && !actionLeft)
+                    positionActionRight()
+                else if (actionRight && actionLeft)
+                {
+                    positionActionLeft()
+                    positionActionRight()
+                }
+                else if (!actionRight && actionLeft) {
+                    positionActionLeft()
+                }
             }
+//            childCount > COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
+//                positionActionLeft()
+//                positionActionRight()
+//            }
         }
     }
 
     private fun addContentView(view: View) {
-        if (proeminentContent) {
-            actionLeftContainer.addView(view)
-            actionLeftContainer.layoutParams = LinearLayout.LayoutParams(
-                LayoutParams.WRAP_CONTENT,
-                LayoutParams.WRAP_CONTENT,
-                2.5F
-            )
-            actionLeftContainer.orientation = LinearLayout.VERTICAL
-            actionCenterContainer.setVisibilityFromBoolean(false)
-        } else {
-            actionCenterContainer.removeAllViews()
-            actionCenterContainer.gravity = Gravity.CENTER
-            actionCenterContainer.addView(view)
-        }
-
-        if (!proeminentContent) {
-            val params = actionCenterContainer.layoutParams as LinearLayout.LayoutParams
-            params.gravity = Gravity.CENTER_VERTICAL
-            actionCenterContainer.layoutParams = params
-        }
+        actionCenterContainer.removeAllViews()
+        actionCenterContainer.gravity = Gravity.CENTER
+        actionCenterContainer.addView(view)
     }
 
     private fun positionActionLeft() {
@@ -331,7 +321,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             return TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
                 .toFloat()
         }
-
         return 0f
     }
 
@@ -389,37 +378,40 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT
         )
-
+        actionCenterContainer.gravity = Gravity.CENTER
         actionLeftContainer.gravity = Gravity.CENTER_VERTICAL
 
-        if (contentPosition == CENTER) {
-            actionCenterContainer.gravity = Gravity.CENTER
-            addContentView(textView)
-        } else {
+        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
+
+        if (contentPosition == CENTER)
+            actionCenterContainer.addView(textView)
+        else
             actionLeftContainer.addView(textView)
-        }
     }
 
     private fun adjustTextViewPosition() {
         val textView = actionLeftContainer.findViewById<TextView>(R.id.contentText)
-
         if (textView != null) {
-            if (contentPosition == LEFT) {
-                when (actionLeftContainer.childCount) {
-                    0, 1 -> actionLeftContainer.addView(textView)
-                    2 -> {
-                        actionLeftContainer.removeViewAt(0)
+            if(contentPosition == LEFT) {
+
+                while (actionLeftContainer.childCount > 2) {
+                    val lastChild = actionLeftContainer.getChildAt(2)
+                    actionLeftContainer.removeViewAt(2)
+                    actionRightContainer.addView(lastChild)
+                }
+
+                val textView = actionLeftContainer.findViewById<TextView>(R.id.contentText)
+                if (textView != null && actionLeftContainer.indexOfChild(textView) != 1) {
+                    actionLeftContainer.removeView(textView)
+                    if (actionLeftContainer.childCount >= 1) {
                         actionLeftContainer.addView(textView, 1)
+                    } else {
+                        actionLeftContainer.addView(textView)
                     }
                 }
             }
-            else {
-                actionCenterContainer.removeAllViews()
-                actionCenterContainer.addView(textView)
-            }
         }
     }
-
 
     private fun addTextField(context: Context) {
         val textField = TextField(context)

@@ -17,7 +17,7 @@
         app:actionRight="true"
         app:appBarColor="colorDefault"
         app:contentPosition="left"
-        app:contentText="Title Page Center"
+        app:contentText="Title 2 actions"
         app:contentType="text"
         app:enabledElevation="true"
         app:proeminentContent="false"

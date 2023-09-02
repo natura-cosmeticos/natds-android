@@ -14,12 +14,34 @@
         android:id="@+id/appBarWithTitleCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentPosition="center"
-        app:contentText="Title Left"
+        app:actionLeft="true"
+        app:actionRight="true"
+        app:contentPosition="left"
+        app:contentText="Title Appbar"
         app:contentType="text"
         app:enabledElevation="true"
         app:proeminentContent="true"
         app:scrollable="true">
+
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/twoActionsViewIconButtonActionLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
+
+        <com.natura.android.iconButton.IconButton
+            android:id="@+id/twoActionsViewIconButtonActionRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_default_mockup"
+            app:sizeButton="semi"
+            app:styleButton="inherit" />
 
     </com.natura.android.appbartop.StandardAppBarTop>
 
