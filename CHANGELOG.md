@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.24.20](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.19...v.9.24.20) (2023-09-04)
+
+- Add Snackbar component
+- Add align textview to left position in appbar component
+
 ### [9.24.19](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.18...v.9.24.19) (2023-08-28)
 
 - Add option to set appbarcolor programmatically 

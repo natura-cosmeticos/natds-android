@@ -17,28 +17,28 @@
         app:actionLeft="true"
         app:actionRight="true"
         app:contentPosition="left"
-        app:contentText="Title Center"
+        app:contentText="Title Appbar"
         app:contentType="text"
         app:enabledElevation="true"
-        app:proeminentContent="false"
+        app:proeminentContent="true"
         app:scrollable="true">
 
         <com.natura.android.iconButton.IconButton
-            android:id="@+id/titleCenterViewIconButtonActionLeft"
+            android:id="@+id/twoActionsViewIconButtonActionLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            app:buttonColor="onPrimary"
+            app:buttonColor="defaultColor"
             app:iconName="outlined_default_mockup"
             app:sizeButton="semi"
             app:styleButton="inherit" />
 
         <com.natura.android.iconButton.IconButton
-            android:id="@+id/titleCenterViewIconButtonActionRight"
+            android:id="@+id/twoActionsViewIconButtonActionRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            app:buttonColor="onPrimary"
+            app:buttonColor="defaultColor"
             app:iconName="outlined_default_mockup"
             app:sizeButton="semi"
             app:styleButton="inherit" />
