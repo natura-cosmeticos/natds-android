@@ -188,22 +188,16 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                     adjustTextViewPosition()
                 }
             }
+
             childCount > 0 -> {
-                if(actionRight && !actionLeft)
+                if (actionRight && !actionLeft)
                     positionActionRight()
-                else if (actionRight && actionLeft)
-                {
+                else if (actionRight && actionLeft) {
                     positionActionLeft()
                     positionActionRight()
-                }
-                else if (!actionRight && actionLeft) {
+                } else if (!actionRight && actionLeft)
                     positionActionLeft()
-                }
             }
-//            childCount > COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
-//                positionActionLeft()
-//                positionActionRight()
-//            }
         }
     }
 
@@ -235,6 +229,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                     addImage(context, contentMedia)
                 }
             }
+
             SEARCH -> addTextField(context)
             LOGO -> {
                 val desiredHeight = 48
@@ -247,27 +242,62 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 ).toInt()
 
                 if (barColor == NONE) {
-                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile))
-                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    imageView.setImageDrawable(
+                        getDrawableFromTheme(
+                            context,
+                            R.attr.assetBrandNeutralAFile
+                        )
+                    )
+                    imageView.layoutParams =
+                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 } else if (barColor == PRIMARY) {
-                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
+                    imageView.setImageDrawable(
+                        getDrawableFromTheme(
+                            context,
+                            R.attr.assetBrandCustomAFile
+                        )
+                    )
                     imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnPrimary))
-                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    imageView.layoutParams =
+                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 } else if (barColor == SECONDARY) {
-                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
-                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnSecondary))
-                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    imageView.setImageDrawable(
+                        getDrawableFromTheme(
+                            context,
+                            R.attr.assetBrandCustomAFile
+                        )
+                    )
+                    imageView.setColorFilter(
+                        getColorTokenFromTheme(
+                            context,
+                            R.attr.colorOnSecondary
+                        )
+                    )
+                    imageView.layoutParams =
+                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 } else if (barColor == INVERSE) {
-                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandCustomAFile))
+                    imageView.setImageDrawable(
+                        getDrawableFromTheme(
+                            context,
+                            R.attr.assetBrandCustomAFile
+                        )
+                    )
                     imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnSurface))
-                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    imageView.layoutParams =
+                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 } else {
-                    imageView.setImageDrawable(getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile))
-                    imageView.layoutParams = LinearLayout.LayoutParams(widthInPixels, heightInPixels)
+                    imageView.setImageDrawable(
+                        getDrawableFromTheme(
+                            context,
+                            R.attr.assetBrandNeutralAFile
+                        )
+                    )
+                    imageView.layoutParams =
+                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
                     addContentView(imageView)
                 }
             }
@@ -369,7 +399,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(R.dimen.ds_size_h6))
+        textView.setTextSize(
+            TypedValue.COMPLEX_UNIT_PX,
+            context.resources.getDimension(R.dimen.ds_size_h6)
+        )
         textView.isSingleLine = false
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)
@@ -392,7 +425,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private fun adjustTextViewPosition() {
         val textView = actionLeftContainer.findViewById<TextView>(R.id.contentText)
         if (textView != null) {
-            if(contentPosition == LEFT) {
+            if (contentPosition == LEFT) {
 
                 while (actionLeftContainer.childCount > 2) {
                     val lastChild = actionLeftContainer.getChildAt(2)
@@ -431,6 +464,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private fun countElements(): Int {
         return actionCenterContainer.childCount + actionRightContainer.childCount + actionLeftContainer.childCount
     }
+
     companion object {
         const val DEFAULT = 0
         const val NONE = 1

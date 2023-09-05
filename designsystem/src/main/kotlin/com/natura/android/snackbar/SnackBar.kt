@@ -16,7 +16,6 @@ import com.natura.android.databinding.SnackbarBinding
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
 
-
 class SnackBar private constructor(
     private val snackMainView: View,
     private val snackMessage: String,
@@ -78,7 +77,7 @@ class SnackBar private constructor(
     ) : this(
         snackMainView = mainView,
         snackTitle = "",
-        snackShowTitle = false,
+        snackShowTitle = showTitle,
         snackMessage = message,
         showSnackIcon = true,
         snackIconName = iconName,
@@ -89,7 +88,6 @@ class SnackBar private constructor(
         snackTimerType = timerType,
         snackCustomTimerMillisecondInterval = customTimerMillisecondInterval
     )
-
 
     @JvmOverloads
     constructor(
@@ -186,6 +184,7 @@ class SnackBar private constructor(
                     noTitleIcon?.visibility = View.VISIBLE
                 }
             }
+
             false -> {
                 titleIcon?.visibility = View.GONE
                 noTitleIcon?.visibility = View.GONE
@@ -203,7 +202,6 @@ class SnackBar private constructor(
         imageView?.setBackgroundResource(iconDrawableId)
     }
 
-
     private fun setActionButtonType() {
         val btnInline = binding?.btnInline
         val btnBlock = binding?.btnBlock
@@ -219,16 +217,19 @@ class SnackBar private constructor(
                 btnBlock?.visibility = View.GONE
                 btnIcon?.visibility = View.GONE
             }
+
             SnackbarActionButtonType.BLOCK_BOTTON -> {
                 btnInline?.visibility = View.GONE
                 btnBlock?.visibility = View.VISIBLE
                 btnIcon?.visibility = View.GONE
             }
+
             SnackbarActionButtonType.INLINE_BOTTON -> {
                 btnInline?.visibility = View.VISIBLE
                 btnBlock?.visibility = View.GONE
                 btnIcon?.visibility = View.GONE
             }
+
             SnackbarActionButtonType.ICON_BOTTON -> {
                 btnInline?.visibility = View.GONE
                 btnBlock?.visibility = View.GONE
@@ -244,15 +245,15 @@ class SnackBar private constructor(
         btnInline?.setOnClickListener(mainButtonClickListener)
     }
 
-
     private fun setPositionType() {
         when (snackPositionType) {
             SnackbarPositionType.TOP_CENTER -> {
                 val location = IntArray(2)
-                snackMainView?.getLocationOnScreen(location)
+                snackMainView.getLocationOnScreen(location)
                 toolbarHeight = location[1]
                 gravityPosition = Gravity.TOP
             }
+
             else -> {
                 gravityPosition = Gravity.BOTTOM
             }
@@ -283,16 +284,21 @@ class SnackBar private constructor(
             when (snackAnimationType) {
                 SnackbarAnimationtype.CENTER -> {
                     when (snackPositionType) {
-                        SnackbarPositionType.TOP_CENTER -> popupWindow?.animationStyle =
-                            R.style.SnackBarInOutFromTop
-                        SnackbarPositionType.BOTTOM_CENTER -> popupWindow?.animationStyle =
-                            (R.style.SnackBarInOutFromBottom)
+                        SnackbarPositionType.TOP_CENTER ->
+                            popupWindow?.animationStyle = R.style.SnackBarInOutFromTop
+
+                        SnackbarPositionType.BOTTOM_CENTER ->
+                            popupWindow?.animationStyle = (R.style.SnackBarInOutFromBottom)
                     }
                 }
-                SnackbarAnimationtype.LEFT -> popupWindow?.animationStyle =
-                    R.style.SnackBarInLeftOutRight
-                SnackbarAnimationtype.RIGHT -> popupWindow?.animationStyle =
-                    R.style.SnackBarInRightOutLeft
+
+                SnackbarAnimationtype.LEFT ->
+                    popupWindow?.animationStyle = R.style.SnackBarInLeftOutRight
+
+                SnackbarAnimationtype.RIGHT ->
+                    popupWindow?.animationStyle = R.style.SnackBarInRightOutLeft
+
+                else -> {}
             }
         }
     }
@@ -311,6 +317,7 @@ class SnackBar private constructor(
                     }
                 }.start()
             }
+
             SnackbarTimerType.INTERMEDIARY -> {
                 timer = object : CountDownTimer(
                     INTERMEDIARY_INTERVAL_MILLISECOND.toLong(),
@@ -322,13 +329,15 @@ class SnackBar private constructor(
                     }
                 }.start()
             }
+
             SnackbarTimerType.INDETERMINATE -> {
                 snackbarBody?.setOnClickListener {
                     popupWindow?.dismiss()
                 }
             }
+
             SnackbarTimerType.CUSTOM -> {
-                snackCustomTimerMillisecondInterval?.let { timeout->
+                snackCustomTimerMillisecondInterval?.let { timeout ->
                     timer = object : CountDownTimer(
                         timeout.toLong(),
                         timeout.toLong()
@@ -355,37 +364,62 @@ class SnackBar private constructor(
         when (snackColorType) {
             SnackbarColorType.SUCCESS -> {
                 snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorSuccess)
-                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorSuccess))
+                snackbarBody?.setCardBackgroundColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorSuccess
+                    )
+                )
             }
 
             SnackbarColorType.ERROR -> {
                 snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorError)
-                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorError))
+                snackbarBody?.setCardBackgroundColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorError
+                    )
+                )
             }
 
             SnackbarColorType.WARNING -> {
                 snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorWarning)
-                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorWarning))
+                snackbarBody?.setCardBackgroundColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorWarning
+                    )
+                )
 
-                binding?.txtMessage?.setTextColor(getColorTokenFromTheme(context, R.attr.colorOnWarning))
+                binding?.txtMessage?.setTextColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorOnWarning
+                    )
+                )
                 binding?.ivNoTitleIcon?.backgroundTintList =
                     ColorStateList.valueOf(getColorTokenFromTheme(context, R.attr.colorOnWarning))
             }
 
             SnackbarColorType.INFO -> {
                 snackbarBody?.strokeColor = getColorTokenFromTheme(context, R.attr.colorLink)
-                snackbarBody?.setCardBackgroundColor(getColorTokenFromTheme(context, R.attr.colorLink))
+                snackbarBody?.setCardBackgroundColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorLink
+                    )
+                )
             }
 
             else -> {
-                snackbarBody?.strokeColor = parseStringColorToInt("#333333")
-                snackbarBody?.setCardBackgroundColor(parseStringColorToInt("#333333"))
+                snackbarBody?.strokeColor = parseStringColorToInt()
+                snackbarBody?.setCardBackgroundColor(parseStringColorToInt())
             }
         }
     }
 
-    private fun parseStringColorToInt(color: String): Int {
-        return Color.parseColor(color)
+    private fun parseStringColorToInt(): Int {
+        return Color.parseColor("#333333")
     }
 
     companion object {
