@@ -45,11 +45,11 @@
 
             <ImageView
                 android:id="@+id/ivNoTitleIcon"
-                android:layout_width="?sizeSemi"
-                android:layout_height="?sizeSemi"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:background="@drawable/default_icon_outlined_default_mockup"
                 android:backgroundTint="@color/white"
-                android:translationY="-5dp"
+                android:translationY="-2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/txtMessage" />
 
