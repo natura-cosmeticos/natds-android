@@ -4,8 +4,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.24.21](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.20...v.9.24.21) (2023-09-15)
 
-### [9.24.20](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.19...v.9.24.20) (2023-09-05)
-
 ### [9.24.20](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.19...v.9.24.20) (2023-09-04)
 
 - Add Snackbar component
