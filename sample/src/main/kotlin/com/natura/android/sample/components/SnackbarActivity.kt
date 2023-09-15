@@ -10,6 +10,9 @@ import com.natura.android.snackbar.*
 class SnackbarActivity : AppCompatActivity() {
     private lateinit var  binding: ActivitySnackbarBinding
     private var snackBarDS: SnackBar? = null
+
+    var iconNameProp = "outlined-action-check"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         setChosenDefaultTheme()
         super.onCreate(savedInstanceState)
@@ -62,7 +65,7 @@ class SnackbarActivity : AppCompatActivity() {
                 },
                 mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
                 showIcon = true,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -76,7 +79,7 @@ class SnackbarActivity : AppCompatActivity() {
                 message = "This message is showing according with default test",
                 mainButtonType = SnackbarActionButtonType.NONE,
                 showIcon = true,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -117,7 +120,7 @@ class SnackbarActivity : AppCompatActivity() {
                 },
                 mainButtonType = SnackbarActionButtonType.BLOCK_BOTTON,
                 showIcon = true,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -133,9 +136,9 @@ class SnackbarActivity : AppCompatActivity() {
                     Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
                 },
                 mainButtonType = SnackbarActionButtonType.ICON_BOTTON,
-                iconButtonName = "outlined-navigation-exit",
+                iconButtonName = iconNameProp,
                 showIcon = true,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -145,7 +148,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the default snackbar color",
                 color = SnackbarColorType.DEFAULT,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -155,7 +158,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the SUCCESS snackbar color",
                 color = SnackbarColorType.SUCCESS,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -165,7 +168,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the ERROR snackbar color",
                 color = SnackbarColorType.ERROR,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -175,7 +178,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the WARNING snackbar color",
                 color = SnackbarColorType.WARNING,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -185,7 +188,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the INFO snackbar color",
                 color = SnackbarColorType.INFO,
-                iconName = "outlined-navigation-exit"
+                iconName = iconNameProp
             )
             snackBarDS?.show()
         }
@@ -196,7 +199,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the DEFAULT snackbar color",
                 color = SnackbarColorType.DEFAULT,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,
                 animationType = SnackbarAnimationtype.NONE
@@ -210,7 +213,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the DEFAULT snackbar color",
                 color = SnackbarColorType.DEFAULT,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
                 animationType = SnackbarAnimationtype.NONE
@@ -225,7 +228,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the INFO snackbar color",
                 color = SnackbarColorType.INFO,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,
                 animationType = SnackbarAnimationtype.CENTER
@@ -239,7 +242,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the INFO snackbar color",
                 color = SnackbarColorType.INFO,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
                 animationType = SnackbarAnimationtype.CENTER
@@ -252,7 +255,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the INFO snackbar color",
                 color = SnackbarColorType.INFO,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.BOTTOM_CENTER,
                 animationType = SnackbarAnimationtype.LEFT
@@ -265,7 +268,7 @@ class SnackbarActivity : AppCompatActivity() {
                 mainView = binding.root,
                 message = "This is the INFO snackbar color",
                 color = SnackbarColorType.INFO,
-                iconName = "outlined-navigation-exit",
+                iconName = iconNameProp,
                 animation = true,
                 positionType = SnackbarPositionType.TOP_CENTER,
                 animationType = SnackbarAnimationtype.RIGHT
