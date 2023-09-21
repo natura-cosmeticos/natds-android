@@ -68,6 +68,8 @@ app:iconGravity="textEnd"
 
 ❌  Not Applicable
 
+> This property is not visible because spacings and paddings depends border or background of button.
+
 
 #### ENABLED - True, False
 
@@ -78,7 +80,7 @@ android:enabled="false"
 
 #### DISPLAY - True, False
 
-> This property is not from ContainedButton but is a property related to contained layout. 
+> This property is not from TextButton but is a property related to contained layout. 
 
 
 
