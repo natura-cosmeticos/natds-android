@@ -33,7 +33,8 @@
     app:icon="@drawable/outlined_action_like"
     app:iconGravity="textStart"/>
 
-<com.natura.android.button.TextButton            android:id="@+id/blockTextButtonDisable"
+<com.natura.android.button.TextButton
+    android:id="@+id/blockTextButtonDisable"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="?spacingSmall"
