@@ -93,7 +93,7 @@ android:enabled="false"
 
 #### DISPLAY - True, False
 
-> This property is not from ContainedButton but is a property related to contained layout. 
+> This property is not from OutlinedButton but is a property related to contained layout. 
 
 
 
