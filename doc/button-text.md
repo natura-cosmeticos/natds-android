@@ -29,7 +29,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="?spacingSmall"
-    android:text="@string/button_screen_text_medium_text"
+    android:text="TEXT"
     app:icon="@drawable/outlined_action_like"
     app:iconGravity="textStart"/>
 
@@ -39,7 +39,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="?spacingSmall"
     android:enabled="false"
-    android:text="@string/button_screen_text_medium_disabled_text"
+    android:text="DISABLED TEXT"
     app:icon="@drawable/outlined_action_like"
     app:iconGravity="textEnd"/>
 ```
