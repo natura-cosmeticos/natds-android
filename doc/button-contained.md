@@ -12,8 +12,8 @@
 | Size           | Small, Medium, Large      | ✅  Available      |
 | Enabled        | True, False               | ✅  Available      |
 | Display        | True, False               | ❌  Not Applicable |
-| Text-Transform | Uppercase, Capitalize     | 🛠️  Not Available  |
-| Theme          | All Themes DS             | 🛠️  Not Available  |
+| Text-Transform | Uppercase, Capitalize     | 🗂️  Backlog  |
+| Theme          | All Themes DS             | 🗂️  Backlog  |
 
 
 ## Technical Usages Examples
@@ -93,7 +93,7 @@ android:enabled="false"
 
 #### DISPLAY - True, False
 
-> This property is not from ContainedButton but is a property related to contained layout. 
+> This property is not visible because spacing and padding depend on the button's border or background. 
 
 
 
