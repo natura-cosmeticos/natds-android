@@ -4,7 +4,7 @@
 
 
 
-## Propertys
+## Properties
 
 | Property       | Values                    | Status             |
 | -------------- | ------------------------- | ------------------ |
