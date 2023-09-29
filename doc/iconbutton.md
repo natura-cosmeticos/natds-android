@@ -61,7 +61,7 @@
 
 #### BACKGROUND - Inherit, Float, Overlay
 
-![](./images/iconbutton_backgroundstyle.png)
+![](./images/iconbutton_background.png)
 
 ```swift
 
