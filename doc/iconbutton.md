@@ -11,10 +11,10 @@
 | Property           | Values                         | Status            |
 | --------------     | -------------------------      | ----------------- |
 | OnClick             | -                          | ✅  Available     |
-| Style          | standardDefault, standardPrimary, standardLight   | ✅  Available     |
-| Background         | Inherit, Float, Overlay        | ✅  Available     |
-| State          | Enabled, Disabled                    | ✅  Available     |
-| Size               | Semi, Semix, Medium            | ✅  Available     |
+| ButtonColor          | defaultColor, primaryColor, lightColor   | ✅  Available     |
+| StyleButton         | Inherit, Floating, Overlay        | ✅  Available     |
+| Enabled          | True, False                    | ✅  Available     |
+| SizeButton               | Semi, Semix, Medium            | ✅  Available     |
 
 
 ## Technical Usages Examples
@@ -23,14 +23,20 @@
 
 ![](./images/iconbutton.png)
 
-```swift
+```xml
 
-    private let iconButtonDefaultStyle: NatIconButton = {
-        let iconButton = NatIconButton(style: .standardDefault)
-        iconButton.translatesAutoresizingMaskIntoConstraints = false
-        iconButton.configure(icon: getIcon(.outlinedDefaultMockup))
-        return iconButton
-    }()
+    <com.natura.android.iconButton.IconButton
+        android:id="@+id/iconButtonColorDefault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        app:buttonColor="defaultColor"
+        app:iconName="outlined_default_mockup"
+        app:layout_constraintEnd_toStartOf="@id/textViewColorDefault"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sizeButton="semi"
+        app:styleButton="inherit" />
 
 ```
 
@@ -41,17 +47,17 @@
 
 
 
-#### STYLE - standardDefault, standardPrimary, standardLight
+#### BUTTON COLOR - defaultColor, primaryColor, lightColor
 
 ![](./images/iconbutton_color.png)
 
-```swift
+```xml
 
-    let iconButton = NatIconButton(style: .standardDefault)
+    app:buttonColor="defaultColor"
     
-    let iconButton = NatIconButton(style: .standardPrimary)
+    app:buttonColor="primaryColor"
             
-    let iconButton = NatIconButton(style: .standardLight)
+    app:buttonColor="lightColor"
 
 ```
 
@@ -59,17 +65,17 @@
 
 
 
-#### BACKGROUND - Inherit, Float, Overlay
+#### STYLE BUTTON - Inherit, Floating, Overlay
 
 ![](./images/iconbutton_background.png)
 
-```swift
+```xml
 
-    iconButton.configure(background: .inherit)
+    app:styleButton="inherit"
     
-    iconButton.configure(background: .float)
+    app:styleButton="floating"
     
-    iconButton.configure(background: .overlay)
+    app:styleButton="overlay"
 
 ```
 
@@ -77,16 +83,16 @@
 
 
 
-#### STATE - Enabled, Disabled
+#### ENABLED - True, False
 
 
 ![](./images/iconbutton.png)
 
-```swift
+```xml
 
-    iconButton.configure(state: .enabled)
+    android:enabled="true"
 
-    iconButton.configure(state: .disabled)
+    android:enabled="false"
 
 ```
 
@@ -94,17 +100,17 @@
 >
 
 
-#### SIZE - Semi, Semix, Medium
+#### SIZE BUTTON - Semi, Semix, Medium
 
 ![](./images/iconbutton_size.png)
 
-```swift
+```xml
 
-    let iconButton = NatIconButton(style: .standardDefault, size: .semi)
+    app:sizeButton="semi"
     
-    let iconButton = NatIconButton(style: .standardDefault, size: .semiX)
+    app:sizeButton="semix"
         
-    let iconButton = NatIconButton(style: .standardDefault, size: .medium)
+    app:sizeButton="medium"
 
 ```
 
