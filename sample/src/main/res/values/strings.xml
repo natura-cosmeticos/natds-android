@@ -275,6 +275,7 @@
     <string name="main_screen_list_item_text">List Item</string>
     <string name="main_screen_progress_indicator_text">Progress Indicator</string>
     <string name="main_screen_radio_button_text">Radio Button</string>
+    <string name="main_screen_rating_text">Rating</string>
     <string name="main_screen_select_text">Select</string>
     <string name="main_screen_shortcut_text">Shortcut</string>
     <string name="main_screen_snackbar_text">Snackbar</string>

@@ -139,6 +139,9 @@
         <activity
             android:name=".components.AlertActivity"
             android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.RatingActivity"
+            android:theme="@style/Theme.Natura.Light" />
     </application>
 
 </manifest>
