@@ -177,7 +177,7 @@ class Select : ConstraintLayout {
                 id: Long
             ) {
                 if (position == 0) {
-                    (view as TextView).setTextColor(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis))
+                    (view as? TextView)?.setTextColor(getColorTokenFromTheme(context, R.attr.colorMediumEmphasis))
                 }
             }
         }
