@@ -39,7 +39,7 @@ em Kotlin
 ```
 <br><br>
 
-List Item  with none divider and touchable
+#### List Item  with none divider and touchable
 
 ![Logo](./images/listItem_touchable.png)
 
@@ -68,7 +68,7 @@ em Kotlin
 <br><br>
 
 
-##### List Item with inset divider, not selectable and not touchable
+#### List Item with inset divider, not selectable and not touchable
 
 ![Logo](./images/listItem_notclick.png)
 
