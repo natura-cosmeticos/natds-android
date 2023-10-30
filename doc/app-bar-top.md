@@ -1,24 +1,64 @@
 # App Bar Top
 
+> The top app bar displays information and actions relating to the current screen
+
+<br>
+
+## Properties:
+
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Elevation             | True, False                          | ✅  Available     |
+| Color          | Primary, Secondary, Default, Inverse   | ✅  Available     |
+| Action Right         | -        | ✅  Available     |
+| Action Left         | -        | ✅  Available     |
+| Content Position         | Left, Center        | ✅  Available     |
+| Content Type         | Text, Media, Search        | ✅  Available     |
+| Content Proeminent         | True, False        | 🗂️  Backlog     |
+ 
+
+<br>
+      
+## Technical Usages Examples
+
+<br><br>
+
 <p align="center">
-  <img alt="App Bar Top with Button" src="./images/appbartop_button.png" width="30%"> 
-&nbsp; &nbsp; 
-  <img alt="App Bar Top with Search" src="./images/appbartop_search.png" width="30%">
-&nbsp; &nbsp;
-  <img alt="App Bar Top with three Actions" src="./images/appbartop_threeactions.png" width="30%">
-  afsdfas&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
-fadsfas
+  <img alt="App Bar 1" src="./images/appbar_1.png" width="30%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 2" src="./images/appbar_2.png" width="30%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 3" src="./images/appbar_3.png" width="30%">
+ &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+</p>
+<br>
+
+<p align="center">
+  <img alt="App Bar 1" src="./images/appbar_4.png" width="30%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 2" src="./images/appbar_5.png" width="30%">
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 3" src="./images/appbar_6.png" width="30%">
+ &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+</p>
+<br>
+<p align="center">
+  <img alt="App Bar 1" src="./images/appbar_7.png" width="30%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 2" src="./images/appbar_8.png" width="30%">
+&nbsp; &nbsp;&nbsp; 
+  <img alt="App Bar 3" src="./images/appbar_9.png" width="30%">
+  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+</p>
+<br>
+<p align="center">
+  <img alt="App Bar 1" src="./images/appbar_10.png" width="30%"> 
+&nbsp; &nbsp; &nbsp; 
+  <img alt="App Bar 3" src="./images/appbar_11.png" width="30%">
+  &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
 </p>
 
-
-
-<p align="center">
-  <img alt="App Bar Top with Button, dark mode" src="./images/appbartop_button_dark.png" width="30%">
-&nbsp; &nbsp;
-  <img alt="App Bar Top with Search, dark mode" src="./images/appbartop_search_dark.png" width="30%">
-&nbsp; &nbsp; 
-  <img alt="App Bar Top with three Actions, dark mode" src="./images/appbartop_threeactions_dark.png" width="30%">
-</p>
+<br>
 
 ### How to use it?
 Add the app bar component in your xml layout file
@@ -58,7 +98,9 @@ Important! Do not use the default theme, use the NoActionBar variant. You can ch
                        android:text="DEFAULT" />
                </com.natura.android.appbartop.StandardAppBarTop>
 ```
-For more usage examples, access the code in the Sample App: [AppBar Top Example] (https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/appbartop_button_action.xml)
 
+<br>
 
+## More code
+You can check out more examples from SampleApp by clicking [AppBar Top Example](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/appbartop_button_action.xml).
 
