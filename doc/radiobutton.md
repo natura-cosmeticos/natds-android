@@ -1,34 +1,25 @@
 # RadioButton
-Radio buttons allow users to select one option from a set.
 
-Extends from [AppCompatRadioButton](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatRadioButton).
+> Radio buttons allow users to select one option from a set.
 
-## Note for Design:
+## Properties
 
-This component is available in the following variants:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| State             | Enabled, Pressed                          | ✅  Available     |
+| Disabled          | True or False   | ✅  Available     |
 
-- ✅ **Standard**
-  
-With the following attribute statuses:
 
-- **States**:
-  - ✅ `Enabled`
-  - ✅ `Pressed`
-- ✅ **Disabled**
+## Technical Usages Examples
 
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|` android:checked`|  Defines if the component is checked.| boolean | true or false <br> |
-|` android:enabled`| Defines if the component is enabled.| boolean | true or false <br> |
-|` android:text`| Sets the component label.| string | text |
+> All codes are available for Android with XML Layout.
 
-## Usage Examples
-RadioButton enabled unchecked
+![](./images/radiobutton_lightMode.png)
+
+
+##### RadioButton enabled unchecked
 
 ![RadioButton](./images/radiobutton_enabledUnchecked.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.radiobutton.RadioButton
@@ -37,8 +28,9 @@ RadioButton enabled unchecked
         android:layout_height="wrap_content"
         android:text="Radio Button" />
 ```
-
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val radioButton = findViewById<RadioButton>(R.id.radioButton)
@@ -47,12 +39,12 @@ RadioButton enabled unchecked
     radioButton.isChecked = false
 ```
 <br><br>
-RadioButton enabled checked
+
+##### RadioButton enabled checked
+
 <br>       
 
 ![RadioButton](./images/radiobutton_enabledChecked.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.radiobutton.RadioButton
@@ -63,7 +55,9 @@ RadioButton enabled checked
         android:text="Radio Button" />
 ```
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val radioButton = findViewById<RadioButton>(R.id.radioButton)
@@ -72,11 +66,11 @@ RadioButton enabled checked
     radioButton.isChecked = true
 ```    
 <br><br>
-RadioButton disabled unchecked
+
+##### RadioButton disabled unchecked
 
 ![RadioButton](./images/radiobutton_disabledUnchecked.png)
 
-#### Layout XML
 
 ```android
     <com.natura.android.radiobutton.RadioButton
@@ -87,7 +81,9 @@ RadioButton disabled unchecked
         android:text="Radio Button" />
 ```
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val radioButton = findViewById<RadioButton>(R.id.radioButton)
@@ -97,11 +93,10 @@ RadioButton disabled unchecked
 ```
 
 <br><br>
-RadioButton disabled checked
+
+##### RadioButton disabled checked
 
 ![RadioButton](./images/radiobutton_disabledChecked.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.radiobutton.RadioButton
@@ -113,7 +108,9 @@ RadioButton disabled checked
         android:text="Radio Button" />
 ```
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val radioButton = findViewById<RadioButton>(R.id.radioButton)
@@ -124,23 +121,5 @@ RadioButton disabled checked
 
 <br>
 
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Radio Button Light" src="./images/radiobutton_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Radio Button Dark" src="./images/radiobutton_darkMode.png" width="40%">
-</p>
-
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_radiobutton.xml).
-
-## Attention points
-
-1. A radio button is a DS component based on DS **multibrand themes**. It means if you want to use a radio button in your app, you MUST set the DS theme on a view parent or in the radio button component itself. [Check more info about how to set DS themes in your app](../README.md).
-
-
-
-
-
-

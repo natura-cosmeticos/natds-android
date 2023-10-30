@@ -1,46 +1,31 @@
 # Alert
 
-## Note for Design:
+### Difference of Snackbar and Alert
 
-This component is available in the following variants:
+#### Alert
+Alert is an element within the context of the page (like a disclaimer, a highlighted information box) without interaction.
 
-* ✅ Standard
+#### Snackbar
+The Snackbar is something temporary about the content of the page (like a notification) that can have the action of dismiss, or a CTA.
 
-With the following attribute status:
-
-* Type(available as type):
-    * ✅ `contained` (default
-    * ✅ `outlined`
-
-* Color(available as type):
-    * ✅ `success`
-    * ✅ `error`
-    * ✅ `warning`
-    * ✅ `info` (default)
-    * ✅ `custom`
-    
-* ✅ Title 
-* ✅ Icon
-
-show_icon
-
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-
-|`app:show_title`| Parameter defines whether the title will be rendered. | boolean | true or false
-|`app:title_text`| Define the content that will be rendered at the alert title. | String | text
-|`app:show_icon`| Parameter defines whether the icon will be rendered. | boolean | true or false
-|`app:iconName`| Receives a string with the drawable to be render at component| string | text (icon name)
-|`app:alert_type`| Defines whether the alert should render the contained or outlined border | string | contained, outlined
-|`app:alert_color`| Sets the alert color | string | success, error, warning, info, custom
-|`app:alert_custom_background_color`| Give the alert a custom color | color | colorToken
-|`app:alert_custom_stroke_color`| Give the stroke a custom color | color | colorToken
+<br>
 
 
+## Properties
 
-#### Usage examples
-Alert contained  variants
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Title             | True, False                          | ✅  Available     |
+| Icon          | True, False   | ✅  Available     |
+| Type         | Contained, Outlined       | ✅  Available     |
+| Color          | Success, Warning, Info, Error, Custom                    | ✅  Available     |
+
+<br>
+
+## Technical Usages Examples
+> All codes are available for Android with XML Layout.
+
+<br>
 
 ![alert contained variants](./images/alert_contained_variants.png)
 
@@ -55,94 +40,46 @@ Alert contained  variants
         app:show_icon="true"
         app:iconName="outlined_alert_check"
         app:alert_type="contained"
-        app:alert_color="success">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Error"
-        app:show_icon="true"
-        app:iconName="outlined_alert_cancel"
-        app:alert_type="contained"
-        app:alert_color="error">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-
-
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Warningr"
-        app:show_icon="true"
-        app:iconName="outlined_alert_warning"
-        app:alert_type="contained"
-        app:alert_color="warning">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-
-
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Warning"
-        app:show_icon="true"
-        app:iconName="outlined_alert_warning"
-        app:alert_type="contained"
-        app:alert_color="warning">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-
-
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Info"
-        app:show_icon="true"
-        app:iconName="outlined_alert_info"
-        app:alert_type="contained"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-
-
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Custom"
-        app:show_icon="true"
-        app:alert_type="contained"
-        app:alert_color="custom">
-
-        ...
-
-    </com.natura.android.alert.Alert>
+        app:alert_color="success" />
 ```
 
 <br><br>
 
+### Title
 
-Alert outlined
+![alert without title](./images/alert_without_title.png)
+
+```android
+    <com.natura.android.alert.Alert
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_title="false"
+        app:show_icon="true"
+        app:iconName="outlined_alert_info"
+        app:alert_type="contained"
+        app:alert_color="info"/>
+```
+
+### Icon
+
+![alert without icon](./images/alert_without_icon.png)
+
+```android
+    <com.natura.android.alert.Alert
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:show_title="true"
+        app:title_text="Alert Only Title"
+        app:show_icon="false"
+        app:alert_type="contained"
+        app:alert_color="info"/>
+```
+
+<br>
+
+### Type
 
 ![alert outlined](./images/alert_outlined.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.alert.Alert
@@ -153,74 +90,10 @@ Alert outlined
         app:show_icon="true"
         app:iconName="outlined_alert_info"
         app:alert_type="outlined"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
+        app:alert_color="info"/>
 ```
 
-
-<br><br>
-
-
-Alert without icon
-
-![alert without icon](./images/alert_without_icon.png)
-
-#### Layout XML
-
-```android
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="true"
-        app:title_text="Alert Only Title"
-        app:show_icon="false"
-        app:alert_type="contained"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-```
-
-<br><br>
-
-Alert without title
-
-![alert without title](./images/alert_without_title.png)
-
-#### Layout XML
-
-```android
-    <com.natura.android.alert.Alert
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:show_title="false"
-        app:show_icon="true"
-        app:iconName="outlined_alert_info"
-        app:alert_type="contained"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
-```
-
-
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Alert Light" src="./images/alert_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Alert Dark" src="./images/alert_darkMode.png" width="40%">
-</p>
-
+<br>
 
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_alert.xml).
-
-## Attention points
-
-1. An alert is a DS component based on DS **multibrand themes**. It means if you want to use an alert in your app, you MUST set the DS theme on a view parent or in the alert component itself. [Check more info about how to set DS themes in your app](../README.md).

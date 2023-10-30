@@ -1,75 +1,40 @@
 # Chip
 
-Chips are compact elements that represent an input, attribute, or action.
+> Chips are compact elements that represent an input, attribute, or action.
 
-Extends
-from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout)
-.
+<br>
 
-## Note for Design:
+## Properties
 
-This component is available in the following variants:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Helper Before             | None, Icon, Avatar                          | ✅  Available     |
+| Helper After          | None, Icon, Avatar    | ✅  Available     |
+| Color         | Neutral, Primary, Secondary, Custom        | ✅  Available     |
+| State          | Enabled, Press                    | ✅  Available     |
+| Selected               | True, False           | ✅  Available     |
+| Disabled               | True, False           | ✅  Available     |
+| Action               | True, False           | ✅  Available     |
+| Size               | Semi, SemiX, Medium           | ✅  Available     |
 
-- ✅ **Standard**
+<br>
 
-With the following attribute statuses:
+## Technical Usages Examples
 
-- ✅ **Label**
-- **Helper Before**:
-    - ✅ `None`
-    - ✅ `Icon`
-    - ✅ `Avatar`
-- **Helper After**:
-    - ✅ `None`
-    - ✅ `Icon`
-    - ✅ `Avatar`    
-- **Color**:
-    - ✅ `Neutral`
-    - ✅ `Primary`
-    - ✅ `Secondary`
-    - ✅ `Custom`
-- **State**:
-    - ✅ `Enabled`
-    - ❌ `Hover`
-    - ❌ `Focus`
-    - ✅ `Press`
-- **Selected**:
-    - ✅ `True`
-    - ✅ `False`
-- **Disabled**:
-  - ✅ `True`
-  - ✅ `False`
-- **Action**:
-  - ✅ `True`
-  - ✅ `False`
-- **Size**:
-  - ✅ `Semi`
-  - ✅ `SemiX`  
-  - ✅ `Medium`  
-  
-# Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`android:enabled`|  An unenabled chip prevents the user from clicking and performing some action. | boolean | true or false
-|`app:chp_label`| Sets the label of component.| string | text
-|`app:chp_action`| Defines if the component will have any action on click. | boolean | true or false
-|`app:chp_selected`| Defines whether the component will have the appearance of selected. | boolean | true or false
-|`app:chp_color`| Sets the color style of component, based at background and border.| string | neutral, primary, secondary or custom |
-|`app:chp_size`| Sets the size of component.| string | semi, semix, or medium |
-|`app:chp_custom_background_color`| Sets the component's background color when the color type is customized.| color | colors
-|`app:chp_custom_label_color`| Sets the component's label color when the color type is customized. | color | colors
-|`app:chp_custom_border_color`| Sets the component's border color when the color type is customized. | color | colors
-|`app:chp_helper_right_type`| Defines the type of helper will be shown in the right side of the component.| string | none, avatar or icon |
-`app:chp_helper_left_type`| Defines the type of helper will be shown in the left side of the component.| string | none, avatar or icon |
-`app:chp_helper_left`| Sets the resource to the left helper.| drawable | resources |
-`app:chp_helper_right`| Sets the resource to the right helper.| drawable | resources |
+<br>
 
-## Usage Examples
-Chip selected with primary color
+<p align="center">
+  <img alt="Card 1" src="./images/chip_1.png" width="40%"> 
+&nbsp;
+  <img alt="Card 2" src="./images/chip_2.png" width="40%">
+</p>
+
+<br>
+
+#### Chip selected with primary color
 
 ![Chip](./images/chip_primarySelected.png)
 
-#### Layout XML
 
 ```android
     <com.natura.android.chip.Chip
@@ -83,11 +48,9 @@ Chip selected with primary color
 
 <br><br>
 
-Chip not select with secondary color
+#### Chip not select with secondary color
 
 ![Chip](./images/chip_secondaryNotSelected.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.chip.Chip
@@ -101,11 +64,9 @@ Chip not select with secondary color
 
 <br><br>
 
-Chip with Size Medium
+#### Chip with Size Medium
 
 ![Chip](./images/chip_sizeMedium.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.chip.Chip
@@ -120,11 +81,9 @@ Chip with Size Medium
 
 <br><br>
 
-Chip with helper right
+#### Chip with helper right
 
 ![Chip](./images/chip_helperRightAvatar.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.chip.Chip
@@ -139,32 +98,9 @@ Chip with helper right
             app:chp_size="semi"/>
 ```
 
-
 <br>
-
-
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Card Light" src="./images/chip_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Card Dark" src="./images/chip_darkMode.png" width="40%">
-</p>
 
 ## More code
 
 You can check out more examples from SampleApp by
 clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_chip.xml)
-.
-
-## Attention points
-
-1. A chip is a DS component based on DS **multibrand themes**. It means if you want to use a
-   chip in your app, you MUST set the DS theme on a view parent or in the chip component
-   itself. [Check more info about how to set DS themes in your app](../README.md).
-
-
-
-
-
-

@@ -1,39 +1,29 @@
 # Checkbox
-Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
+
+> Checkboxes allow users to select one or more items from a set. Checkboxes can turn an option on or off.
 
 Extends from [AppCompatCheckBox](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatCheckBox).
 
-## Note for Design:
 
-This component is available in the following variants:
+## Properties
 
-- ✅ **Checked**
-- ✅ **Unchecked**
-- ✅ **Indeterminate**
-   
-With the following attribute statuses:
-
-- **States**:
-  - ✅ `Enabled`
-  - ✅ `Pressed`
-
-- ✅ **Disabled**
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Checked, Unchecked, Indeterminate                   | ✅  Available     |
+| State          | Enabled, Pressed   | ✅  Available     |
+| Disabled         | True or False        | ✅  Available     |
 
 
+## Technical Usages Examples
 
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`android:checked`|  Defines if the component is checked.| boolean | true or false <br> |
-|`android:enabled`| Defines if the component is enabled.| boolean | true or false <br> |
-|`android:text`| Sets the component label.| string | text |
+![Checkbox](./images/checkbox_lightMode.png)
 
-## Usage Examples
-Checkbox enabled checked
+<br>
+
+##### Checkbox enabled checked
 
 ![Checkbox](./images/checkbox_checked.png)
 
-#### Layout XML
 
 ```android
     <com.natura.android.checkbox.CheckBox
@@ -44,29 +34,35 @@ Checkbox enabled checked
         android:layout_height="wrap_content"/>
 ```
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val checkbox = findViewById<CheckBox>(R.id.checkbox)
     checkbox.state = CheckBox.CHECKED
 ```
 <br><br>
-Checkbox enabled checked
+
+
+##### Checkbox enabled checked
 
 ![Checkbox](./images/checkbox_indeterminate.png)
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val checkbox = findViewById<CheckBox>(R.id.checkbox)
     checkbox.state = CheckBox.INDETERMINATE
 ```
 <br><br>
-Checkbox unchecked disabled
+
+##### Checkbox unchecked disabled
 
 ![Checkbox](./images/checkbox_disabled.png)
 
-#### Layout XML
 
 ```android
     <com.natura.android.checkbox.CheckBox
@@ -76,8 +72,9 @@ Checkbox unchecked disabled
         android:enabled="false"
         android:layout_height="wrap_content"/>
 ```
-
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val checkbox = findViewById<CheckBox>(R.id.checkbox)
@@ -85,23 +82,6 @@ Checkbox unchecked disabled
 ```
 <br>
 
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Checkbox Light" src="./images/checkbox_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Checkbox Dark" src="./images/checkbox_darkMode.png" width="40%">
-</p>
 
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_checkbox.xml).
-
-## Attention points
-
-1. A checkbox is a DS component based on DS **multibrand themes**. It means if you want to use a checkbox in your app, you MUST set the DS theme on a view parent or in the checkbox component itself. [Check more info about how to set DS themes in your app](../README.md).
-
-
-
-
-
-

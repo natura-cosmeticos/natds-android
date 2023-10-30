@@ -1,48 +1,25 @@
 # Shortcut
-Shortcuts for quick access to a page and facilitate navigation.  
 
-Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
+> Shortcuts for quick access to a page and facilitate navigation.  
 
-## Note for Design:
+## Properties
 
-This component is available in the following variants:
-
-- ✅ **Standard**
-- ✅ **Outlined**
-  
-With the following attribute statuses:
-
-- **Size**:
-  - ✅ `Medium`
-  - ✅ `MediumX`
-- **States**:
-  - ✅ `Enabled`
-  - ✅ `Press`
-- **Color**:
-  - ✅ `Contained / Primary`
-  - ✅ `Contained / Light`
-  - ✅ `Outlined / Primary`
-  - ✅`Outlined / Light`
-- **Notify**:
-  - ✅ `None`
-  - ✅ `Standard`
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Standard, Outlined                          | ✅  Available     |
+| Size          | Medium, MediumX   | ✅  Available     |
+| State         | Enabled, Press         | ✅  Available     |
+| Color          | Contained Primary, Contained Light, Outlined Primary, Outlined Light       | ✅  Available     |
+| Notify               | None, Standard            | ✅  Available     |
 
 
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`app:shct_type`|  Defines the type of the component's background.| string | - **contained**: background is filled <br> - **outlined**: the component is just outlined <br> |
-|`app:shct_text_label`| Sets the label of component.| string | text
-|`app:shct_icon_name`| Defines the name of the icon that will be shown in the center of the component. | string | text
-|`app:shct_notify`| Sets the number showed by notification at Shortcut | integer | When 0, notification is not visible, limit is 10000. |
-|`app:shct_color`| Sets the color style of component, based at background and border| string | primary or neutral |
+## Technical Usages Examples
 
-## Usage Examples
-Shortcut with mockup icon, type contained and notify
+![](./images/shortcut_lightMode.png)
+
+##### Shortcut with mockup icon, type contained and notify
 
 ![Shortcut](./images/shortcut_contained.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.shortcut.Shortcut
@@ -55,7 +32,11 @@ Shortcut with mockup icon, type contained and notify
         app:shct_type="contained" />
 ```
 
-#### Kotlin
+<br>
+
+em Kotlin
+
+<br>
 
 ```kotlin
     val shortcut = findViewById<Shortcut>(R.id.shortcut)
@@ -64,11 +45,10 @@ Shortcut with mockup icon, type contained and notify
     shortcut.setIcon("outlined-default-mockup")
 ```
 <br><br>
-Shortcut with mockup icon, type outlined and action
+
+##### Shortcut with mockup icon, type outlined and action
 
 ![Shortcut](./images/shortcut_outlined.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.shortcut.Shortcut
@@ -79,8 +59,11 @@ Shortcut with mockup icon, type outlined and action
         app:shct_text_label="Outlined/Primary"
         app:shct_type="outlined" />
 ```
+<br>
 
-#### Kotlin
+em Kotlin
+
+<br>
 
 ```kotlin
     val shortcut = findViewById<Shortcut>(R.id.shortcut)
@@ -94,13 +77,7 @@ Shortcut with mockup icon, type outlined and action
 
 <br>
 
-## Light mode / Dark mode
 
-<p align="center">
-  <img alt="Shortcut Light" src="./images/shortcut_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Shortcut Dark" src="./images/shortcut_darkMode.png" width="40%">
-</p>
 
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_shortcut.xml).
@@ -114,6 +91,3 @@ You can check out more examples from SampleApp by clicking [here](https://github
     Ex: `app:icon="@drawable/outlined_default_mockup"`
 
 <br>
-
-
-2. A shortcut is a DS component based on DS **multibrand themes**. It means if you want to use a shortcut in your app, you MUST set the DS theme on a view parent or in the shortcut component itself. [Check more info about how to set DS themes in your app](../README.md).
