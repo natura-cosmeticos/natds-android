@@ -1,57 +1,37 @@
 # Logo
 Logo adapted as brand standards for each company.
 
-Extends from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout).
+<br>
 
+## Properties
 
-## Note for Design:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Natura, Avon, The Body Shop, Natura&Co, Natura v2, Avon v2, Consultoria de Beleza       | ✅  Available     |
+| Model          | A, B   | ✅  Available     |
+| Color         | Primary, Secondary, Highlight, Surface, Neutral        | ✅  Available     |
+| Size          | Medium, MediumX, Large, LargeX, LargeXX, LargeXXX, Huge, HugeX, HugeXX, HugeXXX, VeryHuge                    | ✅  Available     |
+| Language               | Pt, Es, Default            | ✅  Available     |
 
-This component is available in the following variants:
+<br>
 
-- ✅ **Natura**
-- ✅ **The Body Shop**
-- ✅ **Aesop**
-- ✅ **Avon**
-- ✅ **Natura&Co** 
-   
-With the following attribute statuses:
+## Technical Usages Examples
 
-- **Model**:
-  - ✅ `A`
-  - ✅ `B`
-- **Color**:
-  - ✅ `Primary`
-  - ✅ `Secondary`
-  - ✅ `Highlight`
-  - ✅ `Surface`
-  - ✅ `Neutral`
-- **Size**:
-  - ✅ `Medium`
-  - ✅ `Mediumx`
-  - ✅ `Large`
-  - ✅ `Largex`
-  - ✅ `Largexx`
-  - ✅ `Largexxx`
-  - ✅ `Huge`
-  - ✅ `Hugex`
-  - ✅ `Hugexx`
-  - ✅ `Hugexxx`
-  - ✅ `Veryhuge`
+<p align="center">
+  <img alt="Logo 1" src="./images/logo_1.png" width="20%"> 
+&nbsp;
+  <img alt="Logo 2" src="./images/logo_2.png" width="20%">
+   &nbsp;
+  <img alt="Logo 3" src="./images/logo_3.png" width="20%">
+   &nbsp;
+  <img alt="Logo 4" src="./images/logo_4.png" width="20%">
+</p>
 
+<br>
 
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`app:model`|  Defines the component model.| string | A or B|
-|`app:customColor`| Sets the color of component.| string | neutral, primary, secondary, highlight or surface
-|`app:customSize`| Sets the component size. | string | medium, mediumx, large, largex, largexx, largexxx, huge, hugex, hugexx, hugexxx or veryhuge 
-
-## Usage Examples
-Logo model B with highlight color and mediumx size
+##### Logo model B with highlight color and mediumx size
 
 ![Logo](./images/logo_mediumx.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.logo.Logo
@@ -64,11 +44,9 @@ Logo model B with highlight color and mediumx size
 ```
 <br><br>
 
-Logo model A with surface color and hugexx size
+##### Logo model A with surface color and hugexx size
 
 ![Logo](./images/logo_hugexx.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.logo.Logo
@@ -81,11 +59,9 @@ Logo model A with surface color and hugexx size
 ```
 <br><br>
 
-Logo model A with neutral color and veryhuge size
+##### Logo model A with neutral color and veryhuge size
 
 ![Logo](./images/logo_veryhuge.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.logo.Logo
@@ -98,19 +74,6 @@ Logo model A with neutral color and veryhuge size
 ```
 <br>
 
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Logo Light" src="./images/logo_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Logo Dark" src="./images/logo_darkMode.png" width="40%">
-</p>
 
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_logo.xml).
-
-## Attention points
-
-1. A logo is a DS component based on DS **multibrand themes**. It means if you want to use a logo in your app, you MUST set the DS theme on a view parent or in the logo component itself. [Check more info about how to set DS themes in your app](../README.md).
-
-
