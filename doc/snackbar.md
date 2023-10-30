@@ -49,7 +49,9 @@
 
 ##### Title
 
-![Snackbar](./images/snackbar_2_.png)
+<p align="center">
+  <img alt="Card 1" src="./images/snackbar_2_.png" width="30%"> 
+</p>
 
 ```android
    title = "Title",
@@ -60,7 +62,9 @@
 
 ##### Icon
 
-![Snackbar](./images/snackbar_2_.png)
+<p align="center">
+  <img alt="Card 1" src="./images/snackbar_2_.png" width="30%"> 
+</p>
 
 ```android
    showIcon = true,
@@ -71,7 +75,9 @@
 
 ##### Button
 
-![Snackbar](./images/snackbar_3.png)
+<p align="center">
+  <img alt="Card 1" src="./images/snackbar_1_.png" width="30%"> 
+</p>
 
 ```android
    mainButtonTitle = "Button",
@@ -85,17 +91,21 @@
 
 ##### Color
 
-![Snackbar](./images/snackbar_4.png)
+<p align="center">
+  <img alt="Card 1" src="./images/snackbar_4.png" width="30%"> 
+</p>
 
 ```android
-   color = SnackbarColorType.DEFAULT
+   color = SnackbarColorType.SUCCESS
 ```
 
 <br>
 
 ##### Position
 
-![Snackbar](./images/snackbar_5.png)
+<p align="center">
+  <img alt="Card 1" src="./images/snackbar_5.png" width="30%"> 
+</p>
 
 ```android
    animation = true,
