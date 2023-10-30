@@ -1,44 +1,23 @@
 # Badge Component
 
-#### Note:
+> The Badge is a screen element used to signal the user's points of attention. This component can help you to display some simple information on the top of chosen drawable.
+> Represents dynamic information such as number of notifications unread with some styles to match Nat DS appearance.
 
-This component is available in the following variants:
+<br>
 
-* ✅ Dot
-* ✅ Pulse
-* ✅ Standard
+## Properties:
 
-With the following attribute status:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Dot, Pulse, Standard                          | ✅  Available     |
+| Color          | Primary, Secondary, Alert, Success   | ✅  Available     |
+| Limit         | 9, 99, Unlimeted        | ✅  Available     |
 
-* Color(All Variants):
-    * ✅ `Alert` (default)
-    * ✅ `Primary`
-    * ✅ `Secondary`
-    * ✅ `Success`
-    
-* Limit(Standard):
-    * ✅ `9`
-    * ✅ `99`
-    * ✅ `Unlimited` (default)
-    
-* isFontWeight(Standard):
-    * ✅ `true`
-    * ✅ `false` (default)
+<br>
       
-## What is it?
+## Technical Usages Examples
 
-The Badge is a screen element used to signal the user's points of attention.
-Represents dynamic information such as number of notifications unread with some styles to match Nat DS appearance.
-
-### Why should I use it?
-
-This component can help you to display some simple information on the top of chosen drawable.
-
-### When should I use it?
-
-Every time you want to display an component with a badge
-
-### How to use it?
+![Badge](./images/badgeScreen.png)
 
 #### Badge Drawable
 
@@ -89,7 +68,6 @@ For that to happen, it is necessary to instantiate the BadgeDrawable class, pass
 * If you need to update the number inside a Badge, call the method 'updateNotificationBadge'
 ```android
    badgeDrawable.updateBadgeDrawable(number)
-   
    ```
 
 #### Badge
@@ -113,6 +91,3 @@ For that to happen, it is necessary add the Badge component in your xml layout f
         app:badgeVariant="dot" />
 </com.natura.android.card.Card>
 ```
-
-![Badge](./images/badgeScreen.png)
-

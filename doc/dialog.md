@@ -1,33 +1,26 @@
 # Dialog
-Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
 
-Built based on [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog).
+> Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
+> Built based on [AlertDialog](https://developer.android.com/reference/android/app/AlertDialog).
 
+<br>
 
-## Note for Design:
+## Properties
 
-This component is available in the following variants:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Standard, Alert                          | ✅  Available     |
+| Divider          | None, Show   | ✅  Available     |
+| Scroll         | None, Show, Auto        | ✅  Available     |
+| Width          | -                    | ✅  Available     |
+| Height               | -            | ✅  Available     |
 
-- ✅ **`Alert`**
-- ✅ **`Standard`**
-
-With the following attribute status:
-
-- Divider(Standard):
-
-  - ✅ False (default)
-  - ✅ True
-- ✅ firstHeaderIconButton (Standard)
-- ✅ firstHeaderIconButtonAction (Standard)
-- ✅ secondHeaderIconButton (Standard
-- ✅ secondHeaderIconButtonAction (Standard)
-- ✅ thirdHeaderIconButton (Standard)
-- ✅ thirdHeaderIconButtonAction (Standard)
-- ❌ Size / Height
-- ❌ Scroll
-
+<br>
 
 ## Attributes
+
+<br>
+
 | Attrs | Description | Type | Options |
 | - | --- | -------------| :------: |
 | Context | Android Context | Context | - 
@@ -48,14 +41,19 @@ With the following attribute status:
 | thirdHeaderIconButton (Optional)  | String used to define the icon of the third iconbutton of the dialog header | string | icon name
 | thirdHeaderIconButtonAction (Optional)  | View.OnClickListener that will be call when user perform a click at third iconbutton in header | Listener | Listener
 
+<br>
 
-## Usage Examples
+## Technical Usages Examples
 
-Dialog with icon, dividers, icon buttons and text
+### Dialog with icon, dividers, icon buttons and text
 
 ![Dialog](./images/dialog_withIcons.png)
 
-#### Kotlin
+<br>
+
+em Kotlin
+
+<br>
 
 ```android
 private fun createStandardDialogWithHeaderIconButtons() {
@@ -106,11 +104,15 @@ private fun createStandardDialogWithHeaderIconButtons() {
     }
 ```
 
-Dialog with title, text and two buttons only
+### Dialog with title, text and two buttons only
 
 ![Dialog](./images/dialog_standard.png)
 
-#### Kotlin
+<br>
+
+em Kotlin
+
+<br>
 
 ```android
 private fun createDialog() {
@@ -128,11 +130,15 @@ private fun createDialog() {
 }
 ```
 
-Dialog with title, text, dividers and outlined buttons
+### Dialog with title, text, dividers and outlined buttons
 
 ![Dialog](./images/dialog_outlinedButtons.png)
 
-#### Kotlin
+<br>
+
+em Kotlin
+
+<br>
 
 ```android
 private fun createDialog() {
@@ -169,10 +175,9 @@ button.setOnClickListener {
 }
 ```
 
-#### Dialog Standard from Dialog Fragment
+### Dialog Standard from Dialog Fragment
 
-We also allow the use of DialogStandard extending from DialogFragment, in order to aggregate the
-life cycle of a fragment to some development need.
+We also allow the use of DialogStandard extending from DialogFragment, in order to aggregate the life cycle of a fragment to some development need.
 
 Instead of sending callbacks as a parameter, the class that will use the DialogStandardFragment will
 need to implement the DialogStandardFragmentCallback interface, where the button click methods are.
@@ -208,8 +213,3 @@ class DialogActivity : AppCompatActivity(), DialogStandardFragmentCallback {
     }
 }
 ```
-
-
-
-
-

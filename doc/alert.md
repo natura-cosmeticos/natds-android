@@ -57,11 +57,7 @@ The Snackbar is something temporary about the content of the page (like a notifi
         app:show_icon="true"
         app:iconName="outlined_alert_info"
         app:alert_type="contained"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
+        app:alert_color="info"/>
 ```
 
 ### Icon
@@ -76,11 +72,7 @@ The Snackbar is something temporary about the content of the page (like a notifi
         app:title_text="Alert Only Title"
         app:show_icon="false"
         app:alert_type="contained"
-        app:alert_color="info">
-
-        ...
-
-    </com.natura.android.alert.Alert>
+        app:alert_color="info"/>
 ```
 
 <br>
@@ -98,9 +90,7 @@ The Snackbar is something temporary about the content of the page (like a notifi
         app:show_icon="true"
         app:iconName="outlined_alert_info"
         app:alert_type="outlined"
-        app:alert_color="info">
-        ...
-    </com.natura.android.alert.Alert>
+        app:alert_color="info"/>
 ```
 
 <br>

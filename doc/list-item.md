@@ -1,39 +1,19 @@
 # List Item
-Lists are continuous, vertical indexes of content such as text and images.
 
-Extends from [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout).
+> Lists are continuous, vertical indexes of content such as text and images.
+
+## Properties
+
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Type             | None, Action, Selectable                           | ✅  Available     |
+| States          | Enabled, Press, Selectable   | ✅  Available     |
 
 
-## Note for Design:
+## Technical Usages Examples
 
-This component is available in the following variants:
+![Logo](./images/listItem_lightMode.png)
 
-- ✅ **Base**
-   
-With the following attribute statuses:
-
-- **Type**:
-  - ✅ `None`
-  - ✅ `Action`
-  - ✅ `Selectable`
-- **States**:
-  - ✅ `Enabled`
-  - ✅ `Press`
-  - ✅ `Selected`
-
-## Attributes
-| Attr | Description | Type | Options |
-| - | --- | --- | --- |
-|`app:touchState`|  Sets the component's state and touch effect. | boolean | true or false|
-|`app:selectableState`| Sets the component selection state and its effect.| boolean | true or false |
-|`app:dividerBottom`| Defines the type of bottom separator that the view can contain. | string | none, fullbleed, inset,  middle
-
-## Usage Examples
-List Item  with fullbleed divider and selectable
-
-![Logo](./images/listItem_selectable.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.listitem.ListItem
@@ -48,8 +28,9 @@ List Item  with fullbleed divider and selectable
 
     </ListItem>
 ```
-
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val listItem = itemView.findViewById<ListItem>(R.id.listItem)
@@ -62,7 +43,6 @@ List Item  with none divider and touchable
 
 ![Logo](./images/listItem_touchable.png)
 
-#### Layout XML
 
 ```android
     <com.natura.android.listitem.ListItem
@@ -77,8 +57,9 @@ List Item  with none divider and touchable
 
     </ListItem>
 ```
-
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val listItem = itemView.findViewById<ListItem>(R.id.listItem)
@@ -87,11 +68,9 @@ List Item  with none divider and touchable
 <br><br>
 
 
-List Item with inset divider, not selectable and not touchable
+##### List Item with inset divider, not selectable and not touchable
 
 ![Logo](./images/listItem_notclick.png)
-
-#### Layout XML
 
 ```android
     <com.natura.android.listitem.ListItem
@@ -107,26 +86,15 @@ List Item with inset divider, not selectable and not touchable
     </ListItem>
 ```
 
-#### Kotlin
+<br>
+em Kotlin
+<br>
 
 ```kotlin
     val listItem = itemView.findViewById<ListItem>(R.id.listItem)
     listItem.setDividerInset()
 ```
-<br><br>
-
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Logo Light" src="./images/listItem_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Logo Dark" src="./images/listItem_darkMode.png" width="40%">
-</p>
+<br>
 
 ## More code
 You can check out more examples from SampleApp by clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_list_item.xml).
-
-## Attention points
-
-1. A list item is a DS component based on DS **multibrand themes**. It means if you want to use a list item in your app, you MUST set the DS theme on a view parent or in the list item component itself. [Check more info about how to set DS themes in your app](../README.md).
-
