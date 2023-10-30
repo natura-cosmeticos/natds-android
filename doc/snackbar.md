@@ -1,95 +1,126 @@
-# Select
+# Snackbar
 
-> Select lets user choose one option from an options menu. Consider using select when you have 4 or
-more options.
+> Snackbars provide brief messages about app processes at the bottom of the screen.
 
+<br>
 
 ## Properties
 
 | Property           | Values                         | Status            |
 | --------------     | -------------------------      | ----------------- |
 | Variant             | Standard                          | ✅  Available     |
-| Label             | -                          | ✅  Available     |
-| Footer             | -                          | ✅  Available     |
-| Size             | Medium, MediumX                          | ✅  Available     |
-| States             | None, Success, Error                          | ✅  Available     |
-| Required             | True, False                          | ✅  Available     |
-| Read-only             | True, False                          | ✅  Available     |
-| Disabled             | -                          | ✅  Available     |
-
-
-
-## Technical Usages Examples
+| Title             | True, False                           | ✅  Available     |
+| Icon             | True, False                           | ✅  Available     |
+| Action Button        | None, Inline, Block, Icon Button           | ✅  Available     |
+| Feedback (color)      | Default, Success, Error, Warning, Info            | ✅  Available     |
+| Timer     | Minimum, Intermediary, Indeterminated, Custom             | ✅  Available     |
+| Position     | Top center, Bottom center             | ✅  Available     |
+| Animation     | False, Right, Left, Center Bottom, Center Top        | ✅  Available     |
 
 <br>
 
+## Technical Usages Examples
+
+> This component has no xml attributes, only available in view code with Kotlin
+
+<br><br>
+
 <p align="center">
-  <img alt="Card 1" src="./images/select_1.png" width="40%"> 
+  <img alt="Card 1" src="./images/snackbar_1.png" width="40%"> 
 &nbsp;
-  <img alt="Card 2" src="./images/select_2.png" width="40%">
+  <img alt="Card 2" src="./images/snackbar_2.png" width="40%">
 </p>
 
 <br>
 
-##### Select dropdown
-
-![Select](./images/select_withOptions.png)
-
 ```android
-   <com.natura.android.select.Select
-       android:id="@+id/selectDefault"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       app:slc_label="Label" />
+   SnackBar(
+      mainView = binding.root,
+      message = "This message is showing according with default test",
+      mainButtonTitle = "Button",
+      mainButtonAction = {
+        Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
+      },
+      mainButtonType = SnackbarActionButtonType.INLINE_BOTTON,
+    )
 ```
 
 <br><br>
 
-##### Select with Error
+##### Title
 
-![Select](./images/select_error.png)
-
-```android
-   <com.natura.android.select.Select
-        android:id="@+id/selectWithError"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="?spacingSmall"
-        app:slc_label="Error"
-        app:slc_footer="Opss...This input has an error"
-        app:slc_state="error"/>
-```
-
-<br><br>
-
-##### Select Read Only
-
-![Select](./images/select_readOnly.png)
+![Snackbar](./images/snackbar_2_.png)
 
 ```android
-   <com.natura.android.select.Select
-        android:id="@+id/selectReadOnly"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="?spacingSmall"
-        app:slc_readonly="true"
-        app:slc_label="Read only"/>
+   title = "Title",
+   showTitle = true,
 ```
 
 <br>
 
-### Kotlin
+##### Icon
 
- So that it is possible to show the items in the select, it is necessary to create and assign an
-  adapter to the spinner, inside a kotlin class. This trick will allow you to control the selected
-  values and actions on them. Below is an example:
+![Snackbar](./images/snackbar_2_.png)
 
 ```android
-val arraySpinner = listOf("Item 1", "Item 2", "Item 3", "Item 4")
-val arrayAdapter = ArrayAdapter(this, R.layout.custom_spinner_dropdown_item, arraySpinner)
-binding.selectDefault.spinner.adapter = arrayAdapter
+   showIcon = true,
+   iconName = iconNameProp
 ```
 
+<br>
+
+##### Button
+
+![Snackbar](./images/snackbar_3.png)
+
+```android
+   mainButtonTitle = "Button",
+   mainButtonAction = {
+     Toast.makeText(this,"SnackBar main button clicked",Toast.LENGTH_SHORT).show()
+   },
+   mainButtonType = SnackbarActionButtonType.INLINE_BOTTON
+```
+
+<br>
+
+##### Color
+
+![Snackbar](./images/snackbar_4.png)
+
+```android
+   color = SnackbarColorType.DEFAULT
+```
+
+<br>
+
+##### Position
+
+![Snackbar](./images/snackbar_5.png)
+
+```android
+   animation = true,
+   positionType = SnackbarPositionType.TOP_CENTER,
+   animationType = SnackbarAnimationtype.NONE
+```
+
+<br>
+
+##### Animation
+
+```android
+   animationType = SnackbarAnimationtype.CENTER
+```
+
+<br>
+
+##### Timer
+
+```android
+   timerType = SnackbarTimerType.MINIMUM
+```
+
+
+<br>
 
 ## More code
 
