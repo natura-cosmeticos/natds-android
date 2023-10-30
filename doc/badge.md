@@ -11,7 +11,7 @@
 | --------------     | -------------------------      | ----------------- |
 | Variant             | Dot, Pulse, Standard                          | ✅  Available     |
 | Color          | Primary, Secondary, Alert, Success   | ✅  Available     |
-| Limit         | 9, 99, Unlimeted        | ✅  Available     |
+| Limit         | 9, 99, Unlimited        | ✅  Available     |
 
 <br>
       
