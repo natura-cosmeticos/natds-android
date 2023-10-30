@@ -1,52 +1,39 @@
 # Select
 
-Select lets user choose one option from an options menu. Consider using select when you have 4 or
+> Select lets user choose one option from an options menu. Consider using select when you have 4 or
 more options.
 
-Extends
-from [ConstraintLayout](https://developer.android.com/reference/androidx/constraintlayout/widget/ConstraintLayout)
-.
 
-## Note for Design:
+## Properties
 
-This component is available in the following variants:
+| Property           | Values                         | Status            |
+| --------------     | -------------------------      | ----------------- |
+| Variant             | Standard                          | ✅  Available     |
+| Label             | -                          | ✅  Available     |
+| Footer             | -                          | ✅  Available     |
+| Size             | Medium, MediumX                          | ✅  Available     |
+| States             | None, Success, Error                          | ✅  Available     |
+| Required             | True, False                          | ✅  Available     |
+| Read-only             | True, False                          | ✅  Available     |
+| Disabled             | -                          | ✅  Available     |
 
-- ✅ **Outlined**
 
-With the following attribute statuses:
 
-- ✅ **Label**
-- ✅ **Footer**
-- **Size**:
-    - ✅ `Medium`
-    - ✅ `MediumX`
-- **States**:
-    - ✅ `None`
-    - ✅ `Success`
-    - ✅ `Error`
-- ✅ **Required**
-- ✅ **Read Only**
-- ✅ **Enabled / Disabled**
+## Technical Usages Examples
 
-## Attributes
+<br>
 
-| Attr | Description | Type | Options | | - | --- | --- | --- | |`android:enable`| Specifies whether
-the widget is enabled. An unenabled Select prevents the user from choosing any option. | boolean |
-true or false |`app:slc_label`| Label showed above the input. Can be used to describe the field. |
-string | text |`app:slc_footer`| | Label showed below the input. Can be used to give feedback about
-the field state. | string | text |`app:slc_state`| Describes the state of the field. | string |
-none, success or error |`app:slc_size`| Describes the size (height) of the field. | string | mediumx
-or medium |`app:slc_required`| Specifies if the widget is required, with an asterisk in label. |
-boolean | true or false |`app:slc_readonly`| Specifies whether the widget is read only. | boolean |
-true or false
+<p align="center">
+  <img alt="Card 1" src="./images/select_1.png" width="40%"> 
+&nbsp;
+  <img alt="Card 2" src="./images/select_2.png" width="40%">
+</p>
 
-## Usage Examples
+<br>
 
-Select dropdown
+##### Select dropdown
 
 ![Select](./images/select_withOptions.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.select.Select
@@ -58,11 +45,9 @@ Select dropdown
 
 <br><br>
 
-Select with Error
+##### Select with Error
 
 ![Select](./images/select_error.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.select.Select
@@ -77,11 +62,9 @@ Select with Error
 
 <br><br>
 
-Select Read Only
+##### Select Read Only
 
 ![Select](./images/select_readOnly.png)
-
-#### Layout XML
 
 ```android
    <com.natura.android.select.Select
@@ -102,34 +85,13 @@ Select Read Only
   values and actions on them. Below is an example:
 
 ```android
-
 val arraySpinner = listOf("Item 1", "Item 2", "Item 3", "Item 4")
 val arrayAdapter = ArrayAdapter(this, R.layout.custom_spinner_dropdown_item, arraySpinner)
 binding.selectDefault.spinner.adapter = arrayAdapter
 ```
 
-## Light mode / Dark mode
-
-<p align="center">
-  <img alt="Card Light" src="./images/select_lightMode.png" width="40%"> 
-&nbsp;
-  <img alt="Card Dark" src="./images/select_darkMode.png" width="40%">
-</p>
 
 ## More code
 
 You can check out more examples from SampleApp by
 clicking [here](https://github.com/natura-cosmeticos/natds-android/tree/master/sample/src/main/res/layout/activity_select.xml)
-.
-
-## Attention points
-
-1. A select is a DS component based on DS **multibrand themes**. It means if you want to use a
-   select in your app, you MUST set the DS theme on a view parent or in the select component
-   itself. [Check more info about how to set DS themes in your app](../README.md).
-
-
-
-
-
-
