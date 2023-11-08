@@ -34,6 +34,8 @@ class Rating @JvmOverloads constructor(
         private set
     var hint by mutableStateOf(String())
         private set
+    var size by mutableStateOf(Size.SMALL)
+        private set
 
     init {
         context.theme.obtainStyledAttributes(
@@ -43,8 +45,10 @@ class Rating @JvmOverloads constructor(
         ).apply {
             try {
                 rate = getInt(R.styleable.Rating_rate, 0)
-                variant = Variant.values()[getInt(R.styleable.Rating_variant, 0)]
+                variant = Variant.fromIndex(getInt(R.styleable.Rating_variant, 0))
                 hint = getString(R.styleable.Rating_hint) ?: String()
+                val tempSize = Size.fromIndex(getInt(R.styleable.Rating_size, 0))
+                size = variant.isValidSizeOrDefault(tempSize)
             } finally {
                 recycle()
             }
@@ -110,7 +114,7 @@ class Rating @JvmOverloads constructor(
             imageVector = ImageVector.vectorResource(
                 getIconResourceIdFromName(context, iconName)
             ),
-            modifier = Modifier.size(getThemeDimenForCompose(R.attr.sizeSemi).dp),
+            modifier = Modifier.size(getThemeDimenForCompose(size.attrResId).dp),
             contentDescription = null,
             tint = getThemeColorForCompose(attrColorId = attrColorId)
         )
@@ -125,10 +129,35 @@ class Rating @JvmOverloads constructor(
         )
     }
 
-    enum class Variant {
-        INPUT,
-        READ_ONLY,
-        COUNTER
+
+    enum class Variant(private val variantSizes: List<Size>) {
+        INPUT(listOf(Size.SEMI, Size.SEMI_X, Size.MEDIUM)),
+        READ_ONLY(listOf(Size.SMALL, Size.STANDARD, Size.SEMI, Size.SEMI_X)),
+        COUNTER(listOf(Size.SMALL, Size.STANDARD, Size.SEMI, Size.SEMI_X));
+
+        fun isValidSizeOrDefault(size: Size): Size {
+            return if (variantSizes.contains(size)) {
+                size
+            } else {
+                variantSizes.first()
+            }
+        }
+
+        companion object {
+            fun fromIndex(variantIndex: Int) = values()[variantIndex]
+        }
+    }
+
+    enum class Size(val attrResId: Int) {
+        SMALL(R.attr.sizeSmall),
+        STANDARD(R.attr.sizeStandard),
+        SEMI(R.attr.sizeSemi),
+        SEMI_X(R.attr.sizeSemiX),
+        MEDIUM(R.attr.sizeMedium);
+
+        companion object {
+            fun fromIndex(variantIndex: Int) = values()[variantIndex]
+        }
     }
 
     companion object {

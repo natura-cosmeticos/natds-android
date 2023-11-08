@@ -1,54 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingStandard"
-        android:text="Input"
-        android:textAppearance="?textAppearanceHeadline6" />
-
-    <com.natura.android.rating.Rating
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:rate="three"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:variant="input" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingStandard"
-        android:text="Read-Only"
-        android:textAppearance="?textAppearanceHeadline6" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:text="Input"
+            android:textAppearance="?textAppearanceHeadline6" />
 
-    <com.natura.android.rating.Rating
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingStandard"
-        app:rate="three"
-        app:variant="read_only" />
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rate="three"
+            app:variant="input" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingStandard"
-        android:text="Counter"
-        android:textAppearance="?textAppearanceHeadline6" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Read-Only"
+            android:textAppearance="?textAppearanceHeadline6" />
 
-    <com.natura.android.rating.Rating
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="?spacingStandard"
-        app:rate="three"
-        app:hint="Placeholder"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:variant="counter" />
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:rate="three"
+            app:variant="read_only" />
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Counter"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:variant="counter" />
+
+        <com.natura.android.divider.Divider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:dividerType="fullBleed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Input / Semi"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rate="three"
+            app:size="semi"
+            app:variant="input" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Input / SemiX"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rate="three"
+            app:size="semi_x"
+            app:variant="input" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Input / Medium"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rate="three"
+            app:size="medium"
+            app:variant="input" />
+
+        <com.natura.android.divider.Divider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:dividerType="fullBleed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Read-Only / Small"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+
+            app:rate="three"
+            app:size="small"
+            app:variant="read_only" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Read-Only / Standard"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:rate="three"
+            app:size="standard"
+            app:variant="read_only" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Read-Only / Semi"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:rate="three"
+            app:size="semi"
+            app:variant="read_only" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Read-Only / SemiX"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:rate="three"
+            app:size="semi_x"
+            app:variant="read_only" />
+
+        <com.natura.android.divider.Divider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:dividerType="fullBleed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Counter / Small"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:size="small"
+            app:variant="counter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Counter / Standard"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:size="standard"
+            app:variant="counter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Counter / Semi"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:size="semi"
+            app:variant="counter" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Counter / SemiX"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:size="semi_x"
+            app:variant="counter" />
+
+        <com.natura.android.divider.Divider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:dividerType="fullBleed" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

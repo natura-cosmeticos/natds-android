@@ -465,6 +465,13 @@
             <enum name="five" value="5" />
         </attr>
         <attr name="hint" format="string" />
+        <attr name="size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="standard" value="1" />
+            <enum name="semi" value="2" />
+            <enum name="semi_x" value="3" />
+            <enum name="medium" value="4" />
+        </attr>
     </declare-styleable>
 
 </resources>
