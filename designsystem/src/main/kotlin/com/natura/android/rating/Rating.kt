@@ -53,6 +53,7 @@ class Rating @JvmOverloads constructor(
                     Size.fromIndex(getInt(R.styleable.Rating_size, 0))
                 )
                 align = Align.fromIndex(getInt(R.styleable.Rating_align, 0))
+                isEnabled = getBoolean(R.styleable.Rating_android_enabled, true)
             } finally {
                 recycle()
             }
@@ -73,9 +74,9 @@ class Rating @JvmOverloads constructor(
         Column {
             Row {
                 for (i in 1..MAX_RATE) {
-                    IconButton(onClick = { rate = i }) {
+                    IconButton(onClick = { rate = i }, enabled = isEnabled) {
                         if (i <= rate) {
-                            Star(isFilled = true, isEnabled = true)
+                            Star(isFilled = true, isEnabled = isEnabled)
                         } else {
                             Star(isFilled = false, isEnabled = false)
                         }
@@ -88,14 +89,12 @@ class Rating @JvmOverloads constructor(
 
     @Composable
     fun ReadOnlyRating() {
-        Column {
-            Row {
-                for (i in 1..MAX_RATE) {
-                    if (i <= rate) {
-                        Star(isFilled = true, isEnabled = true)
-                    } else {
-                        Star(isFilled = true, isEnabled = false)
-                    }
+        Row {
+            for (i in 1..MAX_RATE) {
+                if (i <= rate) {
+                    Star(isFilled = true, isEnabled = true)
+                } else {
+                    Star(isFilled = true, isEnabled = false)
                 }
             }
         }

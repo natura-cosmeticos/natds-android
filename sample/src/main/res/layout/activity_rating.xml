@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingSmall"
+            app:hint="Placeholder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:rate="three"
@@ -285,10 +286,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingSmall"
+            app:align="left"
             app:hint="Placeholder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:align="left"
             app:variant="counter" />
 
         <TextView
@@ -303,10 +304,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="?spacingSmall"
+            app:align="right"
             app:hint="Placeholder"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:align="right"
             app:variant="counter" />
 
         <com.natura.android.divider.Divider
@@ -314,6 +315,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingStandard"
             app:dividerType="fullBleed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?sizeSmall"
+            android:layout_marginTop="?spacingStandard"
+            android:text="Input / Disabled"
+            android:textAppearance="?textAppearanceHeadline6" />
+
+        <com.natura.android.rating.Rating
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="?spacingSmall"
+            android:enabled="false"
+            app:hint="Placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rate="three"
+            app:variant="input" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
