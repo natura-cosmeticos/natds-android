@@ -36,6 +36,8 @@ class Rating @JvmOverloads constructor(
         private set
     var size by mutableStateOf(Size.SMALL)
         private set
+    var align by mutableStateOf(Align.LEFT)
+        private set
 
     init {
         context.theme.obtainStyledAttributes(
@@ -47,8 +49,10 @@ class Rating @JvmOverloads constructor(
                 rate = getInt(R.styleable.Rating_rate, 0)
                 variant = Variant.fromIndex(getInt(R.styleable.Rating_variant, 0))
                 hint = getString(R.styleable.Rating_hint) ?: String()
-                val tempSize = Size.fromIndex(getInt(R.styleable.Rating_size, 0))
-                size = variant.isValidSizeOrDefault(tempSize)
+                size = variant.isValidSizeOrDefault(
+                    Size.fromIndex(getInt(R.styleable.Rating_size, 0))
+                )
+                align = Align.fromIndex(getInt(R.styleable.Rating_align, 0))
             } finally {
                 recycle()
             }
@@ -100,8 +104,13 @@ class Rating @JvmOverloads constructor(
     @Composable
     fun CounterRating() {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Star(isFilled = true, isEnabled = true)
-            if (hint.isNotEmpty()) Hint(hint = hint)
+            if (align == Align.LEFT) {
+                Star(isFilled = true, isEnabled = true)
+                Hint(hint = hint)
+            } else {
+                Hint(hint = hint)
+                Star(isFilled = true, isEnabled = true)
+            }
         }
     }
 
@@ -156,7 +165,16 @@ class Rating @JvmOverloads constructor(
         MEDIUM(R.attr.sizeMedium);
 
         companion object {
-            fun fromIndex(variantIndex: Int) = values()[variantIndex]
+            fun fromIndex(sizeIndex: Int) = values()[sizeIndex]
+        }
+    }
+
+    enum class Align {
+        LEFT,
+        RIGHT;
+
+        companion object {
+            fun fromIndex(alignIndex: Int) = values()[alignIndex]
         }
     }
 

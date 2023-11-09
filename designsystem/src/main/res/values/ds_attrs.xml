@@ -472,6 +472,10 @@
             <enum name="semi_x" value="3" />
             <enum name="medium" value="4" />
         </attr>
+        <attr name="align" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
     </declare-styleable>
 
 </resources>
