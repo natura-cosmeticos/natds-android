@@ -28,9 +28,9 @@ class Rating @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AbstractComposeView(context, attrs, defStyleAttr) {
 
-    var rate by mutableStateOf(0)
-        private set
     var variant by mutableStateOf(Variant.INPUT)
+        private set
+    var rate by mutableStateOf(0)
         private set
     var hint by mutableStateOf(String())
         private set
@@ -46,8 +46,8 @@ class Rating @JvmOverloads constructor(
             0, 0
         ).apply {
             try {
-                rate = getInt(R.styleable.Rating_rate, 0)
                 variant = Variant.fromIndex(getInt(R.styleable.Rating_variant, 0))
+                rate = getInt(R.styleable.Rating_rate, 0)
                 hint = getString(R.styleable.Rating_hint) ?: String()
                 size = variant.isValidSizeOrDefault(
                     Size.fromIndex(getInt(R.styleable.Rating_size, 0))
