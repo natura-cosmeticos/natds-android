@@ -2,7 +2,14 @@ package com.natura.android.avatar
 
 import android.content.Context
 import android.graphics.Typeface
+import android.os.Build
 import android.util.AttributeSet
+import android.util.TypedValue
+import android.view.Gravity
+import android.view.View
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -38,311 +45,332 @@ import com.natura.android.R
 import coil.compose.rememberImagePainter
 import com.natura.android.extensions.getInitials
 
-class Avatar : AbstractComposeView {
+//class Avatar : AbstractComposeView {
+//
+//    private var sizeResourceAttribute by mutableStateOf(0)
+//    private var lineHeightResourceAttribute by mutableStateOf(0F)
+//    private var letterSpacingResourceAttribute by mutableStateOf(0F)
+//    private var iconSizeResourceAttribute by mutableStateOf(0)
+//    private var textSizeResourceAttribute by mutableStateOf(0)
+//    private var imageSizeResourceAttribute by mutableStateOf(0)
+//    private var radiusResourceAttribute by mutableStateOf(0)
+//    private var backgroundColorResourceAttribute by mutableStateOf(0)
+//    private var fontFamilyResourceAttribute by mutableStateOf("")
+//    private var paddingResourceAttribute by mutableStateOf(0)
+//    private var textColorResourceAttribute by mutableStateOf(0)
+//    private var attrs: AttributeSet? = null
+//
+//    constructor(context: Context) :
+//        super(context) {
+//            init()
+//        }
+//
+//    constructor(context: Context, attrs: AttributeSet?) :
+//        super(context, attrs) {
+//            init(attrs)
+//        }
+//
+//    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
+//        super(context, attrs, defStyleAttr) {
+//            init(attrs)
+//        }
+//
+//    var size: Int = RESOURCE_NOT_DEFINED
+//    var type: Int = RESOURCE_NOT_DEFINED
+//    var icon: Int = RESOURCE_NOT_DEFINED
+//    var image: Int = RESOURCE_NOT_DEFINED
+//    var label: String = LABEL_FALLBACK_DEFAULT
+//    var url: String = ""
+//    var accessibilityDescription: String = ""
+//    var labelFallback: String = LABEL_FALLBACK_DEFAULT
+//    var iconFallback: Int = RESOURCE_NOT_DEFINED
+//
+//    @Composable
+//    fun Label(
+//        isVisible: Boolean,
+//        value: String = "",
+//        textSize: TextUnit,
+//        fontColor: Color,
+//        fontFamily: FontFamily,
+//        letterSpacing: TextUnit,
+//        lineHeight: TextUnit
+//    ) {
+//        if (isVisible) {
+//            Text(
+//                value.getInitials(),
+//                color = fontColor,
+//                fontSize = textSize,
+//                fontFamily = fontFamily,
+//                letterSpacing = letterSpacing,
+//                lineHeight = lineHeight,
+//                textAlign = TextAlign.Center
+//            )
+//        }
+//    }
+//
+//    @Composable
+//    fun Image(
+//        isVisible: Boolean,
+//        contentDescription: String,
+//        borderRadius: Dp,
+//        size: Dp,
+//        @DrawableRes drawable: Int
+//    ) {
+//        val painter: Painter
+//        var state: ImagePainter.State = ImagePainter.State.Empty
+//
+//        if (isVisible) {
+//
+//            if (url == "") {
+//                painter = painterResource(drawable)
+//            } else {
+//                painter = rememberImagePainter(
+//                    data = url
+//                )
+//                state = painter.state
+//            }
+//
+//            Image(
+//                painter = painter,
+//                contentDescription = contentDescription,
+//                modifier = Modifier
+//                    .clip(shape = RoundedCornerShape(borderRadius))
+//                    .size(size)
+//            )
+//
+//            if ((painter is ImagePainter) && (state is ImagePainter.State.Error)) {
+//
+//                if (iconFallback != RESOURCE_NOT_DEFINED) {
+//
+//                    IconDrawable(
+//                        true,
+//                        contentDescription = accessibilityDescription,
+//                        convertFloatToDp(
+//                            resources.getDimension(
+//                                iconSizeResourceAttribute
+//                            )
+//                        ),
+//                        colorResource(textColorResourceAttribute),
+//                        iconFallback
+//                    )
+//                } else {
+//                    Label(
+//                        true,
+//                        labelFallback,
+//                        convertFloatToSp(
+//                            resources.getDimension(
+//                                textSizeResourceAttribute
+//                            )
+//                        ),
+//                        colorResource(textColorResourceAttribute),
+//                        FontFamily(
+//                            Typeface.create(
+//                                fontFamilyResourceAttribute,
+//                                Typeface.NORMAL
+//                            )
+//                        ),
+//                        convertFloatToSp(letterSpacingResourceAttribute),
+//                        convertFloatToSp(lineHeightResourceAttribute)
+//                    )
+//                }
+//            }
+//        }
+//    }
+//
+//    @Composable
+//    fun IconDrawable(
+//        isVisible: Boolean,
+//        contentDescription: String,
+//        size: Dp,
+//        color: Color,
+//        @DrawableRes drawable: Int
+//    ) {
+//        if (isVisible) {
+//            Icon(
+//                modifier = Modifier.size(size),
+//                imageVector = ImageVector.vectorResource(id = drawable),
+//                contentDescription = contentDescription,
+//                tint = color
+//            )
+//        }
+//    }
+//
+//    @Composable
+//    override fun Content() {
+//        Box(
+//            modifier = Modifier
+//                .size(
+//                    convertFloatToDp(
+//                        resources.getDimension(
+//                            sizeResourceAttribute
+//                        )
+//                    )
+//                )
+//                .clip(shape = CircleShape)
+//                .background(
+//                    colorResource(backgroundColorResourceAttribute)
+//                )
+//                .semantics(mergeDescendants = true) {}
+//                .clickable {},
+//            Alignment.Center
+//        ) {
+//            Label(
+//                type == LABEL_TYPE,
+//                label,
+//                convertFloatToSp(
+//                    resources.getDimension(
+//                        textSizeResourceAttribute
+//                    )
+//                ),
+//                colorResource(textColorResourceAttribute),
+//                FontFamily(Typeface.create(fontFamilyResourceAttribute, Typeface.NORMAL)),
+//                convertFloatToSp(letterSpacingResourceAttribute),
+//                convertFloatToSp(lineHeightResourceAttribute)
+//            )
+//            Image(
+//                type == IMAGE_TYPE,
+//                contentDescription = accessibilityDescription,
+//                convertFloatToDp(
+//                    resources.getDimension(
+//                        radiusResourceAttribute
+//                    )
+//                ),
+//                convertFloatToDp(
+//                    resources.getDimension(
+//                        imageSizeResourceAttribute
+//                    )
+//                ),
+//                image
+//            )
+//            IconDrawable(
+//                type == ICON_TYPE,
+//                contentDescription = accessibilityDescription,
+//                convertFloatToDp(
+//                    resources.getDimension(
+//                        iconSizeResourceAttribute
+//                    )
+//                ),
+//                colorResource(textColorResourceAttribute),
+//                icon
+//            )
+//        }
+//    }
+//
+//    private fun init(attrs: AttributeSet? = null) {
+//        if (attrs != null) {
+//            this.attrs = attrs
+//
+//            getAttributesValues()
+//            getAttributesFromTheme()
+//        }
+//    }
+//
+//    private fun getAttributesValues() {
+//        context.theme.obtainStyledAttributes(
+//            attrs,
+//            R.styleable.Avatar,
+//            0, 0
+//        ).apply {
+//
+//            try {
+//                size = getInt(R.styleable.Avatar_avt_size, MEDIUM_SIZE)
+//                type = getInt(R.styleable.Avatar_avt_type, ICON_TYPE)
+//                icon = getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
+//                image = getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
+//                label = getString(R.styleable.Avatar_avt_label) ?: LABEL_FALLBACK_DEFAULT
+//                accessibilityDescription =
+//                    getString(R.styleable.Avatar_avt_content_description) ?: ""
+//                labelFallback =
+//                    getString(R.styleable.Avatar_avt_fallback_label) ?: LABEL_FALLBACK_DEFAULT
+//                url = getString(R.styleable.Avatar_avt_image_url) ?: ""
+//                iconFallback =
+//                    getResourceId(R.styleable.Avatar_avt_fallback_icon, RESOURCE_NOT_DEFINED)
+//            } finally {
+//                recycle()
+//            }
+//        }
+//    }
+//
+//    private fun getAttributesFromTheme() {
+//        handleSizeAttr()
+//    }
+//
+//    private fun handleSizeAttr() {
+//        when (size) {
+//            STANDARD_SIZE -> setSizeAttributes(R.attr.avatarStandard)
+//            SEMI_SIZE -> setSizeAttributes(R.attr.avatarSemi)
+//            SEMIX_SIZE -> setSizeAttributes(R.attr.avatarSemix)
+//            MEDIUM_SIZE -> setSizeAttributes(R.attr.avatarMedium)
+//            LARGEXX_SIZE -> setSizeAttributes(R.attr.avatarLargexxx)
+//            else -> setSizeAttributes(R.attr.avatarLargexxx)
+//        }
+//    }
+//
+//    private fun setSizeAttributes(styleFromTheme: Int) {
+//        context
+//            .theme
+//            .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
+//            .apply {
+//                backgroundColorResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_colorBackground)
+//                fontFamilyResourceAttribute =
+//                    this.getStringOrThrow(R.styleable.AvatarStyle_android_fontFamily)
+//                textColorResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textColor)
+//                paddingResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_padding)
+//                sizeResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_view_size)
+//                iconSizeResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_icon_size)
+//                imageSizeResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_image_size)
+//                textSizeResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textSize)
+//                letterSpacingResourceAttribute =
+//                    this.getFloatOrThrow(R.styleable.AvatarStyle_android_letterSpacing)
+//                lineHeightResourceAttribute =
+//                    this.getFloatOrThrow(R.styleable.AvatarStyle_android_lineSpacingMultiplier)
+//                radiusResourceAttribute =
+//                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_radius)
+//            }
+//    }
+//
+//    @Composable
+//    private fun convertFloatToDp(value: Float): Dp {
+//        return with(LocalDensity.current) {
+//            value.toDp()
+//        }
+//    }
+//
+//    @Composable
+//    private fun convertFloatToSp(value: Float): TextUnit {
+//        return with(LocalDensity.current) {
+//            value.toSp()
+//        }
+//    }
+//
+//    companion object {
+//        const val STANDARD_SIZE = 0
+//        const val SEMI_SIZE = 1
+//        const val SEMIX_SIZE = 2
+//        const val MEDIUM_SIZE = 3
+//        const val LARGEXX_SIZE = 4
+//
+//        const val ICON_TYPE = 0
+//        const val LABEL_TYPE = 1
+//        const val IMAGE_TYPE = 2
+//
+//        const val RESOURCE_NOT_DEFINED = 0
+//        const val LABEL_FALLBACK_DEFAULT = "NA"
+//    }
+//}
 
-    private var sizeResourceAttribute by mutableStateOf(0)
-    private var lineHeightResourceAttribute by mutableStateOf(0F)
-    private var letterSpacingResourceAttribute by mutableStateOf(0F)
-    private var iconSizeResourceAttribute by mutableStateOf(0)
-    private var textSizeResourceAttribute by mutableStateOf(0)
-    private var imageSizeResourceAttribute by mutableStateOf(0)
-    private var radiusResourceAttribute by mutableStateOf(0)
-    private var backgroundColorResourceAttribute by mutableStateOf(0)
-    private var fontFamilyResourceAttribute by mutableStateOf("")
-    private var paddingResourceAttribute by mutableStateOf(0)
-    private var textColorResourceAttribute by mutableStateOf(0)
-    private var attrs: AttributeSet? = null
+class AvatarView @JvmOverloads constructor(
+    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+) : FrameLayout(context, attrs, defStyleAttr) {
 
-    constructor(context: Context) :
-        super(context) {
-            init()
-        }
-
-    constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs) {
-            init(attrs)
-        }
-
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
-        super(context, attrs, defStyleAttr) {
-            init(attrs)
-        }
-
-    var size: Int = RESOURCE_NOT_DEFINED
-    var type: Int = RESOURCE_NOT_DEFINED
-    var icon: Int = RESOURCE_NOT_DEFINED
-    var image: Int = RESOURCE_NOT_DEFINED
-    var label: String = LABEL_FALLBACK_DEFAULT
-    var url: String = ""
-    var accessibilityDescription: String = ""
-    var labelFallback: String = LABEL_FALLBACK_DEFAULT
-    var iconFallback: Int = RESOURCE_NOT_DEFINED
-
-    @Composable
-    fun Label(
-        isVisible: Boolean,
-        value: String = "",
-        textSize: TextUnit,
-        fontColor: Color,
-        fontFamily: FontFamily,
-        letterSpacing: TextUnit,
-        lineHeight: TextUnit
-    ) {
-        if (isVisible) {
-            Text(
-                value.getInitials(),
-                color = fontColor,
-                fontSize = textSize,
-                fontFamily = fontFamily,
-                letterSpacing = letterSpacing,
-                lineHeight = lineHeight,
-                textAlign = TextAlign.Center
-            )
-        }
-    }
-
-    @Composable
-    fun Image(
-        isVisible: Boolean,
-        contentDescription: String,
-        borderRadius: Dp,
-        size: Dp,
-        @DrawableRes drawable: Int
-    ) {
-        val painter: Painter
-        var state: ImagePainter.State = ImagePainter.State.Empty
-
-        if (isVisible) {
-
-            if (url == "") {
-                painter = painterResource(drawable)
-            } else {
-                painter = rememberImagePainter(
-                    data = url
-                )
-                state = painter.state
-            }
-
-            Image(
-                painter = painter,
-                contentDescription = contentDescription,
-                modifier = Modifier
-                    .clip(shape = RoundedCornerShape(borderRadius))
-                    .size(size)
-            )
-
-            if ((painter is ImagePainter) && (state is ImagePainter.State.Error)) {
-
-                if (iconFallback != RESOURCE_NOT_DEFINED) {
-
-                    IconDrawable(
-                        true,
-                        contentDescription = accessibilityDescription,
-                        convertFloatToDp(
-                            resources.getDimension(
-                                iconSizeResourceAttribute
-                            )
-                        ),
-                        colorResource(textColorResourceAttribute),
-                        iconFallback
-                    )
-                } else {
-                    Label(
-                        true,
-                        labelFallback,
-                        convertFloatToSp(
-                            resources.getDimension(
-                                textSizeResourceAttribute
-                            )
-                        ),
-                        colorResource(textColorResourceAttribute),
-                        FontFamily(
-                            Typeface.create(
-                                fontFamilyResourceAttribute,
-                                Typeface.NORMAL
-                            )
-                        ),
-                        convertFloatToSp(letterSpacingResourceAttribute),
-                        convertFloatToSp(lineHeightResourceAttribute)
-                    )
-                }
-            }
-        }
-    }
-
-    @Composable
-    fun IconDrawable(
-        isVisible: Boolean,
-        contentDescription: String,
-        size: Dp,
-        color: Color,
-        @DrawableRes drawable: Int
-    ) {
-        if (isVisible) {
-            Icon(
-                modifier = Modifier.size(size),
-                imageVector = ImageVector.vectorResource(id = drawable),
-                contentDescription = contentDescription,
-                tint = color
-            )
-        }
-    }
-
-    @Composable
-    override fun Content() {
-        Box(
-            modifier = Modifier
-                .size(
-                    convertFloatToDp(
-                        resources.getDimension(
-                            sizeResourceAttribute
-                        )
-                    )
-                )
-                .clip(shape = CircleShape)
-                .background(
-                    colorResource(backgroundColorResourceAttribute)
-                )
-                .semantics(mergeDescendants = true) {}
-                .clickable {},
-            Alignment.Center
-        ) {
-            Label(
-                type == LABEL_TYPE,
-                label,
-                convertFloatToSp(
-                    resources.getDimension(
-                        textSizeResourceAttribute
-                    )
-                ),
-                colorResource(textColorResourceAttribute),
-                FontFamily(Typeface.create(fontFamilyResourceAttribute, Typeface.NORMAL)),
-                convertFloatToSp(letterSpacingResourceAttribute),
-                convertFloatToSp(lineHeightResourceAttribute)
-            )
-            Image(
-                type == IMAGE_TYPE,
-                contentDescription = accessibilityDescription,
-                convertFloatToDp(
-                    resources.getDimension(
-                        radiusResourceAttribute
-                    )
-                ),
-                convertFloatToDp(
-                    resources.getDimension(
-                        imageSizeResourceAttribute
-                    )
-                ),
-                image
-            )
-            IconDrawable(
-                type == ICON_TYPE,
-                contentDescription = accessibilityDescription,
-                convertFloatToDp(
-                    resources.getDimension(
-                        iconSizeResourceAttribute
-                    )
-                ),
-                colorResource(textColorResourceAttribute),
-                icon
-            )
-        }
-    }
-
-    private fun init(attrs: AttributeSet? = null) {
-        if (attrs != null) {
-            this.attrs = attrs
-
-            getAttributesValues()
-            getAttributesFromTheme()
-        }
-    }
-
-    private fun getAttributesValues() {
-        context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.Avatar,
-            0, 0
-        ).apply {
-
-            try {
-                size = getInt(R.styleable.Avatar_avt_size, MEDIUM_SIZE)
-                type = getInt(R.styleable.Avatar_avt_type, ICON_TYPE)
-                icon = getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
-                image = getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
-                label = getString(R.styleable.Avatar_avt_label) ?: LABEL_FALLBACK_DEFAULT
-                accessibilityDescription =
-                    getString(R.styleable.Avatar_avt_content_description) ?: ""
-                labelFallback =
-                    getString(R.styleable.Avatar_avt_fallback_label) ?: LABEL_FALLBACK_DEFAULT
-                url = getString(R.styleable.Avatar_avt_image_url) ?: ""
-                iconFallback =
-                    getResourceId(R.styleable.Avatar_avt_fallback_icon, RESOURCE_NOT_DEFINED)
-            } finally {
-                recycle()
-            }
-        }
-    }
-
-    private fun getAttributesFromTheme() {
-        handleSizeAttr()
-    }
-
-    private fun handleSizeAttr() {
-        when (size) {
-            STANDARD_SIZE -> setSizeAttributes(R.attr.avatarStandard)
-            SEMI_SIZE -> setSizeAttributes(R.attr.avatarSemi)
-            SEMIX_SIZE -> setSizeAttributes(R.attr.avatarSemix)
-            MEDIUM_SIZE -> setSizeAttributes(R.attr.avatarMedium)
-            LARGEXX_SIZE -> setSizeAttributes(R.attr.avatarLargexxx)
-            else -> setSizeAttributes(R.attr.avatarLargexxx)
-        }
-    }
-
-    private fun setSizeAttributes(styleFromTheme: Int) {
-        context
-            .theme
-            .obtainStyledAttributes(attrs, R.styleable.AvatarStyle, styleFromTheme, 0)
-            .apply {
-                backgroundColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_colorBackground)
-                fontFamilyResourceAttribute =
-                    this.getStringOrThrow(R.styleable.AvatarStyle_android_fontFamily)
-                textColorResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textColor)
-                paddingResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_padding)
-                sizeResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_view_size)
-                iconSizeResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_icon_size)
-                imageSizeResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_avt_image_size)
-                textSizeResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_textSize)
-                letterSpacingResourceAttribute =
-                    this.getFloatOrThrow(R.styleable.AvatarStyle_android_letterSpacing)
-                lineHeightResourceAttribute =
-                    this.getFloatOrThrow(R.styleable.AvatarStyle_android_lineSpacingMultiplier)
-                radiusResourceAttribute =
-                    this.getResourceIdOrThrow(R.styleable.AvatarStyle_android_radius)
-            }
-    }
-
-    @Composable
-    private fun convertFloatToDp(value: Float): Dp {
-        return with(LocalDensity.current) {
-            value.toDp()
-        }
-    }
-
-    @Composable
-    private fun convertFloatToSp(value: Float): TextUnit {
-        return with(LocalDensity.current) {
-            value.toSp()
-        }
-    }
-
+    // Constantes
     companion object {
         const val STANDARD_SIZE = 0
         const val SEMI_SIZE = 1
@@ -356,5 +384,249 @@ class Avatar : AbstractComposeView {
 
         const val RESOURCE_NOT_DEFINED = 0
         const val LABEL_FALLBACK_DEFAULT = "NA"
+    }
+
+
+    var size: Int = RESOURCE_NOT_DEFINED
+    var type: Int = RESOURCE_NOT_DEFINED
+    var icon: Int = RESOURCE_NOT_DEFINED
+    var image: Int = RESOURCE_NOT_DEFINED
+    var label: String = LABEL_FALLBACK_DEFAULT
+    var url: String = ""
+    var accessibilityDescription: String = ""
+    var labelFallback: String = LABEL_FALLBACK_DEFAULT
+    var iconFallback: Int = RESOURCE_NOT_DEFINED
+
+    private var sizeResourceAttribute: Int = 0
+    private var lineHeightResourceAttribute: Float = 0F
+    private var letterSpacingResourceAttribute: Float = 0F
+    private var iconSizeResourceAttribute: Int = 0
+    private var textSizeResourceAttribute: Int = 0
+    private var imageSizeResourceAttribute: Int = 0
+    private var radiusResourceAttribute: Int = 0
+    private var backgroundColorResourceAttribute: Int = 0
+    private var fontFamilyResourceAttribute: String = ""
+    private var paddingResourceAttribute: Int = 0
+    private var textColorResourceAttribute: Int = 0
+
+    // Views internas
+    private val imageView: ImageView
+    private val textView: TextView
+    private val iconView: ImageView
+
+    private fun setupLabel(
+        isVisible: Boolean,
+        value: String,
+        textSize: Float, // Em pixels
+        fontColor: Int,
+        fontFamily: Typeface,
+        letterSpacing: Float,
+        lineHeight: Float // Em pixels
+    ) {
+        textView.visibility = if (isVisible) View.VISIBLE else View.GONE
+        textView.text = value.getInitials() // Implemente getInitials() conforme necessário
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
+        textView.setTextColor(fontColor)
+        textView.typeface = fontFamily
+        textView.letterSpacing = letterSpacing / textSize
+        // Outras configurações, como alinhamento de texto
+    }
+
+    private fun setupImage(
+        isVisible: Boolean,
+        contentDescription: String,
+        borderRadius: Float, // Em pixels
+        size: Int, // Tamanho em pixels
+        @DrawableRes drawable: Int
+    ) {
+        imageView.visibility = if (isVisible) View.VISIBLE else View.GONE
+        imageView.contentDescription = contentDescription
+
+        if (url.isBlank()) {
+            imageView.setImageResource(drawable)
+        } else {
+            // Carregar imagem da URL. Considerar usar uma biblioteca como Glide ou Picasso
+        }
+
+        // Aplicar configurações de borda arredondada e tamanho
+        // ...
+    }
+
+    private fun setupIconDrawable(
+        isVisible: Boolean,
+        contentDescription: String,
+        size: Int, // Tamanho em pixels
+        color: Int,
+        @DrawableRes drawable: Int
+    ) {
+        iconView.visibility = if (isVisible) View.VISIBLE else View.GONE
+        iconView.contentDescription = contentDescription
+        iconView.setImageResource(drawable)
+        iconView.setColorFilter(color)
+        // Definir tamanho do IconView, se necessário
+    }
+
+
+    init {
+        // Inicialização das Views
+        imageView = ImageView(context).apply {
+            layoutParams = LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+            )
+            // Configurações adicionais específicas para a ImageView
+            scaleType = ImageView.ScaleType.CENTER_CROP
+            // Configurações de borda, se necessário
+        }
+
+        textView = TextView(context).apply {
+            layoutParams = LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+            )
+            // Configurações adicionais específicas para a TextView
+            gravity = Gravity.CENTER
+            // Estilos como cor do texto, tamanho, fonte, etc.
+        }
+
+        iconView = ImageView(context).apply {
+            layoutParams = LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+            )
+            // Configurações adicionais específicas para a ImageView do ícone
+            scaleType = ImageView.ScaleType.CENTER_INSIDE
+            // Configurações de borda, se necessário
+        }
+
+        addView(imageView)
+        addView(textView)
+        addView(iconView)
+
+        // Aplicar estilos e atributos
+        applyAttributes(attrs)
+        updateView()
+    }
+
+    private fun applyAttributes(attrs: AttributeSet?) {
+        attrs?.let {
+            val typedArray = context.obtainStyledAttributes(it, R.styleable.Avatar)
+
+            try {
+                // Atribuir valores baseados nos atributos XML
+                label = typedArray.getString(R.styleable.Avatar_avt_label) ?: ""
+                image = typedArray.getResourceId(R.styleable.Avatar_avt_image, RESOURCE_NOT_DEFINED)
+                icon = typedArray.getResourceId(R.styleable.Avatar_avt_icon, RESOURCE_NOT_DEFINED)
+                type = typedArray.getInt(R.styleable.Avatar_avt_type, ICON_TYPE)
+
+                // Configurações de estilo e dimensão
+                val textColor = typedArray.getColor(R.styleable.Avatar_avt_textColor, Color.BLACK)
+                val textSizeResourceAttribute = typedArray.getResourceId(R.styleable.Avatar_avt_textSize, 0)
+                val fontFamilyResourceAttribute = typedArray.getString(R.styleable.Avatar_avt_fontFamily) ?: "sans-serif"
+                val letterSpacingResourceAttribute = typedArray.getFloat(R.styleable.Avatar_avt_letterSpacing, 0f)
+                val lineHeightResourceAttribute = typedArray.getFloat(R.styleable.Avatar_avt_lineHeight, 1f)
+
+                // Aplicar configurações ao textView
+                textView.apply {
+                    setTextColor(textColor)
+                    if (textSizeResourceAttribute != 0) {
+                        setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(textSizeResourceAttribute))
+                    }
+                    typeface = Typeface.create(fontFamilyResourceAttribute, Typeface.NORMAL)
+                    letterSpacing = letterSpacingResourceAttribute
+                    // lineHeight não é diretamente suportado em TextView até a API 28 (Android P)
+                }
+
+                // Outras Views podem ser configuradas de maneira semelhante
+                // ...
+
+            } finally {
+                typedArray.recycle()
+            }
+        }
+    }
+
+    private fun setSizeAttributes(styleFromTheme: Int) {
+        val typedArray = context.theme.obtainStyledAttributes(null, R.styleable.AvatarStyle, styleFromTheme, 0)
+
+        try {
+            // Atributos mencionados no seu código
+            backgroundColorResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_colorBackground, 0)
+            fontFamilyResourceAttribute = typedArray.getString(R.styleable.AvatarStyle_android_fontFamily) ?: "sans-serif"
+            textColorResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_android_textColor, 0)
+            paddingResourceAttribute = typedArray.getDimensionPixelSize(R.styleable.AvatarStyle_android_padding, 0)
+            sizeResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_avt_view_size, 0)
+            iconSizeResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_avt_icon_size, 0)
+            imageSizeResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_avt_image_size, 0)
+            textSizeResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_android_textSize, 0)
+            letterSpacingResourceAttribute = typedArray.getFloat(R.styleable.AvatarStyle_android_letterSpacing, 0f)
+            lineHeightResourceAttribute = typedArray.getFloat(R.styleable.AvatarStyle_android_lineSpacingMultiplier, 1f)
+            radiusResourceAttribute = typedArray.getResourceId(R.styleable.AvatarStyle_android_radius, 0)
+
+            // Aplicando os estilos nas Views
+            setBackgroundColor(backgroundColorResourceAttribute)
+            textView.apply {
+                setPadding(paddingResourceAttribute, paddingResourceAttribute, paddingResourceAttribute, paddingResourceAttribute)
+                setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(textSizeResourceAttribute))
+                setTypeface(Typeface.create(fontFamilyResourceAttribute, Typeface.NORMAL), Typeface.NORMAL)
+                setTextColor(textColorResourceAttribute)
+                letterSpacing = letterSpacingResourceAttribute
+                // lineHeight não é diretamente suportado em TextView até a API 28 (Android P)
+            }
+
+            // Configurações para imageView e iconView
+            // ...
+
+        } finally {
+            typedArray.recycle()
+        }
+    }
+
+
+    private fun updateView() {
+        when (type) {
+            LABEL_TYPE -> {
+                textView.visibility = View.VISIBLE
+                imageView.visibility = View.GONE
+                iconView.visibility = View.GONE
+                textView.text = label
+                // Configurações adicionais para textView
+            }
+            IMAGE_TYPE -> {
+                textView.visibility = View.GONE
+                imageView.visibility = View.VISIBLE
+                iconView.visibility = View.GONE
+                imageView.setImageResource(image)
+                // Configurações adicionais para imageView
+            }
+            ICON_TYPE -> {
+                textView.visibility = View.GONE
+                imageView.visibility = View.GONE
+                iconView.visibility = View.VISIBLE
+                iconView.setImageResource(icon)
+                // Configurações adicionais para iconView
+            }
+        }
+    }
+
+    // Métodos públicos para atualizar propriedades
+    fun setLabel(newLabel: String) {
+        label = newLabel
+        updateView()
+    }
+
+    fun setImage(newImage: Int) {
+        image = newImage
+        updateView()
+    }
+
+    fun setIcon(newIcon: Int) {
+        icon = newIcon
+        updateView()
+    }
+
+    fun setType(newType: Int) {
+        type = newType
+        updateView()
     }
 }
