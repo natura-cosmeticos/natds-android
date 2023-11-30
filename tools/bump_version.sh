@@ -3,7 +3,7 @@ git fetch
 if \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -i -E '^feat|fix|perf|refactor|revert$' ; } || \
     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -E '\!$' ; } || \
-    { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^breaking:' ; }
+    { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^break:' ; }
 then
     npx standard-version
     NATDS_VERSION=$(cat ./version.txt)
