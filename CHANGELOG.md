@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.25.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.22...v.9.25.0) (2023-11-30)
+
+
+### Features
+
+* bump version ([d07ccd9](https://github.com/natura-cosmeticos/natds-android/commit/d07ccd9982078887f9a7f77973190df20d1d2a7a))
+* improve minor version and add new tokens ([1b36a1c](https://github.com/natura-cosmeticos/natds-android/commit/1b36a1c1007b16fdeb34eac2c3fe3f998927734d))
+
 ### [9.25.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.24.22...v.9.25.0) (2023-11-24)
 
 - Add new tokens
