@@ -35,8 +35,6 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_aesop_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_aesop_light</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Aesop.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -76,9 +74,6 @@
     <style name="Theme.DS.Dialog.Standard.ContainedButton.Aesop.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_aesop_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_aesop_dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Aesop.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
@@ -141,12 +136,8 @@
 
     <style name="Widget.DS.Button.Aesop.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_aesop_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_aesop_light</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_aesop_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_aesop_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -167,12 +158,8 @@
 
     <style name="Widget.DS.Button.Aesop.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_aesop_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_aesop_dark</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_aesop_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_aesop_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -192,13 +179,9 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Aesop.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_aesop_light</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_aesop_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_aesop_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_aesop_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -218,13 +201,9 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Aesop.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_aesop_dark</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_aesop_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_aesop_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_aesop_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>

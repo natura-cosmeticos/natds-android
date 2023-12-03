@@ -1,6 +1,7 @@
 package com.natura.android.resources
 
 import android.content.Context
+import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
@@ -22,6 +23,14 @@ fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
     context.theme.resolveAttribute(attributeName, value, true)
     val imageResId = value.resourceId
     return ContextCompat.getDrawable(context, imageResId) ?: throw IllegalArgumentException("Cannot load drawable $imageResId")
+}
+
+fun getFontFromTheme(context: Context, fontPrimary: Int, fontFallback: Int): Typeface {
+    val output = TypedValue()
+    context.theme.resolveAttribute(fontPrimary, output, true)
+    if (output.type == TypedValue.TYPE_NULL)
+        context.theme.resolveAttribute(fontFallback, output, true)
+    return Typeface.create(output.string.toString(), Typeface.NORMAL)
 }
 
 enum class BarColors(val value: Int) {

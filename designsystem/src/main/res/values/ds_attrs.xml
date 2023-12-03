@@ -352,6 +352,15 @@
             <enum name="small" value="0" />
             <enum name="large" value="2" />
         </attr>
+        <attr name="bt_color" format="enum">
+            <enum name="defaultColor" value="0" />
+            <enum name="primaryColor" value="1" />
+            <enum name="onPrimaryColor" value="2" />
+            <enum name="secondaryColor" value="3" />
+            <enum name="onSecondaryColor" value="4" />
+            <enum name="inverse" value="5" />
+            <enum name="onInverse" value="6" />
+        </attr>
     </declare-styleable>
 
     <declare-styleable name="ButtonStyle">
