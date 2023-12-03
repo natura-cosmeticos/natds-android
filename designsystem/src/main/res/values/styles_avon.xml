@@ -34,8 +34,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_avon_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_avon_light</item>
+        <item name="android:textColor">@color/button_contained_label_primary_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_primary_v23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Avon.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -75,8 +75,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_avon_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_avon_dark</item>
+        <item name="android:textColor">@color/button_contained_label_primary_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_primary_v23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Avon.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
@@ -139,12 +139,8 @@
 
     <style name="Widget.DS.Button.Avon.Light" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_color_avon_light</item>
-        <item name="backgroundTint">@color/button_contained_background_color_avon_light</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_avon_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_avon_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -165,12 +161,8 @@
 
     <style name="Widget.DS.Button.Avon.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_color_avon_dark</item>
-        <item name="backgroundTint">@color/button_contained_background_color_avon_dark</item>
-        <item name="strokeColor">@color/button_contained_stroke_color_avon_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_contained_label_color_avon_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -190,13 +182,9 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_avon_light</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_avon_light</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_avon_light</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_avon_light</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
@@ -216,13 +204,9 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Avon.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="android:textColor">@color/button_outlined_label_color_avon_dark</item>
-        <item name="strokeColor">@color/button_outlined_stroke_color_avon_dark</item>
-        <item name="backgroundTint">@color/button_outlined_background_color_avon_dark</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
-        <item name="iconTint">@color/button_outlined_label_color_avon_dark</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>

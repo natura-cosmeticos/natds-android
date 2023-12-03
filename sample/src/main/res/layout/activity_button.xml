@@ -11,103 +11,305 @@
         android:paddingStart="?spacingTiny"
         android:paddingEnd="?spacingTiny">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
 
             <com.natura.android.button.ContainedButton
                 android:id="@+id/containedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="?spacingSmall"
                 android:text="@string/button_screen_contained_semix_text"
                 app:bt_size="semix"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/outlinedButton"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <com.natura.android.button.TextButton
-                android:id="@+id/textButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="?sizeHuge"
-                android:text="@string/button_screen_text_semix_text"
-                app:bt_size="semix"
-                app:layout_constraintBottom_toBottomOf="@+id/outlinedButton"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/outlinedButton"
-                app:layout_constraintTop_toTopOf="@+id/outlinedButton"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1"/>
 
             <com.natura.android.button.OutlinedButton
                 android:id="@+id/outlinedButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:minWidth="?sizeHuge"
                 android:text="@string/button_screen_outlined_semix_text"
                 app:bt_size="semix"
-                app:layout_constraintBottom_toBottomOf="@+id/containedButton"
-                app:layout_constraintEnd_toStartOf="@+id/textButton"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/containedButton"
-                app:layout_constraintTop_toTopOf="@+id/containedButton"
-                app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            <com.natura.android.button.TextButton
+                android:id="@+id/textButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/button_screen_text_semix_text"
+                app:bt_size="semix"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
 
             <com.natura.android.button.ContainedButton
                 android:id="@+id/containedButtonDisable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="?spacingSmall"
-                android:enabled="false"
-                android:minWidth="?sizeHuge"
-                android:text="@string/button_screen_contained_semi_text"
-                app:bt_size="semi"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/outlinedButtonDisable"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <com.natura.android.button.TextButton
-                android:id="@+id/textButtonDisable"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:enabled="false"
                 android:minWidth="?sizeHuge"
-                android:text="@string/button_screen_text_semi_text"
-                app:bt_size="semi"
-                app:layout_constraintBottom_toBottomOf="@+id/outlinedButtonDisable"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/outlinedButtonDisable"
-                app:layout_constraintTop_toTopOf="@+id/outlinedButtonDisable"
-                app:layout_constraintVertical_bias="0.0" />
+                android:text="DISABLED"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1"/>
 
             <com.natura.android.button.OutlinedButton
                 android:id="@+id/outlinedButtonDisable"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:enabled="false"
-                android:minWidth="?sizeHuge"
-                android:text="@string/button_screen_outlined_semi_text"
-                app:bt_size="semi"
-                app:layout_constraintBottom_toBottomOf="@+id/containedButtonDisable"
-                app:layout_constraintEnd_toStartOf="@+id/textButtonDisable"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/containedButtonDisable"
-                app:layout_constraintTop_toTopOf="@+id/containedButtonDisable"
-                app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:text="DISABLED"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:id="@+id/textButtonDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="DISABLED"
+                app:bt_size="semix"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DEFAULT"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="defaultColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DEFAULT"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="defaultColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DEFAULT"
+                app:bt_size="semix"
+                app:bt_color="defaultColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON PRIMARY"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_size="semix"
+                app:bt_color="onPrimaryColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:text="ON PRIMARY"
+                app:bt_size="semix"
+                app:bt_color="onPrimaryColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON PRIMARY"
+                app:bt_size="semix"
+                app:bt_color="onPrimaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="secondaryColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="secondaryColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:bt_size="semix"
+                app:bt_color="secondaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="onSecondaryColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="onSecondaryColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:bt_size="semix"
+                app:bt_color="onSecondaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                app:bt_size="semix"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_color="inverse"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                app:bt_size="semix"
+                app:bt_color="inverse"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                app:bt_size="semix"
+                app:bt_color="inverse"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="3">
+
+            <com.natura.android.button.ContainedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON INVERSE"
+                app:bt_size="semix"
+                app:bt_color="onInverse"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.OutlinedButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON INVERSE"
+                app:bt_size="semix"
+                app:bt_color="onInverse"
+                android:layout_marginEnd="@dimen/ds_spacing_micro"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.TextButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON INVERSE"
+                app:bt_size="semix"
+                app:bt_color="onInverse"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
 
         <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButton"
@@ -187,5 +389,6 @@
             app:bt_size="medium"
             app:icon="@drawable/outlined_action_like"
             app:iconGravity="textEnd"/>
+
     </LinearLayout>
 </ScrollView>

@@ -125,7 +125,7 @@ class DialogStandardTest {
 
         val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
         shadowOf(getMainLooper()).idle()
-        assertThat(mainButton.backgroundTintList?.defaultColor).isEqualTo(ContextCompat.getColorStateList(context, R.color.button_outlined_background_color_natura_light)?.defaultColor)
+        assertThat(mainButton.backgroundTintList?.defaultColor).isEqualTo(ContextCompat.getColorStateList(context, R.color.button_outlined_background_primary_v23)?.defaultColor)
     }
 
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
