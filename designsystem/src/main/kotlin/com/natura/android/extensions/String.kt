@@ -6,8 +6,8 @@ fun String.getInitials(): String {
         return "NA"
     }
 
-    if (this.length > 3) {
-        return this.substring(0, 3)
+    if (this.length > 2) {
+        return this.substring(0, 2)
     }
 
     return this.substring(0, this.length)
