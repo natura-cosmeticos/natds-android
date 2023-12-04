@@ -48,7 +48,7 @@ class OutlinedButton : MaterialButton {
 
     private fun getAttributeValue() {
         sizeAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_size, SEMIX_SIZE)
-        colorAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_color, PRIMARY)
+        colorAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_color, DEFAULT)
     }
 
     private fun setComponentStyleBySize() {
