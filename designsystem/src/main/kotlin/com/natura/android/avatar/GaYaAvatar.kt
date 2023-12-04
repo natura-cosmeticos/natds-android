@@ -169,10 +169,8 @@ class GaYaAvatar @JvmOverloads constructor(
                     setTextColor(textColor)
                 }
 
-
                 requestLayout()
             }
-
             AvatarSize.SEMI_SIZE -> {
                 val sizeView = getDimenFromTheme(context, R.attr.sizeSemi).toInt()
                 val sizeIcon = getDimenFromTheme(context, R.attr.sizeStandard).toInt()
