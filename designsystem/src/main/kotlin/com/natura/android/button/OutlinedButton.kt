@@ -2,11 +2,8 @@ package com.natura.android.button
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.TypedValue
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.*
 import com.google.android.material.button.MaterialButton
 import com.natura.android.R
 import com.natura.android.resources.getDimenFromTheme

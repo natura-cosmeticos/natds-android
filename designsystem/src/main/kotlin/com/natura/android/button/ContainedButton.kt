@@ -1,20 +1,12 @@
 package com.natura.android.button
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.content.res.TypedArray
-import android.graphics.Typeface
 import android.util.AttributeSet
-import android.util.TypedValue
 import androidx.core.content.ContextCompat
-import androidx.core.content.res.*
 import com.google.android.material.button.MaterialButton
 import com.natura.android.R
-import com.natura.android.exceptions.MissingThemeException
-import com.natura.android.iconButton.IconButton
-import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
-import com.natura.android.resources.getDrawableFromTheme
 import com.natura.android.resources.getFontFromTheme
 
 class ContainedButton : MaterialButton {
