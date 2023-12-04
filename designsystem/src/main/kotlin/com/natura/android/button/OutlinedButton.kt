@@ -31,7 +31,7 @@ class OutlinedButton : MaterialButton {
         return sizeAttribute
     }
 
-    fun getColor() : Int {
+    fun getColor(): Int {
         return colorAttribute
     }
 

@@ -31,7 +31,7 @@ class TextButton : MaterialButton {
         return sizeAttribute
     }
 
-    fun getColor() : Int {
+    fun getColor(): Int {
         return colorAttribute
     }
 
@@ -144,8 +144,6 @@ class TextButton : MaterialButton {
             }
         }
     }
-
-
 
     companion object {
         const val SEMI_SIZE = 0
