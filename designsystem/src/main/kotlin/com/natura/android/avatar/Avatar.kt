@@ -20,7 +20,7 @@ import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getFontFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
 
-class GayaAvatar @JvmOverloads constructor(
+class GaYaAvatar @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0, avatarSize: AvatarSize = AvatarSize.STANDARD_SIZE,
     avatarType: AvatarType = AvatarType.ICON
 ) : FrameLayout(context, attrs, defStyleAttr) {
