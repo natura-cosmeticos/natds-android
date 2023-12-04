@@ -50,21 +50,6 @@ internal class AvatarFixture private constructor(
         }
     }
 
-    fun withIconType(): AvatarFixture {
-        this.type = ICON_TYPE
-        return this
-    }
-
-    fun withLabelType(): AvatarFixture {
-        this.type = LABEL_TYPE
-        return this
-    }
-
-    fun withImageType(): AvatarFixture {
-        this.type = IMAGE_TYPE
-        return this
-    }
-
     fun withStandardSize(): AvatarFixture {
         this.size = STANDARD_SIZE
         return this
@@ -90,43 +75,7 @@ internal class AvatarFixture private constructor(
         return this
     }
 
-    fun withLabel(label: String): AvatarFixture {
-        this.label = label
-        return this
-    }
-
-    fun withFallbackLabel(fallbackLabel: String): AvatarFixture {
-        this.fallbackLabel = fallbackLabel
-        return this
-    }
-
-    fun withContentDescription(contentDescription: String): AvatarFixture {
-        this.contentDescription = contentDescription
-        return this
-    }
-
-    fun withUrl(url: String): AvatarFixture {
-        this.url = url
-        return this
-    }
-
-    fun withIcon(icon: Int): AvatarFixture {
-        this.icon = icon
-        return this
-    }
-
-    fun withFallbackIcon(fallbackIcon: Int): AvatarFixture {
-        this.fallbackIcon = fallbackIcon
-        return this
-    }
-
-    fun withImage(image: Int): AvatarFixture {
-        this.type = 2
-        this.image = image
-        return this
-    }
-
-    fun build(): Avatar {
+    fun build(): GaYaAvatar {
         val attributes = Robolectric
             .buildAttributeSet()
             .addAttribute(R.attr.avt_type, type.toString())
@@ -140,6 +89,6 @@ internal class AvatarFixture private constructor(
             .addAttribute(R.attr.avt_content_description, contentDescription.toString())
             .build()
 
-        return Avatar(context, attributes)
+        return GaYaAvatar(context, attributes)
     }
 }
