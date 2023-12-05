@@ -35,8 +35,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
-        <item name="android:textColor">@color/button_contained_label_primary_v23</item>
-        <item name="backgroundTint">@color/button_contained_background_primary_v23</item>
+        <item name="android:textColor">@color/button_contained_label_default_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Natura_v2.Light" parent="@style/Widget.DS.Button.TextButton.Light">
@@ -77,8 +77,8 @@
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
-        <item name="android:textColor">@color/button_contained_label_primary_v23</item>
-        <item name="backgroundTint">@color/button_contained_background_primary_v23</item>
+        <item name="android:textColor">@color/button_contained_label_default_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
     <style name="Theme.DS.Dialog.Standard.TextButton.Natura_v2.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">

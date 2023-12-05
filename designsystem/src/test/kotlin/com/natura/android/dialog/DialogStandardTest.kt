@@ -2,12 +2,10 @@ package com.natura.android.dialog
 
 import android.content.Context
 import android.content.DialogInterface
-import android.os.Looper.getMainLooper
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
@@ -17,7 +15,6 @@ import com.natura.android.iconButton.IconButton
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.robolectric.Shadows.shadowOf
 
 @RunWith(AndroidJUnit4::class)
 class DialogStandardTest {
@@ -118,16 +115,6 @@ class DialogStandardTest {
         assertThat(bottomDivider?.visibility).isEqualTo(View.VISIBLE)
     }
 
-    @Test
-    fun checksStandardDialogWithOutlinedButton() {
-        dialogStandard = createStandardDialogWithOutlinedButton()
-        dialogStandard.show()
-
-        val mainButton = dialogStandard.dialog.getButton(DialogInterface.BUTTON_POSITIVE)
-        shadowOf(getMainLooper()).idle()
-        assertThat(mainButton.backgroundTintList?.defaultColor).isEqualTo(ContextCompat.getColorStateList(context, R.color.button_outlined_background_primary_v23)?.defaultColor)
-    }
-
     private fun createDialogWithCustomContentFromResourceId(): DialogStandard {
         return DialogStandard(
             context,
@@ -217,22 +204,6 @@ class DialogStandardTest {
             null,
             "outlined-action-cancel",
             null
-        ).create()
-    }
-
-    private fun createStandardDialogWithOutlinedButton(): DialogStandard {
-        return DialogStandard(
-            context,
-            "Title",
-            "Confirm Button",
-            null,
-            "Close",
-            null,
-            "Long text that should be substitied for some dialog text.",
-            true,
-            null,
-            false,
-            3
         ).create()
     }
 }

@@ -110,8 +110,8 @@ class ContainedButton : MaterialButton {
 
         when (colorAttribute) {
             DEFAULT -> {
-                this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.button_contained_background_primary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.button_contained_label_primary_v23)
+                this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.button_contained_background_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.button_contained_label_default_v23)
                 this.setTextColor(textColorStateList)
             }
             PRIMARY -> {
@@ -145,8 +145,8 @@ class ContainedButton : MaterialButton {
                 this.setTextColor(textColorStateList)
             }
             else -> {
-                this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.button_contained_background_primary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.button_contained_label_primary_v23)
+                this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.button_contained_background_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.button_contained_label_default_v23)
                 this.setTextColor(textColorStateList)
             }
         }

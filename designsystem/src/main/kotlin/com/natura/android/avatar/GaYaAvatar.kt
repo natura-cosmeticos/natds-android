@@ -37,10 +37,10 @@ class GaYaAvatar @JvmOverloads constructor(
     }
 
     private val backgroundTintList: ColorStateList? =
-        ContextCompat.getColorStateList(context, R.color.button_contained_background_primary_v23)
+        ContextCompat.getColorStateList(context, R.color.button_contained_background_default_v23)
 
     private val labelTintList: ColorStateList? =
-        ContextCompat.getColorStateList(context, R.color.button_contained_label_primary_v23)
+        ContextCompat.getColorStateList(context, R.color.button_contained_label_default_v23)
 
     private val contentContainer: FrameLayout = FrameLayout(context)
 
@@ -117,7 +117,7 @@ class GaYaAvatar @JvmOverloads constructor(
         textView.setPadding(paddingPx, paddingPx, paddingPx, paddingPx)
 
         val textColorStateList =
-            ContextCompat.getColorStateList(context, R.color.button_contained_label_primary_v23)
+            ContextCompat.getColorStateList(context, R.color.button_contained_label_default_v23)
         textView.setTextColor(textColorStateList)
         textView.typeface = getFontFromTheme(
             context,
@@ -164,7 +164,7 @@ class GaYaAvatar @JvmOverloads constructor(
                     letterSpacing = getDimenFromTheme(context, R.attr.avatarStandardLetterSpacing)
                     val textColor = ContextCompat.getColorStateList(
                         context,
-                        R.color.button_contained_label_primary_v23
+                        R.color.button_contained_label_default_v23
                     )
                     setTextColor(textColor)
                 }
@@ -207,7 +207,7 @@ class GaYaAvatar @JvmOverloads constructor(
                     ) / context.resources.displayMetrics.scaledDensity
                     val textColor = ContextCompat.getColorStateList(
                         context,
-                        R.color.button_contained_label_primary_v23
+                        R.color.button_contained_label_default_v23
                     )
                     setTextColor(textColor)
                 }
@@ -251,7 +251,7 @@ class GaYaAvatar @JvmOverloads constructor(
                     letterSpacing = getDimenFromTheme(context, R.attr.avatarSemiXLetterSpacing)
                     val textColor = ContextCompat.getColorStateList(
                         context,
-                        R.color.button_contained_label_primary_v23
+                        R.color.button_contained_label_default_v23
                     )
                     setTextColor(textColor)
                 }
@@ -292,7 +292,7 @@ class GaYaAvatar @JvmOverloads constructor(
                     letterSpacing = getDimenFromTheme(context, R.attr.avatarMediumLetterSpacing)
                     val textColor = ContextCompat.getColorStateList(
                         context,
-                        R.color.button_contained_label_primary_v23
+                        R.color.button_contained_label_default_v23
                     )
                     setTextColor(textColor)
                 }
@@ -336,7 +336,7 @@ class GaYaAvatar @JvmOverloads constructor(
                     letterSpacing = getDimenFromTheme(context, R.attr.avatarLargeXXXLetterSpacing)
                     val textColor = ContextCompat.getColorStateList(
                         context,
-                        R.color.button_contained_label_primary_v23
+                        R.color.button_contained_label_default_v23
                     )
                     setTextColor(textColor)
                 }
