@@ -31,13 +31,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ctrLabel">
 
-        <com.natura.android.button.TextButton
+        <com.natura.android.iconButton.IconButton
             android:id="@+id/ctrSubtractButton"
-            android:layout_width="?sizeSemiX"
-            android:focusable="true"
-            android:clickable="true"
-            android:layout_height="match_parent"
-            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconColor="@color/colorHighEmphasis"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_action_subtract"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
@@ -54,12 +54,12 @@
         <TextView
             android:id="@+id/ctrInputValue"
             style="@style/TextAppearance.DS.Counter.Input"
-            android:layout_width="?sizeSemiX"
+            android:layout_width="?sizeMedium"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:focusable="false"
             android:clickable="false"
-            android:maxLength="2"
+            android:maxLength="3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/ctrLeftInternalStroke"
             app:layout_constraintTop_toTopOf="parent"
@@ -75,16 +75,18 @@
             app:layout_constraintStart_toEndOf="@id/ctrInputValue"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.natura.android.button.TextButton
+        <com.natura.android.iconButton.IconButton
             android:id="@+id/ctrAddButton"
-            android:layout_width="?sizeSemiX"
-            android:layout_height="match_parent"
-            android:focusable="true"
-            android:clickable="true"
-            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:iconColor="@color/colorHighEmphasis"
+            app:buttonColor="defaultColor"
+            app:iconName="outlined_action_add"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ctrRightInternalStroke" />
+            app:layout_constraintStart_toEndOf="@id/ctrRightInternalStroke"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

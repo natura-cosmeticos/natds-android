@@ -222,7 +222,7 @@ class Counter : ConstraintLayout {
         const val ADD_DISABLE = 2
         const val ALL_DISABLE = 3
 
-        private const val MAX_LIMIT = 99
+        private const val MAX_LIMIT = 999
         private const val MIN_LIMIT = 0
     }
 }
