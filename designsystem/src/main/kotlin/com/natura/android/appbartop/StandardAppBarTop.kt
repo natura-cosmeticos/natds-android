@@ -330,7 +330,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             LayoutParams.WRAP_CONTENT
         )
         scrollable = typedArray.getBoolean(R.styleable.StandardAppBarTop_scrollable, false)
-        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
+        contentPosition = typedArray.getInteger(R.styleable.StandardAppBarTop_contentPosition, CENTER)
         proeminentContent = typedArray.getBoolean(
             R.styleable.StandardAppBarTop_proeminentContent,
             false
@@ -414,7 +414,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         actionCenterContainer.gravity = Gravity.CENTER
         actionLeftContainer.gravity = Gravity.CENTER_VERTICAL
 
-        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, LEFT)
+        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, CENTER)
 
         if (contentPosition == CENTER)
             actionCenterContainer.addView(textView)
