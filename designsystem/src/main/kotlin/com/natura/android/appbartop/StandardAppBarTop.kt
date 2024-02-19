@@ -87,7 +87,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
     private var actionRight: Boolean = false
     private var actionLeft: Boolean = false
     private var proeminentContent: Boolean = false
-    private var contentPosition: Int = LEFT
+    private var contentPosition: Int = CENTER
 
     val toolbar: Toolbar by lazy { findViewById(R.id.toolbar) }
     private val actionLeftContainer by lazy { findViewById<LinearLayout>(R.id.actionLeftContainer) }
@@ -413,8 +413,6 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         )
         actionCenterContainer.gravity = Gravity.CENTER
         actionLeftContainer.gravity = Gravity.CENTER_VERTICAL
-
-        contentPosition = typedArray.getInt(R.styleable.StandardAppBarTop_contentPosition, CENTER)
 
         if (contentPosition == CENTER)
             actionCenterContainer.addView(textView)

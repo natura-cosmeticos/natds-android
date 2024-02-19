@@ -18,6 +18,11 @@
         <enum name="inverse" value="4" />
     </attr>
 
+    <attr name="contentPosition" format="enum">
+        <enum name="left" value="0" />
+        <enum name="center" value="1" />
+    </attr>
+
     <declare-styleable name="Tag">
         <attr name="tag_type" format="enum">
             <enum name="primary" value="0" />
@@ -97,10 +102,7 @@
         <attr name="actionRight" format="boolean" />
         <attr name="actionLeft" format="boolean" />
         <attr name="menu" format="reference" />
-        <attr name="contentPosition" format="enum">
-            <enum name="left" value="0" />
-            <enum name="center" value="1" />
-        </attr>
+        <attr name="contentPosition"/>
     </declare-styleable>
 
     <declare-styleable name="Badge">
