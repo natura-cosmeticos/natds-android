@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.25.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.25.3...v.9.25.4) (2024-03-18)
+
 ### [9.25.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.25.2...v.9.25.3) (2024-02-19)
 
 * Fixing StandardAppBarTop to Fragments use.
