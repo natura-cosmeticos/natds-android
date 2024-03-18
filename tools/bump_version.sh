@@ -9,8 +9,8 @@ if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E 'major:'; then
     # Se "major:" for encontrado, aumenta a versão major
     npx standard-version --release-as major
 # Verifica se existe algum commit com 'break:' desde a última tag
-elif git log "${LAST_TAG}..HEAD" --format='%b' | grep -q -E '^breaking:'; then
-    # Se "breaking:" for encontrado, aumenta a versão major
+elif git log "${LAST_TAG}..HEAD" --format='%b' | grep -q -E '^break:'; then
+    # Se "break:" for encontrado, aumenta a versão major
     npx standard-version --release-as major
 # Verifica por outros tipos de commits
 elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -i -E '^feat|fix|perf|refactor|revert$'; then
