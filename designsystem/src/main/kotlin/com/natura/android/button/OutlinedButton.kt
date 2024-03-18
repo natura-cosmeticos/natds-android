@@ -15,6 +15,7 @@ class OutlinedButton : MaterialButton {
     private var attrs: AttributeSet? = null
     private var sizeAttribute: Int = 0
     private var colorAttribute: Int = 0
+    private var textTransform: Int = 0
 
     constructor(context: Context, attrs: AttributeSet?) :
         super(context, attrs, R.attr.outlinedButtonSmall) {
@@ -164,5 +165,9 @@ class OutlinedButton : MaterialButton {
         const val ONSECONDARY = 4
         const val INVERSE = 5
         const val ONINVERSE = 6
+
+        const val CAPITALIZE = 0
+        const val UPPERCASE = 1
+        const val LOWERCASE = 2
     }
 }

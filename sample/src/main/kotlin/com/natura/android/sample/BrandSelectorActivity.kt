@@ -39,6 +39,7 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
             binding.conBelezaThemeButton.id -> openSampleBy(CONSULTORIA)
             binding.naturaV2ThemeButton.id -> openSampleBy(NATURAV2)
             binding.avonV2ThemeButton.id -> openSampleBy(AVONV2)
+            binding.naturaV3ThemeButton.id -> openSampleBy(NATURAV3)
             else -> openSampleBy(TBS)
         }
     }
@@ -51,6 +52,7 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         binding.conBelezaThemeButton.setOnClickListener(this)
         binding.naturaV2ThemeButton.setOnClickListener(this)
         binding.avonV2ThemeButton.setOnClickListener(this)
+        binding.naturaV3ThemeButton.setOnClickListener(this)
     }
 
     private fun openSampleBy(brandTheme: String) {
@@ -67,5 +69,6 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         const val CONSULTORIA = "consultoria"
         const val NATURAV2 = "natura_v2"
         const val AVONV2 = "avon_v2"
+        const val NATURAV3 = "natura_v3"
     }
 }

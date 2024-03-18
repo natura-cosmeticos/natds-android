@@ -319,7 +319,7 @@
             android:text="@string/button_screen_contained_medium_text"
             app:icon="@drawable/outlined_action_like"
             app:iconGravity="textStart"
-            app:bt_size="large" />
+            app:bt_size="medium" />
 
         <com.natura.android.button.ContainedButton
             android:id="@+id/blockContainedButtonWithIcon"
@@ -328,6 +328,7 @@
             android:layout_marginTop="?spacingSmall"
             android:text="@string/button_screen_contained_semix_with_icon_text"
             app:bt_size="semix"
+            android:textAllCaps="false"
             app:icon="@drawable/outlined_action_like"
             app:iconGravity="textEnd" />
 
