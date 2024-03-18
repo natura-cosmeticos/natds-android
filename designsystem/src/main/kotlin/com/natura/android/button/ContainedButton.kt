@@ -29,9 +29,7 @@ class ContainedButton : MaterialButton {
 
         buttonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.Button)
 
-        context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.Button, 0, 0).apply {
+        context.theme.obtainStyledAttributes(attrs, R.styleable.Button, 0, 0).apply {
             try {
                 sizeAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_size, SEMIX_SIZE)
                 colorAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_color, DEFAULT)
