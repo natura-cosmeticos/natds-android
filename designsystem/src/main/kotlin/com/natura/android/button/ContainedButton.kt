@@ -31,15 +31,10 @@ class ContainedButton : MaterialButton {
 
         context.theme.obtainStyledAttributes(
             attrs,
-            R.styleable.Button,
-            0, 0).apply {
+            R.styleable.Button, 0, 0).apply {
             try {
-                sizeAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_size,
-                    SEMIX_SIZE
-                )
-                colorAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_color,
-                    DEFAULT
-                )
+                sizeAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_size, SEMIX_SIZE)
+                colorAttribute = buttonAttributesArray.getInteger(R.styleable.Button_bt_color, DEFAULT)
             } finally {
                 recycle()
             }
@@ -141,7 +136,7 @@ class ContainedButton : MaterialButton {
         }
     }
 
-        companion object {
+    companion object {
         const val SEMI_SIZE = 0
         const val SEMIX_SIZE = 1
         const val MEDIUM_SIZE = 2
@@ -155,4 +150,3 @@ class ContainedButton : MaterialButton {
         const val ONINVERSE = 6
     }
 }
-
