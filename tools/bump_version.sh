@@ -28,10 +28,8 @@ envman add --key NATDS_VERSION --value "$NATDS_VERSION"
 # Limpa arquivos não rastreados e diretórios
 git clean -f -d
 
-# Verifica se existem arquivos para commitar e faz o commit se necessário
-if [ -n "$(git status --porcelain)" ]; then
-    git commit -am "chore: Updates version"
-    git push --follow-tags origin HEAD
-else
-    echo "No files to commit."
-fi
+# Faz um commit com as alterações
+git commit -m "chore: Updates version"
+
+# Empurra os commits e as tags
+git push --follow-tags origin HEAD
