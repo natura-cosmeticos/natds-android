@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.26.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.0...v.9.26.1) (2024-03-19)
 
+* Removing align title prop for StandardAppBarTop
+
 ## [9.26.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.0...v.9.25.3) (2024-03-19)
 
 * Add NaturaV3 theme
