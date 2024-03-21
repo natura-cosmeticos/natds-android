@@ -464,29 +464,7 @@
   <attr name="colorNeutral600" format="color" />  
   <attr name="colorNeutral700" format="color" />  
   <attr name="colorNeutral800" format="color" />  
-  <attr name="colorNeutral900" format="color" />  
-  <attr name="colorPrimitiveLightGray50" format="color" />  
-  <attr name="colorPrimitiveLightGray100" format="color" />  
-  <attr name="colorPrimitiveLightGray200" format="color" />  
-  <attr name="colorPrimitiveLightGray300" format="color" />  
-  <attr name="colorPrimitiveLightGray400" format="color" />  
-  <attr name="colorPrimitiveLightGray500" format="color" />  
-  <attr name="colorPrimitiveLightGray600" format="color" />  
-  <attr name="colorPrimitiveLightGray700" format="color" />  
-  <attr name="colorPrimitiveLightGray800" format="color" />  
-  <attr name="colorPrimitiveLightGray900" format="color" />  
-  <attr name="colorPrimitiveDarkGray50" format="color" />  
-  <attr name="colorPrimitiveDarkGray100" format="color" />  
-  <attr name="colorPrimitiveDarkGray200" format="color" />  
-  <attr name="colorPrimitiveDarkGray300" format="color" />  
-  <attr name="colorPrimitiveDarkGray400" format="color" />  
-  <attr name="colorPrimitiveDarkGray500" format="color" />  
-  <attr name="colorPrimitiveDarkGray600" format="color" />  
-  <attr name="colorPrimitiveDarkGray700" format="color" />  
-  <attr name="colorPrimitiveDarkGray800" format="color" />  
-  <attr name="colorPrimitiveDarkGray900" format="color" />  
-  <attr name="colorPrimitiveBlack" format="color" />  
-  <attr name="colorPrimitiveWhite" format="color" />  
+  <attr name="colorNeutral900" format="color" />
   <attr name="colorPrimary" format="color" />  
   <attr name="colorOnPrimary" format="color" />  
   <attr name="colorPrimaryLight" format="color" />  
