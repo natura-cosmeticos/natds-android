@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [9.26.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.1...v.9.26.2) (2024-03-21)
 
+* Adding new colorInfo tokens and other color tokens
+
 ### [9.26.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.0...v.9.26.1) (2024-03-19)
 
 * Removing align title prop for StandardAppBarTop
