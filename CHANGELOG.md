@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.26.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.3...v.9.26.4) (2024-03-25)
+
 ### [9.26.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.2...v.9.26.3) (2024-03-25)
 
 ### [9.26.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.1...v.9.26.2) (2024-03-21)
