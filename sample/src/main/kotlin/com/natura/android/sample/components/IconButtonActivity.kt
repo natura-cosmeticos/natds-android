@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.natura.android.iconButton.IconButton
+import com.natura.android.iconButton.IconButtonColor
 import com.natura.android.sample.databinding.ActivityIconButtonBinding
 import com.natura.android.sample.setChosenDefaultTheme
 
@@ -36,5 +37,7 @@ class IconButtonActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.iconButtonColorDefault.setButtonColor(IconButtonColor.DEFAULT)
     }
 }

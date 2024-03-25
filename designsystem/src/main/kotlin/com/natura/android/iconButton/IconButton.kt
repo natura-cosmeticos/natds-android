@@ -3,6 +3,7 @@ package com.natura.android.iconButton
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -112,6 +113,32 @@ class IconButton @JvmOverloads constructor(
         }
     }
 
+    fun setButtonColor(color: IconButtonColor) {
+        colorAttribute = color.value
+        updateButtonPropertiesAccordingToStyle()
+    }
+
+    private fun updateButtonPropertiesAccordingToStyle() {
+        val colorRes = when (colorAttribute) {
+            IconButtonColor.DEFAULT.value -> R.attr.colorHighEmphasis
+            IconButtonColor.PRIMARY.value -> R.attr.colorPrimary
+            IconButtonColor.LIGHT.value -> R.attr.colorSurface
+            IconButtonColor.ONPRIMARY.value -> R.attr.colorOnPrimary
+            IconButtonColor.ONSECONDARY.value -> R.attr.colorOnSecondary
+            IconButtonColor.INVERSE.value -> R.attr.colorSurfaceInverse
+            else -> R.attr.colorHighEmphasis // Valor padrão
+        }
+
+        val typedValue = TypedValue()
+        context.theme.resolveAttribute(colorRes, typedValue, true)
+        val color = typedValue.data
+
+        binding.iconButtonIcon.setColorFilter(
+            color,
+            android.graphics.PorterDuff.Mode.SRC_IN
+        )
+    }
+
     fun getIcon(): ImageView {
         return binding.iconButtonIcon
     }
@@ -160,17 +187,7 @@ class IconButton @JvmOverloads constructor(
     }
 
     private fun getColorAttribute() {
-        try {
-            colorAttribute =
-                iconButtonAttributesArray.getIntOrThrow(R.styleable.IconButton_buttonColor)
-        } catch (e: Exception) {
-            throw (
-                IllegalArgumentException(
-                    "⚠️ ⚠️ Missing iconButton required argument. You MUST set the iconButton color.",
-                    e
-                )
-                )
-        }
+        colorAttribute = iconButtonAttributesArray.getInt(R.styleable.IconButton_buttonColor, DEFAULT)
     }
 
     private fun getEnabledAttribute() {
@@ -340,6 +357,15 @@ class IconButton @JvmOverloads constructor(
         const val ONSECONDARY = 4
         const val INVERSE = 5
     }
+}
+
+enum class IconButtonColor(val value: Int)  {
+    DEFAULT(0),
+    PRIMARY(1),
+    LIGHT(2),
+    ONPRIMARY(3),
+    ONSECONDARY(4),
+    INVERSE(5)
 }
 
 enum class Size(val value: Int) {
