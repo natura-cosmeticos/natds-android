@@ -10,7 +10,6 @@ import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.content.res.getIntOrThrow
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
@@ -359,7 +358,7 @@ class IconButton @JvmOverloads constructor(
     }
 }
 
-enum class IconButtonColor(val value: Int)  {
+enum class IconButtonColor(val value: Int) {
     DEFAULT(0),
     PRIMARY(1),
     LIGHT(2),
