@@ -2,6 +2,62 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.27.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.4...v.9.27.0) (2024-04-12)
+
+* Embedded Icons in NATDS project
+##### Adding new icons
+- filled-action-half-rating
+- filled-alert-cancel
+- filled-alert-check
+- filled-alert-empty
+- filled-alert-indeterminate
+- filled-alert-info
+- filled-alert-notification
+- filled-alert-notificationbadge
+- filled-alert-warning
+- filled-brand-avonshorthand
+- filled-brand-tiktok
+- filled-brand-x
+- filled-communication-digital-service
+- filled-content-gauge
+- filled-content-handsoap
+- filled-content-handwater
+- filled-content-oilunavailable
+- filled-content-sensitive
+- filled-finance-shieldplus
+- filled-media-volumeoff
+- filled-media-volumeon
+- filled-navigation-maximize
+- filled-navigation-minimize
+- filled-place-target
+- filled-product-cube
+- outlined-action-half-rating
+- outlined-action-visibilitysleeping
+- outlined-action-zoomin
+- outlined-action-zoomout
+- outlined-bag-emptybag
+- outlined-brand-avonshorthand
+- outlined-brand-tiktok
+- outlined-brand-x
+- outlined-communication-digital-service
+- outlined-content-gauge
+- outlined-content-handsoap
+- outlined-content-handwater
+- outlined-content-oilunavailable
+- outlined-content-sensitive
+- outlined-finance-addbag
+- outlined-finance-pix
+- outlined-finance-shieldplus
+- outlined-makeup-age
+- outlined-makeup-mixedskin
+- outlined-makeup-typeacneic
+- outlined-media-volumeoff
+- outlined-media-volumeon
+- outlined-navigation-maximize
+- outlined-navigation-minimize
+
+
+
 ### [9.26.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.2...v.9.26.4) (2024-03-25)
 
 * Extern prop buttonColor in IconButton
