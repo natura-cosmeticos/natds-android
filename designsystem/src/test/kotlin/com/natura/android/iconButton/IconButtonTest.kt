@@ -20,7 +20,7 @@ class IconButtonTest {
 
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
-        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
     }
 
     @Test
@@ -29,7 +29,7 @@ class IconButtonTest {
 
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
-        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
     }
 
     @Test
@@ -39,7 +39,7 @@ class IconButtonTest {
         iconButton.setIcon("outlined_action_add")
         val iconShadow = Shadows.shadowOf(iconButton.getIcon().drawable)
 
-        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        Truth.assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_action_add)
     }
 
     @Test
@@ -195,7 +195,7 @@ class IconButtonTest {
     fun shouldThrowsExceptionWhenBuildingIconButtonCutWithoutAColor() {
         IconButtonFixture
             .aEmptyIconButton()
-            .withIcon("default_icon_outlined_default_mockup")
+            .withIcon("outlined_default_mockup")
             .build()
     }
 

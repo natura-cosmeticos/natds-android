@@ -173,7 +173,7 @@ class TextFieldTest {
 
         val iconShadow = Shadows.shadowOf(iconView.getIcon().drawable)
 
-        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
         assertThat(iconView.visibility).isEqualTo(View.VISIBLE)
     }
 

@@ -27,7 +27,7 @@ class ShortcutTest {
 
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
-        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
     }
 
     @Test
@@ -36,7 +36,7 @@ class ShortcutTest {
 
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
-        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_default_mockup)
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_default_mockup)
     }
 
     @Test
@@ -52,10 +52,10 @@ class ShortcutTest {
     fun checksIfShortcutIconChangesWhenSetIcon() {
         shortcut = buildShortcutOutlined()
 
-        shortcut.setIcon("default-icon-outlined-action-mic")
+        shortcut.setIcon("outlined-action-mic")
         val iconShadow = shadowOf(shortcut.getIcon().drawable)
 
-        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.default_icon_outlined_action_mic)
+        assertThat(iconShadow.createdFromResId).isEqualTo(R.drawable.outlined_action_mic)
     }
 
     @Test
