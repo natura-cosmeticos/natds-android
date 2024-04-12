@@ -468,6 +468,7 @@
     <string name="brand_selector_screen_app_version_text">version 9.9.1</string>
     <string name="brand_selector_select_brand_text">Select a brand:</string>
     <string name="brand_selector_aesop_text">Aesop</string>
+    <string name="brand_selector_casaestilo_text">Casa e Estilo</string>
     <string name="brand_selector_avon_text">Avon</string>
     <string name="brand_selector_natura_text">Natura</string>
     <string name="brand_selector_naturaeco_text">NaturaeCo</string>
