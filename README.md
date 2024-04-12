@@ -1,7 +1,6 @@
 # Design System Natura for Android
 
 [![Build Status](https://app.bitrise.io/app/38848108b04aa71a/status.svg?token=KeP02isBtn73sdE7KEZO4w&branch=master)](https://app.bitrise.io/app/38848108b04aa71a)
-![release](https://img.shields.io/github/v/release/natura-cosmeticos/natds-android?style=for-the-badge)
 
 ## What for
 Library with Android components defined by [Natura Group Design System Team](https://ds.natura.design/28db352be/p/35bf2e-natds--natura-design-system).
@@ -40,8 +39,11 @@ And:
         implementation 'com.google.android.material:material:1.1.0'
     }       
 
+## Nat DS Icons - after 9.27.0
 
-## Nat DS Icons
+- Only add DS library, Nat DS Icons is embedded in main lib.
+
+## Nat DS Icons - before 9.27.0
 
 ![VERSION](https://img.shields.io/github/v/release/natura-cosmeticos/natds-commons?style=for-the-badge)
 
