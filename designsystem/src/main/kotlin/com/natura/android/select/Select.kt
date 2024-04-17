@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.natura.android.R
 import com.natura.android.databinding.SelectBinding
 import com.natura.android.exceptions.LayoutInflateException
-import com.natura.android.icon.FontIcon
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
