@@ -9,11 +9,15 @@ if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^major:'; then
     RELEASE_TYPE="major"
 elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^breaking:'; then
     RELEASE_TYPE="minor"
-elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -i -E '^fixing|^adding|^bump version|feat|fix|perf|refactor|revert'; then
+elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -i -E '^fix|^fixing|^adding|^bump version|feat|perf|refactor|revert'; then
     RELEASE_TYPE="patch"
 fi
 
 npx standard-version --release-as $RELEASE_TYPE
+
+if [ "$LAST_TAG" == "$(git describe --tags --abbrev=0)" ]; then
+    npx standard-version --release-as patch
+fi
 
 NATDS_VERSION=$(cat ./version.txt)
 
