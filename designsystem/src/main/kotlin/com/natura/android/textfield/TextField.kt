@@ -21,6 +21,7 @@ import com.natura.android.icon.FontIcon
 import com.natura.android.iconButton.IconButton
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
+import com.natura.android.resources.getIconResourceIdFromName
 
 open class TextField @JvmOverloads constructor(
     context: Context,
@@ -35,7 +36,7 @@ open class TextField @JvmOverloads constructor(
     }
 
     class LayoutStates(val context: Context) {
-        private val colorPrimary = getColorTokenFromTheme(context, R.attr.colorPrimary)
+        private val colorInputComponent = getColorTokenFromTheme(context, R.attr.colorInputComponent)
         private val colorError = getColorTokenFromTheme(context, R.attr.colorAlert)
         private val colorSuccess = getColorTokenFromTheme(context, R.attr.colorSuccess)
         private val colorLowEmphasis = getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
@@ -86,7 +87,7 @@ open class TextField @JvmOverloads constructor(
         )
         val FOCUSED = LayoutState(
             R.dimen.ds_border_emphasis,
-            colorPrimary,
+            colorInputComponent,
             colorMediumEmphasis,
             colorHighEmphasis,
             colorMediumEmphasis,
@@ -136,7 +137,7 @@ open class TextField @JvmOverloads constructor(
 
     private val footerBox by lazy { findViewById<ConstraintLayout>(R.id.text_field_input_footer_box) }
     private val footerValue by lazy { findViewById<TextView>(R.id.text_field_input_footer) }
-    private val footerIcon by lazy { findViewById<FontIcon>(R.id.text_field_input_footer_icon) }
+    private val footerIcon by lazy { findViewById<ImageView>(R.id.text_field_input_footer_icon) }
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
@@ -269,7 +270,7 @@ open class TextField @JvmOverloads constructor(
             )
             footerValue?.setTextColor(value.footerColor)
             (inputBox.background as GradientDrawable).setColor(value.backgroundColor)
-            footerIcon?.setTextColor(value.footerColor)
+            footerIcon?.setColorFilter(value.footerColor)
             inputValue?.setHintTextColor(value.hintColor)
         }
 
@@ -397,7 +398,8 @@ open class TextField @JvmOverloads constructor(
     }
 
     private fun setFooterIcon(value: String, visibility: Int) {
-        footerIcon.text = value
+        val iconDrawableId = getIconResourceIdFromName(context, value)
+        footerIcon.setImageResource(iconDrawableId)
         footerIcon.visibility = visibility
     }
 
@@ -579,7 +581,7 @@ open class TextField @JvmOverloads constructor(
         const val MEDIUMX_PADDING_BOTTOM = 17
         const val MULTILINE_TYPE = 131073
 
-        private const val SUCCESS_ICON = "EA15"
-        private const val ERROR_ICON = "EA13"
+        private const val SUCCESS_ICON = "outlined_action_check"
+        private const val ERROR_ICON = "outlined_action_cancel"
     }
 }

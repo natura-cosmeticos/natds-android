@@ -58,16 +58,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectInputBox">
 
-        <com.natura.android.icon.FontIcon
+        <ImageView
             android:id="@+id/selectFooterIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingEnd="?attr/spacingMicro"
+            android:layout_width="@dimen/ds_size_h7"
+            android:layout_height="@dimen/ds_size_h7"
+            android:paddingEnd="@dimen/ds_spacing_micro"
             android:textColor="@color/text_color_secondary_selector"
-            android:textSize="@dimen/ds_text_default_icon_small_size"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="EA13" />
+            />
 
         <TextView
             android:id="@+id/selectFooter"

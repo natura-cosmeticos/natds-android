@@ -1,19 +1,20 @@
 package com.natura.android.checkbox
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatCheckBox
 import com.natura.android.R
+import com.natura.android.resources.getColorTokenFromTheme
 
 class CheckBox : AppCompatCheckBox {
-    constructor(context: Context) :
-        super(context, null, R.attr.checkboxPrimary) {
-            init()
-        }
-    constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs, R.attr.checkboxPrimary) {
-            init()
-        }
+    constructor(context: Context) : super(context, null, R.attr.checkboxStyleSecondary) {
+        init()
+    }
+
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs, R.attr.checkboxStyleSecondary) {
+        init()
+    }
 
     var state = UNCHECKED
         set(value) {
@@ -23,8 +24,29 @@ class CheckBox : AppCompatCheckBox {
         }
 
     private lateinit var indeterminateState: IntArray
+    private var colorChecked = getColorTokenFromTheme(context, R.attr.colorInputComponent)
+    private var colorUnchecked = getColorTokenFromTheme(context, R.attr.colorInputComponent)
+    private var colorIndeterminate = getColorTokenFromTheme(context, R.attr.colorInputComponent)
+    private var colorDisabled = getColorTokenFromTheme(context, R.attr.colorContentDisabled)
 
     private fun init() {
+        val states = arrayOf(
+            intArrayOf(android.R.attr.state_checked, -android.R.attr.state_enabled),
+            intArrayOf(-android.R.attr.state_checked, -android.R.attr.state_enabled),
+            intArrayOf(android.R.attr.state_checked),
+            intArrayOf(-android.R.attr.state_checked),
+            intArrayOf(R.attr.state_indeterminate)
+        )
+
+        val colors = intArrayOf(
+            colorDisabled,
+            colorDisabled,
+            colorChecked,
+            colorUnchecked,
+            colorIndeterminate
+        )
+
+        buttonTintList = ColorStateList(states, colors)
         updateDrawable()
     }
 

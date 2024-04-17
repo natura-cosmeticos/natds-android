@@ -90,7 +90,7 @@
         <item name="android:statusBarColor">#7A333333</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.Avon_v2.Primary.Light</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon_v2.Secondary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Avon_v2.Primary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Avon_v2.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Avon_v2.Secondary.Light
         </item>

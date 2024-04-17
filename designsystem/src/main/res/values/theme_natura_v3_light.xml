@@ -63,7 +63,7 @@
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
         <item name="android:statusBarColor">?colorControlHighlight</item>
 
-        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura_v3.Primary.Light</item>
+        <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura_v3.Secondary.Light</item>
         <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura_v3.Secondary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura_v3.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura_v3.Secondary.Light

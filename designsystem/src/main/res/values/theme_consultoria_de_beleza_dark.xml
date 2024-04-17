@@ -63,7 +63,7 @@
         <item name="android:statusBarColor">#7A333333</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Dark</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Dark</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.ConsultoriaDeBeleza.Primary.Dark</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Dark
         </item>

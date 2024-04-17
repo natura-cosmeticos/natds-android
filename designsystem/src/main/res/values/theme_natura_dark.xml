@@ -85,7 +85,7 @@
         <item name="android:statusBarColor">#7A333333</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.Natura.Primary.Dark</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Secondary.Dark</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.Natura.Primary.Dark</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.Natura.Primary.Dark</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.Natura.Secondary.Dark
         </item>

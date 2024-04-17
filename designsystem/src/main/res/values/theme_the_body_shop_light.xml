@@ -90,7 +90,7 @@
         <item name="android:statusBarColor">?colorControlHighlight</item>
 
         <item name="checkboxStyle">@style/Widget.DS.CheckBox.TBS.Primary.Light</item>
-        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Secondary.Light</item>
+        <item name="checkboxStyleSecondary">@style/Widget.DS.CheckBox.TBS.Primary.Light</item>
         <item name="radioButtonStyle">@style/Widget.DS.RadioButton.TBS.Primary.Light</item>
         <item name="radioButtonStyleSecondary">@style/Widget.DS.RadioButton.TBS.Secondary.Light
         </item>

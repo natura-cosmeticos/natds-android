@@ -474,7 +474,8 @@
   <attr name="colorPrimaryDark" format="color" />  
   <attr name="colorOnPrimaryDark" format="color" />  
   <attr name="colorPrimaryDarkest" format="color" />  
-  <attr name="colorOnPrimaryDarkest" format="color" />  
+  <attr name="colorOnPrimaryDarkest" format="color" />
+  <attr name="colorInputComponent" format="color" />
   <attr name="colorSecondary" format="color" />  
   <attr name="colorOnSecondary" format="color" />  
   <attr name="colorSecondaryLight" format="color" />  

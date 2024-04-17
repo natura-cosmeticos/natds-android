@@ -175,6 +175,7 @@
     <item name="colorOnPrimaryDark">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
     <item name="colorPrimaryDarkest">@color/ssotb876a6c87e9436f656a64f68585ea377</item>
     <item name="colorOnPrimaryDarkest">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
+    <item name="colorInputComponent">@color/ssot731e31d73a5a204814b5f11278ab2a31</item>
     <item name="colorSecondary">@color/ssot6f0e1810a61582e94e33098da68ff9d4</item>
     <item name="colorOnSecondary">@color/ssot77e774e6cc4d94d6a32f6256f02d9552</item>
     <item name="colorSecondaryLight">@color/ssot92fc8c492b793399cbe8da39de489644</item>

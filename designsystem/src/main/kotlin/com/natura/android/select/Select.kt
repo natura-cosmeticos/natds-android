@@ -15,6 +15,7 @@ import com.natura.android.exceptions.LayoutInflateException
 import com.natura.android.icon.FontIcon
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
+import com.natura.android.resources.getIconResourceIdFromName
 
 class Select : ConstraintLayout {
 
@@ -43,7 +44,7 @@ class Select : ConstraintLayout {
 
     private val footerBox by lazy { findViewById<ConstraintLayout>(R.id.footerBox) }
     private val footerValue by lazy { findViewById<TextView>(R.id.selectFooter) }
-    private val footerIcon by lazy { findViewById<FontIcon>(R.id.selectFooterIcon) }
+    private val footerIcon by lazy { findViewById<ImageView>(R.id.selectFooterIcon) }
 
     override fun setEnabled(enabled: Boolean) {
         super.setEnabled(enabled)
@@ -107,7 +108,7 @@ class Select : ConstraintLayout {
             )
             footerValue?.setTextColor(value.footerColor)
             (inputBox.background as GradientDrawable).setColor(value.backgroundColor)
-            footerIcon?.setTextColor(value.footerColor)
+            footerIcon?.setColorFilter(value.footerColor)
         }
 
     var state: State = State.NONE
@@ -219,7 +220,8 @@ class Select : ConstraintLayout {
     }
 
     private fun setFooterIcon(value: String, visibility: Int) {
-        footerIcon.text = value
+        val iconDrawableId = getIconResourceIdFromName(context, value)
+        footerIcon.setImageResource(iconDrawableId)
         footerIcon.visibility = visibility
     }
 
@@ -310,12 +312,12 @@ class Select : ConstraintLayout {
         const val MEDIUMX_PADDING_TOP = 18
         const val MEDIUMX_PADDING_BOTTOM = 17
 
-        private const val SUCCESS_ICON = "EA15"
-        private const val ERROR_ICON = "EA13"
+        private const val SUCCESS_ICON = "outlined_action_check"
+        private const val ERROR_ICON = "outlined_action_cancel"
     }
 
     class LayoutStates(val context: Context) {
-        private val colorPrimary = getColorTokenFromTheme(context, R.attr.colorPrimary)
+        private val colorInputComponent = getColorTokenFromTheme(context, R.attr.colorInputComponent)
         private val colorError = getColorTokenFromTheme(context, R.attr.colorAlert)
         private val colorSuccess = getColorTokenFromTheme(context, R.attr.colorSuccess)
         private val colorLowEmphasis = getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
@@ -366,7 +368,7 @@ class Select : ConstraintLayout {
         )
         val focused = LayoutState(
             R.dimen.ds_border_emphasis,
-            colorPrimary,
+            colorInputComponent,
             colorMediumEmphasis,
             colorHighEmphasis,
             colorMediumEmphasis,

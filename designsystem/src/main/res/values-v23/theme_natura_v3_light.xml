@@ -180,7 +180,7 @@
         <item name="avatarMedium">@style/Widget.DS.Avatar.Medium</item>
         <item name="avatarLargexxx">@style/Widget.DS.Avatar.Largexxx</item>
 
-        <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
+        <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Natura_v3.Light</item>
     </style>
 
     <style name="Theme.Natura_v3.Light.NoActionBar" parent="Theme.Natura_v3.Light.SSOT">

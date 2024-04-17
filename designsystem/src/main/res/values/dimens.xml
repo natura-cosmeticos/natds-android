@@ -70,6 +70,7 @@
     <dimen name="ds_size_h4">34sp</dimen>
     <dimen name="ds_size_h5">24sp</dimen>
     <dimen name="ds_size_h6">20sp</dimen>
+    <dimen name="ds_size_h7">18sp</dimen>
     <dimen name="ds_size_subtitle1">16sp</dimen>
     <dimen name="ds_size_subtitle2">14sp</dimen>
     <dimen name="ds_size_body1">16sp</dimen>

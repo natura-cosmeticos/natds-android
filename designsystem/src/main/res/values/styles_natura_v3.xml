@@ -90,46 +90,46 @@
     </style>
 
     <style name="Widget.DS.RadioButton.Natura_v3.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura_v3.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura_v3.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.RadioButton.Natura_v3.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
@@ -222,13 +222,13 @@
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Natura_v3.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Natura_v3.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
     </style>

@@ -666,7 +666,7 @@
     <!-- CHECKBOX COMPONENT STYLE -->
 
     <style name="Widget.DS.CheckBox.V23" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_v23</item>
+        <item name="buttonTint">@color/color_checkbox_primary_v23</item>
         <item name="android:textColor">@color/text_selectors_v23</item>
     </style>
 
