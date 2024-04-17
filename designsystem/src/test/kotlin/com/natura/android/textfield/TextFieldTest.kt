@@ -13,7 +13,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.common.truth.Truth.assertThat
 import com.natura.android.R
 import com.natura.android.icon.FontIcon
-import com.natura.android.icon.toIcon
 import com.natura.android.iconButton.IconButton
 import org.junit.Before
 import org.junit.Test
@@ -224,12 +223,12 @@ class TextFieldTest {
 
     @Test
     fun setError_NullValue() {
-        //test_seError(null, emptyText, View.GONE, emptyText)
+        // test_seError(null, emptyText, View.GONE, emptyText)
     }
 
     @Test
     fun setError_NoEmptyValue() {
-        //test_seError(notEmptyText, notEmptyText, View.VISIBLE, errorIconCode.toIcon())
+        // test_seError(notEmptyText, notEmptyText, View.VISIBLE, errorIconCode.toIcon())
     }
 
     private fun test_seError(
@@ -251,7 +250,7 @@ class TextFieldTest {
 
     @Test
     fun setState_None() {
-        //test_setState(TextField.State.NONE, textField.stateLayout.DEFAULT, View.GONE, "")
+        // test_setState(TextField.State.NONE, textField.stateLayout.DEFAULT, View.GONE, "")
     }
 
     @Test
@@ -425,8 +424,8 @@ class TextFieldTest {
     fun setIsEnabledFalse_ChangeToDisabledColor() {
         textField.isEnabled = false
 
-        //assertChildsEnabled(false)
-        //assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
+        // assertChildsEnabled(false)
+        // assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
 
         textField.isEnabled = true
     }
@@ -440,21 +439,21 @@ class TextFieldTest {
     @Test
     fun checkLabelColorWhenTextfieldIsDisabled() {
         val footerView = textField.findViewById(R.id.text_field_input_footer) as TextView
-        //val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
+        // val footerIconView = textField.findViewById(R.id.text_field_input_footer_icon) as FontIcon
 
         textField.isEnabled = false
         textField.state = TextField.State.SUCCESS
 
-        //assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
-        //assertThat(footerView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
-        //assertThat(footerIconView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
+        // assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DISABLED)
+        // assertThat(footerView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
+        // assertThat(footerIconView.currentTextColor).isNotEqualTo(textField.stateLayout.SUCCESS.footerColor)
     }
 
     @Test
     fun setIsEnabledTrue_ChangeToDefaultColor() {
         textField.isEnabled = true
-        //assertChildsEnabled(true)
-        //assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
+        // assertChildsEnabled(true)
+        // assertThat(textField.layoutState).isEqualTo(textField.stateLayout.DEFAULT)
     }
 
     @Test
