@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.27.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.4...v.9.27.1) (2024-04-22)
+
 ## [9.27.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.4...v.9.27.0) (2024-04-12)
 
 * Embedded Icons in NATDS project
