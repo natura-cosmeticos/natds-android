@@ -1,33 +1,16 @@
 #!/bin/bash
 git fetch
-
-LAST_TAG=$(git describe --tags --abbrev=0)
-
-RELEASE_TYPE="patch"
-
-if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^major:'; then
-    RELEASE_TYPE="major"
-elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^breaking:'; then
-    RELEASE_TYPE="minor"
-elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -i -E '^fix|^fixing|^adding|^bump version|feat|perf|refactor|revert'; then
-    RELEASE_TYPE="patch"
-fi
-
-npx standard-version --release-as $RELEASE_TYPE
-
-if [ "$LAST_TAG" == "$(git describe --tags --abbrev=0)" ]; then
-    npx standard-version --release-as patch
-fi
-
-NATDS_VERSION=$(cat ./version.txt)
-
-envman add --key NATDS_VERSION --value "$NATDS_VERSION"
-
-git clean -f -d
-
-if [ -n "$(git status --porcelain)" ]; then
-    git commit -am "chore: Updates version"
-    git push --follow-tags origin HEAD
+ if \
+     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -i -E '^feat|fix|perf|refactor|revert$' ; } || \
+     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%s' | cut -d: -f1 | sort -u | sed -e 's/([^)]*)//' | grep -q -E '\!$' ; } || \
+     { git log "$( git describe --tags --abbrev=0 )..HEAD" --format='%b' | grep -q -E '^break:' ; }
+ then
+     npx standard-version
+     NATDS_VERSION=$(cat ./version.txt)
+    envman add --key NATDS_VERSION --value "$NATDS_VERSION"
+    git clean -f -d
+    git commit -m "chore: Updates version"
+   git push --follow-tags origin HEAD
 else
-    echo "No files to commit."
+echo "No applicable changes since the previous tag, skipping..."
 fi
