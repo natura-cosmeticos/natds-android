@@ -47,7 +47,6 @@ class GaYaButton : MaterialButton {
 
                 val iconPosition = buttonAttributesArray.getInt(R.styleable.GaYaButton_btn_icon_position, 0)
                 setIconGravity(iconPosition)
-
             } finally {
                 recycle()
             }
@@ -59,11 +58,13 @@ class GaYaButton : MaterialButton {
     }
 
     override fun setIconGravity(value: Int) {
-        super.setIconGravity(when (value) {
-            0 -> ICON_GRAVITY_TEXT_START
-            1 -> ICON_GRAVITY_TEXT_END
-            else -> ICON_GRAVITY_TEXT_START
-        })
+        super.setIconGravity(
+            when (value) {
+                0 -> ICON_GRAVITY_TEXT_START
+                1 -> ICON_GRAVITY_TEXT_END
+                else -> ICON_GRAVITY_TEXT_START
+            }
+        )
     }
 
     private fun setAppearanceAttributesFromTheme() {
@@ -89,16 +90,13 @@ class GaYaButton : MaterialButton {
         this.maxLines = 1
 
         val buttonTextTransform = getStringFromTheme(context, R.attr.buttonTextTransform)
-
         if (buttonTextTransform == "uppercased") {
             this.isAllCaps = true
             this.text = text.toString().uppercase()
-        }
-        else if (buttonTextTransform == "lowercased") {
+        } else if (buttonTextTransform == "lowercased") {
             this.isAllCaps = false
             this.text = text.toString().lowercase(Locale.getDefault())
-        }
-        else {
+        } else {
             this.text = text.toString()
                 .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         }

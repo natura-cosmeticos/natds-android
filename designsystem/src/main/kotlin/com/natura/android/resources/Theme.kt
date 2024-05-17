@@ -27,7 +27,6 @@ fun getStringFromTheme(context: Context, attrId: Int): String {
     }
 }
 
-
 fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
     val value = TypedValue()
     context.theme.resolveAttribute(attributeName, value, true)
