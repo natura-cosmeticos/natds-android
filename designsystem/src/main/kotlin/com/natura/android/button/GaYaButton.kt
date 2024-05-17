@@ -114,7 +114,6 @@ class GaYaButton : MaterialButton {
         this.elevation = 0f * resources.displayMetrics.density
         this.stateListAnimator = null
 
-
         val backgroundTint = when (colorAttribute) {
             DEFAULT -> R.color.gayabutton_filled_background_default_v23
             PRIMARY -> R.color.gayabutton_filled_background_primary_v23
