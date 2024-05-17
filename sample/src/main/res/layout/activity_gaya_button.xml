@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="?spacingTiny"
+        android:paddingEnd="?spacingTiny">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FILLED"
+                android:textAlignment="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="OUTLINED"
+                android:textAlignment="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="GHOST"
+                android:textAlignment="center"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TONAL"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/containedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="default"
+                app:btn_size="semix"
+                app:btn_color="primaryColor"
+                app:btn_type="filled"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/outlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="default"
+                app:btn_size="semix"
+                app:btn_color="primaryColor"
+                app:btn_type="outlined"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/textButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="default"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="primaryColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="default"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="primaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/containedButtonDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:minWidth="?sizeHuge"
+                android:text="DISABLED"
+                app:btn_size="semix"
+                app:btn_type="filled"
+                android:textAllCaps="false"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/outlinedButtonDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="DISABLED"
+                app:btn_size="semix"
+                app:btn_type="outlined"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:id="@+id/textButtonDisable"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="DISABLED"
+                app:btn_type="ghost"
+                app:btn_size="semix"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DISABLED"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                android:enabled="false"
+                app:btn_color="primaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="primary"
+                app:btn_size="semix"
+                app:btn_type="filled"
+                android:layout_marginEnd="2dp"
+                app:btn_color="defaultColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="primary"
+                app:btn_size="semix"
+                android:layout_marginEnd="2dp"
+                app:btn_color="defaultColor"
+                app:btn_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="primary"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="defaultColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="primary"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="defaultColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON PRIMARY"
+                android:layout_marginEnd="2dp"
+                app:btn_size="semix"
+                app:btn_type="filled"
+                app:btn_color="onPrimaryColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:text="ON PRIMARY"
+                app:btn_size="semix"
+                app:btn_type="outlined"
+                app:btn_color="onPrimaryColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON PRIMARY"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="onPrimaryColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="on primary"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="onPrimaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:btn_size="semix"
+                android:layout_marginEnd="2dp"
+                app:btn_color="secondaryColor"
+                app:btn_type="filled"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:btn_size="semix"
+                android:layout_marginEnd="2dp"
+                app:btn_color="secondaryColor"
+                app:btn_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="SECONDARY"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="secondaryColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="secondary"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="secondaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:btn_size="semix"
+                app:btn_type="filled"
+                android:layout_marginEnd="2dp"
+                app:btn_color="onSecondaryColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:btn_size="semix"
+                app:btn_type="outlined"
+                android:layout_marginEnd="2dp"
+                app:btn_color="onSecondaryColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="onSecondaryColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="ON SECOND"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="onSecondaryColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                app:btn_size="semix"
+                app:btn_type="filled"
+                android:layout_marginEnd="2dp"
+                app:btn_color="inverseColor"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                android:layout_marginEnd="2dp"
+                app:btn_size="semix"
+                app:btn_type="outlined"
+                app:btn_color="inverseColor"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="INVERSE"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="inverseColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="inverse"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="inverseColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="NEUTRAL"
+                app:btn_size="semix"
+                app:btn_color="neutralColor"
+                app:btn_type="filled"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1" />
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="NEUTRAL"
+                app:btn_size="semix"
+                app:btn_type="outlined"
+                app:btn_color="neutralColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="NEUTRAL"
+                app:btn_size="semix"
+                app:btn_type="ghost"
+                app:btn_color="neutralColor"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"/>
+
+            <com.natura.android.button.GaYaButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="neutral"
+                app:btn_size="semix"
+                app:btn_type="tonal"
+                app:btn_color="neutralColor"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockContainedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="filled - medium"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="start"
+            app:btn_type="filled"
+            app:btn_size="medium" />
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockContainedButtonWithIcon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="filled - semix"
+            app:btn_size="semix"
+            app:btn_type="filled"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="end" />
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockContainedButtonDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            app:btn_type="filled"
+            android:text="filled - semi"
+            app:btn_size="semi" />
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockMediumOutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSemi"
+            android:text="@string/button_screen_outlined_medium_text"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="start"
+            app:btn_size="medium"
+            app:btn_type="outlined"/>
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockSemixOutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="@string/button_screen_outlined_semix_with_icon_text"
+            app:btn_size="semix"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="end"
+            app:btn_type="outlined"/>
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockSemiOutlinedButtonDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            android:text="@string/button_screen_outlined_disabled_semi_text"
+            app:btn_size="semi"
+            app:btn_type="outlined"/>
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockTextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="ghost"
+            app:btn_size="medium"
+            app:btn_type="ghost"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="start"/>
+
+        <com.natura.android.button.GaYaButton
+            android:id="@+id/blockTextButtonDisable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            android:text="ghost"
+            app:btn_size="medium"
+            app:btn_type="ghost"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="end"/>
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="tonal - medium"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="start"
+            app:btn_type="tonal"
+            app:btn_size="medium" />
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:text="tonal - semix"
+            app:btn_size="semix"
+            app:btn_type="tonal"
+            app:btn_icon="@drawable/filled_action_check"
+            app:btn_icon_position="end" />
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:enabled="false"
+            app:btn_type="tonal"
+            android:text="tonal - semi"
+            app:btn_size="semi" />
+
+    </LinearLayout>
+</ScrollView>

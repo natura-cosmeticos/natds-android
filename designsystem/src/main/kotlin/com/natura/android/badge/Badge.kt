@@ -5,6 +5,7 @@ import android.animation.PropertyValuesHolder
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -44,8 +45,8 @@ class Badge @JvmOverloads constructor(
     private var attrVisibility: Boolean = true
     private var isFontWeight: Boolean = false
     private var limit: Int = UNLIMITED
-    private var color: Int = ALERT
     private var variant: Int = STANDARD
+    private var attrColor: BadgeColor = BadgeColor.colorPrimary
 
     private val imageContainer by lazy { findViewById<ImageView>(R.id.badgeImage) }
     private val badgeRipple by lazy { findViewById<ImageView>(R.id.badgeRipple) }
@@ -53,36 +54,27 @@ class Badge @JvmOverloads constructor(
     private lateinit var badgeDrawable: BadgeDrawable
 
     var number: Int = 0
-        /**
-         * Specifies the number showed by badge
-         * When 0, badge is not visible, when bigger than 99, badge
-         * show 99+
-         * @return a integer with current number
-         * */
         get() = attrNumber
-        /**
-         * Change the number showed by badge
-         * When 0, badge is not visible, when bigger than 99, badge
-         * show 99+
-         * */
         set(value) {
             field = value
-
             if (variant == STANDARD) {
                 attrNumber = value
                 badgeDrawable.updateBadgeDrawable(value)
             }
         }
 
+    var color: BadgeColor = BadgeColor.colorPrimary
+        get() = attrColor
+        set(value) {
+            field = value
+            if (variant == STANDARD || variant == DOT) {
+                attrColor = value
+                badgeDrawable.updateColorBadgeDrawable(value)
+            }
+        }
+
     var isVisible: Boolean = true
-        /**
-         * Specifies badge visibility.
-         * @return true if badge is visible, false if is not
-         * */
         get() = attrVisibility
-        /**
-         * Set badge visibility.
-         * */
         set(value) {
             attrVisibility = value
             field = value
@@ -100,24 +92,32 @@ class Badge @JvmOverloads constructor(
 
         getAttributes()
         handlerVariant()
-
         configureVisibility()
 
         badgeAttributeArray.recycle()
+    }
+
+    private fun updateDrawable() {
+        if (::badgeDrawable.isInitialized) {
+            badgeDrawable.updateBadgeDrawable(number)
+            badgeDrawable.updateColorBadgeDrawable(color)
+            imageContainer.setImageDrawable(badgeDrawable)
+        }
     }
 
     private fun getAttributes() {
         attrNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
         attrVisibility = badgeAttributeArray.getBoolean(R.styleable.Badge_badgeVisibility, true)
         variant = badgeAttributeArray.getInt(R.styleable.Badge_badgeVariant, STANDARD)
-        color = badgeAttributeArray.getInt(R.styleable.Badge_badgeColor, ALERT)
+        attrColor = BadgeColor.fromInt(badgeAttributeArray.getInt(R.styleable.Badge_badgeColor, BadgeColor.colorPrimary.value))
         limit = badgeAttributeArray.getInt(R.styleable.Badge_badgeLimitNumber, UNLIMITED)
         isFontWeight = badgeAttributeArray.getBoolean(R.styleable.Badge_isFontWeight, false)
     }
 
     private fun createBadgeDrawable() {
         imageContainer.visibility = View.VISIBLE
-        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable, variant, color, limit, isFontWeight)
+        updateDrawable()
+        badgeDrawable = BadgeDrawable(context, attrNumber, imageContainer.drawable, variant, attrColor, limit, isFontWeight)
     }
 
     private fun handlerVariant() {
@@ -162,10 +162,10 @@ class Badge @JvmOverloads constructor(
 
     private fun getPulseColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.badgeColorPrimaryBackground
-            SECONDARY -> R.attr.badgeColorSecondaryBackground
-            SUCCESS -> R.attr.badgeColorSuccessBackground
-            else -> R.attr.badgeColorAlertBackground
+            BadgeColor.colorPrimary -> R.attr.badgeColorPrimaryBackground
+            BadgeColor.colorSecondary -> R.attr.badgeColorSecondaryBackground
+            BadgeColor.colorSuccess -> R.attr.badgeColorSuccessBackground
+            BadgeColor.colorAlert -> R.attr.badgeColorAlertBackground
         }
     }
 
@@ -186,5 +186,16 @@ class Badge @JvmOverloads constructor(
         const val NINE = 0
         const val NINETY_NINE = 1
         const val UNLIMITED = 2
+    }
+}
+
+enum class BadgeColor(val value: Int) {
+    colorAlert(0),
+    colorPrimary(1),
+    colorSecondary(2),
+    colorSuccess(3);
+
+    companion object {
+        fun fromInt(value: Int) = values().firstOrNull { it.value == value } ?: colorPrimary
     }
 }

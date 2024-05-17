@@ -18,6 +18,16 @@ fun getDimenFromTheme(context: Context, attributeName: Int): Float {
     return typedValue.getDimension(context.resources.displayMetrics)
 }
 
+fun getStringFromTheme(context: Context, attrId: Int): String {
+    val value = TypedValue()
+    if (context.theme.resolveAttribute(attrId, value, true)) {
+        return value.string.toString()
+    } else {
+        throw IllegalArgumentException("Attribute not found or not a boolean")
+    }
+}
+
+
 fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
     val value = TypedValue()
     context.theme.resolveAttribute(attributeName, value, true)

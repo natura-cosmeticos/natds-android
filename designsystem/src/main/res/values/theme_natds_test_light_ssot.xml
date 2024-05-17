@@ -534,5 +534,6 @@
     <item name="typographyBodyRegularFontWeight">sans-serif</item>
     <item name="typographyBodyBoldFontWeight">sans-serif-bold</item>
     <item name="typographyFallbackFontWeight">sans-serif</item>
+    <item name="buttonTextTransform">uppercased</item>
   </style>
 </resources>

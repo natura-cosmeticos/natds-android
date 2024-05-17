@@ -52,7 +52,7 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
                 id = "item_id_2",
                 label = "Item 2 (Disabled)",
                 menuState = MenuView.MenuState.DISABLE,
-                iconText = getString(R.string.icon_filled_brand_naturarosacea),
+                iconText = "filled_brand_naturarosacea",
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 1", enabled = true),
                     NavigationItemChild(id = "item_id", label = "Item 2 sub 2", enabled = false),
@@ -72,7 +72,7 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
             NavigationItem(
                 id = "item_id_4",
                 label = "Item 4",
-                iconText = getString(R.string.icon_filled_brand_naturarosacea),
+                iconText = "filled_brand_naturarosacea",
                 childItems = mutableListOf(
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 1"),
                     NavigationItemChild(id = "item_id", label = "Item 4 sub 2"),
@@ -82,14 +82,14 @@ class ExpandableNavigationViewActivity : AppCompatActivity() {
             NavigationItem(
                 id = "item_id_5",
                 label = "Item 5",
-                iconText = getString(R.string.icon_filled_brand_naturarosacea),
+                iconText = "filled_brand_naturarosacea",
                 hasSubMenu = false
             ),
             NavigationItem(
                 id = "item_id_6",
                 label = "Item 6 (Low Emphasis)",
                 isLowEmphasis = true,
-                iconText = getString(R.string.icon_filled_brand_naturarosacea),
+                iconText = "filled_brand_naturarosacea",
                 hasSubMenu = false
             )
         )

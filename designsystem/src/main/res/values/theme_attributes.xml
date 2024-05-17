@@ -445,8 +445,9 @@
   <attr name="typographyHeadlineFontWeight" format="string" />  
   <attr name="typographyBodyRegularFontWeight" format="string" />  
   <attr name="typographyBodyBoldFontWeight" format="string" />  
-  <attr name="typographyFallbackFontWeight" format="string" />  
-  <attr name="spacingNone" format="dimension" />  
+  <attr name="typographyFallbackFontWeight" format="string" />
+  <attr name="buttonTextTransform" format="string" />
+  <attr name="spacingNone" format="dimension" />
   <attr name="spacingMicro" format="dimension" />  
   <attr name="spacingTiny" format="dimension" />  
   <attr name="spacingSmall" format="dimension" />  

@@ -72,21 +72,25 @@
         <item name="materialButtonStyle">@style/Widget.DS.Button.V23</item>
         <item name="outlinedButton">@style/Widget.DS.Button.Outlined.V23</item>
         <item name="textButton">@style/Widget.DS.Button.TextButton.V23</item>
+        <item name="filledButton">@style/Widget.DS.Button.V23</item>
 
         <item name="buttonStyleSmall">@style/Widget.DS.ButtonSmall.V23</item>
         <item name="materialButtonStyleSmall">@style/Widget.DS.ButtonSmall.V23</item>
         <item name="outlinedButtonSmall">@style/Widget.DS.ButtonSmall.Outlined.V23</item>
         <item name="textButtonSmall">@style/Widget.DS.ButtonSmall.TextButton.V23</item>
+        <item name="filledButtonSmall">@style/Widget.DS.ButtonSmall.V23</item>
 
         <item name="buttonStyleMedium">@style/Widget.DS.Button.V23</item>
         <item name="materialButtonStyleMedium">@style/Widget.DS.Button.V23</item>
         <item name="outlinedButtonMedium">@style/Widget.DS.Button.Outlined.V23</item>
         <item name="textButtonMedium">@style/Widget.DS.Button.TextButton.V23</item>
+        <item name="filledButtonMedium">@style/Widget.DS.Button.V23</item>
 
         <item name="buttonStyleLarge">@style/Widget.DS.ButtonLarge.V23</item>
         <item name="materialButtonStyleLarge">@style/Widget.DS.ButtonLarge.V23</item>
         <item name="outlinedButtonLarge">@style/Widget.DS.ButtonLarge.Outlined.V23</item>
         <item name="textButtonLarge">@style/Widget.DS.ButtonLarge.TextButton.V23</item>
+        <item name="filledButtonLarge">@style/Widget.DS.ButtonLarge.V23</item>
 
         <item name="dialogStandardTheme">@style/Theme.DS.Dialog.Standard</item>
         <item name="dialogAlertTheme">@style/Theme.DS.Dialog.Alert</item>

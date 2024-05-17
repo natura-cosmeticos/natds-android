@@ -36,7 +36,6 @@
         android:layout_marginRight="@dimen/ds_spacing_little"
         android:paddingTop="@dimen/ds_spacing_little"
         android:paddingBottom="@dimen/ds_spacing_little"
-        android:textAllCaps="true"
         android:textColor="@color/colorBrdNatGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_primary_icon_right"

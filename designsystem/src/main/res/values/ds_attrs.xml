@@ -365,6 +365,42 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="GaYaButton">
+        <attr name="btn_size" format="enum">
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="small" value="0" />
+            <enum name="large" value="2" />
+        </attr>
+        <attr name="btn_color" format="enum">
+            <enum name="defaultColor" value="0" />
+            <enum name="primaryColor" value="1" />
+            <enum name="onPrimaryColor" value="2" />
+            <enum name="secondaryColor" value="3" />
+            <enum name="onSecondaryColor" value="4" />
+            <enum name="inverseColor" value="5" />
+            <enum name="neutralColor" value="6" />
+        </attr>
+        <attr name="btn_type" format="enum">
+            <enum name="filled" value="0" />
+            <enum name="outlined" value="1" />
+            <enum name="ghost" value="2" />
+            <enum name="tonal" value="3" />
+        </attr>
+        <attr name="btn_icon" format="reference"/>
+        <attr name="btn_icon_position" format="enum">
+            <enum name="start" value="0"/>
+            <enum name="end" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="GaYaButtonStyle">
+        <attr name="android:insetTop" />
+        <attr name="android:insetBottom" />
+        <attr name="android:minHeight" />
+    </declare-styleable>
+
     <declare-styleable name="ButtonStyle">
         <attr name="android:insetTop" />
         <attr name="android:insetBottom" />

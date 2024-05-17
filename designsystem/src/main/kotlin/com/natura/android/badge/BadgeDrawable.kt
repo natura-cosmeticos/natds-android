@@ -19,7 +19,7 @@ class BadgeDrawable(
     private var count: Int,
     private var parent: Drawable,
     private var variant: Int?,
-    private var color: Int?,
+    private var color: BadgeColor,
     private var limit: Int?,
     private var isFontWeight: Boolean?
 ) : Drawable() {
@@ -81,6 +81,11 @@ class BadgeDrawable(
 
     fun updateBadgeDrawable(count: Int) {
         this.count = count
+        invalidateSelf()
+    }
+
+    fun updateColorBadgeDrawable(color: BadgeColor) {
+        this.color = color
         invalidateSelf()
     }
 
@@ -164,18 +169,18 @@ class BadgeDrawable(
 
     private fun getBackgroundColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.badgeColorPrimaryBackground
-            SECONDARY -> R.attr.badgeColorSecondaryBackground
-            SUCCESS -> R.attr.badgeColorSuccessBackground
+            BadgeColor.colorPrimary -> R.attr.badgeColorPrimaryBackground
+            BadgeColor.colorSecondary -> R.attr.badgeColorSecondaryBackground
+            BadgeColor.colorSuccess -> R.attr.badgeColorSuccessBackground
             else -> R.attr.badgeColorAlertBackground
         }
     }
 
     private fun getFontColorByAttr(): Int {
         return when (color) {
-            PRIMARY -> R.attr.badgeColorPrimaryLabel
-            SECONDARY -> R.attr.badgeColorSecondaryLabel
-            SUCCESS -> R.attr.badgeColorSuccessLabel
+            BadgeColor.colorPrimary -> R.attr.badgeColorPrimaryLabel
+            BadgeColor.colorSecondary -> R.attr.badgeColorSecondaryLabel
+            BadgeColor.colorSuccess -> R.attr.badgeColorSuccessLabel
             else -> R.attr.badgeColorAlertLabel
         }
     }

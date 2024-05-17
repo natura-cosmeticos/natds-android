@@ -25,6 +25,7 @@ import com.natura.android.sample.components.SelectActivity
 import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
+import com.natura.android.sample.components.GaYaButtonActivity
 import com.natura.android.sample.components.SnackbarActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
@@ -94,6 +95,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnStyleButtons.setOnClickListener {
             startActivity(Intent(this, ButtonActivity::class.java))
+        }
+
+        binding.btnStyleGaYaButtons.setOnClickListener {
+            startActivity(Intent(this, GaYaButtonActivity::class.java))
         }
 
         binding.dialogButton.setOnClickListener {

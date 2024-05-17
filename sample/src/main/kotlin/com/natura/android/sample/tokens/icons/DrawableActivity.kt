@@ -17,7 +17,7 @@ class DrawableActivity : AppCompatActivity() {
         setContentView(R.layout.activity_icon)
 
         val iconGrid = findViewById<RecyclerView>(R.id.icon_grid)
-        iconGrid.layoutManager = GridLayoutManager(this, 2)
+        iconGrid.layoutManager = GridLayoutManager(this, 3)
 
         iconGrid.adapter =
             DrawableAdapter(

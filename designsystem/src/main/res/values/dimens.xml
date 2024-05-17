@@ -2,6 +2,7 @@
 
 <resources>
     <dimen name="ds_spacing_none">0dp</dimen>
+    <dimen name="ds_spacing_minimal">2dp</dimen>
     <dimen name="ds_spacing_micro">4dp</dimen>
     <dimen name="ds_spacing_tiny">8dp</dimen>
     <dimen name="ds_spacing_small">16dp</dimen>

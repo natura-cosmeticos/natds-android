@@ -147,6 +147,7 @@
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura_v3.Light" parent="Widget.DS.Button.Natura_v3.Light">
@@ -191,6 +192,7 @@
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura_v3.Light" parent="Widget.DS.Button.Outlined.Natura_v3.Light">
@@ -213,6 +215,7 @@
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura_v3.Dark" parent="Widget.DS.Button.Outlined.Natura_v3.Dark">
