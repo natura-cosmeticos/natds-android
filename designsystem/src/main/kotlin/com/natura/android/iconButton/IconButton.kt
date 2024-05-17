@@ -13,7 +13,7 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.res.getResourceIdOrThrow
 import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
-import com.natura.android.badge.Badge
+import com.natura.android.badge.BadgeColor
 import com.natura.android.badge.BadgeDrawable
 import com.natura.android.databinding.IconButtonBinding
 import com.natura.android.exceptions.MissingThemeException
@@ -73,7 +73,7 @@ class IconButton @JvmOverloads constructor(
     private fun configureNotification() {
         if (notifyAttribute > 0) {
             binding.iconButtonBadgeContainer.visibility = View.VISIBLE
-            BadgeDrawable(context, notifyAttribute, binding.iconButtonBadgeContainer.drawable, 0, Badge.BadgeColor.colorAlert, 0, false)
+            BadgeDrawable(context, notifyAttribute, binding.iconButtonBadgeContainer.drawable, 0, BadgeColor.colorAlert, 0, false)
         }
     }
 
