@@ -2,6 +2,54 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.28.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.27.1...v.9.28.0) (2024-05-17)
+
+* GaYaButton
+* Extern prop color for Badge component
+##### Adding new icons
+- filled_action_zoomin
+- filled_action_zoomout
+- filled_alert_notificationunavailable
+- filled_content_oil
+- filled_finance_shield
+- filled_finance_shieldcheck
+- filled_navigation_arrowctrlcompactbottom
+- filled_navigation_arrowctrlcompactleft
+- filled_navigation_arrowctrlcompactright
+- filled_navigation_arrowctrlcompacttop
+- filled_navigation_arrowctrlregularbottom
+- filled_navigation_arrowctrlregularleft
+- filled_navigation_arrowctrlregularright
+- filled_navigation_arrowctrlregulartop
+- filled_navigation_arrowrunbottom
+- filled_navigation_arrowrunleft
+- filled_navigation_arrowrunright
+- filled_navigation_arrowruntop
+- filled_navigation_arrowtrianglebottom
+- filled_navigation_arrowtriangleleft
+- filled_navigation_arrowtriangleright
+- filled_navigation_arrowtriangletop
+- outlined_alert_notificationunavailable
+- outlined_content_oil
+- outlined_finance_addbag
+- outlined_finance_shield
+- outlined_finance_shieldcheck
+- outlined_navigation_arrowctrlcompactbottom
+- outlined_navigation_arrowctrlcompactleft
+- outlined_navigation_arrowctrlcompactright
+- outlined_navigation_arrowctrlcompacttop
+- outlined_navigation_arrowctrlregularbottom
+- outlined_navigation_arrowctrlregularleft
+- outlined_navigation_arrowctrlregularright
+- outlined_navigation_arrowctrlregulartop
+- outlined_navigation_arrowrunbottom
+- outlined_navigation_arrowrunleft
+- outlined_navigation_arrowrunright
+- outlined_navigation_arrowruntop
+- outlined_place_target
+- outlined_product_cube
+- outlined_product_nailpolish
+
 ### [9.27.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.4...v.9.27.1) (2024-04-22)
 
 * Fix typography for subtitle
@@ -59,8 +107,7 @@ All notable changes to this project will be documented in this file. See [standa
 - outlined-media-volumeon
 - outlined-navigation-maximize
 - outlined-navigation-minimize
-
-
+  
 
 ### [9.26.4](https://github.com/natura-cosmeticos/natds-android/compare/v.9.26.2...v.9.26.4) (2024-03-25)
 
