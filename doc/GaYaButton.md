@@ -1,26 +1,27 @@
 # Guia de Uso - GaYaButton
 
-> 📢 O GaYaButton faz parte da evolução contínua de componentes do GaYa Design System. Ele foi lançado como um novo componente mas o antigo NatButton permanecerá disponível para uso mas não receberá mais atualizações ou suporte ativo. Encorajamos a migração para o GaYaButton o quanto antes para aproveitar as melhorias e garantir compatibilidade futura.
+> 📢 O GaYaButton faz parte da evolução contínua de componentes do GaYa Design System. Ele foi lançado como um novo componente mas os antigos ContainedButton, OutlinedButton e TextButton permaneceram disponíveis para uso mas não receberão mais atualizações ou suporte ativo. Encorajamos a migração para o GaYaButton o quanto antes para aproveitar as melhorias e garantir compatibilidade futura.
 
 
 ## Visão Geral
 
 O componente `GaYaButton` é essencial para interações no aplicativo, permitindo que os usuários façam escolhas e executem ações com um simples toque. Este guia detalha as configurações disponíveis para personalizar o botão de acordo com as necessidades do seu design de interface.
 
-| Prop Figma       | Prop Swift       | Valores                    | Status            |
-| -------------- | -------------- | ------------------------- | ----------------- |
-| Variants          | Style          | Filled, Outlined, Ghost, Tonal | ✅  Disponível       |
-| Colors          | Color          | Primary, OnPrimary, Secondary, OnSecondary, Inverse, Neutral | ✅  Disponível       |
-| Icon          | Icon + Position           | Right, Left         | ✅  Disponível       |
-| Sizes          | Size           | Small, Medium, Large      | ✅  Disponível       |
-| Disabled          | IsEnabled      | True, False               | ✅  Disponível       |
-| Display          | -        | -               | ❌  Não aplicável  |
-| Text-Transform          | - | Definido pelo tema     | ✅  Disponível  |
-| -          | Theme          | Todos os temas disponíveis      | ✅  Disponível       |
+| Prop Figma       | Prop XML       | Valores                                                      | Status            |
+| -------------- |  --------------    |    -------------------------                                 |  ----------------- |
+| Variant        | btn_type              | filled, outlined, ghost, tonal                               | ✅  Disponível       |
+| Colors         | btn_color              | primaryColor, onPrimaryColor, secondaryColor, onSecondaryColor, inverseColor, neutralColor | ✅  Disponível       |
+| Icon           | btn_icon + btn_icon_position    | start, end                                                  | ✅  Disponível       |
+| Sizes          | btn_size               | Small, Medium, Large                                         | ✅  Disponível       |
+| Disabled       | enabled          | True, False                                                  | ✅  Disponível       |
+| Display        | -                  | -                                                            | ❌  Não aplicável  |
+| Text-Transform | -                  | Definido pelo tema                                           | ✅  Disponível  |
+
+
 
 ### Changelog
 
-Para acompanhar a evolução deste e de outros componentes acesse: https://github.com/natura-cosmeticos/natds-ios/blob/master/CHANGELOG.md
+Para acompanhar a evolução deste e de outros componentes acesse: [https://github.com/natura-cosmeticos/natds-ios/blob/master/CHANGELOG.md](https://github.com/natura-cosmeticos/natds-android/blob/main/CHANGELOG.md)
 
 ### Como Usar
 
@@ -36,9 +37,13 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 
    - **Descrição**: Botão com fundo colorido.
    - **Código**:
-     ```swift
-     let filledButton = GaYaButton(style: .filled)
-     filledButton.configure(title: "Filled")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="filled"
+         app:btn_type="filled"
+         app:btn_size="semix" />
      ```
 
 **2. Outlined**
@@ -49,9 +54,13 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 
    - **Descrição**: Botão com borda e fundo transparente.
    - **Código**:
-     ```swift
-     let outlinedButton = GaYaButton(style: .outlined)
-     outlinedButton.configure(title: "Outlined")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="outlined"
+         app:btn_type="outlined"
+         app:btn_size="semix" />
      ```
 
 **3. Ghost**
@@ -62,9 +71,13 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 
    - **Descrição**: Botão sem borda ou fundo, apenas texto.
    - **Código**:
-     ```swift
-     let textButton = GaYaButton(style: .ghost)
-     textButton.configure(title: "Ghost")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="ghost"
+         app:btn_type="ghost"
+         app:btn_size="semix" />
      ```
      
 **4. Tonal**
@@ -75,47 +88,51 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 
    - **Descrição**: Botão com fundo colorido, cores mais claras.
    - **Código**:
-     ```swift
-     let tonalButton = GaYaButton(style: .tonal)
-     tonalButton.configure(title: "Tonal")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="tonal"
+         app:btn_type="tonal"
+         app:btn_size="semix" />
      ```
 
 ## Cores
 
 **1. Primary**
    - **Código**:
-     ```swift
-     button.configure(color: .primary)
+     ```xml
+     app:btn_color="primaryColor"
      ```
 
 **2. OnPrimary**
    - **Código**:
-     ```swift
-     button.configure(color: .onPrimary)
+     ```xml
+     app:btn_color="onPrimaryColor"
      ```
 
 **3. Secondary**
    - **Código**:
-     ```swift
-     button.configure(color: .secondary)
+     ```xml
+     app:btn_color="secondaryColor"
      ```
      
 **4. OnSecondary**
    - **Código**:
-     ```swift
-     button.configure(color: .onSecondary)
+     ```xml
+     app:btn_color="onSecondaryColor"
      ```
 
 **4. Inverse**
    - **Código**:
-     ```swift
-     button.configure(color: .inverse)
+     ```xml
+     app:btn_color="inverseColor"
      ```
 
 **4. Neutral**
    - **Código**:
-     ```swift
-     button.configure(color: .neutral)
+     ```xml
+     app:btn_color="neutralColor"
      ```
 
 ## Ícones
@@ -128,14 +145,28 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 
    - **Descrição**: Adicione ícones ao botão para melhorar a identificação visual.
    - **À Direita**:
-     ```swift
-     let button = GaYaButton(style: .filled)
-     button.configure(icon: getIcon(.outlinedAlertNotification), position: .right)
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="FILLED"
+         app:btn_size="semix"
+         app:btn_type="filled"
+         app:btn_color="primaryColor"
+         app:btn_icon="@drawable/outlined_product_face"
+         app:btn_icon_position="end" />
      ```
    - **À Esquerda**:
-     ```swift
-     let button = GaYaButton(style: .filled)
-     button.configure(icon: getIcon(.outlinedAlertNotification), position: .left)
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="FILLED"
+         app:btn_size="semix"
+         app:btn_type="filled"
+         app:btn_color="primaryColor"
+         app:btn_icon="@drawable/outlined_product_childish"
+         app:btn_icon_position="start" />
      ```
 
 ## Tamanho, Ativação, Posicionamento e Text-transform
@@ -149,16 +180,29 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
    - **Semi, Semix e Medium**
      - Ajuste o tamanho para adequar-se ao contexto de uso.
      
-     ```swift
-     let button = GaYaButton(style: .filled, size: .medium)
-     button.configure(title: "Filled - Medium")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="filled - medium"
+         app:btn_size="medium"
+         app:btn_type="filled" />
 
-     let button = GaYaButton(style: .filled, size: .semix)
-     button.configure(title: "Filled - Semix")
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="filled - semix"
+         app:btn_size="semix"
+         app:btn_type="filled" />
 
-     let button = GaYaButton(style: .outlined, size: .semi)
-     button.configure(title: "Outlined - Semi")
-     
+     <com.natura.android.button.GaYaButton
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="filled - semi"
+         app:btn_size="semi"
+         app:btn_type="filled" />
+
+     ```
 
 **Ativação**
 
@@ -169,10 +213,12 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
    - **Habilitar/Desabilitar Botão**
      - Gerencie se o botão pode ser interagido pelo usuário.
      
-     ```swift
-     let disabledButton = GaYaButton(style: .filled)
-     disabledButton.isEnabled = false
-     disabledButton.configure(title: "Desabilitado")
+     ```xml
+     <com.natura.android.button.GaYaButton
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:enabled="false"
+         android:text="FILLED"/>
      ```
 
 **Posicionamento (não aplicável)**
@@ -181,16 +227,5 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
     
 **Text-transform (não aplicável)**
    - **Definido pelo tema**
-     - Gerenciado pelo tema, podem ser Uppercase, Lowercase, Capitalize mas será modificada diretamente pelo tema utilizado
+     - Gerenciado pelo tema, podem ser Uppercase e Lowercase mas será modificada diretamente pelo tema utilizado
      
-
-## Temas
-
-**Aplicando Temas**
-   - **Descrição**: Customize o tema do botão para corresponder ao flavor visual do seu app.
-   - **Exemplo**:
-     ```swift
-     let themeButton = GaYaButton(style: .filled, theme: .avonLight)
-     themeButton.configure(title: "Tema Avon")
-     ```
-
