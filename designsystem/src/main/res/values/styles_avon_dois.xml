@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.DS.Dialog.AvonDois" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
+        <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.AvonDois.Light" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Alert.AvonDois.Light" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.AvonDois.Light" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.AvonDois.Light" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.AvonDois.Light" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Light</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Light" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">?spacingSmall</item>
+        <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textColor">@color/button_contained_label_default_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_default_v23</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.TextButton.AvonDois.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Light" parent="@style/Widget.DS.Button.Outlined.AvonDois.Light">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.AvonDois.Dark" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Alert.AvonDois.Dark" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.ContainedButtons.AvonDois.Dark" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.TextButtons.AvonDois.Dark" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.OutlinedButtons.AvonDois.Dark" parent="Theme.DS.Dialog.AvonDois">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Dark</item>
+    </style>
+
+
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.AvonDois.Dark" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:layout_marginStart">?spacingSmall</item>
+        <item name="android:layout_marginEnd">?spacingMicro</item>
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textColor">@color/button_contained_label_default_v23</item>
+        <item name="backgroundTint">@color/button_contained_background_default_v23</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.TextButton.AvonDois.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.AvonDois.Dark" parent="@style/Widget.DS.Button.Outlined.AvonDois.Dark">
+        <item name="android:layout_marginStart">?spacingMicro</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.AvonDois.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.AvonDois.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.AvonDois.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.RadioButton.AvonDois.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.AvonDois.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.AvonDois.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_avon_v2_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.AvonDois.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.AvonDois.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_avon_v2_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.AvonDois.Light" parent="Widget.DS.Button.AvonDois.Light">
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.Button.AvonDois.Light" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.AvonDois.Light" parent="Widget.DS.Button.AvonDois.Light">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.AvonDois.Dark" parent="Widget.DS.Button.AvonDois.Dark">
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.Button.AvonDois.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.AvonDois.Dark" parent="Widget.DS.Button.AvonDois.Dark">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.AvonDois.Light" parent="Widget.DS.Button.Outlined.AvonDois.Light">
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.Button.Outlined.AvonDois.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/button_ripple_color_light</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Outlined.AvonDois.Light" parent="Widget.DS.Button.Outlined.AvonDois.Light">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.ButtonSmall.Outlined.AvonDois.Dark" parent="Widget.DS.Button.Outlined.AvonDois.Dark">
+        <item name="android:insetTop">?spacingTiny</item>
+        <item name="android:insetBottom">?spacingTiny</item>
+        <item name="android:minHeight">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.Button.Outlined.AvonDois.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="rippleColor">@color/button_ripple_color_dark</item>
+        <item name="android:textSize">?buttonLabelFontSize</item>
+        <item name="iconPadding">?spacingTiny</item>
+        <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
+        <item name="cornerRadius">?buttonBorderRadius</item>
+        <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
+        <item name="android:minHeight">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.ButtonLarge.Outlined.AvonDois.Dark" parent="Widget.DS.Button.Outlined.AvonDois.Dark">
+        <item name="android:insetTop">?spacingNone</item>
+        <item name="android:insetBottom">?spacingNone</item>
+        <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.AvonDois.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_avon_v2_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBoxPrimary.AvonDois.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_avon_v2_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
+    </style>
+
+</resources>

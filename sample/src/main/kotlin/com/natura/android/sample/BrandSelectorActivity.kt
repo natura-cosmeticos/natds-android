@@ -38,7 +38,7 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
             binding.aesopThemeButton.id -> openSampleBy(AESOP)
             binding.conBelezaThemeButton.id -> openSampleBy(CONSULTORIA)
             binding.naturaV2ThemeButton.id -> openSampleBy(NATURAV2)
-            binding.avonV2ThemeButton.id -> openSampleBy(AVONV2)
+            binding.avonV2ThemeButton.id -> openSampleBy(AVONDOIS)
             binding.naturaV3ThemeButton.id -> openSampleBy(NATURAV3)
             else -> openSampleBy(TBS)
         }
@@ -69,6 +69,7 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         const val CONSULTORIA = "consultoria"
         const val NATURAV2 = "natura_v2"
         const val AVONV2 = "avon_v2"
+        const val AVONDOIS = "avon_dois"
         const val NATURAV3 = "natura_v3"
     }
 }
