@@ -49,7 +49,6 @@ class GaYaButton : MaterialButton {
                 }
 
                 setIconGravity(btnIconPosition)
-
             } finally {
                 recycle()
             }
@@ -93,7 +92,6 @@ class GaYaButton : MaterialButton {
             setIcon(drawable)
         }
     }
-
 
     fun setBtnIconPosition(position: Int) {
         btnIconPosition = position
@@ -398,4 +396,3 @@ class GaYaButton : MaterialButton {
         }
     }
 }
-

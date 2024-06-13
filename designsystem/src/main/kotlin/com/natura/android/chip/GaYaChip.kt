@@ -18,18 +18,15 @@ import com.natura.android.resources.getDimenFromTheme
 
 class GaYaChip : ConstraintLayout {
 
-    constructor(context: Context) :
-        super(context) {
+    constructor(context: Context) : super(context) {
         init(context)
     }
 
-    constructor(context: Context, attrs: AttributeSet?) :
-        super(context, attrs) {
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         init(context, attrs)
     }
 
-    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) :
-        super(context, attrs, defStyleAttr) {
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : super(context, attrs, defStyleAttr) {
         init(context, attrs)
     }
 
@@ -45,24 +42,11 @@ class GaYaChip : ConstraintLayout {
     private val avatarRight by lazy { findViewById<ImageView>(R.id.chp_avatar_right) }
     private val containerAvatarRight by lazy { findViewById<CardView>(R.id.chp_avatar_container_right) }
 
-    override fun setEnabled(enabled: Boolean) {
-
-        labelTextView.isEnabled = enabled
-        backgroundView.isEnabled = enabled
-        iconLeft.isEnabled = enabled
-        avatarLeft.isEnabled = enabled
-        iconRight.isEnabled = enabled
-        avatarRight.isEnabled = enabled
-
-        mainContainer.isClickable = enabled
-
-        super.setEnabled(enabled)
-    }
-
     private lateinit var typedArray: TypedArray
 
     var label: String = ""
         set(value) {
+            field = value
             setContentLabel(value)
         }
 
@@ -88,7 +72,6 @@ class GaYaChip : ConstraintLayout {
     private var backgroundResourceColor: Int = RESOURCE_NOT_DEFINED
 
     private fun init(context: Context, attrs: AttributeSet? = null) {
-
         try {
             View.inflate(context, R.layout.chip, this)
         } catch (e: Exception) {
@@ -109,68 +92,86 @@ class GaYaChip : ConstraintLayout {
         requestLayout()
     }
 
-    fun getHasActionValue(): Boolean {
-        return hasAction
+    override fun setEnabled(enabled: Boolean) {
+        labelTextView.isEnabled = enabled
+        backgroundView.isEnabled = enabled
+        iconLeft.isEnabled = enabled
+        avatarLeft.isEnabled = enabled
+        iconRight.isEnabled = enabled
+        avatarRight.isEnabled = enabled
+
+        mainContainer.isClickable = enabled
+        super.setEnabled(enabled)
     }
 
-    fun getIsComponentSelectedValue(): Boolean {
-        return isComponentSelected
+    fun setSize(size: Int) {
+        this.size = size
+        configureSize(getDrawable())
     }
 
-    fun getIsComponentEnabledValue(): Boolean {
-        return isComponentEnabled
+    fun setColor(color: Int) {
+        this.color = color
+        configureAppearance(getDrawable())
     }
 
-    fun getColorValue(): Int {
-        return color
+    fun setHasAction(hasAction: Boolean) {
+        this.hasAction = hasAction
+        configureAction()
     }
 
-    fun getHelperLeftTypeValue(): Int {
-        return helperLeftType
+    fun setIsComponentSelected(isComponentSelected: Boolean) {
+        this.isComponentSelected = isComponentSelected
+        configureAppearance(getDrawable())
     }
 
-    fun getHelperRightTypeValue(): Int {
-        return helperRightType
+    fun setLabel(label: String) {
+        this.label = label
+        setContentLabel(label)
     }
 
-    fun getHelperLeft(): Int {
-        return helperLeft
+    fun setHelperLeftType(helperLeftType: Int) {
+        this.helperLeftType = helperLeftType
+        configureHelpers()
     }
 
-    fun getHelperRight(): Int {
-        return helperRight
+    fun setHelperRightType(helperRightType: Int) {
+        this.helperRightType = helperRightType
+        configureHelpers()
     }
 
-    fun getLabelColorValue(): Int {
-        return labelResourceColor
+    fun setHelperLeft(helperLeft: Int) {
+        this.helperLeft = helperLeft
+        configureHelpers()
     }
 
-    fun getBorderColorValue(): Int {
-        return borderResourceColor
+    fun setHelperRight(helperRight: Int) {
+        this.helperRight = helperRight
+        configureHelpers()
     }
 
-    fun getBackgroundColorValue(): Int {
-        return backgroundResourceColor
+    fun setCustomLabelColor(color: Int) {
+        this.labelResourceColor = color
+        configureAppearance(getDrawable())
+    }
+
+    fun setCustomBorderColor(color: Int) {
+        this.borderResourceColor = color
+        configureAppearance(getDrawable())
+    }
+
+    fun setCustomBackgroundColor(color: Int) {
+        this.backgroundResourceColor = color
+        configureAppearance(getDrawable())
     }
 
     private fun getAttributes() {
-
         typedArray.apply {
             label = getString(R.styleable.Chip_chp_label) ?: ""
             size = getInt(R.styleable.Chip_chp_size, SEMI)
             color = getInt(R.styleable.Chip_chp_color, NEUTRAL)
-            labelResourceColor = getColor(
-                R.styleable.Chip_chp_custom_label_color,
-                getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-            )
-            borderResourceColor = getColor(
-                R.styleable.Chip_chp_custom_border_color,
-                getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
-            )
-            backgroundResourceColor = getColor(
-                R.styleable.Chip_chp_custom_background_color,
-                getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull)
-            )
+            labelResourceColor = getColor(R.styleable.Chip_chp_custom_label_color, getColorTokenFromTheme(context, R.attr.colorHighEmphasis))
+            borderResourceColor = getColor(R.styleable.Chip_chp_custom_border_color, getColorTokenFromTheme(context, R.attr.colorLowEmphasis))
+            backgroundResourceColor = getColor(R.styleable.Chip_chp_custom_background_color, getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull))
             hasAction = getBoolean(R.styleable.Chip_chp_action, false)
             isComponentSelected = getBoolean(R.styleable.Chip_chp_selected, false)
             helperLeftType = getInt(R.styleable.Chip_chp_helper_left_type, NONE_TYPE)
@@ -206,7 +207,6 @@ class GaYaChip : ConstraintLayout {
     }
 
     private fun configureAppearance(backgroundDrawable: GradientDrawable) {
-
         val backgroundColorAttr = when {
             !isEnabled -> R.attr.colorTranparent
             !isComponentSelected -> R.attr.colorTranparent
@@ -238,39 +238,25 @@ class GaYaChip : ConstraintLayout {
             }
         }
 
-        val labelColor =
-            when {
-                !isEnabled -> getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
-                !isComponentSelected -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-                else -> {
-                    when (color) {
-                        NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
-                        PRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
-                        SECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondary)
-                        CUSTOM -> labelResourceColor
-                        else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-                    }
+        val labelColor = when {
+            !isEnabled -> getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
+            !isComponentSelected -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
+            else -> {
+                when (color) {
+                    NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                    PRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                    SECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondary)
+                    CUSTOM -> labelResourceColor
+                    else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
                 }
             }
+        }
 
         labelTextView.setTextColor(labelColor)
 
         backgroundDrawable.mutate()
-        backgroundDrawable.setStroke(
-            BORDER_WIDTH,
-            if (color == CUSTOM) {
-                borderResourceColor
-            } else {
-                getColorTokenFromTheme(context, borderColorAttr)
-            }
-        )
-        backgroundDrawable.setColor(
-            if (color == CUSTOM && isComponentSelected) {
-                backgroundResourceColor
-            } else {
-                getColorTokenFromTheme(context, backgroundColorAttr)
-            }
-        )
+        backgroundDrawable.setStroke(BORDER_WIDTH, if (color == CUSTOM) borderResourceColor else getColorTokenFromTheme(context, borderColorAttr))
+        backgroundDrawable.setColor(if (color == CUSTOM && isComponentSelected) backgroundResourceColor else getColorTokenFromTheme(context, backgroundColorAttr))
         backgroundView.background = backgroundDrawable
 
         requestLayout()
@@ -296,14 +282,7 @@ class GaYaChip : ConstraintLayout {
     }
 
     private fun getDrawable(): GradientDrawable {
-        val backgroundDrawable = (
-            ResourcesCompat.getDrawable(
-                context.resources,
-                R.drawable.chip_background,
-                null
-            ) as GradientDrawable
-            )
-
+        val backgroundDrawable = ResourcesCompat.getDrawable(context.resources, R.drawable.chip_background, null) as GradientDrawable
         val borderRadiusAttr = when (size) {
             SEMI -> R.attr.sizeSmall
             SEMIX -> R.attr.chipSemiXBorderRadius
@@ -312,7 +291,6 @@ class GaYaChip : ConstraintLayout {
         }
 
         backgroundDrawable.cornerRadius = getDimenFromTheme(context, borderRadiusAttr)
-
         return backgroundDrawable
     }
 
