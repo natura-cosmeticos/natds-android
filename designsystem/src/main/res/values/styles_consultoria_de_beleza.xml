@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <style name="Theme.DS.Dialog.ConsultoriaDeBeleza" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
@@ -41,7 +40,7 @@
 
     <style name="Theme.DS.Dialog.Standard.TextButton.ConsultoriaDeBeleza.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
-    </style>
+    </style>f
 
     <style name="Theme.DS.Dialog.Standard.OutlinedButton.ConsultoriaDeBeleza.Light" parent="@style/Widget.DS.Button.Outlined.ConsultoriaDeBeleza.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
@@ -58,8 +57,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.ContainedButtons.ConsultoriaDeBeleza.Dark" parent="Theme.DS.Dialog.ConsultoriaDeBeleza">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ConsultoriaDeBeleza.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ConsultoriaDeBeleza.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ConsultoriaDeBeleza.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ConsultoriaDeBeleza.Dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.TextButtons.ConsultoriaDeBeleza.Dark" parent="Theme.DS.Dialog.ConsultoriaDeBeleza">
@@ -68,10 +67,9 @@
     </style>
 
     <style name="Theme.DS.Dialog.OutlinedButtons.ConsultoriaDeBeleza.Dark" parent="Theme.DS.Dialog.ConsultoriaDeBeleza">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ConsultoriaDeBeleza.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ConsultoriaDeBeleza.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ConsultoriaDeBeleza.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ConsultoriaDeBeleza.Dark</item>
     </style>
-
 
     <style name="Theme.DS.Dialog.Standard.ContainedButton.ConsultoriaDeBeleza.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
@@ -95,6 +93,12 @@
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
+    <style name="Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
     <style name="Widget.DS.RadioButton.ConsultoriaDeBeleza.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
@@ -102,35 +106,29 @@
     </style>
 
     <style name="Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_secondary_natura_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
-        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
-    </style>
-
-    <style name="Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
-        <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
-        <item name="android:textColor">@color/text_selectors_dark</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_selector_secondary_natura_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_natura_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.ConsultoriaDeBeleza.Light" parent="Widget.DS.Button.ConsultoriaDeBeleza.Light">
@@ -140,7 +138,6 @@
     </style>
 
     <style name="Widget.DS.Button.ConsultoriaDeBeleza.Light" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -184,7 +181,6 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.ConsultoriaDeBeleza.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -206,7 +202,6 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.ConsultoriaDeBeleza.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -221,16 +216,102 @@
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
+    <!--Navigation Drawer-->
+    <style name="Widget.ConsultoriaDeBeleza.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?textAppearanceBody2</item>
+        <item name="itemTextColor">?android:textColorPrimary</item>
+        <item name="itemIconTint">?android:textColorPrimary</item>
+    </style>
+
+    <!--{@deprecated Use Divider component} -->
+    <style name="Widget.ConsultoriaDeBeleza.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ds_size_line</item>
+        <item name="android:background">?colorControlHighlight</item>
+    </style>
+
+    <style name="Widget.ConsultoriaDeBeleza.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+        <item name="queryBackground">@null</item>
+        <item name="submitBackground">@null</item>
+        <item name="closeIcon">@drawable/default_icon_outlined_navigation_close</item>
+        <item name="searchIcon">@null</item>
+        <item name="goIcon">@null</item>
+        <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
+    </style>
+
+    <style name="TextAppearance.ConsultoriaDeBeleza.Default" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/ds_text_small</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.ConsultoriaDeBeleza.Highlight" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/ds_text_big</item>
+        <item name="android:textColor">@color/colorHighEmphasis</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
     <style name="Widget.DS.CheckBoxPrimary.ConsultoriaDeBeleza.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.ConsultoriaDeBeleza.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_dark</item>
-        <item name="android:textColor">@color/text_selectors_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_natura_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
-    
+
+    <style name="Widget"/>
+    <style name="Widget.ConsultoriaDeBeleza"/>
+
+    <!-- {@deprecated Use ?toolbarStyle from theme instead.} -->
+    <style name="Widget.ConsultoriaDeBeleza.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ds_toolbar_height</item>
+        <item name="android:background">?android:colorBackground</item>
+        <item name="android:textSize">@dimen/ds_text_title_size</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily">@string/font_roboto_medium</item>
+        <item name="android:windowContentOverlay">@dimen/ds_appbar_overlay</item>
+    </style>
+
+    <!-- {@deprecated Use Widiget.DS.Toolbar.Primary instead.} -->
+    <style name="Widget.ConsultoriaDeBeleza.Toolbar.Primary">
+        <item name="android:background">?colorPrimary</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+
+    <!-- {@deprecated Use Widiget.DS.Toolbar.Secondary instead.} -->
+    <style name="Widget.ConsultoriaDeBeleza.Toolbar.Secondary">
+        <item name="android:background">?colorSecondary</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <!--{@deprecated Use Checkbox component} -->
+    <style name="Widget.ConsultoriaDeBeleza.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textSize">@dimen/ds_text_small</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
+    <!--{@deprecated Use Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Light or  Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Dark Style instead} -->
+    <style name="Widget.ConsultoriaDeBeleza.CheckBox.Secondary">
+        <item name="buttonTint">@color/color_control_secondary_selector</item>
+    </style>
+
+    <!--{@deprecated Use ?radioButtonStyle by theme instead} -->
+    <style name="Widget.ConsultoriaDeBeleza.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textSize">@dimen/ds_text_small</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
+    <!--{@deprecated Use Widget.DS.RadioButton.ConsultoriaDeBeleza.Light.Secondary or  Widget.DS.RadioButton.ConsultoriaDeBeleza.Dark.Secondary Style instead} -->
+    <style name="Widget.ConsultoriaDeBeleza.RadioButton.Secondary">
+        <item name="buttonTint">@color/color_control_secondary_selector</item>
+    </style>
 </resources>

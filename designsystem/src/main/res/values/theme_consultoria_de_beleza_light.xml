@@ -59,7 +59,7 @@
         <item name="textAppearanceCaption">@style/Caption</item>
         <item name="textAppearanceOverline">@style/Overline</item>
 
-        <item name="navigationViewStyle">@style/Widget.Natura.NavigationView</item>
+        <item name="navigationViewStyle">@style/Widget.ConsultoriaDeBeleza.NavigationView</item>
         <item name="searchViewStyle">@style/Widget.Natura.SearchView</item>
         <item name="android:statusBarColor">?colorControlHighlight</item>
 
