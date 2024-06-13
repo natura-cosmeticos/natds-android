@@ -16,7 +16,7 @@ elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^breaking:'; then
 
 else
     # Para todos os outros casos, segue o procedimento padrão que normalmente aumenta o patch
-    npx standard-version
+    npx standard-version --release-as patch
 fi
 
 # Pega a versão atual do arquivo version.txt
