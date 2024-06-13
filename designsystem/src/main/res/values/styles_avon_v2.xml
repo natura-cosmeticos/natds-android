@@ -58,8 +58,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.ContainedButtons.Avon_v2.Dark" parent="Theme.DS.Dialog.Avon_v2">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon_v2.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon_v2.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon_v2.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Avon_v2.Dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.TextButtons.Avon_v2.Dark" parent="Theme.DS.Dialog.Avon_v2">
@@ -68,8 +68,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.OutlinedButtons.Avon_v2.Dark" parent="Theme.DS.Dialog.Avon_v2">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon_v2.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Avon_v2.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon_v2.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Avon_v2.Dark</item>
     </style>
 
 

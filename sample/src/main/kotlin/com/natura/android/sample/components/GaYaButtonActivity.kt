@@ -3,6 +3,8 @@ package com.natura.android.sample.components
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.LinearLayout
+import com.natura.android.button.GaYaButton
 import com.natura.android.sample.R
 import com.natura.android.sample.setChosenDefaultTheme
 
@@ -16,6 +18,14 @@ class GaYaButtonActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "GaYaButton"
+
+        val gayaButton = GaYaButton(this)
+        gayaButton.setBtnSize(GaYaButton.MEDIUM_SIZE)
+        gayaButton.setBtnColor(GaYaButton.PRIMARY)
+        gayaButton.setBtnType(GaYaButton.FILLED)
+        gayaButton.setBtnIcon("outlined_product_childish")
+        gayaButton.setBtnIconPosition(GaYaButton.START)
+        gayaButton.setText("Criado programaticamente")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

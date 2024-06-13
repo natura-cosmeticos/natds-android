@@ -54,6 +54,8 @@ filled_content_violence
 filled_content_wifi
 filled_content_world
 filled_default_mockup
+filled_finance_bag
+filled_finance_bagcheck
 filled_finance_charging
 filled_finance_invoice
 filled_finance_money
@@ -107,6 +109,7 @@ filled_place_truck
 filled_product_brandsproduct
 filled_product_cube
 filled_product_fashion
+filled_product_nailpolish
 filled_social_myprofile
 outlined_action_add
 outlined_action_addproduct
@@ -263,6 +266,7 @@ outlined_content_world
 outlined_default_mockup
 outlined_finance_addbag
 outlined_finance_bag
+outlined_finance_bagcheck
 outlined_finance_bank
 outlined_finance_cards
 outlined_finance_charging

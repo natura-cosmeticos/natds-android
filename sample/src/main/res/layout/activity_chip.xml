@@ -15,8 +15,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="?spacingSmall"
             app:chp_color="neutral"
-            app:chp_label="Color Neutral Selected"
+            app:chp_label="longa duração"
             app:chp_selected="true"
+            app:chp_helper_right="@drawable/filled_action_cancel"
+            app:chp_helper_right_type="icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

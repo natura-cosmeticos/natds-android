@@ -670,5 +670,24 @@
             android:text="filled - semi"
             app:btn_size="semi" />
 
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PROGRAMMATICALLY"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

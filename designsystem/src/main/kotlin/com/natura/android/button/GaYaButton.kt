@@ -9,6 +9,7 @@ import com.google.android.material.button.MaterialButton
 import com.natura.android.R
 import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getFontFromTheme
+import com.natura.android.resources.getIconResourceIdFromName
 import com.natura.android.resources.getStringFromTheme
 import java.util.Locale
 
@@ -16,9 +17,11 @@ class GaYaButton : MaterialButton {
 
     private lateinit var buttonAttributesArray: TypedArray
     private var attrs: AttributeSet? = null
-    private var sizeAttribute: Int = 0
-    private var colorAttribute: Int = 0
-    private var typeAttribute: Int = 0
+    private var btnSize: Int = 0
+    private var btnColor: Int = 0
+    private var btnType: Int = 0
+    private var btnIcon: Int = 0
+    private var btnIconPosition: Int = 0
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs, resolveStyle(context, attrs)) {
         this.attrs = attrs
@@ -30,23 +33,23 @@ class GaYaButton : MaterialButton {
     }
 
     private fun init(attrs: AttributeSet?) {
-
         buttonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.GaYaButton)
 
         context.theme.obtainStyledAttributes(attrs, R.styleable.GaYaButton, 0, 0).apply {
             try {
-                sizeAttribute = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_size, SEMIX_SIZE)
-                colorAttribute = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_color, DEFAULT)
-                typeAttribute = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_type, FILLED)
+                btnSize = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_size, SEMIX_SIZE)
+                btnColor = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_color, DEFAULT)
+                btnType = buttonAttributesArray.getInteger(R.styleable.GaYaButton_btn_type, FILLED)
+                btnIcon = buttonAttributesArray.getResourceId(R.styleable.GaYaButton_btn_icon, 0)
+                btnIconPosition = buttonAttributesArray.getInt(R.styleable.GaYaButton_btn_icon_position, 0)
 
-                val iconRes = buttonAttributesArray.getResourceId(R.styleable.GaYaButton_btn_icon, 0)
-                if (iconRes != 0) {
-                    val drawable = ContextCompat.getDrawable(context, iconRes)
+                if (btnIcon != 0) {
+                    val drawable = ContextCompat.getDrawable(context, btnIcon)
                     setIcon(drawable)
                 }
 
-                val iconPosition = buttonAttributesArray.getInt(R.styleable.GaYaButton_btn_icon_position, 0)
-                setIconGravity(iconPosition)
+                setIconGravity(btnIconPosition)
+
             } finally {
                 recycle()
             }
@@ -55,6 +58,46 @@ class GaYaButton : MaterialButton {
         setAppearanceAttributesFromTheme()
         setComponentStyleBySize()
         applyStyle()
+    }
+
+    fun setBtnSize(size: Int) {
+        btnSize = size
+        setComponentStyleBySize()
+        applyStyle()
+    }
+
+    fun setBtnColor(color: Int) {
+        btnColor = color
+        setAppearanceAttributesFromTheme()
+        applyStyle()
+    }
+
+    fun setBtnType(type: Int) {
+        btnType = type
+        applyStyle()
+    }
+
+//    fun setBtnIcon(icon: String?) {
+//        icon?.let {
+//            val drawableId = getIconResourceIdFromName(context, it)
+//            val drawable = ContextCompat.getDrawable(context, drawableId)
+//            setIcon(drawable)
+//        }
+//    }
+
+    fun setBtnIcon(iconName: String?) {
+        iconName?.let {
+            val drawableId = getIconResourceIdFromName(context, it)
+            val drawable = ContextCompat.getDrawable(context, drawableId)
+            drawable?.setTint(currentTextColor)
+            setIcon(drawable)
+        }
+    }
+
+
+    fun setBtnIconPosition(position: Int) {
+        btnIconPosition = position
+        setIconGravity(btnIconPosition)
     }
 
     override fun setIconGravity(value: Int) {
@@ -68,7 +111,7 @@ class GaYaButton : MaterialButton {
     }
 
     private fun setAppearanceAttributesFromTheme() {
-        return when (colorAttribute) {
+        when (btnColor) {
             DEFAULT -> getStyleAttributes(R.attr.buttonDefault)
             PRIMARY -> getStyleAttributes(R.attr.buttonPrimary)
             ONPRIMARY -> getStyleAttributes(R.attr.buttonOnPrimary)
@@ -101,20 +144,19 @@ class GaYaButton : MaterialButton {
                 .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
         }
 
-        when (typeAttribute) {
-            FILLED -> { configureFilledButton() }
-            OUTLINED -> { configureOutlinedButton() }
-            GHOST -> { configureGhostButton() }
-            TONAL -> { configureTonalButton() }
+        when (btnType) {
+            FILLED -> configureFilledButton()
+            OUTLINED -> configureOutlinedButton()
+            GHOST -> configureGhostButton()
+            TONAL -> configureTonalButton()
         }
     }
 
     private fun configureFilledButton() {
-
         this.elevation = 0f * resources.displayMetrics.density
         this.stateListAnimator = null
 
-        val backgroundTint = when (colorAttribute) {
+        val backgroundTint = when (btnColor) {
             DEFAULT -> R.color.gayabutton_filled_background_default_v23
             PRIMARY -> R.color.gayabutton_filled_background_primary_v23
             ONPRIMARY -> R.color.gayabutton_filled_background_on_primary_v23
@@ -126,15 +168,15 @@ class GaYaButton : MaterialButton {
         }
         this.backgroundTintList = ContextCompat.getColorStateList(context, backgroundTint)
 
-        val textColor = when (colorAttribute) {
-            DEFAULT -> { R.color.gayabutton_filled_label_default_v23 }
-            PRIMARY -> { R.color.gayabutton_filled_label_primary_v23 }
-            ONPRIMARY -> { R.color.gayabutton_filled_label_on_primary_v23 }
-            SECONDARY -> { R.color.gayabutton_filled_label_secondary_v23 }
-            ONSECONDARY -> { R.color.gayabutton_filled_label_on_secondary_v23 }
-            INVERSE -> { R.color.gayabutton_filled_label_inverse_v23 }
-            NEUTRAL -> { R.color.gayabutton_filled_label_neutral_v23 }
-            else -> { R.color.gayabutton_filled_label_default_v23 }
+        val textColor = when (btnColor) {
+            DEFAULT -> R.color.gayabutton_filled_label_default_v23
+            PRIMARY -> R.color.gayabutton_filled_label_primary_v23
+            ONPRIMARY -> R.color.gayabutton_filled_label_on_primary_v23
+            SECONDARY -> R.color.gayabutton_filled_label_secondary_v23
+            ONSECONDARY -> R.color.gayabutton_filled_label_on_secondary_v23
+            INVERSE -> R.color.gayabutton_filled_label_inverse_v23
+            NEUTRAL -> R.color.gayabutton_filled_label_neutral_v23
+            else -> R.color.gayabutton_filled_label_default_v23
         }
 
         val textColorStateList = ContextCompat.getColorStateList(context, textColor)
@@ -146,7 +188,7 @@ class GaYaButton : MaterialButton {
         this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_background_default_v23)
         this.cornerRadius = getDimenFromTheme(context, R.attr.buttonBorderRadius).toInt()
 
-        when (colorAttribute) {
+        when (btnColor) {
             DEFAULT -> {
                 this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_default_v23)
                 val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_default_v23)
@@ -203,7 +245,7 @@ class GaYaButton : MaterialButton {
         this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_stroke_v23)
         this.cornerRadius = getDimenFromTheme(context, R.attr.buttonBorderRadius).toInt()
 
-        when (colorAttribute) {
+        when (btnColor) {
             DEFAULT -> {
                 val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_default_v23)
                 this.setTextColor(textColorStateList)
@@ -255,7 +297,7 @@ class GaYaButton : MaterialButton {
         this.elevation = 0f * resources.displayMetrics.density
         this.stateListAnimator = null
 
-        val backgroundTint = when (colorAttribute) {
+        val backgroundTint = when (btnColor) {
             DEFAULT -> R.color.gayabutton_tonal_background_default_v23
             PRIMARY -> R.color.gayabutton_tonal_background_primary_v23
             ONPRIMARY -> R.color.gayabutton_tonal_background_on_primary_v23
@@ -267,15 +309,15 @@ class GaYaButton : MaterialButton {
         }
         this.backgroundTintList = ContextCompat.getColorStateList(context, backgroundTint)
 
-        val textColor = when (colorAttribute) {
-            DEFAULT -> { R.color.gayabutton_tonal_label_default_v23 }
-            PRIMARY -> { R.color.gayabutton_tonal_label_primary_v23 }
-            ONPRIMARY -> { R.color.gayabutton_tonal_label_on_primary_v23 }
-            SECONDARY -> { R.color.gayabutton_tonal_label_secondary_v23 }
-            ONSECONDARY -> { R.color.gayabutton_tonal_label_on_secondary_v23 }
-            INVERSE -> { R.color.gayabutton_tonal_label_inverse_v23 }
-            NEUTRAL -> { R.color.gayabutton_tonal_label_neutral_v23 }
-            else -> { R.color.gayabutton_tonal_label_default_v23 }
+        val textColor = when (btnColor) {
+            DEFAULT -> R.color.gayabutton_tonal_label_default_v23
+            PRIMARY -> R.color.gayabutton_tonal_label_primary_v23
+            ONPRIMARY -> R.color.gayabutton_tonal_label_on_primary_v23
+            SECONDARY -> R.color.gayabutton_tonal_label_secondary_v23
+            ONSECONDARY -> R.color.gayabutton_tonal_label_on_secondary_v23
+            INVERSE -> R.color.gayabutton_tonal_label_inverse_v23
+            NEUTRAL -> R.color.gayabutton_tonal_label_neutral_v23
+            else -> R.color.gayabutton_tonal_label_default_v23
         }
 
         val textColorStateList = ContextCompat.getColorStateList(context, textColor)
@@ -297,7 +339,7 @@ class GaYaButton : MaterialButton {
     }
 
     private fun setComponentStyleBySize() {
-        when (sizeAttribute) {
+        when (btnSize) {
             SEMI_SIZE -> {
                 this.minHeight = getDimenFromTheme(context, R.attr.sizeSemi).toInt()
                 this.insetBottom = getDimenFromTheme(context, R.attr.spacingTiny).toInt()
@@ -356,3 +398,4 @@ class GaYaButton : MaterialButton {
         }
     }
 }
+

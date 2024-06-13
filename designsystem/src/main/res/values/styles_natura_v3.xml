@@ -58,8 +58,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.ContainedButtons.Natura_v3.Dark" parent="Theme.DS.Dialog.Natura_v3">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura_v3.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura_v3.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura_v3.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Natura_v3.Dark</item>
     </style>
 
     <style name="Theme.DS.Dialog.TextButtons.Natura_v3.Dark" parent="Theme.DS.Dialog.Natura_v3">
@@ -68,8 +68,8 @@
     </style>
 
     <style name="Theme.DS.Dialog.OutlinedButtons.Natura_v3.Dark" parent="Theme.DS.Dialog.Natura_v3">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura_v3.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Natura_v3.Dark</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura_v3.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Natura_v3.Dark</item>
     </style>
 
 
@@ -95,6 +95,12 @@
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
+    <style name="Widget.DS.RadioButton.Natura_v3.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_light</item>
+        <item name="android:textColor">@color/text_selectors_light</item>
+        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
+    </style>
+
     <style name="Widget.DS.RadioButton.Natura_v3.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
@@ -107,30 +113,24 @@
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Natura_v3.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_natura_v3_light</item>
-        <item name="android:textColor">@color/text_selectors_light</item>
-        <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
-    </style>
-
     <style name="Widget.DS.CheckBox.Natura_v3.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_light</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
-        <item name="android:textColor">@color/text_selectors_dark</item>
-    </style>
-
-    <style name="Widget.DS.CheckBox.Natura_v3.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.Natura_v3.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_natura_v3_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
+    </style>
+
+    <style name="Widget.DS.CheckBox.Natura_v3.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_natura_v3_dark</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.ButtonSmall.Natura_v3.Light" parent="Widget.DS.Button.Natura_v3.Light">
@@ -140,14 +140,12 @@
     </style>
 
     <style name="Widget.DS.Button.Natura_v3.Light" parent="Widget.MaterialComponents.Button">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
-        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Natura_v3.Light" parent="Widget.DS.Button.Natura_v3.Light">
@@ -185,14 +183,12 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura_v3.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="rippleColor">@color/button_ripple_color_light</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
-        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura_v3.Light" parent="Widget.DS.Button.Outlined.Natura_v3.Light">
@@ -208,20 +204,48 @@
     </style>
 
     <style name="Widget.DS.Button.Outlined.Natura_v3.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
         <item name="cornerRadius">?buttonBorderRadius</item>
         <item name="fontFamily">?buttonLabelPrimaryFontWeight</item>
         <item name="android:minHeight">?sizeSemiX</item>
-        <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="Widget.DS.ButtonLarge.Outlined.Natura_v3.Dark" parent="Widget.DS.Button.Outlined.Natura_v3.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
+    </style>
+
+    <!--Navigation Drawer-->
+    <style name="Widget.Natura_v3.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="itemTextAppearance">?textAppearanceBody2</item>
+        <item name="itemTextColor">?android:textColorPrimary</item>
+        <item name="itemIconTint">?android:textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Natura_v3.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+        <item name="queryBackground">@null</item>
+        <item name="submitBackground">@null</item>
+        <item name="closeIcon">@drawable/default_icon_outlined_navigation_close</item>
+        <item name="searchIcon">@null</item>
+        <item name="goIcon">@null</item>
+        <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
+    </style>
+
+    <style name="TextAppearance.Natura_v3.Default" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/ds_text_small</item>
+        <item name="android:textColor">@color/text_color_primary_selector</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
+    </style>
+
+    <style name="TextAppearance.Natura_v3.Highlight" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/ds_text_big</item>
+        <item name="android:textColor">@color/colorHighEmphasis</item>
+        <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.Natura_v3.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -232,8 +256,8 @@
 
     <style name="Widget.DS.CheckBoxPrimary.Natura_v3.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_natura_v3_dark</item>
-        <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
+        <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
 </resources>
