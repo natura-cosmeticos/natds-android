@@ -6,7 +6,7 @@ if (file("github_credentials.properties").file) {
 }
 
 def getVersionName = { ->
-    return System.getenv("NATDS_VERSION")
+    return System.getenv("NATDS_VERSION") ?: "1.0.0"
 }
 
 def getGroupId = { ->
@@ -23,7 +23,9 @@ publishing {
             groupId getGroupId()
             artifactId getArtifactId()
             version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+            afterEvaluate {
+                from components.release
+            }
         }
     }
     repositories {

@@ -1,10 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply from: "$rootDir/tools/publish.gradle"
-apply from: "$rootDir/tools/ktlint.gradle"
 apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'maven-publish'
 
+apply from: "$rootDir/tools/publish.gradle"
+apply from: "$rootDir/tools/ktlint.gradle"
 apply from: '../jacoco/modules.gradle'
 
 group = 'com.github.systemteamopensource'
@@ -36,9 +37,9 @@ android {
 
     buildFeatures {
         compose = true
+        viewBinding = true
     }
 
-    // Set both the Java and Kotlin compilers to target Java 8.
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -84,13 +85,10 @@ android {
 }
 
 dependencies {
-
-    //lintPublish project(":lint")
-
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':lint')
 
-    //Compose dependencies
+    // Compose dependencies
     implementation "androidx.compose.foundation:foundation:$rootProject.composeVersion"
     implementation "androidx.compose.material:material:$rootProject.composeVersion"
     implementation "androidx.compose.runtime:runtime:$rootProject.composeVersion"
