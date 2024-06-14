@@ -70,5 +70,6 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         const val NATURAV2 = "natura_v2"
         const val AVONV2 = "avon_v2"
         const val NATURAV3 = "natura_v3"
+        const val CONSULTORIABELEZA = "consultoriabeleza"
     }
 }

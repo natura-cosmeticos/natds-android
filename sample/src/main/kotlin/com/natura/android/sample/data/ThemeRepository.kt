@@ -31,6 +31,7 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Light_SSOT
             "avon_v2" -> R.style.Theme_Avon_v2_Light_SSOT
             "natura_v3" -> R.style.Theme_Natura_v3_Light_SSOT
+            "consultoriabeleza" -> R.style.Theme_Consultoria_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -44,6 +45,7 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Dark_SSOT
             "avon_v2" -> R.style.Theme_Avon_v2_Dark_SSOT
             "natura_v3" -> R.style.Theme_Natura_v3_Dark_SSOT
+            "consultoriabeleza" -> R.style.Theme_Consultoria_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -57,6 +59,7 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Light_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Light_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Light_NoActionBar
+            "consultoriabeleza" -> R.style.Theme_Consultoria_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -70,6 +73,7 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Dark_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Dark_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Dark_NoActionBar
+            "consultoriabeleza" -> R.style.Theme_Consultoria_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
