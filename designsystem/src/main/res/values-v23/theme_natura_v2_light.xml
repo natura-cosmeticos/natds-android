@@ -187,7 +187,7 @@
         <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 
-    <style name="Theme.Natura_v2.Light.NoActionBar" parent="Theme.Natura_v2.Light.SSOT">
+    <style name="Theme.Natura_v2.Light.NoActionBar" parent="Theme.Natura_v2.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

@@ -182,7 +182,7 @@
         <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Avon_v2.Dark</item>
     </style>
 
-    <style name="Theme.Avon_v2.Dark.NoActionBar" parent="Theme.Avon_v2.Dark.SSOT">
+    <style name="Theme.Avon_v2.Dark.NoActionBar" parent="Theme.Avon_v2.Dark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

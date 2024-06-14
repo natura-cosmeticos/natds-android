@@ -188,7 +188,7 @@
         <item name="checkboxPrimary">@style/Widget.DS.CheckBox.Primary.V23</item>
     </style>
 
-    <style name="Theme.Avon_v2.Light.NoActionBar" parent="Theme.Avon_v2.Light.SSOT">
+    <style name="Theme.Avon_v2.Light.NoActionBar" parent="Theme.Avon_v2.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

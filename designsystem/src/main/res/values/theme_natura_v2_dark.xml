@@ -184,7 +184,7 @@
         <item name="checkboxPrimary">@style/Widget.DS.CheckBoxPrimary.Natura_v2.Dark</item>
     </style>
 
-    <style name="Theme.Natura_v2.Dark.NoActionBar" parent="Theme.Natura_v2.Dark.SSOT">
+    <style name="Theme.Natura_v2.Dark.NoActionBar" parent="Theme.Natura_v2.Dark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
