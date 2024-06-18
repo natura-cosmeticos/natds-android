@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/ds_spacing_small"
+        android:paddingEnd="@dimen/ds_spacing_small"
+        android:paddingBottom="@dimen/ds_spacing_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/h5Sample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Colors"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_label="primary"
+                app:gchp_selected="false"
+                android:layout_marginEnd="8dp" />
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="onPrimary"
+                app:gchp_label="on primary"
+                app:gchp_selected="false"
+                android:layout_marginEnd="8dp" />
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="secondary"
+                app:gchp_label="secondary"
+                app:gchp_selected="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="onSecondary"
+                app:gchp_label="on secondary"
+                android:layout_marginEnd="8dp"
+                app:gchp_selected="false"/>
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="neutral"
+                app:gchp_label="neutral"
+                android:layout_marginEnd="8dp"
+                app:gchp_selected="false"/>
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="inverse"
+                app:gchp_label="inverse"
+                app:gchp_selected="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Disabled and Action"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_label="neutral"
+                android:enabled="false"
+                android:layout_marginEnd="8dp"
+                app:gchp_selected="false"/>
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_label="chip with action"
+                app:gchp_selected="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sizes"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_size="medium"
+                app:gchp_label="medium"
+                app:gchp_selected="false"/>
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_size="semix"
+                app:gchp_label="semix"
+                android:layout_marginTop="8dp"
+                app:gchp_selected="false"/>
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_size="semi"
+                app:gchp_label="semi"
+                android:layout_marginTop="8dp"
+                app:gchp_selected="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Icons"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gchp_color="primary"
+                app:gchp_helper_left="@drawable/outlined_action_like"
+                app:gchp_helper_left_type="icon"
+                app:gchp_label="left Icon"
+                app:gchp_selected="false" />
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:gchp_color="primary"
+                app:gchp_helper_right="@drawable/outlined_action_like"
+                app:gchp_helper_right_type="icon"
+                app:gchp_label="right icon"
+                app:gchp_selected="false" />
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:gchp_color="primary"
+                app:gchp_helper_right="@drawable/outlined_action_like"
+                app:gchp_helper_right_type="icon"
+                app:gchp_helper_left="@drawable/outlined_action_like"
+                app:gchp_helper_left_type="icon"
+                app:gchp_label="both sides icons"
+                app:gchp_selected="false" />
+
+            <com.natura.android.chip.GaYaChip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:gchp_color="primary"
+                app:gchp_helper_right="@mipmap/nat_avatar"
+                app:gchp_helper_right_type="avatar"
+                app:gchp_helper_left="@drawable/outlined_action_like"
+                app:gchp_helper_left_type="icon"
+                app:gchp_label="icon and avatar"
+                app:gchp_selected="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Avatar"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <com.natura.android.chip.GaYaChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            app:gchp_color="primary"
+            app:gchp_helper_left="@mipmap/nat_avatar"
+            app:gchp_helper_left_type="avatar"
+            app:gchp_label="left avatar"
+            app:gchp_selected="false" />
+
+        <com.natura.android.chip.GaYaChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:gchp_color="primary"
+            app:gchp_helper_right="@mipmap/nat_avatar"
+            app:gchp_helper_right_type="avatar"
+            app:gchp_label="right avatar"
+            app:gchp_selected="false" />
+
+        <com.natura.android.chip.GaYaChip
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:gchp_color="primary"
+            app:gchp_helper_left="@mipmap/nat_avatar"
+            app:gchp_helper_left_type="avatar"
+            app:gchp_helper_right="@drawable/outlined_action_like"
+            app:gchp_helper_right_type="icon"
+            app:gchp_label="avatar and icon"
+            app:gchp_selected="false" />
+
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Programatically"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

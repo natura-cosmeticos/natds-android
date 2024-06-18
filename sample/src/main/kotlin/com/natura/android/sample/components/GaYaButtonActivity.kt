@@ -26,6 +26,9 @@ class GaYaButtonActivity : AppCompatActivity() {
         gayaButton.setBtnIcon("outlined_product_childish")
         gayaButton.setBtnIconPosition(GaYaButton.START)
         gayaButton.setText("Criado programaticamente")
+
+        val container: LinearLayout = findViewById(R.id.lnlProgramatically)
+        container.addView(gayaButton)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

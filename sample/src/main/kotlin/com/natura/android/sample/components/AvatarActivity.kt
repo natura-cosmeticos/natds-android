@@ -27,28 +27,22 @@ class AvatarActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Avatar"
 
-        val container: LinearLayout = findViewById(R.id.avatarContent)
-
         val iconContainer: LinearLayout = findViewById(R.id.icon_avatar_container)
         val labelContainer: LinearLayout = findViewById(R.id.label_avatar_container)
         val imageContainer: LinearLayout = findViewById(R.id.image_avatar_container)
 
-
-        // Crie e adicione os avatares do tipo ícone
         GaYaAvatar.AvatarSize.values().forEach { size ->
             val iconAvatar = GaYaAvatar(this, avatarSize = size, avatarType = GaYaAvatar.AvatarType.ICON)
             iconAvatar.icon("outlined-default-mockup")
             iconContainer.addView(iconAvatar)
         }
 
-        // Crie e adicione os avatares do tipo texto
         GaYaAvatar.AvatarSize.values().forEach { size ->
             val textAvatar = GaYaAvatar(this, avatarSize = size, avatarType = GaYaAvatar.AvatarType.LABEL)
             textAvatar.setText("Gaya DS")
             labelContainer.addView(textAvatar)
         }
 
-        // Crie e adicione os avatares do tipo imagem
         GaYaAvatar.AvatarSize.values().forEach { size ->
             val imageAvatar = GaYaAvatar(this, avatarSize = size, avatarType = GaYaAvatar.AvatarType.IMAGE)
             imageAvatar.setImage(ContextCompat.getDrawable(this, R.mipmap.nat_avatar)!!)

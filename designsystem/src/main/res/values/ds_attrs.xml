@@ -478,6 +478,41 @@
 
     </declare-styleable>
 
+    <declare-styleable name="GaYaChip">
+        <attr name="android:enabled" />
+        <attr name="gchp_label" format="string" />
+        <attr name="gchp_selected" format="boolean" />
+        <attr name="gchp_size" format="enum">
+            <enum name="semi" value="0" />
+            <enum name="semix" value="1" />
+            <enum name="medium" value="2" />
+        </attr>
+        <attr name="gchp_color" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="onPrimary" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="onSecondary" value="3" />
+            <enum name="neutral" value="4" />
+            <enum name="inverse" value="5" />
+        </attr>
+
+        <attr name="gchp_helper_right_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="icon" value="1" />
+            <enum name="avatar" value="2" />
+        </attr>
+
+        <attr name="gchp_helper_left_type" format="enum">
+            <enum name="none" value="0" />
+            <enum name="icon" value="1" />
+            <enum name="avatar" value="2" />
+        </attr>
+
+        <attr name="gchp_helper_left" format="reference" />
+        <attr name="gchp_helper_right" format="reference" />
+
+    </declare-styleable>
+
     <declare-styleable name="Alert">
         <attr name="show_title" format="boolean"/>
         <attr name="title_text" format="string" />

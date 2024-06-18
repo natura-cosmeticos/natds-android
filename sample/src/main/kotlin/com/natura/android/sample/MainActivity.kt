@@ -26,6 +26,7 @@ import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
 import com.natura.android.sample.components.GaYaButtonActivity
+import com.natura.android.sample.components.GaYaChipActivity
 import com.natura.android.sample.components.SnackbarActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
@@ -203,6 +204,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnAlert.setOnClickListener {
             startActivity(Intent(this, AlertActivity::class.java))
+        }
+
+        binding.btnGaYaChip.setOnClickListener {
+            startActivity(Intent(this, GaYaChipActivity::class.java))
         }
     }
 }

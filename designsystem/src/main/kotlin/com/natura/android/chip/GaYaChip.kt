@@ -19,7 +19,7 @@ import com.natura.android.resources.getDimenFromTheme
 class GaYaChip : ConstraintLayout {
 
     constructor(context: Context) : super(context) {
-        init(context)
+        init(context, null)
     }
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
@@ -56,39 +56,46 @@ class GaYaChip : ConstraintLayout {
             configureSize(getDrawable())
         }
 
-    private var hasAction: Boolean = false
-    private var isComponentSelected: Boolean = false
-    private var isComponentEnabled: Boolean = true
+    var isSelected: Boolean = false
+        set(value) {
+            field = value
+            configureAppearance(getDrawable())
+        }
+    var isComponentEnabled: Boolean = true
 
-    private var color: Int = NEUTRAL
+    var color: Int = PRIMARY
 
-    private var helperRightType: Int = NONE_TYPE
-    private var helperLeftType: Int = NONE_TYPE
-    private var helperLeft: Int = RESOURCE_NOT_DEFINED
-    private var helperRight: Int = RESOURCE_NOT_DEFINED
+    var helperRightType: Int = NONE_TYPE
+    var helperLeftType: Int = NONE_TYPE
+    var helperLeft: Int = RESOURCE_NOT_DEFINED
+    var helperRight: Int = RESOURCE_NOT_DEFINED
 
-    private var labelResourceColor: Int = RESOURCE_NOT_DEFINED
-    private var borderResourceColor: Int = RESOURCE_NOT_DEFINED
-    private var backgroundResourceColor: Int = RESOURCE_NOT_DEFINED
-
-    private fun init(context: Context, attrs: AttributeSet? = null) {
+    private fun init(context: Context, attrs: AttributeSet?) {
         try {
-            View.inflate(context, R.layout.chip, this)
+            View.inflate(context, R.layout.gayachip, this)
         } catch (e: Exception) {
             throw LayoutInflateException()
         }
 
         if (attrs != null) {
-            typedArray = context.obtainStyledAttributes(attrs, R.styleable.Chip)
+            typedArray = context.obtainStyledAttributes(attrs, R.styleable.GaYaChip)
+            getAttributes()
+            typedArray.recycle()
         }
 
-        getAttributes()
         configureEnabled()
-        configureAction()
+
+        mainContainer.isClickable = true
+        mainContainer.isFocusable = true
+
         configureHelpers()
         configureAppearance(getDrawable())
 
-        typedArray.recycle()
+        mainContainer.setOnClickListener {
+            isSelected = !isSelected
+            configureAppearance(getDrawable())
+        }
+
         requestLayout()
     }
 
@@ -107,6 +114,7 @@ class GaYaChip : ConstraintLayout {
     fun setSize(size: Int) {
         this.size = size
         configureSize(getDrawable())
+        configureAppearance(getDrawable())
     }
 
     fun setColor(color: Int) {
@@ -114,19 +122,10 @@ class GaYaChip : ConstraintLayout {
         configureAppearance(getDrawable())
     }
 
-    fun setHasAction(hasAction: Boolean) {
-        this.hasAction = hasAction
-        configureAction()
-    }
-
-    fun setIsComponentSelected(isComponentSelected: Boolean) {
-        this.isComponentSelected = isComponentSelected
-        configureAppearance(getDrawable())
-    }
-
     fun setLabel(label: String) {
         this.label = label
         setContentLabel(label)
+        configureAppearance(getDrawable())
     }
 
     fun setHelperLeftType(helperLeftType: Int) {
@@ -149,36 +148,17 @@ class GaYaChip : ConstraintLayout {
         configureHelpers()
     }
 
-    fun setCustomLabelColor(color: Int) {
-        this.labelResourceColor = color
-        configureAppearance(getDrawable())
-    }
-
-    fun setCustomBorderColor(color: Int) {
-        this.borderResourceColor = color
-        configureAppearance(getDrawable())
-    }
-
-    fun setCustomBackgroundColor(color: Int) {
-        this.backgroundResourceColor = color
-        configureAppearance(getDrawable())
-    }
-
     private fun getAttributes() {
         typedArray.apply {
-            label = getString(R.styleable.Chip_chp_label) ?: ""
-            size = getInt(R.styleable.Chip_chp_size, SEMI)
-            color = getInt(R.styleable.Chip_chp_color, NEUTRAL)
-            labelResourceColor = getColor(R.styleable.Chip_chp_custom_label_color, getColorTokenFromTheme(context, R.attr.colorHighEmphasis))
-            borderResourceColor = getColor(R.styleable.Chip_chp_custom_border_color, getColorTokenFromTheme(context, R.attr.colorLowEmphasis))
-            backgroundResourceColor = getColor(R.styleable.Chip_chp_custom_background_color, getColorTokenFromTheme(context, R.attr.colorHighLightOpacityFull))
-            hasAction = getBoolean(R.styleable.Chip_chp_action, false)
-            isComponentSelected = getBoolean(R.styleable.Chip_chp_selected, false)
-            helperLeftType = getInt(R.styleable.Chip_chp_helper_left_type, NONE_TYPE)
-            helperRightType = getInt(R.styleable.Chip_chp_helper_right_type, NONE_TYPE)
-            helperLeft = getResourceId(R.styleable.Chip_chp_helper_left, RESOURCE_NOT_DEFINED)
-            helperRight = getResourceId(R.styleable.Chip_chp_helper_right, RESOURCE_NOT_DEFINED)
-            isComponentEnabled = getBoolean(R.styleable.Chip_android_enabled, true)
+            label = getString(R.styleable.GaYaChip_gchp_label) ?: ""
+            size = getInt(R.styleable.GaYaChip_gchp_size, SEMI)
+            color = getInt(R.styleable.GaYaChip_gchp_color, PRIMARY)
+            isSelected = getBoolean(R.styleable.GaYaChip_gchp_selected, false)
+            helperLeftType = getInt(R.styleable.GaYaChip_gchp_helper_left_type, NONE_TYPE)
+            helperRightType = getInt(R.styleable.GaYaChip_gchp_helper_right_type, NONE_TYPE)
+            helperLeft = getResourceId(R.styleable.GaYaChip_gchp_helper_left, RESOURCE_NOT_DEFINED)
+            helperRight = getResourceId(R.styleable.GaYaChip_gchp_helper_right, RESOURCE_NOT_DEFINED)
+            isComponentEnabled = getBoolean(R.styleable.GaYaChip_android_enabled, true)
         }
     }
 
@@ -199,85 +179,103 @@ class GaYaChip : ConstraintLayout {
         backgroundView.layoutParams = params
         backgroundView.background = backgroundDrawable
         requestLayout()
-    }
 
-    private fun configureAction() {
-        mainContainer.isClickable = hasAction
-        mainContainer.isFocusable = hasAction
+        configureAppearance(backgroundDrawable)
     }
 
     private fun configureAppearance(backgroundDrawable: GradientDrawable) {
-        val backgroundColorAttr = when {
-            !isEnabled -> R.attr.colorTranparent
-            !isComponentSelected -> R.attr.colorTranparent
-            else -> {
-                when (color) {
-                    NEUTRAL -> R.attr.colorPrimary
-                    PRIMARY -> R.attr.colorPrimary
-                    SECONDARY -> R.attr.colorSecondary
-                    else -> R.attr.colorPrimary
-                }
-            }
-        }
+        val backgroundColorAttr: Int
+        val borderColorAttr: Int
+        val labelColor: Int
+        val iconColor: Int
 
-        val borderColorAttr = when {
-            !isEnabled -> R.attr.colorLowEmphasis
-            else -> {
-                when (color) {
-                    PRIMARY -> R.attr.colorPrimary
-                    SECONDARY -> R.attr.colorSecondary
-                    NEUTRAL -> {
-                        if (isComponentSelected) {
-                            R.attr.colorPrimary
-                        } else {
-                            R.attr.colorLowEmphasis
-                        }
-                    }
-                    else -> R.attr.colorLowEmphasis
-                }
+        if (!isEnabled) {
+            backgroundColorAttr = R.attr.colorSurfaceDisabled
+            borderColorAttr = R.attr.colorSurfaceDisabled
+            labelColor = getColorTokenFromTheme(context, R.attr.colorOnSurfaceDisabled)
+        } else if (!isSelected) {
+            backgroundColorAttr = R.attr.colorTranparent
+            borderColorAttr = when (color) {
+                PRIMARY -> R.attr.colorPrimary
+                ONPRIMARY -> R.attr.colorOnPrimary
+                SECONDARY -> R.attr.colorSecondary
+                ONSECONDARY -> R.attr.colorOnSecondary
+                NEUTRAL -> R.attr.colorSurfaceDark
+                else -> R.attr.colorSurfaceFixedLight
+            }
+            labelColor = when (color) {
+                PRIMARY -> getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis)
+                ONPRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                SECONDARY -> getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis)
+                ONSECONDARY -> getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis)
+                NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis)
+                else -> getColorTokenFromTheme(context, R.attr.colorContentHighlightFixedLight)
+            }
+        } else {
+            backgroundColorAttr = when (color) {
+                PRIMARY -> R.attr.colorPrimary
+                ONPRIMARY -> R.attr.colorPrimaryDarkest
+                SECONDARY -> R.attr.colorSecondary
+                ONSECONDARY -> R.attr.colorSecondaryDarkest
+                NEUTRAL -> R.attr.colorSurfaceDark
+                else -> R.attr.colorSurfaceFixedLight
+            }
+            borderColorAttr = R.attr.colorTranparent
+            labelColor = when (color) {
+                PRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
+                ONPRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimaryDarkest)
+                SECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondary)
+                ONSECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondaryDarkest)
+                NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorOnSurfaceDark)
+                else -> getColorTokenFromTheme(context, R.attr.colorOnSurfaceFixedLight)
             }
         }
-
-        val labelColor = when {
-            !isEnabled -> getColorTokenFromTheme(context, R.attr.colorLowEmphasis)
-            !isComponentSelected -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-            else -> {
-                when (color) {
-                    NEUTRAL -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
-                    PRIMARY -> getColorTokenFromTheme(context, R.attr.colorOnPrimary)
-                    SECONDARY -> getColorTokenFromTheme(context, R.attr.colorOnSecondary)
-                    CUSTOM -> labelResourceColor
-                    else -> getColorTokenFromTheme(context, R.attr.colorHighEmphasis)
-                }
-            }
-        }
+        iconColor = labelColor
 
         labelTextView.setTextColor(labelColor)
+        iconLeft.setColorFilter(iconColor)
+        iconRight.setColorFilter(iconColor)
 
         backgroundDrawable.mutate()
-        backgroundDrawable.setStroke(BORDER_WIDTH, if (color == CUSTOM) borderResourceColor else getColorTokenFromTheme(context, borderColorAttr))
-        backgroundDrawable.setColor(if (color == CUSTOM && isComponentSelected) backgroundResourceColor else getColorTokenFromTheme(context, backgroundColorAttr))
+        backgroundDrawable.setStroke(BORDER_WIDTH, getColorTokenFromTheme(context, borderColorAttr))
+        backgroundDrawable.setColor(getColorTokenFromTheme(context, backgroundColorAttr))
         backgroundView.background = backgroundDrawable
 
         requestLayout()
     }
 
     private fun configureHelpers() {
-        when {
-            helperLeftType == AVATAR_TYPE && helperLeft != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperLeft, containerAvatarLeft, avatarLeft)
-            helperRightType == AVATAR_TYPE && helperRight != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperRight, containerAvatarRight, avatarRight)
-            helperLeftType == ICON_TYPE && helperLeft != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperLeft, null, iconLeft)
-            helperRightType == ICON_TYPE && helperRight != RESOURCE_NOT_DEFINED -> setHelperVisibility(helperRight, null, iconRight)
+        // Reset visibility
+        containerAvatarLeft.visibility = View.GONE
+        avatarLeft.visibility = View.GONE
+        iconLeft.visibility = View.GONE
+        containerAvatarRight.visibility = View.GONE
+        avatarRight.visibility = View.GONE
+        iconRight.visibility = View.GONE
+
+        if (helperLeftType == AVATAR_TYPE && helperRightType == AVATAR_TYPE) {
+            // Não pode ter avatares dos dois lados
+            throw IllegalArgumentException("Cannot have avatars on both sides")
+        }
+
+        // Left helper
+        if (helperLeftType == AVATAR_TYPE && helperLeft != RESOURCE_NOT_DEFINED) {
+            setHelperVisibility(helperLeft, containerAvatarLeft, avatarLeft)
+        } else if (helperLeftType == ICON_TYPE && helperLeft != RESOURCE_NOT_DEFINED) {
+            setHelperVisibility(helperLeft, null, iconLeft)
+        }
+
+        // Right helper
+        if (helperRightType == AVATAR_TYPE && helperRight != RESOURCE_NOT_DEFINED) {
+            setHelperVisibility(helperRight, containerAvatarRight, avatarRight)
+        } else if (helperRightType == ICON_TYPE && helperRight != RESOURCE_NOT_DEFINED) {
+            setHelperVisibility(helperRight, null, iconRight)
         }
     }
 
     private fun setHelperVisibility(helper: Int, view: CardView?, imageView: ImageView) {
         imageView.setImageResource(helper)
-        view?.let {
-            it.visibility = View.VISIBLE
-            return
-        }
-
+        view?.visibility = View.VISIBLE
         imageView.visibility = View.VISIBLE
     }
 
@@ -303,10 +301,12 @@ class GaYaChip : ConstraintLayout {
         const val SEMIX = 1
         const val MEDIUM = 2
 
-        const val NEUTRAL = 0
-        const val PRIMARY = 1
+        const val PRIMARY = 0
+        const val ONPRIMARY = 1
         const val SECONDARY = 2
-        const val CUSTOM = 3
+        const val ONSECONDARY = 3
+        const val NEUTRAL = 4
+        const val INVERSE = 5
 
         const val NONE_TYPE = 0
         const val ICON_TYPE = 1
