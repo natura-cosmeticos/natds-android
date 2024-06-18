@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [9.29.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.28.0...v.9.29.0) (2024-06-18)
+
 ## [9.28.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.27.1...v.9.28.0) (2024-05-17)
 
 * GaYaButton
