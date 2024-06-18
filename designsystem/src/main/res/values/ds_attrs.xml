@@ -482,6 +482,7 @@
         <attr name="android:enabled" />
         <attr name="gchp_label" format="string" />
         <attr name="gchp_selected" format="boolean" />
+        <attr name="gchp_has_action" format="boolean" />
         <attr name="gchp_size" format="enum">
             <enum name="semi" value="0" />
             <enum name="semix" value="1" />

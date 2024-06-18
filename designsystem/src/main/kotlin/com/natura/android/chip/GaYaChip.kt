@@ -48,12 +48,14 @@ class GaYaChip : ConstraintLayout {
         set(value) {
             field = value
             setContentLabel(value)
+            configureAppearance(getDrawable())
         }
 
     var size: Int = SEMI
         set(value) {
             field = value
             configureSize(getDrawable())
+            configureAppearance(getDrawable())
         }
 
     var isSelected: Boolean = false
@@ -64,11 +66,34 @@ class GaYaChip : ConstraintLayout {
     var isComponentEnabled: Boolean = true
 
     var color: Int = PRIMARY
+        set(value) {
+            field = value
+            configureAppearance(getDrawable())
+        }
 
     var helperRightType: Int = NONE_TYPE
+        set(value) {
+            field = value
+            configureHelpers()
+        }
+
     var helperLeftType: Int = NONE_TYPE
+        set(value) {
+            field = value
+            configureHelpers()
+        }
+
     var helperLeft: Int = RESOURCE_NOT_DEFINED
+        set(value) {
+            field = value
+            configureHelpers()
+        }
+
     var helperRight: Int = RESOURCE_NOT_DEFINED
+        set(value) {
+            field = value
+            configureHelpers()
+        }
 
     private fun init(context: Context, attrs: AttributeSet?) {
         try {
@@ -179,8 +204,6 @@ class GaYaChip : ConstraintLayout {
         backgroundView.layoutParams = params
         backgroundView.background = backgroundDrawable
         requestLayout()
-
-        configureAppearance(backgroundDrawable)
     }
 
     private fun configureAppearance(backgroundDrawable: GradientDrawable) {
