@@ -162,7 +162,7 @@
         <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
         <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
 
-        <item name="logoVertical">@drawable/default_icon_outlined_action_cancel</item>
+        <item name="logoVertical">@drawable/natura_vertical_dark</item>
         <item name="logoHorizontal">@drawable/natura_horizontal_dark</item>
 
         <item name="card">@style/Widget.DS.Card</item>

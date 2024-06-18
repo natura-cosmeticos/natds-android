@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
     <style name="Theme.ConsultoriaDeBeleza.Dark" parent="Theme.ConsultoriaDeBeleza.Dark.SSOT">
 
         <!-- { @deprecated Attributes }-->
@@ -11,13 +9,6 @@
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
         <item name="badgeLabelPrimaryFontFamily">Roboto</item>
         <item name="badgeLabelFallbackFontFamily">Roboto</item>
-
-        <!--
-        /***
-        * LOCAL ATTRIBUTES (INFOS THAT ARE NOT IN NATDS COMMONS)
-        * YOU CAN EDIT THOSE FIELDS IF NECESSARY
-        */
-        -->
 
         <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
@@ -42,6 +33,31 @@
         <item name="colorTranparent">#00FFFFFF</item>
 
         <item name="chipSemiXBorderRadius">@dimen/ssotdee911e3860cd0a0c290215546ecdc43</item>
+
+        <!-- { @deprecated Tokens }-->
+        <item name="opacity01">@dimen/ds_opacity01</item>
+        <item name="opacity02">@dimen/ds_opacity02</item>
+        <item name="opacity03">@dimen/ds_opacity03</item>
+        <item name="opacity04">@dimen/ds_opacity04</item>
+        <item name="opacity05">@dimen/ds_opacity05</item>
+        <item name="opacity06">@dimen/ds_opacity06</item>
+        <item name="opacity07">@dimen/ds_opacity07</item>
+        <item name="opacity08">@dimen/ds_opacity08</item>
+        <item name="opacity09">@dimen/ds_opacity09</item>
+        <item name="opacity10">@dimen/ds_opacity10</item>
+        <item name="opacityFull">@dimen/ds_opacity_full</item>
+
+        <item name="elevation00">@dimen/ds_elevation00</item>
+        <item name="elevation01">@dimen/ds_elevation01</item>
+        <item name="elevation02">@dimen/ds_elevation02</item>
+        <item name="elevation03">@dimen/ds_elevation03</item>
+        <item name="elevation04">@dimen/ds_elevation04</item>
+        <item name="elevation05">@dimen/ds_elevation05</item>
+        <item name="elevation06">@dimen/ds_elevation06</item>
+        <item name="elevation07">@dimen/ds_elevation07</item>
+        <item name="elevation08">@dimen/ds_elevation08</item>
+        <item name="elevation09">@dimen/ds_elevation09</item>
+        <item name="elevation10">@dimen/ds_elevation10</item>
 
         <!--Component styles-->
         <item name="textAppearanceHeadline1">@style/Heading1</item>
@@ -136,6 +152,9 @@
         <item name="tagLink">@style/Widget.DS.Tag.Link</item>
         <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
         <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
+
+        <item name="logoVertical">@drawable/consultoriadebeleza_a_official</item>
+        <item name="logoHorizontal">@drawable/consultoriadebeleza_b_official</item>
 
         <item name="card">@style/Widget.DS.Card</item>
 

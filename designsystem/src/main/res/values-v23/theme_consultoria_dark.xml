@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
     <style name="Theme.Consultoria.Dark" parent="Theme.Consultoria.Dark.SSOT">
 
         <!-- { @deprecated Attributes }-->
@@ -11,13 +9,6 @@
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
         <item name="badgeLabelPrimaryFontFamily">Roboto</item>
         <item name="badgeLabelFallbackFontFamily">Roboto</item>
-
-        <!--
-        /***
-        * LOCAL ATTRIBUTES (INFOS THAT ARE NOT IN NATDS COMMONS)
-        * YOU CAN EDIT THOSE FIELDS IF NECESSARY
-        */
-        -->
 
         <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>

@@ -106,28 +106,28 @@
     </style>
 
     <style name="Widget.DS.RadioButton.ConsultoriaDeBeleza.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_natura_dark</item>
+        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_natura_light</item>
+        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_natura_dark</item>
+        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_natura_light</item>
+        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBox.ConsultoriaDeBeleza.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_natura_dark</item>
+        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
@@ -254,18 +254,17 @@
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.ConsultoriaDeBeleza.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_natura_light</item>
+        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
     <style name="Widget.DS.CheckBoxPrimary.ConsultoriaDeBeleza.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_natura_dark</item>
+        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget"/>
     <style name="Widget.ConsultoriaDeBeleza"/>
 
     <!-- {@deprecated Use ?toolbarStyle from theme instead.} -->

@@ -63,7 +63,7 @@ class GaYaChip : ConstraintLayout {
             field = value
             configureAppearance(getDrawable())
         }
-    
+
     var isComponentEnabled: Boolean = true
 
     var color: Int = PRIMARY

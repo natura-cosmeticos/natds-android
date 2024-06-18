@@ -159,8 +159,8 @@
         <item name="tagSizeSmall">@style/Widget.DS.Tag.Small</item>
         <item name="tagSizeStandard">@style/Widget.DS.Tag.Standard</item>
 
-        <item name="logoVertical">@drawable/default_icon_outlined_action_cancel</item>
-        <item name="logoHorizontal">@drawable/avon_horizontal_dark</item>
+        <item name="logoVertical">@drawable/avon_v2_b_official</item>
+        <item name="logoHorizontal">@drawable/avon_v2_a_official</item>
 
         <item name="card">@style/Widget.DS.Card</item>
 
