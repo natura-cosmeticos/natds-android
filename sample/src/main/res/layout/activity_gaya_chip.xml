@@ -134,11 +134,24 @@
                 app:gchp_selected="false"/>
 
             <com.natura.android.chip.GaYaChip
+                android:id="@+id/chip_action"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 app:gchp_color="primary"
                 app:gchp_label="chip with action"
-                app:gchp_selected="false"/>
+                app:gchp_has_action="true"
+                app:gchp_selected="true"/>
+
+            <TextView
+                android:id="@+id/chip_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Counter click 0"
+                app:layout_constraintTop_toBottomOf="@id/chip_action"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 

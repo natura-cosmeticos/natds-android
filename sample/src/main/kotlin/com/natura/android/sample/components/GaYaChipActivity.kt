@@ -2,18 +2,27 @@ package com.natura.android.sample.components
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.LinearLayout
 import com.natura.android.chip.GaYaChip
 import com.natura.android.sample.R
+import com.natura.android.sample.databinding.ActivityChipBinding
+import com.natura.android.sample.databinding.ActivityGayaChipBinding
 import com.natura.android.sample.setChosenDefaultTheme
 
 class GaYaChipActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityGayaChipBinding
+    private var count = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         setChosenDefaultTheme()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_gaya_chip)
+        binding = ActivityGayaChipBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "GaYaChip"
@@ -29,5 +38,19 @@ class GaYaChipActivity : AppCompatActivity() {
 
         val container: LinearLayout = findViewById(R.id.lnlProgramatically)
         container.addView(gayaChip)
+
+        binding.chipAction.getChildAt(0).setOnClickListener {
+            increaseCount()
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun increaseCount() {
+        count += 1
+        binding.chipCounter.text = "Counter click $count"
     }
 }

@@ -63,6 +63,7 @@ class GaYaChip : ConstraintLayout {
             field = value
             configureAppearance(getDrawable())
         }
+    
     var isComponentEnabled: Boolean = true
 
     var color: Int = PRIMARY
@@ -95,6 +96,12 @@ class GaYaChip : ConstraintLayout {
             configureHelpers()
         }
 
+    var hasAction: Boolean = false
+        set(value) {
+            field = value
+            configureAction()
+        }
+
     private fun init(context: Context, attrs: AttributeSet?) {
         try {
             View.inflate(context, R.layout.gayachip, this)
@@ -115,10 +122,13 @@ class GaYaChip : ConstraintLayout {
 
         configureHelpers()
         configureAppearance(getDrawable())
+        configureAction()
 
         mainContainer.setOnClickListener {
-            isSelected = !isSelected
-            configureAppearance(getDrawable())
+            if (!hasAction) {
+                isSelected = !isSelected
+                configureAppearance(getDrawable())
+            }
         }
 
         requestLayout()
@@ -173,6 +183,11 @@ class GaYaChip : ConstraintLayout {
         configureHelpers()
     }
 
+    fun setHasAction(hasAction: Boolean) {
+        this.hasAction = hasAction
+        configureAction()
+    }
+
     private fun getAttributes() {
         typedArray.apply {
             label = getString(R.styleable.GaYaChip_gchp_label) ?: ""
@@ -184,6 +199,7 @@ class GaYaChip : ConstraintLayout {
             helperLeft = getResourceId(R.styleable.GaYaChip_gchp_helper_left, RESOURCE_NOT_DEFINED)
             helperRight = getResourceId(R.styleable.GaYaChip_gchp_helper_right, RESOURCE_NOT_DEFINED)
             isComponentEnabled = getBoolean(R.styleable.GaYaChip_android_enabled, true)
+            hasAction = getBoolean(R.styleable.GaYaChip_gchp_has_action, false)
         }
     }
 
@@ -268,7 +284,6 @@ class GaYaChip : ConstraintLayout {
     }
 
     private fun configureHelpers() {
-        // Reset visibility
         containerAvatarLeft.visibility = View.GONE
         avatarLeft.visibility = View.GONE
         iconLeft.visibility = View.GONE
@@ -277,23 +292,25 @@ class GaYaChip : ConstraintLayout {
         iconRight.visibility = View.GONE
 
         if (helperLeftType == AVATAR_TYPE && helperRightType == AVATAR_TYPE) {
-            // Não pode ter avatares dos dois lados
             throw IllegalArgumentException("Cannot have avatars on both sides")
         }
 
-        // Left helper
         if (helperLeftType == AVATAR_TYPE && helperLeft != RESOURCE_NOT_DEFINED) {
             setHelperVisibility(helperLeft, containerAvatarLeft, avatarLeft)
         } else if (helperLeftType == ICON_TYPE && helperLeft != RESOURCE_NOT_DEFINED) {
             setHelperVisibility(helperLeft, null, iconLeft)
         }
 
-        // Right helper
         if (helperRightType == AVATAR_TYPE && helperRight != RESOURCE_NOT_DEFINED) {
             setHelperVisibility(helperRight, containerAvatarRight, avatarRight)
         } else if (helperRightType == ICON_TYPE && helperRight != RESOURCE_NOT_DEFINED) {
             setHelperVisibility(helperRight, null, iconRight)
         }
+    }
+
+    private fun configureAction() {
+        mainContainer.isClickable = hasAction
+        mainContainer.isFocusable = hasAction
     }
 
     private fun setHelperVisibility(helper: Int, view: CardView?, imageView: ImageView) {
