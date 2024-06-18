@@ -28,8 +28,6 @@ envman add --key NATDS_VERSION --value "$NATDS_VERSION"
 # Limpa arquivos não rastreados e diretórios
 git clean -f -d
 
-#  faz o commit
+# faz o commit
 git commit -m "chore: Updates version"
 git push --follow-tags origin HEAD
-
-fi
