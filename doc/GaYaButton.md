@@ -123,13 +123,13 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
      app:btn_color="onSecondaryColor"
      ```
 
-**4. Inverse**
+**5. Inverse**
    - **Código**:
      ```xml
      app:btn_color="inverseColor"
      ```
 
-**4. Neutral**
+**6. Neutral**
    - **Código**:
      ```xml
      app:btn_color="neutralColor"
