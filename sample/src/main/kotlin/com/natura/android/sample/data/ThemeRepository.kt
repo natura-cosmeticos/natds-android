@@ -28,10 +28,9 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Light
             "aesop" -> R.style.Theme_Aesop_Light
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Light
-            "natura_v2" -> R.style.Theme_Natura_v2_Light_SSOT
-            "avon_v2" -> R.style.Theme_Avon_v2_Light_SSOT
-            "natura_v3" -> R.style.Theme_Natura_v3_Light_SSOT
-            "consultoriabeleza" -> R.style.Theme_Consultoria_Light
+            "natura_v2" -> R.style.Theme_Natura_v2_Light
+            "avon_v2" -> R.style.Theme_Avon_v2_Light
+            "natura_v3" -> R.style.Theme_Natura_v3_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -42,10 +41,9 @@ class ThemeRepository(context: Context) {
             "avon" -> R.style.Theme_Avon_Dark
             "aesop" -> R.style.Theme_Aesop_Dark
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Dark
-            "natura_v2" -> R.style.Theme_Natura_v2_Dark_SSOT
-            "avon_v2" -> R.style.Theme_Avon_v2_Dark_SSOT
-            "natura_v3" -> R.style.Theme_Natura_v3_Dark_SSOT
-            "consultoriabeleza" -> R.style.Theme_Consultoria_Dark
+            "natura_v2" -> R.style.Theme_Natura_v2_Dark
+            "avon_v2" -> R.style.Theme_Avon_v2_Dark
+            "natura_v3" -> R.style.Theme_Natura_v3_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -59,7 +57,6 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Light_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Light_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Light_NoActionBar
-            "consultoriabeleza" -> R.style.Theme_Consultoria_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -73,7 +70,6 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Dark_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Dark_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Dark_NoActionBar
-            "consultoriabeleza" -> R.style.Theme_Consultoria_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
