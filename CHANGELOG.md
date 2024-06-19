@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [9.29.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.28.0...v.9.29.0) (2024-06-18)
 
+* New component GaYaChip
+* Using GaYaButton programmatically 
+* Important fixes for theme ConsultoriaDeBeleza
+##### Adding new icons
+- filled_finance_bag
+- filled_finance_bagcheck
+- filled_product_nailpolish
+- outlined_finance_bagcheck
+- outlined_product_nailpolish
+
 ## [9.28.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.27.1...v.9.28.0) (2024-05-17)
 
 * GaYaButton
