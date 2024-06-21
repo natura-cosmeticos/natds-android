@@ -228,4 +228,24 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
 **Text-transform (não aplicável)**
    - **Definido pelo tema**
      - Gerenciado pelo tema, podem ser Uppercase e Lowercase mas será modificada diretamente pelo tema utilizado
+
+## Programaticamente
+
+**Criando o GaYaButton dinamicamente**
+
+<p align="center">
+  <img alt="1" src="./images/gayabutton_kotlin.png" width="40%"> 
+</p>
+
+   - **Descrição**: Você pode criar o GaYaChip de forma programática e com todas as propriedades existentes.
+     ```kotlin
+     val gayaButton = GaYaButton(this)
+     gayaButton.setBtnSize(GaYaButton.MEDIUM_SIZE)
+     gayaButton.setBtnColor(GaYaButton.PRIMARY)
+     gayaButton.setBtnType(GaYaButton.FILLED)
+     gayaButton.setBtnIcon("outlined_product_childish")
+     gayaButton.setBtnIconPosition(GaYaButton.START)
+     gayaButton.setText("Criado programaticamente")
+     ```
+
      
