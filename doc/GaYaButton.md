@@ -237,7 +237,7 @@ Para começar a usar o `GaYaButton`, siga as instruções abaixo para configurar
   <img alt="1" src="./images/gayabutton_kotlin.png" width="40%"> 
 </p>
 
-   - **Descrição**: Você pode criar o GaYaChip de forma programática e com todas as propriedades existentes.
+   - **Descrição**: Você pode criar o GaYaButton de forma programática e com todas as propriedades existentes.
      ```kotlin
      val gayaButton = GaYaButton(this)
      gayaButton.setBtnSize(GaYaButton.MEDIUM_SIZE)
