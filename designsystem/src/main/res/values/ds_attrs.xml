@@ -232,6 +232,43 @@
         <attr name="notify" />
     </declare-styleable>
 
+    <declare-styleable name="GaYaIconButton">
+        <attr name="android:enabled" />
+        <attr name="gibt_iconName" format="string" />
+        <attr name="gibt_color" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="onPrimary" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="onSecondary" value="3" />
+            <enum name="neutral" value="4" />
+            <enum name="inverse" value="5" />
+        </attr>
+        <attr name="gibt_size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="large" value="2" />
+        </attr>
+        <attr name="gibt_type" format="enum">
+            <enum name="filled" value="0" />
+            <enum name="outlined" value="1" />
+            <enum name="ghost" value="2" />
+            <enum name="tonal" value="3" />
+        </attr>
+        <attr name="gibt_notify" format="integer" />
+        <attr name="gibt_notifyPosition" format="enum">
+            <enum name="endTop" value="0" />
+            <enum name="endBottom" value="1" />
+            <enum name="startBottom" value="2" />
+            <enum name="startTop" value="3" />
+        </attr>
+        <attr name="gibt_notifyColor" format="enum">
+            <enum name="alert" value="0" />
+            <enum name="primary" value="1" />
+            <enum name="secondary" value="2" />
+            <enum name="success" value="3" />
+        </attr>
+    </declare-styleable>
+
     <declare-styleable name="Card">
         <attr name="colorBackground" />
         <attr name="radiusEnabledValue" />
