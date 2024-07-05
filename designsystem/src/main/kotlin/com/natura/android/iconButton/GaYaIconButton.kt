@@ -19,6 +19,7 @@ import com.natura.android.badge.GaYaBadgeDrawable
 import com.natura.android.databinding.GayaiconbuttonBinding
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
+import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getIconResourceIdFromName
 
 class GaYaIconButton @JvmOverloads constructor(
@@ -161,7 +162,7 @@ class GaYaIconButton @JvmOverloads constructor(
     }
 
     private fun configureFilledIconButton(drawableColor:Int, iconColor:Int) {
-        binding.iconButtonContainer.background.setTintList(ContextCompat.getColorStateList(context, drawableColor))
+        binding.iconButtonContainer.backgroundTintList = ContextCompat.getColorStateList(context, drawableColor)
         binding.iconButtonIcon.setColorFilter(ContextCompat.getColor(context, iconColor), PorterDuff.Mode.SRC_IN)
     }
 
@@ -386,21 +387,33 @@ class GaYaIconButton @JvmOverloads constructor(
 
     private fun configureSize() {
 
+        var iconSize = 0
+        var backgroundSize = 0
+
         when (sizeAttribute) {
-                GaYaIconButtonSize.Small.value -> R.attr.iconButtonSizeSemi
-                GaYaIconButtonSize.Medium.value -> R.attr.iconButtonSizeSemiX
-                GaYaIconButtonSize.Large.value -> R.attr.iconButtonSizeMedium
+                GaYaIconButtonSize.Small.value -> {
+                    iconSize = getDimenFromTheme(context, R.attr.sizeStandard).toInt()
+                    backgroundSize = getDimenFromTheme(context, R.attr.sizeSemi).toInt()
+                }
+                GaYaIconButtonSize.Medium.value -> {
+                    iconSize = getDimenFromTheme(context, R.attr.sizeSemi).toInt()
+                    backgroundSize = getDimenFromTheme(context, R.attr.sizeSemiX).toInt()
+                }
+                GaYaIconButtonSize.Large.value -> {
+                    iconSize = getDimenFromTheme(context, R.attr.sizeSemiX).toInt()
+                    backgroundSize = getDimenFromTheme(context, R.attr.sizeMedium).toInt()
+                }
             }
 
         val containerlayoutParams = binding.iconButtonContainer.layoutParams
-        containerlayoutParams.height = resources.getDimension(sizeAttribute).toInt()
-        containerlayoutParams.width = resources.getDimension(sizeAttribute).toInt()
+        containerlayoutParams.height = backgroundSize
+        containerlayoutParams.width = backgroundSize
 
         binding.iconButtonContainer.layoutParams = containerlayoutParams
 
         val iconLayoutParams = binding.iconButtonIcon.layoutParams
-        iconLayoutParams.height = resources.getDimension(sizeAttribute).toInt()
-        iconLayoutParams.width = resources.getDimension(sizeAttribute).toInt()
+        iconLayoutParams.height = iconSize
+        iconLayoutParams.width = iconSize
 
         binding.iconButtonIcon.layoutParams = iconLayoutParams
     }

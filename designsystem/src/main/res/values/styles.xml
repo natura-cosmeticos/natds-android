@@ -461,6 +461,21 @@
         <item name="backgroundSize">?sizeMedium</item>
     </style>
 
+    <style name="Widget.DS.GaYaIconButton.Semi" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeStandard</item>
+        <item name="backgroundSize">?sizeSemi</item>
+    </style>
+
+    <style name="Widget.DS.GaYaIconButton.SemiX" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeSemi</item>
+        <item name="backgroundSize">?sizeSemiX</item>
+    </style>
+
+    <style name="Widget.DS.GaYaIconButton.Medium" parent="Widget.DS.IconButton">
+        <item name="iconSize">?sizeSemiX</item>
+        <item name="backgroundSize">?sizeMedium</item>
+    </style>
+
     <style name="Widget.DS.IconButton.Floating.Enabled" parent="Widget.DS.IconButton.Enabled">
         <item name="backgroundDrawable">@drawable/iconbutton_enabled_background_floating</item>
         <item name="customElevation">@dimen/ds_elevation04</item>
