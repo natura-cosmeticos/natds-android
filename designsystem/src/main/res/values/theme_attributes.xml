@@ -88,7 +88,25 @@
   <attr name="buttonLabelLineHeight" format="dimension" />  
   <attr name="buttonLabelPrimaryFontWeight" format="string" />  
   <attr name="buttonLabelFallbackFontWeight" format="string" />  
-  <attr name="buttonBorderRadius" format="dimension" />  
+  <attr name="buttonBorderRadius" format="dimension" />
+  <attr name="buttonContainedColorEnableBackground" format="color" />
+  <attr name="buttonContainedColorEnableBorder" format="color" />
+  <attr name="buttonContainedColorEnableLabel" format="color" />
+  <attr name="buttonContainedColorDisableBackground" format="color" />
+  <attr name="buttonContainedColorDisableBorder" format="color" />
+  <attr name="buttonContainedColorDisableLabel" format="color" />
+  <attr name="buttonOutlinedColorEnableBackground" format="color" />
+  <attr name="buttonOutlinedColorEnableBorder" format="color" />
+  <attr name="buttonOutlinedColorEnableLabel" format="color" />
+  <attr name="buttonOutlinedColorDisableBackground" format="color" />
+  <attr name="buttonOutlinedColorDisableBorder" format="color" />
+  <attr name="buttonOutlinedColorDisableLabel" format="color" />
+  <attr name="buttonTextColorEnableBackground" format="color" />
+  <attr name="buttonTextColorEnableBorder" format="color" />
+  <attr name="buttonTextColorEnableLabel" format="color" />
+  <attr name="buttonTextColorDisableBackground" format="color" />
+  <attr name="buttonTextColorDisableBorder" format="color" />
+  <attr name="buttonTextColorDisableLabel" format="color" />
   <attr name="cardBorderRadiusEnable" format="dimension" />  
   <attr name="cardBorderRadiusDisable" format="dimension" />  
   <attr name="cardColorBackground" format="color" />  
