@@ -494,6 +494,14 @@
     <item name="assetBrandNeutralBFile">@drawable/forcadevendas_a_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/forcadevendas_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/forcadevendas_a_custom</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/forcadevendas_a_official_dark</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/forcadevendas_a_official_dark</item>
+    <item name="assetBrandCustomAPtFile">@drawable/forcadevendas_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/forcadevendas_a_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/forcadevendas_a_official_dark</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/forcadevendas_a_official_dark</item>
+    <item name="assetBrandCustomAEsFile">@drawable/forcadevendas_a_custom</item>
+    <item name="assetBrandCustomBEsFile">@drawable/forcadevendas_a_custom</item>
     <item name="assetFontFileDisplay">@font/roboto_regular</item>
     <item name="assetFontFileHeadline">@font/roboto_regular</item>
     <item name="assetFontFileBodyRegular">@font/roboto_regular</item>

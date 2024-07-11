@@ -486,6 +486,14 @@
     <item name="assetBrandNeutralBFile">@drawable/casaeestilo_a_official_dark</item>
     <item name="assetBrandCustomAFile">@drawable/casaeestilo_a_custom</item>
     <item name="assetBrandCustomBFile">@drawable/casaeestilo_a_custom</item>
+    <item name="assetBrandNeutralAPtFile">@drawable/casaeestilo_a_official_dark</item>
+    <item name="assetBrandNeutralBPtFile">@drawable/casaeestilo_a_official_dark</item>
+    <item name="assetBrandCustomAPtFile">@drawable/casaeestilo_a_custom</item>
+    <item name="assetBrandCustomBPtFile">@drawable/casaeestilo_a_custom</item>
+    <item name="assetBrandNeutralAEsFile">@drawable/casaeestilo_a_official_dark</item>
+    <item name="assetBrandNeutralBEsFile">@drawable/casaeestilo_a_official_dark</item>
+    <item name="assetBrandCustomAEsFile">@drawable/casaeestilo_a_custom</item>
+    <item name="assetBrandCustomBEsFile">@drawable/casaeestilo_a_custom</item>
     <item name="assetFontFileDisplay">@font/montserrat_bold</item>
     <item name="assetFontFileHeadline">@font/montserrat_semi_bold</item>
     <item name="assetFontFileBodyRegular">@font/montserrat_regular</item>
