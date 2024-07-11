@@ -532,7 +532,8 @@
   <attr name="colorContentHighlightFixedLight" format="color" />  
   <attr name="colorContentHighEmphasisFixedLight" format="color" />  
   <attr name="colorContentMediumEmphasisFixedLight" format="color" />  
-  <attr name="colorContentLowEmphasisFixedLight" format="color" />  
+  <attr name="colorContentLowEmphasisFixedLight" format="color" />
+  <attr name="colorInputComponent" format="color" />
   <attr name="assetFontFileDisplay" format="reference" />  
   <attr name="assetFontFileHeadline" format="reference" />  
   <attr name="assetFontFileBodyRegular" format="reference" />

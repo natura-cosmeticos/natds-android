@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.Consultoria" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+    <style name="Theme.DS.Dialog.ForcaDeVendas" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Consultoria.Light" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Light</item>
+    <style name="Theme.DS.Dialog.Standard.ForcaDeVendas.Light" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Consultoria.Light" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Light</item>
+    <style name="Theme.DS.Dialog.Alert.ForcaDeVendas.Light" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.ContainedButtons.Consultoria.Light" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Light</item>
+    <style name="Theme.DS.Dialog.ContainedButtons.ForcaDeVendas.Light" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.TextButtons.Consultoria.Light" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Light</item>
+    <style name="Theme.DS.Dialog.TextButtons.ForcaDeVendas.Light" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.OutlinedButtons.Consultoria.Light" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Light</item>
+    <style name="Theme.DS.Dialog.OutlinedButtons.ForcaDeVendas.Light" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -38,40 +38,40 @@
         <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.TextButton.Consultoria.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>f
 
-    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Light" parent="@style/Widget.DS.Button.Outlined.Consultoria.Light">
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Light" parent="@style/Widget.DS.Button.Outlined.ForcaDeVendas.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.Consultoria.Dark" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark</item>
+    <style name="Theme.DS.Dialog.Standard.ForcaDeVendas.Dark" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.Consultoria.Dark" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark</item>
+    <style name="Theme.DS.Dialog.Alert.ForcaDeVendas.Dark" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.ContainedButtons.Consultoria.Dark" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Dark</item>
+    <style name="Theme.DS.Dialog.ContainedButtons.ForcaDeVendas.Dark" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.TextButtons.Consultoria.Dark" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark</item>
+    <style name="Theme.DS.Dialog.TextButtons.ForcaDeVendas.Dark" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.OutlinedButtons.Consultoria.Dark" parent="Theme.DS.Dialog.Consultoria">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Dark</item>
+    <style name="Theme.DS.Dialog.OutlinedButtons.ForcaDeVendas.Dark" parent="Theme.DS.Dialog.ForcaDeVendas">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.ContainedButton.Consultoria.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.ForcaDeVendas.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -79,65 +79,65 @@
         <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.TextButton.Consultoria.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.ForcaDeVendas.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.OutlinedButton.Consultoria.Dark" parent="@style/Widget.DS.Button.Outlined.Consultoria.Dark">
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.ForcaDeVendas.Dark" parent="@style/Widget.DS.Button.Outlined.ForcaDeVendas.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Consultoria.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+    <style name="Widget.DS.RadioButton.ForcaDeVendas.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_forca_de_vendas_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Consultoria.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+    <style name="Widget.DS.RadioButton.ForcaDeVendas.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_forca_de_vendas_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Consultoria.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+    <style name="Widget.DS.RadioButton.ForcaDeVendas.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_primary_forca_de_vendas_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.Consultoria.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+    <style name="Widget.DS.RadioButton.ForcaDeVendas.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/color_selector_secondary_forca_de_vendas_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.Consultoria.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_light</item>
+    <style name="Widget.DS.CheckBox.ForcaDeVendas.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_forca_de_vendas_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.Consultoria.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_primary_consultoria_de_beleza_dark</item>
+    <style name="Widget.DS.CheckBox.ForcaDeVendas.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_primary_forca_de_vendas_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.Consultoria.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_light</item>
+    <style name="Widget.DS.CheckBox.ForcaDeVendas.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_forca_de_vendas_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.Consultoria.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_selector_secondary_consultoria_de_beleza_dark</item>
+    <style name="Widget.DS.CheckBox.ForcaDeVendas.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_selector_secondary_forca_de_vendas_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Consultoria.Light" parent="Widget.DS.Button.Consultoria.Light">
+    <style name="Widget.DS.ButtonSmall.ForcaDeVendas.Light" parent="Widget.DS.Button.ForcaDeVendas.Light">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Consultoria.Light" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.DS.Button.ForcaDeVendas.Light" parent="Widget.MaterialComponents.Button">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -146,19 +146,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Consultoria.Light" parent="Widget.DS.Button.Consultoria.Light">
+    <style name="Widget.DS.ButtonLarge.ForcaDeVendas.Light" parent="Widget.DS.Button.ForcaDeVendas.Light">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Consultoria.Dark" parent="Widget.DS.Button.Consultoria.Dark">
+    <style name="Widget.DS.ButtonSmall.ForcaDeVendas.Dark" parent="Widget.DS.Button.ForcaDeVendas.Dark">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Consultoria.Dark" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.DS.Button.ForcaDeVendas.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
@@ -168,19 +168,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Consultoria.Dark" parent="Widget.DS.Button.Consultoria.Dark">
+    <style name="Widget.DS.ButtonLarge.ForcaDeVendas.Dark" parent="Widget.DS.Button.ForcaDeVendas.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Outlined.Consultoria.Light" parent="Widget.DS.Button.Outlined.Consultoria.Light">
+    <style name="Widget.DS.ButtonSmall.Outlined.ForcaDeVendas.Light" parent="Widget.DS.Button.Outlined.ForcaDeVendas.Light">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Outlined.Consultoria.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.DS.Button.Outlined.ForcaDeVendas.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -189,19 +189,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Outlined.Consultoria.Light" parent="Widget.DS.Button.Outlined.Consultoria.Light">
+    <style name="Widget.DS.ButtonLarge.Outlined.ForcaDeVendas.Light" parent="Widget.DS.Button.Outlined.ForcaDeVendas.Light">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Outlined.Consultoria.Dark" parent="Widget.DS.Button.Outlined.Consultoria.Dark">
+    <style name="Widget.DS.ButtonSmall.Outlined.ForcaDeVendas.Dark" parent="Widget.DS.Button.Outlined.ForcaDeVendas.Dark">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Outlined.Consultoria.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.DS.Button.Outlined.ForcaDeVendas.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -210,27 +210,27 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Outlined.Consultoria.Dark" parent="Widget.DS.Button.Outlined.Consultoria.Dark">
+    <style name="Widget.DS.ButtonLarge.Outlined.ForcaDeVendas.Dark" parent="Widget.DS.Button.Outlined.ForcaDeVendas.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <!--Navigation Drawer-->
-    <style name="Widget.Consultoria.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+    <style name="Widget.ForcaDeVendas.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
         <item name="itemTextColor">?android:textColorPrimary</item>
         <item name="itemIconTint">?android:textColorPrimary</item>
     </style>
 
     <!--{@deprecated Use Divider component} -->
-    <style name="Widget.Consultoria.Divider">
+    <style name="Widget.ForcaDeVendas.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
         <item name="android:background">?colorControlHighlight</item>
     </style>
 
-    <style name="Widget.Consultoria.SearchView" parent="Widget.AppCompat.SearchView">
+    <style name="Widget.ForcaDeVendas.SearchView" parent="Widget.AppCompat.SearchView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
         <item name="queryBackground">@null</item>
@@ -241,34 +241,34 @@
         <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
     </style>
 
-    <style name="TextAppearance.Consultoria.Default" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.ForcaDeVendas.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <style name="TextAppearance.Consultoria.Highlight" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.ForcaDeVendas.Highlight" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_big</item>
         <item name="android:textColor">@color/colorHighEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <style name="Widget.DS.CheckBoxPrimary.Consultoria.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_light</item>
+    <style name="Widget.DS.CheckBoxPrimary.ForcaDeVendas.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_forca_de_vendas_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBoxPrimary.Consultoria.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/color_checkbox_primary_consultoria_de_beleza_dark</item>
+    <style name="Widget.DS.CheckBoxPrimary.ForcaDeVendas.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/color_checkbox_primary_forca_de_vendas_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.Consultoria"/>
+    <style name="Widget.ForcaDeVendas"/>
 
     <!-- {@deprecated Use ?toolbarStyle from theme instead.} -->
-    <style name="Widget.Consultoria.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="Widget.ForcaDeVendas.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_toolbar_height</item>
         <item name="android:background">?android:colorBackground</item>
@@ -279,38 +279,38 @@
     </style>
 
     <!-- {@deprecated Use Widiget.DS.Toolbar.Primary instead.} -->
-    <style name="Widget.Consultoria.Toolbar.Primary">
+    <style name="Widget.ForcaDeVendas.Toolbar.Primary">
         <item name="android:background">?colorPrimary</item>
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
     <!-- {@deprecated Use Widiget.DS.Toolbar.Secondary instead.} -->
-    <style name="Widget.Consultoria.Toolbar.Secondary">
+    <style name="Widget.ForcaDeVendas.Toolbar.Secondary">
         <item name="android:background">?colorSecondary</item>
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
 
     <!--{@deprecated Use Checkbox component} -->
-    <style name="Widget.Consultoria.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.ForcaDeVendas.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.CheckBox.Consultoria.Secondary.Light or  Widget.DS.RadioButton.Consultoria.Secondary.Dark Style instead} -->
-    <style name="Widget.Consultoria.CheckBox.Secondary">
+    <!--{@deprecated Use Widget.DS.CheckBox.ForcaDeVendas.Secondary.Light or  Widget.DS.RadioButton.ForcaDeVendas.Secondary.Dark Style instead} -->
+    <style name="Widget.ForcaDeVendas.CheckBox.Secondary">
         <item name="buttonTint">@color/color_control_secondary_selector</item>
     </style>
 
     <!--{@deprecated Use ?radioButtonStyle by theme instead} -->
-    <style name="Widget.Consultoria.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.ForcaDeVendas.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.RadioButton.Consultoria.Light.Secondary or  Widget.DS.RadioButton.Consultoria.Dark.Secondary Style instead} -->
-    <style name="Widget.Consultoria.RadioButton.Secondary">
+    <!--{@deprecated Use Widget.DS.RadioButton.ForcaDeVendas.Light.Secondary or  Widget.DS.RadioButton.ForcaDeVendas.Dark.Secondary Style instead} -->
+    <style name="Widget.ForcaDeVendas.RadioButton.Secondary">
         <item name="buttonTint">@color/color_control_secondary_selector</item>
     </style>
 </resources>

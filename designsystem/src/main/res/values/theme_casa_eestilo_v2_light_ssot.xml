@@ -232,6 +232,7 @@
     <item name="colorContentHighEmphasisFixedLight">@color/ssotcdbb25cef1e8c3cac7ebd82218316ecb</item>
     <item name="colorContentMediumEmphasisFixedLight">@color/ssot53f3244f47dea56802d285b43adb5cdc</item>
     <item name="colorContentLowEmphasisFixedLight">@color/ssot847f0b6695a182e7d995907d29bc4042</item>
+    <item name="colorInputComponent">@color/ssot44bab0ee542a7a891f00da953ef7edfe</item>
     <item name="borderRadiusNone">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="borderRadiusSmall">@dimen/ssote01661eca1c156941ef9b3d972d887ac</item>
     <item name="borderRadiusMedium">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
