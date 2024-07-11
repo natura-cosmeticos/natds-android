@@ -315,6 +315,7 @@
     <string name="brand_selector_select_brand_text">Selecione uma marca:</string>
     <string name="brand_selector_aesop_text">Aesop</string>
     <string name="brand_selector_casaestilo_text">Casa e Estilo</string>
+    <string name="brand_selector_casaestilov2_text">Casa e Estilo v2</string>
     <string name="brand_selector_avon_text">Avon</string>
     <string name="brand_selector_natura_text">Natura</string>
     <string name="brand_selector_naturaeco_text">NaturaeCo</string>
@@ -323,6 +324,7 @@
     <string name="brand_selector_naturav2_text">Natura v2</string>
     <string name="brand_selector_avonv2_text">Avon v2</string>
     <string name="brand_selector_naturav3_text">Natura v3</string>
+    <string name="brand_selector_forcavendas_text">Força de Vendas</string>
     <string name="alert_with_title">Alert Only Title</string>
     <string name="alert_success">Alert Success</string>
     <string name="alert_success_outlined">Alert Success Outlined</string>

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DS.Dialog.CasaEEstilo" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
+    <style name="Theme.DS.Dialog.CasaEestilo" parent="@style/ThemeOverlay.MaterialComponents.Dialog.Alert">
         <item name="buttonBarStyle">@style/Theme.DS.Dialog.ButtonBarStyle</item>
         <item name="shapeAppearanceOverlay">@style/Theme.DS.Dialog.ShapeAppearanceOverlay</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.CasaEEstilo.Light" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light</item>
+    <style name="Theme.DS.Dialog.Standard.CasaEestilo.Light" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.CasaEEstilo.Light" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light</item>
+    <style name="Theme.DS.Dialog.Alert.CasaEestilo.Light" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.ContainedButtons.CasaEEstilo.Light" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Light</item>
+    <style name="Theme.DS.Dialog.ContainedButtons.CasaEestilo.Light" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.TextButtons.CasaEEstilo.Light" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light</item>
+    <style name="Theme.DS.Dialog.TextButtons.CasaEestilo.Light" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.OutlinedButtons.CasaEEstilo.Light" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Light</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Light</item>
+    <style name="Theme.DS.Dialog.OutlinedButtons.CasaEestilo.Light" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Light</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Light" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Light" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_light</item>
@@ -38,40 +38,40 @@
         <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Light" parent="@style/Widget.DS.Button.TextButton.Light">
+    <style name="Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Light" parent="@style/Widget.DS.Button.TextButton.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>f
 
-    <style name="Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Light" parent="@style/Widget.DS.Button.Outlined.CasaEEstilo.Light">
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Light" parent="@style/Widget.DS.Button.Outlined.CasaEestilo.Light">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.CasaEEstilo.Dark" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark</item>
+    <style name="Theme.DS.Dialog.Standard.CasaEestilo.Dark" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Alert.CasaEEstilo.Dark" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark</item>
+    <style name="Theme.DS.Dialog.Alert.CasaEestilo.Dark" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.ContainedButtons.CasaEEstilo.Dark" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Dark</item>
+    <style name="Theme.DS.Dialog.ContainedButtons.CasaEestilo.Dark" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.TextButtons.CasaEEstilo.Dark" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark</item>
+    <style name="Theme.DS.Dialog.TextButtons.CasaEestilo.Dark" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.OutlinedButtons.CasaEEstilo.Dark" parent="Theme.DS.Dialog.CasaEEstilo">
-        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Dark</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Dark</item>
+    <style name="Theme.DS.Dialog.OutlinedButtons.CasaEestilo.Dark" parent="Theme.DS.Dialog.CasaEestilo">
+        <item name="buttonBarPositiveButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Dark</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Dark</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.ContainedButton.CasaEEstilo.Dark" parent="@style/Widget.MaterialComponents.Button">
+    <style name="Theme.DS.Dialog.Standard.ContainedButton.CasaEestilo.Dark" parent="@style/Widget.MaterialComponents.Button">
         <item name="android:layout_marginStart">?spacingSmall</item>
         <item name="android:layout_marginEnd">?spacingMicro</item>
         <item name="rippleColor">@color/button_ripple_color_dark</item>
@@ -79,65 +79,65 @@
         <item name="backgroundTint">@color/button_contained_background_default_v23</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.TextButton.CasaEEstilo.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
+    <style name="Theme.DS.Dialog.Standard.TextButton.CasaEestilo.Dark" parent="@style/Widget.DS.Button.TextButton.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Theme.DS.Dialog.Standard.OutlinedButton.CasaEEstilo.Dark" parent="@style/Widget.DS.Button.Outlined.CasaEEstilo.Dark">
+    <style name="Theme.DS.Dialog.Standard.OutlinedButton.CasaEestilo.Dark" parent="@style/Widget.DS.Button.Outlined.CasaEestilo.Dark">
         <item name="android:layout_marginStart">?spacingMicro</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.CasaEEstilo.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.DS.RadioButton.CasaEestilo.Primary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_casa_eestilo_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.CasaEEstilo.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.DS.RadioButton.CasaEestilo.Secondary.Light" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_casa_eestilo_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.CasaEEstilo.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.DS.RadioButton.CasaEestilo.Primary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_primary_casa_eestilo_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.RadioButton.CasaEEstilo.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.DS.RadioButton.CasaEestilo.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="buttonTint">@color/color_selector_secondary_casa_eestilo_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.RadioButton.LabelAppearance</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.CasaEEstilo.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBox.CasaEestilo.Primary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_primary_casa_eestilo_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.CasaEEstilo.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBox.CasaEestilo.Primary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_primary_casa_eestilo_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.CasaEEstilo.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBox.CasaEestilo.Secondary.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_secondary_casa_eestilo_light</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBox.CasaEEstilo.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBox.CasaEestilo.Secondary.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_selector_secondary_casa_eestilo_dark</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.CasaEEstilo.Light" parent="Widget.DS.Button.CasaEEstilo.Light">
+    <style name="Widget.DS.ButtonSmall.CasaEestilo.Light" parent="Widget.DS.Button.CasaEestilo.Light">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.CasaEEstilo.Light" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.DS.Button.CasaEestilo.Light" parent="Widget.MaterialComponents.Button">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -146,19 +146,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.CasaEEstilo.Light" parent="Widget.DS.Button.CasaEEstilo.Light">
+    <style name="Widget.DS.ButtonLarge.CasaEestilo.Light" parent="Widget.DS.Button.CasaEestilo.Light">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.CasaEEstilo.Dark" parent="Widget.DS.Button.CasaEEstilo.Dark">
+    <style name="Widget.DS.ButtonSmall.CasaEestilo.Dark" parent="Widget.DS.Button.CasaEestilo.Dark">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.CasaEEstilo.Dark" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.DS.Button.CasaEestilo.Dark" parent="Widget.MaterialComponents.Button">
         <item name="rippleColor">@color/button_ripple_color_dark</item>
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
@@ -168,19 +168,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.CasaEEstilo.Dark" parent="Widget.DS.Button.CasaEEstilo.Dark">
+    <style name="Widget.DS.ButtonLarge.CasaEestilo.Dark" parent="Widget.DS.Button.CasaEestilo.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Outlined.CasaEEstilo.Light" parent="Widget.DS.Button.Outlined.CasaEEstilo.Light">
+    <style name="Widget.DS.ButtonSmall.Outlined.CasaEestilo.Light" parent="Widget.DS.Button.Outlined.CasaEestilo.Light">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Outlined.CasaEEstilo.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.DS.Button.Outlined.CasaEestilo.Light" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -189,19 +189,19 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Outlined.CasaEEstilo.Light" parent="Widget.DS.Button.Outlined.CasaEEstilo.Light">
+    <style name="Widget.DS.ButtonLarge.Outlined.CasaEestilo.Light" parent="Widget.DS.Button.Outlined.CasaEestilo.Light">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
-    <style name="Widget.DS.ButtonSmall.Outlined.CasaEEstilo.Dark" parent="Widget.DS.Button.Outlined.CasaEEstilo.Dark">
+    <style name="Widget.DS.ButtonSmall.Outlined.CasaEestilo.Dark" parent="Widget.DS.Button.Outlined.CasaEestilo.Dark">
         <item name="android:insetTop">?spacingTiny</item>
         <item name="android:insetBottom">?spacingTiny</item>
         <item name="android:minHeight">?sizeSemi</item>
     </style>
 
-    <style name="Widget.DS.Button.Outlined.CasaEEstilo.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.DS.Button.Outlined.CasaEestilo.Dark" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textSize">?buttonLabelFontSize</item>
         <item name="iconPadding">?spacingTiny</item>
         <item name="android:letterSpacing">?buttonLabelLetterSpacing</item>
@@ -210,27 +210,27 @@
         <item name="android:minHeight">?sizeSemiX</item>
     </style>
 
-    <style name="Widget.DS.ButtonLarge.Outlined.CasaEEstilo.Dark" parent="Widget.DS.Button.Outlined.CasaEEstilo.Dark">
+    <style name="Widget.DS.ButtonLarge.Outlined.CasaEestilo.Dark" parent="Widget.DS.Button.Outlined.CasaEestilo.Dark">
         <item name="android:insetTop">?spacingNone</item>
         <item name="android:insetBottom">?spacingNone</item>
         <item name="android:minHeight">?sizeMedium</item>
     </style>
 
     <!--Navigation Drawer-->
-    <style name="Widget.CasaEEstilo.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+    <style name="Widget.CasaEestilo.NavigationView" parent="Widget.MaterialComponents.NavigationView">
         <item name="itemTextAppearance">?textAppearanceBody2</item>
         <item name="itemTextColor">?android:textColorPrimary</item>
         <item name="itemIconTint">?android:textColorPrimary</item>
     </style>
 
     <!--{@deprecated Use Divider component} -->
-    <style name="Widget.CasaEEstilo.Divider">
+    <style name="Widget.CasaEestilo.Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_size_line</item>
         <item name="android:background">?colorControlHighlight</item>
     </style>
 
-    <style name="Widget.CasaEEstilo.SearchView" parent="Widget.AppCompat.SearchView">
+    <style name="Widget.CasaEestilo.SearchView" parent="Widget.AppCompat.SearchView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
         <item name="queryBackground">@null</item>
@@ -241,34 +241,34 @@
         <item name="voiceIcon">@drawable/default_icon_outlined_action_mic</item>
     </style>
 
-    <style name="TextAppearance.CasaEEstilo.Default" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.CasaEestilo.Default" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <style name="TextAppearance.CasaEEstilo.Highlight" parent="TextAppearance.AppCompat">
+    <style name="TextAppearance.CasaEestilo.Highlight" parent="TextAppearance.AppCompat">
         <item name="android:textSize">@dimen/ds_text_big</item>
         <item name="android:textColor">@color/colorHighEmphasis</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <style name="Widget.DS.CheckBoxPrimary.CasaEEstilo.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBoxPrimary.CasaEestilo.Light" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_casa_eestilo_light</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_light</item>
     </style>
 
-    <style name="Widget.DS.CheckBoxPrimary.CasaEEstilo.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.DS.CheckBoxPrimary.CasaEestilo.Dark" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="buttonTint">@color/color_checkbox_primary_casa_eestilo_dark</item>
         <item name="android:textAppearance">@style/Theme.DS.CheckBox.LabelAppearance</item>
         <item name="android:textColor">@color/text_selectors_dark</item>
     </style>
 
-    <style name="Widget.CasaEEstilo"/>
+    <style name="Widget.CasaEestilo"/>
 
     <!-- {@deprecated Use ?toolbarStyle from theme instead.} -->
-    <style name="Widget.CasaEEstilo.Toolbar" parent="Widget.AppCompat.Toolbar">
+    <style name="Widget.CasaEestilo.Toolbar" parent="Widget.AppCompat.Toolbar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/ds_toolbar_height</item>
         <item name="android:background">?android:colorBackground</item>
@@ -279,38 +279,38 @@
     </style>
 
     <!-- {@deprecated Use Widiget.DS.Toolbar.Primary instead.} -->
-    <style name="Widget.CasaEEstilo.Toolbar.Primary">
+    <style name="Widget.CasaEestilo.Toolbar.Primary">
         <item name="android:background">?colorPrimary</item>
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
 
     <!-- {@deprecated Use Widiget.DS.Toolbar.Secondary instead.} -->
-    <style name="Widget.CasaEEstilo.Toolbar.Secondary">
+    <style name="Widget.CasaEestilo.Toolbar.Secondary">
         <item name="android:background">?colorSecondary</item>
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
 
     <!--{@deprecated Use Checkbox component} -->
-    <style name="Widget.CasaEEstilo.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.CasaEestilo.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.CheckBox.CasaEEstilo.Secondary.Light or  Widget.DS.RadioButton.CasaEEstilo.Secondary.Dark Style instead} -->
-    <style name="Widget.CasaEEstilo.CheckBox.Secondary">
+    <!--{@deprecated Use Widget.DS.CheckBox.CasaEestilo.Secondary.Light or  Widget.DS.RadioButton.CasaEestilo.Secondary.Dark Style instead} -->
+    <style name="Widget.CasaEestilo.CheckBox.Secondary">
         <item name="buttonTint">@color/color_control_secondary_selector</item>
     </style>
 
     <!--{@deprecated Use ?radioButtonStyle by theme instead} -->
-    <style name="Widget.CasaEEstilo.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+    <style name="Widget.CasaEestilo.RadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textSize">@dimen/ds_text_small</item>
         <item name="android:textColor">@color/text_color_primary_selector</item>
         <item name="android:fontFamily">@string/font_roboto_regular</item>
     </style>
 
-    <!--{@deprecated Use Widget.DS.RadioButton.CasaEEstilo.Light.Secondary or  Widget.DS.RadioButton.CasaEEstilo.Dark.Secondary Style instead} -->
-    <style name="Widget.CasaEEstilo.RadioButton.Secondary">
+    <!--{@deprecated Use Widget.DS.RadioButton.CasaEestilo.Light.Secondary or  Widget.DS.RadioButton.CasaEestilo.Dark.Secondary Style instead} -->
+    <style name="Widget.CasaEestilo.RadioButton.Secondary">
         <item name="buttonTint">@color/color_control_secondary_selector</item>
     </style>
 </resources>

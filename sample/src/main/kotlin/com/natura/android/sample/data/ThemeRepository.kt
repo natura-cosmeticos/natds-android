@@ -31,6 +31,9 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Light
             "avon_v2" -> R.style.Theme_Avon_v2_Light
             "natura_v3" -> R.style.Theme_Natura_v3_Light
+            "casaeestilo" -> R.style.Theme_CasaEestilo_Light
+            "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Light
+            "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -44,6 +47,9 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Dark
             "avon_v2" -> R.style.Theme_Avon_v2_Dark
             "natura_v3" -> R.style.Theme_Natura_v3_Dark
+            "casaeestilo" -> R.style.Theme_CasaEestilo_Dark
+            "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Dark
+            "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -57,6 +63,9 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Light_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Light_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Light_NoActionBar
+            "casaeestilo" -> R.style.Theme_CasaEestilo_Light_NoActionBar
+            "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Light_NoActionBar
+            "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -70,6 +79,9 @@ class ThemeRepository(context: Context) {
             "natura_v2" -> R.style.Theme_Natura_v2_Dark_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Dark_NoActionBar
             "natura_v3" -> R.style.Theme_Natura_v3_Dark_NoActionBar
+            "casaeestilo" -> R.style.Theme_CasaEestilo_Dark_NoActionBar
+            "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Dark_NoActionBar
+            "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }

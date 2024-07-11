@@ -279,9 +279,6 @@
     <item name="buttonLabelLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
     <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
     <item name="buttonBorderRadius">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
-    <item name="buttonElevation">@dimen/ssot334c4a4c42fdb79d7ebc3e73b517e6f8</item>
-    <item name="buttonPaddingX">@dimen/ssot9a2af777528e7da0358e7be79a4981c2</item>
-    <item name="buttonTextTransform">@dimen/ssot580b786b1209905b9d0d8843b306dee0</item>
     <item name="cardBorderRadiusEnable">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
     <item name="cardBorderRadiusDisable">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
@@ -572,5 +569,6 @@
     <item name="typographyBodyRegularFontWeight">sans-serif</item>
     <item name="typographyBodyBoldFontWeight">sans-serif-bold</item>
     <item name="typographyFallbackFontWeight">sans-serif</item>
+    <item name="buttonTextTransform">uppercased</item>
   </style>
 </resources>

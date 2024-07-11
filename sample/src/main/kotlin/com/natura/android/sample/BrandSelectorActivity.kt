@@ -39,6 +39,9 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
             binding.naturaV2ThemeButton.id -> openSampleBy(NATURAV2)
             binding.avonV2ThemeButton.id -> openSampleBy(AVONV2)
             binding.naturaV3ThemeButton.id -> openSampleBy(NATURAV3)
+            binding.casaestiloThemeButton.id -> openSampleBy(CASAEESTILO)
+            binding.casaestiloV2ThemeButton.id -> openSampleBy(CASAEESTILOV2)
+            binding.forcavendasThemeButton.id -> openSampleBy(FORCAVENDAS)
             else -> openSampleBy(NATURA)
         }
     }
@@ -50,6 +53,9 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         binding.naturaV2ThemeButton.setOnClickListener(this)
         binding.avonV2ThemeButton.setOnClickListener(this)
         binding.naturaV3ThemeButton.setOnClickListener(this)
+        binding.casaestiloThemeButton.setOnClickListener(this)
+        binding.casaestiloV2ThemeButton.setOnClickListener(this)
+        binding.forcavendasThemeButton.setOnClickListener(this)
     }
 
     private fun openSampleBy(brandTheme: String) {
@@ -65,5 +71,8 @@ class BrandSelectorActivity : AppCompatActivity(), View.OnClickListener {
         const val AVONV2 = "avon_v2"
         const val NATURAV3 = "natura_v3"
         const val CONSULTORIABELEZA = "consultoria"
+        const val CASAEESTILO = "casaeestilo"
+        const val CASAEESTILOV2 = "casaeestilo_v2"
+        const val FORCAVENDAS = "forcadevendas"
     }
 }
