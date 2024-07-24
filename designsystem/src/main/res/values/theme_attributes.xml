@@ -89,6 +89,7 @@
   <attr name="buttonLabelPrimaryFontWeight" format="string" />  
   <attr name="buttonLabelFallbackFontWeight" format="string" />  
   <attr name="buttonBorderRadius" format="dimension" />
+  <attr name="iconButtonBorderRadius" format="dimension" />
   <attr name="buttonContainedColorEnableBackground" format="color" />
   <attr name="buttonContainedColorEnableBorder" format="color" />
   <attr name="buttonContainedColorEnableLabel" format="color" />

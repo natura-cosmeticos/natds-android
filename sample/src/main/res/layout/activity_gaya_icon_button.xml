@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/ds_spacing_small"
+        android:paddingEnd="@dimen/ds_spacing_small"
+        android:paddingBottom="@dimen/ds_spacing_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/h5Sample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="FILLED"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="6">
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="primary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onPrimary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="secondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onSecondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="neutral"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="inverse"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="filled"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OUTLINED"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="6">
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="primary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onPrimary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="secondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onSecondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="neutral"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="inverse"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="outlined"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GHOST"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="6">
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="primary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onPrimary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="secondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onSecondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="neutral"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="inverse"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="ghost"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TONAL"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="6">
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="primary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onPrimary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="secondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onSecondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="neutral"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="inverse"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                app:gibt_type="tonal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DISABLED"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro"
+            android:weightSum="4">
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="primary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                android:enabled="false"
+                app:gibt_type="filled"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onPrimary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                android:enabled="false"
+                app:gibt_type="outlined"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="secondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                android:enabled="false"
+                app:gibt_type="ghost"/>
+
+            <com.natura.android.iconButton.GaYaIconButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:gibt_color="onSecondary"
+                app:gibt_iconName="outlined_default_mockup"
+                app:gibt_size="medium"
+                android:layout_weight="1"
+                android:enabled="false"
+                app:gibt_type="tonal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIZES"
+                android:layout_marginEnd="2dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+        <com.natura.android.iconButton.GaYaIconButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gibt_color="primary"
+            app:gibt_iconName="outlined_default_mockup"
+            app:gibt_size="small"
+            app:gibt_type="filled"/>
+
+        <com.natura.android.iconButton.GaYaIconButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gibt_color="primary"
+            app:gibt_iconName="outlined_default_mockup"
+            app:gibt_size="medium"
+            app:gibt_type="filled"/>
+
+        <com.natura.android.iconButton.GaYaIconButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gibt_color="primary"
+            app:gibt_iconName="outlined_default_mockup"
+            app:gibt_size="large"
+            app:gibt_type="filled"/>
+
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PROGRAMMATICALLY"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

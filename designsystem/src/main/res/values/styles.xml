@@ -418,7 +418,16 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Widget.DS.GaYaIconButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="Widget.DS.IconButton.Enabled" parent="Widget.DS.IconButton">
+        <item name="rippleDrawable">@drawable/iconbutton_ripple_background_default</item>
+    </style>
+
+    <style name="Widget.DS.GaYaIconButton.Enabled" parent="Widget.DS.GaYaIconButton">
         <item name="rippleDrawable">@drawable/iconbutton_ripple_background_default</item>
     </style>
 

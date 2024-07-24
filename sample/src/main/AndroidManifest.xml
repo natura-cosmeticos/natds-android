@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".components.GaYaIconButtonActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
             android:name=".components.GaYaChipActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
