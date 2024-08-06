@@ -8,13 +8,13 @@
         android:pathData="M0,0h113.15v32.41h-113.15z"/>
     <path
         android:pathData="M35.55,22.97H33.73V32.2H35.55V22.97Z"
-        android:fillColor="#111111"/>
+        android:fillColor="#EC1556"/>
     <path
         android:pathData="M35.55,13.74H33.73V22.97H35.55V13.74Z"
-        android:fillColor="#111111"/>
+        android:fillColor="#D11437"/>
     <path
         android:pathData="M35.55,4.51H33.73V13.74H35.55V4.51Z"
-        android:fillColor="#111111"/>
+        android:fillColor="#F26F28"/>
     <path
         android:pathData="M3.14,15.29C4.75,15.29 5.49,16.31 5.49,17.3V19.46H4.48V17.3C4.48,16.67 4.13,15.68 3.14,15.68C2.17,15.68 1.81,16.67 1.81,17.3C1.81,17.91 1.8,19.46 1.8,19.46H0.79V17.3C0.79,16.31 1.54,15.29 3.14,15.29Z"
         android:fillColor="#111111"/>

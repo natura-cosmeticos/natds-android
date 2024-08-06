@@ -189,13 +189,22 @@ class GaYaIconButton @JvmOverloads constructor(
 
         if (!isEnabled) {
             backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-            backgroundDrawable.setColor(getColorTokenFromTheme(context, R.attr.colorSurfaceDisabled))
             backgroundDrawable.setStroke(0, ResourcesCompat.getColor(resources, android.R.color.transparent, null))
-            binding.iconButtonContainer.background = backgroundDrawable
-            binding.iconButtonIcon.setColorFilter(
-                getColorTokenFromTheme(context, R.attr.colorOnSurfaceDisabled), android.graphics.PorterDuff.Mode.SRC_IN)
             binding.iconButtonRippleBackground.isClickable = false
             binding.iconButtonRippleBackground.background = null
+
+            if (type == GaYaIconButtonType.Ghost.value) {
+                backgroundDrawable.setColor(ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+                binding.iconButtonContainer.background = backgroundDrawable
+                binding.iconButtonIcon.setColorFilter(
+                    getColorTokenFromTheme(context, R.attr.colorContentDisabled), android.graphics.PorterDuff.Mode.SRC_IN)
+            }
+            else {
+                backgroundDrawable.setColor(getColorTokenFromTheme(context, R.attr.colorSurfaceDisabled))
+                binding.iconButtonContainer.background = backgroundDrawable
+                binding.iconButtonIcon.setColorFilter(
+                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceDisabled), android.graphics.PorterDuff.Mode.SRC_IN)
+            }
         } else {
             binding.iconButtonRippleBackground.background =
                 ResourcesCompat.getDrawable(context.resources, R.drawable.iconbutton_ripple_background_default, context.theme)
