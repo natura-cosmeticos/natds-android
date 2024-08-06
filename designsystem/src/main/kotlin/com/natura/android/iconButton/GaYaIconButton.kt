@@ -10,10 +10,9 @@ import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.content.res.getStringOrThrow
 import com.natura.android.R
-import com.natura.android.databinding.GayaiconbuttonBinding
 import com.natura.android.badge.GaYaBadgeDrawable
+import com.natura.android.databinding.GayaiconbuttonBinding
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
@@ -33,19 +32,19 @@ class GaYaIconButton @JvmOverloads constructor(
             setIcon(value)
         }
 
-    var color: Int? = null
+    var color: Int = GaYaIconButtonColor.Primary.value
         set(value) {
             field = value
             configureAppearance(getDrawable())
         }
 
-    var size: Int = 0
+    var size: Int = GaYaIconButtonSize.Medium.value
         set(value) {
             field = value
             configureSize()
         }
 
-    var type: Int = 0
+    var type: Int = GaYaIconButtonType.Filled.value
         set(value) {
             field = value
             configureAppearance(getDrawable())
@@ -63,8 +62,8 @@ class GaYaIconButton @JvmOverloads constructor(
             configureNotification()
         }
 
-    var notifyColor: Int = 0
-    var notifyPosition: Int = 0
+    var notifyColor: Int = GaYaIconButtonNotifyColor.Alert.value
+    var notifyPosition: Int = GaYaIconButtonNotifyPosition.EndTop.value
 
     private var binding: GayaiconbuttonBinding
 
@@ -72,10 +71,11 @@ class GaYaIconButton @JvmOverloads constructor(
         try {
             binding = GayaiconbuttonBinding.inflate(LayoutInflater.from(context), this, true)
         } catch (e: Exception) {
-            throw (MissingThemeException())
+            throw MissingThemeException()
         }
 
-        iconButtonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.GaYaIconButton)
+        iconButtonAttributesArray =
+            context.obtainStyledAttributes(attrs, R.styleable.GaYaIconButton)
         getAttributes()
         iconButtonAttributesArray.recycle()
 
@@ -93,8 +93,14 @@ class GaYaIconButton @JvmOverloads constructor(
             type = getInt(R.styleable.GaYaIconButton_gibt_type, GaYaIconButtonType.Filled.value)
             isEnabledButton = getBoolean(R.styleable.GaYaIconButton_android_enabled, true)
             notify = getInt(R.styleable.GaYaIconButton_gibt_notify, 0)
-            notifyPosition = getInt(R.styleable.GaYaIconButton_gibt_notifyPosition, GaYaIconButtonNotifyPosition.EndTop.value)
-            notifyColor = getResourceId(R.styleable.GaYaIconButton_gibt_notifyColor, GaYaIconButtonNotifyColor.Alert.value)
+            notifyPosition = getInt(
+                R.styleable.GaYaIconButton_gibt_notifyPosition,
+                GaYaIconButtonNotifyPosition.EndTop.value
+            )
+            notifyColor = getResourceId(
+                R.styleable.GaYaIconButton_gibt_notifyColor,
+                GaYaIconButtonNotifyColor.Alert.value
+            )
         }
 
         configureEnabled()
@@ -123,24 +129,32 @@ class GaYaIconButton @JvmOverloads constructor(
                 else -> R.attr.sizeSemi
             }
 
-            val containerlayoutParams = binding.iconButtonContainer.layoutParams
-            containerlayoutParams.height = getDimenFromTheme(context, sizeContainer).toInt()
-            containerlayoutParams.width = getDimenFromTheme(context, sizeContainer).toInt()
-            binding.iconButtonContainer.layoutParams = containerlayoutParams
+            val containerLayoutParams = binding.iconButtonContainer.layoutParams
+            containerLayoutParams.height = getDimenFromTheme(context, sizeContainer).toInt()
+            containerLayoutParams.width = getDimenFromTheme(context, sizeContainer).toInt()
+            binding.iconButtonContainer.layoutParams = containerLayoutParams
 
             val iconLayoutParams = binding.iconButtonIcon.layoutParams
             iconLayoutParams.height = getDimenFromTheme(context, sizeIcon).toInt()
             iconLayoutParams.width = getDimenFromTheme(context, sizeIcon).toInt()
             binding.iconButtonIcon.layoutParams = iconLayoutParams
         } catch (e: Exception) {
-            throw (MissingThemeException())
+            throw MissingThemeException()
         }
     }
 
     private fun configureNotification() {
         if (notify > 0) {
             binding.iconButtonBadgeContainer.visibility = View.VISIBLE
-            GaYaBadgeDrawable(context, notify, binding.iconButtonBadgeContainer.drawable, 0, notifyColor, 0, false)
+            GaYaBadgeDrawable(
+                context,
+                notify,
+                binding.iconButtonBadgeContainer.drawable,
+                0,
+                notifyColor,
+                0,
+                false
+            )
 
             val layoutParams = binding.iconButtonBadgeContainer.layoutParams as LayoutParams
 
@@ -149,14 +163,17 @@ class GaYaIconButton @JvmOverloads constructor(
                     layoutParams.endToEnd = LayoutParams.PARENT_ID
                     layoutParams.topToTop = LayoutParams.PARENT_ID
                 }
+
                 GaYaIconButtonNotifyPosition.EndBottom.value -> {
                     layoutParams.endToEnd = LayoutParams.PARENT_ID
                     layoutParams.bottomToBottom = LayoutParams.PARENT_ID
                 }
+
                 GaYaIconButtonNotifyPosition.StartBottom.value -> {
                     layoutParams.startToStart = LayoutParams.PARENT_ID
                     layoutParams.bottomToBottom = LayoutParams.PARENT_ID
                 }
+
                 GaYaIconButtonNotifyPosition.StartTop.value -> {
                     layoutParams.startToStart = LayoutParams.PARENT_ID
                     layoutParams.topToTop = LayoutParams.PARENT_ID
@@ -168,7 +185,11 @@ class GaYaIconButton @JvmOverloads constructor(
     }
 
     private fun getDrawable(): GradientDrawable {
-        val backgroundDrawable = ResourcesCompat.getDrawable(context.resources, R.drawable.gayaiconbutton_background, null)
+        val backgroundDrawable = ResourcesCompat.getDrawable(
+            context.resources,
+            R.drawable.gayaiconbutton_background,
+            null
+        )
 
         if (backgroundDrawable is LayerDrawable) {
             val layer = backgroundDrawable.findDrawableByLayerId(R.id.background_shape)
@@ -188,26 +209,48 @@ class GaYaIconButton @JvmOverloads constructor(
         setIcon(iconName)
 
         if (!isEnabled) {
-            backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-            backgroundDrawable.setStroke(0, ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+            backgroundDrawable.cornerRadius =
+                getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
+            backgroundDrawable.setStroke(
+                0,
+                ResourcesCompat.getColor(resources, android.R.color.transparent, null)
+            )
             binding.iconButtonRippleBackground.isClickable = false
             binding.iconButtonRippleBackground.background = null
 
             if (type == GaYaIconButtonType.Ghost.value) {
-                backgroundDrawable.setColor(ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+                backgroundDrawable.setColor(
+                    ResourcesCompat.getColor(
+                        resources,
+                        android.R.color.transparent,
+                        null
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentDisabled), android.graphics.PorterDuff.Mode.SRC_IN)
-            }
-            else {
-                backgroundDrawable.setColor(getColorTokenFromTheme(context, R.attr.colorSurfaceDisabled))
+                    getColorTokenFromTheme(context, R.attr.colorContentDisabled),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
+            } else {
+                backgroundDrawable.setColor(
+                    getColorTokenFromTheme(
+                        context,
+                        R.attr.colorSurfaceDisabled
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceDisabled), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceDisabled),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
         } else {
             binding.iconButtonRippleBackground.background =
-                ResourcesCompat.getDrawable(context.resources, R.drawable.iconbutton_ripple_background_default, context.theme)
+                ResourcesCompat.getDrawable(
+                    context.resources,
+                    R.drawable.iconbutton_ripple_background_default,
+                    context.theme
+                )
 
             when (type) {
                 GaYaIconButtonType.Filled.value -> configureFilledIconButton(backgroundDrawable)
@@ -220,189 +263,401 @@ class GaYaIconButton @JvmOverloads constructor(
 
     private fun configureFilledIconButton(backgroundDrawable: GradientDrawable) {
         backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-        backgroundDrawable.setStroke(0, ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+        backgroundDrawable.setStroke(
+            0,
+            ResourcesCompat.getColor(resources, android.R.color.transparent, null)
+        )
 
         when (color) {
             GaYaIconButtonColor.Primary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnPrimary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_on_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_on_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorNeutral900), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorNeutral900),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Secondary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_secondary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSecondary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSecondary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnSecondary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_on_secondary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_on_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorNeutral900), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorNeutral900),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Neutral.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_neutral_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_neutral_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceDark), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceDark),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Inverse.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_inverse_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_inverse_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceFixedLight), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceFixedLight),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             else -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_filled_background_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_filled_background_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
         }
-
     }
 
     private fun configureOutlinedIconButton(backgroundDrawable: GradientDrawable) {
         backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-        backgroundDrawable.setColor(ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+        backgroundDrawable.setColor(
+            ResourcesCompat.getColor(
+                resources,
+                android.R.color.transparent,
+                null
+            )
+        )
 
         when (color) {
             GaYaIconButtonColor.Primary.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_primary_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnPrimary.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_on_primary_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_on_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Secondary.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_secondary_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnSecondary.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_on_secondary_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_on_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSecondary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSecondary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Neutral.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_neutral_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_neutral_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Inverse.value -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_inverse_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_inverse_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceFixedLight), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSurfaceFixedLight),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             else -> {
-                backgroundDrawable.setStroke(2, ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_primary_v23))
+                backgroundDrawable.setStroke(
+                    2,
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_outlined_stroke_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
         }
     }
 
     private fun configureGhostIconButton(backgroundDrawable: GradientDrawable) {
         backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-        backgroundDrawable.setColor(ResourcesCompat.getColor(resources, android.R.color.transparent, null))
-        backgroundDrawable.setStroke(0, ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+        backgroundDrawable.setColor(
+            ResourcesCompat.getColor(
+                resources,
+                android.R.color.transparent,
+                null
+            )
+        )
+        backgroundDrawable.setStroke(
+            0,
+            ResourcesCompat.getColor(resources, android.R.color.transparent, null)
+        )
         binding.iconButtonContainer.background = backgroundDrawable
 
         when (color) {
             GaYaIconButtonColor.Primary.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnPrimary.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Secondary.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorSecondary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorSecondary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnSecondary.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSecondary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSecondary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Neutral.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Inverse.value -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighlightFixedLight), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighlightFixedLight),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             else -> {
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorPrimary), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorPrimary),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
         }
     }
 
     private fun configureTonalIconButton(backgroundDrawable: GradientDrawable) {
         backgroundDrawable.cornerRadius = getDimenFromTheme(context, R.attr.iconButtonBorderRadius)
-        backgroundDrawable.setStroke(0, ResourcesCompat.getColor(resources, android.R.color.transparent, null))
+        backgroundDrawable.setStroke(
+            0,
+            ResourcesCompat.getColor(resources, android.R.color.transparent, null)
+        )
 
         when (color) {
             GaYaIconButtonColor.Primary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLightest), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLightest),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnPrimary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_on_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_on_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLight), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLight),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Secondary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_secondary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSecondaryLightest), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSecondaryLightest),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.OnSecondary.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_on_secondary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_on_secondary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnSecondaryLight), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnSecondaryLight),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Neutral.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_neutral_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_neutral_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorContentHighEmphasis),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             GaYaIconButtonColor.Inverse.value -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_inverse_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_inverse_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorNeutral0), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorNeutral0),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
+
             else -> {
-                backgroundDrawable.setColor(ContextCompat.getColorStateList(context, R.color.gayabutton_tonal_background_primary_v23))
+                backgroundDrawable.setColor(
+                    ContextCompat.getColorStateList(
+                        context,
+                        R.color.gayabutton_tonal_background_primary_v23
+                    )
+                )
                 binding.iconButtonContainer.background = backgroundDrawable
                 binding.iconButtonIcon.setColorFilter(
-                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLightest), android.graphics.PorterDuff.Mode.SRC_IN)
+                    getColorTokenFromTheme(context, R.attr.colorOnPrimaryLightest),
+                    android.graphics.PorterDuff.Mode.SRC_IN
+                )
             }
         }
     }
