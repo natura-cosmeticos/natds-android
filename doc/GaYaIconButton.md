@@ -50,11 +50,11 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
 
    - **Código**:
      ```xml
-    <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_type="outlined"/>
+      <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_type="outlined"/>
      ```
 
 **3. Ghost**
@@ -65,11 +65,11 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
 
    - **Código**:
      ```xml
-     <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_type="ghost"/>
+       <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_type="ghost"/>
      ```
      
 **4. Tonal**
@@ -80,11 +80,11 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
 
    - **Código**:
      ```xml
-     <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_type="tonal"/>
+       <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_type="tonal"/>
      ```
 
 ## Cores
@@ -130,55 +130,55 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
 **Tamanhos Disponíveis**
 
 <p align="center">
-  <img alt="1" src="./images/gayaiconbutton_sizes.png" width="40%"> 
+  <img alt="1" src="./images/gayaiconbutton_sizes.png" width="15%"> 
 </p>
 
    - **Small, Medium e Large**
      - Ajuste o tamanho para adequar-se ao contexto de uso.
      
      ```xml
-    <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_color="primary"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_size="small"
-        app:gibt_type="filled"/>
-
-    <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_color="primary"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_size="medium"
-        app:gibt_type="filled"/>
-
-    <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_color="primary"
-        app:gibt_iconName="outlined_default_mockup"
-        app:gibt_size="large"
-        app:gibt_type="filled"/>
+      <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_color="primary"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_size="small"
+          app:gibt_type="filled"/>
+  
+      <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_color="primary"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_size="medium"
+          app:gibt_type="filled"/>
+  
+      <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_color="primary"
+          app:gibt_iconName="outlined_default_mockup"
+          app:gibt_size="large"
+          app:gibt_type="filled"/>
 
      ```
 
 **Ativação**
 
 <p align="center">
-  <img alt="1" src="./images/gayabutton_disabled.png" width="40%"> 
+  <img alt="1" src="./images/gayaiconbutton_disabled.png" width="30%"> 
 </p>
 
    - **Habilitar/Desabilitar Botão**
      - Gerencie se o botão pode ser interagido pelo usuário.
      
      ```xml
-    <com.natura.android.iconButton.GaYaIconButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gibt_iconName="outlined_default_mockup"
-        android:enabled="false"
-        app:gibt_type="filled"/>
+      <com.natura.android.iconButton.GaYaIconButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gibt_iconName="outlined_default_mockup"
+          android:enabled="false"
+          app:gibt_type="filled"/>
      ```
 
 ## Programaticamente
