@@ -31,33 +31,33 @@ Para começar a usar o `GaYaShortcut`, siga as instruções abaixo para configur
 **1. Standard**
 
 <p align="center">
-  <img alt="1" src="./images/gayashortcut_standard.png" width="40%"> 
+  <img alt="1" src="./images/gayashortcut_standard.png" width="15%"> 
 </p>
 
    - **Código**:
      ```xml
-    <com.natura.android.shortcut.GaYaShortcut
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gshc_style="standard"
-        app:gshc_icon="outlined_default_mockup"
-        app:gshc_label="Standard"/>
+      <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gshc_style="standard"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="Standard"/>
      ```
 
 **2. Inline**
 
 <p align="center">
-  <img alt="1" src="./images/gayashortcut_inline.png" width="40%"> 
+  <img alt="1" src="./images/gayashortcut_inline.png" width="15%"> 
 </p>
 
    - **Código**:
      ```xml
-    <com.natura.android.shortcut.GaYaShortcut
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gshc_style="inline"
-        app:gshc_icon="outlined_default_mockup"
-        app:gshc_label="Inline"/>
+      <com.natura.android.shortcut.GaYaShortcut
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gshc_style="inline"
+          app:gshc_icon="outlined_default_mockup"
+          app:gshc_label="Inline"/>
      ```
 
 
@@ -71,12 +71,12 @@ Para começar a usar o `GaYaShortcut`, siga as instruções abaixo para configur
 
    - **Código**:
      ```xml
-    <com.natura.android.shortcut.GaYaShortcut
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gshc_icon="outlined_default_mockup"
-        app:gshc_label="Primary"
-        app:gshc_type="filled"/>
+      <com.natura.android.shortcut.GaYaShortcut
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gshc_icon="outlined_default_mockup"
+          app:gshc_label="Primary"
+          app:gshc_type="filled"/>
      ```
 
 **2. Outlined**
@@ -87,12 +87,12 @@ Para começar a usar o `GaYaShortcut`, siga as instruções abaixo para configur
 
    - **Código**:
      ```xml
-    <com.natura.android.shortcut.GaYaShortcut
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gshc_icon="outlined_default_mockup"
-        app:gshc_label="Primary"
-        app:gshc_type="outlined"/>
+      <com.natura.android.shortcut.GaYaShortcut
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gshc_icon="outlined_default_mockup"
+          app:gshc_label="Primary"
+          app:gshc_type="outlined"/>
      ```
      
 **3. Tonal**
@@ -103,12 +103,12 @@ Para começar a usar o `GaYaShortcut`, siga as instruções abaixo para configur
 
    - **Código**:
      ```xml
-    <com.natura.android.shortcut.GaYaShortcut
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:gshc_icon="outlined_default_mockup"
-        app:gshc_label="Primary"
-        app:gshc_type="tonal"/>
+      <com.natura.android.shortcut.GaYaShortcut
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          app:gshc_icon="outlined_default_mockup"
+          app:gshc_label="Primary"
+          app:gshc_type="tonal"/>
      ```
 
 ## Cores
@@ -182,12 +182,12 @@ Para começar a usar o `GaYaShortcut`, siga as instruções abaixo para configur
             label = "Standard"
         }
 
-        val gayaShortcutInline = GaYaShortcut(this).apply {
-            iconName = "filled_action_rating"
-            color = GaYaShortcutColor.Primary.value
-            type = GaYaShortcutType.Outlined.value
-            style = GaYaShortcutStyle.Inline.value
-            label = "Inline"
+     val gayaShortcutInline = GaYaShortcut(this).apply {
+           iconName = "filled_action_rating"
+           color = GaYaShortcutColor.Primary.value
+           type = GaYaShortcutType.Outlined.value
+           style = GaYaShortcutStyle.Inline.value
+           label = "Inline"
         }
      ```
 
