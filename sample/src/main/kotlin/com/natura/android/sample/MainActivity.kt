@@ -28,6 +28,7 @@ import com.natura.android.sample.components.AlertActivity
 import com.natura.android.sample.components.GaYaButtonActivity
 import com.natura.android.sample.components.GaYaChipActivity
 import com.natura.android.sample.components.GaYaIconButtonActivity
+import com.natura.android.sample.components.GaYaShortcutActivity
 import com.natura.android.sample.components.SnackbarActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
 import com.natura.android.sample.databinding.ActivityMainBinding
@@ -213,6 +214,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnGaYaIconButton.setOnClickListener {
             startActivity(Intent(this, GaYaIconButtonActivity::class.java))
+        }
+
+        binding.gayaShortcutButton.setOnClickListener {
+            startActivity(Intent(this, GaYaShortcutActivity::class.java))
         }
     }
 }

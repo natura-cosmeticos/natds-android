@@ -93,7 +93,7 @@ class Divider @JvmOverloads constructor(
         try {
             typeAttribute = dividerAttributesArray.getIntOrThrow(R.styleable.DividerLine_dividerType)
         } catch (e: Exception) {
-            throw (IllegalArgumentException("⚠️ ⚠️ Missing divider required argument. You MUST set the divider type.", e))
+            throw (IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Missing divider required argument. You MUST set the divider type.", e))
         }
     }
 

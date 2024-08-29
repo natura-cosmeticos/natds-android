@@ -193,7 +193,7 @@ class Shortcut @JvmOverloads constructor(
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
-                    "⚠️ ⚠️ Missing shortcut required argument. You MUST set the shortcut icon(drawable).",
+                    "⚠️ ⚠️ GaYaIssue: Missing shortcut required argument. You MUST set the shortcut icon(drawable).",
                     e
                 )
                 )

@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file. See [standa
 - filled-content-bathtub
 - filled-content-childfriendly
 - filled-content-design
+- filled-content-dropper
 - filled-content-gymdumbbell
 - filled-content-hairbeard
 - filled-content-house
@@ -41,7 +42,6 @@ All notable changes to this project will be documented in this file. See [standa
 - filled-product-combcream
 - filled-product-conditioner
 - filled-product-deodorantrollon
-- filled-product-dropper
 - filled-product-haircream
 - filled-product-hairdresser
 - filled-product-hairgel
@@ -60,6 +60,7 @@ All notable changes to this project will be documented in this file. See [standa
 - outlined-content-bathtub
 - outlined-content-childfriendly
 - outlined-content-design
+- outlined-content-dropper
 - outlined-content-gymdumbbell
 - outlined-content-hairbeard
 - outlined-content-house
@@ -87,7 +88,6 @@ All notable changes to this project will be documented in this file. See [standa
 - outlined-product-combcream
 - outlined-product-conditioner
 - outlined-product-deodorantrollon
-- outlined-product-dropper
 - outlined-product-haircream
 - outlined-product-hairdresser
 - outlined-product-hairgel

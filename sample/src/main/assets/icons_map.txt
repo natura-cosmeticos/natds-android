@@ -49,6 +49,7 @@ filled_content_channel
 filled_content_childfriendly
 filled_content_design
 filled_content_divulgation
+filled_content_dropper
 filled_content_gauge
 filled_content_gymdumbbell
 filled_content_hairbeard
@@ -141,7 +142,6 @@ filled_product_combcream
 filled_product_conditioner
 filled_product_cube
 filled_product_deodorantrollon
-filled_product_dropper
 filled_product_fashion
 filled_product_haircream
 filled_product_hairdresser
@@ -266,6 +266,7 @@ outlined_content_cloud
 outlined_content_consistency
 outlined_content_design
 outlined_content_divulgation
+outlined_product_dropper
 outlined_content_education
 outlined_content_emptybag
 outlined_content_exchangereports
@@ -434,7 +435,6 @@ outlined_product_conditioner
 outlined_product_cube
 outlined_product_dailycare
 outlined_product_deodorantrollon
-outlined_product_dropper
 outlined_product_ekos
 outlined_product_erlenmeyer
 outlined_product_face

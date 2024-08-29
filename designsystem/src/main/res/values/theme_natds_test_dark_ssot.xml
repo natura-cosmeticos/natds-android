@@ -298,6 +298,7 @@
     <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
     <item name="buttonBorderRadius">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="iconButtonBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
+    <item name="gayaShortcutBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="cardBorderRadiusEnable">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
     <item name="cardBorderRadiusDisable">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
@@ -359,7 +360,7 @@
     <item name="shortcutLabelFontSize">@dimen/ssotc44d0948764dbf2c5666b7e8309c73cb</item>
     <item name="shortcutLabelLetterSpacing">@dimen/ssot40f3f3640647251fc4da2ce46193df95</item>
     <item name="shortcutLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
-    <item name="shortcutBorderRadius">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
+    <item name="shortcutBorderRadius">@dimen/ssotb2e58d95bc14033e9c81ec99f6dc74c8</item>
     <item name="snackbarContentFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
     <item name="snackbarContentLetterSpacing">@dimen/ssot2428a4883e5dc1b29352d505666ccadf</item>
     <item name="snackbarContentLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>

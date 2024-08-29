@@ -1,0 +1,78 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shortcutMainContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:tag="inline">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shortcutContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/shortcutRippleBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/chip_ripple_background"
+            android:elevation="?elevation04"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/shortcutBackground" />
+
+        <LinearLayout
+            android:id="@+id/shortcutBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="?sizeMediumX"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/ds_spacing_small"
+            android:paddingHorizontal="?spacingTiny"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/shortCutIcon"
+                android:layout_width="?sizeSemi"
+                android:layout_height="?sizeSemi"
+                tools:srcCompat="@drawable/default_icon_outlined_default_mockup" />
+
+            <TextView
+                android:id="@+id/shortCutLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:autoSizeTextType="uniform"
+                android:ellipsize="end"
+                android:maxWidth="?sizeHuge"
+                android:maxLines="1"
+                android:textAppearance="?textAppearanceCaption"
+                tools:text="Contained big label to check the behavior" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/notifyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="?elevation02"
+        android:src="@drawable/icon_button_base_badge"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/shortcutContainer"
+        app:layout_constraintTop_toTopOf="@id/shortcutContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

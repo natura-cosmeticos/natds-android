@@ -23,7 +23,7 @@ fun getStringFromTheme(context: Context, attrId: Int): String {
     if (context.theme.resolveAttribute(attrId, value, true)) {
         return value.string.toString()
     } else {
-        throw IllegalArgumentException("Attribute not found or not a boolean")
+        throw IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Attribute not found or not a boolean")
     }
 }
 
@@ -31,7 +31,7 @@ fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
     val value = TypedValue()
     context.theme.resolveAttribute(attributeName, value, true)
     val imageResId = value.resourceId
-    return ContextCompat.getDrawable(context, imageResId) ?: throw IllegalArgumentException("Cannot load drawable $imageResId")
+    return ContextCompat.getDrawable(context, imageResId) ?: throw IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Cannot load drawable $imageResId")
 }
 
 fun getFontFromTheme(context: Context, fontPrimary: Int, fontFallback: Int): Typeface {

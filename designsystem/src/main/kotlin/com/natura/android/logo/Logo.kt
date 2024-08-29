@@ -115,7 +115,7 @@ class Logo @JvmOverloads constructor(
     private fun getDrawableAttr(attributeName: String): Int {
         val resourceId = context.resources.getIdentifier(attributeName, "attr", context.packageName)
         if (resourceId == 0) {
-            throw IllegalArgumentException("Attribute not found: $attributeName")
+            throw IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Attribute not found: $attributeName")
         }
         return resourceId
     }

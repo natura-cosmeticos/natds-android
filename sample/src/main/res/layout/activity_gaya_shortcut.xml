@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/ds_spacing_small"
+        android:paddingStart="@dimen/ds_spacing_small"
+        android:paddingEnd="@dimen/ds_spacing_small"
+        android:paddingBottom="@dimen/ds_spacing_large">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="FILLED"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="secondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Secondary"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onSecondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onSecondary"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="filled"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="filled"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="filled"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:weightSum="2">
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="secondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="Secondary"
+            app:gshc_type="filled"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="onSecondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="onSecondary"
+            app:gshc_type="filled"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="filled"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="filled"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_large"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="OUTLINED"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="secondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Secondary"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onSecondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onSecondary"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="outlined"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="outlined"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="outlined"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:weightSum="2">
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="secondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="Secondary"
+            app:gshc_type="outlined"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="onSecondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="onSecondary"
+            app:gshc_type="outlined"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="outlined"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="outlined"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_large"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="TONAL"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="secondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Secondary"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onSecondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onSecondary"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="tonal"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Primary"
+                app:gshc_type="tonal"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="onPrimary"
+                app:gshc_type="tonal"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:weightSum="2">
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="secondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="Secondary"
+            app:gshc_type="tonal"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+        <com.natura.android.shortcut.GaYaShortcut
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:gshc_color="onSecondary"
+            app:gshc_icon="outlined_default_mockup"
+            app:gshc_label="onSecondary"
+            app:gshc_type="tonal"
+            app:gshc_style="inline"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="neutral"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Neutral"
+                app:gshc_type="tonal"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="inverse"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Inverse"
+                app:gshc_type="tonal"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ds_spacing_large"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="DISABLED"
+                android:textAppearance="?textAppearanceHeadline6" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="3">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Filled"
+                app:gshc_type="filled"
+                android:enabled="false"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Outlined"
+                app:gshc_type="outlined"
+                android:enabled="false"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="secondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Tonal"
+                app:gshc_type="tonal"
+                android:enabled="false"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="primary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Filled"
+                app:gshc_type="filled"
+                android:enabled="false"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="onPrimary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Outlined"
+                app:gshc_type="outlined"
+                android:enabled="false"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:weightSum="2">
+
+            <com.natura.android.shortcut.GaYaShortcut
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:gshc_color="secondary"
+                app:gshc_icon="outlined_default_mockup"
+                app:gshc_label="Tonal"
+                app:gshc_type="tonal"
+                android:enabled="false"
+                app:gshc_style="inline"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PROGRAMMATICALLY"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -292,7 +292,7 @@ class GaYaChip : ConstraintLayout {
         iconRight.visibility = View.GONE
 
         if (helperLeftType == AVATAR_TYPE && helperRightType == AVATAR_TYPE) {
-            throw IllegalArgumentException("Cannot have avatars on both sides")
+            throw IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Cannot have avatars on both sides")
         }
 
         if (helperLeftType == AVATAR_TYPE && helperLeft != RESOURCE_NOT_DEFINED) {

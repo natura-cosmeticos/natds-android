@@ -209,7 +209,7 @@ class Tag @JvmOverloads constructor(
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
-                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag background color.",
+                    "⚠️ ⚠️ GaYaIssue: Missing tag required argument. You MUST set the tag background color.",
                     e
                 )
                 )
@@ -223,7 +223,7 @@ class Tag @JvmOverloads constructor(
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
-                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label color.",
+                    " ⚠️ ⚠️ GaYaIssue: Missing tag required argument. You MUST set the tag label color.",
                     e
                 )
                 )
@@ -264,7 +264,7 @@ class Tag @JvmOverloads constructor(
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
-                    "⚠️ ⚠️ Missing tag required argument. You MUST set the tag label(string).",
+                    " ⚠️ ⚠️ GaYaIssue: Missing tag required argument. You MUST set the tag label(string).",
                 )
                 )
         }

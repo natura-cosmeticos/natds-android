@@ -109,7 +109,7 @@ class DialogStandardFragment : DialogFragment() {
         try {
             callback = context as DialogStandardFragmentCallback?
         } catch (e: ClassCastException) {
-            throw ClassCastException("Calling fragment must implement DialogStandardFragmentCallback interface")
+            throw ClassCastException("⚠️ ⚠️ GaYaIssue: Calling fragment must implement DialogStandardFragmentCallback interface")
         }
     }
 

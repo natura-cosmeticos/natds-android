@@ -179,7 +179,7 @@ class IconButton @JvmOverloads constructor(
         } catch (e: Exception) {
             throw (
                 IllegalArgumentException(
-                    "⚠️ ⚠️ Missing iconName required argument. You MUST set the icon name.",
+                    "⚠️ ⚠️ GaYaIssue: Missing iconName required argument. You MUST set the icon name.",
                     e
                 )
                 )

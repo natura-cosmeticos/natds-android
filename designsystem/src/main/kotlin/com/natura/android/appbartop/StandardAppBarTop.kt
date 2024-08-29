@@ -373,7 +373,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
     private fun throwsCountElementsException() {
         if (countElements() > MAX_COUNT_ELEMENTS) {
-            throw IllegalArgumentException("Standard App Bar Top can't have more than five elements (including the content)")
+            throw IllegalArgumentException("⚠️ ⚠️ GaYaIssue: Standard App Bar Top can't have more than five elements (including the content)")
         }
     }
 

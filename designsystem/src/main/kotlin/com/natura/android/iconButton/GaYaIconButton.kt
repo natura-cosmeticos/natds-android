@@ -196,13 +196,13 @@ class GaYaIconButton @JvmOverloads constructor(
             if (layer is GradientDrawable) {
                 return layer.mutate() as GradientDrawable
             } else {
-                throw IllegalStateException("Layer with ID R.id.background_shape is not a GradientDrawable")
+                throw IllegalStateException("⚠️ ⚠️ GaYaIssue: Layer with ID R.id.background_shape is not a GradientDrawable")
             }
         } else if (backgroundDrawable is GradientDrawable) {
             return backgroundDrawable.mutate() as GradientDrawable
         }
 
-        throw IllegalStateException("Drawable with ID R.drawable.gayaiconbutton_background is not a LayerDrawable or GradientDrawable")
+        throw IllegalStateException("⚠️ ⚠️ GaYaIssue: Drawable with ID R.drawable.gayaiconbutton_background is not a LayerDrawable or GradientDrawable")
     }
 
     private fun configureAppearance(backgroundDrawable: GradientDrawable) {
@@ -273,7 +273,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_primary_v23
+                        R.color.gaya_filled_background_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -287,7 +287,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_on_primary_v23
+                        R.color.gaya_filled_background_on_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -301,7 +301,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_secondary_v23
+                        R.color.gaya_filled_background_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -315,7 +315,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_on_secondary_v23
+                        R.color.gaya_filled_background_on_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -329,7 +329,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_neutral_v23
+                        R.color.gaya_filled_background_neutral_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -343,7 +343,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_inverse_v23
+                        R.color.gaya_filled_background_inverse_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -357,7 +357,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_filled_background_primary_v23
+                        R.color.gaya_filled_background_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -385,7 +385,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_primary_v23
+                        R.color.gaya_outlined_stroke_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -400,7 +400,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_on_primary_v23
+                        R.color.gaya_outlined_stroke_on_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -415,7 +415,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_secondary_v23
+                        R.color.gaya_outlined_stroke_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -430,7 +430,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_on_secondary_v23
+                        R.color.gaya_outlined_stroke_on_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -445,7 +445,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_neutral_v23
+                        R.color.gaya_outlined_stroke_neutral_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -460,7 +460,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_inverse_v23
+                        R.color.gaya_outlined_stroke_inverse_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -475,7 +475,7 @@ class GaYaIconButton @JvmOverloads constructor(
                     2,
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_outlined_stroke_primary_v23
+                        R.color.gaya_outlined_stroke_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -566,7 +566,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_primary_v23
+                        R.color.gaya_tonal_background_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -580,7 +580,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_on_primary_v23
+                        R.color.gaya_tonal_background_on_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -594,7 +594,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_secondary_v23
+                        R.color.gaya_tonal_background_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -608,7 +608,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_on_secondary_v23
+                        R.color.gaya_tonal_background_on_secondary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -622,7 +622,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_neutral_v23
+                        R.color.gaya_tonal_background_neutral_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -636,7 +636,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_inverse_v23
+                        R.color.gaya_tonal_background_inverse_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable
@@ -650,7 +650,7 @@ class GaYaIconButton @JvmOverloads constructor(
                 backgroundDrawable.setColor(
                     ContextCompat.getColorStateList(
                         context,
-                        R.color.gayabutton_tonal_background_primary_v23
+                        R.color.gaya_tonal_background_primary_v23
                     )
                 )
                 binding.iconButtonContainer.background = backgroundDrawable

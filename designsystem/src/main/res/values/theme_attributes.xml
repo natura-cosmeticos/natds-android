@@ -272,7 +272,8 @@
   <attr name="shortcutOutlinedColorFocusPrimaryLabel" format="color" />  
   <attr name="shortcutOutlinedColorFocusNeutralBackground" format="color" />  
   <attr name="shortcutOutlinedColorFocusNeutralBorder" format="color" />  
-  <attr name="shortcutOutlinedColorFocusNeutralLabel" format="color" />  
+  <attr name="shortcutOutlinedColorFocusNeutralLabel" format="color" />
+  <attr name="gayaShortcutBorderRadius" format="dimension" />
   <attr name="shortcutBorderRadius" format="dimension" />  
   <attr name="snackbarContentFontSize" format="dimension" />  
   <attr name="snackbarContentLetterSpacing" format="dimension" />  

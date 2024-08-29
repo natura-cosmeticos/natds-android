@@ -250,7 +250,7 @@
     <item name="colorContentHighEmphasisFixedLight">@color/ssotcdbb25cef1e8c3cac7ebd82218316ecb</item>
     <item name="colorContentMediumEmphasisFixedLight">@color/ssot53f3244f47dea56802d285b43adb5cdc</item>
     <item name="colorContentLowEmphasisFixedLight">@color/ssot847f0b6695a182e7d995907d29bc4042</item>
-    <item name="colorInputComponent">@color/ssotb876a6c87e9436f656a64f68585ea377</item>
+    <item name="colorInputComponent">@color/ssota6946a767b392d252a05c723c3a28084</item>
     <item name="borderRadiusNone">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="borderRadiusSmall">@dimen/ssote01661eca1c156941ef9b3d972d887ac</item>
     <item name="borderRadiusMedium">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
@@ -298,6 +298,7 @@
     <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
     <item name="buttonBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="iconButtonBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
+    <item name="gayaShortcutBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="cardBorderRadiusEnable">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
     <item name="cardBorderRadiusDisable">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>

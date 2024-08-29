@@ -155,26 +155,26 @@ class GaYaButton : MaterialButton {
         this.stateListAnimator = null
 
         val backgroundTint = when (btnColor) {
-            DEFAULT -> R.color.gayabutton_filled_background_default_v23
-            PRIMARY -> R.color.gayabutton_filled_background_primary_v23
-            ONPRIMARY -> R.color.gayabutton_filled_background_on_primary_v23
-            SECONDARY -> R.color.gayabutton_filled_background_secondary_v23
-            ONSECONDARY -> R.color.gayabutton_filled_background_on_secondary_v23
-            INVERSE -> R.color.gayabutton_filled_background_inverse_v23
-            NEUTRAL -> R.color.gayabutton_filled_background_neutral_v23
-            else -> R.color.gayabutton_filled_background_default_v23
+            DEFAULT -> R.color.gaya_filled_background_default_v23
+            PRIMARY -> R.color.gaya_filled_background_primary_v23
+            ONPRIMARY -> R.color.gaya_filled_background_on_primary_v23
+            SECONDARY -> R.color.gaya_filled_background_secondary_v23
+            ONSECONDARY -> R.color.gaya_filled_background_on_secondary_v23
+            INVERSE -> R.color.gaya_filled_background_inverse_v23
+            NEUTRAL -> R.color.gaya_filled_background_neutral_v23
+            else -> R.color.gaya_filled_background_default_v23
         }
         this.backgroundTintList = ContextCompat.getColorStateList(context, backgroundTint)
 
         val textColor = when (btnColor) {
-            DEFAULT -> R.color.gayabutton_filled_label_default_v23
-            PRIMARY -> R.color.gayabutton_filled_label_primary_v23
-            ONPRIMARY -> R.color.gayabutton_filled_label_on_primary_v23
-            SECONDARY -> R.color.gayabutton_filled_label_secondary_v23
-            ONSECONDARY -> R.color.gayabutton_filled_label_on_secondary_v23
-            INVERSE -> R.color.gayabutton_filled_label_inverse_v23
-            NEUTRAL -> R.color.gayabutton_filled_label_neutral_v23
-            else -> R.color.gayabutton_filled_label_default_v23
+            DEFAULT -> R.color.gaya_filled_label_default_v23
+            PRIMARY -> R.color.gaya_filled_label_primary_v23
+            ONPRIMARY -> R.color.gaya_filled_label_on_primary_v23
+            SECONDARY -> R.color.gaya_filled_label_secondary_v23
+            ONSECONDARY -> R.color.gaya_filled_label_on_secondary_v23
+            INVERSE -> R.color.gaya_filled_label_inverse_v23
+            NEUTRAL -> R.color.gaya_filled_label_neutral_v23
+            else -> R.color.gaya_filled_label_default_v23
         }
 
         val textColorStateList = ContextCompat.getColorStateList(context, textColor)
@@ -183,55 +183,55 @@ class GaYaButton : MaterialButton {
     }
 
     private fun configureOutlinedButton() {
-        this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_background_default_v23)
+        this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_background_default_v23)
         this.cornerRadius = getDimenFromTheme(context, R.attr.buttonBorderRadius).toInt()
 
         when (btnColor) {
             DEFAULT -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_default_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_default_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_default_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             PRIMARY -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_primary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_primary_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_primary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_primary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             ONPRIMARY -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_on_primary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_on_primary_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_on_primary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_on_primary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             SECONDARY -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_secondary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_secondary_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_secondary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_secondary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             ONSECONDARY -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_on_secondary_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_on_secondary_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_on_secondary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_on_secondary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             INVERSE -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_inverse_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_inverse_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_inverse_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_inverse_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             NEUTRAL -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_neutral_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_neutral_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_neutral_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_neutral_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             else -> {
-                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_stroke_default_v23)
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_outlined_label_default_v23)
+                this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_outlined_stroke_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_outlined_label_default_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
@@ -239,48 +239,48 @@ class GaYaButton : MaterialButton {
     }
 
     private fun configureGhostButton() {
-        this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_background_v23)
-        this.strokeColor = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_stroke_v23)
+        this.backgroundTintList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_background_v23)
+        this.strokeColor = ContextCompat.getColorStateList(context, R.color.gaya_ghost_stroke_v23)
         this.cornerRadius = getDimenFromTheme(context, R.attr.buttonBorderRadius).toInt()
 
         when (btnColor) {
             DEFAULT -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_default_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             PRIMARY -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_primary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_primary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             ONPRIMARY -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_on_primary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_on_primary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             SECONDARY -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_secondary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_secondary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             ONSECONDARY -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_on_secondary_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_on_secondary_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             INVERSE -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_inverse_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_inverse_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             NEUTRAL -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_neutral_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_neutral_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
             else -> {
-                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gayabutton_ghost_label_default_v23)
+                val textColorStateList = ContextCompat.getColorStateList(context, R.color.gaya_ghost_label_default_v23)
                 this.setTextColor(textColorStateList)
                 this.iconTint = textColorStateList
             }
@@ -296,26 +296,26 @@ class GaYaButton : MaterialButton {
         this.stateListAnimator = null
 
         val backgroundTint = when (btnColor) {
-            DEFAULT -> R.color.gayabutton_tonal_background_default_v23
-            PRIMARY -> R.color.gayabutton_tonal_background_primary_v23
-            ONPRIMARY -> R.color.gayabutton_tonal_background_on_primary_v23
-            SECONDARY -> R.color.gayabutton_tonal_background_secondary_v23
-            ONSECONDARY -> R.color.gayabutton_tonal_background_on_secondary_v23
-            INVERSE -> R.color.gayabutton_tonal_background_inverse_v23
-            NEUTRAL -> R.color.gayabutton_tonal_background_neutral_v23
-            else -> R.color.gayabutton_tonal_background_default_v23
+            DEFAULT -> R.color.gaya_tonal_background_default_v23
+            PRIMARY -> R.color.gaya_tonal_background_primary_v23
+            ONPRIMARY -> R.color.gaya_tonal_background_on_primary_v23
+            SECONDARY -> R.color.gaya_tonal_background_secondary_v23
+            ONSECONDARY -> R.color.gaya_tonal_background_on_secondary_v23
+            INVERSE -> R.color.gaya_tonal_background_inverse_v23
+            NEUTRAL -> R.color.gaya_tonal_background_neutral_v23
+            else -> R.color.gaya_tonal_background_default_v23
         }
         this.backgroundTintList = ContextCompat.getColorStateList(context, backgroundTint)
 
         val textColor = when (btnColor) {
-            DEFAULT -> R.color.gayabutton_tonal_label_default_v23
-            PRIMARY -> R.color.gayabutton_tonal_label_primary_v23
-            ONPRIMARY -> R.color.gayabutton_tonal_label_on_primary_v23
-            SECONDARY -> R.color.gayabutton_tonal_label_secondary_v23
-            ONSECONDARY -> R.color.gayabutton_tonal_label_on_secondary_v23
-            INVERSE -> R.color.gayabutton_tonal_label_inverse_v23
-            NEUTRAL -> R.color.gayabutton_tonal_label_neutral_v23
-            else -> R.color.gayabutton_tonal_label_default_v23
+            DEFAULT -> R.color.gaya_tonal_label_default_v23
+            PRIMARY -> R.color.gaya_tonal_label_primary_v23
+            ONPRIMARY -> R.color.gaya_tonal_label_on_primary_v23
+            SECONDARY -> R.color.gaya_tonal_label_secondary_v23
+            ONSECONDARY -> R.color.gaya_tonal_label_on_secondary_v23
+            INVERSE -> R.color.gaya_tonal_label_inverse_v23
+            NEUTRAL -> R.color.gaya_tonal_label_neutral_v23
+            else -> R.color.gaya_tonal_label_default_v23
         }
 
         val textColorStateList = ContextCompat.getColorStateList(context, textColor)

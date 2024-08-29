@@ -298,6 +298,7 @@
     <item name="buttonLabelLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
     <item name="buttonBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="iconButtonBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
+    <item name="gayaShortcutBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="cardBorderRadiusEnable">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
     <item name="cardBorderRadiusDisable">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>
