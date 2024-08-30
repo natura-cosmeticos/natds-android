@@ -13,7 +13,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
 import com.natura.android.R
-import com.natura.android.badge.GaYaBadgeDrawable
 import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
@@ -120,7 +119,8 @@ class GaYaShortcut @JvmOverloads constructor(
 
         if (style == GaYaShortcutStyle.Inline.value) {
             rippleBackground = findViewById(R.id.shortcutRippleBackground)
-            rippleBackground.background = ContextCompat.getDrawable(context, R.drawable.chip_ripple_background)
+            rippleBackground.background =
+                ContextCompat.getDrawable(context, R.drawable.chip_ripple_background)
         }
     }
 
@@ -257,7 +257,8 @@ class GaYaShortcut @JvmOverloads constructor(
         } else {
 
             rippleBackground.isClickable = true
-            rippleBackground.background = ContextCompat.getDrawable(context, R.drawable.chip_ripple_background)
+            rippleBackground.background =
+                ContextCompat.getDrawable(context, R.drawable.chip_ripple_background)
 
             shortcutContainer.isClickable = true
             shortcutContainer.isFocusable = true
