@@ -136,7 +136,6 @@ class GaYaShortcut @JvmOverloads constructor(
         configureAppearance(getDrawable())
     }
 
-
     private fun getAttributes() {
         shortcutAttributesArray.apply {
             try {
@@ -253,7 +252,6 @@ class GaYaShortcut @JvmOverloads constructor(
                     )
                 )
             }
-
         } else {
 
             rippleBackground.isClickable = true
