@@ -266,7 +266,7 @@ outlined_content_cloud
 outlined_content_consistency
 outlined_content_design
 outlined_content_divulgation
-outlined_product_dropper
+outlined_content_dropper
 outlined_content_education
 outlined_content_emptybag
 outlined_content_exchangereports
