@@ -235,6 +235,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/gayaCheckboxButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="GaYaCheckbox"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/chipButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -376,6 +388,18 @@
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
             android:text="@string/main_screen_radio_button_text"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/gayaRadiobuttonButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="GaYaRadiobutton"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 

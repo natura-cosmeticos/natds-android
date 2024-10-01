@@ -26,8 +26,10 @@ import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
 import com.natura.android.sample.components.GaYaButtonActivity
+import com.natura.android.sample.components.GaYaCheckboxActivity
 import com.natura.android.sample.components.GaYaChipActivity
 import com.natura.android.sample.components.GaYaIconButtonActivity
+import com.natura.android.sample.components.GaYaRadiobuttonActivity
 import com.natura.android.sample.components.GaYaShortcutActivity
 import com.natura.android.sample.components.SnackbarActivity
 import com.natura.android.sample.components.listitem.ListItemActivity
@@ -218,6 +220,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.gayaShortcutButton.setOnClickListener {
             startActivity(Intent(this, GaYaShortcutActivity::class.java))
+        }
+
+        binding.gayaCheckboxButton.setOnClickListener {
+            startActivity(Intent(this, GaYaCheckboxActivity::class.java))
+        }
+
+        binding.gayaRadiobuttonButton.setOnClickListener {
+            startActivity(Intent(this, GaYaRadiobuttonActivity::class.java))
         }
     }
 }

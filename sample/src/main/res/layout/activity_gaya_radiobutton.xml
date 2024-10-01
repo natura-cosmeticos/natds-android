@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:padding="@dimen/ds_spacing_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.natura.android.radiobutton.GaYaRadiobutton
+                android:id="@+id/radioPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/radio_button_screen_radio_primary_text" />
+
+            <com.natura.android.radiobutton.GaYaRadiobutton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:enabled="false"
+                android:text="@string/radio_button_screen_radio_primary_disabled_text" />
+
+            <com.natura.android.radiobutton.GaYaRadiobutton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:enabled="false"
+                android:text="@string/radio_button_screen_radio_primary_disabled_checked_text" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PROGRAMMATICALLY"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

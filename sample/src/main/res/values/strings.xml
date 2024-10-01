@@ -15,11 +15,11 @@
     <string name="avatar_screen_semix_with_image_text">SemiX</string>
     <string name="avatar_screen_medium_with_image_text">Medium</string>
     <string name="avatar_screen_largexxx_with_image_text">LargeXXX</string>
-    <string name="radio_button_screen_radio_primary_text">Radio Primary</string>
+    <string name="radio_button_screen_radio_primary_text">Active not selected</string>
     <string name="radio_button_screen_radio_secondary_text">Radio Secondary</string>
-    <string name="radio_button_screen_radio_primary_disabled_text">Radio Primary Disabled</string>
-    <string name="radio_button_screen_radio_primary_disabled_checked_text">Radio Primary Disabled Checked</string>
-    <string name="radio_button_screen_radio_secondary_disabled_checked_text">Radio Secondary Disable Checked</string>
+    <string name="radio_button_screen_radio_primary_disabled_text">Disabled not selected</string>
+    <string name="radio_button_screen_radio_primary_disabled_checked_text">Disabled selected</string>
+    <string name="radio_button_screen_radio_secondary_disabled_checked_text">Disabled selected</string>
     <string name="card_screen_overline_text">Overline</string>
     <string name="card_screen_header_text">Header 6</string>
     <string name="card_screen_caption_text">Caption</string>
@@ -82,11 +82,11 @@
     <string name="button_screen_outlined_disabled_semi_text">disable outlined - semi</string>
     <string name="button_screen_text_medium_text">text</string>
     <string name="button_screen_text_medium_disabled_text">disable text</string>
-    <string name="checkbox_screen_checkbox_primary_checked_text">Checkbox Primary Checked</string>
-    <string name="checkbox_screen_checkbox_primary_indeterminate_text">CheckBox Primary Indeterminate</string>
-    <string name="checkbox_screen_checkbox_primary_unchecked_text">Checkbox Primary Unchecked</string>
-    <string name="checkbox_screen_checkbox_primary_checked_disabled_text">CheckBox Primary Checked Disabled</string>
-    <string name="checkbox_screen_checkbox_primary_unchecked_disabled_text">CheckBox Primary Unchecked Disabled</string>
+    <string name="checkbox_screen_checkbox_primary_checked_text">Checked</string>
+    <string name="checkbox_screen_checkbox_primary_indeterminate_text">Indeterminate</string>
+    <string name="checkbox_screen_checkbox_primary_unchecked_text">Unchecked</string>
+    <string name="checkbox_screen_checkbox_primary_checked_disabled_text">Checked disabled</string>
+    <string name="checkbox_screen_checkbox_primary_unchecked_disabled_text">Unchecked disabled</string>
     <string name="counter_screen_size_medium_text">Size Medium</string>
     <string name="counter_screen_size_semix_text">Size Semix</string>
     <string name="counter_screen_subtract_disable_text">Subtract Disable</string>
@@ -381,4 +381,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="title_activity_ga_ya_checkbox">GaYaCheckboxActivity</string>
 </resources>

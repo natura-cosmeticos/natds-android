@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".components.GaYaRadiobuttonActivity"
+            android:theme="@style/Theme.Natura.Light"  />
+        <activity
+            android:name=".components.GaYaCheckboxActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
             android:name=".components.GaYaShortcutActivity"
             android:theme="@style/Theme.Natura.Light" />
         <activity
