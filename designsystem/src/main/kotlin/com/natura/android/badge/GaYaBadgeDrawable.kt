@@ -71,6 +71,7 @@ class GaYaBadgeDrawable(
 
     override fun setColorFilter(cf: ColorFilter?) {}
 
+    @Deprecated("Deprecated in Java")
     override fun getOpacity() = PixelFormat.UNKNOWN
 
     fun updateBadgeDrawable(count: Int) {
