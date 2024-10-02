@@ -45,6 +45,7 @@ class GaYaChip : ConstraintLayout {
     private lateinit var typedArray: TypedArray
 
     var label: String = ""
+        @JvmName("internalSetLabel")
         set(value) {
             field = value
             setContentLabel(value)
@@ -52,51 +53,52 @@ class GaYaChip : ConstraintLayout {
         }
 
     var size: Int = SEMI
+        @JvmName("internalSetSize")
         set(value) {
             field = value
             configureSize(getDrawable())
             configureAppearance(getDrawable())
         }
 
-    var isSelected: Boolean = false
-        set(value) {
-            field = value
-            configureAppearance(getDrawable())
-        }
-
     var isComponentEnabled: Boolean = true
 
     var color: Int = PRIMARY
+        @JvmName("internalSetColor")
         set(value) {
             field = value
             configureAppearance(getDrawable())
         }
 
     var helperRightType: Int = NONE_TYPE
+        @JvmName("internalSetHelperRightType")
         set(value) {
             field = value
             configureHelpers()
         }
 
     var helperLeftType: Int = NONE_TYPE
+        @JvmName("internalSetHelperLeftType")
         set(value) {
             field = value
             configureHelpers()
         }
 
     var helperLeft: Int = RESOURCE_NOT_DEFINED
+        @JvmName("internalSetHelperLeft")
         set(value) {
             field = value
             configureHelpers()
         }
 
     var helperRight: Int = RESOURCE_NOT_DEFINED
+        @JvmName("internalSetHelperRight")
         set(value) {
             field = value
             configureHelpers()
         }
 
     var hasAction: Boolean = false
+        @JvmName("internalSetHasAction")
         set(value) {
             field = value
             configureAction()
@@ -126,8 +128,7 @@ class GaYaChip : ConstraintLayout {
 
         mainContainer.setOnClickListener {
             if (!hasAction) {
-                isSelected = !isSelected
-                configureAppearance(getDrawable())
+                toggleSelection()
             }
         }
 
@@ -144,6 +145,11 @@ class GaYaChip : ConstraintLayout {
 
         mainContainer.isClickable = enabled
         super.setEnabled(enabled)
+    }
+
+    private fun toggleSelection() {
+        isSelected = !isSelected
+        configureAppearance(getDrawable())
     }
 
     fun setSize(size: Int) {
