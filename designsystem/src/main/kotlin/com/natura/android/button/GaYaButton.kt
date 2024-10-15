@@ -76,14 +76,6 @@ class GaYaButton : MaterialButton {
         applyStyle()
     }
 
-//    fun setBtnIcon(icon: String?) {
-//        icon?.let {
-//            val drawableId = getIconResourceIdFromName(context, it)
-//            val drawable = ContextCompat.getDrawable(context, drawableId)
-//            setIcon(drawable)
-//        }
-//    }
-
     fun setBtnIcon(iconName: String?) {
         iconName?.let {
             val drawableId = getIconResourceIdFromName(context, it)

@@ -48,7 +48,49 @@
         <attr name="textLabel" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="GaYaTag">
+        <attr name="gtag_color" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="primaryDarkest" value="1" />
+            <enum name="primaryLightest" value="2" />
+            <enum name="secondary" value="3" />
+            <enum name="secondaryDarkest" value="4" />
+            <enum name="secondaryLightest" value="5" />
+            <enum name="success" value="6" />
+            <enum name="successDarkest" value="7" />
+            <enum name="successLightest" value="8" />
+            <enum name="alert" value="9" />
+            <enum name="alertDarkest" value="10" />
+            <enum name="alertLightest" value="11" />
+            <enum name="warning" value="12" />
+            <enum name="warningDarkest" value="13" />
+            <enum name="warningLightest" value="14" />
+            <enum name="info" value="15" />
+            <enum name="infoDarkest" value="16" />
+            <enum name="infoLightest" value="17" />
+        </attr>
+        <attr name="gtag_size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="standard" value="1" />
+        </attr>
+        <attr name="gtag_position" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="gtag_icon" format="string" />
+        <attr name="gtag_label" format="string" />
+    </declare-styleable>
+
     <declare-styleable name="TagStyle">
+        <attr name="colorBackground" />
+        <attr name="customHeight" />
+        <attr name="android:textColor" />
+        <attr name="radiusDisabledValue" />
+        <attr name="radiusEnabledValue" />
+    </declare-styleable>
+
+    <declare-styleable name="GaYaTagStyle">
         <attr name="colorBackground" />
         <attr name="customHeight" />
         <attr name="android:textColor" />

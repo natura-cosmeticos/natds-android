@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    tools:context=".components.GaYaTagActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/ds_spacing_large"
+        android:layout_marginBottom="@dimen/ds_spacing_large"
+        android:layout_marginStart="@dimen/ds_spacing_standard"
+        android:layout_marginEnd="@dimen/ds_spacing_standard"
+        android:paddingBottom="@dimen/ds_spacing_small">
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:gtag_color="primary"
+            app:gtag_label="Center Primary Small"
+            android:theme="@style/Theme.Avon_v2.Light.SSOT"
+            />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_color="primaryDarkest"
+            app:gtag_label="Center Primary Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_color="primaryLightest"
+            app:gtag_label="Center Primary Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_size="standard"
+            app:gtag_color="secondary"
+            app:gtag_label="Center Secondary Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_size="standard"
+            app:gtag_color="secondaryDarkest"
+            app:gtag_label="Center Secondary Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_size="standard"
+            app:gtag_color="secondaryLightest"
+            app:gtag_label="Center Secondary Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="small"
+            app:gtag_color="success"
+            app:gtag_label="Left Success Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="small"
+            app:gtag_color="successDarkest"
+            app:gtag_label="Left Success Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="small"
+            app:gtag_color="successLightest"
+            app:gtag_label="Left Success Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="standard"
+            app:gtag_color="alert"
+            app:gtag_label="Left Alert Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="standard"
+            app:gtag_color="alertDarkest"
+            app:gtag_label="Left Alert Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="left"
+            app:gtag_size="standard"
+            app:gtag_color="alertLightest"
+            app:gtag_label="Left Alert Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="small"
+            app:gtag_color="warning"
+            app:gtag_label="Right Warning Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="small"
+            app:gtag_color="warningDarkest"
+            app:gtag_label="Right Warning Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="small"
+            app:gtag_color="warningLightest"
+            app:gtag_label="Right Warning Small" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="standard"
+            app:gtag_color="info"
+            app:gtag_label="Right Link Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="standard"
+            app:gtag_color="infoDarkest"
+            app:gtag_label="Right Link Standard" />
+
+        <com.natura.android.tag.GaYaTag
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_position="right"
+            app:gtag_size="standard"
+            app:gtag_color="infoLightest"
+            app:gtag_label="Right Link Standard" />
+
+
+        <com.natura.android.tag.GaYaTag
+            android:id="@+id/tagStandardWithIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_icon="outlined_action_mic"
+            app:gtag_position="center"
+            app:gtag_size="standard"
+            app:gtag_color="primary"
+            app:gtag_label="Center Standard With Icon" />
+
+        <com.natura.android.tag.GaYaTag
+            android:id="@+id/tagSmallWithIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingStandard"
+            app:gtag_icon="outlined_action_mic"
+            app:gtag_position="center"
+            app:gtag_size="small"
+            app:gtag_color="success"
+            app:gtag_label="Center Small With Icon" />
+
+        <LinearLayout
+            android:id="@+id/lnlProgramatically"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:layout_marginStart="@dimen/ds_spacing_micro"
+            android:layout_marginEnd="@dimen/ds_spacing_micro">
+
+            <TextView
+                android:id="@+id/txvAddingByCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ADD PROGRAMMATICALLY"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="?textAppearanceHeadline6"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

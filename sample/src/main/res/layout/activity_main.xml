@@ -440,6 +440,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/gayaSwitchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="GAYASWITCH"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/gayaShortcutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -460,6 +472,18 @@
             android:drawableRight="@drawable/outlined_navigation_arrowleft"
             android:padding="16dp"
             android:text="@string/main_screen_tag_text"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
+            android:id="@+id/gayaTagButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="GAYATAG"
             android:textAlignment="textStart"
             android:textColor="@color/highEmphasis" />
 
