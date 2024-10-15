@@ -156,7 +156,7 @@ class GaYaTag @JvmOverloads constructor(
 
         when (position) {
             GaYaTagPosition.Center.value -> backgroundDrawable.cornerRadius = radiusEnabled
-            GaYaTagPosition.Right.value  ->
+            GaYaTagPosition.Right.value ->
                 backgroundDrawable.cornerRadii =
                     floatArrayOf(
                         radiusEnabled,
@@ -169,7 +169,7 @@ class GaYaTag @JvmOverloads constructor(
                         radiusEnabled
                     )
 
-            GaYaTagPosition.Left.value  ->
+            GaYaTagPosition.Left.value ->
                 backgroundDrawable.cornerRadii =
                     floatArrayOf(
                         radiusDisabled,
@@ -245,7 +245,6 @@ class GaYaTag @JvmOverloads constructor(
         }
         backgroundContainer.layoutParams = params
     }
-
 }
 
 enum class GaYaTagColor(val value: Int) {
