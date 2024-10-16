@@ -20,9 +20,6 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
-    aaptOptions {
-        cruncherEnabled = false
-    }
 
     buildTypes {
         release {
@@ -53,10 +50,9 @@ android {
             unitTests.returnDefaultValues = true
         }
     }
+    namespace 'com.natura.android.sample'
+    testNamespace 'com.natura.android.sample.screenshottests'
 
-    lintOptions {
-        tasks.lint.enabled = false
-    }
 
     kapt.includeCompileClasspath = false
 }

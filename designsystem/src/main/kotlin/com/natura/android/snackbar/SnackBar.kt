@@ -239,6 +239,8 @@ class SnackBar private constructor(
                     setIcon(it, btnIcon)
                 }
             }
+
+            else -> {}
         }
         btnIcon?.setOnClickListener(mainButtonClickListener)
         btnBlock?.setOnClickListener(mainButtonClickListener)
@@ -275,6 +277,8 @@ class SnackBar private constructor(
                 binding?.ivNoTitleIcon?.visibility = View.VISIBLE
                 binding?.txtMessage?.visibility = View.VISIBLE
             }
+
+            else -> {}
         }
     }
 
@@ -289,6 +293,8 @@ class SnackBar private constructor(
 
                         SnackbarPositionType.BOTTOM_CENTER ->
                             popupWindow?.animationStyle = (R.style.SnackBarInOutFromBottom)
+
+                        else -> {}
                     }
                 }
 

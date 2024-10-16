@@ -2,9 +2,81 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 9.30.2 (2024-10-15)
+### [9.30.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.1...v.9.30.2) (2024-10-15)
+* New component GaYaRadiobutton
+* New component GaYaCheckbox
+* New component GaYaSwitch
+* New component GaYaTag
+##### Adding new icons
+- filled_content_christmasstocking
+- filled_content_christmastree
+- filled_content_crueltyfreebunny
+- filled_content_daynight
+- filled_content_energy
+- filled_content_exfoliator
+- filled_content_farmrows
+- filled_content_giftpricefair
+- filled_content_giftpricegreat
+- filled_content_giftpricehigh
+- filled_content_giftpricespecial
+- filled_content_plasticfree
+- filled_content_snorkelmask
+- filled_content_teddybear
+- filled_content_wetwipe
+- filled_makeup_antiacne
+- filled_makeup_hairdamaged
+- filled_makeup_hairdandruff
+- filled_makeup_hairreconstruction
+- filled_product_eyeshadow
+- filled_product_hairdetox
+- filled_product_organicalcohol
+- filled_product_recyclablepackaging
+- filled_product_refill
+- filled_product_shampooconditioner
+- filled_social_pregnant
+- filled_social_userlock
+- outlined_content_christmasstocking
+- outlined_content_christmastree
+- outlined_content_crueltyfreebunny
+- outlined_content_daynight
+- outlined_content_energy
+- outlined_content_exfoliator
+- outlined_content_farmrows
+- outlined_content_giftpricefair
+- outlined_content_giftpricegreat
+- outlined_content_giftpricehigh
+- outlined_content_giftpricespecial
+- outlined_content_plasticfree
+- outlined_content_snorkelmask
+- outlined_content_teddybear
+- outlined_content_wetwipe
+- outlined_makeup_antiacne
+- outlined_makeup_hairdamaged
+- outlined_makeup_hairdandruff
+- outlined_makeup_hairreconstruction
+- outlined_product_eyeshadow
+- outlined_product_hairdetox
+- outlined_product_organicalcohol
+- outlined_product_recyclablepackaging
+- outlined_product_refill
+- outlined_product_shampooconditioner
+- outlined_social_pregnant
+- outlined_social_userlock
+##### Fixing icons
+- filled_media_play
+- filled_navigation_arrowctrlregulartop
+- filled_navigation_arrowctrlregularright
+- filled_navigation_arrowctrlregularleft
+- filled_navigation_arrowctrlregularbottom
+- outlined_media_play
+- outlined_navigation_arrowctrlregulartop
+- outlined_navigation_arrowctrlregularright
+- outlined_navigation_arrowctrlregularleft
+- outlined_navigation_arrowctrlregularbottom
 
-### [9.30.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.1...v.9.30.1) (2024-08-30)
+### [9.30.1](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.0...v.9.30.1) (2024-08-30)
+* New component GaYaShortcut
+* New component GaYaIconButton
 
 ## [9.30.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.29.0...v.9.30.0) (2024-08-06)
 
