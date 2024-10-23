@@ -34,7 +34,15 @@ class GaYaIconButtonActivity : AppCompatActivity() {
             type = GaYaIconButtonType.Tonal.value
         }
 
+        val gayaIconButtonAvon = GaYaIconButton(this, R.style.Theme_Avon_Light_SSOT).apply {
+            iconName = "filled_communication_digital_service"
+            size = GaYaIconButtonSize.Medium.value
+            color = GaYaIconButtonColor.Primary.value
+            type = GaYaIconButtonType.Filled.value
+        }
+
         val container: LinearLayout = findViewById(R.id.lnlProgramatically)
         container.addView(gayaIconButton)
+        container.addView(gayaIconButtonAvon)
     }
 }

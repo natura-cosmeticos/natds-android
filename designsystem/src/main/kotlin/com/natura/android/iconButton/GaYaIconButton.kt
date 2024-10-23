@@ -7,6 +7,7 @@ import android.graphics.drawable.LayerDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
@@ -23,6 +24,12 @@ class GaYaIconButton @JvmOverloads constructor(
     private val attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
+
+    constructor(context: Context, themeResId: Int) : this(
+        ContextThemeWrapper(context, themeResId),
+        null,
+        0
+    )
 
     private var iconButtonAttributesArray: TypedArray
 
@@ -74,8 +81,7 @@ class GaYaIconButton @JvmOverloads constructor(
             throw MissingThemeException()
         }
 
-        iconButtonAttributesArray =
-            context.obtainStyledAttributes(attrs, R.styleable.GaYaIconButton)
+        iconButtonAttributesArray = context.obtainStyledAttributes(attrs, R.styleable.GaYaIconButton)
         getAttributes()
         iconButtonAttributesArray.recycle()
 
