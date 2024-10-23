@@ -14,7 +14,7 @@ O componente `GaYaIconButton` ajuda as pessoas a realizarem pequenas ações com
 | Icon           | gibt_iconName    | -                                                  | ✅  Disponível       |
 | Sizes          | gibt_size               | small, medium, large                                         | ✅  Disponível       |
 | Disabled       | enabled          | True, False                                                  | ✅  Disponível       |
-
+| Switch de temas       | Switch de temas          | Todos os temas já disponibilidados                                                 | ✅  Disponível       |
 
 
 ### Changelog
@@ -199,4 +199,10 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
         }
      ```
 
-     
+## Switch de temas
+
+ - Utilize o Switch de Temas, disponível nas novas versões dos componentes GaYa.
+
+<p align="center">
+  <img alt="1" src="./images/gayaiconbutton_switchthemes.png" width="80%"> 
+</p>   
