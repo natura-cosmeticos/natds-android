@@ -199,10 +199,19 @@ Para começar a usar o `GaYaIconButton`, siga as instruções abaixo para config
         }
      ```
 
-## Switch de temas
+## Mudança de temas
 
- - Utilize o Switch de Temas, disponível nas novas versões dos componentes GaYa.
+ - Utilize o Switch de Temas, mesmo usando um tema padrão, com outro tema no mesmo contexto
 
 <p align="center">
   <img alt="1" src="./images/gayaiconbutton_switchthemes.png" width="80%"> 
 </p>   
+
+```kotlin
+    val gayaIconButtonAvon = GaYaIconButton(this, R.style.Theme_Avon_Light_SSOT).apply {
+        iconName = "filled_communication_digital_service"
+        size = GaYaIconButtonSize.Medium.value
+        color = GaYaIconButtonColor.Primary.value
+        type = GaYaIconButtonType.Filled.value
+    }
+```

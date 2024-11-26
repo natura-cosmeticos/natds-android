@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.LinearLayout
+import com.natura.android.radiobutton.GaYaRadiobutton
 import com.natura.android.sample.R
 import com.natura.android.sample.databinding.ActivityGayaSwitchBinding
 import com.natura.android.sample.setChosenDefaultTheme
@@ -25,6 +26,11 @@ class GaYaSwitchActivity : AppCompatActivity() {
         supportActionBar?.title = "GaYaSwitch"
 
         val gaYaSwitch = GaYaSwitch(this).apply {
+            isChecked = true
+            isEnabled = true
+        }
+
+        val gaYaSwitchAvon = GaYaSwitch(this, R.style.Theme_Avon_Light_SSOT).apply {
             isChecked = true
             isEnabled = true
         }

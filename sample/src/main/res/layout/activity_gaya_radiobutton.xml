@@ -22,8 +22,7 @@
                 android:id="@+id/radioPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/radio_button_screen_radio_primary_text" />
+                android:text="Ativo" />
 
             <com.natura.android.radiobutton.GaYaRadiobutton
                 android:layout_width="wrap_content"
