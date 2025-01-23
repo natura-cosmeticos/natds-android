@@ -2,8 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### 9.30.4 (2025-01-23)
-
 ### [9.30.3](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.2...v.9.30.3) (2024-10-23)
 * New constructor for GaYaIconButton use themes switch
 ### [9.30.2](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.1...v.9.30.2) (2024-10-15)
