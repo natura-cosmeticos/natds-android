@@ -5,12 +5,12 @@ git fetch
 LAST_TAG=$(git describe --tags --abbrev=0)
 
 # Verifica se existe algum commit com 'major:' no início desde a última tag
-if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^major:'; then
+if git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^\s*major:'; then
     # Se "major:" for encontrado no início, aumenta a versão major
     npx standard-version --release-as major
 
 # Verifica se existe algum commit com 'breaking:' no início desde a última tag
-elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^breaking:'; then
+elif git log "${LAST_TAG}..HEAD" --format='%s' | grep -q -E '^\s*breaking:'; then
     # Se "breaking:" for encontrado no início, aumenta a versão minor
     npx standard-version --release-as minor
 
