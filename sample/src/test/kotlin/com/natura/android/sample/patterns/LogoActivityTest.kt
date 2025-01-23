@@ -97,30 +97,6 @@ class LogoActivityTest {
     }
 
     @Test
-    fun checksAesopALogoResource() {
-        launchActivityWithBrandTheme(AESOP, false)
-
-        logoActivity.onActivity {
-            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
-            val logoShadow = shadowOf(logo)
-
-            assertEquals(R.drawable.aesop_a_official, logoShadow.createdFromResId)
-        }
-    }
-
-    @Test
-    fun checksAesopADarkLogoResource() {
-        launchActivityWithBrandTheme(AESOP, true)
-
-        logoActivity.onActivity {
-            val logo = it.findViewById<Logo>(R.id.logoModelA).getImageView()
-            val logoShadow = shadowOf(logo)
-
-            assertEquals(R.drawable.aesop_a_official_dark, logoShadow.createdFromResId)
-        }
-    }
-
-    @Test
     fun checksTbsALogoResource() {
         launchActivityWithBrandTheme(TBS, false)
 
@@ -182,6 +158,5 @@ class LogoActivityTest {
         const val NATURA = "natura"
         const val AVON = "avon"
         const val TBS = "tbs"
-        const val AESOP = "aesop"
     }
 }

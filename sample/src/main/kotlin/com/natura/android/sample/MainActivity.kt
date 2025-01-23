@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        supportActionBar?.title = this.getString(R.string.app_title)
+        supportActionBar?.title = "GaYa Design System"
         setButtonsActions()
     }
 

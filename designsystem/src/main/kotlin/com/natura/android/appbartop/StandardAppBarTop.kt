@@ -103,6 +103,15 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
         typedArray = context.obtainStyledAttributes(attrs, R.styleable.StandardAppBarTop)
 
+        val appBarHeight = TypedValue.applyDimension(
+            TypedValue.COMPLEX_UNIT_DIP, 56f, resources.displayMetrics
+        ).toInt()
+
+        toolbar.layoutParams = LayoutParams(
+            LayoutParams.MATCH_PARENT,
+            appBarHeight
+        )
+
         initialConfigurations()
         getAttributes()
         toolbar.setNavigationIcon(null)
@@ -184,6 +193,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 positionActionLeft()
                 actionRightContainer.setVisibilityFromBoolean(false)
             }
+
             childCount > COUNT_ELEMENTS_ONLY_ACTION_LEFT -> {
                 positionActionLeft()
                 positionActionRight()
@@ -232,75 +242,62 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
 
             SEARCH -> addTextField(context)
             LOGO -> {
-                val desiredHeight = 48
-                val heightInPixels = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, desiredHeight.toFloat(), resources.displayMetrics
-                ).toInt()
-                val desiredWidth = 120
-                val widthInPixels = TypedValue.applyDimension(
-                    TypedValue.COMPLEX_UNIT_DIP, desiredWidth.toFloat(), resources.displayMetrics
+
+                val imageHeight = TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, 28f, resources.displayMetrics
                 ).toInt()
 
-                if (barColor == NONE) {
-                    imageView.setImageDrawable(
-                        getDrawableFromTheme(
-                            context,
-                            R.attr.assetBrandNeutralAFile
-                        )
-                    )
-                    imageView.layoutParams =
-                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
-                    addContentView(imageView)
-                } else if (barColor == PRIMARY) {
-                    imageView.setImageDrawable(
-                        getDrawableFromTheme(
-                            context,
-                            R.attr.assetBrandCustomAFile
-                        )
-                    )
-                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnPrimary))
-                    imageView.layoutParams =
-                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
-                    addContentView(imageView)
-                } else if (barColor == SECONDARY) {
-                    imageView.setImageDrawable(
-                        getDrawableFromTheme(
-                            context,
-                            R.attr.assetBrandCustomAFile
-                        )
-                    )
-                    imageView.setColorFilter(
-                        getColorTokenFromTheme(
-                            context,
-                            R.attr.colorOnSecondary
-                        )
-                    )
-                    imageView.layoutParams =
-                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
-                    addContentView(imageView)
-                } else if (barColor == INVERSE) {
-                    imageView.setImageDrawable(
-                        getDrawableFromTheme(
-                            context,
-                            R.attr.assetBrandCustomAFile
-                        )
-                    )
-                    imageView.setColorFilter(getColorTokenFromTheme(context, R.attr.colorOnSurface))
-                    imageView.layoutParams =
-                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
-                    addContentView(imageView)
-                } else {
-                    imageView.setImageDrawable(
-                        getDrawableFromTheme(
-                            context,
-                            R.attr.assetBrandNeutralAFile
-                        )
-                    )
-                    imageView.layoutParams =
-                        LinearLayout.LayoutParams(widthInPixels, heightInPixels)
-                    addContentView(imageView)
+                imageView.scaleType = ImageView.ScaleType.FIT_CENTER
+                imageView.adjustViewBounds = true
+                imageView.layoutParams = LinearLayout.LayoutParams(
+                    LayoutParams.WRAP_CONTENT,
+                    imageHeight
+                ).apply {
+                    gravity = Gravity.CENTER
                 }
+
+                val drawable = when (barColor) {
+                    NONE -> getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile)
+                    PRIMARY -> {
+                        imageView.setColorFilter(
+                            getColorTokenFromTheme(
+                                context,
+                                R.attr.colorOnPrimary
+                            )
+                        )
+                        getDrawableFromTheme(context, R.attr.assetBrandCustomAFile)
+                    }
+
+                    SECONDARY -> {
+                        imageView.setColorFilter(
+                            getColorTokenFromTheme(
+                                context,
+                                R.attr.colorOnSecondary
+                            )
+                        )
+                        getDrawableFromTheme(context, R.attr.assetBrandCustomAFile)
+                    }
+
+                    INVERSE -> {
+                        imageView.setColorFilter(
+                            getColorTokenFromTheme(
+                                context,
+                                R.attr.colorOnSurface
+                            )
+                        )
+                        getDrawableFromTheme(context, R.attr.assetBrandCustomAFile)
+                    }
+
+                    else -> getDrawableFromTheme(context, R.attr.assetBrandNeutralAFile)
+                }
+
+                imageView.setImageDrawable(drawable)
+
+                actionCenterContainer.removeAllViews()
+                actionCenterContainer.gravity = Gravity.CENTER
+                actionCenterContainer.addView(imageView)
             }
+
         }
     }
 
@@ -330,7 +327,8 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
             LayoutParams.WRAP_CONTENT
         )
         scrollable = typedArray.getBoolean(R.styleable.StandardAppBarTop_scrollable, false)
-        contentPosition = typedArray.getInteger(R.styleable.StandardAppBarTop_contentPosition, CENTER)
+        contentPosition =
+            typedArray.getInteger(R.styleable.StandardAppBarTop_contentPosition, CENTER)
         proeminentContent = typedArray.getBoolean(
             R.styleable.StandardAppBarTop_proeminentContent,
             false
@@ -399,7 +397,10 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
         val textView = TextView(context)
         textView.id = R.id.contentText
         textView.text = text
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, context.resources.getDimension(R.dimen.ds_size_h6))
+        textView.setTextSize(
+            TypedValue.COMPLEX_UNIT_PX,
+            context.resources.getDimension(R.dimen.ds_size_h6)
+        )
         textView.isSingleLine = false
         textView.ellipsize = TextUtils.TruncateAt.END
         textView.setLines(1)

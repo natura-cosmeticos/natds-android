@@ -311,9 +311,8 @@
     <string name="expansion_panel_screen_componenttwo_title">Expansion Panel 2</string>
     <string name="expansion_panel_screen_componenttwo_content">Details\n\nThere\'s a state change listener in this sample collapsing one ExpansionPanel when the other one expands.</string>
     <string name="brand_selector_screen_app_name_text">GaYa Design System</string>
-    <string name="brand_selector_screen_app_version_text">versão 9.30.3</string>
+    <string name="brand_selector_screen_app_version_text">versão 9.31.0</string>
     <string name="brand_selector_select_brand_text">Selecione uma marca:</string>
-    <string name="brand_selector_aesop_text">Aesop</string>
     <string name="brand_selector_casaestilo_text">Casa e Estilo</string>
     <string name="brand_selector_casaestilov2_text">Casa e Estilo v2</string>
     <string name="brand_selector_avon_text">Avon</string>

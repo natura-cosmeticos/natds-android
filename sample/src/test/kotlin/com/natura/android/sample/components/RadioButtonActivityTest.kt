@@ -66,21 +66,6 @@ class RadioButtonActivityTest {
         }
     }
 
-    @Test
-    fun checkRadioButtonPrimaryColorsWhenThemeIsAesop() {
-        launchActivityWithAesopTheme()
-        selectionControlActivityScenario.onActivity {
-            val colorText = it.findViewById<RadioButton>(R.id.radioPrimary).textColors.defaultColor
-            val colorByState = it.findViewById<RadioButton>(R.id.radioPrimary).buttonTintList
-            val state = listOf(android.R.attr.state_selected).toIntArray()
-
-            val colorSelected = colorByState?.getColorForState(state, colorByState.defaultColor)
-
-            //assertEquals(Color.parseColor("#333333"), colorText)
-            //assertEquals(Color.parseColor("#333333"), colorSelected)
-        }
-    }
-
     private fun launchActivityWithAvonTheme() {
         val context: Context = ApplicationProvider.getApplicationContext()
         val themeRepository = ThemeRepository(context)
@@ -101,14 +86,6 @@ class RadioButtonActivityTest {
         val context: Context = ApplicationProvider.getApplicationContext()
         val themeRepository = ThemeRepository(context)
         themeRepository.saveChosenTheme("bodyshop")
-
-        selectionControlActivityScenario = ActivityScenario.launch(Intent(context, RadioButtonActivity::class.java))
-    }
-
-    private fun launchActivityWithAesopTheme() {
-        val context: Context = ApplicationProvider.getApplicationContext()
-        val themeRepository = ThemeRepository(context)
-        themeRepository.saveChosenTheme("aesop")
 
         selectionControlActivityScenario = ActivityScenario.launch(Intent(context, RadioButtonActivity::class.java))
     }

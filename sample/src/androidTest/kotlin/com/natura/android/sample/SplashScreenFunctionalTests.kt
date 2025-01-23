@@ -20,7 +20,7 @@ class SplashScreenFunctionalTests {
 
     @Test
     fun shouldOpenBorderRadiusScreenWhenTapOnItButton() {
-        onView(withText("NATDS"))
+        onView(withText("GaYa"))
             .check(matches(isDisplayed()))
 
         onView(withText("Natura Design System"))

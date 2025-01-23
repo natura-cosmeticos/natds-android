@@ -26,7 +26,6 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Light
             "avon" -> R.style.Theme_Avon_Light
-            "aesop" -> R.style.Theme_Aesop_Light
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Light
             "natura_v2" -> R.style.Theme_Natura_v2_Light
             "avon_v2" -> R.style.Theme_Avon_v2_Light
@@ -34,6 +33,8 @@ class ThemeRepository(context: Context) {
             "casaeestilo" -> R.style.Theme_CasaEestilo_Light
             "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Light
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light
+            "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Light
+            "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -42,7 +43,6 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Dark
             "avon" -> R.style.Theme_Avon_Dark
-            "aesop" -> R.style.Theme_Aesop_Dark
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Dark
             "natura_v2" -> R.style.Theme_Natura_v2_Dark
             "avon_v2" -> R.style.Theme_Avon_v2_Dark
@@ -50,6 +50,8 @@ class ThemeRepository(context: Context) {
             "casaeestilo" -> R.style.Theme_CasaEestilo_Dark
             "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Dark
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark
+            "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Dark
+            "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -58,7 +60,6 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Light_NoActionBar
             "avon" -> R.style.Theme_Avon_Light_NoActionBar
-            "aesop" -> R.style.Theme_Aesop_Light_NoActionBar
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Light_NoActionBar
             "natura_v2" -> R.style.Theme_Natura_v2_Light_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Light_NoActionBar
@@ -66,6 +67,8 @@ class ThemeRepository(context: Context) {
             "casaeestilo" -> R.style.Theme_CasaEestilo_Light_NoActionBar
             "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Light_NoActionBar
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light_NoActionBar
+            "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Light_NoActionBar
+            "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -74,7 +77,6 @@ class ThemeRepository(context: Context) {
         return when (sharedPreferences.getString("theme", "natura")) {
             "natura" -> R.style.Theme_Natura_Dark_NoActionBar
             "avon" -> R.style.Theme_Avon_Dark_NoActionBar
-            "aesop" -> R.style.Theme_Aesop_Dark_NoActionBar
             "consultoria" -> R.style.Theme_ConsultoriaDeBeleza_Dark_NoActionBar
             "natura_v2" -> R.style.Theme_Natura_v2_Dark_NoActionBar
             "avon_v2" -> R.style.Theme_Avon_v2_Dark_NoActionBar
@@ -82,6 +84,8 @@ class ThemeRepository(context: Context) {
             "casaeestilo" -> R.style.Theme_CasaEestilo_Dark_NoActionBar
             "casaeestilo_v2" -> R.style.Theme_CasaEestilo_v2_Dark_NoActionBar
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark_NoActionBar
+            "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Dark_NoActionBar
+            "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }
