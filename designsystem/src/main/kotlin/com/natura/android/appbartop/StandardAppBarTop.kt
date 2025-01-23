@@ -296,7 +296,7 @@ class StandardAppBarTop(context: Context, attrs: AttributeSet) : AppBarLayout(co
                 actionCenterContainer.removeAllViews()
                 actionCenterContainer.gravity = Gravity.CENTER
                 actionCenterContainer.addView(imageView)
-            }
+
         }
     }
 
