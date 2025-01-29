@@ -7,7 +7,7 @@ Logo adapted as brand standards for each company.
 
 | Property           | Values                         | Status            |
 | --------------     | -------------------------      | ----------------- |
-| Variant             | Natura, Avon, The Body Shop, Natura&Co, Natura v2, Avon v2, Consultoria de Beleza       | ✅  Available     |
+| Variant             | Todos os temas disponíveis no GaYa       | ✅  Available     |
 | Model          | A, B   | ✅  Available     |
 | Color         | Primary, Secondary, Highlight, Surface, Neutral        | ✅  Available     |
 | Size          | Medium, MediumX, Large, LargeX, LargeXX, LargeXXX, Huge, HugeX, HugeXX, HugeXXX, VeryHuge                    | ✅  Available     |
