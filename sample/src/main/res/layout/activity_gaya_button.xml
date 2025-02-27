@@ -242,7 +242,7 @@
             <com.natura.android.button.GaYaButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="primary"
+                android:text="primaRY"
                 app:btn_size="semix"
                 app:btn_type="ghost"
                 android:layout_marginEnd="2dp"
@@ -303,7 +303,7 @@
             <com.natura.android.button.GaYaButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="NEUTRAL"
+                android:text="Neutral"
                 android:layout_marginEnd="2dp"
                 app:btn_size="semix"
                 app:btn_type="ghost"
@@ -651,6 +651,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/ds_spacing_small"
             android:text="filled - medium"
+            app:btn_icon="@drawable/outlined_place_rocket"
             app:btn_size="medium"
             app:btn_type="filled" />
 
@@ -659,6 +660,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/ds_spacing_micro"
             android:text="filled - semix"
+            app:btn_icon="@drawable/outlined_place_rocket"
             app:btn_size="semix"
             app:btn_type="filled"/>
 
@@ -668,6 +670,34 @@
             android:layout_marginTop="@dimen/ds_spacing_micro"
             app:btn_type="filled"
             android:text="filled - semi"
+            app:btn_icon="@drawable/outlined_place_rocket"
+            app:btn_size="semi" />
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_spacing_small"
+            android:text="outlined - medium"
+            app:btn_icon="@drawable/outlined_place_rocket"
+            app:btn_size="medium"
+            app:btn_type="outlined" />
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            android:text="outlined - semix"
+            app:btn_icon="@drawable/outlined_place_rocket"
+            app:btn_size="semix"
+            app:btn_type="outlined"/>
+
+        <com.natura.android.button.GaYaButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ds_spacing_micro"
+            app:btn_type="outlined"
+            android:text="outlined - semi"
+            app:btn_icon="@drawable/outlined_place_rocket"
             app:btn_size="semi" />
 
         <LinearLayout

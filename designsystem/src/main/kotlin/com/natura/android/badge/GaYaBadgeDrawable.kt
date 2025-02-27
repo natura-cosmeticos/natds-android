@@ -163,19 +163,21 @@ class GaYaBadgeDrawable(
 
     private fun getBackgroundColorByAttr(): Int {
         return when (color) {
-            BadgeColor.colorPrimary.value -> R.attr.badgeColorPrimaryBackground
-            BadgeColor.colorSecondary.value -> R.attr.badgeColorSecondaryBackground
-            BadgeColor.colorSuccess.value -> R.attr.badgeColorSuccessBackground
-            else -> R.attr.badgeColorAlertBackground
+            GaYaBadgeColor.primary.value -> R.attr.badgeColorPrimaryBackground
+            GaYaBadgeColor.secondary.value -> R.attr.badgeColorSecondaryBackground
+            GaYaBadgeColor.inverse.value -> R.attr.badgeColorInverseBackground
+            GaYaBadgeColor.success.value -> R.attr.badgeColorSuccessBackground
+            else -> { R.attr.badgeColorAlertBackground }
         }
     }
 
     private fun getFontColorByAttr(): Int {
         return when (color) {
-            BadgeColor.colorPrimary.value -> R.attr.badgeColorPrimaryLabel
-            BadgeColor.colorSecondary.value -> R.attr.badgeColorSecondaryLabel
-            BadgeColor.colorSuccess.value -> R.attr.badgeColorSuccessLabel
-            else -> R.attr.badgeColorAlertLabel
+            GaYaBadgeColor.primary.value -> R.attr.badgeColorPrimaryLabel
+            GaYaBadgeColor.secondary.value -> R.attr.badgeColorSecondaryLabel
+            GaYaBadgeColor.inverse.value -> R.attr.badgeColorInverseLabel
+            GaYaBadgeColor.success.value -> R.attr.badgeColorSuccessLabel
+            else -> { R.attr.badgeColorAlertLabel }
         }
     }
 

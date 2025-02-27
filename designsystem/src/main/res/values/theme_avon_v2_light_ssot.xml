@@ -32,6 +32,8 @@
     <item name="badgeColorSuccessBackground">@color/ssotcd079e9e745576d1a86c561ef98558c6</item>
     <item name="badgeColorAlertLabel">@color/ssote345adcc0badb09d8695c2b491276314</item>
     <item name="badgeColorAlertBackground">@color/ssot54e60e07a37b41a4f963f987958e2521</item>
+    <item name="badgeColorInverseLabel">@color/ssotd413c6db0554119b189129c350862e1d</item>
+    <item name="badgeColorInverseBackground">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="buttonContainedColorEnableBackground">@color/ssot237676100691ca84982bf1d88644283c</item>
     <item name="buttonContainedColorEnableBorder">@color/ssot7ba57fc95536e9b0d3a30fcc7b77d045</item>
     <item name="buttonContainedColorEnableLabel">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>

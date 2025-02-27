@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="?spacingStandard"
+    android:paddingTop="?spacingStandard"
+    android:paddingEnd="?spacingStandard"
+    tools:context=".components.GaYaBadgeActivity">
+
+    <TextView
+        android:id="@+id/textViewDot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?spacingSemi"
+        android:text="@string/badge_screen_dot_text"
+        android:textAppearance="?textAppearanceHeadline6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <com.natura.android.badge.GaYaBadge
+            android:id="@+id/badgeDotColorPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginBottom="?spacingMicro"
+            android:layout_weight="1"
+            app:bdg_color="primary"
+            app:badgeVariant="dot"
+            app:isFontWeight="false"/>
+
+        <com.natura.android.badge.GaYaBadge
+            android:id="@+id/badgeDotColorSecondary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_weight="1"
+            android:layout_marginBottom="?spacingMicro"
+            app:bdg_color="secondary"
+            app:badgeVariant="dot" />
+
+        <com.natura.android.badge.GaYaBadge
+            android:id="@+id/badgeDotColorInverse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_weight="1"
+            android:layout_marginBottom="?spacingMicro"
+            app:bdg_color="inverse"
+            app:badgeVariant="dot"/>
+
+        <com.natura.android.badge.GaYaBadge
+            android:id="@+id/badgeDotColorAlert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_weight="1"
+            android:layout_marginBottom="?spacingMicro"
+            app:bdg_color="alert"
+            app:badgeVariant="dot" />
+
+        <com.natura.android.badge.GaYaBadge
+            android:id="@+id/badgeDotColorSuccess"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?spacingSmall"
+            android:layout_marginBottom="?spacingMicro"
+            android:layout_weight="1"
+            app:bdg_color="success"
+            app:badgeVariant="dot" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPulse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingStandard"
+        android:layout_marginBottom="?spacingSemi"
+        android:text="@string/badge_screen_pulse_text"
+        android:textAppearance="?textAppearanceHeadline6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgePulseColorPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        android:layout_weight="1"
+        app:bdg_color="primary"
+        app:badgeVariant="pulse" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgePulseColorSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        android:layout_weight="1"
+        app:bdg_color="secondary"
+        app:badgeVariant="pulse" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgePulseColorInverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        android:layout_weight="1"
+        app:bdg_color="inverse"
+        app:badgeVariant="pulse" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgePulseColorAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        android:layout_weight="1"
+        app:bdg_color="alert"
+        app:badgeVariant="pulse" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgePulseColorSuccess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:bdg_color="success"
+        android:layout_weight="1"
+        app:badgeVariant="pulse" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewStandard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingStandard"
+        android:text="@string/badge_screen_standard_text"
+        android:textAppearance="?textAppearanceHeadline6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgeStandardColorPrimary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:bdg_color="primary"
+        app:badgeLimitNumber="until_9"
+        app:badgeNumber="10"
+        android:layout_weight="1"
+        app:badgeVariant="standard" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgeStandardColorSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:bdg_color="secondary"
+        app:badgeLimitNumber="until_99"
+        app:badgeNumber="100"
+        android:layout_weight="1"
+        app:badgeVariant="standard"/>
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgeStandardColorInverse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:bdg_color="inverse"
+        app:badgeLimitNumber="unlimited"
+        app:badgeNumber="1000"
+        android:layout_weight="1"
+        app:badgeVariant="standard" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgeStandardColorAlert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        app:bdg_color="alert"
+        app:badgeLimitNumber="unlimited"
+        android:layout_weight="1"
+        app:badgeNumber="2000"
+        app:badgeVariant="standard" />
+
+    <com.natura.android.badge.GaYaBadge
+        android:id="@+id/badgeStandardColorSuccess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?spacingSmall"
+        android:layout_marginBottom="?spacingMicro"
+        android:layout_weight="1"
+        app:bdg_color="success"
+        app:badgeLimitNumber="unlimited"
+        app:badgeNumber="3000"
+        app:badgeVariant="standard" />
+
+    </LinearLayout>
+
+</LinearLayout>

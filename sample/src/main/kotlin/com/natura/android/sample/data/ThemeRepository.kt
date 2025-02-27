@@ -35,6 +35,7 @@ class ThemeRepository(context: Context) {
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light
             "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Light
             "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Light
+            "avon_v3" -> R.style.Theme_Avon_v3_Light
             else -> R.style.Theme_TheBodyShop_Light
         }
     }
@@ -52,6 +53,7 @@ class ThemeRepository(context: Context) {
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark
             "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Dark
             "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Dark
+            "avon_v3" -> R.style.Theme_Avon_v3_Dark
             else -> R.style.Theme_TheBodyShop_Dark
         }
     }
@@ -69,6 +71,7 @@ class ThemeRepository(context: Context) {
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Light_NoActionBar
             "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Light_NoActionBar
             "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Light_NoActionBar
+            "avon_v3" -> R.style.Theme_Avon_v3_Light_NoActionBar
             else -> R.style.Theme_TheBodyShop_Light_NoActionBar
         }
     }
@@ -86,6 +89,7 @@ class ThemeRepository(context: Context) {
             "forcadevendas" -> R.style.Theme_ForcaDeVendas_Dark_NoActionBar
             "consultoria_v2" -> R.style.Theme_ConsultoriaDeBeleza_v2_Dark_NoActionBar
             "forcadevendas_v2" -> R.style.Theme_ForcaDeVendas_v2_Dark_NoActionBar
+            "avon_v3" -> R.style.Theme_Avon_v3_Dark_NoActionBar
             else -> R.style.Theme_TheBodyShop_Dark_NoActionBar
         }
     }

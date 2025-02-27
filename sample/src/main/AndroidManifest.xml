@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    android:sharedUserId="com.natura.android.designsystem.uid"
-    package="com.natura.android.sample">
+    package="com.natura.android.sample"
+    android:sharedUserId="com.natura.android.designsystem.uid">
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".components.GaYaBadgeActivity"
+            android:theme="@style/Theme.Natura.Light"/>
         <activity
             android:name=".components.GaYaTagActivity"
             android:theme="@style/Theme.Natura.Light" />

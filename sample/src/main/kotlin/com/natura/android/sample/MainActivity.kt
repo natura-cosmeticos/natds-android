@@ -25,6 +25,7 @@ import com.natura.android.sample.components.SelectActivity
 import com.natura.android.sample.components.AvatarActivity
 import com.natura.android.sample.components.ChipActivity
 import com.natura.android.sample.components.AlertActivity
+import com.natura.android.sample.components.GaYaBadgeActivity
 import com.natura.android.sample.components.GaYaButtonActivity
 import com.natura.android.sample.components.GaYaCheckboxActivity
 import com.natura.android.sample.components.GaYaChipActivity
@@ -170,6 +171,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnBadge.setOnClickListener {
             startActivity(Intent(this, BadgeActivity::class.java))
+        }
+
+        binding.btnGaYaBadge.setOnClickListener {
+            startActivity(Intent(this, GaYaBadgeActivity::class.java))
         }
 
         binding.btnCard.setOnClickListener {

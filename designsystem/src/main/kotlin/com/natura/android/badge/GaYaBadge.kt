@@ -25,7 +25,7 @@ class GaYaBadge @JvmOverloads constructor(
     private var isFontWeight: Boolean = false
     private var limit: Int = UNLIMITED
     private var variant: Int = STANDARD
-    private var attrColor: BadgeColor = BadgeColor.colorPrimary
+    private var attrColor: GaYaBadgeColor = GaYaBadgeColor.primary
 
     private val imageContainer by lazy { findViewById<ImageView>(R.id.badgeImage) }
     private val badgeRipple by lazy { findViewById<ImageView>(R.id.badgeRipple) }
@@ -42,7 +42,7 @@ class GaYaBadge @JvmOverloads constructor(
             }
         }
 
-    var color: BadgeColor = BadgeColor.colorPrimary
+    var color: GaYaBadgeColor = GaYaBadgeColor.primary
         get() = attrColor
         set(value) {
             field = value
@@ -67,7 +67,7 @@ class GaYaBadge @JvmOverloads constructor(
             throw (MissingThemeException())
         }
 
-        badgeAttributeArray = context.obtainStyledAttributes(attrs, R.styleable.Badge)
+        badgeAttributeArray = context.obtainStyledAttributes(attrs, R.styleable.GaYaBadge)
 
         getAttributes()
         handlerVariant()
@@ -85,12 +85,12 @@ class GaYaBadge @JvmOverloads constructor(
     }
 
     private fun getAttributes() {
-        attrNumber = badgeAttributeArray.getInteger(R.styleable.Badge_badgeNumber, 0)
-        attrVisibility = badgeAttributeArray.getBoolean(R.styleable.Badge_badgeVisibility, true)
-        variant = badgeAttributeArray.getInt(R.styleable.Badge_badgeVariant, STANDARD)
-        attrColor = BadgeColor.fromInt(badgeAttributeArray.getInt(R.styleable.Badge_badgeColor, BadgeColor.colorPrimary.value))
-        limit = badgeAttributeArray.getInt(R.styleable.Badge_badgeLimitNumber, UNLIMITED)
-        isFontWeight = badgeAttributeArray.getBoolean(R.styleable.Badge_isFontWeight, false)
+        attrNumber = badgeAttributeArray.getInteger(R.styleable.GaYaBadge_badgeNumber, 0)
+        attrVisibility = badgeAttributeArray.getBoolean(R.styleable.GaYaBadge_badgeVisibility, true)
+        variant = badgeAttributeArray.getInt(R.styleable.GaYaBadge_badgeVariant, STANDARD)
+        attrColor = GaYaBadgeColor.fromInt(badgeAttributeArray.getInt(R.styleable.GaYaBadge_bdg_color, GaYaBadgeColor.primary.value))
+        limit = badgeAttributeArray.getInt(R.styleable.GaYaBadge_badgeLimitNumber, UNLIMITED)
+        isFontWeight = badgeAttributeArray.getBoolean(R.styleable.GaYaBadge_isFontWeight, false)
     }
 
     private fun createBadgeDrawable() {
@@ -141,10 +141,11 @@ class GaYaBadge @JvmOverloads constructor(
 
     private fun getPulseColorByAttr(): Int {
         return when (color) {
-            BadgeColor.colorPrimary -> R.attr.badgeColorPrimaryBackground
-            BadgeColor.colorSecondary -> R.attr.badgeColorSecondaryBackground
-            BadgeColor.colorSuccess -> R.attr.badgeColorSuccessBackground
-            BadgeColor.colorAlert -> R.attr.badgeColorAlertBackground
+            GaYaBadgeColor.primary -> R.attr.badgeColorPrimaryBackground
+            GaYaBadgeColor.secondary -> R.attr.badgeColorSecondaryBackground
+            GaYaBadgeColor.inverse -> R.attr.badgeColorInverseBackground
+            GaYaBadgeColor.success -> R.attr.badgeColorSuccessBackground
+            GaYaBadgeColor.alert -> R.attr.badgeColorAlertBackground
         }
     }
 
@@ -157,13 +158,26 @@ class GaYaBadge @JvmOverloads constructor(
         const val DOT = 1
         const val PULSE = 2
 
-        const val ALERT = 0
-        const val PRIMARY = 1
-        const val SECONDARY = 2
-        const val SUCCESS = 3
+        const val PRIMARY = 0
+        const val SECONDARY = 1
+        const val INVERSE = 2
+        const val ALERT = 3
+        const val SUCCESS = 4
 
         const val NINE = 0
         const val NINETY_NINE = 1
         const val UNLIMITED = 2
+    }
+}
+
+enum class GaYaBadgeColor(val value: Int) {
+    primary(0),
+    secondary(1),
+    inverse(2),
+    alert(3),
+    success(4);
+
+    companion object {
+        fun fromInt(value: Int) = values().firstOrNull { it.value == value } ?: primary
     }
 }

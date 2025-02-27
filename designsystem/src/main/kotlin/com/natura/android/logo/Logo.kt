@@ -1,9 +1,15 @@
 package com.natura.android.logo
 
 import android.content.Context
+import android.content.res.ColorStateList
 import android.content.res.TypedArray
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.VectorDrawable
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.View
 import android.widget.ImageView
 import androidx.annotation.AttrRes
@@ -13,6 +19,8 @@ import com.natura.android.exceptions.MissingThemeException
 import com.natura.android.resources.getColorTokenFromTheme
 import com.natura.android.resources.getDimenFromTheme
 import com.natura.android.resources.getDrawableFromTheme
+import android.graphics.Color
+import android.graphics.Color as AndroidColor
 
 class Logo @JvmOverloads constructor(
     context: Context,
@@ -121,7 +129,36 @@ class Logo @JvmOverloads constructor(
     }
 
     private fun setColor() {
-        this.imageView.setColorFilter(getColorTokenFromTheme(context, color.attribute))
+        val newColor = getColorTokenFromTheme(context, color.attribute)
+        val originalDrawable = imageView.drawable?.mutate() ?: return
+
+        val bitmap = getBitmapFromDrawable(originalDrawable) ?: run {
+            imageView.setColorFilter(newColor)
+            return
+        }
+
+        val newBitmap = bitmap.copy(bitmap.config, true)
+        for (x in 0 until newBitmap.width) {
+            for (y in 0 until newBitmap.height) {
+                if (newBitmap.getPixel(x, y) == 0xFF000000.toInt()) {
+                    newBitmap.setPixel(x, y, newColor)
+                }
+            }
+        }
+        imageView.setImageBitmap(newBitmap)
+    }
+
+    private fun getBitmapFromDrawable(drawable: Drawable): Bitmap? {
+        if (drawable is BitmapDrawable) {
+            return drawable.bitmap
+        }
+        val width = if (drawable.intrinsicWidth > 0) drawable.intrinsicWidth else 1
+        val height = if (drawable.intrinsicHeight > 0) drawable.intrinsicHeight else 1
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        drawable.setBounds(0, 0, canvas.width, canvas.height)
+        drawable.draw(canvas)
+        return bitmap
     }
 
     private fun setSize() {

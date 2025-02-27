@@ -32,6 +32,8 @@
     <item name="badgeColorSuccessBackground">@color/ssotcd079e9e745576d1a86c561ef98558c6</item>
     <item name="badgeColorAlertLabel">@color/ssote345adcc0badb09d8695c2b491276314</item>
     <item name="badgeColorAlertBackground">@color/ssot54e60e07a37b41a4f963f987958e2521</item>
+    <item name="badgeColorInverseLabel">@color/ssotd413c6db0554119b189129c350862e1d</item>
+    <item name="badgeColorInverseBackground">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="buttonContainedColorEnableBackground">@color/ssota6946a767b392d252a05c723c3a28084</item>
     <item name="buttonContainedColorEnableBorder">@color/ssot7ba57fc95536e9b0d3a30fcc7b77d045</item>
     <item name="buttonContainedColorEnableLabel">@color/ssote345adcc0badb09d8695c2b491276314</item>
@@ -304,7 +306,7 @@
     <item name="gayaShortcutBorderRadius">@dimen/ssotb746999906643a456c4e681e0ea9b9d1</item>
     <item name="buttonElevation">none</item>
     <item name="buttonPaddingX">@dimen/ssota678d4b111a732673d83a948f471edbb</item>
-    <item name="buttonTextTransform">lowercased</item>
+    <item name="buttonTextTransform">none</item>
     <item name="cardBorderRadiusEnable">@dimen/ssotf27085d5046e1bad7cde812c270a5623</item>
     <item name="cardBorderRadiusDisable">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="checkboxLabelFontSize">@dimen/ssotc2495f0d9de767b82b3bf958745bf316</item>

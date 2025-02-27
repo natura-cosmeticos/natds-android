@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.text.TextUtils
 import android.util.AttributeSet
+import android.util.TypedValue
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import com.natura.android.R
@@ -123,15 +124,44 @@ class GaYaButton : MaterialButton {
         this.maxLines = 1
 
         val buttonTextTransform = getStringFromTheme(context, R.attr.buttonTextTransform)
-        if (buttonTextTransform == "uppercased") {
-            this.isAllCaps = true
-            this.text = text.toString().uppercase()
-        } else if (buttonTextTransform == "lowercased") {
-            this.isAllCaps = false
-            this.text = text.toString().lowercase(Locale.getDefault())
-        } else {
-            this.text = text.toString()
-                .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
+        when (buttonTextTransform) {
+            "uppercased" -> {
+                this.isAllCaps = true
+                this.text = text.toString().uppercase(Locale.getDefault())
+            }
+            "lowercased" -> {
+                this.isAllCaps = false
+                this.text = text.toString().lowercase(Locale.getDefault())
+            }
+            "capitalized" -> {
+                this.isAllCaps = false
+                val originalText = text.toString()
+                if (originalText.isNotEmpty()) {
+                    val words = originalText.split("\\s+".toRegex())
+                    val sb = StringBuilder()
+                    for (word in words) {
+                        if (word.isNotEmpty()) {
+                            sb.append(word.substring(0, 1).uppercase(Locale.getDefault()))
+                            sb.append(word.substring(1).lowercase(Locale.getDefault()))
+                            sb.append(" ")
+                        }
+                    }
+                    this.text = sb.toString().trim()
+                }
+            }
+            "none" -> {
+                this.isAllCaps = false
+            }
+            else -> {
+                this.isAllCaps = false
+                this.text = text.toString()
+            }
+        }
+
+        this.iconSize = when (btnSize) {
+            SEMI_SIZE -> getDimenFromTheme(context, R.attr.sizeSmall).toInt()
+            SEMIX_SIZE, MEDIUM_SIZE -> getDimenFromTheme(context, R.attr.sizeStandard).toInt()
+            else -> getDimenFromTheme(context, R.attr.sizeStandard).toInt()
         }
 
         when (btnType) {
@@ -140,6 +170,25 @@ class GaYaButton : MaterialButton {
             GHOST -> configureGhostButton()
             TONAL -> configureTonalButton()
         }
+    }
+
+    override fun setText(text: CharSequence?, type: BufferType?) {
+        val buttonTextTransform = getStringFromTheme(context, R.attr.buttonTextTransform)
+        val transformedText = when (buttonTextTransform) {
+            "uppercased" -> text.toString().uppercase(Locale.getDefault())
+            "lowercased" -> text.toString().lowercase(Locale.getDefault())
+            "capitalized" -> text.toString()
+                .split("\\s+".toRegex())
+                .joinToString(" ") { word ->
+                    if (word.isNotEmpty())
+                        word.substring(0, 1).uppercase(Locale.getDefault()) + word.substring(1).lowercase(Locale.getDefault())
+                    else
+                        word
+                }
+            "none" -> text.toString()
+            else -> text.toString()
+        }
+        super.setText(transformedText, type)
     }
 
     private fun configureFilledButton() {
@@ -332,13 +381,13 @@ class GaYaButton : MaterialButton {
         when (btnSize) {
             SEMI_SIZE -> {
                 this.minHeight = getDimenFromTheme(context, R.attr.sizeSemi).toInt()
-                this.insetBottom = getDimenFromTheme(context, R.attr.spacingTiny).toInt()
-                this.insetTop = getDimenFromTheme(context, R.attr.spacingTiny).toInt()
+                this.insetBottom = getDimenFromTheme(context, R.attr.spacingMicro).toInt()
+                this.insetTop = getDimenFromTheme(context, R.attr.spacingMicro).toInt()
             }
             SEMIX_SIZE -> {
                 this.minHeight = getDimenFromTheme(context, R.attr.sizeSemiX).toInt()
-                this.insetBottom = getDimenFromTheme(context, R.attr.spacingMicro).toInt()
-                this.insetTop = getDimenFromTheme(context, R.attr.spacingMicro).toInt()
+                this.insetBottom = getDimenFromTheme(context, R.attr.spacingNone).toInt()
+                this.insetTop = getDimenFromTheme(context, R.attr.spacingNone).toInt()
             }
             MEDIUM_SIZE -> {
                 this.minHeight = getDimenFromTheme(context, R.attr.sizeMedium).toInt()

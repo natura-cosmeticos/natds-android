@@ -1,9 +1,11 @@
 filled_action_add
+filled_action_addproduct
 filled_action_cancel
 filled_action_check
 filled_action_clock
 filled_action_delete
 filled_action_dislike
+filled_action_filepdf
 filled_action_half_rating
 filled_action_increase
 filled_action_like
@@ -45,6 +47,7 @@ filled_brand_youtube
 filled_communication_digital_service
 filled_communication_noconnection
 filled_content_bathtub
+filled_content_carbondioxide
 filled_content_channel
 filled_content_childfriendly
 filled_content_christmasstocking 
@@ -66,7 +69,9 @@ filled_content_gymdumbbell
 filled_content_hairbeard
 filled_content_handsoap
 filled_content_handwater
+filled_content_healthy
 filled_content_house
+filled_content_maintenance
 filled_content_microscope
 filled_content_moonstars
 filled_content_mortar
@@ -81,6 +86,9 @@ filled_content_snorkelmask
 filled_content_soap
 filled_content_soapbubble
 filled_content_teddybear 
+filled_content_ticketdiscount
+filled_content_ticketstar
+filled_content_trophystar
 filled_content_violence
 filled_content_wetwipe
 filled_content_wifi
@@ -143,14 +151,18 @@ filled_navigation_maximize
 filled_navigation_menu
 filled_navigation_minimize
 filled_navigation_more
+filled_navigation_opennew
 filled_navigation_setbottom
 filled_navigation_setleft
 filled_navigation_setright
 filled_navigation_settop
+filled_navigation_shuffle
 filled_place_local
+filled_place_rocket
 filled_place_target
 filled_place_truck
 filled_product_ambientspray
+filled_product_backpack
 filled_product_blush
 filled_product_bodycream
 filled_product_bodysplash
@@ -179,6 +191,7 @@ filled_product_refill
 filled_product_shampoo
 filled_product_shampooconditioner
 filled_product_soapliquid
+filled_product_spray
 filled_social_fireworks
 filled_social_myprofile
 filled_social_nightlife
@@ -205,6 +218,7 @@ outlined_action_done
 outlined_action_download
 outlined_action_edit
 outlined_action_favorite
+outlined_action_filepdf
 outlined_action_filter
 outlined_action_frame
 outlined_action_gridsquare
@@ -285,6 +299,7 @@ outlined_content_bathtub
 outlined_content_bellringing
 outlined_content_book
 outlined_content_brightness
+outlined_content_carbondioxide
 outlined_content_changeview
 outlined_content_channel
 outlined_content_childfriendly
@@ -360,6 +375,9 @@ outlined_content_sun
 outlined_content_sunandcloud
 outlined_content_unavailable
 outlined_content_teddybear
+outlined_content_ticketdiscount
+outlined_content_ticketstar
+outlined_content_trophystar
 outlined_content_violence
 outlined_content_virtualmirror
 outlined_content_wellness
@@ -455,6 +473,8 @@ outlined_navigation_home
 outlined_navigation_maximize
 outlined_navigation_menu
 outlined_navigation_minimize
+outlined_navigation_opennew
+outlined_navigation_shuffle
 outlined_place_bus
 outlined_place_forklift
 outlined_place_gps
@@ -467,6 +487,7 @@ outlined_place_waze
 outlined_product_abandonedbag
 outlined_product_accessories
 outlined_product_ambientspray
+outlined_product_backpack
 outlined_product_bagproduct
 outlined_product_beard
 outlined_product_blush
@@ -519,6 +540,7 @@ outlined_product_scent
 outlined_product_shampoo
 outlined_product_shampooconditioner
 outlined_product_soapliquid
+outlined_product_spray
 outlined_product_vegan
 outlined_social_addcontact
 outlined_social_birthday
