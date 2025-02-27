@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.text.TextUtils
 import android.util.AttributeSet
-import android.util.TypedValue
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import com.natura.android.R
