@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.Natura.Light.NoActionBar" parent="Theme.Natura.Dark.NoActionBar"/>
-    <style name="Theme.Natura.Light" parent="Theme.Natura.Dark"/>
+    <style name="Theme.Natura_v3.Light.NoActionBar" parent="Theme.Natura_v3.Dark.NoActionBar"/>
+    <style name="Theme.Natura_v3.Light" parent="Theme.Natura_v3.Dark"/>
 
-    <style name="Theme.Avon.Light.NoActionBar" parent="Theme.Avon.Dark.NoActionBar"/>
-    <style name="Theme.Avon.Light" parent="Theme.Avon.Dark"/>
+    <style name="Theme.Avon_v3.Light.NoActionBar" parent="Theme.Avon_v3.Dark.NoActionBar"/>
+    <style name="Theme.Avon_v3.Light" parent="Theme.Avon_v3.Dark"/>
 
     <style name="Theme.TheBodyShop.Light.NoActionBar" parent="Theme.TheBodyShop.Dark.NoActionBar"/>
     <style name="Theme.TheBodyShop.Light" parent="Theme.TheBodyShop.Dark"/>

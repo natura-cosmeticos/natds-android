@@ -9,8 +9,9 @@
         <item name="buttonDefaultLetterSpacing">@dimen/ssotcbbe59f3826d96d11375dfb0c3469776</item>
         <item name="buttonDefaultLineHeight">@dimen/ssot6008647277c4454cecd97d33c069f0ca</item>
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
-        <item name="badgeLabelPrimaryFontFamily">Roboto</item>
-        <item name="badgeLabelFallbackFontFamily">Roboto</item>
+        <item name="badgeLabelPrimaryFontFamily">@font/roboto_regular</item>
+        <item name="badgeLabelFallbackFontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
 
         <!-- Definitions based on appcompat colors -->
         <item name="colorPrimaryVariant">?colorPrimaryDark</item>
@@ -183,5 +184,6 @@
     <style name="Theme.ForcaDeVendas.Light.NoActionBar" parent="Theme.ForcaDeVendas.Light">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
     </style>
 </resources>

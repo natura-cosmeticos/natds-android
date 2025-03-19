@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 
 fun getColorTokenFromTheme(context: Context, attrColorId: Int): Int {
     val value = TypedValue()
@@ -36,10 +37,11 @@ fun getDrawableFromTheme(context: Context, attributeName: Int): Drawable {
 
 fun getFontFromTheme(context: Context, fontPrimary: Int, fontFallback: Int): Typeface {
     val output = TypedValue()
-    context.theme.resolveAttribute(fontPrimary, output, true)
-    if (output.type == TypedValue.TYPE_NULL)
-        context.theme.resolveAttribute(fontFallback, output, true)
-    return Typeface.create(output.string.toString(), Typeface.NORMAL)
+    if (context.theme.resolveAttribute(fontPrimary, output, true) && output.resourceId != 0)
+        return ResourcesCompat.getFont(context, output.resourceId) ?: Typeface.DEFAULT
+    if (context.theme.resolveAttribute(fontFallback, output, true) && output.resourceId != 0)
+        return ResourcesCompat.getFont(context, output.resourceId) ?: Typeface.DEFAULT
+    return Typeface.DEFAULT
 }
 
 enum class BarColors(val value: Int) {
