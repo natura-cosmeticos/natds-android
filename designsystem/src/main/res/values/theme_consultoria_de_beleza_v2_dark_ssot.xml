@@ -489,6 +489,14 @@
     <item name="spacingSemi">@dimen/ssotcfe0f06af91644b1d873c65d1b63ce66</item>
     <item name="spacingLarge">@dimen/ssot93932a6a0e2ac958f4f637dcda4bf86c</item>
     <item name="spacingXLarge">@dimen/ssotce76da3ea0bd53d4e95cd8c3dc8d5d2f</item>
+    <item name="assetBrandNeutralAWidth">@dimen/ssoteb49643ded2ddfa77eb3bbc3546a4429</item>
+    <item name="assetBrandNeutralAHeight">@dimen/ssot7f49ed724a176205534a7d92e208901b</item>
+    <item name="assetBrandNeutralBWidth">@dimen/ssoteb49643ded2ddfa77eb3bbc3546a4429</item>
+    <item name="assetBrandNeutralBHeight">@dimen/ssot7f49ed724a176205534a7d92e208901b</item>
+    <item name="assetBrandCustomAWidth">140dp</item>
+    <item name="assetBrandCustomAHeight">@dimen/ssot7f49ed724a176205534a7d92e208901b</item>
+    <item name="assetBrandCustomBWidth">@dimen/ssoteb49643ded2ddfa77eb3bbc3546a4429</item>
+    <item name="assetBrandCustomBHeight">@dimen/ssot7f49ed724a176205534a7d92e208901b</item>
     <item name="elevationNone">@dimen/ssot2df86dd876f2b3a92462c3835ad5a32b</item>
     <item name="elevationMicro">@dimen/ssot9007021639d44c5bd30ffb232bda4343</item>
     <item name="elevationTiny">@dimen/ssote01661eca1c156941ef9b3d972d887ac</item>

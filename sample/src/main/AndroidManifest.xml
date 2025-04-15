@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
         <activity
+            android:name=".tokens.growthPlan.GaYaGrowthPlanActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
+            android:name=".components.GaYaSnackbarActivity"
+            android:theme="@style/Theme.Natura.Light" />
+        <activity
             android:name=".components.GaYaBadgeActivity"
             android:theme="@style/Theme.Natura.Light"/>
         <activity

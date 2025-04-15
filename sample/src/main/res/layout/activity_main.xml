@@ -440,6 +440,18 @@
             android:textColor="@color/highEmphasis" />
 
         <Button
+            android:id="@+id/gayaSnackbarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@color/surface"
+            android:drawableRight="@drawable/outlined_navigation_arrowleft"
+            android:padding="16dp"
+            android:text="GaYaSnackbar"
+            android:textAlignment="textStart"
+            android:textColor="@color/highEmphasis" />
+
+        <Button
             android:id="@+id/shortcutButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

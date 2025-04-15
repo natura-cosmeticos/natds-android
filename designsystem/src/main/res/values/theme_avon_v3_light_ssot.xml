@@ -190,7 +190,7 @@
     <item name="colorLinkDarkest">@color/ssotbd33a33da42e6c8245b885e503e69fd9</item>
     <item name="colorOnLinkDarkest">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="colorSuccess">@color/ssotcd079e9e745576d1a86c561ef98558c6</item>
-    <item name="colorOnSuccess">@color/ssote345adcc0badb09d8695c2b491276314</item>
+    <item name="colorOnSuccess">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="colorSuccessLight">@color/ssot4c34a24cddbf867673357d9b72b6152f</item>
     <item name="colorOnSuccessLight">@color/ssote345adcc0badb09d8695c2b491276314</item>
     <item name="colorSuccessLightest">@color/ssot006e07b7c9b08101c135f9e1b475e7b9</item>
@@ -210,7 +210,7 @@
     <item name="colorWarningDarkest">@color/ssota69dd0b0cb247e34affe212a5cb5249f</item>
     <item name="colorOnWarningDarkest">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="colorAlert">@color/ssot54e60e07a37b41a4f963f987958e2521</item>
-    <item name="colorOnAlert">@color/ssote345adcc0badb09d8695c2b491276314</item>
+    <item name="colorOnAlert">@color/ssot262da8014d7d6e3c30cd4b6a9bb7a338</item>
     <item name="colorAlertLight">@color/ssot05f2f0a50f6a543cf4559720e1cd0c61</item>
     <item name="colorOnAlertLight">@color/ssote345adcc0badb09d8695c2b491276314</item>
     <item name="colorAlertLightest">@color/ssot528c96e1fb85991fcce6be1652ece232</item>
