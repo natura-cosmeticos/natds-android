@@ -3,10 +3,63 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## 9.33.0 (2025-04-15)
+* Logo for theme Consultoria de Beleza v1
+* Logo for theme Natura v3
+* Logo for theme Força de Vendas v2
+* New component: GaYaSnackbar
+* Colors for GrowthPlan
+* Fix for colors onAlert and onSuccess
+##### Adding new icons
+- filled-content-generativeai
+- filled-finance-bagshield
+- filled-finance-cashback
+- filled-growthplan-flowertulip
+- filled-growthplan-graphic
+- filled-growthplan-laurelwreath
+- filled-growthplan-trophy
+- filled-growthplan-trophyaward
+- filled-growthplan-trophydiamond
+- filled-growthplan-trophysapphire
+- outlined-content-generativeai
+- outlined-finance-bagshield
+- outlined-finance-cashback
+- outlined-growthplan-flowertulip
+- outlined-growthplan-graphic
+- outlined-growthplan-laurelwreath
+- outlined-growthplan-trophy
+- outlined-growthplan-trophyaward
+- outlined-growthplan-trophydiamond
+- outlined-growthplan-trophysapphire
 
 ### 9.32.1 (2025-03-19)
+* Fixing Avon v3 fonts and other themes
 
 ## 9.32.0 (2025-02-27)
+* New theme Avon v3
+* Fixes GaYaButton for text-transform
+##### Adding new icons
+- filled-action-addproduct
+- filled-action-filepdf
+- filled-content-carbondioxide
+- filled-content-healthy
+- filled-content-maintenance
+- filled-content-ticketdiscount
+- filled-content-ticketstar
+- filled-content-trophystar
+- filled-navigation-opennew
+- filled-navigation-shuffle
+- filled-place-rocket
+- filled-product-backpack
+- filled-product-spray
+- outlined-action-filepdf
+- outlined-content-carbondioxide
+- outlined-content-ticketdiscount
+- outlined-content-ticketstar
+- outlined-content-trophystar
+- outlined-navigation-opennew
+- outlined-navigation-shuffle
+- outlined-product-backpack
+- outlined-product-spray
 
 ## [9.31.0](https://github.com/natura-cosmeticos/natds-android/compare/v.9.30.3...v.9.31.0) (2025-01-23)
 * New theme Consultoria de Beleza v2 (with new logotype)
