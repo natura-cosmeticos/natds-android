@@ -74,7 +74,6 @@ class GaYaSnackbar private constructor(
     }
 
     private fun setSnackTexts() {
-        // Título
         if (snackShowTitle && !snackTitle.isNullOrBlank()) {
             binding?.txtTitle?.text = snackTitle
             binding?.txtTitle?.visibility = View.VISIBLE
@@ -82,7 +81,6 @@ class GaYaSnackbar private constructor(
             binding?.txtTitle?.visibility = View.GONE
         }
 
-        // Mensagem
         if (!snackMessage.isNullOrBlank()) {
             binding?.txtMessage?.text = snackMessage
             binding?.txtMessage?.visibility = View.VISIBLE
@@ -91,19 +89,16 @@ class GaYaSnackbar private constructor(
         }
     }
 
-
     private fun setSnackIcon() {
         val titleIcon = binding?.ivTitleIcon
         val noTitleIcon = binding?.ivNoTitleIcon
 
-        // Ícone com título
         if (showSnackIcon && snackShowTitle && !snackTitle.isNullOrBlank()) {
             titleIcon?.visibility = View.VISIBLE
         } else {
             titleIcon?.visibility = View.GONE
         }
 
-        // Ícone sem título
         if (showSnackIcon && (!snackShowTitle || snackTitle.isNullOrBlank())) {
             noTitleIcon?.visibility = View.VISIBLE
         } else {
@@ -115,7 +110,6 @@ class GaYaSnackbar private constructor(
             setIcon(it, noTitleIcon)
         }
     }
-
 
     fun setIcon(iconName: String, imageView: ImageView?) {
         val iconDrawableId = getIconResourceIdFromName(snackMainView.context, iconName)
@@ -193,7 +187,6 @@ class GaYaSnackbar private constructor(
             binding?.txtTitle?.visibility = View.GONE
             binding?.ivTitleIcon?.visibility = View.GONE
         }
-
     }
 
     private fun setAnimationtype() {
