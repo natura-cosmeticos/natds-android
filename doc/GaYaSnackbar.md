@@ -1,6 +1,6 @@
 # Guia de Uso - GaYaSnackbar
 
-> 📢 O GaYaButton faz parte da evolução contínua de componentes do GaYa Design System. Ele foi lançado como um novo componente mas os antigos ContainedButton, OutlinedButton e TextButton permaneceram disponíveis para uso mas não receberão mais atualizações ou suporte ativo. Encorajamos a migração para o GaYaButton o quanto antes para aproveitar as melhorias e garantir compatibilidade futura.
+> 📢 O GaYaSnackbar faz parte da evolução contínua de componentes do GaYa Design System. Ele foi lançado como um novo componente mas o antigo Snackbar permanece disponível para uso mas não receberão mais atualizações ou suporte ativo. Encorajamos a migração para o GaYaSnackbar o quanto antes para aproveitar as melhorias e garantir compatibilidade futura.
 
 ## Visão Geral
 
