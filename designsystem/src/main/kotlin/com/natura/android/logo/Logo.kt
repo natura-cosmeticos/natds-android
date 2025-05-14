@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.TypedArray
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.PorterDuff
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
@@ -125,22 +126,7 @@ class Logo @JvmOverloads constructor(
 
     private fun setColor() {
         val newColor = getColorTokenFromTheme(context, color.attribute)
-        val originalDrawable = imageView.drawable?.mutate() ?: return
-
-        val bitmap = getBitmapFromDrawable(originalDrawable) ?: run {
-            imageView.setColorFilter(newColor)
-            return
-        }
-
-        val newBitmap = bitmap.copy(bitmap.config, true)
-        for (x in 0 until newBitmap.width) {
-            for (y in 0 until newBitmap.height) {
-                if (newBitmap.getPixel(x, y) == 0xFF000000.toInt()) {
-                    newBitmap.setPixel(x, y, newColor)
-                }
-            }
-        }
-        imageView.setImageBitmap(newBitmap)
+        imageView.setColorFilter(newColor, PorterDuff.Mode.SRC_IN)
     }
 
     private fun getBitmapFromDrawable(drawable: Drawable): Bitmap? {
