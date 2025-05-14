@@ -3,6 +3,8 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ## 9.34.0 (2025-05-14)
+* Fixes logos CB1
+* Natura v3: refactor corner radius inputs
 
 ## 9.33.0 (2025-04-15)
 * Logo for theme Consultoria de Beleza v1
