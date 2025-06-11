@@ -11,7 +11,7 @@
         <item name="buttonDefaultFontWeight">sans-serif-medium</item>
         <item name="badgeLabelPrimaryFontFamily">@font/roboto_regular</item>
         <item name="badgeLabelFallbackFontFamily">@font/roboto_regular</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
 
         <!--
         /***
@@ -189,6 +189,6 @@
     <style name="Theme.Natura_v3.Dark.NoActionBar" parent="Theme.Natura_v3.Dark">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
     </style>
 </resources>
