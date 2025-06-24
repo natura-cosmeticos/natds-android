@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 ### 9.35.1 (2025-06-24)
+##### Adding new icons
+- filled-action-delete
+- filled-alert-cancel
+- filled-alert-check
+- filled-alert-info
+- filled-alert-warning
+- filled-content-strawberry
+- filled-product-mirrorwoman
+- filled-product-shoewoman
+- outlined-action-delete
+- outlined-alert-cancel
+- outlined-alert-check
+- outlined-alert-info
+- outlined-alert-warning
+- outlined-content-strawberry
+- outlined-product-mirrorwoman
+- outlined-product-shoewoman
 
 ## 9.35.0 (2025-06-11)
 * Fixes logo Natura v2
