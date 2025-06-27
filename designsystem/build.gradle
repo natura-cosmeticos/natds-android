@@ -13,9 +13,6 @@ android {
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
-    aaptOptions {
-        cruncherEnabled = false
-    }
 
     defaultConfig {
         minSdkVersion rootProject.minSdkVersion
@@ -64,14 +61,15 @@ android {
         test.java.srcDirs += 'src/test/kotlin'
     }
 
-    lintOptions {
-        baseline file("lint-baseline.xml")
-        checkReleaseBuilds false
-    }
 
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
+    }
+    namespace 'com.natura.android'
+    lint {
+        baseline file('lint-baseline.xml')
+        checkReleaseBuilds false
     }
 
     buildFeatures {
