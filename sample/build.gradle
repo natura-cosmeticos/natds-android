@@ -8,7 +8,6 @@ apply from: '../jacoco/modules.gradle'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         applicationId "com.natura.android.sample"
@@ -19,7 +18,6 @@ android {
         testInstrumentationRunner "com.natura.android.sample.screenshottests.ScreenShotTestRunner"
         vectorDrawables.useSupportLibrary = true
     }
-
 
     buildTypes {
         release {
@@ -53,8 +51,17 @@ android {
     namespace 'com.natura.android.sample'
     testNamespace 'com.natura.android.sample.screenshottests'
 
-
     kapt.includeCompileClasspath = false
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
 }
 
 dependencies {

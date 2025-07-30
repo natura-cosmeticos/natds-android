@@ -3,11 +3,11 @@
 apply from: 'jacoco/project.gradle'
 
 buildscript {
-    ext.kotlin_version = '1.6.21'
-    ext.android_tools_gradle = '7.4.2'
+    ext.kotlin_version = '1.8.10'
+    ext.android_tools_gradle = '8.8.0'
     ext.screen_shot_plugin = '0.14.0'
     ext.dokka_version_plugin = '1.5.31'
-    ext.lintVersion = '27.2.1'
+    ext.lintVersion = '30.0.0'
 
     repositories {
         google()
@@ -54,8 +54,8 @@ task clean(type: Delete) {
 ext {
     // Sdk and tools
     minSdkVersion = 21
-    targetSdkVersion = 34
-    compileSdkVersion = 31
+    targetSdkVersion = 35
+    compileSdkVersion = 35
     buildToolsVersion = '30.0.3'
 
     // App dependencies
@@ -74,5 +74,5 @@ ext {
     mockKVersion = '1.10.0'
     coreKTXVersion = '1.3.0'
     coilVersion = "1.3.2"
-    composeVersion = "1.5.4"
+    composeVersion = "1.4.3"
 }

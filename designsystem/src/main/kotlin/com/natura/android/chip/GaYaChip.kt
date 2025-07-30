@@ -44,63 +44,16 @@ class GaYaChip : ConstraintLayout {
 
     private lateinit var typedArray: TypedArray
 
-    var label: String = ""
-        set(value) {
-            field = value
-            setContentLabel(value)
-            configureAppearance(getDrawable())
-        }
-
-    var size: Int = SEMI
-        set(value) {
-            field = value
-            configureSize(getDrawable())
-            configureAppearance(getDrawable())
-        }
-
-    var isSelected: Boolean = false
-        set(value) {
-            field = value
-            configureAppearance(getDrawable())
-        }
-
-    var isComponentEnabled: Boolean = true
-
-    var color: Int = PRIMARY
-        set(value) {
-            field = value
-            configureAppearance(getDrawable())
-        }
-
-    var helperRightType: Int = NONE_TYPE
-        set(value) {
-            field = value
-            configureHelpers()
-        }
-
-    var helperLeftType: Int = NONE_TYPE
-        set(value) {
-            field = value
-            configureHelpers()
-        }
-
-    var helperLeft: Int = RESOURCE_NOT_DEFINED
-        set(value) {
-            field = value
-            configureHelpers()
-        }
-
-    var helperRight: Int = RESOURCE_NOT_DEFINED
-        set(value) {
-            field = value
-            configureHelpers()
-        }
-
-    var hasAction: Boolean = false
-        set(value) {
-            field = value
-            configureAction()
-        }
+    private var label: String = ""
+    private var size: Int = SEMI
+    private var isSelected: Boolean = false
+    private var isComponentEnabled: Boolean = true
+    private var color: Int = PRIMARY
+    private var helperRightType: Int = NONE_TYPE
+    private var helperLeftType: Int = NONE_TYPE
+    private var helperLeft: Int = RESOURCE_NOT_DEFINED
+    private var helperRight: Int = RESOURCE_NOT_DEFINED
+    private var hasAction: Boolean = false
 
     private fun init(context: Context, attrs: AttributeSet?) {
         try {
@@ -190,16 +143,16 @@ class GaYaChip : ConstraintLayout {
 
     private fun getAttributes() {
         typedArray.apply {
-            label = getString(R.styleable.GaYaChip_gchp_label) ?: ""
-            size = getInt(R.styleable.GaYaChip_gchp_size, SEMI)
-            color = getInt(R.styleable.GaYaChip_gchp_color, PRIMARY)
-            isSelected = getBoolean(R.styleable.GaYaChip_gchp_selected, false)
-            helperLeftType = getInt(R.styleable.GaYaChip_gchp_helper_left_type, NONE_TYPE)
-            helperRightType = getInt(R.styleable.GaYaChip_gchp_helper_right_type, NONE_TYPE)
-            helperLeft = getResourceId(R.styleable.GaYaChip_gchp_helper_left, RESOURCE_NOT_DEFINED)
-            helperRight = getResourceId(R.styleable.GaYaChip_gchp_helper_right, RESOURCE_NOT_DEFINED)
+            setLabel(getString(R.styleable.GaYaChip_gchp_label) ?: "")
+            setSize(getInt(R.styleable.GaYaChip_gchp_size, SEMI))
+            setColor(getInt(R.styleable.GaYaChip_gchp_color, PRIMARY))
+            setSelected(getBoolean(R.styleable.GaYaChip_gchp_selected, false))
+            setHelperLeftType(getInt(R.styleable.GaYaChip_gchp_helper_left_type, NONE_TYPE))
+            setHelperRightType(getInt(R.styleable.GaYaChip_gchp_helper_right_type, NONE_TYPE))
+            setHelperLeft(getResourceId(R.styleable.GaYaChip_gchp_helper_left, RESOURCE_NOT_DEFINED))
+            setHelperRight(getResourceId(R.styleable.GaYaChip_gchp_helper_right, RESOURCE_NOT_DEFINED))
+            setHasAction(getBoolean(R.styleable.GaYaChip_gchp_has_action, false))
             isComponentEnabled = getBoolean(R.styleable.GaYaChip_android_enabled, true)
-            hasAction = getBoolean(R.styleable.GaYaChip_gchp_has_action, false)
         }
     }
 

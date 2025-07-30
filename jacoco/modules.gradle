@@ -11,14 +11,15 @@ tasks.withType(Test) {
 
 project.afterEvaluate {
 
-    tasks.create(name: "debugCoverage", type: JacocoReport, dependsOn: "testDebugUnitTest") {
+    tasks.register("debugCoverage", JacocoReport) {
+        dependsOn("testDebugUnitTest")
 
         group = "Reporting"
         description = "Generate Jacoco coverage reports for the debug build."
 
         reports {
-            html.enabled = true
-            xml.enabled = true
+            html.required.set(true)
+            xml.required.set(true)
         }
 
         def excludes = [

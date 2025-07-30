@@ -9,16 +9,6 @@ repositories {
     mavenCentral()
 }
 
-lintOptions {
-    htmlReport true
-    htmlOutput file("lint-report.html")
-    textReport true
-    absolutePaths false
-    ignoreTestSources true
-    checkReleaseBuilds false
-}
-
-
 dependencies {
     compileOnly("com.android.tools.lint:lint-api:$lintVersion")
     compileOnly("com.android.tools.lint:lint-checks:$lintVersion")
@@ -30,9 +20,10 @@ dependencies {
     testImplementation("com.android.tools.lint:lint-tests:$lintVersion")
     testImplementation("junit:junit:$junitVersion")
 }
+
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 jar {
