@@ -72,7 +72,7 @@ ext {
     materialVersion = '1.4.0'
     espressoIntentsVersion = '3.4.0'
     mockKVersion = '1.10.0'
-    coreKTXVersion = '1.3.0'
+    coreKTXVersion = '1.17.0'
     coilVersion = "1.3.2"
     composeVersion = "1.0.0"
 }
