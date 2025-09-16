@@ -545,7 +545,7 @@
     <item name="badgeLabelFallbackFontFamily">@font/roboto_regular</item>
     <item name="badgeLabelFallbackFontWeight">@font/roboto_regular</item>
     <item name="buttonLabelPrimaryFontFamily">@font/roboto_regular</item>
-    <item name="buttonLabelPrimaryFontWeight">@font/roboto_regular</item>
+    <item name="buttonLabelPrimaryFontWeight">@font/roboto_medium</item>
     <item name="buttonLabelFallbackFontFamily">@font/roboto_regular</item>
     <item name="buttonLabelFallbackFontWeight">@font/roboto_semi_bold</item>
     <item name="checkboxLabelPrimaryFontFamily">@font/roboto_regular</item>

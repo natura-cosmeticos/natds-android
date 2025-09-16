@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 9.35.2 (2025-09-16)
+##### Fix fontWeight in GaYaButton
+- buttonLabelPrimaryFontWeight changed from regular to medium
+
 ### 9.35.1 (2025-06-24)
 ##### Adding new icons
 - filled-action-delete

@@ -545,7 +545,7 @@
     <item name="badgeLabelFallbackFontFamily">@font/montserrat_regular</item>
     <item name="badgeLabelFallbackFontWeight">@font/montserrat_regular</item>
     <item name="buttonLabelPrimaryFontFamily">@font/montserrat_regular</item>
-    <item name="buttonLabelPrimaryFontWeight">@font/montserrat_regular</item>
+    <item name="buttonLabelPrimaryFontWeight">@font/montserrat_medium</item>
     <item name="buttonLabelFallbackFontFamily">@font/montserrat_regular</item>
     <item name="buttonLabelFallbackFontWeight">@font/montserrat_semi_bold</item>
     <item name="checkboxLabelPrimaryFontFamily">@font/montserrat_regular</item>
