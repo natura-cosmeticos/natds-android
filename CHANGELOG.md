@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 9.35.1 (2025-10-07)
 
+### 9.35.1 (2025-10-07)
+
 ### 9.35.2 (2025-09-16)
 ##### Fix fontWeight in GaYaButton
 - buttonLabelPrimaryFontWeight changed from regular to medium
